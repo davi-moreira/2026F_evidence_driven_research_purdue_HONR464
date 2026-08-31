@@ -1,5 +1,24 @@
 # Instructor Intervention Protocol for SRL Sessions
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester.** Every Monday and
+> Wednesday lecture from Week 2 opens with a ten-minute **Lab Meeting** instead: one
+> student is that lecture's **reporter**, spending **seven minutes on a decision from
+> their own project and the evidence behind it**, then **three minutes of questions
+> from the room**. The reporter does not teach the lecture's concept and **the report
+> is not graded**. **The instructor leads from minute 10** and owns accuracy, the AI
+> tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. It was
+> replaced by **Lecture Notebooks (20%)**, a completion contract: every student hands
+> in the week's notebook, graded only on being worked through and handed in.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead a reader today,
+> it carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
 **(Instructor-only; not published to students.)**
 
 *How to support a Student Research Lead without taking the room from them. The
@@ -7,6 +26,29 @@ SRL owns the session; the instructor is the accuracy backstop, the pacing
 metronome, and the live grader. The governing instinct is minimal, deliberate
 intervention: step in on purpose, for a reason on this page, then hand the room
 straight back.*
+
+---
+
+## What this protocol is for today
+
+*The stance and the four interventions below were written for a session a student
+was running. They are kept whole for a future edition, and most of them still earn
+their place in Fall 2026 — with two changes to who is being supported and one to the
+numbers.*
+
+- **The instructor leads from minute 10**, so interventions 1, 2 and 3 are now
+  largely self-addressed: they describe how to handle a spreading error, a dead room,
+  and a missed AI failure while running the lecture yourself, and the "flag, don't
+  grab" instinct applies to the class rather than to a lead.
+- **Where they still apply to a student** is the ten-minute lab meeting: minutes 0–7,
+  where the reporter walks the room through a decision from their own project, and
+  minutes 7–10, where the room questions them. That is a student's room for ten
+  minutes, and the whole "step in on purpose, then hand it straight back" stance
+  governs it. The report is **ungraded**, so nothing here is a scoring judgement:
+  protect the person, keep the clock, and let a wobble be a wobble.
+- **The checkpoints moved.** See the corrected frames under intervention 4.
+- **Nothing is graded live any more.** The rubric section below is retired, and so
+  are the prep-review touchpoints, since no preparation is submitted in advance.
 
 ---
 
@@ -75,6 +117,15 @@ failure yourself. Point the lead at it.
 The section frames are fixed and enforced by the session-guide generator. The
 instructor is the visible clock so the lead does not have to watch it.
 
+> ⛔ **Retired numbers — the frames moved under D74.** The two bullets below give
+> the pre-D74 openers. The lecture now runs **Monday 10 / 21 / 12 / 7**
+> (checkpoints at 10, 31, 43) and **Wednesday 10 / 20 / 12 / 8** (checkpoints at
+> 10, 30, 38, 42): the ten-minute lab meeting takes the opening block, the 🧩
+> Research Puzzle folds into the front of the investigation block and is opened by
+> the instructor, and boundaries 3 and 4 are unchanged. Signal the checkpoints
+> exactly as the bullets describe, at the new minutes. Friday's 5 / 40 / 5 studio
+> frame is untouched.
+
 - **Monday checkpoints at minutes 9, 31, 43.** Signal at each: 0–9 puzzle and
   commitment, 9–31 guided AI investigation, 31–43 human verification and
   instructor formalization, 43–50 decision and defense.
@@ -90,7 +141,15 @@ instructor is the visible clock so the lead does not have to watch it.
   A session that never lands on a defended human decision has missed the point,
   so cut the middle before you cut the end.
 
-## Grading live with the rubric
+## Grading live with the rubric  ⛔ *(retired procedure)*
+
+> ⛔ **Nothing is graded live this edition.** The report is ungraded and
+> `srl_rubric.md` is not applied. What is collected is the week's lecture notebook
+> from every student, on completion, under **Lecture Notebooks (20%)** — due 11:59
+> PM on the Sunday that ends the studio week, credit `1.0` / `0.5` within seven
+> days / `0`, `N = 16`, `d = 2`. The section below is kept for a future edition;
+> its habit of noting specific moments rather than impressions is still worth
+> keeping for oral feedback after a report.
 
 Score `srl_rubric.md`'s nine rows in real time, on a printed or on-screen copy,
 during the session itself. Waiting until afterward loses the specific moments the
@@ -111,7 +170,15 @@ score should rest on.
   has them before their next slot. The next slot, not a revision, is the
   improvement window.
 
-## Prep-review touchpoints
+## Prep-review touchpoints  ⛔ *(retired procedure)*
+
+> ⛔ **No preparation is submitted in advance.** There is no day-before notebook
+> review and no one-week-out brief confirmation, because the reporter prepares ten
+> minutes on their own project and hands in nothing for it. The lecture's own cell
+> is now `### 📣 Lab Meeting: Today's Reporter`, whose run of show is the
+> instructor's, and `### 📣 My Report Plan` is filled in by the reporter (lines 1–4)
+> and by everyone else (line 5, the question they bring). A light touchpoint worth
+> keeping: a week out, remind the reporter which decision they might report on.
 
 The score is shaped before the session, at two fixed touchpoints.
 

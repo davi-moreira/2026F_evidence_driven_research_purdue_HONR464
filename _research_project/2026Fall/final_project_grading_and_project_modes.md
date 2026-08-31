@@ -7,7 +7,7 @@
 > this document governs how each component is scored, and the syllabus governs
 > the weights.
 
-The course grade contains **one top-level Final Project worth 50%**. Individual
+The course grade contains **one top-level Final Project worth 55%**. Individual
 work is the default. You may complete one shared project with a group only with
 the instructor's approval. With six students, at most one group of two or three
 may be approved. Approval is available only when the class will still
@@ -17,25 +17,46 @@ to submit. Those conditions leave every student at least two other live projects
 to review and keep Peer Evaluation workable. The same five Final Project
 components, names, and shares apply in either mode.
 
-| Final Project component | Share of Final Project | Share of course |
-|---|---:|---:|
-| **Milestone Deliverables** | 30% | 15% |
-| **Peer Evaluation** | 20% | 10% |
-| **Peer Review** | 10% | 5% |
-| **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10% |
-| **Instructor/TA Evaluation** | 20% | 10% |
-| **Total** | **100%** | **50%** |
+| Final Project component | Share of your course grade |
+|---|---:|
+| **Milestone Deliverables** | 20% |
+| **Peer Evaluation** | 10% |
+| **Peer Review** | 5% |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 10% |
+| **Instructor/TA Evaluation** | 10% |
+| **Total** | **55%** |
+
+Those five figures are shares of **the whole course grade**, and they are the
+ones to work from. Inside the Final Project alone the components stand in the
+ratio 20 : 10 : 5 : 10 : 10, which as shares of the project comes to
+36.37% / 18.18% / 9.09% / 18.18% / 18.18%. Those do not divide evenly, so they
+are kept in `course_config.yaml` as the machine record and every page you read
+prints the course percentages instead.
 
 If the five component scores are (M), (E), (R), (P), and (I), each on
 a 0–100 scale, your Final Project score is
 
 \[
-0.30M + 0.20E + 0.10R + 0.20P + 0.20I.
+\frac{20M + 10E + 5R + 10P + 10I}{55}.
 \]
 
 Applied to the course grade, the five components contribute
-**15 + 10 + 5 + 10 + 10 = 50 course points**. There is no separate top-level
+**20 + 10 + 5 + 10 + 10 = 55 course points**. There is no separate top-level
 milestone category and no sixth Final Project component.
+
+> **Where the extra five points came from.** The syllabus's Final Project
+> section is adopted from QM 47400's, with a short list of documented
+> deviations, and this is the **seventh**. The Student Research Lead category
+> was retired; its replacement, Lecture Notebooks, took 20 of the 25 points it
+> held, and the 5 points left over went to **Milestone Deliverables**, which
+> rose from 15 to 20 course points and carried the Final Project from 50% to
+> 55%. Because the project-share column no longer reads 30 / 20 / 10 / 20 / 20,
+> the table above is written in course percentages. Nothing else moved: no
+> component was renamed, and no scoring rule inside a component changed.
+> Milestone Deliverables is still the equally weighted mean of your M1–M16
+> scores, the Poster Presentation is still 70% locked poster plus 30% live
+> presentation, and Peer Evaluation is still 80 received-rating points plus 20
+> submission points.
 
 ## How the five components work
 

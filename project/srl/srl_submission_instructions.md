@@ -1,12 +1,76 @@
 # SRL Submission: What to Hand In
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester, so nothing in this
+> document is required of you.** Every Monday and Wednesday lecture from Week 2 now
+> opens with a ten-minute **Lab Meeting** instead. One of you is that lecture's
+> **reporter**: you take **seven minutes on a decision from your own project and the
+> evidence behind it**, then **three minutes of questions from the room**. You do not
+> teach the lecture's concept, and **your report is not graded**. **The instructor
+> leads from minute 10** and owns accuracy, the AI tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. In its
+> place, **Lecture Notebooks (20%)** collects the notebook you work in class, once a
+> week. Everyone hands one in, not only the reporter, and it is graded on completion
+> alone.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead you today, it
+> carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
 *Read this before your first slot. It is the same for every one of your five
 leads, so nothing here changes from slot to slot except which lecture you are
 preparing.*
 
 ---
 
-## What this assignment collects
+## What is collected this semester
+
+*Everything after this section is the retired SRL submission, kept for a future
+edition. This section is what is actually collected in Fall 2026.*
+
+**Nobody submits a notebook the day before a lecture, and no submission belongs to
+one person's slot.** Instead, you hand in **the week's lecture notebook**, the
+`nbNN` you worked in class, once a week, and so does everyone else:
+
+- **Due 11:59 PM on the Sunday that ends that studio week.** Week 16 closes Friday
+  Dec 11, the last class day.
+- **Graded on completion only.** Worked through and handed in. Never on whether your
+  answers came out right, and never on how your ten minutes as reporter went.
+- **Credit** is `1.0` on time, `0.5` within seven days, `0` after that. Across the
+  `16` weeks the lowest `2` credits drop automatically, so
+  `lecture notebook points = 20.0 × (sum of your highest 14 credits) / 14`.
+- **How to hand it in** is unchanged in shape: open the notebook from the Schedule
+  page, **File → Save a copy in Drive**, work it, then submit either a Colab share
+  link set so that anyone with the link can comment, or the file itself
+  (**File → Download → Download .ipynb**). Name it with your last name followed by
+  the assignment's title.
+
+This is the **Lecture Notebooks (20%)** category, one of the course's three
+completion contracts:
+
+| Category | Weight |
+|---|---:|
+| Attendance | 1% |
+| Participation | 9% |
+| IYT Practice | 15% |
+| **Lecture Notebooks** | **20%** |
+| Final Project | 55% |
+| **Total** | **100%** |
+
+The dated list lives in `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, and your course
+platform carries the same dates. Where the platform and this repository disagree on
+a date, the platform is right.
+
+Your ten minutes as that lecture's **reporter** are separate and **ungraded**: seven
+minutes on a decision from your own project and the evidence behind it, then three
+minutes of questions from the room. Nothing is handed in for them.
+
+---
+
+## What this assignment collects  ⛔ *(retired procedure)*
 
 The lecture notebook for the lecture you lead, filled in. Only the student
 holding this SRL slot submits here. If this lecture is not your slot, there is
@@ -21,7 +85,7 @@ tool is slow or down. Second, work the rest of the notebook as a learner, so you
 have sat with every answer the room will reach before you ask anyone else to
 reach it.
 
-## What to hand in
+## What to hand in  ⛔ *(retired procedure)*
 
 One notebook. Either paste a Colab share link set so that anyone with the link
 can comment, which is the better option because it lets me write notes directly
@@ -31,7 +95,7 @@ title, for example `LASTNAME_02_studio_lec_01_srl.ipynb`. Submit by the deadline
 even if the notebook is rough. A rough plan I can send notes on beats a polished
 one that arrives after the review window has closed.
 
-## How it is graded
+## How it is graded  ⛔ *(retired procedure)*
 
 Your leading itself is scored on the nine rows of the SRL rubric, and the
 notebook you submit here feeds those rows before you walk in. A strong My Lead
@@ -41,7 +105,11 @@ projects. Nothing you write here is graded right or wrong.
 
 ---
 
-## The rubric your session is scored on
+## The rubric your session is scored on  ⛔ *(not applied this edition)*
+
+> ⛔ **This rubric is not applied in Fall 2026.** Your report is ungraded, so no
+> live score is taken. The nine rows are reproduced below exactly as written, for a
+> future edition that reinstates the role.
 
 You are graded **live**, during your session, on the nine rows below. Each lead
 is scored on its own, and together those scores make up the SRL share of your

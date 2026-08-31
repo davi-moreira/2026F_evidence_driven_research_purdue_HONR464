@@ -36,9 +36,9 @@ checked it.
 This milestone records the public test and what you learned from it. The locked
 poster from M13 and your live **Expo presentation** on Tuesday, November 17
 together supply the Final Project's **Poster Presentation at the Purdue
-Undergraduate Research Conference** component (20% of Final Project, or 10
-course points): `70%` is the M13
-poster-quality score and `30%` is the live-presentation score defined below. For
+Undergraduate Research Conference** component (10% of your course grade):
+`70%` is the M13 poster-quality score and `30%` is the live-presentation score
+defined below. For
 an approved group, the poster-quality portion is shared, but every member must
 present and receives their own live-presentation score. At the Expo, you stand
 your poster for strangers and evaluate at least three peer posters. The written

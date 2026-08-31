@@ -41,8 +41,8 @@ always preserves at least three active projects, so every student reviews at
 least two other live projects. Group members do not confer before submitting
 their own reviews, and each student is scored individually. The **M12 milestone
 score** is one of the sixteen scores averaged
-inside **Milestone Deliverables**. The separate **Peer Review** component (10%
-of Final Project, or 5 course points) scores the quality of your criticism using
+inside **Milestone Deliverables**. The separate **Peer Review** component (5%
+of your course grade) scores the quality of your criticism using
 the rubric below. The same score is not entered twice, and neither score
 evaluates your own poster.
 

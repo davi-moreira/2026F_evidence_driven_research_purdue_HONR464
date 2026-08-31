@@ -50,7 +50,9 @@ SOURCES = REPO / "_production_kit" / "nb_sources"
 # exempt). D33: all seven moves run INSIDE the 50 minutes; below each
 # lecture's ⏸ line is optional depth, never homework.
 FRAME_MON = (
-    "🗺️ **Today's frame (Monday, 9 / 22 / 12 / 7):** open with the 🧩 puzzle "
+    "🗺️ **Today's frame (Monday, 10 / 21 / 12 / 7):** open with the 📣 **lab "
+    "meeting**: one reporter, one decision from their own project, the room's "
+    "questions · then the 🧩 puzzle "
     "and 🔮 **Predict First** · investigate with 🛠️ **Run the Study** and "
     "your AI · verify with 🔍 **Read the Evidence** · drill 📝 **Practice** "
     "aloud and take ⚖️ **Make a Design Choice** · close in the room with "
@@ -58,7 +60,9 @@ FRAME_MON = (
     "📒 ledger row. All seven moves happen in class; 🏠-marked items and "
     "everything below the ⏸ line are optional depth.")
 FRAME_WED = (
-    "🗺️ **Today's frame (Wednesday, 7 / 23 / 12 / 8):** open with the 🧩 "
+    "🗺️ **Today's frame (Wednesday, 10 / 20 / 12 / 8):** open with the 📣 "
+    "**lab meeting**: one reporter, one decision from their own project, the "
+    "room's questions · then the 🧩 "
     "challenge, a spoken 📝 **Practice** retrieval drill, and 🔮 **Predict "
     "First** · attack the problem with 🛠️ **Run the Study**, 🔁 modifying "
     "the prompt and 🔬 interrogating what comes back · verify with 🔍 **Read "
@@ -85,30 +89,34 @@ FRAME_SPECIAL = {13: FRAME_CONF}   # conference week: the path ends at the Expo
 
 LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
 
-# The Student Research Lead fills the lecture notebook itself and submits it the
-# day before leading (D66); the plan cell is the one thing the brief above does not
-# already give them. Injected at build time next to the frame, so all 25 brief
-# locations stay identical and the gitignored sources stay free of it. nb01's
-# briefs are the instructor-led Week-1 models and take no plan cell (FRAME_EXEMPT).
-BRIEF_MARK = re.compile(r"(?m)^\s*###[^\n]*SRL Lead Brief")
-LEAD_PLAN = (
-    "### 🎤 My Lead Plan\n\n"
-    "*If this lecture is your slot, fill this in, fill the rest of the notebook "
-    "as a learner, and submit the whole notebook the day before you lead, by "
-    "11:59 PM on the course platform. Your classmates can read it, the same way "
-    "they read the brief above. If it is not your slot, read it to see how the "
-    "session will run.*\n\n"
-    "The frame, the puzzle, and the checkpoints above are fixed. **The staging "
-    "is yours.** Five lines are enough; your ledger row below records the AI you "
-    "used and how you checked it.\n\n"
-    "**1. How I will stage the puzzle** *(my own words, my own example, or the "
-    "seed puzzle sharpened):*\n\n\n"
-    "**2. The one thing I am adding that the brief does not have:**\n\n\n"
-    "**3. My commitment question, and how the room records it** *(the exact "
-    "question everyone answers in writing before any AI tool opens):*\n\n\n"
-    "**4. The decision I will close on, and the defense question I will put to "
-    "one person:**\n\n\n"
-    "**5. If my AI tool is slow or down, I will:**\n")
+# D74: every lecture opens with a LAB MEETING. One student is that lecture's
+# reporter and brings a decision from their OWN project; the room questions it.
+# The report plan is the one thing the brief above does not already give them,
+# so it is injected at build time next to the frame, keeping all 25 brief
+# locations identical and the gitignored sources free of it. Line 5 is for
+# everyone who is not reporting, so the whole room arrives with a question.
+# The notebook itself is collected WEEKLY from every student and graded on
+# completion (D74). nb01's briefs are the instructor-led Week-1 models and take
+# no report plan (FRAME_EXEMPT).
+BRIEF_MARK = re.compile(r"(?m)^\s*###[^\n]*Lab Meeting")
+REPORT_PLAN = (
+    "### 📣 My Report Plan\n\n"
+    "*If this lecture's lab-meeting slot is yours, fill lines 1–4 in before "
+    "class. If it is not, fill in line 5, so you arrive with a real question. "
+    "Either way the whole notebook is submitted at the end of the week on the "
+    "course platform, and it is graded on completion.*\n\n"
+    "Your report is seven minutes on **your own project**, not on this "
+    "lecture's topic. You are the only person in the room who has been inside "
+    "it, so there is no answer here you can get wrong.\n\n"
+    "**1. The decision I am bringing** *(one my project has actually reached "
+    "since the last lab meeting):*\n\n\n"
+    "**2. The evidence behind it** *(the ledger row, the number, the source, "
+    "or the check that licenses it):*\n\n\n"
+    "**3. Where it is still uncertain** *(the part I would most like a second "
+    "pair of eyes on):*\n\n\n"
+    "**4. The question I want the room to answer for me:**\n\n\n"
+    "**5. If I am not reporting today, the question I will ask the "
+    "reporter:**\n")
 
 # D34: the ⏸ optional-depth region is NORMALIZED at build time. In every
 # lecture segment the ⏸ cell body is standardized, and in a notebook's final
@@ -219,9 +227,9 @@ def _write_instructor(cells, out: Path, frames_nb: int | None = None) -> Path:
             if m and frames_nb is not None and frames_nb not in FRAME_EXEMPT:
                 nb.cells.append(nbformat.v4.new_markdown_cell(
                     _frame_for(int(m.group(1)), n_lectures, frames_nb)))
-            if (BRIEF_MARK.search(source) and "### 🎤 My Lead Plan" not in source
+            if (BRIEF_MARK.search(source) and "### 📣 My Report Plan" not in source
                     and frames_nb is not None and frames_nb not in FRAME_EXEMPT):
-                nb.cells.append(nbformat.v4.new_markdown_cell(LEAD_PLAN))
+                nb.cells.append(nbformat.v4.new_markdown_cell(REPORT_PLAN))
         elif kind == "code":
             nb.cells.append(nbformat.v4.new_code_cell(source))
         else:

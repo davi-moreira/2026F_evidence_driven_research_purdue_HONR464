@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build_participation_schedules.py — the completion-contract assignment tables.
 
-All three are DERIVED, never hand-written, so they cannot drift from the calendar:
+All four are DERIVED, never hand-written, so they cannot drift from the calendar:
 
   planning/IYT_SUBMISSION_SCHEDULE.md            (D57; recategorized D58)
       The book "It is your turn" (IYT) submissions. One row per EDR|AI chapter,
@@ -16,14 +16,33 @@ All three are DERIVED, never hand-written, so they cannot drift from the calenda
       closes. Feedback is now collected ONCE PER STUDIO, closing the Sunday that
       ends the studio week — right before the next studio starts.
 
-  planning/SRL_ASSIGNMENT_SCHEDULE.md
-      One row per Student Research Lead slot: which lecture it is, which frame
-      it runs, when the filled notebook is due, and the seed puzzle.
+  planning/LECTURE_NOTEBOOK_SCHEDULE.md          (D74)
+      The weekly lecture-notebook submissions. One row per notebook nb01-nb16,
+      due 11:59 PM on the Sunday that ends its studio week (Week 16 closes on
+      the last day of class instead, because the term ends first), plus the
+      assignments to create and the ONE instruction paragraph that serves every
+      one of them. Graded by completion inside Lecture Notebooks (20%), the
+      category D74 opened when it retired the Student Research Lead grade.
+      Every number in its header comes from course_config.yaml's
+      `lecture_notebooks:` block; every date comes from the meeting calendar.
+
+  planning/SRL_ASSIGNMENT_SCHEDULE.md            (the lab meeting, D74)
+      One row per lab-meeting slot: which lecture it is, which frame it runs,
+      which weekly notebook carries it, and the puzzle that opens the
+      instructor-led block.
+
+      D74 retired the Student Research Lead ROLE and kept the draw. The same 25
+      slots now name each lecture's REPORTER, who spends seven minutes on a
+      decision from their own project and three on the room's questions; the
+      reporter does not teach the concept, and the report is not graded. The
+      filename stays as it is: D74 deletes nothing, and the Brightspace kit
+      points at this path.
 
       NO STUDENT NAMES. The draw itself is FERPA-protected student data and
       lives only in the gitignored `_adm/roster/` (scripts/assign_srl_slots.py,
-      scripts/build_srl_packet.py). This table is the slot structure, which is
-      the part that is safe to keep in the repository and reuse.
+      scripts/build_srl_packet.py — both KEPT under D74 Ruling 5). This table is
+      the slot structure, which is the part that is safe to keep in the
+      repository and reuse.
 
 Usage:
     .venv/bin/python scripts/build_participation_schedules.py
@@ -36,11 +55,13 @@ import datetime as dt
 import math
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
+from notebooks_map import NOTEBOOKS, colab_url, nb_of, session_kind  # noqa: E402
 from session_readings import lesson_index, parse  # noqa: E402
 
 SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.CSV"
@@ -48,12 +69,20 @@ if not SCHEDULE.exists():
     SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 IYT_OUT = REPO / "planning" / "IYT_SUBMISSION_SCHEDULE.md"
 STUDIO_OUT = REPO / "planning" / "STUDIO_FEEDBACK_SCHEDULE.md"
+LECTURE_NB_OUT = REPO / "planning" / "LECTURE_NOTEBOOK_SCHEDULE.md"
 SRL_OUT = REPO / "planning" / "SRL_ASSIGNMENT_SCHEDULE.md"
 
 sys.path.insert(0, str(REPO / "scripts"))
 from validate_calendar import no_class_days  # noqa: E402
 
 CLOSED = set(no_class_days())
+
+@lru_cache(maxsize=1)
+def _config() -> dict:
+    """course_config.yaml — the machine record behind every contract here."""
+    import yaml
+    return yaml.safe_load((REPO / "course_config.yaml").read_text())
+
 
 def _studio_overrides() -> dict[int, dt.date]:
     """Studio -> hand-set close date, from course_config.yaml (D66).
@@ -62,10 +91,8 @@ def _studio_overrides() -> dict[int, dt.date]:
     computed Sunday is not the date students actually see there, the config
     carries the real one and it wins.
     """
-    import yaml
-    cfg = yaml.safe_load((REPO / "course_config.yaml").read_text())
-    raw = (cfg["participation"]["items"]["studio_feedback"].get("overrides")
-           or {})
+    raw = (_config()["participation"]["items"]["studio_feedback"]
+           .get("overrides") or {})
     return {int(k): dt.date.fromisoformat(v) for k, v in raw.items()}
 
 
@@ -448,19 +475,230 @@ for all twelve, so nothing has to be edited per studio.
 
 
 # ---------------------------------------------------------------------------
-# 3. SRL slots
+# 3. the weekly lecture notebooks (D74)
 
+#: The one instruction block every weekly lecture-notebook assignment carries.
+#: Built deliberately like IYT_INSTRUCTION above — what the assignment collects,
+#: what to hand in, how it is graded, and nothing else — because the two are read
+#: by the same person in the same week and should not sound like two courses.
+#: Written TO the student. It names no date and no drop count: the course
+#: platform carries the date, and the contract's numbers live in the header of
+#: the generated page and in course_config.yaml, so they cannot drift from here.
+LECTURE_NOTEBOOK_INSTRUCTION = """\
+**What this assignment collects.** Your week's lecture notebook — the same \
+`nbNN` you opened in class, with your own work in it: the **📣 My Report Plan** \
+cell (lines 1–4 when the lab meeting is yours, line 5 when it is not), the seven \
+in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row \
+for each lecture. Open the notebook from its badge on the course website, then \
+**File → Save a copy in Drive** so the copy is yours, and finish whatever class \
+left open before you hand it in.
+
+**What to hand in.** One notebook per week. Either upload the notebook \
+(**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as \
+PDF**). If you hand in the PDF, run **Runtime → Run all** and expand every \
+collapsed section first: printing captures what is on the screen, so an unrun or \
+folded cell arrives empty. Name the file `LASTNAME_nb<nn>.ipynb`. Answer in your \
+own words, keep every question in order, and add a ledger row for anything you \
+delegated to an AI tool.
+
+**How it is graded.** Completion only: worked through, handed in, and on time, or \
+not. Your answers are never graded right or wrong here, and how your lab meeting \
+went does not enter this grade — the report itself carries no score. A notebook \
+up to seven days late earns half credit; after that it earns none. Your lowest \
+few lecture-notebook credits are dropped automatically, so one bad week does not \
+need an email."""
+
+
+def _lecture_notebook_overrides() -> dict[int, dt.date]:
+    """nb number -> hand-set due date, from course_config.yaml (D66).
+
+    Same rule as the studio survey: where the course platform shows a date the
+    Sunday rule does not produce, the platform is right and the config carries
+    it. None are set today, and the key is read rather than assumed so that
+    setting one never requires touching this generator.
+    """
+    block = _config()["lecture_notebooks"]
+    raw = ((block.get("items", {}).get("weekly_lecture_notebook", {}) or {})
+           .get("overrides") or block.get("overrides") or {})
+    return {int(k): dt.date.fromisoformat(v) for k, v in raw.items()}
+
+
+def notebook_submissions(meetings: list[dict]) -> list[dict]:
+    """One record per weekly notebook, nb01-nb16, with its sessions and due date.
+
+    Which notebook a meeting belongs to is read from the schedule's
+    `other_material` column — the same nbNN token the badge updater, the session
+    guides and the validators key off — so this table cannot drift from the
+    calendar. The due date is the Sunday that ends the notebook's own week,
+    capped at the last day of class, which is what makes Week 16 close on the
+    Friday instead (D74).
+    """
+    per: dict[int, list[dict]] = {}
+    for r in meetings:
+        n = nb_of(r.get("other_material") or "")
+        if n is None:
+            raise SystemExit(
+                f"✗ meeting {r['meeting']} names no nbNN in other_material")
+        if n not in NOTEBOOKS:
+            raise SystemExit(
+                f"✗ meeting {r['meeting']} names unknown notebook nb{n:02d}")
+        per.setdefault(n, []).append(r)
+    absent = [f"nb{n:02d}" for n in NOTEBOOKS if n not in per]
+    if absent:
+        raise SystemExit(f"✗ no meeting carries: {', '.join(absent)}")
+
+    last_class = max(dt.date.fromisoformat(r["date"]) for r in meetings)
+    overrides = _lecture_notebook_overrides()
+    records = []
+    for n in sorted(per):
+        rs = sorted(per[n], key=lambda r: r["date"])
+        end = max(dt.date.fromisoformat(r["date"]) for r in rs)
+        due = end + dt.timedelta(days=(6 - end.weekday()) % 7 or 7)
+        note = ""
+        if due > last_class:
+            due = last_class
+            note = (" *(the term ends first, so this one closes on the last day "
+                    "of class)*")
+        if n in overrides:
+            due = overrides[n]
+            note = " *(the course platform carries this date, and it wins)*"
+        weeks = sorted({int(w) for w, _ in
+                        (week_of(r["unit"].replace('"', "")) for r in rs) if w})
+        _, unit = week_of(rs[-1]["unit"].replace('"', ""))
+        worked = [r for r in rs if session_kind(r) != "studio"]
+        records.append({
+            "nb": n,
+            "file": f"{NOTEBOOKS[n][0]}_student.ipynb",
+            "title": NOTEBOOKS[n][1],
+            "week": (f"{weeks[0]}–{weeks[-1]}" if len(weeks) > 1
+                     else (str(weeks[0]) if weeks else "—")),
+            "unit": unit.split(":")[0],
+            "due": due,
+            "note": note,
+            "worked": " · ".join(pretty(r["date"], r["day"]) for r in worked),
+        })
+    return records
+
+
+def lecture_notebook_page(meetings: list[dict]) -> str:
+    cfg = _config()
+    block = cfg["lecture_notebooks"]
+    item = block["items"]["weekly_lecture_notebook"]
+    weight = float(cfg["assessment"]["lecture_notebooks"])
+    records = notebook_submissions(meetings)
+
+    baseline = int(block["baseline_credits"])
+    if baseline != len(records) or int(item["count"]) != len(records):
+        raise SystemExit(
+            f"✗ course_config.yaml says {baseline} weekly notebooks "
+            f"(items.count {item['count']}), the calendar carries "
+            f"{len(records)}")
+    drops = math.ceil(0.10 * baseline)
+    kept = baseline - drops
+
+    build = ["| Brightspace assignment name | Due (11:59 PM) | Notebook file "
+             "| Worked in class |", "|---|---|---|---|"]
+    detail = ["| # | Notebook | What it covers | Due (11:59 PM) | Week · Studio "
+              "| Worked in class | Open |", "|---|---|---|---|---|---|---|"]
+    for rec in records:
+        n = rec["nb"]
+        build.append(
+            f"| Lecture notebook — Week {rec['week']} · nb{n:02d} "
+            f"| {long_date(rec['due'])}{rec['note']} | `{rec['file']}` "
+            f"| {rec['worked']} |")
+        detail.append(
+            f"| {n} | nb{n:02d} | {rec['title']} | {long_date(rec['due'])} "
+            f"| {rec['week']} · {rec['unit']} | {rec['worked']} "
+            f"| [open]({colab_url(n)}) |")
+
+    head = f"""# Lecture notebooks — the weekly submissions
+
+*Generated by `scripts/build_participation_schedules.py`. Do not hand-edit.*
+
+Every week's notebook is collected. You work `nbNN` in class, you finish whatever
+the room left open, and you hand that same notebook in once: **11:59 PM on the
+Sunday that ends the studio week**. Week 16 is the one exception, and the
+calendar forces it — the term ends first, so the last notebook closes on the last
+day of class.
+
+It is graded **by completion** inside **Lecture Notebooks ({weight:g}%)**: worked
+through and handed in, or not. Nothing in it is scored right or wrong, and how
+your lab-meeting report went never reaches this grade, because the report carries
+no score at all (D74).
+
+There are **{baseline}** of them and the **{drops} lowest credits are dropped
+automatically** (⌈0.10 × N⌉), so {kept} valid, on-time submissions earn the full
+{weight:g} points:
+
+> `lecture notebook points = {weight:.1f} × (sum of the highest {kept} credits) / {kept}`
+
+Credit is **1.0** on time, **0.5** within seven days of the deadline, and **0**
+otherwise — the same credit rule Participation and IYT Practice use. Lecture
+Notebooks is still its own undivided category: it is **not** participation, and
+participation's ±0.9 contribution adjustment never touches it.
+
+The machine record is the `lecture_notebooks:` block of
+[`course_config.yaml`](../course_config.yaml), and the ruling that opened the
+category is D74 in
+[`_project_docs/DECISIONS.md`](../_project_docs/DECISIONS.md).
+
+---
+
+## 1. The instruction — one paragraph block, every assignment
+
+Paste this into every weekly lecture-notebook assignment on the course page. It
+is written to be correct for all {baseline}, so nothing has to be edited per
+assignment except the title and the due date.
+
+<!-- lecture-notebook-instruction:begin -->
+{LECTURE_NOTEBOOK_INSTRUCTION}
+<!-- lecture-notebook-instruction:end -->
+
+---
+
+## 2. The assignments to create ({baseline})
+
+One assignment per week, each collecting that week's notebook.
+
+"""
+    detail_head = f"""
+
+---
+
+## 3. Every submission, one row ({baseline})
+
+"""
+    return (head + "\n".join(build) + detail_head + "\n".join(detail) + "\n")
+
+
+# ---------------------------------------------------------------------------
+# 4. lab-meeting reporter slots (D74; the Student Research Lead role retired)
+
+#: The fifty-minute frames, restated by D74. Both still sum to 50, and section
+#: boundaries 3 and 4 are untouched (31–43 / 43–50 Monday, 30–42 / 42–50
+#: Wednesday), so D22's and D34's later-block rulings stand. What changed is the
+#: opener: the lab meeting takes the first ten minutes, and the 🧩 Research
+#: Puzzle folds into the front of the investigation block, run by the instructor.
 FRAME = {
     "Mon": ("Monday · guided investigation",
-            "0–9 your research puzzle · 9–31 guided AI investigation · "
-            "31–43 verification and formalization (instructor) · 43–50 decision and defense"),
+            "0–10 lab meeting: the reporter and the room · "
+            "10–31 guided AI investigation (instructor, opening on the puzzle) · "
+            "31–43 verification and formalization · 43–50 decision and defense"),
     "Wed": ("Wednesday · applied AI laboratory",
-            "0–7 your retrieval challenge · 7–30 applied AI laboratory · "
-            "30–38 peer defense · 38–42 synthesis and accuracy lock · 42–50 project transfer"),
+            "0–10 lab meeting: the reporter and the room · "
+            "10–30 applied AI laboratory · 30–38 peer defense · "
+            "38–42 synthesis and accuracy lock · 42–50 project transfer"),
 }
 
 
-def srl_table(meetings: list[dict]) -> str:
+def lab_meeting_table(meetings: list[dict]) -> str:
+    """The reporter slot schedule (written to SRL_OUT, whose name is kept).
+
+    D74 retired the Student Research Lead ROLE and kept everything else: the
+    same 25 Monday/Wednesday slots, drawn the same way, now name each lecture's
+    REPORTER. The `srl_slot` / `srl_focus` columns of the calendar are read
+    unchanged, because the draw carried over unchanged.
+    """
     slots = []
     for r in meetings:
         raw = (r.get("srl_slot") or "").strip()
@@ -472,53 +710,80 @@ def srl_table(meetings: list[dict]) -> str:
         slots.append((int(m.group(1)), r))
     slots.sort()
 
-    lines = ["| Slot | Meeting | Lecture date | Notebook due | Week | Studio "
-             "| Lecture | Frame |",
+    # The notebook that carries each lecture, and the Sunday it is handed in.
+    # Until D74 this column held a PREPARATION deadline — the filled notebook
+    # 11:59 PM the calendar day before the lecture (D66). There is no
+    # preparation submission any more: the 📣 My Report Plan cell is filled in
+    # before class, and the notebook is collected weekly with everyone else's.
+    due_of = {rec["nb"]: rec["due"] for rec in notebook_submissions(meetings)}
+
+    lines = ["| Slot | Meeting | Lecture date | Notebook · due (11:59 PM) "
+             "| Week | Studio | Lecture | Frame |",
              "|---|---|---|---|---|---|---|---|"]
     for slot, r in slots:
         week, studio = week_of(r["unit"])
-        d = dt.date.fromisoformat(r["date"])
-        # 11:59 PM the CALENDAR DAY BEFORE the lecture (D66, adopted from the
-        # course-platform dates and superseding D18's two days). No class-day
-        # snapping: this is a submission time, not a meeting, so a Sunday or a
-        # holiday is a perfectly good due date.
-        prep = (d - dt.timedelta(days=1)).strftime("%a %b %-d")
+        n = nb_of(r.get("other_material") or "")
+        if n is None:
+            raise SystemExit(
+                f"✗ meeting {r['meeting']} names no nbNN in other_material")
+        nb = f"nb{n:02d} · {long_date(due_of[n])}"
         name, _ = FRAME[r["day"]]
         title = re.sub(r"\s+", " ", r["title"]).strip()
         lines.append(
             f"| **{slot:02d}** | {r['meeting']} | {pretty(r['date'], r['day'])} "
-            f"| {prep} | {week} | {studio} | {title} | {name} |")
+            f"| {nb} | {week} | {studio} | {title} | {name} |")
 
-    puzzles = ["\n---\n\n## The seed puzzle for each slot\n"]
+    puzzles = ["\n---\n\n## The puzzle for each slot\n",
+               "Kept in full, and re-owned. Each puzzle below opens the "
+               "instructor-led investigation block that follows the lab "
+               "meeting; the reporter's ten minutes come from their own "
+               "project instead.\n"]
     for slot, r in slots:
         focus = re.sub(r"\s+", " ", (r.get("srl_focus") or "").strip())
         title = re.sub(r"\s+", " ", r["title"]).strip()
         puzzles.append(f"**Slot {slot:02d}** · {pretty(r['date'], r['day'])} · "
                        f"{title}\n\n> {focus}\n")
 
-    head = f"""# Student Research Lead — Slot Schedule
+    weight = _config()["assessment"]["lecture_notebooks"]
+    head = f"""# Lab Meeting — Reporter Slot Schedule
 
 *Generated by `scripts/build_participation_schedules.py`. Do not hand-edit.*
 
-**{len(slots)} leadable lectures**, every Monday and Wednesday from Week 2 onward.
-Week 1's two lectures are instructor-led to model the format. Slots are drawn
-**randomly at the start of the semester**, with no rotation and no seats (D22).
+**{len(slots)} lab meetings**, one opening every Monday and Wednesday lecture from
+Week 2 onward. Week 1's two lectures carry no reporter, because the format is
+modeled there first. Slots are drawn **randomly at the start of the semester**,
+with no rotation and no seats (D22), and **D74 carried that draw over unchanged**:
+the same {len(slots)} slots now name each lecture's **reporter** rather than its
+lead, and there was no re-draw.
+
+**What the ten minutes are.** The reporter spends **seven minutes** on one
+decision from **their own project** and the evidence behind it, then takes
+**three minutes** of questions from the room. The reporter does not teach the
+lecture's concept, and the report is **not graded**. The instructor leads from
+minute 10 and owns accuracy, the AI tooling and the clock (D74).
 
 **This table carries no names.** The draw is FERPA-protected student data: it is
 made by `scripts/assign_srl_slots.py` and written only into the gitignored
-`_adm/roster/`, and the per-lead messages come from `scripts/build_srl_packet.py`.
-What is safe to keep here is the slot structure, which is also the part that
-survives into the next edition.
+`_adm/roster/`, and the per-slot messages come from
+`scripts/build_srl_packet.py`. What is safe to keep here is the slot structure,
+which is also the part that survives into the next edition.
 
-**What each lead owes.** Their lecture's notebook, filled in and with its
-**🎤 My Lead Plan** cell complete, submitted **the day before** the lecture
-(the "Notebook due" column), by 11:59 PM, and prepared from one week ahead. The student
-instructions are the SRL handout PDFs in `project/srl/`, built by
-`scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
-to Brightspace once and stay correct.
+**What everyone owes.** Nothing is submitted the night before. You fill in the
+**📣 My Report Plan** cell of that week's notebook **before class** — lines 1–4
+when the lab meeting is yours, line 5 when it is not, so the whole room arrives
+with a question — and the notebook itself is handed in **once a week**, on the
+Sunday that ends the studio week. Dates are in
+[`LECTURE_NOTEBOOK_SCHEDULE.md`](LECTURE_NOTEBOOK_SCHEDULE.md), and the "Notebook
+· due" column below repeats the one that covers each slot.
 
-**Weight.** Student Research Lead is **25%** of the course grade.
-The rubric is `project/srl/srl_rubric.md`.
+**Weight.** The report itself carries **none**. D74 retired the **25% Student
+Research Lead** category and opened **Lecture Notebooks ({weight}%)** in its
+place, graded by completion. The SRL suite in `project/srl/` — the handbook, the
+rubric, the Socratic question bank, the AI integration guide, the prep template,
+the peer feedback form and both protocols, with the handout PDFs
+`scripts/build_handout_pdfs.py` builds from them — is **kept on disk for a future
+edition and is not applied to this one** (D74 Ruling 5, which deletes nothing).
+The per-lecture questions guide is kept in full and re-owned to the instructor.
 
 ---
 
@@ -533,7 +798,8 @@ def main() -> None:
     meetings = rows()
     outputs = [(IYT_OUT, iyt_page(meetings)),
                (STUDIO_OUT, studio_table(meetings)),
-               (SRL_OUT, srl_table(meetings))]
+               (LECTURE_NB_OUT, lecture_notebook_page(meetings)),
+               (SRL_OUT, lab_meeting_table(meetings))]
     stale = []
     for path, content in outputs:
         if check:

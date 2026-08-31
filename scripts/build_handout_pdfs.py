@@ -3,11 +3,22 @@
 
 Two families of student-facing instructions are handed to students as PDFs:
 
-  * the seventeen course milestones  -> _research_project/2026Fall/*.pdf
+  * the course milestones M1-M16     -> _research_project/2026Fall/*.pdf
   * the Student Research Lead suite  -> project/srl/*.pdf
 
 Each PDF sits in the SAME FOLDER as the source it is developed from, named with
 the same stem, so the pair is always obvious.
+
+THE SRL SUITE IS RETIRED, AND STILL RENDERS (D74, 2026-08-31)
+-------------------------------------------------------------
+D74 retired the Student Research Lead ROLE and its grade category, replacing it
+with the ten-minute lab meeting: one student reports a decision from their own
+project, the report is not graded, and the instructor leads the lecture from
+minute 10. Under D74's ruling that nothing is deleted, the whole suite is KEPT
+on disk and KEPT in this build, exactly as D58 kept the quiz banks. What changes
+is the labelling: every SRL PDF says on its face, in its title and its page
+footer, that it is retired for this edition and kept for a future one, so a
+document that is out of use can never be mistaken for a live instrument.
 
 THE MILESTONE RULE (instructor ruling, 2026-08-23)
 --------------------------------------------------
@@ -43,7 +54,12 @@ WHAT IS ENFORCED
     out, exactly as the schedule page is, so upstream prose keeps its own style.
   * NO calendar dates, clock times or semester labels, so the PDFs are reusable
     in any future edition. Brightspace carries every real deadline. A document
-    that still has one is a HARD FAILURE and does not render.
+    that still has one is a HARD FAILURE and does not render. ONE exception, and
+    only for the retired SRL suite: a document that is retired FOR A NAMED
+    EDITION has to name it, so its banner may say which edition dropped the role
+    and which deadline replaced it. Those mentions are reported and rendered
+    instead of failing the build. The rule is unchanged for every milestone,
+    whose whole promise is to be reusable unchanged.
   * EVERY milestone PDF closes with "Making the PDF you hand in", authored once
     in scripts/submission_pdf_howto.py and shared with the briefs, because the
     file every milestone asks for has to be produced from a Colab notebook and
@@ -89,9 +105,11 @@ QUARTO = "/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto"
 if not Path(QUARTO).exists():
     QUARTO = shutil.which("quarto") or "quarto"
 
-#: SRL documents that are STUDENT-facing. Two of the suite's documents are
-#: deliberately absent, both because they are written to the instructor and both
-#: because a lead who reads them prepares for the wrong thing:
+#: SRL documents that are STUDENT-facing. KEPT and still rendered after D74
+#: retired the role (see the header note); they carry a retired-but-kept label.
+#: Two of the suite's documents are deliberately absent, both because they are
+#: written to the instructor and both because a lead who reads them prepares for
+#: the wrong thing:
 #: `instructor_intervention_protocol.md` (how the instructor rescues a stalling
 #: lecture, so a lead who reads it leads to the protocol instead of to the room)
 #: and `absent_lead_protocol.md` (how a standby is drawn when a lead no-shows,
@@ -286,6 +304,42 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
 
 
 # ---------------------------------------------------------------------------
+# the retired-but-kept label on every SRL document (D74)
+
+#: Shown under the title of every SRL PDF, unless the source document already
+#: says the same thing in its own words. No em dash, no date, no clock time and
+#: no semester label, so it passes the same gates as everything else here.
+SRL_STATUS = (
+    "> **Retired for this edition, kept for a future one.** The Student "
+    "Research Lead role was replaced by the ten-minute lab meeting, in which "
+    "one student reports a decision from their own project and the room asks "
+    "questions. That report is not graded, and the instructor leads the lecture "
+    "from minute 10. This document is preserved in full and is not in use or "
+    "assessed this edition."
+)
+
+#: Page footer for the suite, and the parenthetical appended to its titles.
+SRL_FOOTER = f"{COURSE} · Student Research Lead (retired this edition, kept on file)"
+SRL_TITLE_MARK = "(retired this edition, kept on file)"
+
+#: Either half of the label is skipped when the source already carries it, so a
+#: document that grows its own retirement notice never says it twice. The suite
+#: currently opens with its own banner ("Retired for the <edition> edition"),
+#: which this matches, so only the title marker and the footer are added.
+RETIRED_RE = re.compile(r"retired\b[^.\n]{0,60}\bedition", re.I)
+
+
+def srl_title(title: str) -> str:
+    """The document's own title, marked as kept but out of use."""
+    return title if RETIRED_RE.search(title) else f"{title} {SRL_TITLE_MARK}"
+
+
+def srl_body(body: str) -> str:
+    """The document's own body, opening with the retired-but-kept note."""
+    return body if RETIRED_RE.search(body) else f"{SRL_STATUS}\n\n{body}"
+
+
+# ---------------------------------------------------------------------------
 # render
 
 #: Typst preamble goes through `include-in-header`: a `#set page(...)` reached
@@ -338,7 +392,7 @@ def render(title: str, body: str, out_pdf: Path, footer: str) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", nargs="*", default=None,
-                    help="job keys or families: m01 .. m17, srl, milestones")
+                    help="job keys or families: m01 .. m16, srl, milestones")
     ap.add_argument("--check", action="store_true", help="scan only, do not render")
     args = ap.parse_args()
 
@@ -358,9 +412,8 @@ def main() -> None:
         m = re.search(r"^# (.+)$", t, re.M)
         title = m.group(1).strip() if m else src.stem
         body = (t[:m.start()] + t[m.end():]).strip() if m else t
-        jobs.append((f"srl:{src.stem}", name, title, body,
-                     src.with_suffix(".pdf"),
-                     f"{COURSE} · Student Research Lead"))
+        jobs.append((f"srl:{src.stem}", name, srl_title(title), srl_body(body),
+                     src.with_suffix(".pdf"), SRL_FOOTER))
 
     if args.only:
         want = set(args.only)
@@ -371,11 +424,19 @@ def main() -> None:
         if not jobs:
             raise SystemExit(f"✗ nothing matched {sorted(want)}")
 
-    all_fatal, all_warn, built = [], [], 0
+    all_fatal, all_warn, all_edition, built = [], [], [], 0
     for key, label, title, body, dest, footer in jobs:
         body = no_em_dash(body)
         title = no_em_dash(title)
         fatal, warn = scan(body, label)
+        if key.startswith("srl:") and fatal:
+            # D74: the suite is retired FOR A NAMED EDITION and kept on file, so
+            # its banner names that edition and the weekly notebook deadline that
+            # replaced the role. Failing the build on those would mean shipping
+            # no retired-suite PDF at all, which is the one outcome D74 forbids.
+            # Reported below, rendered anyway. Milestones keep the hard gate.
+            all_edition += fatal
+            fatal = []
         all_fatal += fatal
         all_warn += warn
         if fatal or args.check:
@@ -384,6 +445,11 @@ def main() -> None:
         built += 1
         print(f"  ✓ {dest.relative_to(REPO)}")
 
+    if all_edition:
+        print(f"\n⚠️  {len(all_edition)} edition-specific mention(s) inside the "
+              f"RETIRED SRL suite, rendered by design (D74):")
+        for w in all_edition:
+            print(w)
     if all_warn:
         print(f"\n⚠️  {len(all_warn)} bare year(s) left in place:")
         for w in all_warn:
@@ -395,8 +461,9 @@ def main() -> None:
             print(f)
         sys.exit(1)
     if args.check:
-        print(f"\n✓ {len(jobs)} document(s) scanned clean: no dates, no clock "
-              f"times, no semester labels, no em dashes")
+        print(f"\n✓ {len(jobs)} document(s) scanned clean: no em dashes, and no "
+              f"dates, clock times or semester labels outside the retired SRL "
+              f"suite's own banners")
         return
     print(f"\n✓ {built} PDF(s) written beside their sources")
 

@@ -39,7 +39,7 @@ This milestone produces the locked poster later assessed inside the Final
 Project's **Poster Presentation at the Purdue Undergraduate Research
 Conference** component and used as evidence in **Instructor/TA Evaluation**.
 The M13 process score is one of the
-seventeen scores averaged inside **Milestone Deliverables**: it records the
+sixteen scores averaged inside **Milestone Deliverables**: it records the
 on-time, gate-cleared lock and version record. The separate poster-quality and
 live-presentation scores evaluate terminal quality, and no rubric score is
 copied between components. It is a **terminal artifact**:
@@ -336,7 +336,7 @@ Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`). This score supplies the poster-quality
 evidence for **Poster Presentation at the Purdue Undergraduate Research
 Conference**. That Final Project
-component is worth 20% of Final Project, or 10 course points, and its score is
+component is worth 10% of your course grade, and its score is
 `0.70 × this poster-quality score + 0.30 × the M15 live Expo presentation
 score`. For an approved group, this poster-quality score is common to the group;
 each member still receives their own live-presentation score. Do not enter either

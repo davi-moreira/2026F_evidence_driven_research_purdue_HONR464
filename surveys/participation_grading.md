@@ -1,22 +1,35 @@
-# Participation (9%) and IYT Practice (15%) — the two completion contracts
+# Participation (9%), IYT Practice (15%) and Lecture Notebooks (20%) — the three completion contracts
 
-Two categories are graded by completion, and this page is the whole contract for
-both of them. **Participation is 9%** and collects the studio feedback survey,
-the student profile survey and the course reflection: 14 credits. **IYT Practice
-is 15%** and collects the "It is your turn" section of every required EDR\|AI
-chapter: 35 credits for a typical student. Each block is undivided, each credit
-inside a block is worth exactly the same as every other, and each block has its
-own **N**, its own drop allowance and its own formula.
+Three categories are graded by completion, and this page is the whole contract
+for all three of them. **Participation is 9%** and collects the studio feedback
+survey, the student profile survey and the course reflection: 14 credits. **IYT
+Practice is 15%** and collects the "It is your turn" section of every required
+EDR\|AI chapter: 35 credits for a typical student. **Lecture Notebooks is 20%**
+and collects the weekly notebook worked in class: 16 credits. Each block is
+undivided, each credit inside a block is worth exactly the same as every other,
+and each block has its own **N**, its own drop allowance and its own formula.
 
-There is no published split inside either block, and there is no unpublished one
-either. That is the whole rule, and it is the rule because it is the only version
-a student can verify and an instructor can defend.
+There is no published split inside any of the three blocks, and there is no
+unpublished one either. That is the whole rule, and it is the rule because it is
+the only version a student can verify and an instructor can defend.
+
+Where the three sit in the grade:
+
+| Category | Weight | Its contract |
+|---|---:|---|
+| Attendance | 1% | not a completion contract; the course platform records it |
+| **Participation** | **9%** | this page |
+| **IYT Practice** | **15%** | this page |
+| **Lecture Notebooks** | **20%** | this page |
+| Final Project | 55% | [`../_research_project/2026Fall/final_project_grading_and_project_modes.md`](../_research_project/2026Fall/final_project_grading_and_project_modes.md) |
+| **Total** | **100%** | |
 
 > **Retired 2026-08-23 (D57).** An earlier draft of this file proposed dividing
 > the 9% into 5% reading feedback + 2% lecture-notebook completion + 2% class
 > contribution. That split is **rejected and must not be reinstated**. Two other
-> things went with it: **lecture notebooks are no longer collected at all**, and
-> reading feedback is no longer collected per chapter.
+> things went with it: **lecture notebooks are no longer collected at all**
+> *(that clause is superseded by D74, below; they are collected again, in their
+> own block)*, and reading feedback is no longer collected per chapter.
 >
 > **Amended 2026-08-23 (D58).** The "It is your turn" submissions left
 > Participation for their own **10% IYT Practice** category, stated below.
@@ -29,14 +42,25 @@ a student can verify and an instructor can defend.
 > Nothing else moved: Participation is still 9%, both credit rules, both drop
 > allowances and both baselines are unchanged, and the only formula that changed
 > is the IYT Practice one, whose multiplier is now 15.0.
+>
+> **Amended 2026-08-31 (D74).** The **Student Research Lead category is retired**
+> for this edition, and its 25% is replaced by **Lecture Notebooks (20%)**, the
+> third completion contract, stated in full below. That makes the D57 note above
+> half superseded and half still binding. **Lecture notebooks ARE collected now**,
+> once a week, on completion, in their own block. What remains permanently banned
+> is lecture-notebook completion **as a participation item**: it may never return
+> to the 9%, and the ±0.9 contribution adjustment never reaches it. Participation
+> stays 9% and IYT Practice stays 15%, both with every mechanic untouched; the
+> five points freed by the retirement went inside the Final Project, which is now
+> 55%.
 
 ---
 
-## The credit rule — identical in both blocks
+## The credit rule — identical in all three blocks
 
 The grade attaches to **identity, completeness and timing**, never to content.
-Praise, criticism, confusion, low ratings and reported AI use are all worth
-exactly the same.
+Praise, criticism, confusion, low ratings, reported AI use and an analysis that
+did not come out are all worth exactly the same.
 
 | Credit | Condition |
 |---|---|
@@ -62,10 +86,11 @@ never earns extra credit.
 **Baseline N = 14 credits**: 12 studio responses, plus the profile survey, plus
 the course reflection. Every student owes the same 14.
 
-Nothing else is collected for participation. **Lecture notebooks are not
-submitted**, and no participation credit depends on them. The "It is your turn"
-sections *are* collected, but they are credited under IYT Practice below, not
-here.
+Nothing else is collected for participation. Two things that *are* collected sit
+in their own blocks and are credited there, never here: the "It is your turn"
+sections belong to **IYT Practice**, and the weekly lecture notebook belongs to
+**Lecture Notebooks**. No participation credit depends on either of them, and
+neither may be moved into this block (D57 as amended by D74).
 
 ### What makes a response valid
 
@@ -105,13 +130,14 @@ separate bucket with its own weight — it is a **documented adjustment of at mo
 written reason on file, for contribution that is either exceptional or
 conspicuously absent. In practice it will rarely fire; it exists so the block
 does not have to pretend that a full ledger and an engaged seminar member are
-the same thing. It belongs to Participation alone and never touches IYT Practice.
+the same thing. It belongs to Participation alone and never touches IYT Practice
+or Lecture Notebooks.
 
 **Two syllabus bonuses land here too.** The course-evaluation screenshot bonus
 (0.5%) and the course-materials issue-report bonus (0.25% each, through Fri Dec
 4) are added to the participation total *after* the ledger is computed. They are
 bonuses on top of the block, not a share of it, and they can carry a student
-above 9.0. They are not added to IYT Practice.
+above 9.0. They are not added to IYT Practice or to Lecture Notebooks.
 
 ---
 
@@ -162,6 +188,81 @@ and nothing else.
 
 ---
 
+## Lecture Notebooks — 20%
+
+### The one thing Lecture Notebooks collects
+
+| # | Item | How many | When it is due | Where the schedule lives |
+|---|---|---|---|---|
+| 1 | **The weekly lecture notebook** — `nbNN`, the notebook worked in class that week | 16 | 11:59 PM on the Sunday that ends the studio week; Week 16 closes Fri Dec 11 | [`../planning/LECTURE_NOTEBOOK_SCHEDULE.md`](../planning/LECTURE_NOTEBOOK_SCHEDULE.md) |
+
+**Baseline N = 16 credits**: one per week, `nb01` through `nb16`. Every student
+owes the same 16, and the whole seminar's week closes on the same night, so the
+notebook, the studio's milestone and the studio feedback survey are usually one
+deadline rather than three.
+
+Two things move that date, and neither is a judgement call. The **holiday weeks**
+shift with the calendar, and **Week 16 closes Friday, December 11**, the last
+class day, because the semester ends before the following Sunday. The generated
+schedule carries the real date for all sixteen, and where the course platform and
+this repository disagree about a date, **the platform is correct** (D66).
+
+### What makes a submission valid
+
+A **valid lecture-notebook submission** has all four of:
+
+1. one file for the week, `.ipynb` or PDF, named so the week is unmistakable —
+   `LASTNAME_nb<nn>.ipynb` or `LASTNAME_nb<nn>.pdf`, the same pattern the "It is
+   your turn" uploads use — that the instructor can actually open;
+2. the week's own notebook, with the in-class cells worked rather than left as
+   the placeholder they shipped with: the 📣 **My Report Plan** cell (lines 1 to
+   4 when the lab-meeting slot is yours, line 5 otherwise, so everyone arrives
+   with a question), the seven in-class moves, and each lecture's exercises;
+3. the 📒 **AI Research Ledger** row for each lecture in the week;
+4. answers in the student's own words. The material below the ⏸ line and every
+   🏠-labelled prompt is optional depth, and its absence never costs a credit.
+
+A notebook lives in Colab, and Colab has no export button. The route from the
+notebook to the PDF is the one every milestone already prints: run all cells,
+expand every collapsed section, then **File → Print → Save as PDF** with
+background graphics on, and open the PDF before uploading it. An unrun cell
+prints empty, which at the grader's end is indistinguishable from work not done.
+
+### The formula
+
+Let **N** be the number of lecture-notebook credits assigned to that student, and
+**d = ⌈0.10 × N⌉** the number of lowest credits dropped automatically.
+
+```
+lecture notebook points = 20.0 × (sum of the highest N − d credits) / (N − d)
+```
+
+For this edition, **N = 16**, so **d = 2**, and **14 valid, on-time submissions
+earn the full 20 points.** There is no credit beyond N.
+
+**Two free drops.** The two lowest credits are dropped automatically. No excuse,
+no email, no negotiation. Illness, a bad week, a week whose analysis never came
+together: the drops exist so none of that has to become a conversation. For an
+excused absence longer than the drops can absorb, remove those weeks from that
+student's **N** rather than scoring them zero. Keep the rule stated as
+⌈0.10 × N⌉ rather than as a flat "two", because a shrunken N earns fewer drops.
+
+### It is not participation
+
+This block is **not participation**, and calling it participation on any surface
+is a defect. It never carries participation's **±0.9 contribution adjustment**,
+it never receives the two syllabus bonuses, and its credits never enter the
+participation ledger. The two blocks share their mechanics and nothing else.
+
+Nothing here is scored on **content**. Not whether the estimate was right, not
+whether the plot was pretty, not whether the code ran the first time, and not how
+the ten-minute lab-meeting report went. The reporter's live report carries no
+score anywhere in the course (D74), and the notebook credit does not depend on it
+either. The quality of the thinking is judged later, in the milestone that week
+feeds.
+
+---
+
 ## What is deliberately NOT scored
 
 **Whether the answers are right** *(IYT Practice)*. The "It is your turn"
@@ -191,34 +292,56 @@ performance in predictable ways (Dunning, Heath & Suls 2004,
 It must never become a mastery grade. `effort` is not a virtue score either:
 high effort on a hard studio is the design working.
 
-**Whether you used AI** *(both)*. Using a tool while reading is allowed.
-Concealing it is the violation, and that is the rule the AI Research Ledger
-already runs on.
+**Whether the analysis came out** *(Lecture Notebooks)*. A cell that errored, a
+plot that came out ugly, an estimate later found to be wrong: none of that costs
+a credit. What is scored is that the notebook was worked and handed in. Say this
+early, because a student who believes otherwise will quietly stop submitting the
+weeks that went badly, which are exactly the weeks worth reading.
 
-**Length** *(both)*. Two exact sentences beat two vague paragraphs. The survey
-sets no length validation at all, in either direction, so a short exact answer
-is a complete answer. Say that out loud once; a reader carries an assumption
-that longer is safer.
+**How the lab meeting went** *(Lecture Notebooks)*. The ten-minute report given
+as that lecture's reporter is not graded at all: not for polish, not for the
+strength of the decision reported, not for how the room's questions landed. It
+carries no score anywhere in the course, and the week's notebook credit does not
+depend on it either.
 
-**Lecture notebooks** *(neither)*. They are class instruments, not deliverables.
-Nothing is collected from them and nothing is graded on them.
+**Whether you used AI** *(all three)*. Using a tool while reading or while
+working a notebook is allowed. Concealing it is the violation, and that is the
+rule the AI Research Ledger already runs on.
+
+**Length** *(all three)*. Two exact sentences beat two vague paragraphs. The
+survey sets no length validation at all, in either direction, so a short exact
+answer is a complete answer, in the survey and in a notebook cell alike. Say that
+out loud once; a reader carries an assumption that longer is safer.
+
+**Lecture notebooks as a participation item** *(Participation)*. The notebooks
+are collected now, but their credit lives in its own 20% block and never in the
+9%. Nothing about them moves the participation total, in either direction, and
+the ±0.9 contribution adjustment never reaches them.
 
 ---
 
 ## Running it
 
-### Weekly — the two ledgers
+### Weekly — the three ledgers
 
 One ledger per category: one column per item, one row per student, one of
-`1 / 0.5 / 0` in each cell. Enter the two running totals in the course gradebook
-every Friday, when the studio's milestone is collected, so the two numbers a
-student can see never lag the work by more than a week.
+`1 / 0.5 / 0` in each cell. Enter the three running totals in the course
+gradebook every Friday, when the studio's milestone is collected, so the numbers
+a student can see never lag the work by more than a week.
 
 **The IYT Practice ledger.** Open the submission, confirm there is one file per
 chapter the assignment names, that each section is worked in order, and that the
 ledger row is there. At roughly a minute a
-submission this is a few minutes a week for a seminar of five. Comment on the
+submission this is a few minutes a week for a seminar of six. Comment on the
 work when it deserves a comment; the score is still completion.
+
+**The Lecture Notebook ledger.** Open the week's file, confirm it is that week's
+notebook, that the in-class cells are worked rather than left as placeholders,
+and that each lecture's 📒 ledger row is there. Do not read it for correctness:
+an honest wrong answer is a full credit, and so is an analysis that failed. At
+well under a minute a file this is a few minutes a week for a seminar of six,
+and it falls in the same sitting as the milestone, since both close on the same
+Sunday.
 
 **The Participation ledger.** Qualtrics → **Data & Analysis → Export → CSV**,
 with *Use choice text*. Filter to studios whose deadline has passed. Read four
@@ -226,11 +349,12 @@ columns — `student`, `studio`, timestamp, anchor text — and award 1 / 0.5 / 
 Add the profile survey and the course reflection to the same ledger when each
 one closes.
 
-**Borderline calls.** These govern both ledgers. When an anchor is specific but
-thin, award the credit and reply once asking for the missing specificity next
+**Borderline calls.** These govern all three ledgers. When an anchor is specific
+but thin, award the credit and reply once asking for the missing specificity next
 time. Reserve 0 for submissions that are absent or that could have been written
-without opening the book. A first non-responsive answer gets one offered
-revision, not a zero.
+without opening the book, and, for a notebook, for a file that arrives untouched
+below the setup cell. A first non-responsive answer gets one offered revision,
+not a zero.
 
 ### Separately — the revision pass
 
@@ -257,3 +381,4 @@ enter a decision, and "no change" still gets a reason.
 | Student profile survey | Participation | [`student_profile_survey.md`](student_profile_survey.md) |
 | Course reflection | Participation | [`course_reflection.md`](course_reflection.md) |
 | "It is your turn" assignments + the one instruction paragraph | IYT Practice | [`../planning/IYT_SUBMISSION_SCHEDULE.md`](../planning/IYT_SUBMISSION_SCHEDULE.md) |
+| Weekly lecture notebooks `nb01`–`nb16` | Lecture Notebooks | [`../planning/LECTURE_NOTEBOOK_SCHEDULE.md`](../planning/LECTURE_NOTEBOOK_SCHEDULE.md) · the notebooks themselves in [`../notebooks/student/`](../notebooks/student/) |

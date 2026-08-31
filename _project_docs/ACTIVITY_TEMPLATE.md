@@ -129,50 +129,75 @@ notebooks that use them; every stochastic cell uses `rng` (or a seeded
 `train_test_split`); every data cell prints a `✓ Loaded …` confirmation with
 shape so the reader can self-check.
 
-### 5. Lecture openers and SRL cells (markdown) — machine-checked
+### 5. Lecture openers and lab-meeting cells (markdown) — machine-checked
 
 Multi-lecture notebooks open EACH lecture with an explicit `# Lecture N` heading
 cell (Lecture 1 right before section `## 1.`; later lectures after a horizontal
 rule) — never meeting numbers, never dates, never italic boundary markers.
 
-**Every lecture opens with an SRL Lead Brief, then the puzzle cell.** From
-Week 2 on, each Mon/Wed lecture is run by a Student Research Lead as a Socratic
-investigation, not a summary (`course_config.yaml srl`;
-`planning/COURSE_MASTER_PLAN.md` §3). Slots are randomly assigned at semester
-start; the lead's guidance is a STUDENT-VISIBLE markdown cell placed
-immediately after `# Lecture N` (D22):
+**Every lecture opens with a Lab Meeting brief, then the puzzle cell.** From
+Week 2 on, each Mon/Wed lecture opens with a ten-minute **lab meeting** (D74;
+`course_config.yaml lab_meeting`; `planning/COURSE_MASTER_PLAN.md` §3): one
+student is that lecture's **reporter** and spends seven minutes on a decision
+from their OWN project and the evidence behind it, then takes three minutes of
+questions from the room. The reporter does **not** teach the lecture's concept,
+and the report is **not** graded. The instructor leads from minute 10 and owns
+accuracy, the AI tooling and the clock. Reporter slots are randomly assigned at
+semester start (the D69/D71 draw, carried over unchanged by D74: 25 slots over
+6 students, 4 or 5 each). The brief is a STUDENT-VISIBLE markdown cell placed
+immediately after `# Lecture N` (D22, renamed and re-owned by D74):
 
 ```markdown
-### 🎤 SRL Lead Brief
+### 📣 Lab Meeting: Today's Reporter
 
-*This lecture opens with its Student Research Lead. …*
+*This lecture opens with a ten-minute lab meeting. …*
 
 [Mission (one sentence) · run-of-show table with the day's fixed minute frame ·
-three Socratic questions with listen-for hints · one AI trap to watch for ·
-checkpoint minute marks · a "Make it yours" creative-room paragraph · the prep
-cadence (start one week ahead; preparation script/notebook due 11:59 PM
-the day before the lecture).]
+what the reporter brings (a decision their own project has actually reached, and
+the evidence behind it) and the room's three minutes of questions · one AI trap
+to watch for · checkpoint minute marks · a "Make it yours" paragraph leaving the
+reporter room for their own staging.]
 ```
 
 Keep the brief simple and short (about 40 lines), with zero em dashes, second
-person to the lead. The exact role name "Student Research Lead"/"Student-led"
-is allow-listed by the voice linter; all other voice rules apply. The brief is
-followed by the puzzle the reader chews on before any exposition or AI:
+person. The role names "Student Research Lead"/"Student-led" stay allow-listed
+by the voice linter so the retired-but-preserved material still lints; all other
+voice rules apply, so a brief never says "the instructor" or "students". The
+brief is followed by the puzzle the reader chews on before any exposition or AI:
 
 ```markdown
 ### 🧩 Research Puzzle
 
-*(Your Student Research Lead opens with this. Think it through and commit an
-answer before we go further — no AI yet.)*
+*(We open the investigation with this. Think it through and commit an answer
+before we go further. No AI yet.)*
 
 [A short, concrete puzzle whose resolution is the lecture's payoff. Speaks to
 "you"; poses a genuine question; is answerable by reasoning, not lookup.]
 ```
 
-One `### 🎤 SRL Lead Brief` AND one `### 🧩 Research Puzzle` per `# Lecture N`
-(both machine-checked). Week 1's two launch lectures are instructor-led; they
-still carry both cells (the brief explains the format the reader will inherit;
-the instructor runs the puzzle).
+D74 kept the puzzle's body exactly as it was and changed only who opens it.
+
+One `### 📣 Lab Meeting: Today's Reporter` AND one `### 🧩 Research Puzzle` per
+`# Lecture N` (both machine-checked; `validate_notebooks.py` matches the brief by
+the string `Lab Meeting` in a level-3 heading). Week 1's two launch lectures are
+instructor-led and carry no reporter; they still carry both cells (the brief
+models the format the reader will inherit) and take no report plan.
+
+**Two companion cells.** `nbbuild.py` injects `### 📣 My Report Plan` beside each
+brief at build time — lines 1–4 for the reporter, line 5 for everyone else, so
+the whole room arrives with a question. Never author it in the cell source, and
+note that nb01 and nb14 take none (`FRAME_EXEMPT`). The brief's three questions
+live just past the puzzle in `### 🔎 Questions to Keep You Thinking`, each with
+its `Ask after:` moment and listen-for hint; D74 kept every question verbatim and
+re-owned the cell to the instructor.
+
+**Retired names, kept in the record.** `### 🎤 SRL Lead Brief`,
+`### 🎤 My Lead Plan` and `### 🎤 Lead's Questions` were the pre-D74 markers for
+these three cells. D74 retired the Student Research Lead role **in place** and
+deleted nothing: `project/srl/` (handbook, rubric, question bank, prep template,
+peer feedback form, protocols), `scripts/assign_srl_slots.py` and
+`scripts/build_srl_packet.py` all stay on disk for a future edition, exactly as
+D58 kept the quiz banks.
 
 ### 6. Content sections (`## 1.`, `## 2.`, …) — narrative pattern + undergraduate voice
 
@@ -215,8 +240,9 @@ below. The async-only module (nb14) embeds these inside its module flow.
 Pacing rule: direct exposition ≤8 min per segment, <15 min total per lecture;
 ≥70% of class time active.
 
-**In-class weight (D33).** All seven moves run INSIDE the 50-minute frame, at
-in-class weight, and each one sits ABOVE the lecture's `### ⏸` line
+**In-class weight (D33, frames amended by D74).** All seven moves run INSIDE
+the 50-minute frame, at in-class weight, and each one sits ABOVE the lecture's
+`### ⏸` line
 (machine-checked): 📝 is a spoken drill (answers called out; writing is
 optional); ⚖️ is one committed written line defended aloud (the full
 paragraph is optional depth); 🎯 is one sentence naming where today's
@@ -228,12 +254,19 @@ SDIIVDD blocks 🔁/🔬/🧑‍⚖️ are in-class work on the lecture that car
 them. Exempt: nb01 (orientation), nb14 (async), nb13 (conference week — the
 reflection path completes at the Expo and the reflection studio).
 
+The moves sit inside the day's D74 minute frame (Monday **10 / 21 / 12 / 7**,
+Wednesday **10 / 20 / 12 / 8**, both summing to 50). The first ten minutes are
+the lab meeting; the puzzle folds into the front of the investigation block, and
+the seven moves plus the 📒 row run from minute 10 on. Section boundaries 3 and 4
+are unchanged (31–43 / 43–50 Monday, 30–42 / 42–50 Wednesday), so D22's and D34's
+later-block rulings stand. Friday's 5 / 40 / 5 studio frame is untouched.
+
 **Variants.** The communication/performance notebooks (nb11 poster criticism,
 nb12 delivery, nb13 conference) may satisfy the runnable move with structured
 criticism or delivery rounds instead of `### 🛠️ Run the Study` — the validator
 exempts exactly those three from the runnable-move check, nothing else. The
 async module (nb14) embeds all moves inside its self-paced flow and carries no
-`### 🧩 Research Puzzle` (there is no Student Research Lead online).
+`### 🧩 Research Puzzle` (there is no lab meeting online).
 
 ### 8. The high-intensity AI-collaboration blocks (machine-checked)
 
@@ -330,7 +363,7 @@ Student placeholders that REMAIN: `### YOUR ANSWER HERE:` (markdown) and
 question, a worked justification, a verified analysis, a filled Ledger row) —
 concept-level quality, not code golf. Instructor notebooks may also carry
 `<!-- INSTRUCTOR SOLUTION -->`-prefixed facilitation notes (timing, common
-stumbles, SRL coaching) — same marker, same strip.
+stumbles, lab-meeting coaching) — same marker, same strip.
 
 ### 11. Wrap-up (markdown)
 
@@ -378,11 +411,12 @@ the P4 scale inherits these as hard rules:
    line; the optional tail carries the last numbers. The block-2
    investigation core (puzzle + core concepts + ONE live AI prompt + the
    central run + reading-the-evidence) must still realistically fit its
-   22/23 minutes.
+   21/20 minutes (D74 moved 1 minute on Monday and 3 on Wednesday into the
+   ten-minute lab meeting that now opens the lecture).
 2. **One live prompt per lecture (machine-checked, D34):** one AI prompt per
    lecture is the designated in-class exchange; every other prompt carries
    the exact label `**🏠 Optional depth.**` in the SAME cell as the prompt.
-   Never three AI round-trips inside one SRL block. (nb03's single lecture
+   Never three AI round-trips inside one lecture's investigation block. (nb03's single lecture
    keeps its gap-attack exchange in class alongside the live prompt — the
    SDIIVDD chain is built on it — so its validator allowance is two.)
 3. **Prompt-sequence standard:** every AI prompt block = a one-line human
@@ -409,9 +443,9 @@ the P4 scale inherits these as hard rules:
 Student-facing cells speak TO the reader (`you`), never ABOUT "students", never
 to instructors. `scripts/voice_lint_notebooks.py` enforces: no `\bstudents?\b`,
 no `the instructor`, no facilitation language (`have them`, `ask the class`, …)
-in any student-notebook cell. Facilitation (including how the Student Research
-Lead runs the puzzle) lives in instructor-only cells (marker-stripped) or the
-session guide.
+in any student-notebook cell. Facilitation (including how the room's puzzle is
+opened and run, and how the lab meeting is chaired) lives in instructor-only
+cells (marker-stripped) or the session guide.
 
 ## Naming and placement
 
@@ -454,7 +488,7 @@ asserts, by exact marker string:
 | 3 | Inquiry block | `## 🧭 Inquiry & Claim Boundary` with `**Inquiry emphasis:**`, `**Design pathway:**`, PERMITS + does-NOT-permit rows, `*Provenance:` | all present |
 | 4 | Objectives | `By the end of this notebook, you will be able to:` | =1 |
 | 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
-| 6 | Lecture heads | `# Lecture i` per schedule; one `### 🎤 SRL Lead Brief` + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
+| 6 | Lecture heads | `# Lecture i` per schedule; one `### 📣 Lab Meeting: Today's Reporter` (matched as a level-3 heading containing `Lab Meeting`) + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
 | 7 | Moves | `### 🔮 Predict First`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Read the Evidence`, `### 🎯 Take It to Your Project`, `### 🛡️ Defend Your Decision` | ≥1 each, per lecture, ABOVE the ⏸ line (D33; placement exempt: nb13) |
 | 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Run It Live:` | ≥1 per lecture above ⏸ (exempt: nb11, nb12, nb13) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
@@ -505,3 +539,45 @@ Exempt: nb01, nb14, and nb13 (conference week: below nb13's ⏸ line is the
 conference path — Expo fieldwork plus the reflection studio, feeding M15 —
 not optional depth and not homework). Deep transfer work stays where it
 belongs: the Friday studio sprint and the book's "It is your turn" chain.
+
+## D74 amendment — the lab meeting, and the notebook becomes a collected artifact (2026-08-31)
+
+**The opener changed hands.** The Student Research Lead role is retired as a
+graded role, and every Mon/Wed lecture from Week 2 now opens with a ten-minute
+**lab meeting**: one student is the lecture's **reporter**, spends seven minutes
+on a decision from their own project and the evidence behind it, then takes three
+minutes of questions. The reporter does not teach the concept and is not graded on
+the report; the instructor leads from minute 10 and owns accuracy, the AI tooling
+and the clock. Cell renames, all three keeping their bodies:
+`### 🎤 SRL Lead Brief` → `### 📣 Lab Meeting: Today's Reporter`;
+`### 🎤 My Lead Plan` → `### 📣 My Report Plan` (injected by `nbbuild.py`);
+`### 🎤 Lead's Questions` → `### 🔎 Questions to Keep You Thinking` (every
+question verbatim). `course_config.yaml`'s `srl:` block is now `lab_meeting:`.
+Nothing was deleted: `project/srl/`, `scripts/assign_srl_slots.py` and
+`scripts/build_srl_packet.py` stay on disk for a future edition.
+
+**The frames changed by one section each**, both still summing to 50: Monday
+9 / 22 / 12 / 7 → **10 / 21 / 12 / 7**, Wednesday 7 / 23 / 12 / 8 →
+**10 / 20 / 12 / 8**. Boundaries 3 and 4 are unchanged, and Friday's studio frame
+is untouched.
+
+**The notebook is now collected — and that is a design constraint.** Lecture
+Notebooks is a top-level **20%** category and the course's third undivided
+completion contract: one submission per week per student (the `nbNN` worked in
+class), due 11:59 PM on the Sunday that ends the studio week (Week 16 closes Fri
+Dec 11), credit `1.0` on time / `0.5` within seven days / `0` otherwise,
+`N = 16`, `d = 2`, and
+`lecture notebook points = 20.0 × (sum of the highest 14 credits) / 14`. It is
+graded on **completion only** — worked through and handed in, never on whether
+the answers came out right, and never on how the live report went — and it is
+never a participation item. The machine spine is `course_config.yaml
+lecture_notebooks:`; the dated list is `planning/LECTURE_NOTEBOOK_SCHEDULE.md`
+(generated).
+
+What that constrains in this template: everything the reader writes above the
+`### ⏸` line IS the submission, so each lecture's path must remain completable
+inside its 50 minutes, every writing move must leave a visible place to write
+(the 📣 report plan, the seven moves, the 📒 ledger row), and nothing below the
+⏸ line — or behind a 🏠 label — may ever be needed for the credit. The milestone
+studio notebooks (`msNN`) are unaffected: they are submitted with their
+milestone, not under this category.

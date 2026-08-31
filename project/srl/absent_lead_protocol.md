@@ -1,5 +1,24 @@
 # Absent or Unprepared Lead Protocol
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester.** Every Monday and
+> Wednesday lecture from Week 2 opens with a ten-minute **Lab Meeting** instead: one
+> student is that lecture's **reporter**, spending **seven minutes on a decision from
+> their own project and the evidence behind it**, then **three minutes of questions
+> from the room**. The reporter does not teach the lecture's concept and **the report
+> is not graded**. **The instructor leads from minute 10** and owns accuracy, the AI
+> tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. It was
+> replaced by **Lecture Notebooks (20%)**, a completion contract: every student hands
+> in the week's notebook, graded only on being worked through and handed in.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead a reader today,
+> it carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
 **(Instructor-only; not published to students.)**
 
 *What to do when the scheduled Student Research Lead is absent, or arrives
@@ -10,7 +29,39 @@ derail a class.*
 
 ---
 
-## Naming a standby
+## What happens today instead
+
+*Everything after this section is the retired SRL procedure, kept for a future
+edition. This section is what applies in Fall 2026.*
+
+There is no graded lead who can be absent. If the lecture's **reporter** is absent,
+or arrives with nothing to report, the ten-minute lab meeting simply does not run and
+the instructor opens the lecture at minute 0. Nothing is lost and nothing is
+penalized, because the report is ungraded and the instructor owns the lecture from
+minute 10 either way.
+
+- **No standby is drawn.** Asking a second student to improvise a report on someone
+  else's project would defeat the point of the format, which is that the reporter is
+  the only person who has been inside the work they describe.
+- **Offer a later reporting slot**, by swap with another student's agreement or from
+  calendar slack, so the student still gets the rehearsal before the Expo. Nothing
+  rides on it for their grade.
+- **The notebook is unaffected.** Every student hands in the week's lecture notebook
+  by 11:59 PM on the Sunday that ends the studio week, under **Lecture Notebooks
+  (20%)**, whether or not they reported and whether or not they were in the room.
+  Lateness there is handled by that contract's own credit rule (`1.0` / `0.5` within
+  seven days / `0`) and its two automatic drops, not by this protocol.
+- **The escalation ladder below does not run**, because there is no preparation to
+  submit and no preparation grade to affect. A pattern of missed reports is an
+  attendance and engagement conversation, not a penalty.
+
+The cell this protocol calls the **SRL Lead Brief** is now
+`### 📣 Lab Meeting: Today's Reporter`, and its run of show belongs to the
+instructor.
+
+---
+
+## Naming a standby  ⛔ *(retired procedure)*
 
 There is no standing standby list. **When an absence is known, name a standby at
 random from the roster.** Drawing at random keeps it fair and keeps no one
@@ -21,7 +72,7 @@ If the drawn student cannot step in, draw again. If no student can step in, the
 instructor leads the session from the lecture notebook's **SRL Lead Brief**,
 which is already public to the whole class.
 
-## The submitted notebook is the substitute's script
+## The submitted notebook is the substitute's script  ⛔ *(retired procedure)*
 
 This is why the day-before submission matters beyond grading. **A submitted
 notebook is a complete, runnable script**, so any standby can lead from it with
@@ -37,7 +88,7 @@ minutes of notice.
 - The absent lead is still accountable for the quality of the plan the standby
   ran, since it was their preparation.
 
-## Make-up options for the absent lead
+## Make-up options for the absent lead  ⛔ *(retired procedure)*
 
 A student who misses their slot has not lost the learning opportunity, only the
 scheduled one. Offer, in order of preference:
@@ -53,7 +104,7 @@ scheduled one. Offer, in order of preference:
 Document the arrangement so each student's assigned lectures stay correct in the
 slot assignment posted on the course platform through the end of the semester.
 
-## No preparation received — the escalation ladder
+## No preparation received — the escalation ladder  ⛔ *(retired procedure)*
 
 Distinct from absence: the lead is present but has not submitted a usable
 template. Handle it on a fixed ladder so it is predictable and fair.

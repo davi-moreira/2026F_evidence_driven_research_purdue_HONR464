@@ -28,8 +28,13 @@ BACKBONE = REPO / "planning" / "CALENDAR_BACKBONE.csv"
 OUT_CSV = REPO / "planning" / "MEETING_SCHEDULE.csv"
 OUT_MD = REPO / "planning" / "MEETING_SCHEDULE.md"
 
-# Fields allowed to be empty (the SRL fields are empty for studios, async
-# modules, and the instructor-led Week 1).
+# Fields allowed to be empty. The two lab-meeting fields keep their historical
+# `srl_*` key names so existing readers of MEETING_SCHEDULE.csv keep working,
+# but the concept behind them changed with D74: `srl_slot` now carries the
+# LAB-MEETING REPORTER slot for that lecture, and `srl_focus` the
+# instructor-owned puzzle or challenge that opens the lecture's own block from
+# minute 10. Both are empty for studios, async modules, and the instructor-led
+# Week 1.
 OPTIONAL_EMPTY = {"srl_slot", "srl_focus"}
 
 
@@ -74,8 +79,9 @@ def main() -> None:
 
     # --- write MD -----------------------------------------------------------
     labels = {
-        "srl_slot": "Student Research Lead slot",
-        "srl_focus": "SRL puzzle focus",
+        # Key names kept for compatibility; the concept is the D74 lab meeting.
+        "srl_slot": "Lab meeting reporter slot",
+        "srl_focus": "Lecture puzzle focus (instructor-led, from minute 10)",
         "driving_question": "Driving question",
         "secondary_questions": "Secondary questions",
         "inquiry": "Inquiry",

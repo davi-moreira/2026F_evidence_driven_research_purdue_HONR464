@@ -1,6 +1,6 @@
 # PROJECT MILESTONES — HONR 46400 Fall 2026 (v3: M1–M16)
 
-Five students, **individual projects by default** (one group of two or three may
+Six students, **individual projects by default** (one group of two or three may
 be approved by the instructor before shared work begins), one semester-long
 chain: every milestone is a graded, submittable artifact with **kick off →
 develop → submit → revise** cadence (D30 retired weekly milestone presentations; the
@@ -36,6 +36,18 @@ lectures (project-transfer moments) and the studio sprint, red-teamed by peers
 and **submitted by the Sunday after that studio, 11:59 PM** (D54). Kickoff
 exceptions: M1 (assigned in class on day 1), M16 (packages exchanged at the
 Week-13 studio; brief posted with the async module).
+
+Since **D74** the Mon/Wed development moments also include the **ten-minute lab
+meeting** that opens each lecture from Week 2: one student is that lecture's
+**reporter** and spends seven minutes on a decision from their own project and
+the evidence behind it, then three minutes on the room's questions. The report
+is the milestone-in-progress said out loud, and it is deliberately **not
+graded** — the instructor leads from minute 10. What *is* collected from those
+lectures is the weekly notebook itself, under the separate **Lecture Notebooks**
+completion contract (20%, one `nbNN` per week, due the Sunday that ends the
+studio week, graded on completion only). A lecture notebook is **not** a
+milestone and never enters the M-mean; a milestone is never scored on how the
+live report went.
 
 Meeting numbers `M2…M43` below are MEETINGS (calendar backbone); milestone IDs
 are `M1…M16`.
@@ -125,6 +137,18 @@ dossier components and appear nowhere in student-facing material.
   (D54). It collects a light reflection deliverable scored under
   **participation**, not as a milestone, and it is not part of the M-mean.
 - How these sixteen scores become a grade — the five Final Project components,
-  their 30/20/10/20/20 shares, and how each works in either project mode:
+  their shares, and how each works in either project mode:
   `_research_project/2026Fall/final_project_grading_and_project_modes.md`
   (student-facing) and `planning/ASSESSMENT_ARCHITECTURE.md` (design).
+  **D74 raised the stakes of this chain.** Retiring the 25% Student Research
+  Lead category freed five points that are forced inside the Final Project, so
+  **Milestone Deliverables rises from 15 to 20 course points** and the **Final
+  Project rises from 50% to 55%**. Milestone Deliverables is still the equally
+  weighted mean of the M1–M16 milestone scores, no component was renamed, and no
+  scoring rule inside a component changed. Because `20 / 55` does not terminate,
+  student-facing surfaces now print **course** percentages of the final grade
+  rather than project shares: Milestone Deliverables 20% · Peer Evaluation 10% ·
+  Peer Review 5% · Poster Presentation at the Purdue Undergraduate Research
+  Conference 10% · Instructor/TA Evaluation 10%. The exact project shares
+  (36.37 / 18.18 / 9.09 / 18.18 / 18.18) survive only as the machine record in
+  `course_config.yaml final_project_breakdown:`.

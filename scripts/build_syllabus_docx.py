@@ -157,15 +157,15 @@ BLANK_ABOVE = [
     ("ASSESSMENTS", 1),
     ("The course assesses the research chain", 1),
     ("Grading: Final letter grades", 1),
-    ("Grading scale:", 3),
+    ("Grading scale:", 1),   # D74: Davi's Word pass tightened 3 -> 1
     ("Attendance:", 1),
     ("Participation:", 1),
     ("IYT Practice:", 1),
-    ("Student Research Lead:", 1),
+    ("Lecture Notebooks:", 1),
     ("EXTRA CREDIT OPPORTUNITIES:", 1),
     ("Course Evaluations:", 1),
     ("Issues in the Course Materials:", 1),
-    ("AI POLICY:", 3),
+    ("AI POLICY:", 1),       # D74: Davi's Word pass tightened 3 -> 1
     ("AI is a research assistant", 1),
     ("Some activities may be done without AI", 1),
     ("Deadlines: The Registrar", 1),
@@ -597,8 +597,8 @@ def main():
 
     weights = [("Assessment", "Weight"), ("Attendance", "1%"),
                ("Participation", "9%"), ("IYT Practice", "15%"),
-               ("Student Research Lead", "25%"),
-               ("Final Project", "50%"), ("Total", "100%")]
+               ("Lecture Notebooks", "20%"),
+               ("Final Project", "55%"), ("Total", "100%")]
     tw = doc.add_table(rows=len(weights), cols=2)
     tw.style = doc.styles["Grid Table 1 Light"]
     clone_table_format(fmt.tables[0], tw)
@@ -639,16 +639,15 @@ def main():
               "on the course schedule page, where each meeting row marks the "
               "sections due that night, and on Brightspace, where you submit them.",
          bold_prefix="IYT Practice:")
-    para(doc, " From Week 2 onward, Student Research Leads run assigned Monday "
-              "or Wednesday lectures as Socratic investigations. Slots are "
-              "randomly assigned at the beginning of the semester. Prepare from "
-              "the SRL Lead Brief in the lecture notebook, work about one week "
-              "ahead, and submit your filled lecture notebook by 11:59 PM the day "
-              "before you lead. Your leading is assessed on preparation, "
-              "disciplinary accuracy, facilitation of the investigation, "
-              "inclusion of the room, and your ability to synthesize and defend "
-              "the session's research decision.",
-         bold_prefix="Student Research Lead:")
+    para(doc, " Each week you work in that week's lecture notebook during "
+              "class, and you hand that same notebook in at the end of the week. "
+              "This work is graded for completion, not for whether your answers "
+              "came out right and not for how your lab-meeting report went: full "
+              "credit when it arrives on time, half credit when it arrives within "
+              "seven days of the deadline. The lowest few credits are dropped "
+              "automatically. The due dates and the submission instructions are "
+              "posted on the course page.",
+         bold_prefix="Lecture Notebooks:")
 
     # the Final Project section — QM474's text, the D53 wording, verbatim
     para(doc, " Students will complete a practical evidence-driven research "
@@ -657,26 +656,28 @@ def main():
               "default; you may instead complete the project in a group with "
               "the instructor's approval before shared work begins. A "
               "comprehensive set of project guidelines will be provided, and "
-              "the assessment structure will adhere to the following criteria:",
+              "the assessment structure will adhere to the following criteria, "
+              "whose percentages are shares of your final course grade and "
+              "together make up the Final Project's 55%:",
          style="Normal (Web)", bold_prefix="Final Project:")
     for label, body in [
-        ("Milestone Deliverables (30%): ",
+        ("Milestone Deliverables (20%): ",
          "Students will submit incremental project components on specific due "
          "dates. These deliverables allow for early feedback and ensure steady "
          "progress throughout the semester. Grades will reflect each "
          "milestone's clarity, completeness, and timely submission."),
-        ("Peer Evaluation (20%): ",
+        ("Peer Evaluation (10%): ",
          "To encourage accountability and productive research work, students "
          "will evaluate their peers' contributions. These assessments help "
          "ensure balanced participation and measure collaborative "
          "effectiveness."),
-        ("Peer Review (10%): ",
+        ("Peer Review (5%): ",
          "Each student will review and provide constructive feedback on the "
          "other projects' posters. This process encourages engagement, "
          "enhances critical analysis skills, and promotes a culture of "
          "constructive critique."),
         ("Poster Presentation at the Purdue Undergraduate Research Conference "
-         "(20%): ",
+         "(10%): ",
          "A poster template and assessment rubric will be shared, and you are "
          "encouraged to review previous award-winning student posters on my "
          f"personal website {POSTERS_URL} for "
@@ -691,7 +692,7 @@ def main():
          "know. We will not hold our usual class immediately following the "
          "Poster Presentation, allowing you time to rest and catch up on other "
          "coursework. Consult the course schedule for further details."),
-        ("Instructor/TA Evaluation (20%): ",
+        ("Instructor/TA Evaluation (10%): ",
          "After the Undergraduate Research Conference your instructor will "
          "evaluate your final submission based on a rubric that will be "
          "shared."),
@@ -828,10 +829,14 @@ def main():
     h = para(doc, "Tentative Course Schedule · Fall 2026", space_after=0)
     h.runs[0].bold = True
     h.runs[0].font.size = Pt(14)
+    # D74: Davi's Word pass put a blank paragraph either side of the details
+    # line and abbreviated the meeting pattern to "MWF".
+    doc.add_paragraph()
     para(doc, "John Martinson Honors College, Purdue University   ·   "
-              "Professor Davi Moreira   ·   Section 002, Monday / Wednesday / "
-              "Friday, 1:30–2:20 p.m., HCRS-1054   ·   "
+              "Professor Davi Moreira   ·   Section 002, MWF, "
+              "1:30–2:20 p.m., HCRS-1054   ·   "
               "August 24 – December 11, 2026", space_after=8)
+    doc.add_paragraph()
 
     rows = build_schedule_rows()
     tbl = doc.add_table(rows=len(rows) + 1, cols=5)

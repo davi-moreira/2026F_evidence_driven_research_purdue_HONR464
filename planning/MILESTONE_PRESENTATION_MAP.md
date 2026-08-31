@@ -1,7 +1,7 @@
 # MILESTONE_PRESENTATION_MAP — develop → present → submit → revise, per milestone
 
 Every milestone is presented or peer-reviewed — in class or on the course board —
-before (or at) submission. With five enrolled students, every active project
+before (or at) submission. With six enrolled students, every active project
 presents every time and every student has an individual speaking or review role;
 formats are deliberately varied so "presenting" never calcifies into one genre.
 Under the studio-Friday rhythm, most presentations happen inside the Friday work

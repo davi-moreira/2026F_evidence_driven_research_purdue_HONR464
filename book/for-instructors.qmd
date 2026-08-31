@@ -20,13 +20,13 @@ what lets each travel on its own.
   complete research project; the book stands on its own as a self-study
   path.
 - **The course** wraps around the book. Its weekly **lab notebooks** are
-  classroom artifacts derived from the book's chapters and shaped for live,
-  50-minute flipped sessions; its **readings** are the book's chapters
-  (required) with matching RDSS chapters recommended; and each chapter's It is
-  your turn section is collected on the day that chapter's reading is due,
-  graded for completion. Its **milestones** then name their book anchor and
-  carry that same work into the semester project, so each graded step of the
-  project is a piece of the book's chain.
+  classroom artifacts derived from the book's chapters and shaped for live
+  50-minute sessions, and each one is handed in at the end of its week; its
+  **readings** are the book's chapters (required) with matching RDSS chapters
+  recommended; and each chapter's It is your turn section is collected on the
+  day that chapter's reading is due, graded for completion. Its **milestones**
+  then name their book anchor and carry that same work into the semester
+  project, so each graded step of the project is a piece of the book's chain.
 
 When the book changes, the course material is resynchronized from it: the
 English edition of the book is the source of truth for everything downstream.
@@ -52,16 +52,36 @@ open:
 - **Course datasets, one bundle:**
   [data.zip](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/notebooks/data/data.zip)
 
-The weekly rhythm: Monday and Wednesday lectures are led by a student — the
-day's **Student Research Lead**, whose system (handbook, preparation template,
-rubric, question bank) lives with the course materials in
-[`project/srl/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/project/srl){target="_blank"} —
-as Socratic investigations built on the
-week's lab notebook; the AI does the legwork live, and every claim it produces
-is verified before it survives. Friday is a **studio**: a research stand-up,
-then a long sprint on the week's **milestone**, worked with the student's AI
-assistant (reviewer roles from an AI bench — at Purdue, GenAI Studio — are
-encouraged) and submitted by the Sunday that follows.
+The weekly rhythm: from the second week on, every Monday and Wednesday lecture
+opens with a ten-minute **lab meeting**. One student is that lecture's
+**reporter**, and spends seven minutes on a decision from their own project and
+the evidence behind it, then takes three minutes of questions from the room.
+Reporting slots are drawn at random at the start of the semester and given to
+the class then, so everyone knows their dates from week one and nobody is
+waiting for a rotation to reach them. The reporter does not teach the day's concept, and the report
+carries no grade. The instructor leads from minute ten, runs the
+Socratic investigation on the week's lab notebook, and owns accuracy, the AI
+tooling, and the clock: the AI does the legwork live, and every claim it
+produces is verified before it survives. Friday is a **studio**: a research
+stand-up, then a long sprint on the week's **milestone**, worked with the
+student's AI assistant (reviewer roles from an AI bench — at Purdue, GenAI
+Studio — are encouraged) and submitted by the Sunday that follows.
+
+The ten minutes buy two things. A student reporting on their own project is the
+only person in the room who has already been inside it, so the report asks for
+nothing they do not already know; and it rehearses, every week, the exact
+performance the poster session grades at the end of the term.
+
+The course was first designed the other way around. A student took the day's
+concept and taught it, in the role of **Student Research Lead**, running the
+Socratic investigation and assessed on a nine-criterion rubric worth a quarter
+of the grade. That system, with its
+handbook, preparation template, rubric, and per-lecture question bank, is
+retired for this edition and kept intact for a future one at
+[`project/srl/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/project/srl){target="_blank"}.
+The question bank is still in daily use; it now belongs to the instructor. If
+your students are ready to teach each other, that material is there and it
+works.
 
 ## Milestones: grading the book's chain
 
@@ -87,8 +107,24 @@ The briefs are open in the repository:
 
 One lab per week, nb01–nb16, each derived from the chapters it teaches. These
 are the classroom counterparts of the book's companion notebooks — richer
-simulations, SRL lead briefs, and session structure — and any of them opens in
-free Colab.
+simulations, lab-meeting briefs, and session structure — and any of them opens
+in free Colab.
+
+The lab is also what the course collects each week, and the rule is completion.
+Students hand in the notebook they worked in class by 11:59 PM on the Sunday
+that ends the week, and the last week closes on the final class day instead:
+full credit on time, half credit within seven days, none after that. Sixteen
+submissions, the two lowest credits dropped, and the block carries 20% of the
+course grade. Nothing is scored on whether the answers came out right, or on
+how the lab-meeting report went, so the hour itself stays a place where a
+student can be wrong out loud.
+
+That block is one of three completion contracts, and together they set the
+shape of the grade: attendance 1%, participation 9%, the chapters' It is your
+turn sections 15%, the weekly lab notebooks 20%, and the final project 55%.
+Forty-five of those points go to showing up and doing the work. The research
+itself is judged in the remaining 55, across the milestone chain, the peer
+evaluations, the peer review, the poster, and the instructor's evaluation.
 
 Every lab is linked, with what it does, in the lesson-to-lab adoption
 table below — that table is generated from the course crosswalk, so it

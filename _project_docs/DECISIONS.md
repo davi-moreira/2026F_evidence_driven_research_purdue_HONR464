@@ -3963,3 +3963,119 @@ D69, so the roster swap was renumbered **D71** with a note in place.
 **Standing lesson.** A generated banner is content to every regex that reads the
 file. Adding one to a generated page means checking every consumer that parses
 that page, not only the ones that render it.
+
+---
+
+## D74 — The Student Research Lead becomes the Lab Meeting, and the lecture notebook becomes a collected completion contract (2026-08-31)
+
+**Origin.** Davi reported that the students were afraid of leading the sessions,
+and proposed retiring the SRL role and collecting the lecture notebooks instead.
+Two independent design passes (Claude Code, and Codex `gpt-5.6-sol` at effort
+`max`, read-only) converged on the same verdict about the straight swap and on
+the same diagnosis of the fear; the memo is at
+`_adm/codex_collab/2026-08-30_srl-redesign/codex_output.md`. Davi chose the Lab
+Meeting model and ruled the weights himself.
+
+**Ruling 1 — the class format.** Every Mon/Wed lecture from Week 2 opens with a
+**ten-minute lab meeting**. One student is that lecture's **reporter**: seven
+minutes on a decision from **their own project** and the evidence behind it,
+then three minutes of questions from the room. The reporter does **not** teach
+the lecture's concept. **The instructor leads from minute 10** and owns
+accuracy, the AI tooling and the clock.
+
+Why this shape: the anxiety was design-caused, and its largest source was being
+graded on teaching unfamiliar quantitative content to peers. A reporter is the
+only person in the room who has been inside their own project, so that source is
+removed rather than softened. It also rehearses the exact performance the Expo
+and the poster presentation grade in November.
+
+**Ruling 2 — the fifty-minute frames.** Both MW frames still sum to 50.
+
+| Day | Was | Now |
+|---|---|---|
+| Monday | 9 / 22 / 12 / 7 | **10 / 21 / 12 / 7** |
+| Wednesday | 7 / 23 / 12 / 8 | **10 / 20 / 12 / 8** |
+
+The lab meeting takes the opener; the 🧩 Research Puzzle folds into the front of
+the investigation block and is now **run by the instructor**. Section boundaries
+3 and 4 are unchanged (31–43 / 43–50 Monday, 30–42 / 42–50 Wednesday), so D22's
+and D34's later-block rulings stand untouched. Friday's 5 / 40 / 5 studio frame
+(D58) is not affected.
+
+**Ruling 3 — the grade.** The **25% Student Research Lead category is retired**,
+and the live nine-row rubric is **not applied this edition**. In its place:
+
+| Category | Was | Now |
+|---|---:|---:|
+| Attendance | 1 | 1 |
+| Participation | 9 | 9 |
+| IYT Practice | 15 | 15 |
+| Student Research Lead | 25 | — |
+| **Lecture Notebooks** | — | **20** |
+| Final Project | 50 | **55** |
+| **Total** | 100 | **100** |
+
+**Lecture Notebooks (20%)** is the course's **third undivided completion
+contract**, with the same mechanics as participation and IYT Practice:
+
+- **one submission per week per student**, the notebook `nbNN` worked in class;
+- due **11:59 PM on the Sunday that ends the studio week** (Week 16 closes Fri
+  Dec 11, the last class day);
+- graded on **completion only** — worked through and handed in, never on whether
+  the answers came out right, and never on how the live report went;
+- credit `1.0` on time / `0.5` within seven days / `0` otherwise;
+- `N = 16`, `d = ⌈0.10 × 16⌉ = 2`;
+- `lecture notebook points = 20.0 × (sum of the highest 14 credits) / 14`.
+
+It is **not participation** and never carries participation's ±0.9 contribution
+adjustment. D57's ban stands in its amended form: lecture-notebook completion may
+never be reintroduced **as a participation item**.
+
+**Ruling 4 — the freed 5 points go to the milestones.** `1 + 9 + 15 + 20 = 45`,
+so the remaining 5 are forced inside the Final Project. **Milestone Deliverables
+rises from 15 to 20 course points** and the **Final Project rises from 50% to
+55%**. This is the **seventh documented deviation** from D53's verbatim adoption
+of QM 47400's Final Project text: the project-share column no longer reads
+30/20/10/20/20, and because `20 / 55` does not terminate, the student-facing
+syllabus now prints **course percentages** (20 / 10 / 5 / 10 / 10 of the final
+grade) instead of project shares. `course_config.yaml` keeps the exact shares
+(36.37 / 18.18 / 9.09 / 18.18 / 18.18, summing to 100.00) as the machine record.
+No component was renamed, and no scoring rule inside a component changed.
+
+**Ruling 5 — nothing is deleted.** Exactly as D58 kept the quiz banks after
+retiring the quiz category, D74 keeps every SRL artefact on disk for a future
+edition: all of `project/srl/` (handbook, rubric, Socratic question bank, AI
+integration guide, prep template, peer feedback form, submission instructions,
+absent-lead and instructor-intervention protocols), `scripts/assign_srl_slots.py`
+and `scripts/build_srl_packet.py`. **Never delete an SRL file or an SRL script.**
+What is retired is the grade category and the live role, never the material. The
+per-lecture **questions guide is kept in full** and re-owned to the instructor.
+
+**Ruling 6 — the draw carries over unchanged.** 25 slots over 6 students is still
+`4/4/4/4/4/5`; the D69/D71 random assignment now names each lecture's **reporter**
+instead of its lead. No re-draw, and no new fairness argument.
+
+**Notebook cell changes.** `### 🎤 SRL Lead Brief` →
+`### 📣 Lab Meeting: Today's Reporter` (the run of show, the AI trap and the
+checkpoints are all retained, re-owned to the instructor); the injected
+`### 🎤 My Lead Plan` → `### 📣 My Report Plan` (lines 1–4 for the reporter, line
+5 for everyone else, so the whole room arrives with a question);
+`### 🎤 Lead's Questions` → `### 🔎 Questions to Keep You Thinking`, **every
+question verbatim**; the 🧩 Research Puzzle keeps its body and changes only who
+opens it. `course_config.yaml`'s `srl:` block became `lab_meeting:`.
+
+**A carried-forward D62 obligation, discharged here.** The syllabus `.docx`
+(2026-08-25 15:19) was newer than its generator, so it held three unrecorded Word
+edits by Davi. They were captured before anything regenerated and folded into
+`scripts/build_syllabus_docx.py`: the blank-paragraph run above **Grading scale:**
+and above **AI POLICY:** tightened from 3 to 1, and the embedded schedule header
+gained a blank paragraph either side of its details line with the meeting pattern
+abbreviated to **MWF** (propagated to `scripts/build_schedule_docx.py`, which
+carries the identical sentence). The regenerated document was verified
+text-identical to his file *before* any D74 content was applied.
+
+**⚠ Left open.** D54's unresolved question is now sharper: with SRL retired, the
+individual oral **Evidence Defense** still carries no grade weight, and the only
+graded live performance left in the course is the M15 Expo presentation, worth
+30% of a 10-point component — **3 course points**. Davi has not ruled on whether
+the defense should stay ungraded practice, gain weight, or be retired.

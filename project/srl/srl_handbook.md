@@ -1,6 +1,88 @@
 # The Student Research Lead Handbook
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester, so nothing in this
+> document is required of you.** Every Monday and Wednesday lecture from Week 2 now
+> opens with a ten-minute **Lab Meeting** instead. One of you is that lecture's
+> **reporter**: you take **seven minutes on a decision from your own project and the
+> evidence behind it**, then **three minutes of questions from the room**. You do not
+> teach the lecture's concept, and **your report is not graded**. **The instructor
+> leads from minute 10** and owns accuracy, the AI tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. In its
+> place, **Lecture Notebooks (20%)** collects the notebook you work in class, once a
+> week. Everyone hands one in, not only the reporter, and it is graded on completion
+> alone.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead you today, it
+> carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
 *Your guide to leading a class the way a researcher leads an investigation.*
+
+---
+
+## What runs this semester instead: the Lab Meeting
+
+*Everything after this section describes the retired Student Research Lead role and
+is kept whole for a future edition. This section is what is actually true in Fall
+2026.*
+
+Every Monday and Wednesday lecture from Week 2 opens with a **ten-minute lab
+meeting**. One of you is that lecture's **reporter**, and the reporting slots were
+drawn at random at the start of the semester exactly as the lead slots were, so you
+know yours early.
+
+- **Minutes 0–7 — you report.** Seven minutes on one decision from **your own
+  project** and the evidence behind it. Not the week's concept, not a reading: a
+  decision you actually made, what you had to go on, and what you are still unsure
+  about. You are the only person in the room who has been inside your project, so
+  you are never being asked to teach unfamiliar material to your classmates.
+- **Minutes 7–10 — the room asks.** Three minutes of questions from your
+  classmates. When it is someone else's turn, `socratic_question_bank.md` in this
+  folder is where to find the question worth asking.
+- **From minute 10 — the instructor leads.** Accuracy, the AI tooling and the clock
+  are the instructor's, not yours. The 🧩 Research Puzzle that used to open the
+  lecture now folds into the front of the investigation block, opened by the
+  instructor.
+
+**Your report is not graded.** There is no live rubric, no preparation to submit the
+day before, and no penalty attached to how the ten minutes go. It is a rehearsal for
+the poster presentation and the Expo in November, which are graded.
+
+### What is graded instead: Lecture Notebooks (20%)
+
+| Category | Weight |
+|---|---:|
+| Attendance | 1% |
+| Participation | 9% |
+| IYT Practice | 15% |
+| **Lecture Notebooks** | **20%** |
+| Final Project | 55% |
+| **Total** | **100%** |
+
+**Lecture Notebooks (20%)** is a completion contract, the same shape as
+Participation and IYT Practice. One submission per week, and everyone hands one in:
+the
+notebook `nbNN` you worked in class, due **11:59 PM on the Sunday that ends that
+studio week** (Week 16 closes Friday Dec 11, the last class day). It is graded on
+**completion only** — worked through and handed in — never on whether your answers
+came out right, and never on how your report went. Credit is `1.0` on time, `0.5`
+within seven days, `0` after that. Across the `16` weeks the lowest `2` credits drop
+automatically, so
+
+```
+lecture notebook points = 20.0 × (sum of your highest 14 credits) / 14
+```
+
+The dated list lives in `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, and your course
+platform carries the same dates. Where the platform and this repository disagree on
+a date, the platform is right.
+
+Lecture Notebooks is **not** participation. Participation's ±0.9-point contribution
+adjustment belongs to the 9% block alone and never touches this one.
 
 ---
 
@@ -51,7 +133,14 @@ The everyday shorthand for the whole loop is **Ask, Verify, Document**. Ask the
 AI for something specific. Verify what it gives you against real evidence.
 Document what you decided and why. You will run the room through that loop live.
 
-## The two lead formats
+## The two lead formats  ⛔ *(retired procedure)*
+
+> ⛔ **Retired minute frames.** The two tables below give the pre-D74 openers, in
+> which the lead owned the first block. The frames now run **Monday 10 / 21 / 12 /
+> 7** and **Wednesday 10 / 20 / 12 / 8**: the ten-minute lab meeting takes the
+> opening block and the instructor leads from minute 10. The later boundaries are
+> unchanged (31–43 and 43–50 on Monday, 30–42 and 42–50 on Wednesday), so the
+> descriptions of those blocks below still hold.
 
 Each of your slots is either a Monday or a Wednesday, and each has its own
 shape. Both run 50 minutes. The minute frames below are fixed, and the instructor posts
@@ -96,6 +185,11 @@ the ledger.
 
 ## Your slots
 
+> **Still true, under a new name.** The same random draw now names each lecture's
+> **reporter** rather than its lead. Nothing was redrawn, the counts per person are
+> unchanged, and the posting on the course platform is still the single source of
+> truth for your dates.
+
 Lead slots are **assigned at random at the beginning of the semester**, so you
 will know which lectures are yours from the first week. Nothing rotates and
 nothing shifts as the term goes on: your lectures are your lectures.
@@ -107,7 +201,15 @@ on the **Schedule page of the course website**, which tells you whether the
 meeting is a Monday or a Wednesday, which notebook it uses, and what it covers.
 This handbook never prints dates on purpose, so it never goes stale.
 
-## Your SRL Lead Brief
+## Your SRL Lead Brief  ⛔ *(retired procedure)*
+
+> ⛔ **Renamed and re-owned.** The cell described below still opens every lecture,
+> but it is now `### 📣 Lab Meeting: Today's Reporter` and its run of show belongs
+> to the instructor. The planning cell injected below it is now `### 📣 My Report
+> Plan`, whose first four lines are for that lecture's reporter and whose fifth is
+> for everyone else, so the whole room arrives with a question. The lecture's
+> question set is now `### 🔎 Questions to Keep You Thinking`, every question kept
+> word for word.
 
 Every led lecture opens with an **SRL Lead Brief** at the very start of that
 lecture's notebook. It is a normal, student-visible section, so the whole class
@@ -125,7 +227,15 @@ demonstration the room can watch. Cut a question you find flat and write a
 sharper one. Bring your own voice. The only fixed parts are the minute frame and
 the moves the rubric grades; everything else is yours to make interesting.
 
-## Your preparation timeline
+## Your preparation timeline  ⛔ *(retired procedure)*
+
+> ⛔ **The notebook is no longer submitted the day before.** You now hand in the
+> week's notebook on completion, at **11:59 PM on the Sunday that ends the studio
+> week**, under **Lecture Notebooks (20%)** — not the day before one person's
+> lecture, and not only if you are the one reporting. To prepare for your ten minutes as
+> reporter you submit nothing in advance: you bring one decision from your own
+> project and the evidence behind it. The rhythm below is the retired SRL
+> preparation timeline, kept for a future edition.
 
 Good SRL sessions are built, not improvised. Here is the rhythm.
 
@@ -244,7 +354,25 @@ The full details are in the instructor intervention protocol, which you do not
 need to read. You just need to know that stepping in is part of the design, and
 it keeps your session accurate.
 
-## Logistics, in one place
+## Logistics this semester, in one place
+
+- Your **reporting slots** were assigned at random at the start of the semester and
+  are posted on the **course platform** in Week 1. Look your dates up on the
+  **Schedule page** for the format and the notebook.
+- You prepare your ten minutes yourself, and you **submit nothing in advance** for
+  them. Bring one decision from your own project and the evidence behind it.
+- You hand in **the week's lecture notebook**, worked through, by **11:59 PM on the
+  Sunday that ends that studio week** (Week 16 closes Friday Dec 11). That is
+  **Lecture Notebooks (20%)**, and it is graded on completion only.
+- Each session still ends with the class recording an **AI Research Ledger** line and
+  a **Claim Ticket**, the two records that travel with every session in this course.
+- **Your report is not graded**, so the SRL rubric in this folder is not applied and
+  the peer feedback form is not collected. Feedback on a report happens live, in the
+  three minutes of questions.
+
+---
+
+## Logistics, in one place  ⛔ *(retired procedure)*
 
 - Your slots are **assigned at random at the start of the semester**, and the
   assignment is posted on the **course platform** in Week 1. Look your dates up

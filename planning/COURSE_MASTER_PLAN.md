@@ -47,14 +47,16 @@ permitted with disclosure.
 ## 2. Weekly architecture — 16 weeks, one notebook per week
 
 16 topics, one notebook per week (`nb01`–`nb16`), across **43 meetings = 27
-Mon/Wed lectures + 15 in-person Friday studios + 1 async module** (dates in
-`planning/CALENDAR_BACKBONE.csv`). Slugs and titles are fixed in
-`scripts/notebooks_map.py`; the "research decision" column is the project choice
-the student commits to that week.
+in-person Mon/Wed lectures + 14 in-person Friday studios + 2 asynchronous
+online sessions** — 41 meetings in person and 2 online (dates in
+`planning/CALENDAR_BACKBONE.csv`; counts in `course_config.yaml calendar:`).
+Slugs and titles are fixed in `scripts/notebooks_map.py`; the "research
+decision" column is the project choice the student commits to that week.
 
 | Calendar exception | Meeting | Date |
 |---|---|---|
-| Async module (Thanksgiving replication + red-team) | m37 | Mon Nov 23 |
+| Asynchronous online — post-Expo audience-data capture | m36 | Fri Nov 20 |
+| Asynchronous online — Thanksgiving reflection module | m37 | Mon Nov 23 |
 | No class — Labor Day | — | Mon Sep 7 |
 | No class — October break | — | Mon Oct 12 |
 | No class — pre-Thanksgiving | — | Wed Nov 18 |
@@ -95,27 +97,57 @@ Sunday after, 11:59 PM.
 | 15 | S11 Reproduce and package (`nb15`) | 2 | M16 · Sun Dec 6 (the final milestone) | Does my work reproduce from a clean package in a stranger's hands, and what did I accept, rebut, or bound? |
 | 16 | S12 Release and direct the next cycle (`nb16`) | 2 | — (Fri Dec 11 is the course-closing reflection, under participation) | Do I release or withhold pending a named repair, and what should the next study ask? |
 
-## 3. The flipped classroom — the Student Research Lead (SRL) system
+## 3. The lecture format — the ten-minute lab meeting *(D74)*
 
-From Week 2 onward, **every Mon/Wed lecture is student-led**: 25 leadable
-lectures (all Mon/Wed except Week 1's two launch meetings), **slots randomly
-assigned at the start of the semester** (no sequential rotation, no seats),
-first slot at meeting 4 (`nb02` Lecture 1). Each lecture's **SRL Lead Brief**
-is a student-visible section that opens that lecture in its notebook; leads
-prepare from about one week ahead and submit their filled lecture notebook by
-11:59 PM the day before the lecture (D66). The lead runs a **Socratic investigation, not a summary
-presentation** — posing the puzzle, steering the AI investigation, and
-prompting peer defense; the instructor formalizes and adjudicates. The brief is
-a floor, not a ceiling: creative staging within the fixed frame is expected.
-Each meeting type has a **fixed 50-minute architecture** (`srl:` in
+From Week 2 onward, **every Mon/Wed lecture opens with a ten-minute lab
+meeting**: 25 reporting lectures (all Mon/Wed except Week 1's two launch
+meetings), **slots randomly assigned at the start of the semester** (no
+sequential rotation, no seats), first slot at meeting 4 (`nb02` Lecture 1).
+One student is that lecture's **reporter**: seven minutes on a decision from
+**their own project** and the evidence behind it, then three minutes of
+questions from the room. The reporter does **not** teach the lecture's concept,
+and the live report is **not graded**. **The instructor leads from minute 10**
+and owns accuracy, the AI tooling, and the clock. Each lecture's
+**📣 Lab Meeting: Today's Reporter** brief is a student-visible section that
+opens that lecture in its notebook; the reporter fills the **📣 My Report Plan**
+cell before class and everyone else fills its last line, so the whole room
+arrives with a question. The notebook itself is submitted weekly, under the
+Lecture Notebooks contract in §7 — the lead's day-before notebook submission
+(D66) went with the role, and `lab_meeting.prep_cadence` is now the rule.
+Each meeting type has a **fixed 50-minute architecture** (`lab_meeting:` in
 `course_config.yaml`; Mon/Wed 4 sections, Friday 3):
 
 | Section | **Monday** | **Wednesday** | **Friday studio** |
 |---|---|---|---|
-| 1 | Student-led research puzzle · 9 | Student-led retrieval & challenge · 7 | Research stand-up · 5 |
-| 2 | Guided AI research-partner investigation · 22 | Intensive applied AI laboratory · 23 | Milestone kickoff + AI-supported work · 40 |
-| 3 | Human verification + instructor formalization · 12 | Peer defense & adversarial questioning · 12 (defense to 38, then SRL synthesis + instructor accuracy lock · D34) | Revision, ledger, submission · 5 |
+| 1 | Lab meeting: reporter and the room · 10 | Lab meeting: reporter and the room · 10 | Research stand-up · 5 |
+| 2 | Guided AI research-partner investigation · 21 | Intensive applied AI laboratory · 20 | Milestone kickoff + AI-supported work · 40 |
+| 3 | Human verification + instructor formalization · 12 | Peer defense & adversarial questioning · 12 (defense to 38, then instructor synthesis + accuracy lock · D34) | Revision, ledger, submission · 5 |
 | 4 | Decision and defense · 7 | Transfer to the final project · 8 | — |
+
+Both Mon/Wed frames still sum to 50. The lab meeting takes the opener, and the
+🧩 Research Puzzle folds into the front of the investigation block, now opened
+by the instructor. Section boundaries 3 and 4 are unchanged (31–43 / 43–50
+Monday, 30–42 / 42–50 Wednesday), so D22's and D34's later-block rulings stand
+untouched, and Friday's 5 / 40 / 5 frame (D58) is unaffected.
+
+**The Student Research Lead (SRL) system is retired for this edition and kept
+in full for a future one (D74, Ruling 5).** It ran the same 25 Mon/Wed slots
+with the same random draw, but the student *led the lecture* — a Socratic
+investigation of the day's concept — and was graded on it as a 25% category.
+Two design passes found that the fear the format produced was design-caused,
+and that its largest source was being graded on teaching unfamiliar
+quantitative content to peers; the reporter model removes that source rather
+than softening it, and rehearses the exact performance the Expo grades in
+November. **Nothing is deleted.** All of `project/srl/` (handbook, rubric,
+Socratic question bank, AI integration guide, prep template, peer feedback
+form, submission instructions, absent-lead and instructor-intervention
+protocols), `scripts/assign_srl_slots.py`, and `scripts/build_srl_packet.py`
+stay on disk, exactly as D58 kept the quiz banks. What is retired is the grade
+category and the live role, never the material; the per-lecture questions guide
+is kept in full and re-owned to the instructor (in the notebooks as
+**🔎 Questions to Keep You Thinking**). The D69/D71 draw carries over unchanged
+— 25 slots over 6 students is still 4/4/4/4/4/5 — and now names each lecture's
+reporter instead of its lead. No re-draw.
 
 **No new topic content on Fridays.** Every Friday is an in-person studio: a
 research stand-up, then the week's milestone is kicked off from its Brightspace
@@ -124,8 +156,9 @@ block was retired, D30; GenAI Studio reviewer roles still apply at designated
 milestones), then revised, ledgered, and submitted at close. **D58 retired the
 opening 10-minute quiz block for this edition** — no quiz is administered and
 nothing is scored on one — and the milestone sprint absorbed those ten minutes,
-so the Friday frame is 5 / 40 / 5. The async meeting is a self-contained module
-with its own assessable artifact.
+so the Friday frame is 5 / 40 / 5. The two asynchronous online sessions (Fri
+Nov 20 and Mon Nov 23) are self-contained modules with their own assessable
+artifacts.
 
 ## 4. The two conceptual layers (critical — kept exactly)
 
@@ -203,7 +236,7 @@ full milestone chain — develop → present → submit → revise cadence, kick
 rules, dossier mapping, and the M13 terminal lock — lives in
 `planning/PROJECT_MILESTONES.md`.
 
-## 7. Assessment architecture *(D52, amended D57/D58/D61, 2026-08-23)*
+## 7. Assessment architecture *(D52, amended D57/D58/D61, and D74, 2026-08-31)*
 
 From `course_config.yaml assessment:`; sums to 100 and matches `syllabus.qmd`.
 Grading rewards correctness, transparency, reproducibility, question-design
@@ -214,16 +247,41 @@ alignment, and responsible interpretation — never coding elegance.
 | Attendance (iClicker) | 1 |
 | Participation (studio feedback surveys + profile survey + course reflection + other constructive contributions; one undivided block, D57, amended D58) | 9 |
 | IYT Practice (the book's "It is your turn" sections, due on each chapter's reading date; completion, D58, amended D61) | 15 |
-| Student Research Lead | 25 |
-| Final Project | 50 |
+| Lecture Notebooks (the weekly `nbNN` worked in class, submitted; completion, D74) | 20 |
+| Final Project | 55 |
 | **Total** | **100** |
 
+**Lecture Notebooks (20%) is the course's third undivided completion
+contract**, with the same mechanics as participation and IYT Practice: one
+submission per week per student — the notebook `nbNN` worked in class — due
+**11:59 PM on the Sunday that ends the studio week** (Week 16 closes Fri Dec 11,
+the last class day); graded on **completion only**, never on whether the answers
+came out right and never on how the live lab-meeting report went; credit `1.0`
+on time, `0.5` within seven days, `0` otherwise; `N = 16` and
+`d = ⌈0.10 × 16⌉ = 2`, so `points = 20.0 × (sum of the highest 14 credits) / 14`.
+It is **not** participation, and it never carries participation's ±0.9
+contribution adjustment — D57's ban stands in its amended form: lecture-notebook
+completion may never return **as a participation item**. Machine spine:
+`course_config.yaml lecture_notebooks:`; dated list: the generated
+`planning/LECTURE_NOTEBOOK_SCHEDULE.md`.
+
+**The 25% Student Research Lead category is retired for this edition**, and its
+nine-row live rubric is not applied (the rubric file stays on disk — §3). The
+20 points above replace it, and the remaining 5 are forced inside the Final
+Project, which rises from 50% to 55%.
+
 Final Project is the course's single project-grading category. It uses QM474's
-five operative component items and 30/20/10/20/20 shares without renaming or
-replacing them: **Milestone Deliverables 30%**, **Peer Evaluation 20%**, **Peer
-Review 10%**, **Poster Presentation at the Purdue Undergraduate Research
-Conference 20%**, and **Instructor/TA Evaluation 20%**. Applied to the 50%
-category, these are 15/10/5/10/10 course points.
+five operative component items without renaming or replacing them, but **D74 is
+the seventh documented deviation** from D53's verbatim adoption: Milestone
+Deliverables takes the five freed points, so the project-share column no longer
+reads 30/20/10/20/20. Because `20 / 55` does not terminate, student-facing
+surfaces now print **course** percentages of the final grade: **Milestone
+Deliverables 20%**, **Peer Evaluation 10%**, **Peer Review 5%**, **Poster
+Presentation at the Purdue Undergraduate Research Conference 10%**, and
+**Instructor/TA Evaluation 10%** — 55% in total. `course_config.yaml
+final_project_breakdown:` keeps the exact project shares
+(36.37 / 18.18 / 9.09 / 18.18 / 18.18, summing to 100.00) as the machine record
+only. No component was renamed and no scoring rule inside a component changed.
 
 Individual work is the default; a group project requires instructor approval
 before shared work begins. With six students, at most one group of two or
@@ -278,6 +336,22 @@ claims trace to a real, retrievable source; results are verified before reported
 decisions are documented, not just outcomes (`scripts/audit_sources.py`,
 `scripts/voice_lint_notebooks.py` enforce this).
 
+- **v5 (2026-08-31, D74)** — The Student Research Lead becomes the **lab
+  meeting**: every Mon/Wed lecture from Week 2 opens with ten minutes in which
+  one student reports a decision from their own project (7 min) and takes the
+  room's questions (3 min), and the **instructor leads from minute 10**. Frames
+  retimed to 10 / 21 / 12 / 7 (Mon) and 10 / 20 / 12 / 8 (Wed), both still 50;
+  boundaries 3 and 4 and the Friday 5 / 40 / 5 frame untouched. The **25% SRL
+  category is retired** and replaced by **Lecture Notebooks 20%**, the third
+  undivided completion contract (weekly `nbNN`, Sunday 11:59 PM, completion
+  only, N = 16, d = 2); the 5 freed points go to **Milestone Deliverables
+  (15 → 20 course points)**, so the **Final Project rises 50% → 55%**. Nothing
+  was deleted: every SRL file and script is kept for a future edition, and the
+  per-lecture questions guide is kept in full and re-owned to the instructor.
+  The D69/D71 draw carries over unchanged and now names reporters. Also
+  corrected here: the calendar prose, which had read 42 in-person meetings and
+  one async module rather than **41 in person and 2 asynchronous online
+  sessions**.
 - **v4 (2026-08-05, D49)** — Realigned to the book's current 40-lesson,
   12-Studio design (D42–D48) and ruled to **one Studio per week**: MW teach
   the studio's lessons with their IYT, Friday is the studio milestone.

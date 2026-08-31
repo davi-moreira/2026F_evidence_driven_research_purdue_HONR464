@@ -1,5 +1,33 @@
 # The Socratic Question Bank
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester, so nothing in this
+> document is required of you.** Every Monday and Wednesday lecture from Week 2 now
+> opens with a ten-minute **Lab Meeting** instead. One of you is that lecture's
+> **reporter**: you take **seven minutes on a decision from your own project and the
+> evidence behind it**, then **three minutes of questions from the room**. You do not
+> teach the lecture's concept, and **your report is not graded**. **The instructor
+> leads from minute 10** and owns accuracy, the AI tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. In its
+> place, **Lecture Notebooks (20%)** collects the notebook you work in class, once a
+> week. Everyone hands one in, not only the reporter, and it is graded on completion
+> alone.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead you today, it
+> carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
+> **This bank is kept in full and it is still in active use.** All 68 questions
+> stand word for word. From minute 10 the instructor leads the lecture and asks
+> them, and a lecture's own selection appears in its notebook as
+> `### 🔎 Questions to Keep You Thinking`. Your use for it is the **three minutes of
+> questions** after each lab-meeting report: when a classmate has just walked the
+> room through a decision from their project, this is where you find the question
+> worth asking. Read "when you lead" below as "when it is your turn to ask".
+
 *A reservoir of questions you can use word for word when you lead. Every
 question here is written to be said out loud by you, in class, exactly as it
 appears. Pull the ones your puzzle needs. The first half is organized by the
@@ -214,3 +242,9 @@ group.*
 *When you build your prep template, lift three or four of these and adapt them
 to your exact puzzle. The best SRLs do not read these verbatim forever. They
 learn the shape of a good question here, then write their own.*
+
+*⛔ Retired detail: there is no prep template to build this edition. Read the
+paragraph above as it applies now — lift three or four of these and adapt them to
+the decision on the table, whether that is a classmate's report or your own work.
+The last sentence is the durable one either way: learn the shape of a good question
+here, then write your own.*

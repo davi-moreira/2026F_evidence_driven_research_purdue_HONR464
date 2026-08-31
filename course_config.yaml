@@ -68,7 +68,7 @@ course:
   # document (Davi, 2026-07-31). The private course tracker holds them.
   repo: "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
   website: "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/"
-  enrollment: 5
+  enrollment: 6                   # D71 roster; _adm/roster/ has six rows
   project_mode:
     default: "individual"
     groups_allowed: true
@@ -121,24 +121,45 @@ ai_policy:
     also_permitted: "Microsoft Copilot (Purdue-provided) and other tools, with disclosure"
 
 # ---------------------------------------------------------------------------
-# Flipped classroom: the Student Research Lead (SRL) system.
+# The LAB MEETING (D74, 2026-08-31). Supersedes the Student Research Lead (SRL)
+# system as the class format. Every Mon/Wed lecture from Week 2 opens with a
+# ten-minute lab meeting: ONE student is that lecture's reporter and brings a
+# decision from their OWN project (7 min), then the room questions it (3 min).
+# The reporter does not teach the lecture's concept and is not graded on the
+# report — the instructor leads the investigation from minute 10 and owns
+# accuracy, the AI tooling and the clock. What IS graded is the lecture
+# notebook, collected weekly from EVERY student on completion; see
+# lecture_notebooks: below.
+#
+# D74 RETIRES the SRL grade category and the live 9-row rubric, and DELETES
+# nothing: project/srl/ (handbook, rubric, question bank, AI integration guide,
+# prep template, peer feedback form, submission instructions, absent-lead and
+# intervention protocols), scripts/assign_srl_slots.py and
+# scripts/build_srl_packet.py are all KEPT for a future edition, exactly as D58
+# kept the quiz banks. The random draw itself CARRIES OVER unchanged: 25 slots
+# over 6 students is still 4/4/4/4/4/5, one reporter per lecture.
+# This block was named `srl:` before D74.
 # ---------------------------------------------------------------------------
-srl:
-  leadable_lectures: 25            # all Mon/Wed lectures except Week 1 (M1, M2)
-  leads_per_student: "4 or 5"      # 25 slots / 6 students; the remainder is drawn
-  assignment: "random draw at the start of the semester — no sequential rotation, no seats"
-  brief_home: "each lecture's SRL Lead Brief opens that lecture in its notebook"
-  prep_cadence: "start about one week ahead; filled notebook due 11:59 PM the day before the lecture (D66)"
-  first_slot_meeting: 4            # Mon Aug 31 (first student-led lecture)
-  model: "Socratic investigation, not summary presentation"
+lab_meeting:
+  reporting_lectures: 25           # all Mon/Wed lectures except Week 1 (M1, M2)
+  reports_per_student: "4 or 5"    # 25 slots / 6 students; the remainder is drawn
+  assignment: "random draw at the start of the semester — no sequential rotation, no seats; the D69/D71 draw carries over unchanged"
+  brief_home: "each lecture's 📣 Lab Meeting brief opens that lecture in its notebook"
+  report_minutes: 7                # the reporter's own-project report
+  question_minutes: 3              # the room's questions to the reporter
+  graded: false                    # the live report carries no score (D74)
+  prep_cadence: "fill 📣 My Report Plan before class; the notebook itself is submitted weekly under lecture_notebooks:"
+  first_slot_meeting: 4            # Mon Aug 31 (first lab meeting)
+  model: "report a decision from your own project, then take the room's questions"
+  retired_instrument: "project/srl/srl_rubric.md — KEPT on disk, not applied this edition"
   monday_sections:                 # minutes must sum to 50
-    - {name: "Student-led research puzzle", min: 9}
-    - {name: "Guided AI research-partner investigation", min: 22}
+    - {name: "Lab meeting: reporter and the room", min: 10}
+    - {name: "Guided AI research-partner investigation", min: 21}
     - {name: "Human verification + instructor formalization", min: 12}
     - {name: "Decision and defense", min: 7}
   wednesday_sections:
-    - {name: "Student-led retrieval and challenge", min: 7}
-    - {name: "Intensive applied AI laboratory", min: 23}
+    - {name: "Lab meeting: reporter and the room", min: 10}
+    - {name: "Intensive applied AI laboratory", min: 20}
     - {name: "Peer defense and adversarial questioning", min: 12}
     - {name: "Transfer to the final project", min: 8}
   friday_sections:                 # D58: three sections, no quiz block; minutes sum to 50
@@ -329,10 +350,15 @@ assessment:
                                    # the profile survey + the course reflection).
   iyt_practice: 15                 # EDR|AI "It is your turn" sections; see iyt_practice: below
                                    # (D58 created it at 10; D61 raised it to 15)
-  srl_performance: 25              # D58 raised it from 20 to 30; D61 lowered it to 25;
-                                   # 5 flipped-lecture leads per student
-  final_project: 50
-# Total: 1 + 9 + 15 + 25 + 50 = 100.
+  lecture_notebooks: 20            # D74: the SRL performance category (25) is RETIRED and
+                                   # replaced by collected lecture notebooks graded on
+                                   # COMPLETION at 20; the freed 5 points go to Milestone
+                                   # Deliverables inside the Final Project, which rises
+                                   # 50 -> 55. Was srl_performance: 25 (D58 raised it from
+                                   # 20 to 30; D61 lowered it to 25).
+  final_project: 55                # D52/D53 set 50; D74 adds the 5 freed points to
+                                   # Milestone Deliverables (15 -> 20 course points).
+# Total: 1 + 9 + 15 + 20 + 55 = 100.
 # THE QUIZ CATEGORY IS RETIRED for this edition (D58), which is why `quizzes: 20`
 # no longer appears above: no quiz is administered and nothing is scored on one.
 # The banks in _quizzes/ (gitignored), every quiz builder, and
@@ -386,7 +412,7 @@ participation:
       graded: "completion"
       instrument: "surveys/course_reflection.md"        # content pending
   retired:
-    - "lecture-notebook completion (notebooks are never collected)"
+    - "lecture-notebook completion AS A PARTICIPATION ITEM (D74 collects the notebooks weekly under their own lecture_notebooks: category, on completion; they are NOT participation and never carry the +/-0.9 contribution adjustment)"
     - "per-chapter reading feedback (replaced by 12 per-studio responses)"
     - "the proposed 5/2/2 internal split of the 9%"
     - "the 'It is your turn' submissions (moved OUT to the iyt_practice category, D58; 15% since D61; participation no longer carries them)"
@@ -417,10 +443,43 @@ iyt_practice:
   schedule: "planning/IYT_SUBMISSION_SCHEDULE.md"
   bonuses: "none — the two syllabus bonuses land on participation only"
 
+# Lecture Notebooks (D74, 2026-08-31). A top-level 20% category, and the third
+# undivided completion contract in this course. It REPLACES the retired 25% SRL
+# performance category: the lecture notebook every student works in class is now
+# COLLECTED, one submission per week per student, and graded on COMPLETION only —
+# never on content, never on correctness, never on the live lab-meeting report.
+# Same mechanics as participation: and iyt_practice: — one credit per item,
+# automatic drops, no content grade. This is NOT participation and never carries
+# participation's +/-0.9 contribution adjustment.
+lecture_notebooks:
+  undivided: true                  # never split the 20% into sub-weights
+  credit_rule: "1.0 on time; 0.5 within seven days; 0 otherwise"
+  drop_rule: "ceil(0.10 * N) lowest credits dropped automatically"   # N = 16 -> d = 2
+  baseline_credits: 16             # one per weekly notebook, nb01-nb16
+  formula: "points = 20.0 * (sum of the highest N-d credits) / (N-d)"
+  contribution_adjustment: none    # belongs to participation: alone
+  items:
+    weekly_lecture_notebook:
+      label: "Weekly lecture notebook (nbNN, worked in class and submitted)"
+      count: 16                    # nb01-nb16, one per week
+      due_rule: "11:59 PM on the Sunday that ends the studio week; Week 16 closes Fri Dec 11 (last class day)"
+      graded: "completion"         # submitted and worked through — not scored on answers
+      includes: "the 📣 My Report Plan cell (lines 1-4 when the lab-meeting slot is yours, line 5 otherwise), the seven in-class moves, and the 📒 AI Research Ledger row for each lecture"
+      schedule: "planning/LECTURE_NOTEBOOK_SCHEDULE.md"
+  schedule: "planning/LECTURE_NOTEBOOK_SCHEDULE.md"
+  bonuses: "none"
+
 # D52 supersedes D51. It adopts QM474's exact five Final Project component names
 # and operative 30/20/10/20/20 shares without replacing any component; the names
 # are never renamed. Project shares sum to 100; course shares sum to
-# assessment.final_project (50).
+# assessment.final_project, which D74 raised from 50 to 55.
+# D74 (2026-08-31) is the SEVENTH documented deviation from D53's verbatim QM474
+# adoption: Milestone Deliverables takes the 5 course points freed by retiring the
+# SRL category, so the project_share column no longer reads 30/20/10/20/20. Because
+# the resulting shares are non-terminating (20/55 = 36.36...), the student-facing
+# syllabus now prints COURSE percentages (20/10/5/10/10 of the final grade) instead
+# of project shares. project_share values below are exact to two decimals and are
+# the machine record only.
 # D53 (2026-08-23) moved the operational detail OUT of syllabus.qmd, which now
 # prints only these five names and their project_share values, as QM474 does.
 # The student-facing authority for the course_share split, the scoring_rule
@@ -431,31 +490,31 @@ iyt_practice:
 final_project_breakdown:
   milestone_deliverables:
     label: "Milestone Deliverables"
-    project_share: 30
-    course_share: 15
+    project_share: 36.37       # D74; was 30. Carries the rounding remainder so the column sums to exactly 100.00
+    course_share: 20
     includes: "M1-M16 incremental project submissions, each scored on its 100-point milestone rubric"
     scoring_rule: "equally weighted mean of the M1-M16 milestone scores"
   peer_evaluation:
     label: "Peer Evaluation"
-    project_share: 20
+    project_share: 18.18       # D74; was 20
     course_share: 10
     includes: "confidential ratings from every teammate for group projects or two assigned project peers for individual projects; no self-rating"
     scoring_rule: "80% received-rating score plus 20% required-evaluation submission; see project/final_dossier/peer_evaluation_instrument.md"
   peer_review:
     label: "Peer Review"
-    project_share: 10
+    project_share: 9.09       # D74; was 10
     course_share: 5
     includes: "structured reviews of classmates' posters and documented use of criticism"
     scoring_rule: "M12 Final Project Peer Review rubric (100 points)"
   poster_presentation_at_the_conference:
     label: "Poster Presentation at the Purdue Undergraduate Research Conference"
-    project_share: 20
+    project_share: 18.18       # D74; was 20
     course_share: 10
     includes: "the locked poster and each student's required public presentation at the Expo"
     scoring_rule: "70% M13 poster-quality rubric + 30% M15 live Expo presentation rubric"
   instructor_ta_evaluation:
     label: "Instructor/TA Evaluation"
-    project_share: 20
+    project_share: 18.18       # D74; was 20
     course_share: 10
     includes: "the instructor's evaluation of the final poster submission locked at M13"
     scoring_rule: "100% instructor evaluation of the M13 final poster submission (D54)"

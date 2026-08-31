@@ -15,37 +15,64 @@ Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
 participation **2026-07-29 (D31)**, revised by **D51 (2026-08-22)**, clarified
 by **D52 (2026-08-23)**, given their published syllabus wording by **D53
 (2026-08-23)**, turned into a completion contract for Participation by **D57
-(2026-08-23)**, amended by **D58 (2026-08-23)**, and last amended by **D61
-(2026-08-23)**. D52 supersedes D51's split between Final Project Milestones and
-Final Project. All project grading now
-lives in one 50% Final Project category, using QM474's exact five component items
-and shares. D53 then replaced the syllabus prose for that category with QM474's
-own text and moved the operational machinery out of the syllabus (see "Syllabus
-prose" below). **D58 retired the quiz category for this edition**, created
-**IYT Practice at 10%** to carry the book's "It is your turn" sections, and raised
-**Student Research Lead from 20% to 30%**. **D61 amended those two weights only**:
-IYT Practice rises from **10% to 15%** and Student Research Lead falls from **30%
-to 25%**. Every other D58 mechanic is unchanged — the undivided completion
-contracts, the credit and drop rules, the retired quiz category, and the Friday
-studio frame.
+(2026-08-23)**, amended by **D58 (2026-08-23)**, amended again by **D61
+(2026-08-23)**, and last amended by **D74 (2026-08-31)**. D52 supersedes D51's
+split between Final Project Milestones and Final Project. All project grading now
+lives in one 55% Final Project category, using QM474's exact five component items
+under names that were never renamed. D53 then replaced the syllabus prose for
+that category with QM474's own text and moved the operational machinery out of
+the syllabus (see "Syllabus prose" below). **D58 retired the quiz category for
+this edition**, created **IYT Practice at 10%** to carry the book's "It is your
+turn" sections, and raised **Student Research Lead from 20% to 30%**. **D61
+amended those two weights only**: IYT Practice rose from **10% to 15%** and
+Student Research Lead fell from **30% to 25%**. Every other D58 mechanic is
+unchanged — the undivided completion contracts, the credit and drop rules, the
+retired quiz category, and the Friday studio frame.
+
+**D74 (2026-08-31) is the current ruling on the weights.** The **Student Research
+Lead category is retired for this edition**, and with it the live nine-row rubric.
+Every Mon/Wed lecture from Week 2 now opens with a ten-minute **lab meeting** in
+which one student, that lecture's **reporter**, spends seven minutes on a decision
+from their own project and three minutes taking the room's questions; the report
+is **not graded** and the instructor leads from minute 10. In the retired
+category's place stands **Lecture Notebooks at 20%**, the course's **third
+undivided completion contract**: the notebook `nbNN` worked in class is now
+collected once a week per student and graded on completion only. The five points
+that remain — `1 + 9 + 15 + 20 = 45` — are forced inside the Final Project, which
+rises from **50% to 55%** with **Milestone Deliverables rising from 15 to 20
+course points**. No Final Project component was renamed, and no scoring rule
+inside a component changed. **Nothing was deleted:** every SRL artefact stays on
+disk for a future edition, exactly as D58 kept the quiz banks (see "SRL grading
+pipeline — retired for this edition" at the end of this file).
+
 This file, `course_config.yaml assessment:`, and the syllabus Assessments table
 must match exactly.
 
-## The confirmed course components (100%) — D52, amended D58 and D61
+## The confirmed course components (100%) — D52, amended D58, D61 and D74
 
 | Component | Weight | What it contains |
 |---|---:|---|
 | **Attendance** (iClicker) | **1%** | 85% attendance target |
 | **Participation** (one undivided block) | **9%** | Studio feedback surveys (12), the student profile survey, the course reflection, and other constructive contributions — every item one equal credit, graded for completion (D57, amended D58) |
-| **IYT Practice** | **15%** | The EDR\|AI "It is your turn" sections of the required chapters, each due 11:59 PM on the date that chapter's reading was due, graded for completion (D58, amended D61) |
-| **Student Research Lead (SRL)** | **25%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
-| **Final Project** | **50%** | Milestone Deliverables, Peer Evaluation, Peer Review, Poster Presentation at the Purdue Undergraduate Research Conference, and Instructor/TA Evaluation |
+| **IYT Practice** (one undivided block) | **15%** | The EDR\|AI "It is your turn" sections of the required chapters, each due 11:59 PM on the date that chapter's reading was due, graded for completion (D58, amended D61) |
+| **Lecture Notebooks** (one undivided block) | **20%** | The weekly lecture notebook `nbNN` worked in class, one submission per week per student, due 11:59 PM on the Sunday that ends the studio week, graded for completion (D74) |
+| **Final Project** | **55%** | Milestone Deliverables, Peer Evaluation, Peer Review, Poster Presentation at the Purdue Undergraduate Research Conference, and Instructor/TA Evaluation |
 | **Total** | **100%** | |
 
 **No quiz category.** D58 retired it for this edition: no quiz is administered and
 nothing is scored on one. The banks under `_quizzes/` (gitignored), their builders,
 and `scripts/audit_answer_length.py` are kept for a future edition and are never
 deleted — see "Quizzes — retired for this edition" below.
+
+**No Student Research Lead category.** D74 retired it for this edition: no live
+lead is scored, and the nine-row rubric is not applied. The lecture opener is now
+the ungraded ten-minute lab meeting. All of `project/srl/` — handbook, rubric,
+Socratic question bank, AI integration guide, prep template, peer feedback form,
+submission instructions, absent-lead and instructor-intervention protocols — plus
+`scripts/assign_srl_slots.py` and `scripts/build_srl_packet.py` are kept for a
+future edition and are never deleted. The per-lecture questions guide is kept in
+full and re-owned to the instructor. See "SRL grading pipeline — retired for this
+edition" below.
 
 ## QM474 authority and the five Final Project items
 
@@ -55,39 +82,60 @@ supplies the exact component labels, and
 its canonical project contract,
 `../../../predictive_analytics/2026F_predictive_analytics_QM474/_final_project/2026F/final_project_milestone_reference.md`,
 confirms the 30/20/10/20/20 shares (while abbreviating the last two labels).
-The five items are **Milestone Deliverables 30% · Peer Evaluation 20% · Peer
+QM474's five items are **Milestone Deliverables 30% · Peer Evaluation 20% · Peer
 Review 10% · Poster Presentation at the Purdue Undergraduate Research Conference
-20% · Instructor/TA Evaluation 20%**. HONR uses those component names and shares
-without replacing any item:
+20% · Instructor/TA Evaluation 20%**. HONR uses those component names without
+replacing or renaming any item. **D74 changed one thing about the shares and
+nothing else:** the five course points freed by retiring the SRL category went to
+**Milestone Deliverables**, which rose from 15 to 20 course points, so HONR's
+project-share column no longer reads 30/20/10/20/20.
 
-| Final Project component | Share of Final Project | Course points | HONR grading home |
-|---|---:|---:|---|
-| **Milestone Deliverables** | 30% | 15 | Equal-weight mean of M1–M16's sixteen 0–100 milestone scores |
-| **Peer Evaluation** | 20% | 10 | Confidential per-student evaluation by every teammate (group project) or two assigned project peers (individual project) |
-| **Peer Review** | 10% | 5 | M12 Final Project Peer Review rubric; each student completes the required reviews |
-| **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10 | `0.70 ×` M13 poster-quality score + `0.30 ×` each student's M15 live-presentation score |
-| **Instructor/TA Evaluation** | 20% | 10 | `1.00 ×` the instructor's evaluation of the final poster submission locked at M13 (D54) |
-| **Total** | **100%** | **50** | |
+Because `20 / 55` does not terminate, **student-facing surfaces now print
+percentages of the final grade** rather than shares of the Final Project. The
+exact project shares are kept in `course_config.yaml
+final_project_breakdown:` as the machine record only:
 
-## Syllabus prose — QM474 adopted verbatim (D53, 2026-08-23)
+| Final Project component | Share of the final grade (student-facing) | Course points | Exact project share (machine record) | HONR grading home |
+|---|---:|---:|---:|---|
+| **Milestone Deliverables** | 20% | 20 | 36.37% | Equal-weight mean of M1–M16's sixteen 0–100 milestone scores |
+| **Peer Evaluation** | 10% | 10 | 18.18% | Confidential per-student evaluation by every teammate (group project) or two assigned project peers (individual project) |
+| **Peer Review** | 5% | 5 | 9.09% | M12 Final Project Peer Review rubric; each student completes the required reviews |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 10% | 10 | 18.18% | `0.70 ×` M13 poster-quality score + `0.30 ×` each student's M15 live-presentation score |
+| **Instructor/TA Evaluation** | 10% | 10 | 18.18% | `1.00 ×` the instructor's evaluation of the final poster submission locked at M13 (D54) |
+| **Total** | **55%** | **55** | **100.00%** | |
 
-`syllabus.qmd`'s `### Final Project (50%)` section is QM 47400's Fall 2026 Final
-Project text adopted **verbatim**, with only the six deviations recorded below.
+Milestone Deliverables carries the rounding remainder (36.37 rather than 36.36) so
+the machine column sums to exactly 100.00. Nothing inside a component changed:
+Milestone Deliverables is still the equally weighted mean of the M1–M16 milestone
+scores, and the four other scoring rules are word for word what D52 and D54 set.
+
+## Syllabus prose — QM474 adopted verbatim (D53, 2026-08-23; seventh deviation D74)
+
+`syllabus.qmd`'s `### Final Project (55%)` section is QM 47400's Fall 2026 Final
+Project text adopted **verbatim**, with only the seven deviations recorded below.
 Any other difference between the two sections is a defect. Source of the
 wording:
 `../../../predictive_analytics/2026F_predictive_analytics_QM474/syllabus.qmd`.
 
 | # | QM 47400 | HONR 46400 | Why |
 |---|---|---|---|
-| 1 | `### Final Project (35%)` | `### Final Project (50%)` | the percentage; HONR's Final Project is 50% under D52 |
+| 1 | `### Final Project (35%)` | `### Final Project (55%)` | the percentage; HONR's Final Project is 55% under D74 (it was 50% from D52 until D74 moved the freed SRL points into it) |
 | 2 | "In groups, students will complete a practical predictive analytics project" | "Students will complete a practical evidence-driven research project", followed by the individual-default / approved-group sentence | HONR is individual-by-default (D52), and the subject is not predictive analytics |
 | 3 | item 2, "productive teamwork" | "productive research work" | "teamwork" is false for a solo researcher |
 | 4 | item 3, "Each group will review … other teams' posters" | "Each student will review … the other projects' posters" | no teams by default |
 | 5 | item 4, "due date indicated in the syllabus" | "due date indicated in the course schedule" | D13 confines dates to `schedule.qmd` |
 | 6 | item 5, "your instructor and the TA will evaluate" | "your instructor will evaluate" | HONR has no TA (D52: "The instructor records the last item if no TA is assigned.") |
+| 7 | the five numbered items print **shares of the Final Project** — 30 / 20 / 10 / 20 / 20 | the five numbered items print **shares of the final grade** — **20 / 10 / 5 / 10 / 10** | D74 gave Milestone Deliverables the 5 course points freed by retiring the SRL category, so the project shares are no longer QM474's and no longer terminate (`20 / 55 = 36.36…`); a course percentage is exact, and it is the number a student can check against the Assessments table |
 
-The five internal shares — 30 / 20 / 10 / 20 / 20 — are **identical in both
-courses**, so nothing inside the numbered list changed.
+**The seventh deviation, in full.** From D53 until D74 the five internal shares
+were **identical in both courses**, so nothing inside the numbered list had
+changed. That is no longer true. HONR's shares of the Final Project are now
+36.37 / 18.18 / 9.09 / 18.18 / 18.18, and those figures appear **only** in
+`course_config.yaml final_project_breakdown:`. Every student-facing surface — the
+syllabus, the milestone briefs, the Brightspace spec, the project-guidelines
+document — prints the course percentages instead. **No component was renamed and
+no scoring rule inside a component changed**; the deviation is a change of
+denominator and of the number printed, nothing more.
 
 Two adopted QM474 sentences were verified against `planning/MEETING_SCHEDULE.csv`
 before being kept, not assumed: the class immediately after the Expo is genuinely
@@ -102,16 +150,18 @@ course tracker.
 
 ### What the syllabus no longer carries
 
-The syllabus now states only the five component names and their shares of the
-Final Project, exactly as QM474 does, and promises that "a comprehensive set of
-project guidelines will be provided." The operational machinery moved out of it.
+The syllabus now states only the five component names and their percentages, in
+QM474's own numbered-list form, and promises that "a comprehensive set of project
+guidelines will be provided." Since D74 the percentages printed there are shares
+of the **final grade** (20 / 10 / 5 / 10 / 10) rather than of the Final Project;
+the list itself is otherwise unchanged. The operational machinery moved out of it.
 **Nothing is repealed** — D52 remains the ruling decision and every rule below
 is still in force; the syllabus governs the weights, and the guidelines document
 governs the operational detail.
 
 | Machinery removed from `syllabus.qmd` | Authoritative home now |
 |---|---|
-| The five-row component table with the share-of-course column (15 / 10 / 5 / 10 / 10) | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `brightspace/gradebook_spec.md` |
+| The five-row component table with both columns — share of the Final Project and share of the course (D74: 20 / 10 / 5 / 10 / 10 course points, from 15 / 10 / 5 / 10 / 10) | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `brightspace/gradebook_spec.md` |
 | Per-component scoring rules: Milestone Deliverables = equal-weight mean of the sixteen M1–M16 scores; Poster item = `0.70 ×` M13 poster quality + `0.30 ×` M15 live presentation; Instructor/TA = the instructor's evaluation of the M13 final poster submission | the same two files, plus the "Deterministic Final Project scoring rules" table below |
 | "How the same five components work in both project modes" (shared vs individual rows) | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | "Peer Evaluation is not Peer Review", including `received_rating_score = min(100, 100 × mean received rating / 3)`, `item = 0.80 × received_rating_score +` submission points, the rule that a missing rating never costs its recipient, and the neutral 80 after failed follow-up | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `project/final_dossier/peer_evaluation_instrument.md` |
@@ -167,10 +217,17 @@ a mean of 3); no substitute evaluator is added after observation ends.
 
 ## Final Project gradebook arithmetic
 
-The five project shares sum to 100. Applied to HONR's single 50% Final Project,
-they contribute **15 + 10 + 5 + 10 + 10 = 50** course points. Together with
-Attendance 1, Participation 9, IYT Practice 15, and SRL 25, the course total is
-**1 + 9 + 15 + 25 + 50 = 100**.
+The five project shares sum to 100.00. Applied to HONR's single 55% Final Project,
+they contribute **20 + 10 + 5 + 10 + 10 = 55** course points. Together with
+Attendance 1, Participation 9, IYT Practice 15, and Lecture Notebooks 20, the
+course total is **1 + 9 + 15 + 20 + 55 = 100**.
+
+D74's arithmetic is worth stating once in the open, because it is what forced the
+Final Project up. Retiring the 25% SRL category left 25 points to place. Twenty
+went to the new Lecture Notebooks contract. That fixes the four non-project
+categories at `1 + 9 + 15 + 20 = 45`, so the remaining **5 points had nowhere to
+go but inside the Final Project** — and they went to Milestone Deliverables, the
+component that already scores the sixteen-step chain those notebooks feed.
 
 Several milestones produce evidence later evaluated in another Final Project
 component. Never copy one raw rubric score into two places. M12's milestone score
@@ -183,7 +240,9 @@ one place a single artifact feeds two components (D54).
 
 ## Deterministic Final Project scoring rules
 
-Each component produces one 0–100 score:
+Each component produces one 0–100 score. **D74 left every rule in this table
+untouched** — it changed what each 0–100 score is worth in the course, never how
+the score itself is produced:
 
 | Final Project item | Scoring rule |
 |---|---|
@@ -202,7 +261,7 @@ non-submission leaves no valid rating after instructor follow-up, use a neutral
 mean of 3 for the intended recipient rather than zero or a substitute evaluator;
 the non-submitter still loses their own submission points.
 
-## Participation — one undivided block (D57, amended D58)
+## Participation — one undivided block (D57, amended D58 and D74)
 
 Participation is **9%, undivided**. Every required item is worth the same single
 credit and the block is their sum. **No internal split is published, and none is
@@ -211,7 +270,8 @@ completion + 2% class contribution; that split is rejected and must not be
 reinstated. **D58 moved the "It is your turn" family out of this block** into its
 own IYT Practice category — 10% under D58, **15%** under D61 — stated in the next
 section; the 9%, its mechanics, and its refusal to split internally are otherwise
-unchanged.
+unchanged. **D74 changed nothing here either** — not the weight, not the item
+list, not N, not d, not the formula, not the ±0.9 adjustment.
 
 | # | Item | Count (typical student) | Due | Graded |
 |---|---|---:|---|---|
@@ -232,14 +292,22 @@ The syllabus clause "other constructive contributions to the course" is a
 **documented adjustment of at most ±0.9 points** on the ledger result, not a
 separate bucket with a weight.
 
-**Two things were retired to make this work.** Lecture notebooks are **not
-collected** — they are class instruments, and nothing is graded on them. Reading
-feedback is no longer per chapter: 40 responses competed with the work they were
-meant to improve, so 12 per-studio responses replace them, closing the same
-Sunday night as the studio's milestone.
+**Two things were retired to make this work.** Lecture notebooks were **not
+collected** — they were class instruments, and nothing was graded on them.
+Reading feedback is no longer per chapter: 40 responses competed with the work
+they were meant to improve, so 12 per-studio responses replace them, closing the
+same Sunday night as the studio's milestone.
 
-The full contract is `surveys/participation_grading.md`. The dated schedule for
-this block is generated by `scripts/build_participation_schedules.py` into
+> **Amended by D74 (2026-08-31).** The first of those two retirements now stands
+> in a narrower form. Lecture notebooks **are** collected, weekly, under their own
+> **Lecture Notebooks (20%)** category described two sections below. What D57
+> banned and D74 keeps banned is lecture-notebook completion **as a participation
+> item**: it never re-enters this 9% block, never joins this block's credit pool,
+> and never carries the ±0.9 contribution adjustment. The second retirement —
+> per-chapter reading feedback — is untouched.
+
+The full contract for this block is `surveys/participation_grading.md`. The dated
+schedule is generated by `scripts/build_participation_schedules.py` into
 `planning/STUDIO_FEEDBACK_SCHEDULE.md`; the same script writes the IYT Practice
 schedule described below.
 
@@ -283,6 +351,57 @@ family its own category, at 10% and then 15% under D61, because it was by far th
 largest family in the participation block, and a body of required practice that
 size should be named for what it is rather than hidden inside participation.
 
+## Lecture Notebooks — 20% (D74, 2026-08-31)
+
+Lecture Notebooks is the course's **third undivided completion contract**, and it
+is the category that replaces the retired 25% Student Research Lead. It holds one
+item family: the weekly lecture notebook `nbNN` a student works in class. The
+mechanics are Participation's and IYT Practice's, with their own credit pool.
+
+| # | Item | Count (typical student) | Due | Graded |
+|---|---|---:|---|---|
+| 1 | **Weekly lecture notebook** (`nb01`–`nb16`, worked in class and handed in) | 16 | 11:59 PM on the Sunday that ends the studio week; Week 16 closes **Fri Dec 11**, the last class day | completion |
+| | **Baseline N** | **16** | | |
+
+Credit is `1.0` on time, `0.5` within seven days, `0` otherwise; the lowest
+`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 2**), and
+
+```
+lecture notebook points = 20.0 × (sum of the highest N − d credits) / (N − d)
+                        = 20.0 × (sum of the highest 14 credits) / 14
+```
+
+**Completion means completion.** A notebook earns its credit when it has been
+worked through and handed in. It is never scored on whether the answers came out
+right, never scored on the quality of the reasoning inside it, and **never scored
+on how that week's live lab-meeting report went** — the report carries no grade at
+all. The submission covers the whole week's work in that notebook: the
+`📣 My Report Plan` cell (lines 1–4 when the lab-meeting slot is yours, line 5
+otherwise, so the whole room arrives with a question), the seven in-class moves,
+and the `📒` AI Research Ledger row for each lecture.
+
+This is **not participation**. It has its own N, its own drop allowance and its
+own formula, it never joins the participation credit pool, and it never carries
+participation's ±0.9 contribution adjustment. D57's ban survives in that amended
+form: lecture-notebook completion may never return **as a participation item**.
+
+The machine spine is `course_config.yaml lecture_notebooks:`; the dated schedule
+is `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, generated alongside the other two
+completion schedules and never hand-edited. The student-facing contract sits with
+the other two in `surveys/participation_grading.md`, which since D74 is the whole
+contract for all **three** completion categories.
+
+**Why this category exists.** Students were afraid of leading sessions, and the
+largest source of that fear was being graded on teaching unfamiliar quantitative
+content to peers. D74 removed the source rather than softening it: the graded
+thing is now the work itself, which every student does every week anyway and
+which is the direct input to the milestone chain. Twenty points is close to the
+twenty-five it replaces, so the course still weights sustained weekly effort
+heavily — it simply stops paying for a performance and starts paying for the
+record of the work. And because the notebook is where the AI Research Ledger rows
+accumulate, collecting it weekly makes the course's central discipline visible on
+a weekly cadence instead of only at milestones.
+
 ## Quizzes — retired for this edition (D58, 2026-08-23)
 
 There is **no quiz category**. No quiz is administered, no quiz is printed, and
@@ -299,17 +418,18 @@ category is never permission to delete a quiz file or a quiz script.
 
 - **There is one project, not a project plus a milestone category.** The 16-step
   development chain (M1–M16) is the Milestone Deliverables component of the single
-  50% Final Project.
+  55% Final Project.
 - **The five QM474 items remain visible and functional.** HONR does not rename
   Peer Evaluation into a portfolio or rename Instructor/TA Evaluation into a
   defense; those artifacts are evidence used inside the named items.
 - **Individual accountability survives either project mode.** Actual peers rate
   contribution and follow-through, while the portfolio and defense stay
   individual even when the research artifact is shared.
-- **The flipped classroom rises to 30%.** Leading research investigations is a
-  repeated rehearsal of the same judgment and defense expected in the project,
-  and it is the second-largest thing the course grades. (D61 later settled it at
-  25%; it is still second-largest.)
+- **The flipped classroom rose to 30%** *(superseded by D74; kept as the record of
+  why the weight was where it was)*. Leading research investigations was a
+  repeated rehearsal of the same judgment and defense expected in the project, and
+  it was the second-largest thing the course graded. (D61 later settled it at 25%;
+  it was still second-largest.)
 - **The retired quiz weight went where the work is.** D58 removed the 20% quiz
   category, and its weight was redistributed to the two places that already carry
   real, repeated practice: 10 points to **Student Research Lead** (20 → 30) and 10
@@ -319,8 +439,24 @@ category is never permission to delete a quiz file or a quiz script.
 - **D61 rebalanced those two, and only those two.** Five points moved from
   **Student Research Lead** (30 → 25) to **IYT Practice** (10 → 15): the "It is
   your turn" family is the most frequent required practice in the course — 35
-  submissions against five SRL slots — and its weight now reflects that cadence.
-  Both remain completion-and-rubric contracts exactly as D58 defined them.
+  submissions against the four or five lecture slots a student drew — and its
+  weight now reflects that cadence. Both remained completion-and-rubric contracts
+  exactly as D58 defined them.
+- **D74 stopped paying for a performance and started paying for the work.** The
+  25% Student Research Lead category is retired for this edition. Twenty of its
+  points became **Lecture Notebooks**, a completion contract over the sixteen
+  notebooks every student already works in class; the live lab-meeting report that
+  replaced the lead carries **no grade at all**. This is the third completion
+  contract in a course that now grades three kinds of steady effort by completion —
+  showing up to the shared instruments (9%), practising the book (15%), and doing
+  the weekly lab work (20%) — and reserves judgment-based scoring for the project
+  itself.
+- **The last 5 points had one place to go.** With the four non-project categories
+  fixed at `1 + 9 + 15 + 20 = 45`, the remainder had to sit inside the Final
+  Project. It went to **Milestone Deliverables** (15 → 20 course points), the
+  component the notebooks feed most directly, so the course's largest single
+  weight is still the sixteen-step chain that builds the research. The Final
+  Project as a whole rises 50% → 55%.
 
 ## Rubric DNA — five virtues, one menu
 
@@ -357,13 +493,24 @@ teeth behind the course's discipline:
   Craft/ledger row identified by the milestone brief scores **0**, and that
   submission is **returned** unread (per the CLAUDE.md AI-Ledger rule). A
   separate shared terminal-rubric score changes only when that rubric says so.
-- **SRL live cap** — presenting an AI answer as settled without verifying it caps
-  SRL rubric row 4 (Productive use of AI) at Beginning (`srl_rubric.md`).
+- **SRL live cap — not applied this edition (D74), kept for a future one.**
+  Presenting an AI answer as settled without verifying it capped SRL rubric row 4
+  (Productive use of AI) at Beginning (`srl_rubric.md`). The rubric is not applied
+  this edition, so the cap has nothing to bite on: the lab-meeting report is
+  ungraded. The rule and the rubric stay on disk unchanged. The discipline itself
+  does not lapse — an unverified AI answer presented as settled still meets the
+  evidence-integrity and verification caps above wherever it reaches a graded
+  deliverable, and the instructor still corrects it live under the accuracy lock.
+
+None of these caps touches a completion contract. Participation, IYT Practice and
+Lecture Notebooks are graded on whether the work was submitted, so a capped
+criterion in a milestone rubric never reduces a completion credit — and a
+completion credit never excuses a capped criterion.
 
 ## Grade bands & policies
 
 Letter bands follow the standard Purdue scale: A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83,
-B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60. **No curve** (n = 5).
+B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60. **No curve** (n = 6).
 
 **Revision.** Feedback returns within 3 days of each milestone; most milestones
 accept a revised version within **7 days** of feedback for up to half the lost
@@ -373,6 +520,13 @@ revision window** — the deadline governs: **M13** final poster (Sun Nov 8,
 M15). Every other milestone is worked at its Friday studio and due the Sunday
 after, 11:59 PM (D55); M11 (Wed, at class) and M12 (Fri, 2:30 PM) keep weekday
 deadlines the conference block depends on.
+
+**Revision and lateness do not reach the completion contracts.** Participation,
+IYT Practice and Lecture Notebooks have no revision window and no per-day
+deduction, because there is nothing to revise toward: each item is worth one
+credit, and the credit rule *is* the late policy — `1.0` on time, `0.5` within
+seven days, `0` after that, with the lowest `d` credits dropped automatically.
+The two rules below govern the rubric-scored milestones.
 
 **Late.** −10% per day up to 3 days, then not accepted; documented emergencies
 handled individually per Purdue policy.
@@ -394,20 +548,74 @@ board.
 - **Reproduction sign-off** — at **M16**, a classmate attests whether the peer's
   headline number reproduces from the package alone.
 
-## SRL grading pipeline
+## The lab meeting — ungraded, and what it replaced (D74)
 
-The Student Research Lead score is produced per slot:
+Every Mon/Wed lecture from Week 2 opens with a **ten-minute lab meeting**. One
+student is that lecture's **reporter**: seven minutes on a decision from their own
+project and the evidence behind it, then three minutes of questions from the room.
+The reporter does not teach the lecture's concept, and **the instructor leads from
+minute 10**, owning accuracy, the AI tooling and the clock.
 
-1. The lead receives their SRL page **five days ahead** and submits a
-   **filled notebook the day before, 11:59 PM** for instructor review; the template
-   pre-loads rows 2 (Socratic questions), 3 (assumption-probe), 4–5 (AI plan),
-   7 (timing), and 8 (project connection).
-2. The lead runs the room **live** and is scored on all nine rubric rows
+**Nothing about the report is scored.** There is no rubric, no per-slot points, no
+preparation grade and no penalty for a weak report. The one graded thing in the
+neighbourhood is the notebook itself, collected weekly under **Lecture Notebooks
+(20%)** on completion — and that credit is earned by working the notebook through,
+never by how the live report went. A student who reports badly and hands in a
+worked notebook loses nothing.
+
+The draw is unchanged from D69/D71: **25 reporting lectures over 6 students, drawn
+`4/4/4/4/4/5`**, one reporter per lecture, assigned at random at the start of the
+semester with no rotation and no seats. D74 renamed what the draw produces — each
+lecture now has a reporter rather than a lead — and did not re-run it. The machine
+record is `course_config.yaml lab_meeting:` (the block was named `srl:` before
+D74), and the dated draw is `planning/SRL_ASSIGNMENT_SCHEDULE.md`.
+
+### SRL grading pipeline — retired for this edition, kept for a future one
+
+**No SRL score is produced this edition.** The 25% category is retired and the
+nine-row rubric is not applied. What follows is the pipeline as it stood, kept
+here as the record and as the starting point if a future edition brings the role
+back. It is not in force.
+
+1. The lead worked from the SRL brief **about one week ahead** and submitted a
+   **filled notebook by 11:59 PM the calendar day before the lecture** for
+   instructor review — `lecture − 1 day`, with no class-day snapping, so a Sunday
+   or a holiday was a perfectly good submission date (**D66**, which corrected
+   D18's "two days ahead" to match the course platform). The template pre-loaded
+   rows 2 (Socratic questions), 3 (assumption-probe), 4–5 (AI plan), 7 (timing),
+   and 8 (project connection).
+2. The lead ran the room **live** and was scored on all nine rubric rows
    (`project/srl/srl_rubric.md`, 100 points) during the session.
-3. **Revision does not apply** to a live performance; the next of the five slots
-   is the improvement window, informed by peer feedback
+3. **Revision did not apply** to a live performance; the student's next drawn slot
+   was the improvement window, informed by peer feedback
    (`srl_peer_feedback_form.md`) and the instructor's notes.
 
-Each slot's 100-point score scales to its **5-point** course share; the five slots
-sum to the **25%** component (`srl.leads_per_student: 5` in `course_config.yaml` is
-what makes the per-slot figure 5).
+The component was the **equal-weight mean of a student's own slot scores**, scaled
+to the 25 course points — one scored gradebook item per student, entered after
+each of their leads and averaged, which is what made an uneven draw harmless
+(`brightspace/gradebook_spec.md`). **There was never a fixed per-slot point
+value.** An earlier version of this section said each slot scaled to a 5-point
+course share because `srl.leads_per_student: 5` implied five slots each; the D69
+draw gives **four or five** slots over six students, so a fixed 5 points per slot
+would have paid a five-slot student 25 and a four-slot student 20 for identical
+work. Any surface that printed a per-slot point value, or that said every student
+leads five times, was wrong on both counts.
+
+**Kept on disk, never deleted** (D74 Ruling 5, exactly as D58 kept the quiz banks):
+all of `project/srl/` — `srl_handbook.md`, `srl_rubric.md`,
+`socratic_question_bank.md`, `srl_ai_integration_guide.md`, `srl_prep_template.md`,
+`srl_peer_feedback_form.md`, `srl_submission_instructions.md`,
+`absent_lead_protocol.md`, `instructor_intervention_protocol.md` and their PDFs —
+together with `scripts/assign_srl_slots.py` and `scripts/build_srl_packet.py`. The
+per-lecture questions guide is kept **in full** and re-owned to the instructor, who
+now runs those questions from minute 10. Retiring the category is never permission
+to delete an SRL file, an SRL script, or an SRL section.
+
+## Open question carried forward (D74)
+
+With SRL retired, the individual oral **Evidence Defense** carries no grade weight,
+and the only graded live performance left in the course is the M15 Expo
+presentation — 30% of a 10-point component, so **3 course points**. Whether the
+defense should stay ungraded practice, gain weight, or be retired is **not yet
+ruled**. Do not resolve it in this file; record the ruling here once Davi makes
+it.

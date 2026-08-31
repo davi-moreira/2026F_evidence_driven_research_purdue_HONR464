@@ -1,9 +1,25 @@
 #!/usr/bin/env python3
-"""Draw the Student Research Lead slot assignment for the semester.
+"""Draw the lab-meeting REPORTER assignment for the semester.
 
-The SRL system assigns every leadable Mon/Wed lecture to one student at the
-start of the semester -- randomly, with no rotation and no seats (D22). This
-script performs that draw reproducibly.
+Every Mon/Wed lecture from Week 2 opens with a ten-minute LAB MEETING. One
+student is that lecture's REPORTER: seven minutes on a decision from their OWN
+project and the evidence behind it, then three minutes of questions from the
+room. The reporter does not teach the lecture's concept, and the report itself
+carries no score (D74). This script assigns those slots at the start of the
+semester -- randomly, with no rotation and no seats (D22, as amended by D74).
+
+D74 (2026-08-31) retired the Student Research Lead ROLE and its 25% grade
+category. It did NOT retire this draw and did NOT order a re-draw: the standing
+D69/D71 assignment carries over unchanged -- the same 25 slots over 6 students,
+still 4/4/4/4/4/5, the same dates and the same students. Only the name of the
+job changed, from lead to reporter. Rerun this script when the ROSTER changes
+(see `_adm/roster/ROSTER_CHANGE_RUNBOOK.md`), never to "refresh" the draw for
+D74. The script is kept for future editions under D74's ruling that no SRL
+artefact is ever deleted.
+
+The paths below keep their `srl_` stem on purpose: the assignment already on
+disk is the one that carries over, and every downstream reader (chiefly
+`scripts/build_srl_packet.py`) opens it under that name.
 
 FERPA: the roster is student data. It lives in the gitignored `_adm/roster/`
 and is read at run time; this script carries no names, and its output is
@@ -11,19 +27,19 @@ written back into `_adm/` so the assignment is never committed or published.
 Students learn their own slots through the course platform, not the site.
 
 Fairness constraints, all enforced by rejection sampling:
-  1. Lead counts are as even as the roster allows. When the slots do not
-     divide evenly, `len(slots) % n_students` students carry one extra lead
+  1. Report counts are as even as the roster allows. When the slots do not
+     divide evenly, `len(slots) % n_students` students carry one extra report
      and WHICH students those are is itself drawn at random, so the remainder
      is not handed out by name, by seniority, or by enrolment date.
-  2. No student leads two consecutive leadable slots.
-  3. No student leads both lectures of the same week.
+  2. No student reports at two consecutive lab meetings.
+  3. No student reports at both lab meetings of the same week.
   4. Each student's slots spread across the semester: at least one in the
      first half and one in the second.
 
 Locked slots (`LOCKED`): a slot already announced to the class is frozen and
 excluded from the redraw, so a late roster change never moves a date a student
-has already been told to prepare. Everything after the locked slots is redrawn
-from scratch.
+has already been told to prepare for. Everything after the locked slots is
+redrawn from scratch.
 
 Usage:
     .venv/bin/python scripts/assign_srl_slots.py
@@ -48,29 +64,50 @@ OUT_MD = ROOT / "_adm" / "roster" / "2026F_HONR46400_srl_assignment.md"
 SEED = 464
 MAX_TRIES = 200_000
 
-# Slots whose lead was ALREADY ANNOUNCED to the class and is therefore frozen.
-# The first draw (5 students, 2026-08-22) was posted before the roster grew to
-# 7 on 2026-08-25. Week 2's two lectures are days away and their leads are
-# already preparing, so they keep their dates; slots 3+ are redrawn across the
-# full roster. Keyed by slot number, valued by roster `display_name`.
+# Slots whose reporter was ALREADY ANNOUNCED to the class and is therefore
+# frozen. The first draw (5 students, 2026-08-22) was posted before the roster
+# grew to 7 on 2026-08-25; it has since settled back at 6 (D71, a same-size
+# swap). Week 2's two lectures are days away and those two
+# students are already preparing, so they keep their dates; slots 3+ are redrawn
+# across the full roster. Keyed by slot number, valued by roster `display_name`.
+# The names were drawn while the job was still called Student Research Lead;
+# D74 renamed the job, not the draw, so the locks stand as they are.
 LOCKED = {
     1: "Erika Chiommino",      # Mon Aug 31 - Week 2 Monday
     2: "Aren Dominic Damayo",  # Wed Sep 2  - Week 2 Wednesday
 }
 
 
+#: The schedule CSV still names these columns `srl_slot` / `srl_focus`: the
+#: draw and the column names both predate D74's rename. The newer names are
+#: accepted too, so a future schedule build can rename the columns without
+#: breaking the draw.
+SLOT_COLUMNS = ("srl_slot", "lab_meeting_slot", "reporter_slot")
+FOCUS_COLUMNS = ("srl_focus", "lab_meeting_focus", "reporter_focus")
+
+
+def cell(row: dict, names: tuple[str, ...]) -> str:
+    """First non-empty value among `names`, so old and new headers both work."""
+    for n in names:
+        v = (row.get(n) or "").strip()
+        if v:
+            return v
+    return ""
+
+
 def load_slots() -> list[dict]:
-    """Every Mon/Wed meeting carrying an SRL slot, in calendar order."""
+    """Every Mon/Wed meeting carrying a lab-meeting slot, in calendar order."""
     with SCHEDULE.open(newline="") as fh:
         rows = list(csv.DictReader(fh))
     slots = []
     for r in rows:
-        raw = (r.get("srl_slot") or "").strip()
+        raw = cell(r, SLOT_COLUMNS)
         if not raw:
             continue
         m = re.search(r"slot\s*(\d+)", raw, re.I)
         if not m:
-            raise SystemExit(f"unparseable srl_slot on meeting {r['meeting']}: {raw!r}")
+            raise SystemExit(
+                f"unparseable slot column on meeting {r['meeting']}: {raw!r}")
         week = re.match(r"Week (\d+)", r["unit"])
         slots.append(
             {
@@ -81,13 +118,13 @@ def load_slots() -> list[dict]:
                 "week": int(week.group(1)) if week else 0,
                 "unit": r["unit"],
                 "title": r["title"],
-                "focus": (r.get("srl_focus") or "").strip(),
+                "focus": cell(r, FOCUS_COLUMNS),
             }
         )
     slots.sort(key=lambda s: s["slot"])
     expected = list(range(1, len(slots) + 1))
     if [s["slot"] for s in slots] != expected:
-        raise SystemExit("SRL slot numbers are not a contiguous 1..N run")
+        raise SystemExit("lab-meeting slot numbers are not a contiguous 1..N run")
     return slots
 
 
@@ -152,17 +189,17 @@ def locked_positions(
 def draw(
     slots: list[dict], n_students: int, seed: int, fixed: dict[int, int]
 ) -> tuple[list[int], list[int]]:
-    """Return the assignment and the per-student lead quota it satisfies."""
+    """Return the assignment and the per-student report quota it satisfies."""
     base, extra = divmod(len(slots), n_students)
     if base == 0:
         raise SystemExit(
             f"{len(slots)} slots cannot give every one of {n_students} students "
-            "a lead; the SRL design needs at least one slot per student."
+            "a report; the lab meeting needs at least one slot per student."
         )
     rng = random.Random(seed)
     for _ in range(MAX_TRIES):
         # The remainder is drawn, not assigned: shuffle the roster and hand the
-        # `extra` additional leads to whoever comes out in front.
+        # `extra` additional reports to whoever comes out in front.
         order = list(range(n_students))
         rng.shuffle(order)
         quota = [0] * n_students
@@ -225,11 +262,13 @@ def main() -> int:
             }
         )
 
-    # The filled notebook is due at 11:59 PM the CALENDAR DAY BEFORE the lecture
-    # (D66, adopted from the course-platform dates, superseding D18's two days).
-    # No class-day snapping: the deadline is a submission time, not a meeting,
-    # so a Sunday or a holiday due date is fine and every slot lands on
-    # lecture minus one.
+    # `prep_due` is the CALENDAR DAY BEFORE the lecture: the day the reporter's
+    # 📣 My Report Plan cell should be filled in (D66's day-before cadence, kept).
+    # Under D74 nothing is handed in on that date. The plan travels inside the
+    # lecture notebook, which every student submits weekly on completion
+    # (Lecture Notebooks, 20%). No class-day snapping: a Sunday or a holiday is
+    # fine, and every slot lands on lecture minus one. The column keeps its name
+    # so the packet builder and the draw already on disk still line up.
     import datetime
 
     for r in rows:
@@ -252,7 +291,7 @@ def main() -> int:
         f"{counts[0]} each"
         if len(counts) == 1
         else f"{counts[0]} or {counts[-1]} each "
-        f"({quota.count(counts[-1])} students lead {counts[-1]} times)"
+        f"({quota.count(counts[-1])} students report {counts[-1]} times)"
     )
     locked_note = (
         "Every slot was drawn fresh."
@@ -260,25 +299,34 @@ def main() -> int:
         else "🔒 marks a slot that was **already announced** and therefore frozen "
         "through the redraw: slots "
         + ", ".join(str(slots[pos]["slot"]) for pos in sorted(fixed))
-        + " keep the leads the class was given."
+        + " keep the students the class was given."
     )
     lines = [
-        "# SRL slot assignment — HONR 46400-002, Fall 2026",
+        "# Lab meeting reporter assignment — HONR 46400-002, Fall 2026",
         "",
         "🚨 **FERPA — student data. Never commit, never publish.** Distribute each",
         "student's own slots through the course platform, not the course site.",
         "",
+        "D74 retired the Student Research Lead role; this same draw now names each",
+        "lecture's **lab meeting reporter**, who spends 7 minutes on a decision from",
+        "their own project and 3 minutes on the room's questions. The report is not",
+        "graded, and the draw was not re-run for D74.",
+        "",
         f"Drawn with `scripts/assign_srl_slots.py --seed {args.seed}` on the",
-        f"{len(slots)} leadable Mon/Wed lectures across {len(students)} students, "
-        f"{spread}.",
+        f"{len(slots)} Mon/Wed lectures that carry a lab meeting, across "
+        f"{len(students)} students, {spread}.",
         "Constraints: no consecutive slots, never both lectures of one week, and",
-        "every student leads in both halves of the semester. Where the slots do",
-        "not divide evenly, the students carrying the extra lead were drawn at",
+        "every student reports in both halves of the semester. Where the slots do",
+        "not divide evenly, the students carrying the extra report were drawn at",
         "random with the rest of the assignment.",
         "",
         locked_note,
         "",
-        "| Slot | Date | Day | Week | Lead | Prep due | Lecture |",
+        "\"Plan ready by\" is the day before, when the reporter's 📣 My Report Plan",
+        "cell should be filled in. Nothing is handed in that day: the plan travels",
+        "inside the lecture notebook, submitted weekly on completion.",
+        "",
+        "| Slot | Date | Day | Week | Reporter | Plan ready by | Lecture |",
         "|---:|---|---|---:|---|---|---|",
     ]
     for r in rows:
@@ -291,7 +339,7 @@ def main() -> int:
     for s in students:
         mine = [r for r in rows if r["student_index"] == s["sort_key"]]
         dates = ", ".join(f"{r['date']} (slot {r['slot']})" for r in mine)
-        lines.append(f"- **{s['display_name']}** ({len(mine)} leads) — {dates}")
+        lines.append(f"- **{s['display_name']}** ({len(mine)} reports) — {dates}")
     lines.append("")
     OUT_MD.write_text("\n".join(lines))
 

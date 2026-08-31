@@ -46,8 +46,9 @@ EM_DASH_NB_MAX = 20     # per notebook (D14)
 # Text stripped before linting (URLs and repo paths legitimately contain
 # "student", e.g. the Colab badge target notebooks/student/...). The official
 # role name "Student Research Lead" (and the fixed section names built on it)
-# is a proper noun, not a third-person reference — SRL Lead Brief cells are
-# student-visible by design (D22).
+# is a proper noun, not a third-person reference — the Lab Meeting brief cells
+# that replaced the SRL Lead Brief are student-visible by design (D22/D74), and
+# the SRL patterns are KEPT so the retired-but-preserved material still lints.
 STRIP = [
     re.compile(r"https?://\S+"),
     re.compile(r"notebooks/student/\S*"),

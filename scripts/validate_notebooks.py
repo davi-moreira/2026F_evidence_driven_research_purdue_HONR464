@@ -73,7 +73,7 @@ AI_BLOCKS = {
 }
 
 PUZZLE_RE = re.compile(r"^\s*###[^\n]*Research Puzzle", re.M)
-BRIEF_RE = re.compile(r"^\s*###[^\n]*SRL Lead Brief", re.M)
+BRIEF_RE = re.compile(r"^\s*###[^\n]*Lab Meeting", re.M)
 LECTURE_RE = re.compile(r"^\s*#\s*Lecture\s+\d", re.M)
 
 # Communication/performance weeks satisfy the runnable move with structured
@@ -180,8 +180,9 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
         if not pat.search(text):
             errs.append(f"missing required AI-collaboration block: {name}")
 
-    # SRL opener: one SRL Lead Brief + one Research Puzzle per lecture
-    # (async-only modules exempt). The brief is student-visible (D22).
+    # Lecture opener: one Lab Meeting brief + one Research Puzzle per
+    # lecture (async-only modules exempt). Both are student-visible
+    # (D22, carried to the lab-meeting format by D74).
     n_puzzle = len(PUZZLE_RE.findall(text))
     n_brief = len(BRIEF_RE.findall(text))
     n_lecture = len(LECTURE_RE.findall(text))
@@ -191,8 +192,8 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
             errs.append(f"only {n_puzzle} '🧩 Research Puzzle' opener(s) — need "
                         f"{need} (one per lecture; {n_lecture} '# Lecture N' heading(s))")
         if n_brief < need:
-            errs.append(f"only {n_brief} '🎤 SRL Lead Brief' cell(s) — need "
-                        f"{need} (one per lecture, right after '# Lecture N'; D22)")
+            errs.append(f"only {n_brief} '📣 Lab Meeting' brief cell(s) — need "
+                        f"{need} (one per lecture, right after '# Lecture N'; D22/D74)")
         # D34: exactly ONE `### ⏸` HEADING per lecture (a character count can
         # be satisfied by prose that merely mentions ⏸, which let a missing
         # pause heading pass the placement checks vacuously).

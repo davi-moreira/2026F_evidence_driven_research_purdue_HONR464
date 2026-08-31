@@ -1,9 +1,23 @@
 #!/usr/bin/env python3
-"""Build the Student Research Lead distribution packet for the semester.
+"""Build the lab-meeting distribution packet for the semester.
 
-`assign_srl_slots.py` draws who leads which lecture. This script turns that
-draw into the things Davi actually sends: one class announcement, one lead
+`assign_srl_slots.py` draws who reports at which lecture. This script turns that
+draw into the things Davi actually sends: one class announcement, one reporter
 message per slot, and one summary per student.
+
+D74 (2026-08-31) retired the Student Research Lead role and its 25% grade
+category and opened every Mon/Wed lecture with a ten-minute LAB MEETING instead.
+One student is that lecture's reporter: seven minutes on a decision from their
+OWN project and the evidence behind it, then three minutes of questions from the
+room. The reporter does not teach the lecture's concept, and the report is NOT
+graded. The instructor leads from minute 10 and owns accuracy, the AI tooling
+and the clock. What IS graded is the lecture notebook every student works in
+class and submits weekly on completion (Lecture Notebooks, 20%).
+
+This script, the draw it reads and the whole `project/srl/` suite are KEPT for a
+future edition under D74's ruling that nothing is deleted; the file names keep
+their `srl_` stem because the assignment already on disk is the one that carries
+over, unchanged and never re-drawn.
 
 FERPA: the assignment carries student names and emails, so it lives in the
 gitignored `_adm/roster/` and everything written here goes back into
@@ -13,11 +27,11 @@ course site -- the class announcement is for the course platform only.
 
 Each slot message is assembled from the machine spine, never hand-written:
   * date, day, week and lecture title      <- the assignment CSV
-  * the format and its minute frame        <- day (D22/D34 Monday/Wednesday)
+  * the format and its minute frame        <- day (D22/D34/D74 Mon/Wed frames)
   * required reading, linked               <- `book_reading` via session_readings
   * the notebook and its Colab link        <- `other_material` via notebooks_map
-  * the seed puzzle                        <- `srl_focus`
-  * the prep deadline (lecture minus 2)    <- the assignment CSV
+  * the instructor's opening puzzle        <- `srl_focus`
+  * the day the report plan is ready       <- the assignment CSV
 
 Usage:
     .venv/bin/python scripts/build_srl_packet.py
@@ -53,44 +67,49 @@ def srl_file(name: str) -> str:
     return f"https://github.com/{nbmap.REPO_SLUG}/blob/main/project/srl/{name}"
 
 
-# The two D22/D34 frames, in the words the handbook uses.
+# The two D74 frames (D22/D34 boundaries 3 and 4 untouched), in the words the
+# notebooks use. Both still sum to 50: Monday 10/21/12/7, Wednesday 10/20/12/8,
+# with the Wednesday third block still split 30-38 / 38-42 as D34 set it. The
+# lab meeting takes the opener; everything from minute 10 is the instructor's.
 FRAMES = {
     "Mon": {
         "name": "Monday — the guided investigation",
         "rows": [
-            ("0–9", "Your research puzzle",
-             "you own it: pose the puzzle, take the room's written commitment, "
-             "every AI tool closed"),
-            ("9–31", "Guided AI investigation",
-             "you run it: direct the prompts, compare human against AI, probe "
-             "what comes back"),
-            ("31–43", "Verification and formalization",
-             "the instructor's block: hand off cleanly and keep the thread visible"),
+            ("0–10", "Lab meeting",
+             "yours: seven minutes on a decision from your own project, then "
+             "three minutes of questions from the room"),
+            ("10–31", "Guided AI research-partner investigation",
+             "the instructor's block: the research puzzle opens it, then the "
+             "room directs the AI together"),
+            ("31–43", "Human verification and formalization",
+             "the instructor's block: the room checks what came back and the "
+             "idea is formalized"),
             ("43–50", "Decision and defense",
-             "you close: one committed decision defended aloud, then the ledger "
-             "row and the Claim Ticket"),
+             "the room closes: one committed decision defended aloud, then the "
+             "ledger row and the Claim Ticket"),
         ],
-        "owned": "**0–9** and **9–31**",
+        "owned": "**0–10**",
     },
     "Wed": {
         "name": "Wednesday — the applied AI laboratory",
         "rows": [
-            ("0–7", "Your retrieval challenge",
-             "you own it: a challenge that forces recall and exposes a fault line"),
-            ("7–30", "Applied AI laboratory",
-             "you steer it: hands-on prompting, split roles, hunt AI-failure "
-             "patterns; pacing is on you"),
+            ("0–10", "Lab meeting",
+             "yours: seven minutes on a decision from your own project, then "
+             "three minutes of questions from the room"),
+            ("10–30", "Applied AI laboratory",
+             "the instructor's block: hands-on prompting, split roles, hunting "
+             "AI-failure patterns"),
             ("30–38", "Peer defense",
-             "you referee: keep the adversarial questions coming and the answers "
-             "honest"),
+             "everybody's block: adversarial questions, and answers that stay "
+             "honest about what the evidence supports"),
             ("38–42", "Synthesis and accuracy lock",
-             "you state the room's conclusion and its uncertainty; the instructor "
-             "locks accuracy"),
+             "the instructor states the room's conclusion and its uncertainty, "
+             "and locks accuracy"),
             ("42–50", "Transfer to projects",
-             "you close: connect the skill to each person's project, then the "
+             "the room closes: connect the skill to your own project, then the "
              "ledger row and the Claim Ticket"),
         ],
-        "owned": "**0–7** and **7–30**",
+        "owned": "**0–10**",
     },
 }
 
@@ -129,8 +148,8 @@ def load_meetings() -> dict[int, dict]:
 #: Reading lead-ins, reworded for a message that arrives a week ahead of the
 #: lecture rather than on the schedule page for the day itself.
 MODE_LEAD = {
-    "first-read": "**Required for your lecture:**",
-    "assigned": "**Assigned in your lecture, for the session after:**",
+    "first-read": "**Required before the lecture you open:**",
+    "assigned": "**Assigned at that lecture, for the session after:**",
     "continue": "**Still in play from Monday:**",
     "revisit": "**Revisit:**",
     "route": "**Required — everyone reads their own declared route:**",
@@ -159,6 +178,21 @@ def reading_block(row: dict, index: dict) -> str:
         "_No new required reading for this meeting._"
 
 
+#: The schedule column that holds the lecture's opening puzzle. It still has its
+#: pre-D74 name in the CSV; newer names are accepted so a future schedule build
+#: can rename it without breaking this packet.
+FOCUS_COLUMNS = ("srl_focus", "lab_meeting_focus", "reporter_focus")
+
+
+def focus_of(m: dict) -> str:
+    """The puzzle the instructor opens the investigation with, if there is one."""
+    for name in FOCUS_COLUMNS:
+        v = (m.get(name) or "").strip()
+        if v:
+            return v
+    return ""
+
+
 def build_slot_message(a: dict, m: dict, index: dict, labels: dict) -> str:
     day = a["day"]
     frame = FRAMES[day]
@@ -170,104 +204,116 @@ def build_slot_message(a: dict, m: dict, index: dict, labels: dict) -> str:
     lecture_of = f"Lecture {lab[1]} of {lab[2]}" if lab else "the lecture"
 
     compression = ("""
-**One thing about drawing the first slot.** Every later lead gets a full week
-between the draw and their lecture; you get the short end of Week 1. If the
-turnaround is tight, send me what you have by the deadline and we will fix the
-rest together — a rough script on time beats a polished one late. And you have
-the advantage nobody else has: you will have watched me run the exact same
-format twice before you do it.
+**One thing about drawing the first slot.** Every later reporter gets a full week
+between the draw and their lab meeting; you get the short end of Week 1. Bring
+whatever your project has actually reached, even if that is one narrowed question
+and one source you have checked. A first decision reported plainly is exactly
+what these ten minutes are for, and none of it is graded.
 """ if int(a["slot"]) == 1 else "")
 
     frame_rows = "\n".join(
         f"| **{mins}** | {sec} | {what} |" for mins, sec, what in frame["rows"]
     )
 
-    return f"""# You are leading {short(a['date'])} — SRL slot {int(a['slot']):02d}
+    puzzle = focus_of(m)
+    puzzle_block = (f"""## What comes after your ten minutes
+
+Once the lab meeting closes, I open the lecture with this:
+
+> {puzzle}
+
+You do not have to prepare it. It is here so you can see where the day goes
+after your report.
+
+""" if puzzle else "")
+
+    return f"""# You report at the lab meeting on {short(a['date'])} — slot {int(a['slot']):02d}
 
 **To:** {a['student']} <{a['email'] or 'ADDRESS MISSING FROM THE ROSTER'}>
-**Subject:** HONR 46400 — you lead {short(a['date'])}; prep due {short(a['prep_due'])}
+**Subject:** HONR 46400 — you are the reporter on {short(a['date'])}
 
 ---
 
 Hi {a['student'].split()[0]},
 
-You drew **SRL slot {int(a['slot']):02d}**: you run the room on
+You drew **lab meeting slot {int(a['slot']):02d}**: you are the reporter on
 **{pretty(a['date'])}**, 1:30–2:20 PM in HCRS-1054.
 
-**The lecture:** {m['title']}
+Ten minutes, right at the top of class. **Seven minutes on one decision your own
+project has reached and the evidence behind it**, then **three minutes of
+questions from the room**. You are not teaching the day's topic, and the report
+carries no grade. I take the room from minute 10.
+
+**The lecture you are opening:** {m['title']}
 *({a['unit']} · {lecture_of})*
 
 **The driving question the room has to leave with an answer to:**
 > {m['driving_question']}
 
-## Your format: {frame['name']}
+## The shape of the day: {frame['name']}
 
-| Min | Section | What you do |
+| Min | Section | What happens |
 |---|---|---|
 {frame_rows}
 
-Your owned blocks are {frame['owned']}. Everything else you either hand off
-cleanly or referee.
+Your ten minutes are {frame['owned']}. After that you are a member of the room
+like everybody else.
 
-## Your brief is already written, and it is public
+## What to bring
 
-Open the notebook and read the **🎤 SRL Lead Brief** at the top of
-**{lecture_n}**. Nothing is emailed to you and nothing is held back from your
-classmates — the brief is a normal cell they can read too.
+Open the notebook and read the **📣 Lab Meeting: Today's Reporter** cell at the
+top of **{lecture_n}**, then fill in the **📣 My Report Plan** cell under it.
+Four lines: the decision you are bringing, the evidence behind it, where it is
+still uncertain, and the question you want the room to answer for you.
 
 - **Notebook:** {colab}
-- It names your mission, the run of show, three questions that keep the room
-  thinking, one AI trap to watch for, and the checkpoints that tell you your
-  pace is right.
+- Nothing is emailed to you and nothing is held back from your classmates. Both
+  cells are ordinary cells everybody can read.
 
-**Treat the brief as a floor, not a ceiling.** The minute frame and the
-checkpoints are fixed; the staging is yours. In your prep script, name one
-thing you are adding that the brief does not contain.
+Bring a real decision rather than a polished result. "I chose this outcome
+measure over that one, and here is the check that made me" is a complete report.
+So is a decision you are still unsure about, and those usually draw the most
+useful questions back.
 
-## Your seed puzzle
-
-> {m['srl_focus']}
-
-Use it, sharpen it, or bring your own — a puzzle works when it has a real
-answer, more than one tempting wrong answer, and can be stated in a few
-sentences.
-
-## Read before you plan
+{puzzle_block}## Read before class
 
 {reading_block(m, index)}
 
-Read these as a learner first. You cannot lead an investigation into an idea
-you have not sat with.
+Everybody reads these, reporter or not.
 
-## Your deadline
+## Your dates
 
-**Submit your lecture's notebook, filled in, by {pretty(a['prep_due'])}**
-(the day before you lead), on Brightspace.
+**Have your 📣 My Report Plan cell filled in by {pretty(a['prep_due'])}**, the
+day before you report. Nothing is handed in that day. The plan travels inside
+the lecture notebook, and **the notebook is submitted at the end of the studio
+week** with everybody else's, graded on completion (Lecture Notebooks, 20% of
+the course grade). Your course platform carries that deadline.
 
-Two things make it complete. Fill the **🎤 My Lead Plan** cell at the top of
-your lecture: how you will stage the puzzle, the one thing you are adding, your
-commitment question, the decision you will close on, and your fallback if the
-AI tool is down. Then work the rest of the notebook as a learner, so you have
-sat with every answer the room will reach.
-
-A longer planning worksheet is available if you want one
-({srl_file('srl_prep_template.md')}), but it is optional and you do not submit it.
-
-I review the notebook and send you notes. That review is the cheapest place to fix a
-session, so send it on time even if it is rough.
+If you would like me to look at your plan before you report, send it over and I
+will send notes back. That is optional, and it is not graded either.
 {compression}
+## If you have to miss your slot
 
-## The rest of the guide
+Tell me as far ahead as you can. Swapping with a classmate's later slot, by
+agreement, is the first option, and it is far easier to arrange in advance than
+on the morning of.
 
-- **Handbook** (read this first, once): {srl_file('srl_handbook.md')}
-- **How to run the AI moments:** {srl_file('srl_ai_integration_guide.md')}
-- **Question bank, if you get stuck:** {srl_file('socratic_question_bank.md')}
-- **How you are graded:** {srl_file('srl_rubric.md')}
-- **What classmates score you on afterwards:** {srl_file('srl_peer_feedback_form.md')}
+## Kept on file, not used this edition
 
-One line to keep in mind while you plan: **you are not there to present. You
-are there to make the room think.** The single most important move is making
-everyone commit to an answer in writing *before* any AI tool is opened.
+The Student Research Lead suite is still in the repository: the role was retired
+for this edition, not the material. None of it is assessed this term and none of
+it describes your ten minutes, so read it only if you are curious.
+
+- Handbook: {srl_file('srl_handbook.md')}
+- How to run the AI moments: {srl_file('srl_ai_integration_guide.md')}
+- Question bank: {srl_file('socratic_question_bank.md')}
+- Planning worksheet: {srl_file('srl_prep_template.md')}
+- The retired lead rubric: {srl_file('srl_rubric.md')}
+- The retired peer feedback form: {srl_file('srl_peer_feedback_form.md')}
+
+One line to keep in mind while you plan: **you are not presenting a finding. You
+are asking your colleagues for help with a decision.** That is what a lab meeting
+is for, and it rehearses exactly the conversation you will have at the Expo.
 
 — Davi
 """
@@ -280,28 +326,40 @@ def build_student_summary(name: str, mine: list[dict], meetings: dict) -> str:
         f"{meetings[int(a['meeting'])]['title']} |"
         for a in mine
     )
-    return f"""# Your Student Research Lead slots — {name}
+    return f"""# Your lab meeting dates — {name}
 
-You lead **{len(mine)} lectures** this semester. They were drawn at random at
-the start of the term: nothing rotates and nothing shifts, so these are your
-lectures for the whole semester.
+You report at **{len(mine)} lab meetings** this semester. The dates were drawn at
+random at the start of the term: nothing rotates and nothing shifts, so these are
+yours for the whole semester.
 
-| Slot | You lead | Format | Prep due | The lecture |
+Each one is ten minutes at the top of class. Seven minutes on a decision your own
+project has reached and the evidence behind it, then three minutes of questions
+from the room. You are not teaching the day's topic, and the report is not graded.
+
+| Slot | You report | Format | Plan ready by | The lecture |
 |---:|---|---|---|---|
 {rows}
 
 **For each one:**
 
-1. About a week ahead, open that lecture's notebook and read the **🎤 SRL Lead
-   Brief** at the top, then read the rest of the notebook and its required
-   chapters as a learner.
-2. The day before, submit **that notebook, filled in**, with its **🎤 My Lead
-   Plan** cell complete. I send you notes on it.
-3. On the day, arrive a few minutes early, open Colab, confirm your AI tool
-   responds, and have your fallback ready.
+1. A few days ahead, open that lecture's notebook and read the **📣 Lab Meeting:
+   Today's Reporter** cell at the top, then read the rest of the notebook and its
+   required chapters, as you would for any class.
+2. The day before, fill in the **📣 My Report Plan** cell: the decision, the
+   evidence behind it, where it is still uncertain, and the question you want the
+   room to answer. Nothing is handed in that day. Send it to me if you would like
+   notes back.
+3. On the day, arrive a few minutes early, open Colab, and have your decision and
+   your one question ready to say out loud.
 
-Read the handbook once before your first slot: {srl_file('srl_handbook.md')}
-You are graded on the rubric: {srl_file('srl_rubric.md')}
+The notebook itself goes in at the end of the studio week with everybody else's,
+graded on completion (Lecture Notebooks, 20% of the course grade). Your course
+platform carries that deadline.
+
+The Student Research Lead suite is still in the repository, kept for a future
+edition rather than deleted: the handbook ({srl_file('srl_handbook.md')}) and the
+retired lead rubric ({srl_file('srl_rubric.md')}) are there if you are curious,
+but neither is used or assessed this term.
 
 Dates, formats and content for every meeting are on the course Schedule page:
 {SITE}/schedule.html
@@ -323,9 +381,9 @@ def count_sentences(per_student: dict[str, list[str]]) -> tuple[str, str]:
         tally[len(dates)] = tally.get(len(dates), 0) + 1
     if len(tally) == 1:
         n = next(iter(tally))
-        return f"everyone leads exactly {WORDS.get(n, n)} times", ""
+        return f"everyone reports exactly {WORDS.get(n, n)} times", ""
     parts = [
-        f"{'one of you leads' if people == 1 else WORDS.get(people, people) + ' of you lead'}"
+        f"{'one of you reports' if people == 1 else WORDS.get(people, people) + ' of you report'}"
         f" {WORDS.get(leads, leads)} times"
         for leads, people in sorted(tally.items(), reverse=True)
     ]
@@ -334,11 +392,11 @@ def count_sentences(per_student: dict[str, list[str]]) -> tuple[str, str]:
         "The lectures do not divide evenly across the class, so "
         + " and ".join(parts)
         + ". Which of you carries the extra one was part of the same random "
-        "draw, and it costs you nothing: leads are averaged, not added up, so "
-        f"{WORDS.get(lo, lo)} strong sessions and {WORDS.get(hi, hi)} strong "
-        "sessions come to the same grade."
+        "draw, and it costs you nothing: the report is not graded, so "
+        f"{WORDS.get(lo, lo)} turns and {WORDS.get(hi, hi)} turns come to "
+        "exactly the same grade."
     )
-    return "lead counts are as even as the calendar allows", "\n\n" + tail
+    return "report counts are as even as the calendar allows", "\n\n" + tail
 
 
 def build_announcement(rows: list[dict], meetings: dict) -> str:
@@ -357,9 +415,9 @@ def build_announcement(rows: list[dict], meetings: dict) -> str:
     )
     counts, counts_tail = count_sentences(per_student)
 
-    # A slot already announced keeps its lead through a redraw (assign_srl_slots
-    # LOCKED). When any slot is frozen, the announcement is a REPOST and has to
-    # say so, or students trust dates that moved under them.
+    # A slot already announced keeps its reporter through a redraw
+    # (assign_srl_slots LOCKED). When any slot is frozen, the announcement is a
+    # REPOST and has to say so, or students trust dates that moved under them.
     frozen = [a for a in rows if a.get("locked") == "yes"]
     if frozen:
         held = " and ".join(
@@ -370,7 +428,7 @@ def build_announcement(rows: list[dict], meetings: dict) -> str:
             "have changed.** The class list moved after I posted that draw, so "
             "I ran the whole thing again across everybody who is enrolled now. "
             f"The one thing I would not move is Week 2: {held} keep their "
-            "lectures, because they are already preparing them. **Every other "
+            "dates, because they are already preparing them. **Every other "
             "slot is new**, so check your dates below rather than trusting the "
             "ones you wrote down."
         ) + "\n\n"
@@ -379,24 +437,25 @@ def build_announcement(rows: list[dict], meetings: dict) -> str:
     opener = (
         "Here is the draw again, and this one is final."
         if frozen
-        else "The draw is done, so you now know exactly which lectures are "
+        else "The draw is done, so you now know exactly which lab meetings are "
         "yours for the whole semester."
     )
     intro = wrap(
         f"{opener} Have a look below, put your dates in your calendar, and "
-        "then read the rest of this so the role itself is not a mystery."
+        "then read the rest of this so the ten minutes are not a mystery."
     )
     constraints = wrap(
-        f"The {len(rows)} leadable lectures were drawn **at random**, with a "
-        f"reproducible seed and four fairness constraints: {counts}, nobody "
-        "leads two lectures in a row, nobody leads both lectures of the same "
-        "week, and everybody leads in both halves of the semester. Nothing "
-        "rotates and nothing shifts, so these are your lectures for the term."
+        f"The {len(rows)} lectures that carry a lab meeting were drawn **at "
+        f"random**, with a reproducible seed and four fairness constraints: "
+        f"{counts}, nobody reports twice in a row, nobody reports at both lab "
+        "meetings of the same week, and everybody reports in both halves of "
+        "the semester. Nothing rotates and nothing shifts, so these are your "
+        "dates for the term."
     )
     heading = (
-        "# Your Student Research Lead slots — the new draw"
+        "# Your lab meeting dates — the new draw"
         if frozen
-        else "# Your Student Research Lead slots are drawn"
+        else "# Your lab meeting dates are drawn"
     )
     posting = wrap(
         "*REPOST. This replaces the slot announcement already on Brightspace. "
@@ -423,17 +482,33 @@ Hello everyone,
 
 {redraw}{intro}
 
-From Week 2 on, one of you runs each Monday and Wednesday lecture. You pose a
-puzzle, hold the room to a written commitment before any AI tool opens, direct
-the AI investigation, and close on a decision that someone defends out loud. That
-is the Student Research Lead role, and it is **25% of your grade**.
+From Week 2 on, every Monday and Wednesday lecture opens with a **ten-minute lab
+meeting**, run the way a research group runs one. One of you is that day's
+**reporter**: seven minutes on a decision your own project has reached and the
+evidence behind it, then three minutes of questions from the rest of us. You are
+not teaching the day's topic, you are not presenting a finished result, and the
+report is **not graded**. I take the room from minute 10 and run the lecture.
 
-I want to say something about that number up front, because it looks
-intimidating. Leading is the single best way to learn this material, which is why
-it carries real weight. It is also the part of the course students tell me they
-were most nervous about and ended up enjoying most. You are not being thrown in
-cold: every session comes with a brief already written for you, you send me a
-plan the day before and I send notes back, and I am in the room the whole time.
+There was a larger role here before, with a grade attached, and I retired it.
+Reporting on your own project is the one thing you are already the expert in the
+room on, and it rehearses the exact conversation you will have at the Expo in
+November. What is graded instead is the notebook we work in class:
+
+| Part of your grade | Weight |
+|---|---:|
+| Attendance | 1% |
+| Participation | 9% |
+| "It is your turn" practice | 15% |
+| **Lecture notebooks** | **20%** |
+| Final project | 55% |
+| **Total** | **100%** |
+
+**Lecture notebooks (20%)** works like the other completion contracts in this
+course. One notebook a week, the one we work in class, submitted at the end of
+that studio week and graded on **completion only**: worked through and handed
+in. Never on whether your answers came out right, and never on how your ten
+minutes went. The two lowest weeks drop automatically, and your course platform
+carries every deadline.
 
 {constraints}{counts_tail}
 
@@ -443,107 +518,108 @@ plan the day before and I send notes back, and I am in the room the whole time.
 
 ## The full draw
 
-| Slot | Date | Lead | The lecture |
+| Slot | Date | Reporter | The lecture |
 |---:|---|---|---|
 {table}
 
-## What leading actually looks like
+## What your ten minutes actually look like
 
-You are **not presenting**. You are not summarizing a reading and you are not
-walking us through slides. You are running a **Socratic investigation**, which
-just means you lead by asking rather than telling, and the room does the
-reasoning.
+You are **not lecturing**. You are not summarizing a reading and you are not
+walking us through slides. You bring one decision your project has reached since
+the last lab meeting, say what the evidence behind it is, say where it is still
+shaky, and ask us the question you most want answered.
 
-The single most important move you make all day is holding everyone to a written
-commitment before any AI tool opens. Without it, the AI's answer quietly becomes
-everyone's answer and nobody learns anything. If you do only one thing well, do
-that one.
+That is it. Seven minutes for the report, three for our questions. Nobody in the
+room knows your project better than you do, so there is no answer here you can
+get wrong.
 
-Both formats run 50 minutes and the minute frames are fixed. I post checkpoint
-signals at the section boundaries, so you will always know your pace without
-having to watch the clock yourself.
+A good report sounds like: "I chose this outcome measure over that one, here is
+the check that made me, and I am still not sure it captures what I care about.
+Would you have chosen differently?" A decision you are unsure about is a better
+report than a tidy one, because it gets you more back.
 
-**If you drew a Monday: the guided investigation**
+Both lecture formats run 50 minutes, and the lab meeting is the first ten of
+them.
+
+**On a Monday: the guided investigation**
 
 | Minutes | Section |
 |---|---|
-| 0–9 | Your research puzzle, committed in writing before any tool opens |
-| 9–31 | Guided AI research-partner investigation |
+| 0–10 | Lab meeting: the reporter, then the room's questions |
+| 10–31 | Guided AI research-partner investigation |
 | 31–43 | Human verification and formalization |
 | 43–50 | Decision and defense, ledger row, Claim Ticket |
 
-**If you drew a Wednesday: the applied AI laboratory**
+**On a Wednesday: the applied AI laboratory**
 
 | Minutes | Section |
 |---|---|
-| 0–7 | Your retrieval and challenge |
-| 7–30 | Intensive applied AI laboratory, the longest block, so pacing is on you |
+| 0–10 | Lab meeting: the reporter, then the room's questions |
+| 10–30 | Intensive applied AI laboratory |
 | 30–38 | Peer defense and adversarial questioning |
 | 38–42 | Synthesis, then my accuracy lock |
 | 42–50 | Project transfer, ledger row, Claim Ticket |
 
-I will step in during your session, and I want you to expect it rather than read
-it as a rescue.
+From minute 10 the lecture is mine. I own accuracy, the AI tooling and the
+clock, so you can put your whole preparation into your own ten minutes.
 
-## How each lead is graded
+## What is graded, and what is not
 
-You are graded live, during the session, on nine rows worth 100 points:
-conceptual correctness (15), the quality of your Socratic questions (15),
-exposing an assumption (10), productive use of AI (15), interrogating what the AI
-returns (15), including every classmate (10), time management (5), connection to
-real research decisions (10), and how you handle wrong or uncertain answers (5).
-Each of your leads is scored on its own and they are **averaged**, so leading a
-different number of times than a classmate changes nothing about your grade.
+**The report is not graded.** There is no rubric for it, no score, and no peer
+scoring form. Reporting four times or five times comes to exactly the same
+grade.
 
-Two things are worth knowing before you plan anything.
+**The notebook is graded, on completion.** Every week, everyone hands in the
+notebook we worked in class, and you get the credit for having worked through it
+and handed it in. Not for being right. Two weeks drop automatically, and a
+notebook up to seven days late still earns half credit.
 
-First, and please take this seriously: the rubric does **not** measure whether
-you knew every answer. Leading an investigation well while genuinely unsure can
-score Exemplary. "I don't know either. How could we find out?" is one of the
-strongest moves available to you, not an admission of failure. Uncertainty is the
-raw material of research.
-
-Second, there is one hard cap. Presenting an AI answer as settled without
-verifying it in front of the room caps the AI row at Beginning, regardless of how
-well everything else went. AI may propose; the researcher must verify. That is
-the discipline this whole course exists to build, so it has teeth here.
-
-Your classmates fill out a short peer feedback form after each session. Read it.
-It is the fastest way to be better on your next slot.
+The course used to run a graded lead role with a nine-row live rubric. That
+rubric still exists in the course repository, kept for a future edition, but it
+is **not applied this term** and nothing you do at a lab meeting is scored
+against it.
 
 ## The logistics of your slot
 
-1. **About a week ahead**, read the 🎤 SRL Lead Brief at the top of that lecture
-   in the notebook, then read the rest of the notebook and its required chapters
-   as a learner. Then decide the one thing *you* are adding that the brief does
-   not have. Your own example, your own staging, your own opening question. One
-   thing is enough, and it is what separates a good session from a fine one.
-2. **On the day**, arrive a few minutes early, open Colab, confirm your AI tool
-   responds, paste your first prompt into a scratch cell, and have your fallback
-   ready. A dead tool should never kill your session. And breathe. You are not
-   performing, you are hosting a good argument.
-3. **If you have to miss a slot**, tell me as far ahead as you can. Swapping with
+1. **A few days ahead**, read the 📣 Lab Meeting: Today's Reporter cell at the
+   top of that lecture in the notebook, then read the rest of the notebook and
+   its required chapters, as you would for any class. Decide which decision from
+   your own project you are bringing. One real decision is enough.
+2. **The day before**, fill in the 📣 My Report Plan cell in that notebook: the
+   decision, the evidence behind it, where it is uncertain, and your question
+   for the room. Nothing is handed in that day. Send it to me if you want notes
+   back, and I will send them.
+3. **On the day**, arrive a few minutes early, open Colab, and have your decision
+   and your one question ready to say out loud. And breathe. You are asking
+   colleagues for help, not defending a thesis.
+4. **If you have to miss a slot**, tell me as far ahead as you can. Swapping with
    a classmate's later slot, by agreement, is the first option, and it is far
    easier to arrange in advance than on the morning of.
 
+## When you are not the reporter
+
+Everybody else has one job at the lab meeting: arrive with a question for
+whoever is reporting. Line 5 of the 📣 My Report Plan cell is where you write it
+down. Ten minutes of real questions from five colleagues is worth more to a
+project than an hour of my notes, and you will want the same when your turn
+comes.
+
 ## What to do now
 
-1. Put your dates in your calendar, along with a **prep deadline the day before
-   each one**.
+1. Put your dates in your calendar, and a reminder **the day before each one** to
+   fill in your report plan.
 2. Look your dates up on the [Schedule page]({SITE}/schedule.html) to see which
    notebook each one uses and what it covers.
 
-Every led lecture already contains its own **🎤 SRL Lead Brief** at the top of
-that lecture in the notebook, with the mission, the run of show, three questions,
-one AI trap, and the checkpoints. It is visible to everyone, not just to the
-lead. Treat it as a floor rather than a ceiling. It guarantees your session works
-even on a bad week, and the memorable sessions are the ones where the lead adds
-something of their own.
+Every lecture already contains its own **📣 Lab Meeting: Today's Reporter** cell
+at the top, with what the reporter brings, how the ten minutes run, and what the
+rest of the room does. It is visible to everyone, not just to that day's
+reporter, and the **📣 My Report Plan** cell sits right under it.
 
 **First up is {first['student']}, on {pretty(first['date'])}.**
 
-Week 1's two lectures are mine. I run the format first so you can see it before
-you have to do it, and you should feel free to steal anything I do.
+Week 1's two lectures are mine, with no lab meeting, so you see the shape of a
+lecture before your own first turn.
 
 If you are nervous about your first slot, come talk to me. That is a completely
 normal thing to feel, and a ten-minute conversation usually fixes it.
@@ -556,7 +632,8 @@ Prof. Moreira
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--slot", type=int, help="build only this slot's message")
+    ap.add_argument("--slot", type=int,
+                    help="build only this slot's reporter message")
     ap.add_argument("--dry-run", action="store_true", help="print, do not write")
     args = ap.parse_args()
 
@@ -572,7 +649,7 @@ def main() -> int:
     if args.dry_run:
         for a in wanted:
             print(f"slot {int(a['slot']):02d} · {a['date']} · {a['student']} "
-                  f"· prep {a['prep_due']}")
+                  f"· plan by {a['prep_due']}")
         return 0
 
     briefs = OUT / "slot_briefs"
@@ -598,11 +675,15 @@ def main() -> int:
         ann.mkdir(parents=True, exist_ok=True)
         (ann / "03_srl_slots_and_logistics.md").write_text(
             build_announcement(rows, meetings))
-        (OUT / "README.md").write_text(f"""# SRL distribution packet
+        (OUT / "README.md").write_text(f"""# Lab meeting distribution packet
 
 🚨 **FERPA — student data. Never commit, never publish.** Generated by
 `scripts/build_srl_packet.py` from the gitignored assignment draw. The class
 announcement goes on the **course platform**, never on the course website.
+
+D74 retired the Student Research Lead role and replaced it with the ten-minute
+lab meeting; the draw, this packet and every file name keep their `srl_` stem,
+because the assignment on disk carries over unchanged and nothing is deleted.
 
 Regenerate after any change to the draw or to `MEETING_SCHEDULE.csv`:
 
@@ -614,10 +695,10 @@ Regenerate after any change to the draw or to `MEETING_SCHEDULE.csv`:
 |---|---|---|
 | `../../../_announcements/03_srl_slots_and_logistics.md` | Brightspace announcement | Week 1, once |
 | `per_student/*.md` | to each student individually | Week 1, with the announcement |
-| `slot_briefs/slot_NN_*.md` | to that lead, by email | about a week before each slot |
+| `slot_briefs/slot_NN_*.md` | to that reporter, by email | about a week before each slot |
 
 {len(rows)} slots · {len(set(a['student'] for a in rows))} students · first slot
-{short(rows[0]['date'])} (prep due {short(rows[0]['prep_due'])}).
+{short(rows[0]['date'])} (report plan ready by {short(rows[0]['prep_due'])}).
 """)
 
     print(f"✓ {written} slot brief(s) written")

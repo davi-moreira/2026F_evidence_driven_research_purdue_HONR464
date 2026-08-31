@@ -1,5 +1,34 @@
 # Directing the Room's AI Use: An SRL Guide
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester, so nothing in this
+> document is required of you.** Every Monday and Wednesday lecture from Week 2 now
+> opens with a ten-minute **Lab Meeting** instead. One of you is that lecture's
+> **reporter**: you take **seven minutes on a decision from your own project and the
+> evidence behind it**, then **three minutes of questions from the room**. You do not
+> teach the lecture's concept, and **your report is not graded**. **The instructor
+> leads from minute 10** and owns accuracy, the AI tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. In its
+> place, **Lecture Notebooks (20%)** collects the notebook you work in class, once a
+> week. Everyone hands one in, not only the reporter, and it is graded on completion
+> alone.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead you today, it
+> carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
+> **The method in this guide is unchanged; only who runs it moved.** From minute
+> 10 the instructor directs the room's AI use, so read the moves below as what you
+> will see modelled in class rather than what you must stage. Two parts are still
+> yours to run: the same loop — commit first, ask something specific, verify against
+> real evidence, then decide — is exactly what your lecture notebook and your AI
+> Research Ledger ask of you every week, and the three failure patterns are what you
+> hunt in your own project's AI output. References to the SRL rubric's rows 4 and 5
+> point at a rubric not applied this edition.
+
 *How to put AI to work in a session you are leading, without letting it do the
 thinking for the room. This is the practical companion to the handbook's
 philosophy. Read it before your first Monday slot, where AI is the center of the

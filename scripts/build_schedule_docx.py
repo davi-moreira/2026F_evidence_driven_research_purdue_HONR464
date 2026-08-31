@@ -284,7 +284,7 @@ def main():
     p = tune(doc.add_paragraph(), 2, 8)
     style_run(p.add_run(
         "John Martinson Honors College, Purdue University   ·   "
-        "Professor Davi Moreira   ·   Section 002, Monday / Wednesday / Friday, "
+        "Professor Davi Moreira   ·   Section 002, MWF, "   # D74: matches Davi's Word pass on the syllabus
         "1:30–2:20 p.m., HCRS-1054   ·   August 24 – December 11, 2026"),
         9, color=GREY)
 

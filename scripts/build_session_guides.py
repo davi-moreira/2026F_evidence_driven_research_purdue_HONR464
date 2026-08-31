@@ -42,7 +42,7 @@ OUT = REPO / "session_guides"
 # The fixed Student Research Lead / studio architectures (course_config srl:).
 # Mon/Wed lectures and Friday studios each run a 4-section, 50-minute shape.
 _CONFIG = yaml.safe_load((REPO / "course_config.yaml").read_text())
-_SRL = _CONFIG["srl"]
+_SRL = _CONFIG["lab_meeting"]   # D74: the block was named `srl:` before the lab-meeting format
 _MEETING_MIN = _CONFIG["course"]["meeting_minutes"]
 SRL_SECTIONS = {
     "Mon": _SRL["monday_sections"],
@@ -189,13 +189,15 @@ def srl_banner(m: dict, kind: str) -> str | None:
     if kind != "lecture":
         return None
     if int(m["meeting"]) < FIRST_SRL_MEETING:
-        return ("**Led by:** instructor (launch week — the Student Research Lead "
+        return ("**Led by:** instructor (launch week — the lab-meeting reporter "
                 "slots, randomly assigned at semester start, begin the following "
                 "week).")
-    return ("**Led by:** the day's **Student Research Lead** — a Socratic "
-            "investigation, not a summary. The lead opens the 🧩 Research Puzzle, "
-            "steers the AI research-partner investigation, and prompts peer "
-            "defense; the instructor formalizes and adjudicates.")
+    return ("**Opens with:** the day's **lab-meeting reporter** — seven minutes "
+            "on a decision from their own project and the evidence behind it, "
+            "then three minutes of the room's questions. The report is not "
+            "graded. **Led by:** the instructor from minute 10, who opens the "
+            "🧩 Research Puzzle, steers the AI research-partner investigation, "
+            "prompts peer defense, formalizes and adjudicates.")
 
 
 def session_heading(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:

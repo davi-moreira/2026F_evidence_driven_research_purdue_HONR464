@@ -1,5 +1,34 @@
 # SRL Preparation Template (optional)
 
+> ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
+>
+> **The Student Research Lead role does not run this semester, so nothing in this
+> document is required of you.** Every Monday and Wednesday lecture from Week 2 now
+> opens with a ten-minute **Lab Meeting** instead. One of you is that lecture's
+> **reporter**: you take **seven minutes on a decision from your own project and the
+> evidence behind it**, then **three minutes of questions from the room**. You do not
+> teach the lecture's concept, and **your report is not graded**. **The instructor
+> leads from minute 10** and owns accuracy, the AI tooling and the clock.
+>
+> The **25% Student Research Lead** grade category retired with the role. In its
+> place, **Lecture Notebooks (20%)** collects the notebook you work in class, once a
+> week. Everyone hands one in, not only the reporter, and it is graded on completion
+> alone.
+>
+> **Nothing below has been removed.** This document is kept whole for a future
+> edition that reinstates the role. Where a procedure would mislead you today, it
+> carries a ⛔ **Retired procedure** note naming what happens instead.
+> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+
+> ⛔ **Retired procedure — read the next blockquote as history.** There is no
+> day-before submission any more. You hand in the week's lecture notebook on
+> completion, at **11:59 PM on the Sunday that ends the studio week**,
+> under **Lecture Notebooks (20%)**. For your ten minutes as reporter you submit
+> nothing in advance and plan nothing on this sheet: you bring one decision from
+> your own project and the evidence behind it. Sections 1–7 below are still a
+> useful private worksheet if you like planning on paper, and section 10's AI-use
+> disclosure is the same habit your ledger asks of you every week.
+
 > **You do not have to fill this in.** What you submit the day before your lead
 > is **your lecture's notebook**, with its **🎤 My Lead Plan** cell complete and
 > the rest worked through as a learner. That is the whole requirement.
@@ -110,7 +139,12 @@ plausible-but-wrong method, missing uncertainty — name which):*
 **How this connects to their own research projects** *(required on Wednesday's
 transfer block; strong on Monday too):*
 
-## 8. Timing plan
+## 8. Timing plan  ⛔ *(retired frames)*
+
+> ⛔ The two frames below are the pre-D74 openers. The lecture now runs **Monday
+> 10 / 21 / 12 / 7** and **Wednesday 10 / 20 / 12 / 8**, with the ten-minute lab
+> meeting first and the instructor leading from minute 10. The later boundaries are
+> unchanged.
 
 > *Map your sections to the fixed frame for your format. The instructor signals
 > the checkpoints; your plan is how you hit them.*
@@ -153,6 +187,8 @@ clearly labeled as prepared earlier so no one mistakes it for live output):*
 | | | |
 
 ---
+
+*⛔ Retired, and kept for a future edition:*
 
 *What you submit the day before your lead is the notebook, not this sheet. The
 instructor reviews it and returns notes; revise before you walk in. Rubric
