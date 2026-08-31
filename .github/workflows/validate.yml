@@ -54,7 +54,7 @@ jobs:
         # real 3.11 interpreter itself.
         run: python3 scripts/check_runtime_syntax.py
 
-      - name: Calendar backbone (43 = 42 in-person + 1 async)
+      - name: Calendar backbone (43 = 41 in-person + 2 async)
         run: python3 scripts/validate_calendar.py --emit-csv
 
       - name: Meeting schedule builds against the backbone (43 x 34)

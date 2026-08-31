@@ -38,9 +38,9 @@ is written to be correct for all 16, so nothing has to be edited per
 assignment except the title and the due date.
 
 <!-- lecture-notebook-instruction:begin -->
-**What this assignment collects.** Your week's lecture notebook — the same `nbNN` you opened in class, with your own work in it: the **📣 My Report Plan** cell (lines 1–4 when the lab meeting is yours, line 5 when it is not), the seven in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row for each lecture. Open the notebook from its badge on the course website, then **File → Save a copy in Drive** so the copy is yours, and finish whatever class left open before you hand it in.
+**What this assignment collects.** Your week's lecture notebook — the same `nbNN` you opened in class, with your own work in it: the **📣 My Report Plan** cell wherever the notebook has one (lines 1–4 when the lab meeting is yours, line 5 when it is not; Week 1 and the async module carry no such cell), the in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row for each lecture. Open the notebook from its badge on the course website, then **File → Save a copy in Drive** so the copy is yours, and finish whatever class left open before you hand it in.
 
-**What to hand in.** One notebook per week. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**). If you hand in the PDF, run **Runtime → Run all** and expand every collapsed section first: printing captures what is on the screen, so an unrun or folded cell arrives empty. Name the file `LASTNAME_nb<nn>.ipynb`. Answer in your own words, keep every question in order, and add a ledger row for anything you delegated to an AI tool.
+**What to hand in.** One notebook per week. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**). If you hand in the PDF, run **Runtime → Run all** and expand every collapsed section first: printing captures what is on the screen, so an unrun or folded cell arrives empty. Name the file `LASTNAME_nb<nn>`, keeping whichever extension the file you uploaded actually has. Answer in your own words, keep every question in order, and add a ledger row for anything you delegated to an AI tool.
 
 **How it is graded.** Completion only: worked through, handed in, and on time, or not. Your answers are never graded right or wrong here, and how your lab meeting went does not enter this grade — the report itself carries no score. A notebook up to seven days late earns half credit; after that it earns none. Your lowest few lecture-notebook credits are dropped automatically, so one bad week does not need an email.
 <!-- lecture-notebook-instruction:end -->
@@ -53,7 +53,7 @@ One assignment per week, each collecting that week's notebook.
 
 | Brightspace assignment name | Due (11:59 PM) | Notebook file | Worked in class |
 |---|---|---|---|
-| Lecture notebook — Week 1 · nb01 | Sun Aug 30, 2026 | `nb01_ai_arm_not_brain_student.ipynb` | Mon Aug 24 · Wed Aug 26 |
+| Lecture notebook — Week 1 · nb01 | Fri Sep 4, 2026 *(the course platform carries this date, and it wins)* | `nb01_ai_arm_not_brain_student.ipynb` | Mon Aug 24 · Wed Aug 26 |
 | Lecture notebook — Week 2 · nb02 | Sun Sep 6, 2026 | `nb02_curiosity_to_problem_student.ipynb` | Mon Aug 31 · Wed Sep 2 |
 | Lecture notebook — Week 3 · nb03 | Sun Sep 13, 2026 | `nb03_research_builds_on_research_student.ipynb` | Wed Sep 9 |
 | Lecture notebook — Week 4 · nb04 | Sun Sep 20, 2026 | `nb04_anatomy_of_design_student.ipynb` | Mon Sep 14 · Wed Sep 16 |
@@ -76,7 +76,7 @@ One assignment per week, each collecting that week's notebook.
 
 | # | Notebook | What it covers | Due (11:59 PM) | Week · Studio | Worked in class | Open |
 |---|---|---|---|---|---|---|
-| 1 | nb01 | Studio 1: Frame the inquiry — from curiosity to a research problem | Sun Aug 30, 2026 | 1 · Studio 1 | Mon Aug 24 · Wed Aug 26 | [open](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb) |
+| 1 | nb01 | Studio 1: Frame the inquiry — from curiosity to a research problem | Fri Sep 4, 2026 | 1 · Studio 1 | Mon Aug 24 · Wed Aug 26 | [open](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb) |
 | 2 | nb02 | Studio 2: Govern the work — your rules and your question | Sun Sep 6, 2026 | 2 · Studio 2 | Mon Aug 31 · Wed Sep 2 | [open](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb) |
 | 3 | nb03 | Studio 3: Ground it in verified evidence | Sun Sep 13, 2026 | 3 · Studio 3 | Wed Sep 9 | [open](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb) |
 | 4 | nb04 | Studio 4: Declare and diagnose provisionally | Sun Sep 20, 2026 | 4 · Studio 4 | Mon Sep 14 · Wed Sep 16 | [open](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb) |

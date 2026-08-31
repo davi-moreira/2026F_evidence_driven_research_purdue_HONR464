@@ -139,10 +139,13 @@ def number(p, num_id: int, ilvl: int = 0):
     return p
 
 
-# ── Davi's Word pass, folded back (D66) ─────────────────────────────────────
+# ── Davi's Word pass, folded back (D62, extended by D74) ────────────────────
 # He edits the BUILT .docx in Word, and his 2026-08-23 pass added blank
-# paragraphs between the body blocks so the printed syllabus breathes. The
-# spacing is his instruction, so the generator now produces it. Each entry is
+# paragraphs between the body blocks so the printed syllabus breathes. A second
+# pass on 2026-08-25 tightened two of those runs from 3 to 1 and reworked the
+# schedule header; it was captured on 2026-08-31 under D74, after the .docx was
+# found newer than this script. The spacing is his instruction, so the generator
+# produces it. Each entry is
 # (paragraph-text prefix, how many empty paragraphs must sit immediately above
 # it). Applied as a post-pass so the content code below stays readable.
 BLANK_ABOVE = [

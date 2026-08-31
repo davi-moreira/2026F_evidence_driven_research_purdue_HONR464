@@ -340,7 +340,7 @@ dossier_components:
 # syllabus.qmd's Assessments table, planning/ASSESSMENT_ARCHITECTURE.md, and
 # scripts/build_brightspace_kit.py (which generates brightspace/gradebook_spec.md).
 # Key ORDER below is gradebook order, so iyt_practice stays between participation
-# and srl_performance.
+# and lecture_notebooks (the key that replaced srl_performance in D74).
 assessment:
   attendance: 1                    # iClicker; 85% attendance target
   participation: 9                 # ONE undivided block (D57): see participation: below.
@@ -463,6 +463,14 @@ lecture_notebooks:
       label: "Weekly lecture notebook (nbNN, worked in class and submitted)"
       count: 16                    # nb01-nb16, one per week
       due_rule: "11:59 PM on the Sunday that ends the studio week; Week 16 closes Fri Dec 11 (last class day)"
+      # D74a (2026-08-31): D74 was ruled on Aug 31, AFTER Week 1's computed
+      # Sunday (Aug 30) had passed. Collecting nb01 on a date that is already in
+      # the past would charge students a late penalty, or a free drop, for an
+      # assignment that did not exist when it was due. Week 1 therefore moves to
+      # the following Friday. Same D66 mechanism as the studio-survey override:
+      # where the platform date is not the computed Sunday, the config carries it.
+      overrides:
+        1: "2026-09-04"            # Fri — D74 was ruled after Week 1's Sunday
       graded: "completion"         # submitted and worked through — not scored on answers
       includes: "the 📣 My Report Plan cell (lines 1-4 when the lab-meeting slot is yours, line 5 otherwise), the seven in-class moves, and the 📒 AI Research Ledger row for each lecture"
       schedule: "planning/LECTURE_NOTEBOOK_SCHEDULE.md"
@@ -478,10 +486,12 @@ lecture_notebooks:
 # SRL category, so the project_share column no longer reads 30/20/10/20/20. Because
 # the resulting shares are non-terminating (20/55 = 36.36...), the student-facing
 # syllabus now prints COURSE percentages (20/10/5/10/10 of the final grade) instead
-# of project shares. project_share values below are exact to two decimals and are
-# the machine record only.
-# D53 (2026-08-23) moved the operational detail OUT of syllabus.qmd, which now
-# prints only these five names and their project_share values, as QM474 does.
+# of project shares. project_share values below are two-decimal OPERATIONAL
+# shares (20/55 does not terminate) and are the machine record only; the
+# student-facing surfaces print course percentages instead.
+# D53 (2026-08-23) moved the operational detail OUT of syllabus.qmd, which
+# printed these five names with their project_share values, as QM474 does. D74
+# switched that printing to COURSE percentages, because 20/55 does not terminate.
 # The student-facing authority for the course_share split, the scoring_rule
 # formulas, and the project-mode rules is
 # _research_project/2026Fall/final_project_grading_and_project_modes.md, with the

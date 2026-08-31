@@ -4079,3 +4079,71 @@ individual oral **Evidence Defense** still carries no grade weight, and the only
 graded live performance left in the course is the M15 Expo presentation, worth
 30% of a 10-point component — **3 course points**. Davi has not ruled on whether
 the defense should stay ungraded practice, gain weight, or be retired.
+
+---
+
+## D74a — Week 1's notebook cannot be due before the rule existed (2026-08-31)
+
+Found by Codex (`gpt-5.6-sol`, effort `max`, read-only) reviewing the D74
+commit; the review is at
+`~/.claude/codex-reviews/HONR464/2026-08-31_d74_review.md`.
+
+**The defect.** D74 was ruled on **Mon Aug 31**, but its Sunday rule computed
+Week 1's notebook as due **Sun Aug 30** — a date already in the past. Under the
+published `1.0 / 0.5 / 0` credit rule every student would have started the
+contract at half credit, or spent one of their two automatic drops, on an
+assignment that did not exist when it came due.
+
+**Ruling.** **Week 1's notebook is due Fri Sep 4, 2026, 11:59 PM.** Nothing in
+this course is ever collected retroactively. The date is carried by
+`course_config.yaml lecture_notebooks.items.weekly_lecture_notebook.overrides`,
+the same D66 mechanism the studio-feedback survey uses, so the generator derives
+it rather than being hand-corrected. `N` stays 16 and `d` stays 2.
+
+**Four contract defects fixed with it,** all found in the same review:
+
+1. **The assignment asked for a cell that does not exist.** The generated
+   instruction required the 📣 My Report Plan cell in every notebook, but
+   `nbbuild.py`'s `FRAME_EXEMPT = {1, 14}` deliberately gives nb01 and nb14
+   none. The instruction now says "wherever the notebook has one" and names the
+   two exemptions.
+2. **The upload contract had two answers.** The schedule and the participation
+   contract accepted `.ipynb` or PDF while the gradebook demanded PDF, and the
+   filename rule told students to name a PDF `.ipynb`. Either format is
+   accepted, and the extension must match the file actually uploaded.
+3. **A false holiday rule.** The contract claimed holiday weeks shift the
+   notebook date. No holiday override exists. Only Week 1 (this ruling) and
+   Week 16 (Fri Dec 11) move; every other week takes its own Sunday.
+4. **"One deadline rather than three" was inaccurate.** The notebook, milestone
+   and studio survey are three separate submissions sharing one cutoff on nine
+   Sundays. The wording now says so.
+
+**Completion is checked, not judged.** At 20% the word "completion" was carrying
+too much weight, so it is now defined observably: the file opens, the required
+cells hold a genuine attempt rather than shipped placeholder text, the ledger
+rows are present, and the words are the student's own. Correctness,
+sophistication, prose quality, whether the code ran and whether a conclusion was
+right have **no** effect on the credit.
+
+**One student-facing sentence withdrawn.** The 📣 My Report Plan cell said "there
+is no answer here you can get wrong." It was meant to defuse the anxiety D74
+exists to remove, but in a course built on verifying claims it reads as
+permission not to check. Replaced with: "You are not responsible for teaching
+unfamiliar content: bring your current best account, name its uncertainty, and
+let the room test it. The report is ungraded."
+
+**A release lesson, recorded as a standing rule.** D74's generators were correct
+while their *outputs* were stale: `_adm/roster/srl_packet/` and
+`_announcements/03_srl_slots_and_logistics.md` still described a graded 25% SRL
+role after the ruling landed, because both are gitignored and no `git status`
+ever warned. **A cross-cutting ruling is not deployed until every ignored and
+private generated output has been rebuilt and re-read for retired terminology.**
+
+**⚠ Referred to Davi, not decided here.** Codex raised three design questions
+that are his calls, not defects: (a) move the notebook to Thursday and the
+survey to Friday, leaving the milestone alone on Sunday; (b) split the 10-point
+Instructor/TA Evaluation into 5 for the M13 poster and 5 for the individual
+Evidence Defense, which would give the oral outcome direct graded evidence
+without disturbing any D74 top-level weight; (c) finish propagating D54, whose
+"Instructor/TA Evaluation is 100% the M13 poster" rule is still contradicted by
+`project/final_dossier/evidence_defense_protocol.md` and by `syllabus.qmd`.

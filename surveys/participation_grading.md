@@ -198,12 +198,16 @@ and nothing else.
 
 **Baseline N = 16 credits**: one per week, `nb01` through `nb16`. Every student
 owes the same 16, and the whole seminar's week closes on the same night, so the
-notebook, the studio's milestone and the studio feedback survey are usually one
-deadline rather than three.
+notebook, the studio's milestone and the studio feedback survey usually share one
+cutoff. They remain three separate submissions; only the timestamp is shared, and
+the notebook is the one you have already largely finished in the room.
 
-Two things move that date, and neither is a judgement call. The **holiday weeks**
-shift with the calendar, and **Week 16 closes Friday, December 11**, the last
-class day, because the semester ends before the following Sunday. The generated
+Two dates move, and neither is a judgement call. **Week 1 closes Friday,
+September 4**, because this contract was created after that week's Sunday had
+already passed and nothing is ever collected retroactively (D74a); and **Week 16
+closes Friday, December 11**, the last class day, because the semester ends
+before the following Sunday. Every other week takes its own Sunday, holidays
+included. The generated
 schedule carries the real date for all sixteen, and where the course platform and
 this repository disagree about a date, **the platform is correct** (D66).
 
@@ -212,15 +216,28 @@ this repository disagree about a date, **the platform is correct** (D66).
 A **valid lecture-notebook submission** has all four of:
 
 1. one file for the week, `.ipynb` or PDF, named so the week is unmistakable —
-   `LASTNAME_nb<nn>.ipynb` or `LASTNAME_nb<nn>.pdf`, the same pattern the "It is
-   your turn" uploads use — that the instructor can actually open;
+   `LASTNAME_nb<nn>.ipynb` or `LASTNAME_nb<nn>.pdf`, matching whichever format
+   you actually uploaded, the same pattern the "It is your turn" uploads use —
+   that the instructor can actually open;
 2. the week's own notebook, with the in-class cells worked rather than left as
-   the placeholder they shipped with: the 📣 **My Report Plan** cell (lines 1 to
-   4 when the lab-meeting slot is yours, line 5 otherwise, so everyone arrives
-   with a question), the seven in-class moves, and each lecture's exercises;
+   the placeholder they shipped with: the 📣 **My Report Plan** cell wherever the
+   notebook carries one (lines 1 to 4 when the lab-meeting slot is yours, line 5
+   otherwise, so everyone arrives with a question — Week 1 and the async module
+   have no such cell and owe none), the in-class moves, and each lecture's
+   exercises;
 3. the 📒 **AI Research Ledger** row for each lecture in the week;
 4. answers in the student's own words. The material below the ⏸ line and every
    🏠-labelled prompt is optional depth, and its absence never costs a credit.
+
+**Completion is checked, not judged.** The four conditions above are the whole
+test, and each is something a grader can see rather than assess: the file opens,
+the required cells hold a genuine attempt instead of the placeholder text they
+shipped with, the ledger rows are present, and the words are the student's own.
+**Correctness, sophistication, prose quality, whether the code ran, and whether a
+conclusion was right have no effect on the credit.** A notebook full of wrong
+answers, honestly attempted, earns the same 1.0 as a notebook full of right ones.
+If work is wrong in a way worth saying, that belongs in feedback, never in this
+credit.
 
 A notebook lives in Colab, and Colab has no export button. The route from the
 notebook to the PDF is the one every milestone already prints: run all cells,

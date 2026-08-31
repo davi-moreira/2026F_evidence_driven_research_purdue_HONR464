@@ -487,7 +487,8 @@ for all twelve, so nothing has to be edited per studio.
 LECTURE_NOTEBOOK_INSTRUCTION = """\
 **What this assignment collects.** Your week's lecture notebook — the same \
 `nbNN` you opened in class, with your own work in it: the **📣 My Report Plan** \
-cell (lines 1–4 when the lab meeting is yours, line 5 when it is not), the seven \
+cell wherever the notebook has one (lines 1–4 when the lab meeting is yours, \
+line 5 when it is not; Week 1 and the async module carry no such cell), the \
 in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row \
 for each lecture. Open the notebook from its badge on the course website, then \
 **File → Save a copy in Drive** so the copy is yours, and finish whatever class \
@@ -497,7 +498,8 @@ left open before you hand it in.
 (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as \
 PDF**). If you hand in the PDF, run **Runtime → Run all** and expand every \
 collapsed section first: printing captures what is on the screen, so an unrun or \
-folded cell arrives empty. Name the file `LASTNAME_nb<nn>.ipynb`. Answer in your \
+folded cell arrives empty. Name the file `LASTNAME_nb<nn>`, keeping whichever \
+extension the file you uploaded actually has. Answer in your \
 own words, keep every question in order, and add a ledger row for anything you \
 delegated to an AI tool.
 
