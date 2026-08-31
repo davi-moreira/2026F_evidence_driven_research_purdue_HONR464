@@ -1,6 +1,6 @@
 # PROJECT MILESTONES — HONR 46400 Fall 2026 (v3: M1–M16)
 
-Six students, **individual projects by default** (one group of two or three may
+Four students, **individual projects by default** (one group of two may
 be approved by the instructor before shared work begins), one semester-long
 chain: every milestone is a graded, submittable artifact with **kick off →
 develop → submit → revise** cadence (D30 retired weekly milestone presentations; the

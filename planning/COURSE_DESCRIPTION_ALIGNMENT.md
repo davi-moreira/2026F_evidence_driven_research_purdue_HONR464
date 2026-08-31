@@ -45,7 +45,8 @@ incomplete; if an artifact serves no clause, it needs a justification.
 ## Standing course promises the description implies
 
 - **Individual projects by default; approved group work allowed** —
-  `course_config.yaml project_mode:` permits at most one group of two or three
+  `course_config.yaml project_mode:` permits at most one group of two (D76: at
+  n=4 a group of three cannot leave three active projects)
   while preserving at least three active projects, two observers for every
   individual researcher, and a feasible Peer Evaluation assignment plan.
 - **URC poster (Nov 17) is required** — clause 15's public instantiation (M16).

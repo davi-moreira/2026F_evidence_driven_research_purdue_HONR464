@@ -32,10 +32,10 @@ task; neither agent is permanently primary or subordinate.
 
 **HONR 46400 — SP: Evidence-Driven Research** ("How to Design, Analyze, Verify,
 and Defend Empirical Research"), a semester-long Honors College seminar (Fall
-2026, **Mon/Wed/Fri, 50 minutes, in person**, **6 students** — the roster is six,
-so an `enrollment: 5` left anywhere is stale — individual projects
-by default with one instructor-approved group permitted when the peer-work
-topology remains viable)
+2026, **Mon/Wed/Fri, 50 minutes, in person**, **4 students** — the roster is four
+as of 2026-08-31 (D76), so an `enrollment:` of 5 or 6 left anywhere is stale —
+individual projects by default with one instructor-approved group **of two**
+permitted, since at n=4 a group of three would leave only two active projects)
 teaching honors students — **without assuming a quantitative or computing
 background** — to run an original evidence-driven research project from
 curiosity to a publicly defended claim. The course's defining message:
@@ -762,7 +762,7 @@ naming reporters rather than leads; no re-draw. Notebook cells: `### 🎤 SRL Le
 `### 📣 Lab Meeting: Today's Reporter`, `### 🎤 My Lead Plan` → `### 📣 My Report Plan`,
 `### 🎤 Lead's Questions` → `### 🔎 Questions to Keep You Thinking`; `course_config.yaml`'s
 `srl:` block became `lab_meeting:`. Weights: attendance 1 · participation 9 · IYT Practice 15
-· **Lecture Notebooks 20** · Final Project 55 (= 100). The roster is **6 students**. ⚠ Left
+· **Lecture Notebooks 20** · Final Project 55 (= 100). The roster was 6 students then; **D76 (2026-08-31) took it to 4**. ⚠ Left
 open by D74: with SRL retired, the individual oral Evidence Defense still carries no grade
 weight, and the only graded live performance left is the M15 Expo presentation — 30% of a
 10-point component, so 3 course points.

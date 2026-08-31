@@ -68,13 +68,14 @@ course:
   # document (Davi, 2026-07-31). The private course tracker holds them.
   repo: "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
   website: "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/"
-  enrollment: 6                   # D71 roster; _adm/roster/ has six rows
+  enrollment: 4                   # D76 roster (2026-08-31); _adm/roster/ has four rows
   project_mode:
     default: "individual"
     groups_allowed: true
     approval_required: true
     maximum_approved_groups: 1
-    maximum_group_size: 3
+    maximum_group_size: 2         # D76: at n=4 a group of 3 leaves only 2 active
+                                  # projects, under minimum_active_projects_for_peer_review
     individual_project_peer_evaluators: 2
     minimum_active_projects_for_peer_review: 3
     peer_assignment_plan_required: true

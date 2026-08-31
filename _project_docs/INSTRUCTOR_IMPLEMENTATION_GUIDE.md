@@ -288,7 +288,7 @@ it into Brightspace and grade from it. Its gradebook implementation is
 `planning/ASSESSMENT_ARCHITECTURE.md`.
 
 **Project-mode setup.** Record the approved group before shared work begins.
-With six students, approve at most one group of two or three, and do so only
+With four students, approve at most one group of two, and do so only
 when at least three active projects remain and the roster
 supports two observers per individual researcher plus a nonempty evaluation
 submission set for every student.
@@ -339,7 +339,7 @@ bench. Students **must** consult an assigned reviewer role at five milestones:
 
 Before the first class:
 
-1. **Create the course group** in GenAI Studio and enroll the six students.
+1. **Create the course group** in GenAI Studio and enroll the four students.
 2. **Build the reviewer-role custom models** — the 13 role definitions
    (base model + system prompt) ship in `genai_studio/roles/`.
 3. **Upload the course knowledge base** to the RAG-backed roles.

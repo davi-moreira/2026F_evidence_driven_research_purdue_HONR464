@@ -7,7 +7,7 @@
 > documented assumption and proceed.
 
 Continue and **CONCLUDE** the autonomous build of HONR 46400 — "Evidence-Driven Research"
-(Purdue Honors College, Fall 2026, MWF, 6 students, 6 individual projects).
+(Purdue Honors College, Fall 2026, MWF, 4 students, 4 individual projects).
 
 ## STEP 0 — READ FIRST (in order)
 - `planning/BUILD_STATUS.md` — the re-entry point: locked decisions, what's done, the ordered "Next actions"

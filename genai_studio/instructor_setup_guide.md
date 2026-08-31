@@ -23,7 +23,7 @@ Work top to bottom. Nothing here needs code except the final smoke test.
 
 ### 2. Create the course group
 - [ ] Create one group (suggested name `HONR464-F26`).
-- [ ] You are the owner. The group is how the six students get read access to the
+- [ ] You are the owner. The group is how the four students get read access to the
   shared role models and knowledge collections.
 
 ### 3. Create the seven knowledge collections
@@ -132,7 +132,7 @@ student API access as unconfirmed until you have verified it per student.
 
 ## The open item, restated
 
-Before day one, **you** confirm: (1) all six students can sign in and open a role
+Before day one, **you** confirm: (1) all four students can sign in and open a role
 from the group, and (2) whether student API keys work. Item (1) is required and
 gates nothing else — it is the whole course. Item (2) is a bonus; if it fails, the
 course runs UI-only with no change to any milestone. Record the outcome so the

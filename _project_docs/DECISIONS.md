@@ -4209,3 +4209,86 @@ repository cannot do this; the platform is where students actually read.
 moving the notebook off Sunday, splitting the 10-point Instructor/TA Evaluation
 between the M13 poster and the Evidence Defense, and finishing the D54
 propagation. D75 touches none of them.
+
+---
+
+## D76 — The roster settles at four, and the group rule follows it down (2026-08-31)
+
+**Fact.** A myPurdue classlist Davi supplied in session shows **four** students:
+Andrew Jensen, Aren Dominic Manzo Damayo, Ishita Trivedi, Sami B Stutler.
+**Erika Chiommino** and **Nediva Akand** are off the list. No drop date or reason
+was given for either. The roster CSV was cut to four rows and `sort_key`
+renumbered 1–4; both sides are archived under `_adm/roster/archive/`.
+
+This is the fifth roster movement in ten days: 5 → 7 → 6 → 6 → **4**. Cap 15,
+eleven seats open. `course.enrollment` is now **4**; any surface still reading 5
+or 6 is stale.
+
+**No re-draw, because there is no draw.** D75 withdrew the lab-meeting reporter
+assignment hours earlier the same day, so the half of
+`_adm/roster/ROSTER_CHANGE_RUNBOOK.md` that redraws slots and rebuilds the packet
+did not run and must not run. The runbook now says so at the top. The drawn
+assignment, the packet and `_announcements/03_srl_slots_and_logistics.md` are
+retired in place with ⛔ banners and are **doubly stale** — they encode the
+withdrawn model *and* a six-student roster that names both departed students,
+Chiommino on the Week-2 Monday. Nothing was deleted (D75, D74 Ruling 5, D58).
+
+**Ruling — at n = 4, an approved group may be two, never three.** This is not a
+new policy, it is D52's existing condition applied to the new roster. D52 permits
+a group only when at least three active projects remain and a Peer Evaluation
+assignment is feasible. At four students a group of three leaves 3 + 1 = **two**
+active projects, below `minimum_active_projects_for_peer_review: 3`; a group of
+two leaves three and clears it. `course_config.yaml` therefore reads
+`maximum_group_size: 2`, and every surface carrying the group-approval sentence
+was changed from "one group of two or three" to "one group of two".
+`maximum_approved_groups: 1` and `individual_project_peer_evaluators: 2` are
+unchanged — at n = 4 a solo researcher is rated by two of the other three.
+
+**Consequences that are arithmetic, not policy:**
+
+- **M12 peer review is 3 reviews** per student when everyone works individually
+  (6 at n = 7, 5 at n = 6, 4 at n = 5). `milestone_12_peer_review.md` updated.
+  Its "at least two other live projects" floor still holds.
+- **Peer defense pairs evenly for the first time this term.** Under D75 the whole
+  room is in the pool, so four students make **two pairs** with nobody spare. The
+  Week-5 contingency note in `scripts/schedule_data/part1.py` was corrected from
+  "six students make three pairs".
+- No weight, deadline, formula, or completion contract moved. Attendance 1 ·
+  Participation 9 · IYT Practice 15 · Lecture Notebooks 20 · Final Project 55.
+  The three N/d pairs are fixed by the calendar, not the roster, so participation
+  (N = 14, d = 2), IYT (N = 35, d = 4) and lecture notebooks (N = 16, d = 2) are
+  all untouched.
+
+**Propagated to:** `course_config.yaml`, `CLAUDE.md`, `FABLE_BUILD_PROMPT.md`,
+`genai_studio/{README,instructor_setup_guide ×2,knowledge_base_strategy}.md`,
+`planning/{COURSE_MASTER_PLAN ×2,ASSESSMENT_ARCHITECTURE ×2,PROJECT_MILESTONES,COURSE_DESCRIPTION_ALIGNMENT}.md`,
+`_research_project/2026Fall/{final_project_grading_and_project_modes,milestone_12_peer_review}.md`,
+`project/final_dossier/peer_evaluation_instrument.md`,
+`_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md ×2`,
+`scripts/{build_brightspace_kit,schedule_data/part1}.py`.
+
+**Deliberately NOT changed — historical records keep their number:** the D69/D71
+draw passages in `COURSE_MASTER_PLAN.md` and `ASSESSMENT_ARCHITECTURE.md` (both
+already marked retired by D75), `SRL_GRADEBOOK_LABELS` in
+`build_brightspace_kit.py` (a label for a category not created this edition), the
+docstring in `assign_srl_slots.py`, and every version-history entry in `CLAUDE.md`
+and `DECISIONS.md`. They document what was true then.
+
+**⚠ Two things the repository cannot close.**
+
+1. **Students must be told the Student Research Lead is gone**, and the Brightspace
+   `NN_studio_lec_NN_srl` preparation items and the SRL grade category removed.
+   Draft ready at `_announcements/2026-08-31_srl_retired.md`.
+   `_announcements/02_how_the_course_runs.md` still describes the role in two
+   places and `2026-08-24_important_dates_upcoming.md` still lists its deadlines.
+2. **Half the class is unprofiled.** Jensen and Trivedi have no `email`,
+   `username`, or study-path fields on record, because both arrived via registrar
+   screenshots. At n = 4 that is two of four students, and there is no address on
+   file for either. A Brightspace re-export plus their myPurdue study paths closes
+   it.
+
+**Composition note.** Both Applied Physics students were Chiommino and Akand.
+The standing worry recorded since 2026-08-26 — that the room had become uniformly
+quantitative and the notebooks' no-background floor was set too low — has lost its
+evidence. What remains is one accountant, one aerospace engineer, and two students
+nobody has profiled. Profile them before concluding anything about the ceiling.

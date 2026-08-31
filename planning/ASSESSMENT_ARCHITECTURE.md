@@ -177,7 +177,7 @@ governs the operational detail.
 | Per-component scoring rules: Milestone Deliverables = equal-weight mean of the sixteen M1–M16 scores; Poster item = `0.70 ×` M13 poster quality + `0.30 ×` M15 live presentation; Instructor/TA = the instructor's evaluation of the M13 final poster submission | the same two files, plus the "Deterministic Final Project scoring rules" table below |
 | "How the same five components work in both project modes" (shared vs individual rows) | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | "Peer Evaluation is not Peer Review", including `received_rating_score = min(100, 100 × mean received rating / 3)`, `item = 0.80 × received_rating_score +` submission points, the rule that a missing rating never costs its recipient, and the neutral 80 after failed follow-up | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `project/final_dossier/peer_evaluation_instrument.md` |
-| The group-approval conditions: at most one group of two or three, at least three active projects remaining, and a feasible Peer Evaluation plan | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `course_config.yaml course.project_mode:` |
+| The group-approval conditions: at most one group of two at n=4, at least three active projects remaining, and a feasible Peer Evaluation plan | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `course_config.yaml course.project_mode:` |
 | The "Final Research Artifact" paragraph and "if no TA is assigned, the instructor records this item" | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 
 The standalone conference-URL line that used to follow the grading scale was
@@ -189,7 +189,7 @@ the operational detail the syllabus no longer prints.
 ## Individual-default and group-allowed operation
 
 Students work individually unless the instructor approves a group before shared
-work begins. With six students, at most one group of two or three may be
+work begins. With four students, at most one group of two may be
 approved. Approval changes who owns shared evidence, not the five components or
 their weights. It must preserve at least three active projects so every
 student can review at least two other live projects and permit a Peer Evaluation

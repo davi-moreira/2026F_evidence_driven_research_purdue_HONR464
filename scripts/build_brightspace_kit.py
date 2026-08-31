@@ -517,21 +517,31 @@ def gradebook_spec(config: dict) -> str:
         ),
         ("instructor_ta_evaluation", "Instructor/TA Evaluation", 18.18, 10),
     ]
+    # D76: the group cap is DERIVED from the roster, not frozen at 3. A group of
+    # size g leaves 1 group + (n - g) solo projects, so the peer-review floor
+    # `minimum_active_projects_for_peer_review` requires 1 + n - g >= floor, i.e.
+    # g <= n + 1 - floor. D52's own ceiling of three still applies on top. At the
+    # six-student roster this returned 3, exactly as before; at D76's four it
+    # returns 2, which is why course_config.yaml now reads 2.
+    n = config["course"]["enrollment"]
+    floor = mode.get("minimum_active_projects_for_peer_review", 3)
+    max_group = min(3, n + 1 - floor)
     if mode != {
         "default": "individual",
         "groups_allowed": True,
         "approval_required": True,
         "maximum_approved_groups": 1,
-        "maximum_group_size": 3,
+        "maximum_group_size": max_group,
         "individual_project_peer_evaluators": 2,
         "minimum_active_projects_for_peer_review": 3,
         "peer_assignment_plan_required": True,
     }:
         raise ValueError(
             "D52 requires individual-default projects, at most one approved "
-            "group of no more than three students, three active projects, two "
-            "project-peer evaluators for each individual project, and a "
-            "feasible evaluation plan"
+            f"group of no more than {max_group} students at this roster size "
+            f"(enrollment {n}, D76), three active projects, two project-peer "
+            "evaluators for each individual project, and a feasible evaluation "
+            "plan"
         )
     if "final_project_milestones" in a:
         raise ValueError(
@@ -958,7 +968,7 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       than as something you have to mark. These replace the 25 SRL slot
       dropboxes, which are **not** created this edition (D74).
 - [ ] **Publish units 2-16** with sequential release, or publish weekly by hand.
-      With six students, weekly by hand is defensible and less brittle.
+      With four students, weekly by hand is defensible and less brittle.
       D58 rewrote the reading section of *every* unit and removed the Friday
       quiz block, and D74 added the weekly notebook deadline to every one of
       them, so re-paste all of them, not only the weeks you changed.

@@ -9,7 +9,7 @@
 
 The course grade contains **one top-level Final Project worth 55%**. Individual
 work is the default. You may complete one shared project with a group only with
-the instructor's approval. With six students, at most one group of two or three
+the instructor's approval. With four students, at most one group of two
 may be approved. Approval is available only when the class will still
 have at least **three active projects or posters** and can assign two observers
 to every individual researcher plus at least one evaluation for every student
