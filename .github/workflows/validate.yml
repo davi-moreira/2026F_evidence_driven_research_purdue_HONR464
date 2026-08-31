@@ -72,6 +72,15 @@ jobs:
       - name: Undergraduate-voice lint (student notebooks)
         run: python3 scripts/voice_lint_notebooks.py
 
+      - name: Studio lecture decks equal the book they are built from
+        # The decks under lecture_slides/ are a GENERATED VIEW of EDR|AI. A
+        # chapter edit that never reaches a deck is invisible: the deck still
+        # renders and is now wrong in front of a class. This gate rebuilds
+        # every deck in memory and fails when one on disk differs, when a
+        # slide plan was written against a superseded revision of its chapter,
+        # or when a plan cites a key that is not in book/references.bib.
+        run: python3 scripts/validate_slide_sync.py
+
       - name: Citation-integrity audit
         run: python3 scripts/audit_sources.py
 

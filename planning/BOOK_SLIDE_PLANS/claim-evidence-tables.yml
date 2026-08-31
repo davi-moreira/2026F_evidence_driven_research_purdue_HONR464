@@ -1,0 +1,165 @@
+# Slide plan — Chapter 29, "Claim–Evidence Tables"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: claim-evidence-tables
+source_sha256: "354b6eba39b6bca78f69d01d9c49c9f3f3facd8327d62bc472e12b9da950c8d1"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "One vague answer costs you every other number"
+      quote: "Walk me to the line that made it and I trust the whole poster. Say 'it's in the analysis somewhere' and I stop believing every other number up there."
+      bullets:
+        - "A research-integrity judge, working a poster hall, on what one answer decides."
+        - "The doubt does not stay on that number. It reaches every other number up there."
+      note: >
+        Read the judge's line as the scene it is: someone stops in front of
+        your board, picks a number, and asks where it came from. Notice what
+        the judge says happens on a bad answer, because it is the part people
+        do not expect. The cost is not one number marked wrong, it is that
+        every other number on the poster now looks like the same kind of
+        number. Ask the room which figure on their own draft they would least
+        like to be pointed at.
+
+    - title: "The gap is between a claim you can say and one you can back"
+      bullets:
+        - "A poster is a set of promises made in public."
+        - "Each headline number, each figure, each cited fact: a stranger can test it in ninety seconds."
+        - "A claim-evidence table closes that gap on purpose, before anyone points a finger."
+        - "The honesty is built into the work, not patched under pressure."
+      note: >
+        The decision on the table is narrow and it is per claim: for each claim
+        you make, which specific evidence backs it and where that evidence can
+        be found. Saying a claim is easy and backing it is a separate act, and
+        the whole chapter lives in the distance between the two. The table is
+        what makes that distance visible to you first, at your desk, rather
+        than to a stranger in a hall.
+
+  "The concept":
+
+    - title: "One row per claim, and the row names its own evidence"
+      bullets:
+        - "**Claim-evidence table:** a table with one row per claim, pairing each claim with the evidence behind it."
+        - "Claim column: \"Store B sold about 1.4 times as many units per week as Store A.\""
+        - "Evidence column: the two weekly sales averages."
+      note: >
+        Keep the first pass this plain, because the instrument is genuinely
+        this simple and its difficulty is elsewhere. The store example is a row
+        cut to its two core parts: an assertion on the left, the specific thing
+        that produced it on the right. The next slide adds the other two
+        columns, trace and boundary, and the rest of the chapter is about them.
+
+    - title: "Four columns carry each row, and Evidence is not Trace"
+      layout: terms
+      terms:
+        - term: "Claim"
+          definition: "the statement you assert as true"
+        - term: "Evidence"
+          definition: "the exact result or source that backs the claim, with its uncertainty"
+        - term: "Trace"
+          definition: "where a number was actually produced, named precisely enough to open"
+        - term: "Boundary"
+          definition: "the line between what the evidence licenses and what it does not"
+      bullets:
+        - "Claim: \"turnout in these precincts was 61.3 percent.\""
+        - "Trace: \"cell 16, where `turnout = ballots.sum() / registered.sum()` runs.\""
+        - "Boundary: \"one county, one midterm election, registered voters only, so this is not the statewide rate.\""
+      note: >
+        Take Evidence and Trace as two different jobs, since the room will want
+        to merge them. Evidence is the result with its uncertainty, which for
+        the turnout example is 30 sampled precincts giving 48,900 ballots
+        against 79,800 registered voters, plus the interval of plus or minus
+        1.8 points around the estimate. Trace is the address where that result
+        was produced, named precisely enough that someone can open it. The
+        boundary column carries the claim boundary, the line between what the
+        evidence licenses and what it does not [@allea2023code]: here it says
+        that nothing is claimed about the statewide rate.
+
+    - title: "A number you cannot walk back does not belong on the board"
+      bullets:
+        - "**Traceable number:** one you can walk back to the notebook cell that computed it."
+        - "**Untraceable number:** one you cannot walk back, typed from memory or rounded by hand."
+        - "Building the table is the skill, and a blank cell is a visible hole."
+        - "With every claim in a filled row, an unbacked claim has nowhere to hide [@munafo2017manifesto]."
+      note: >
+        The two words are the practical test, and you apply them one number at
+        a time. Ask of any figure on the board: can I open the thing that made
+        this, right now, in front of someone. If the answer is that you
+        remember writing it down, the number is untraceable and the chapter's
+        rule is that it comes off the board. The blank cell matters for the
+        same reason: the table does not make weak claims strong, it makes them
+        impossible to overlook.
+
+  "A worked example":
+
+    - title: "You build Row 1 before the file goes to the printer"
+      bullets:
+        - "Your political-science poster reports turnout in one county's midterm election."
+        - "Headline: \"turnout in these precincts was 61.3 percent.\""
+        - "Row 1 claim: \"turnout was 61.3 ± 1.8 percent.\""
+        - "Row 1 evidence: 30 sampled precincts, 47,871 ballots against 78,117 registered voters."
+      note: >
+        The quantity here is the share of registered voters who cast a ballot,
+        in one county, in one midterm. The interval comes from the spread of
+        the 30 precinct-level rates, so the uncertainty is carried in the
+        evidence column rather than left off. Row 1's trace is cell 16, the
+        line that divides ballots by registered voters, and its boundary is one
+        county, one midterm, registered voters only, so nothing is claimed
+        about statewide turnout or about eligible adults who never registered.
+
+    - title: "The table caught 63.0 before a judge did"
+      bullets:
+        - "You reach for the trace and the draft board reads 63.0, not 61.3."
+        - "You had quietly written the officially reported statewide figure instead."
+        - "Your own cell never produced 63.0."
+        - "Filling Row 1 is what forced the catch."
+      note: >
+        This is the moment worth slowing down on, because the error is not
+        carelessness. Two real numbers were in your head, one from your
+        analysis and one from an official release, and the wrong one reached
+        the board. Nothing about looking at the poster would have revealed it.
+        Reaching for the trace did, which is the argument for filling the
+        column at all.
+
+    - title: "Row 2 bounds itself: only two definitions were tested"
+      bullets:
+        - "Claim: \"the estimate barely moves when I change how a registration counts as active.\""
+        - "Evidence: under two reasonable definitions the estimates differ by less than your sampling spread."
+        - "Trace: cell 18, the definition comparison."
+        - "Boundary: nothing is claimed about looser rolls that keep long-inactive registrations."
+      note: >
+        Row 2 says the estimate barely moves, and a claim worded that way can
+        quietly reach past what was tested. The evidence supports a statement
+        about two definitions, so the claim has to stay a statement about two
+        definitions. Point at the boundary sentence and ask the room what it
+        would take to earn the wider version. By the chapter's own boundary, it
+        would take testing the looser rolls, which is work, not wording.
+
+    - title: "Two claims, two rows, every number walked back to a cell"
+      bullets:
+        - "Every boundary written down, before the file goes to the printer."
+        - "That table is what lets your work survive a pointed finger."
+        - "Tracing every reported claim to the line that produced it is the reproducibility reforms' practical core [@munafo2017manifesto]."
+      note: >
+        Two rows is a small table, which is the point: with one row per claim,
+        the instrument scales with how much you assert in public, not with how
+        much analysis you ran. The reproducibility literature asks for this
+        same discipline at the level of a whole field, and the table is the
+        version of it you can run on your own poster. Ask each person how many
+        distinct claims their current poster makes, counting the ones a figure
+        makes without a sentence, and watch the count come out higher than they
+        expected.
+
+    - title: "Run the traced line; that print is the only number Row 1 may carry"
+      code: 0
+      bullets:
+        - "Watch the line marked `# the traced line`. That is the address Trace points at."
+        - "The printed turnout and spread are what Row 1 copies, digit for digit."
+        - "Any board figure this line does not produce is untraceable, whoever published it."
+      note: >
+        Run it live if you can, with SEED set to 464 so the printout is the
+        same for everyone. Have the room say which printed line feeds Row 1's
+        claim column and which ones feed its evidence column. Then make the
+        closing point explicit: the last two printed lines are a rule, not a
+        comment, and an official figure from a real election office is still
+        untraceable if your own analysis did not produce it.

@@ -1,0 +1,237 @@
+# Slide plan — Chapter 18, "Experimental Causal Research"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: experimental-causal
+source_sha256: "bd92cfef5e20e2f55606b48b24d68b9aae2f591f33e1dcaca9573b28a83fac98"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: '"Better after treatment" is not "the treatment worked"'
+      quote: >-
+        "Better after treatment" is not "the treatment worked." Show me that
+        chance, not the kind of patient, decided who got treated, and tell me
+        exactly who your number speaks for.
+      bullets:
+        - "A clinical-trial reviewer, reading a claim that a reminder improved medication adherence."
+        - "The treated group did better. So did the healthier, the more organized, the younger."
+        - "The decision: has your difference earned the word *because*, and whose effect is it?"
+      note: >
+        The reviewer is not disputing the arithmetic. They are disputing what
+        produced the two groups being compared, because patients who were
+        healthier to begin with, or more organized, or younger, also do better
+        without any treatment at all. Ask the room what would have to be true
+        about the assignment before "better after treatment" becomes "the
+        treatment worked". Notice that the reviewer asks two things, not one:
+        how treatment was assigned, and who the number speaks for.
+
+    - title: "The speed that hands you a number is the danger"
+      bullets:
+        - "A tool can clean your data, run the comparison, and hand you a number."
+        - "That speed is the danger."
+        - "Paste back \"the treatment worked\" and you signed a claim you have not earned."
+        - "The reviewer does not care how fluent the output sounded."
+      note: >
+        A causal claim is the hardest thing you will assert in this book, and
+        a tool will now hand you one in seconds. Nothing in the output tells
+        you whether chance sorted the arms, because the tool never saw that
+        step. This chapter gives one move that earns the word because, and
+        the discipline to say who it applies to.
+
+  "The concept":
+
+    - title: "A causal question asks what would change if you intervened"
+      layout: terms
+      terms:
+        - term: "Causal question"
+          definition: "a question about what would change if you intervened rather than what merely goes together"
+        - term: "Potential outcome Y(1)"
+          definition: "what that unit would show with the treatment"
+        - term: "Potential outcome Y(0)"
+          definition: "what the same unit would show without it"
+      bullets:
+        - "Causal: does a text reminder raise the share of patients who refill on time?"
+        - "Not causal: do patients who got reminders refill more?"
+        - "For Ms. R, Y(1) is refilling with the texts, Y(0) is refilling with nothing."
+      note: >
+        This chapter follows the experimental-causal pathway of the design
+        library in RDSS, where you assign the conditions yourself, and the
+        potential-outcomes vocabulary follows Holland [@blair2023rdss;
+        @holland1986causal]. Read the two questions aloud and let the room hear
+        the difference: one asks what an intervention would do, the other asks
+        what already goes together. The two potential outcomes belong to the
+        same person under two different worlds, which is the idea the next
+        slide takes away from you.
+
+    - title: "You will only ever see one of Ms. R's two numbers"
+      bullets:
+        - "Her causal effect is Y(1) minus Y(0)."
+        - "She was either texted or not, never both."
+        - "**Fundamental problem of causal inference:** for one unit you see one of the two [@holland1986causal]."
+        - "So her individual effect is unrecoverable."
+      note: >
+        This is the rule that governs the whole field, and it is not a
+        limitation of your budget or your instruments. The missing number is
+        missing in principle, because Ms. R lived only one of the two worlds.
+        Ask the room what is left once the individual effect is gone, and let
+        someone reach for the average before you put it on the screen.
+
+    - title: "Give up the individual effect and chase the average"
+      bullets:
+        - "**Average treatment effect (ATE):** the average of Y(1) minus Y(0) across all your units."
+        - "The typical effect, not any one unit's."
+        - "Example: on average, the reminder raised on-time refills by a few points."
+      note: >
+        Name the trade plainly: you give up the individual effect, which you
+        cannot recover, and chase the average instead. What the ATE gives back
+        is that an honest estimate of it is within reach, which the individual
+        effect never was. Everything after this slide is about
+        what makes that estimate honest.
+
+    - title: "Random assignment breaks the link between traits and treatment"
+      bullets:
+        - "**Random assignment:** pure chance, a coin flip, decides which units get treated."
+        - "Chance knows nothing about health or organization, so the groups are alike on average."
+        - "**Confounder:** a third trait that pushes on both who gets treated and the outcome."
+        - "Organized patients refill anyway and enroll easily, so a reminder looks effective even when it did nothing."
+        - "That broken link is the entire reason an experiment can say *because*."
+      note: >
+        Walk the mechanism rather than asserting it. A computer flips the fair
+        coin, and because chance decided, the untreated group's outcome
+        honestly stands in for what the treated group would have done
+        untreated. That substitution is the whole trick. The confounder
+        example is the one to slow down on: more organized patients both
+        refill anyway and are easier to enroll, so the reminder inherits
+        credit it did not earn. Randomizing breaks the link between any trait
+        and who gets treated.
+
+  "A worked example":
+
+    - title: "Eight hundred patients, a coin flip, and a 9-point gap"
+      bullets:
+        - "You want to know whether a daily text reminder raises on-time refills."
+        - "You enroll 800 hypertension patients: 400 to the reminder arm, 400 to control."
+        - "The reminder arm refills at 71 percent, the control arm at 62 percent."
+        - "The coin, not the patient's organization, sorted the arms."
+      note: >
+        Everything the chapter has taught so far arrives here as one number.
+        For Ms. R you will see Y(1) or Y(0) and never both, but across all 800
+        the difference in on-time refill rates estimates the ATE. Say plainly
+        why the 9 points is honest here: a computer flipped the coin, so no
+        trait of the patient decided the arm. Then warn the room that the
+        chapter is about to take the number apart.
+
+    - title: "Each arm produced its own set of stayers"
+      bullets:
+        - "Some patients stopped answering follow-up before the final measurement."
+        - "The reminder arm shows who stayed with reminders; control shows who stayed without them."
+        - "**Complete-case contrast:** a comparison of whoever happened to be measured in each arm."
+        - "Those two observed groups need not be the same kind of people."
+        - "An effect for the stayers may exist, but only under assumptions you state and defend."
+      note: >
+        The tempting sentence is "the 9-point gap holds for the patients who
+        stayed", and the chapter tells you to be careful with it. When the
+        treatment itself can change who stays, each arm produced its own set
+        of stayers, so the contrast compares two differently built groups. Keep the chapter's
+        bound: an effect for some shared group of stayers may well exist as an
+        idea, but this contrast does not deliver it without assumptions you
+        would have to state and defend.
+
+    - title: "Retention by arm is a warning light, not a verdict"
+      bullets:
+        - "The damage comes when who leaves is tied to what their outcome would have been."
+        - "Different shares of similar patients can cost little; identical shares of very different patients, a lot."
+        - "Report retention by arm first, before any effect."
+        - "Say a quarter of the reminder arm went unmeasured and would have refilled at 50 percent."
+        - "The arm then averages about 66, and the 9-point gap shrinks to about 4."
+      note: >
+        Nothing about attrition is automatically fatal, and nothing about it is
+        automatically fine. If the reminder arm loses its sickest patients, the
+        survivors' average rises for reasons that have nothing to do with the
+        reminder working. The rates alone cannot convict or acquit; they tell
+        you where to dig. Then run the digging as arithmetic: if the
+        unmeasured quarter would have matched the patients you did measure, the
+        gap holds at 9, and working two or three such what-ifs tells you
+        whether the finding survives honest pessimism. That range belongs in
+        the write-up.
+
+    - title: "Run the trial twice: everyone randomized, then only those measured"
+      bullets:
+        - "Watch the retention line while you read the second gap."
+        - "The organized share of those still seen is the line that gives it away."
+        - "The two arms no longer describe the same kind of patient."
+      code: 0
+      note: >
+        The trait driving both dropout and refilling is called organized here,
+        and the comment marks it as a trait you never observe, which is the
+        realistic case. Attrition has two siblings the lab drills:
+        noncompliance, assigned units that never take the treatment, and
+        spillover, treatment reaching the control arm. Each leaves the coin
+        flip untouched and still changes which quantity your number describes.
+        Naming that quantity is the decision this chapter equips.
+
+  "A seeded simulation":
+
+    - title: "Two thousand coin flips over the same 200 patients"
+      bullets:
+        - "Every patient gets both refill rates: without a reminder, and with one adding 5 points."
+        - "The random assignment is rerun 2,000 times, and each estimate is recorded."
+        - "The seed makes every rerun reproduce this exact figure."
+      code: 0
+      note: >
+        Randomization is a promise about procedure: assign treatment by coin
+        flip, and the difference in means is right on average, with a wobble
+        you can quantify. This code can check the promise only because both
+        potential outcomes were written down by hand, which the fundamental
+        problem denies a real trial. Ask the room what the loop is varying,
+        since the patients and the true effect never change: only the coin
+        flip does.
+
+    - title: "The estimates center on the truth, and they still wobble"
+      bullets:
+        - "**Randomization distribution:** every estimate this trial could have produced under a different coin flip."
+        - "It centers almost exactly on the truth: mean of estimates 5.0 against a true 5.0."
+        - "Most runs landed between about 2 and 8 points, and the extremes ran below zero and above 10."
+      figure: "../images/sims/ch15_randomization.png"
+      note: >
+        Point at one bar and say that this is somebody's entire trial. Your one
+        realized trial is a single draw from this histogram, and that spread is
+        the uncertainty an honest report must carry next to the estimate. In
+        the companion notebook, double n and watch the histogram narrow: sample
+        size buys precision, and it is randomization that buys truth on
+        average.
+
+  "What attrition does to that promise":
+
+    - title: "Keep the coin flip honest and change only who is measurable"
+      bullets:
+        - "All 2,000 patients get a true benefit of 5 points."
+        - "Under control, patients drop out only if their health is poor."
+        - "Under the reminder the cut is harsher, so more of the sickest go unmeasured."
+        - "Each of 2,000 re-randomizations takes the difference between the patients still seen."
+      code: 0
+      note: >
+        One thing separates this simulation from the last one: who is still
+        measurable at the end [@nrc2010missing]. The coin flip stays exactly
+        as honest as before. Have the room predict the answer before you run
+        it: the effect is 5
+        for everybody, and the assignment is a fair coin flip, so what could
+        the average contrast be? Then show them.
+
+    - title: "Not one of 2,000 re-randomizations landed near the truth"
+      bullets:
+        - "The truth is 5 points. The contrasts pile up around 8.1."
+        - "Retention was 59 percent in the reminder arm against 80 percent in control."
+        - "Leaving was tied to health, and health also drives the outcome."
+      figure: "../images/sims/ch15_attrition.png"
+      note: >
+        Look at where the dashed line sits, far to the left of the whole
+        distribution. Nothing here is a fluke of one unlucky sample, and no
+        amount of extra data would pull the pile leftward, because the tilt is
+        not noise: dropping the sickest patients from one arm raises that arm's
+        average, and the gap inherits the lift. Notice what the simulation did
+        not do. It never touched the coin flip, and it never made the reminder
+        work better than 5 points for anybody, so random assignment did its
+        whole job and the damage happened afterward. Read the retention gap as
+        a warning light rather than a verdict, and then do the digging, which
+        is the sensitivity work from the honesty test.

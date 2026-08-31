@@ -1,0 +1,193 @@
+# Slide plan — Chapter 40, "Final Research and AI-Management Portfolio".
+# Prose sections only. The builder already emits the research-decision card,
+# the AI failure case, the "Do not delegate" rule, and the "It is your turn"
+# steps, so nothing here may repeat their lines.
+# NOTE: sp.key_terms() harvests only ONE term from this chapter ("A research
+# portfolio"), and the auto key-terms card needs two, so it does not render
+# here. The chapter's definitions therefore have to live in this plan.
+lesson: final-portfolio
+source_sha256: "fe8af3ec7a2b97f7873d0b2ffdb6119208b29bd4ce821fd1bcb75c026ca7856d"
+sections:
+  "Why this decision matters":
+    - title: "The examiner does not count your tools"
+      quote: >
+        "By the time you stand up to defend, I do not count your tools. I ask
+        which claims you are willing to be wrong about in public, and whether
+        you can show me you checked them yourself." — a defense examiner,
+        opening the folder you handed over
+      bullets:
+        - "The decision on the table has two parts."
+        - "Which of your claims you are willing to be wrong about in public."
+        - "And what record you can show for how you checked them."
+      note: >
+        Read the quote aloud and stop on the last clause, because that is the
+        whole chapter compressed: checked them yourself. Notice what the
+        examiner does not do. She does not count tools, so a list of tools is
+        not an answer to what she asks. Ask the room which of their current
+        claims they would actually stand behind in front of that folder.
+    - title: "A pile of AI-assisted work is not defensible"
+      bullets:
+        - "Months of AI-assisted work leave drafts, role outputs, half-finished checks."
+        - "Left in a pile, none of it is defensible."
+        - "The examiner will not read the pile."
+        - "She asks which claims you own, where each stops, and how you know."
+      note: >
+        The problem at the end of a project is not a shortage of material; it
+        is that nobody will sort it for you. Three questions decide what
+        survives: which claims you own, where each one stops, and how you know.
+        This chapter is where you answer them on purpose, before the room
+        decides them for you.
+  "The concept":
+    - title: "The release audit does not change with the destination"
+      bullets:
+        - "It is the last check you run before work leaves your hands."
+        - "Does every promise the work makes still hold up?"
+        - "Held up by the evidence, the permissions, and the record."
+        - "What you assemble for that audit is your dossier."
+      note: >
+        Name the audit as the chapter's real subject, not the folder. How you
+        package the dossier depends on where the work is going: a repository, a
+        supervisor, a journal, a course. The packaging changes and the audit
+        does not, which is why this move transfers past this course.
+    - title: "Your final submission has two halves"
+      layout: terms
+      terms:
+        - term: "A research portfolio"
+          definition: >
+            the assembled body of your finished work: your claims, the evidence
+            behind them, and the verification that makes each one defensible
+            [@allea2023code]
+        - term: "An AI-management portfolio"
+          definition: >
+            the honest record of how you ran your AI work from the first
+            curiosity to the last check: which tasks you delegated, where you
+            took the decision back, and which calls you never handed to a tool
+      note: >
+        This chapter builds both halves, and they answer different questions.
+        For a lab project the research portfolio holds your headline result,
+        the measurements behind it, and the check you ran to confirm the number
+        is right. The AI-management portfolio covers one assistant or a
+        directed team, whichever the project actually used, so nobody has to
+        invent a team they never ran. Its example is concrete: a reviewer role
+        drafted your limitations, you overrode it when it softened a claim you
+        could not support, and you alone chose the claim boundary.
+    - title: "\"When the roles all agree\" is a trap"
+      lead: >
+        A stopping rule is a written statement of what "done" means, phrased
+        around your own verified confidence rather than the tools' agreement
+        [@nosek2018preregistration].
+      bullets:
+        - "It is the decision that closes both halves of your submission."
+        - "A team of look-alike tools can agree loudly and be wrong together."
+        - "The rule that works names a check you ran yourself."
+      quote: >
+        "I stop when I can defend each surviving claim to a hostile reviewer
+        with a check I ran myself [@nasem2019reproducibility]."
+      note: >
+        Put the two candidate rules side by side and ask which one a hostile
+        reviewer could break. Look-alike tools can agree loudly and be wrong
+        together, so a rule resting on their agreement can be satisfied with
+        nothing checked. The working version names a person doing a check,
+        which is the part a tool cannot supply for you.
+    - title: "Three reviewers who oblige tell you nothing"
+      layout: terms
+      terms:
+        - term: "False consensus"
+          definition: >
+            agreement that exists only because the tools shared a blind spot or
+            you asked a leading question
+        - term: "An independence check"
+          definition: >
+            a step that makes agreement worth more than a head count: a check
+            you run yourself, outside the tools
+      note: >
+        The chapter's example is worth acting out: you ask three reviewers to
+        confirm your draft is ready, all three oblige, and the chorus tells you
+        nothing. A leading question and a shared blind spot produce the same
+        sound as real agreement. The cure the chapter names is not more
+        reviewers, it is a check you run yourself, outside the tools.
+    - title: "An evidence defense names what you do not claim"
+      bullets:
+        - "A short public defense of your claims at their boundaries."
+        - "Then questions you cannot rehearse for."
+        - "You state what you found, and name exactly what you do not claim."
+        - "You answer each question from your own record."
+      note: >
+        Stress that the boundary is stated out loud by you, not extracted from
+        you under questioning. Naming what you do not claim is part of the
+        defense, not a concession made afterwards. The unrehearsable questions
+        are the reason the record has to exist before the defense rather than
+        after it.
+  "A worked example":
+    - title: "The 88% came from one packet in three trays of 50"
+      bullets:
+        - "A germination test lays a counted number of seeds on damp paper."
+        - "Steady warmth and light; count the sprouts after a fixed number of days."
+        - "One packet of lettuce seed, three trays of 50 seeds each, 88% on average."
+        - "Now you choose the claim you will defend."
+      note: >
+        Keep three facts on the board, because every later decision comes back
+        to them: one packet, three trays, 50 seeds per tray. Define the
+        germination test before anyone reasons about the number, since the
+        method is what fixes the reach of the claim. Ask what the 88% is a
+        number about, and let the room hear how easily the answer slides.
+    - title: "The two roles disagreed, and the disagreement was a gift"
+      bullets:
+        - "You run three AI reviewer roles on your draft."
+        - "One praises your headline: \"Lettuce seed germinates at 88%.\""
+        - "A diagnostician role flags the same sentence for reaching past your evidence."
+        - "You tested one packet in three trays, not lettuce seed in general."
+        - "You take the pen back."
+      note: >
+        Two roles reading the same sentence and splitting is more useful than
+        two roles agreeing, because the split points straight at the boundary
+        decision. Note that neither role settles it. Taking the pen back is the
+        move, and the rewrite that follows is yours.
+    - title: "The narrower sentence is the one you will defend"
+      quote: >
+        "This packet, tested in three trays of 50, averaged 88% germination,
+        with the trays spanning 84% to 92%."
+      bullets:
+        - "The sentence now carries the packet, the design, and the spread."
+        - "Reporting what your evidence holds, with the spread that produced it, is the reproducibility standard [@nasem2019reproducibility]."
+      note: >
+        Read both sentences aloud, the rejected one and this one, and ask which
+        is easier to attack. The narrow sentence is still a finding; it is a
+        finding that survives the question of how you know. The chapter calls
+        this the standard the whole book has been building toward, and cites
+        the report behind it, so name both.
+    - title: "Run the trays and watch the spread the claim is built from"
+      bullets:
+        - "The block runs the germination test tray by tray, with SEED = 464."
+        - "Watch the three tray rates first, then the printed spread."
+        - "The defensible sentence carries all three numbers, not the 88% alone."
+      code: 0
+      note: >
+        Run it live so the tray-to-tray spread appears on screen instead of
+        being described. Read the code's own comment aloud: the trays differ,
+        and seeds within a tray share their tray's conditions. The script
+        prints the spread precisely because the average on its own is the
+        sentence you just rejected.
+    - title: "The packet's label was never part of your AI workflow"
+      bullets:
+        - "The label states a germination rate of 85%."
+        - "You compare your 88% against it by hand."
+        - "The two numbers land close, and that is real reassurance."
+        - "Your stopping rule is now satisfied, so you stop."
+      note: >
+        The reassurance is real for one reason only: the label sat outside
+        everything the tools touched. That is what an independence check buys
+        you, and it is what a head count never buys. Ask the room what the
+        equivalent outside number is for their own project, and whether they
+        have looked at it yet.
+    - title: "Four things go into the AI-management portfolio"
+      bullets:
+        - "The roles you ran."
+        - "The reviewer-versus-diagnostician conflict, and your override."
+        - "This stopping rule."
+        - "The label comparison that made agreement worth more than a head count."
+      note: >
+        Each of the four exists because something actually happened, so this
+        list is a record and never a reconstruction. The conflict entry is the
+        one that shows where you took the decision back, which is why it
+        belongs in the record. Ask what their own fourth line would say today.

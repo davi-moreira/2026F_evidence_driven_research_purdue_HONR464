@@ -1,0 +1,240 @@
+lesson: negative-tests
+source_sha256: "73f9d7c20662035bdbfbf6d73267c3bb3be8ef04b61b55366453c657c9d0db54"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A clear ring can mean your solvent is toxic"
+      quote: >-
+        Before you tell me the extract works, show me the plate with no extract
+        on it. If the blank disk also cleared the bacteria, you have not
+        discovered a drug. You have discovered that your solvent is toxic.
+      bullets:
+        - "A microbiology lab advisor, on the first plate they ask to see."
+      note: >
+        The advisor asks for the control plate before the result plate, and the
+        reason sits in the second sentence. A clear ring around a disk that
+        never held the extract says nothing about the plant. Ask the room what
+        their own blank disk would be: the version of their procedure with the
+        thing they are studying taken out.
+
+    - title: "Your own pipeline can manufacture the result you are about to report"
+      bullets:
+        - "How you handled the samples. How you measured. How you coded the groups."
+        - "Any one of them can produce a signal unrelated to what you set out to study."
+        - "A negative test tells you whether the world made your result or your pipeline did."
+        - "Skip it and you can spend months defending an artifact."
+      note: >
+        A result that looks real is the easiest thing in the world to produce by
+        accident, because a procedure has many moving parts. The chapter names
+        three of them, and each can manufacture a signal on its own. The
+        negative test is how you find out which of the two explanations you are
+        living with. The cost of skipping it is not embarrassment at the end; it
+        is months of work built on something that was never there.
+
+  "The concept":
+
+    - title: "A negative test aims your exact analysis at a guaranteed zero"
+      layout: terms
+      terms:
+        - term: "Negative test"
+          definition: "a check that runs your exact analysis on a situation where the true answer has to be zero"
+        - term: "Artifact"
+          definition: "a signal produced by your procedure rather than by the thing you study"
+      bullets:
+        - 'Example: measure your "effect" in a group that received no treatment at all.'
+        - "Example of an artifact: a clear ring caused by the solvent, not the extract."
+      note: >
+        Take the two terms together, because the first one hunts for the second.
+        Hold on to the word "exact" in the definition: a check that runs a
+        different analysis from your real one tests nothing you care about. The
+        no-treatment group is the plainest case, since a treatment nobody
+        received cannot have moved anything.
+
+    - title: "The true answer is zero; your reading almost never will be"
+      bullets:
+        - "The true answer is zero. The number your sample returns will almost never be."
+        - "Different samples wobble, so a clean pass is a small reading, not a blank one."
+        - "Clean means it sits among the readings your procedure gives when nothing is happening."
+        - "Worrying means far out from that pile, where ordinary wobble is a strained explanation."
+        - "Chance does occasionally produce a large reading, so no cutoff turns this into a verdict."
+      note: >
+        This is where the test is most often misread, so slow down here. A clean
+        pass is a reading small enough to sit comfortably among the readings
+        your own procedure produces when nothing is happening, and what should
+        worry you is a reading far out from that pile. Notice the hedge in both
+        sentences. Demand exact zeros and you will fail perfectly healthy
+        machinery, or worse, tinker until a readout prints 0.00 and call the
+        tinkering a fix.
+
+    - title: "Three conditions, or your control is not a test"
+      lead: "A good negative control has to satisfy three conditions, and all three matter [@lipsitch2010negative]."
+      bullets:
+        - "Your proposed cause must not be able to reach it, or it is not negative."
+        - "The artifact you fear must be able to reach it, or it is not a test."
+        - "Fear a toxic solvent? The control disk carries the solvent, minus only the extract."
+        - "The check must be sensitive enough to show an artifact that would actually matter."
+        - "A quiet control from an insensitive check is no evidence of a clean pipeline."
+      note: >
+        The first two conditions are both about reach, in opposite directions: a
+        control your cause can touch is not null, and a control your pipeline
+        never touches cannot catch your pipeline. The third is the one people
+        skip. Run too few plates, or measure too coarsely, and a control sits
+        near zero no matter what is going on. That quiet reading is not evidence
+        of a clean pipeline; it is no evidence at all.
+
+    - title: "Three tests aim at zero, and the vehicle control matches your solvent"
+      layout: terms
+      terms:
+        - term: "Placebo test"
+          definition: "you replace the real cause with a fake one that cannot act, and confirm the effect disappears"
+        - term: "Falsification test"
+          definition: "you check a consequence that must be false if your explanation is right, and confirm it is false"
+        - term: "Negative control"
+          definition: "you point the same machinery at an outcome your cause could not possibly touch"
+        - term: "Vehicle control"
+          definition: "the negative control matched to how you delivered the cause: the carrier with the active ingredient left out"
+      bullets:
+        - "Swap the real labels for a coin flip; the estimate should collapse toward zero."
+        - "Dissolved your extract in ethanol? The vehicle control is a disk soaked in ethanol alone."
+      note: >
+        Three members of this family show up in almost every audit, and the
+        vehicle control is the one matched to delivery. The falsification
+        example is worth saying aloud: your compound can only act after you add
+        it, so a reading taken before you added it should show nothing. The
+        negative-control example runs the other way: an antibiotic cannot change
+        the diameter of the agar dish, so a shrinking-dish reading would mean
+        the measurement is talking, not the drug.
+
+    - title: "Leave-one-out asks whether a single point carries your finding"
+      bullets:
+        - "The cheapest diagnostic in research: drop each case in turn and recompute."
+        - "See whether one observation is quietly carrying your whole finding."
+        - "A negative test asks whether your procedure invents signal."
+        - "Leave-one-out asks whether your result rests on a single point."
+      note: >
+        Keep these two questions apart, because a project can pass one and fail
+        the other. The negative test is about a procedure that manufactures
+        signal out of nothing. Leave-one-out is about a real number that only
+        one observation is holding up. Both are cheap, and step four of the
+        practice section asks for the second one beside the first.
+
+    - title: "A clean pass lowers one worry, and never more than that"
+      lead: >-
+        The negative tests all share one move: aim the machinery where the answer
+        must be zero, and check that what comes back is ordinary for a world where
+        it is [@rosenbaum2002observational].
+      bullets:
+        - "It reduces concern about one artifact, as far as that check could have detected it."
+        - "It does not prove the artifact is absent."
+        - "It does not prove your effect is real."
+        - "It never turns a correlation into a cause."
+        - "Report what the check could and could not have caught, not just that it passed."
+      note: >
+        This is the boundary the chapter says you must never blur, so read the
+        five lines slowly. All the negative tests share one move, aiming the
+        machinery where the answer must be zero and checking that what comes
+        back is ordinary for a world where it is. What that buys is one specific
+        worry made smaller, bounded by what the check was able to see. Ask the
+        room to say out loud what their own passed check would still leave
+        unanswered.
+
+  "A worked example":
+
+    - title: "A wide ring is tempting, so read the ethanol disk first"
+      bullets:
+        - "You soak a paper disk in plant extract, lay it on a bacterial lawn, incubate overnight."
+        - "Next morning you measure the zone of inhibition, the clear ring where bacteria failed to grow."
+        - "The extract was dissolved in 70% ethanol, so the vehicle control is an ethanol-only disk."
+        - "A bare, uninhibited lawn around it: the ring is not a solvent artifact."
+        - "Its own clear ring: the finding is an artifact until you redo it at lower concentration."
+      note: >
+        Walk the plate through in order, because the temptation is to write the
+        wide ring down before anything else happens. The vehicle disk sits on an
+        identical plate and is treated exactly the same way, which is what makes
+        its reading comparable. If the ethanol disk clears its own ring you can
+        no longer tell how much of the extract's ring is the extract and how
+        much is the solvent, and that is a failure with a fix rather than a
+        finding. Say what the pass buys, too, because the chapter stops the
+        claim right there: the effect survives one specific worry, and no more
+        than that.
+
+    - title: "An assay that catches a strong antibiotic can still miss a small artifact"
+      bullets:
+        - "A positive control is a condition you know produces a signal, run through the same machinery."
+        - "A disk soaked in a standard antibiotic should clear a wide ring."
+        - "If even that disk reads flat, your assay is broken today and the quiet vehicle told you nothing."
+        - "Clearing a ring shows the system answers a strong inhibitor, not that it notices a small one."
+        - "Decide how big a solvent effect would change your conclusion, then show the assay sees it."
+      note: >
+        The gap between those last two bullets matters, because the artifact you
+        fear is usually small. The chapter's move is to fix the size that would
+        change your conclusion first, then run a dilution series down toward
+        that magnitude and check that the rings still track the dose and that
+        repeat plates agree closely enough to tell that difference from noise.
+        An assay that detects a strong antibiotic and loses a one-millimetre
+        shift has not cleared your vehicle; it has only failed to notice. And
+        even a clean pass does not tell you the extract works inside a living
+        animal, or which molecule is responsible.
+
+    - title: "Both controls get read before the extract's ring means anything"
+      code: 0
+      bullets:
+        - "Four conditions, ten plates each: extract, vehicle only, standard antibiotic, extract at 20% ethanol."
+        - "Watch the vehicle mean: under 1 mm passes, above it the solvent is doing work."
+        - "Watch the positive control: a flat reading means the assay cannot detect anything."
+        - "A negative control that passes on a broken assay proves nothing."
+      note: >
+        Run the block and read the two verdict lines aloud. The fourth condition
+        is the redo at lower solvent, which is what a failed vehicle control
+        sends you back to. A negative control means nothing until you have also
+        seen that the assay can detect something, which is why all four plates
+        are read at once here rather than one at a time.
+
+  "A seeded simulation":
+
+    - title: "Build a world where the vehicle does nothing, then run it 2,000 times"
+      code: 0
+      bullets:
+        - "Each run measures twelve matched vehicle and blank disks."
+        - "A shared plate-to-plate wobble, plus ordinary measurement noise."
+        - "The true vehicle effect is exactly zero by construction."
+        - "Watch the first line: how many of the 2,000 readings come back exactly zero."
+      note: >
+        Ask the room to predict the first number before you run it. The world is
+        built so the vehicle truly has no effect at all, so the intuition many
+        people carry is that the readings should be zeros. Everything the
+        section teaches follows from that prediction being wrong.
+
+    - title: "In 2,000 honest experiments, not one reading was exactly zero"
+      figure: "../images/sims/ch22_null_spread.png"
+      bullets:
+        - 'Sixty-two round to 0.00 at two decimals, so a printed "0.00" is rounding, not nothing.'
+        - "The central 95 percent runs from about -0.29 to +0.27 mm."
+        - "Rarer runs reach roughly -0.48 and +0.47. The first run returned -0.03."
+        - "A researcher demanding a true zero would have failed all two thousand of them."
+      note: >
+        Count them out loud. In a world built so the vehicle does nothing
+        whatsoever, not one of two thousand readings came back exactly zero, and
+        the sixty-two that print as 0.00 are rounded numbers rather than
+        measurements of nothing. That pile is what you compare a real control
+        against. A reading of -0.03 is unremarkable there; a reading of +1.2 mm
+        sits far outside anything this null world produced, and now you have
+        something to investigate.
+
+    - title: "The pile shows ordinary variation; it is never a pass line"
+      bullets:
+        - "Simulate your null world at your own sample size, then ask where your control sits."
+        - "The pile is only as trustworthy as the assumptions that built it."
+        - "The middle 95 percent excludes one honest experiment in twenty by construction."
+        - "Drawing a cutoff there is a statistical decision, and no single cutoff settles it."
+        - "Ask the three questions first, then report the evidence with its assumptions."
+      note: >
+        Building your own null pile is the habit worth keeping, and turning it
+        into a rule is the mistake worth naming. The three questions come first:
+        could my cause have reached this control, could the artifact I fear have
+        reached it, and could this check have detected an artifact big enough to
+        matter. Only then use the standard error and the interval you already
+        met to say how unusual this control is. Report that evidence with its
+        assumptions rather than a verdict.

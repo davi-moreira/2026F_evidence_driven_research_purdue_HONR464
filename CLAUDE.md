@@ -574,6 +574,44 @@ quarto render book-pt/ && quarto render book-es/  # SOURCES frozen (D36) and the
 
 ---
 
+## 🚨 CRITICAL WORKFLOW — The Studio Lecture Decks Are Generated From the Book  *(D77)*
+
+Twelve revealjs decks, one per studio, at `lecture_slides/studioNN.qmd`
+(published `<site>/lecture_slides/studioNN.html`; Studio *n* = Week *n* for
+n = 1..10, Studios 11-12 = Weeks 15-16; the conference block has none).
+**A deck is a GENERATED VIEW of EDR|AI — never hand-edit one.** Every verbatim
+element (the studio promise, each chapter's research decision, its key terms,
+figures, mermaid, worked-example code, AI failure case, "Do not delegate" rule
+and "It is your turn" steps, the milestone practice and four rails) is read out
+of the book at build time.
+
+**Editing a chapter is what changes a deck.** Then rebuild:
+
+```bash
+.venv/bin/python scripts/build_studio_slides.py     # all 12 (a PostToolUse hook also runs it)
+.venv/bin/python scripts/validate_slide_sync.py     # CI gate: decks == the book
+```
+
+Book prose does not fit a slide, so each chapter carries an editorial overlay at
+`planning/BOOK_SLIDE_PLANS/<lesson-id>.yml` — keyed by the lesson's IMMUTABLE id,
+never its number or filename. It holds headlines, short lines and speaker notes
+for the chapter's PROSE sections only; it may not touch the builder-owned
+sections ("An AI failure case", "It is your turn"), and it may never add a claim
+the chapter does not make. Schema and rules:
+`planning/BOOK_SLIDE_PLANS/README.md`.
+
+Each plan stamps the `source_sha256` of the chapter it was written against. When
+a chapter is edited the plan goes **STALE** and the validator says so: reread the
+chapter, revise the plan, restamp the digest. That staleness is the mechanism
+working — never fake a digest to silence it.
+
+Theme: `lecture_slides/_theme/edrai-slides.scss` — the EDR|AI brand (D29), ink on
+white with exactly two functional accents (crimson = stays human, amber = AI
+failed). The decks are graded on nothing; the **Lecture Notebooks 20%** contract
+(D74) is untouched.
+
+---
+
 ## 🚨 CRITICAL WORKFLOW — Instructor-First Notebook Editing  *(hard rule — no exceptions)*
 
 **ANY request to "work on a notebook" means: edit the instructor side first; the

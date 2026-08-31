@@ -1,0 +1,206 @@
+# Slide plan — Chapter 31, "From Dossier to Research Note"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: poster-to-note
+source_sha256: "edee30674c6e2b7c8724d17059d14080eb6034bb38c4418ae172d4b4f804b5c5"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "The reviewer wants your most defensible result, not your flashiest"
+      quote: >
+        "Show me your results in the order you trust them. If your flashiest
+        number comes from one lucky run and it leads the paper, I already know
+        how this review ends. I do not want your most surprising result first.
+        I want your most defensible one." — a conference reviewer
+      bullets:
+        - "The decision: which finding leads, and how big its claim is allowed to be."
+        - "She is asking which finding you would still defend after the room empties."
+        - "And whether she could rerun your work and watch the same number return."
+      note: >
+        Read the reviewer's words aloud and let them sit. A big number
+        by itself does not impress her; she is telling you the order she
+        reads in, and the order is trust, not surprise. Two questions
+        are hiding in that paragraph, and the chapter answers both:
+        which finding earns the headline, and could a stranger rerun the
+        work and get your number back. Ask the room which of their own
+        results would lead today, and whether they would still lead
+        tomorrow.
+
+    - title: "The note has no you standing next to it"
+      lead: "When you present, your voice fills the silences. The page has no voice."
+      bullets:
+        - "Every leap a presentation lets you imply, the prose has to earn."
+        - "In order, for a reader who will never hear you explain it."
+        - "Whatever you present is one input to the note, never its source."
+      note: >
+        This is the whole reason a dossier or a poster cannot simply be
+        retyped into a paper. Standing next to your work, you answer the
+        objection the moment a face goes puzzled, so the compressed
+        version survives. On the page nobody asks, so nothing gets
+        repaired, and an argument with a hole in it just reads as an
+        argument with a hole in it. Keep the chapter's ordering claim:
+        the presentation feeds the note, and the note is never a
+        transcript of the presentation.
+
+  "The concept":
+
+    - title: "A poster's Gap box says one line; the note argues the paragraph"
+      bullets:
+        - "Working logic: compressed records, plus your live voice filling the silences."
+        - "A Gap box reading only 'few studies of wait times at peak hours'."
+        - "Paper logic: every claim argued in prose, because you are not there to answer."
+        - "The same gap, written out: what prior work covered, what it skipped, why that matters."
+        - "Turning one into the other is not adding words. It is making the reasoning visible."
+      note: >
+        Put the two versions of the same gap side by side, because the
+        difference is the entire lesson. The poster line is not wrong,
+        it is incomplete on purpose, and you were the missing half. The
+        paragraph has to do the work your voice did: name the prior
+        studies, say what they left out, and say why the missing piece
+        is worth anyone's time. Warn against the usual first attempt,
+        which is padding the poster line with adjectives instead of
+        supplying the reasoning it never carried.
+
+    - title: "Problem, gap, question: the spine holds only when the gap is real"
+      layout: terms
+      terms:
+        - term: "Problem–gap–question spine"
+          definition: "the real trouble your work responds to, the specific thing prior retrievable work has not established, and the answerable question that closes exactly that gap"
+        - term: "Evidence density"
+          definition: "the share of a paragraph resting on sources a reader could open rather than bare assertion"
+      bullets:
+        - "Problem: customers give up and leave during the morning rush."
+        - "Gap: published wait-time studies measure only quiet, steady hours."
+        - "Question: how much does mobile pre-order cut the wait during the rush here?"
+        - "'As everyone knows' carries no density. A published figure a reader can recompute carries some."
+      note: >
+        A note carries its reasoning on this backbone
+        [@mensh2017structuring], and the three pieces have to be linked,
+        not merely present. Test the link out loud: does the question
+        close exactly the gap you named, or a wider one you would rather
+        answer? The gap is the piece that fails most often, because a
+        gap is only real once you have shown what is already known. That
+        showing is what evidence density measures, so a gap paragraph
+        with no openable sources in it is an assertion wearing a
+        paragraph's clothes.
+
+    - title: "Best-supported first, one lucky run last"
+      layout: terms
+      terms:
+        - term: "Results hierarchy"
+          definition: "the order you present findings in, best-supported first and fragile last"
+      bullets:
+        - "A median measured over a thousand simulated mornings leads."
+        - "One unusually fast order waits at the back, labeled exploratory."
+        - "Limitations follow the same discipline, sized to what actually threatens the claim."
+        - "'Measured on a simulated arrival pattern, not a real Saturday rush.'"
+        - "Not a generic 'more research is needed.'"
+      note: >
+        The hierarchy is a claim about trust, so writing it forces you
+        to rank your own evidence before a reviewer does it for you. The
+        same discipline governs the limitations section, which is where
+        most drafts go slack: a generic call for more research costs you
+        nothing and tells the reader nothing. Ask the room for the one
+        sentence a hostile reader would raise first about their project,
+        and put that sentence in the limitations rather than the filler
+        one.
+
+    - title: "A note a reader cannot rerun is half a claim"
+      layout: terms
+      terms:
+        - term: "Reproducibility capsule"
+          definition: "everything a stranger needs to rebuild your number and nothing they must guess"
+        - term: "Restart-and-run-all"
+          definition: "clear everything, run every cell top to bottom, and the headline number returns"
+      bullets:
+        - "Pinned data and tool versions."
+        - "A fixed seed."
+        - "A decision log."
+        - "Your AI-use ledger."
+      note: >
+        The chapter is blunt here: readable is only half of the job, and
+        the other half is runnable [@nasem2019reproducibility]. Take the
+        capsule's second clause as seriously as the first, because the
+        failure mode is not a missing file, it is a step you did by hand
+        and never wrote down. Restart-and-run-all is the check that
+        catches it, and it only counts on a clean kernel, not on the
+        session where everything already lives in memory
+        [@wilson2017goodenough].
+
+  "A worked example":
+
+    - title: "'38% faster' is a table row, not yet a claim you can defend"
+      bullets:
+        - "You tested a mobile pre-order option for a campus coffee shop."
+        - "Your claim–evidence table holds the headline row: '38% faster.'"
+        - "The note has to turn that row into a claim you can defend."
+      note: >
+        The row is where your claim–evidence table left you, and it is
+        genuine work: a number tied to evidence. What it is not yet is a
+        sentence anyone can weigh, because it carries no setting, no
+        sample and no boundary. The next three moves are the whole
+        chapter in miniature, so name them before you walk through them:
+        rank the findings, size the claim, package it.
+
+    - title: "The 99% drop is one customer; the 38% is a thousand arrivals"
+      bullets:
+        - "Across a thousand simulated arrivals, median wait dropped about 38%."
+        - "With a tight interval around it."
+        - "One pre-ordering customer was served almost instantly: a 99% drop."
+        - "The median leads. The lone customer goes to the back, as one observation."
+      note: >
+        Both numbers came out of the same run, and the bigger one is the
+        one you would most enjoy putting on a slide. That is exactly why
+        the ranking rule exists. A median over a thousand arrivals is a
+        statement about the procedure; one fast order is a statement
+        about one morning and one person. Say plainly what the lone
+        customer is allowed to be in the note: one observation, labeled
+        as such, not a result.
+
+    - title: "Drop 'median' and 'simulated' and you promise what you never tested"
+      bullets:
+        - "Honest: 'on this simulated arrival pattern, mobile pre-order cut median wait by about 38%.'"
+        - "Interval attached, and the boundary in the same sentence."
+        - "'This is a measurement on simulated demand, not a guarantee for a real Saturday rush.'"
+        - "Refused: 'mobile pre-order makes the shop 38% faster.'"
+        - "That drops the demand pattern, drops median, and promises every customer a shorter wait."
+      note: >
+        Read the two sentences one after the other and ask the room
+        which one they would rather write. Most people would rather
+        write the refused one, because it is shorter and it sounds
+        surer. Then count what the short version quietly deleted: the
+        arrival pattern it was measured on, the word median, and the
+        difference between a typical customer and every customer.
+        Writing the refused version down on purpose is the point of the
+        exercise, since a claim you have named is a claim you can catch
+        when it creeps back in during editing.
+
+    - title: "The capsule is what makes the 38% return on a clean kernel"
+      bullets:
+        - "Pin the simulation's seed."
+        - "Record the machine and library versions."
+        - "Log that you excluded the first order of the morning, and why."
+        - "Pass restart-and-run-all so the 38% comes back."
+        - "The note is now readable and runnable."
+      note: >
+        Notice that the exclusion is logged with its reason, not just
+        recorded. A stranger rerunning your work does not need to agree
+        with the choice, but they do need to see that it was a choice
+        and know what it was for. This is the point where the note stops
+        being a document about your work and starts being a thing
+        someone else can operate.
+
+    - title: "The printout is already the note's order of trust"
+      code: 0
+      bullets:
+        - "The median drop prints with its interval, never on its own."
+        - "The luckiest customer prints at the bottom, where the note puts it."
+        - "The code labels that last line as one observation, not a result."
+      note: >
+        The block runs the arrivals and prints the ranked findings in
+        the order the note will use them, so the printout is itself the
+        results hierarchy. Point at the printed interval and say that
+        the headline sentence has to carry it. Then point at the last
+        line, which the code labels for you, and ask what would have to
+        be true before that number could move up the page.

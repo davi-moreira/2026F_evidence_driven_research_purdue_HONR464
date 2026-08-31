@@ -1,0 +1,165 @@
+# Slide plan — Chapter 37, "Open and Reusable Research Packages"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: research-packages
+source_sha256: "92257fad4d769579c0501512131d13ce2c8e457d133787c5981913688cfd6763"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Hand me the folder and let me press run"
+      quote: >-
+        I don't want to hear that it runs on your laptop. Hand me the folder,
+        let me clear everything, and let me press run. If your headline number
+        does not come back on my machine, you do not have a result yet. You
+        have a memory of one.
+      bullets:
+        - "A replication editor, opening the folder attached to your submission."
+        - "The test is not whether it ran once. It is whether it runs without you."
+      note: >
+        Open with the editor, because she is the reader your capsule has to
+        satisfy. Notice what she refuses to accept: your report that it
+        works. She wants the folder, a cleared environment, and the same
+        headline number on hardware you have never touched. Ask the room
+        whether their current project folder would survive that on Monday.
+
+    - title: "A result no one can check is a rumor with a chart"
+      bullets:
+        - "Your research note argues the claim in prose."
+        - "The capsule proves the claim survives without you in the room."
+        - "If it only runs on your laptop, in the click-order you remember, no one can check you."
+      note: >
+        Say the decision on the table plainly: what goes inside the capsule
+        that ships with your work, and whether the sentence "this reproduces"
+        is honest when you write it. Both halves are yours to sign. The
+        chapter is about packaging the work so the checking is easy, and about
+        staying honest about what the word reproducible actually covers.
+
+  "The concept":
+
+    - title: "A capsule holds what a stranger needs and nothing they must guess"
+      layout: terms
+      terms:
+        - term: "Reproducibility capsule"
+          definition: "everything a stranger needs to rebuild your numbers and nothing they would have to guess [@wilson2017goodenough]"
+        - term: "Restart-and-run-all"
+          definition: "you clear the kernel and run every cell top to bottom with no memory of earlier clicks"
+      bullets:
+        - "Example: a folder with your notebook, your data, and a record of every by-hand choice."
+        - "Runtime, Restart and run all, and your headline number reappears."
+      note: >
+        Both definitions are the chapter's own. Press on the second half of
+        the capsule definition, because that is the working test: anything a
+        reader would otherwise guess at is missing from the package. Then make
+        restart-and-run-all concrete by doing it live once, since it is the
+        single check that catches most of what follows.
+
+    - title: "The capsule has five parts, each defined once"
+      bullets:
+        - "A runnable notebook that passes restart-and-run-all."
+        - "A data-provenance note: each dataset's source, its version, and how it may be used [@wilkinson2016fair]."
+        - "A fixed seed, so every random step returns the same values on every run [@sandve2013ten]."
+        - "A decision log: the by-hand choices that shaped the result, each with its reason."
+        - "An AI-use ledger: every tool, its task, and how you verified its output."
+      note: >
+        Walk the five in order and give each one its example from the chapter:
+        the download URL, the date and the licence for provenance; SEED equals
+        464 feeding each resample; every row you dropped, and why. The list is
+        short on purpose, so nobody can claim they did not know what to
+        assemble. Ask which of the five their own project currently has.
+
+    - title: "Capsules break in five predictable ways, and predictable means catchable"
+      bullets:
+        - "A hard-coded path that exists only on your machine."
+        - "A missing seed that moves every run."
+        - "A by-hand edit no clean run reproduces."
+        - "An undocumented exclusion with no logged reason."
+        - "Stale data a reader cannot reobtain."
+      note: >
+        The chapter names these the five package sins, and it treats their
+        predictability as good news: a failure you can name in advance is one
+        you can scan for. The lab's auditor scans for all five. Have the room
+        say aloud which one they are most tempted to leave alone, because that
+        is the one their reader will hit first.
+
+    - title: "Zero flags means runnable, never proven correct"
+      lead: "The scan gets you to the starting line. A person who reruns you cold is the race."
+      bullets:
+        - "A clean audit says the code executes. It says nothing about whether the numbers are right."
+        - "The honesty check is the one the auditor cannot do for you."
+      note: >
+        This is the sentence the chapter asks you to hold onto, so do not let
+        it pass as a caveat. An auditor checks the shape of the package; it
+        cannot certify that the analysis inside is correct rather than merely
+        runnable. That is why the last word belongs to a human replicator, and
+        why the worked example ends where it does.
+
+  "A worked example":
+
+    - title: "Twelve counties of turnout, shipped two ways"
+      bullets:
+        - "You collected precinct-level turnout for twelve counties in one state's midterm election."
+        - "Your headline: the share of precincts where turnout fell below 40%."
+        - "Same analysis, same headline, two very different folders."
+      note: >
+        Set the scene before either version appears. The claim is a simple
+        share, which is deliberate: nothing here fails because the statistics
+        are hard. What is about to differ is only the packaging, and that is
+        enough to decide whether anyone can check the number.
+
+    - title: "The sinful capsule commits all five, and every one breaks the rerun"
+      bullets:
+        - "Loads `turnout_clean.csv` from your own Desktop, a file only your laptop has."
+        - "Bootstraps the interval with no seed, so the interval shifts on every run."
+        - "Patches one duplicated precinct name by hand, in a cell no clean run repeats."
+        - "Silently drops every precinct with a missing registered-voter count, with no note on why."
+        - "Data downloaded \"sometime last spring,\" before the count was certified, no version recorded."
+      note: >
+        Go slowly here, because none of these look like misconduct from the
+        inside. Each one is a shortcut that worked on the day. The path was
+        real when the file was there, the by-hand patch fixed a real
+        duplicate, and the exclusion may even have been reasonable. Every one
+        of the five breaks the rerun, and the rerun is the test the packaging
+        has to pass before anything else can be asked of it.
+
+    - title: "The clean capsule fixes each sin where a stranger can see it"
+      bullets:
+        - "Loads the certified file through its public URL, with source, download date and terms of use."
+        - "Fixes `SEED = 464` before the bootstrap."
+        - "Records the one relabel in the decision log, with its reason."
+        - "Keeps the missing-registration precincts, or drops them by a logged, pre-declared rule."
+        - "A stranger clears the kernel, runs top to bottom, and your share comes back."
+      note: >
+        Match each repair to the sin it answers, so the pairing is visible.
+        The point is not that the clean version is more careful in spirit; it
+        is that every choice moved out of your head and into a file. Same
+        number, no guessing, is the whole claim the capsule makes.
+
+    - title: "The clean capsule can still be wrong"
+      bullets:
+        - "Your seed might be fixed on the wrong subset."
+        - "Dropping the missing-registration precincts might be a bad rule, cleanly logged."
+        - "Runnable is not correct."
+        - "That gap is why a person exercises your capsule, not only a script."
+      note: >
+        This is the honesty check the auditor cannot do for you, and it is the
+        chapter's real ending. A logged reason is not automatically a good
+        reason, and a pinned seed on the wrong subset reproduces your mistake
+        perfectly. Ask the room which choice inside their own analysis they
+        would most want a reviewer to question, and tell them to write that
+        sentence down.
+
+    - title: "Rerun the cell and the interval does not move"
+      bullets:
+        - "Every repair the sinful version did by hand happens here in code."
+        - "Watch the duplicate-name count: removed by a line, not by an edit."
+        - "Missing registrations are reported, not silently dropped."
+        - "The seed is pinned, so the bootstrap interval is identical on every run."
+      code: 0
+      note: >
+        Run it twice in front of the room and read the share-and-interval line
+        both times. The interval does not move, and the reason is on screen rather
+        than in anyone's memory. Every repair the clean capsule made is on the
+        published list of rules for reproducible computational work
+        [@sandve2013ten]. Then say the bound one last time: this cell proves
+        the number is stable, not that the rule producing it was a good one.

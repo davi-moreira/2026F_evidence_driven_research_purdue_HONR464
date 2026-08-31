@@ -1,0 +1,197 @@
+# Slide plan — Chapter 28, "From Results to Claims"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: results-to-claims
+source_sha256: "22c2702ed4d86bf230a14d657a65e75391485ff58d8da186576e93a6e6f8c640"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A claim that outruns its evidence makes a judge distrust the whole board"
+      quote: "If the headline reads 'lowers blood pressure' but the study only watched who chose to walk, I stop reading."
+      bullets:
+        - "That is a research-integrity judge, working a poster session."
+        - "She is not testing your statistics."
+        - "She is testing whether your words match the evidence underneath them."
+      note: >
+        Open with the judge, because she is the reader every headline eventually
+        meets. She points at one number and asks where it came from and what it
+        lets you say. Ask the room what she would do at their own poster, and
+        let them answer before you define anything.
+
+    - title: "Your analysis prints a number; your headline asserts a sentence"
+      bullets:
+        - "A result is not yet a claim."
+        - "The gap between the two is where most projects break."
+        - "The sentence almost always wants to say more than the number earned."
+        - "Close that gap yourself, before a stranger finds it open."
+      note: >
+        State the gap plainly, then say why it is easy to miss from inside and
+        easy to find from outside. Nobody drafts a dishonest headline on
+        purpose; the sentence drifts because it almost always wants to say
+        more than the number earned. The rest of the chapter is a habit for
+        catching that drift before the poster hall does.
+
+  "The concept":
+
+    - title: "A result is a number; a claim is a sentence you will defend"
+      layout: terms
+      terms:
+        - term: "Result"
+          definition: "a number your analysis produced, such as a difference of 6 points between two group averages"
+        - term: "Claim"
+          definition: "a sentence you assert and will defend, such as 'the walking group had lower blood pressure'"
+      bullets:
+        - "Turning the first into the second is a decision, not a formatting step."
+        - "You choose how much the sentence is allowed to say."
+      note: >
+        Both words get used loosely, so pin them down before anything else. The
+        result is what the analysis printed. The claim is what you will say out
+        loud and defend when someone pushes back. Because you choose how far the
+        sentence reaches, this is a research decision that belongs to you.
+
+    - title: "The kind belongs to the question; the status belongs to the design"
+      layout: terms
+      terms:
+        - term: "Question"
+          definition: "what you set out to learn, and its kind comes from its own words"
+        - term: "Identification status"
+          definition: "whether this design can actually deliver that answer"
+      bullets:
+        - '"Does walking lower blood pressure?" asks what an intervention would change, so it is causal.'
+        - "It stays causal no matter which data you managed to collect."
+        - "Watched who already chose to walk: not identified by this design, under the assumptions you can defend."
+        - "Your result is then a descriptive association, real and worth reporting."
+      note: >
+        Four ideas govern the choice, and keeping the first three apart is what
+        stops overclaiming before it starts. The question's kind comes from its
+        own words, so weak data never downgrades a causal question into a
+        descriptive one. The status is whether this design can actually deliver
+        that answer [@blair2023rdss]: if nothing separates the walking from the
+        kind of person who walks, the status is not identified under the
+        assumptions you can defend. The result sits
+        beside the causal question rather than replacing it.
+
+    - title: '"Causal and unidentified" fuses two fields into one status'
+      bullets:
+        - 'The status never repeats the word "causal".'
+        - "Written as one status, it fuses the two fields you just separated."
+        - "Keep two lines: what the question asks, and what the design delivers."
+      note: >
+        This is the slip to watch for, and it looks harmless. The kind belongs to
+        the question and the status belongs to the design, so a status that
+        carries the word causal is quietly answering the question it was supposed
+        to leave open. Have someone read their own two lines aloud and check that
+        the lines say different things.
+
+    - title: "Four lines you can reuse on any project"
+      bullets:
+        - "**Question kind:** causal."
+        - "**Identification status:** not identified by this design under stated assumptions."
+        - "**Result:** observed association."
+        - "**Claim boundary:** association only."
+      note: >
+        Put the card on the board and leave it there for the rest of the session.
+        Four fields, written out, and it travels to any project you will run.
+        When somebody asks whether a headline is honest, the answer gets read off
+        this card instead of argued about.
+
+    - title: "A defended identification argument is what earns a causal verb"
+      lead: "Your claim boundary lives in the headline verb."
+      bullets:
+        - 'With no identification argument you write "was associated with lower," never "lowered."'
+        - "What earns the causal verb is the argument, not the size of the gap [@hernan2020whatif]."
+        - "Randomizing is the cleanest way to get one."
+        - "Observational designs can carry causal answers when their assumptions are argued and defended."
+        - "What you may never do is use the verb without the argument."
+      note: >
+        Read the condition slowly, because it is the whole rule and it is
+        routinely dropped. The observational-causal pathway earlier in the book
+        shows designs that do reach causal answers, so this is not a ban on
+        observational work. It is a requirement that the argument exist and be
+        defended before the verb changes.
+
+    - title: "A bound a reader has to hunt for is a bound doing hidden work"
+      bullets:
+        - 'Print "about 6 points lower (95% interval: 1 to 11)" under the headline.'
+        - "The reader meets the doubt at the same moment as the number."
+        - "The 6-point gap points back to the one line of code that computed it."
+        - "A number you cannot trace cannot go up."
+      note: >
+        Two habits make the honesty visible rather than merely asserted. Keeping
+        the interval in the same eye-span means a footnote can no longer carry
+        the caveat where nobody reads it [@wasserstein2016asa]. Tracing means you
+        can show the cell that produced the number when a judge asks. Say plainly
+        that the numbers in this chapter's examples are constructed to make the
+        point, and that the uncertainty lesson is where intervals get built
+        properly.
+
+  "A worked example":
+
+    - title: "Forty volunteers, a 6-point gap, and a headline that reaches too far"
+      bullets:
+        - "A small human-physiology pilot: forty volunteers wear a step tracker for a month."
+        - "Twenty walk at least 8,000 steps a day; twenty do not."
+        - "Average resting systolic: 128 active, 134 less-active."
+        - 'The draft headline reads "Walking LOWERS blood pressure."'
+        - "Two bars on an axis starting at 125, told apart by red and green alone."
+      note: >
+        Give the setup exactly as the pilot ran, then show the draft board and
+        let the room list what is wrong with it before you do. Three problems are
+        sitting there: the verb, the truncated axis, and color carrying the
+        whole comparison. The result itself, the 6-point gap, is fine.
+
+    - title: "The verb claims a crossing the design never paid for"
+      bullets:
+        - "The question behind this study is causal, and it stays causal."
+        - "Nobody was assigned to walk."
+        - "The active group may differ in age, diet, or baseline health."
+        - 'Fill the card, and the honest verb is "was associated with lower."'
+      note: >
+        Walk the decision one field at a time. The question is causal, the design
+        cannot answer it, and the comparison leaves every group difference
+        untouched. Those three fields together fix what the sentence may say. Ask
+        the room which single word changes, and make them say why that word and
+        not the number.
+
+    - title: "Where the axis starts is part of the claim"
+      bullets:
+        - "Bars encode magnitude, so starting them at 125 makes 6 points look like a cliff."
+        - "Start the bars at a meaningful zero."
+        - "Better: plot the two group averages as points with their intervals."
+        - "Use a blood-pressure scale a clinician would recognize."
+        - "Label each bar with its value, so color is never the only channel."
+      note: >
+        Figure honesty is part of the claim audit, not a separate design chore. A
+        truncated axis makes the picture assert more than the number does. On the
+        labels, say who this is for: a reader who cannot separate red from green,
+        or who hears the figure read aloud by a screen reader, should still
+        receive the number rather than only the hue.
+
+    - title: "Same result, a claim that survives the judge"
+      quote: "In this sample, more-active volunteers averaged about 6 points lower resting systolic blood pressure (95% interval: 1 to 11); this is an observed association, and this design does not identify whether walking caused the drop."
+      bullets:
+        - "Nothing about the result changed."
+        - "The verb was downgraded, and the interval rides in the same eye-span."
+        - "A boundary line names what the design does not establish."
+      note: >
+        Read the locked claim out loud, slowly. It is longer than the draft
+        headline and it is the version you can defend when a stranger pushes on
+        it. Point out that all three repairs are visible in one sentence: the
+        verb, the interval, and the boundary. Say again that this interval is
+        constructed for the example, as the chapter states.
+
+    - title: "The printout shows the difference the poster never did"
+      bullets:
+        - "The volunteers chose how much to walk, and age drives both."
+        - "Watch the two group ages printed beside the 6-point gap."
+        - "The age line is one difference you can see."
+        - "The design leaves every unseen one untouched."
+      code: 0
+      note: >
+        Run the block and stop on the last two prints rather than the gap. Age is
+        visible here only because the example was built that way; in a real pilot
+        you would not get the list of confounders printed for you. Ask the room
+        what else might differ between the two groups, let the answers pile up,
+        and land the point: nobody was assigned, so the verb stays "is associated
+        with".

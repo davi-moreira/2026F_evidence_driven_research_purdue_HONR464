@@ -1,0 +1,233 @@
+# Slide plan — Chapter 11, "Uncertainty Before You Need It"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: uncertainty-foundations
+source_sha256: "4e03765f200bfbd369de1c9fd819c550bc94fd51b964edd35668ef397f6b88f6"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Your number is one draw from a procedure"
+      lead: "The honest question is not 'is my number right?'"
+      bullets:
+        - "Different households answered. Different weeks got sampled."
+        - "A coin came up heads for this village and tails for that one."
+        - "Ask instead: how much does a number from this procedure move around?"
+      note: >
+        Every result you will ever produce comes from a procedure that could
+        have come out differently, so the number you hold is one draw from
+        that process. The chapter's claim is that this has an answer you can
+        see rather than guess: run the same procedure again and again and look
+        at the pile of answers it produces. That pile is the whole subject of
+        the chapter, and every other word here is vocabulary for talking about
+        its shape.
+
+    - title: "You run your study once; the pile describes the procedure"
+      bullets:
+        - "'I only get to run my study once. What good is imagining a thousand runs?'"
+        - "A procedure can be studied by repetition even when your study cannot."
+        - "That is why you can report uncertainty from a single sample."
+        - "Bias, power and coverage in the next chapter all describe this pile."
+      note: >
+        Put the question to the room before you answer it, because it is the
+        objection most people arrive with. The uncertainty statement is not
+        about your run, it is about your procedure. Say plainly why this comes
+        before the next chapter rather than after: the next chapter diagnoses a
+        design by its bias, its power and its coverage, and each of those words
+        is a statement about a pile of repeated answers. Meet the pile first
+        and those words stop being jargon.
+
+  "The concept":
+
+    - title: "The estimand does not move. The estimate does."
+      layout: terms
+      terms:
+        - term: "Estimand"
+          definition: "the quantity you want, defined in the world before you touch the outcome data"
+        - term: "Estimator"
+          definition: "the recipe you apply to data to guess the estimand"
+        - term: "Estimate"
+          definition: "what one run of the recipe returns"
+      bullets:
+        - "Estimand: the average monthly rent of all 4,000 households, one town, one month."
+        - "Estimator: draw 60 households at random and take their average rent."
+        - "Estimate: 1,621. One number, from one run, on one day."
+      note: >
+        Three words get confused constantly, and separating them fixes most of
+        the confusion in this area. The estimand is a number about the world,
+        not about your data [@morris2019simulation]: it would have a value even
+        if you never ran a survey. The estimator is a procedure, which is what
+        makes it the thing that can be repeated. The distance between those two
+        facts, one fixed and one moving, is where uncertainty lives. One bridge
+        back to the design vocabulary: in RDSS the inquiry is the question your
+        design asks and the estimand is the value that question has in the
+        world [@blair2023rdss], while estimator and estimate are common
+        statistical usage rather than anyone's coinage.
+
+    - title: "Repeat the recipe and the answers form a shape"
+      bullets:
+        - "Run the survey again on the same town and you get a different estimate."
+        - "Run it 2,000 times and the 2,000 estimates pile up into a shape."
+        - "**Sampling distribution:** the pile you would get from repeating your whole procedure many times in the same world."
+        - "It is a property of the procedure, not of any one run."
+      note: >
+        Hold on to the phrase "in the same world", because it is what makes the
+        pile a statement about the procedure rather than about luck. The
+        simulation on the next slide builds this pile from a town whose true
+        average rent is 1,568, which is a number you only ever know because you
+        built the town yourself.
+
+    - title: "Watch two honest surveys disagree"
+      bullets:
+        - "The estimand is computed from all 4,000 households, before any survey runs."
+        - "The first survey said 1,621. The second said 1,655."
+        - "Neither is a mistake. Both are what this recipe does."
+      code: 0
+      note: >
+        Walk the code as a recipe, not as syntax: build the town, take the
+        quantity you want from it, then run the 60-household survey 2,000
+        times. Ask the room which line is the estimand and which is the
+        estimator before you reveal the printout. The last three prints are the
+        ones the rest of the chapter leans on.
+
+    - title: "Those three numbers are what uncertainty language exists to say"
+      bullets:
+        - "Centre 1,569 against a truth of 1,568: the recipe aims true."
+        - "Spread about 72: how far one survey typically lands from the centre."
+        - "Middle 95% runs from 1,431 to 1,713."
+        - "Where the pile sits. How wide it is. What range covers nearly all of it."
+      note: >
+        Read the three numbers out slowly and name what each one answers. The
+        centre answers where the procedure aims, the spread answers how far a
+        single survey typically lands from that centre, and the middle 95%
+        answers what range the procedure produces almost all of the time. The
+        two terms coming next, standard error and confidence interval, are two
+        of these three facts under a formal name.
+
+    - title: "Width is not aim, and a 95% recipe is not a 95% range"
+      layout: terms
+      terms:
+        - term: "Standard error"
+          definition: "the typical distance between one run's estimate and the centre of the pile"
+        - term: "Confidence interval"
+          definition: "a range built by a recipe that catches the estimand a stated share of the time, when the same recipe is repeated"
+      bullets:
+        - "For this survey the standard error is about 72."
+        - "It does not say how wrong today's estimate is."
+        - "A tightly packed pile can still sit centred on the wrong quantity."
+        - "The next chapter gives aim its own name."
+      note: >
+        Read the interval definition slowly, because the obvious paraphrase of
+        it is false. You cannot see the pile from one survey, but you can
+        estimate its width from one survey and then build a range around your
+        single estimate. Keep width and aim apart in the room's heads: they are
+        two different facts about the same procedure.
+
+    - title: "The intervals caught the truth 94.8% of the time"
+      bullets:
+        - "The width here is estimated from ONE survey, not from the pile."
+        - "Count how often the range brackets 1,568 across 2,000 runs."
+        - "Any one interval either caught 1,568 or missed it, and you would never know which."
+      code: 1
+      note: >
+        The recipe does what it promises, and the 95% property belongs to the
+        recipe, only while its assumptions hold. You can check that here only
+        because this town is one we built. In a real study you never see the
+        pile: it is implied by your sampling plan and your stated assumptions.
+        Say the bound out loud, since it is the one people drop: simulation
+        checks what those assumptions imply, it does not prove the world obeys
+        them.
+
+    - title: "Fixed numbers do not have chances"
+      quote: "my estimate is 1,621, from a procedure whose 95% intervals catch the true average about 95 times in 100"
+      bullets:
+        - "The honest sentence about your own study is quoted below."
+        - "The dishonest one: 'a 95% chance the true average is between 1,470 and 1,771.'"
+        - "The honest sentence describes a procedure. The dishonest one claims a chance for a fixed number."
+        - "Your computed interval either contains the truth or it does not [@greenland2016misinterpretations]."
+      note: >
+        The dishonest version is the one you will hear constantly, so make the
+        room say the honest one aloud once. There is no chance left inside a
+        finished interval, because both the true average and your range are now
+        fixed. What has the 95% property is the recipe that produced the range.
+
+  "A worked example":
+
+    - title: "Same 60 households, and everything about the uncertainty changed"
+      bullets:
+        - "A business-school team wants this month's average rent, to price a housing product."
+        - "Plan: survey 60 households drawn at random, report a 95% interval."
+        - "Cheaper plan: draw 12 buildings at random, survey 5 rented flats in each."
+        - "Nothing about the estimand changed. Nothing about the arithmetic changed."
+      note: >
+        State their three commitments in the chapter's order, because they are
+        the three this whole lesson has been building: the estimand is average
+        monthly rent across all renting households in the town this month, the
+        estimator is the mean of 60 households drawn at random from the list of
+        rented dwellings, and the uncertainty statement is a 95% interval built
+        from the spread inside their own sample. Then note that the field
+        team's change sounds entirely reasonable. Knocking on 60 scattered
+        doors is expensive, and 12 buildings of 5 flats is still 60 households
+        from the same population.
+
+    - title: "Flats in one building already tell you about each other"
+      bullets:
+        - "**Dependence:** learning one observation changes what you should expect about another."
+        - "One landlord, one neighbourhood, one heating system, one rent schedule."
+        - "Another flat in the same building adds less than a fresh independent flat would."
+        - "The arithmetic does not notice. The procedure's honesty does."
+      note: >
+        The question the room will ask is how anyone would know their data have
+        this problem. The chapter's answer is to ask how the data were
+        collected, not what they look like. If units were selected in groups,
+        measured repeatedly, or connected to each other, the dependence is in
+        the design, and the design is something you know before you see a
+        single number.
+
+    - title: "The naive interval promised 95% and delivered 63.2%"
+      bullets:
+        - "Two intervals, same data: 60 flats, or the 12 building means."
+        - "Watch the two catching rates, not the estimates."
+        - "Nothing in the output would have warned the team."
+      code: 0
+      note: >
+        Treating 60 flats as 60 independent observations catches the truth
+        63.2% of the time [@donner2000cluster]. It is not a little optimistic,
+        it is wrong about one case in three. Switching to buildings as the unit
+        brings it to 91.7%, better by a lot and still shy of 95, which is worth
+        being honest about rather than rounding away. With only 12 buildings
+        the usual multiplier of 1.96 is too narrow; widening it to the value
+        appropriate for 12 groups gets 94.5%, and surveying 40 buildings at 5
+        flats each gets 94.2% with the ordinary multiplier.
+
+    - title: "Sixty flats in 12 buildings carry roughly the information of 14 independent flats"
+      bullets:
+        - "That number comes from these data, not from a rule about group size."
+        - "'My observations are dependent' does not tell you which way to correct."
+        - "Direction depends on the design, the estimator, and how your units relate."
+        - "A design that balances within each group can narrow the pile instead."
+      note: >
+        This is the practical lesson, and it is not about arithmetic. Say
+        plainly that 14 is not "divide by the group size": a different
+        dependence structure gives a different answer. Here the flats in a
+        building resemble each other, which widens the pile, so the honest fix
+        is a wider interval. Do not let the room walk out with "dependence
+        means widen", because that is a rule the chapter refuses to give.
+
+    - title: "Extra buildings buy precision; extra flats inside one buy little"
+      lead: "With the variability this example assumes, and not as a general rule."
+      bullets:
+        - "Doubling flats per building, five to ten, moves the spread from about 77 to 76."
+        - "Doubling the buildings instead moves it to about 54."
+        - "The wobble from which buildings you picked is untouched by measuring more flats."
+        - "Extra flats are not worthless. They run into sharply diminishing returns."
+      note: >
+        Bound this the way the chapter does: it holds with the variability this
+        example assumes, not everywhere. Close with the chapter's four-option
+        check, read aloud, on a reported interval of 1,470 to 1,771. The
+        warranted reading is that under its assumptions the procedure catches
+        the true average in about 95 of every 100 repeated surveys. The other
+        three fail in ways worth naming: one hands the procedure's repetition
+        rate to a finished interval, one confuses uncertainty about a town-wide
+        average with the far wider spread among households, and one swaps a
+        moving sequence of intervals for this one fixed range.

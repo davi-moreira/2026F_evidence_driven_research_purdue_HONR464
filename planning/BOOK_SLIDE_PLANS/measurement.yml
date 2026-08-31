@@ -1,0 +1,169 @@
+lesson: measurement
+source_sha256: "7cfcf1fe66b03a38b2c6b6d50f49d8c10060ab1a6223cb3cb8f82c921670540e"
+sections:
+  "Why this decision matters":
+    - title: "\"Engaged\" is a word. Which number did you record?"
+      bullets:
+        - "A people-analytics lead, reading the first draft of a workplace study."
+        - "The decision on the table: which specific number stands in for the big idea."
+      quote: "Before you tell me the pilot made people more engaged, tell me exactly what you put a number on. 'Engaged' is a word. I need to know which question you asked, on what scale, and what that number quietly ignores."
+      note: >
+        Read the quote aloud and let it sit. The analyst is not attacking the finding,
+        but asking a question the draft cannot answer. Ask the room what the analyst
+        would have to hear before believing the headline. That is the whole chapter:
+        the question that was asked, the scale it was asked on, and what the number
+        quietly ignores.
+
+    - title: "Your finding is only as trustworthy as the swap"
+      bullets:
+        - "Every result answers a question about some idea: engagement, market power, wellbeing, participation."
+        - "You never measure the idea. You measure a number that stands in for it."
+        - "That substitution is the swap, and it is where trust is won or lost."
+        - "So say which number you recorded and what it quietly leaves out."
+      note: >
+        This is worth slowing down on, because it is easy to nod at and easy to skip in
+        practice. Nobody has ever measured engagement. People have measured answers to
+        questions about engagement. The chapter's move is to make the swap explicit and
+        defensible rather than silent, and everything after this slide is machinery for
+        doing that.
+
+  "The concept":
+    - title: "\"Employee engagement\" becomes the mean of one 1 to 7 item"
+      layout: terms
+      lead: "Employee engagement, then willingness to recommend the workplace, then the mean of one item."
+      terms:
+        - term: "Concept"
+          definition: "the abstract idea your question is really about; rich, fuzzy, and not measurable directly"
+        - term: "Construct"
+          definition: "the one specific, named facet of the concept you decide to measure"
+        - term: "Indicator"
+          definition: "the exact number a procedure produces"
+      note: >
+        Climb down the ladder one rung at a time and say the example out loud at each
+        rung. The concept is employee engagement. The construct is willingness to
+        recommend the workplace, which is how strongly someone would tell a friend to
+        work there. The indicator is the mean response to the item "I would recommend
+        this company as a place to work," rated 1 to 7, averaged over everyone who
+        answered. You pick a construct because it is concrete enough to attach a
+        procedure to.
+
+    - title: "Validity belongs to a claim, not to the instrument"
+      bullets:
+        - "Ask whether accumulated evidence supports the meaning you attach to your number [@aera2014standards]."
+        - "And for the specific use you have in mind, not for any use at all."
+        - "May well support: people who answered expressed more willingness to recommend this workplace."
+        - "Does not by itself support: employees here are more engaged."
+        - "Change the reading or the use, and you need evidence again."
+      note: >
+        Engagement includes burnout and whether people feel their work matters, so one
+        recommend-a-friend rating cannot carry the word by itself. Keep the chapter's
+        bound in place when you say it: a broader argument, with more evidence behind
+        it, might eventually reach further. What is ruled out is treating validity as a
+        stamp the rating carries around. It belongs to a claim: this number, read this
+        way, used for this purpose, with evidence behind it.
+
+    - title: "Reliability means nothing until you say what repeats"
+      bullets:
+        - "**Repeat the occasion:** re-ask the same people two weeks later."
+        - "**Repeat the rater:** have two trained coders score the same speeches."
+        - "**Repeat the items:** split a many-question scale for one construct into comparable halves."
+        - "For a fast-moving mood, a different answer is news, not error."
+      note: >
+        Push on the occasion check, because it is the one people run without thinking.
+        It only means something if the thing you measure should have held still over
+        those two weeks, and if the first asking did not change the second answer. Ask
+        the room which of the three repeats their own instrument could actually
+        support, and what a disagreement would mean if it appeared.
+
+    - title: "Split-half compares two halves of your items, on the same people"
+      bullets:
+        - "A twelve-item scale gives each employee an odd-item score and an even-item score."
+        - "Check that a person scoring high on one scores high on the other."
+        - "The halves have to be comparable, not odd-and-even by accident of order."
+        - "Each half is only half as long, so raw agreement understates the full scale."
+      note: >
+        Split-half reliability is agreement between two halves of the items on the same
+        people. The two cautions are not footnotes. If the items happen to be ordered
+        by topic, an odd-even split may compare two different things. And because
+        shorter scales are noisier, the raw agreement between halves runs low;
+        statisticians apply a standard length correction to get from the half-scale
+        number to the full-scale one.
+
+    - title: "You split items, never people"
+      bullets:
+        - "You could compare the average of one half of your respondents against the other."
+        - "That tells you how much a group average wobbles between samples of people."
+        - "It is a real thing to know, and an entirely different question."
+        - "It says nothing about whether your instrument reads consistently."
+      note: >
+        This is the warning that saves a common wasted afternoon, so say it plainly and
+        then ask the room to repeat it back. The error is easy to make because both
+        procedures involve splitting something in two and correlating the halves. Only
+        one of them is about the instrument. Step 6 of the It is your turn section
+        forbids the wrong one by name.
+
+    - title: "A bathroom scale is reliable and still a poor stand-in for fitness"
+      bullets:
+        - "The scale reads your weight the same way five times in a row."
+        - "Weight is still a poor stand-in for \"fitness\" [@cronbach1955construct]."
+        - "Reliability feeds validity without settling it."
+        - "An indicator can be perfectly reliable and still support the wrong claim."
+      note: >
+        Keep this example on the board for the rest of the lesson. A repeatable number
+        earns you the right to ask the validity question; it does not answer it. When
+        the retest correlation comes back high in the worked example, this is the slide
+        to point back to.
+
+  "A worked example":
+    - title: "Sixteen sites, and one question about the flexible-scheduling pilot"
+      bullets:
+        - "Are the sites that ran the pilot more engaged than the sites that kept fixed shifts?"
+        - "**Concept:** employee engagement. No instrument reads \"engagement.\""
+        - "**Construct:** willingness to recommend the workplace."
+        - "**Indicator:** mean of one 1 to 7 agreement item, at eight pilot and eight comparison sites."
+      note: >
+        Several facets of engagement would have been honest choices here. This one is
+        chosen because someone who would tell a friend to work here is telling you
+        something real about their attachment to the job. Say why out loud, because
+        step 2 of the It is your turn section asks for exactly that line: this facet,
+        and not a neighboring one, for this reason.
+
+    - title: "Check reliability first, then name what the item ignores"
+      bullets:
+        - "Re-ask a random tenth two weeks later and compare their two answers."
+        - "They land close, so the item is repeatable rather than a coin flip dressed as data."
+        - "It says nothing about burnout, about whether pay feels fair, or about work that matters."
+        - "It cannot hear from the people who already quit."
+        - "Naming omissions begins the validity argument. It does not finish it."
+      note: >
+        The group who already left is the sharpest omission, because it is exactly the
+        group an engagement question most wants to reach, and it is structurally absent
+        from a survey of current employees. Ask the room which omission on their own
+        project has that shape. The indicator is one true facet, not the whole of
+        engagement.
+
+    - title: "The number is real, and its meaning stops where the construct stops"
+      bullets:
+        - "Defensible: pilot sites averaged higher willingness to recommend than comparison sites."
+        - "With the boundary attached: one facet of engagement, measured with a repeatable single item."
+        - "Not defensible: \"the pilot made employees more engaged.\""
+        - "You never measured the facets your indicator skips, and never heard from the people who left."
+      note: >
+        That validity is an argument about a particular interpretation and use, and
+        never a property the instrument owns, is the position of the testing standards
+        [@aera2014standards]. Have someone read the defensible sentence and the
+        indefensible one back to back. The difference is a few words, and those words
+        are the whole claim boundary.
+
+    - title: "Watch what the reliability number does not license"
+      code: 0
+      bullets:
+        - "The block builds the sixteen sites, reads the indicator, and runs the retest."
+        - "The retest re-asks the same people the same item, never a second group of people."
+        - "The printed correlation says the item is repeatable, and stops there."
+      note: >
+        Run it at SEED 464 so the numbers reproduce, then read the two printed lines
+        against each other. The site means answer the comparison question; the
+        correlation answers the repeatability question. Neither says whether
+        recommend-a-friend captures engagement, and neither reaches the people who
+        quit. Ask what you would have to add to the study to move either of those.

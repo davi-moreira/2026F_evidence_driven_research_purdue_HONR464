@@ -1,0 +1,188 @@
+# Slide plan — Chapter 27, "Recognizing False Confidence"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: false-confidence
+source_sha256: "49c03a42c8a6b8a9f2ba6fa7e70e4a52f5ed8f8b00d3607bae06fccd94d8aa19"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "The reviewer acts on the number, not on the sentence"
+      quote: "I don't act on the sentence. I act on the number behind it."
+      bullets:
+        - "A fisheries biologist reviews stream-restoration reports for a state agency."
+        - "Every year the summaries announce success in polished, sure prose."
+        - "Their ask: the measurement, how you computed the change, why the project gets the credit."
+      note: >
+        Open with the person, not the concept. This reviewer has read a
+        hundred confident paragraphs, so polish has stopped carrying any
+        information for them. Read their standard aloud and notice that it
+        is three separate demands: the measurement itself, the computation
+        that turned it into a change, and the reason the project rather than
+        something else gets the credit. Ask the room which of the three
+        their own project currently answers.
+
+    - title: "An AI partner writes you a sure-sounding finding in seconds"
+      bullets:
+        - "A confident paragraph moves nobody who has read a hundred confident paragraphs."
+        - "What moves them is a number you recomputed and can defend."
+        - "Treat the confidence as worth nothing until you check what sits under it."
+        - "The decision: what you require of a confident result before your name goes on it."
+      note: >
+        The speed is the new part. An AI partner writes a beautiful,
+        sure-sounding finding in seconds, so polish now tells you nothing
+        about the care behind it. Put the decision on the table plainly,
+        because it is the one the whole lesson turns on: you
+        are setting your own standard for what a confident result has to
+        survive before you repeat it as your own.
+
+  "The concept":
+
+    - title: "\"Cut nitrate by roughly 40 percent\" feels settled before you look"
+      bullets:
+        - "An AI summary reports that a stream cleanup cut nitrate by roughly 40 percent."
+        - "The crisp figure and the smooth wording make the claim feel settled."
+        - "You have not looked at a single measurement yet."
+        - "**False confidence:** fluent, detailed output makes you feel sure of what you never verified [@ji2023hallucination]."
+      note: >
+        Give the example before the name, because the feeling is the thing
+        being taught. A round number and clean prose do work on a reader that
+        neither one has earned. Say what the trap is not: it is not the tool
+        lying to you on purpose, and it is not a failure you can spot by
+        rereading the sentence more carefully. It is your own sense of
+        certainty arriving before any check did.
+
+    - title: "Two habits make the trap dangerous"
+      layout: terms
+      terms:
+        - term: "Automation bias"
+          definition: "the tendency to over-trust an automated system and stop checking, precisely because a machine produced the answer"
+        - term: "Illusion of understanding"
+          definition: "mistaking a smooth explanation for real comprehension"
+      bullets:
+        - "You would double-check a lab partner's arithmetic without thinking twice."
+        - "You paste the AI's percentage straight into your report because the tool computed it [@goddard2012automation]."
+        - "You nod along line by line, then could not defend the number without rerunning it [@rozenblit2002illusion]."
+      note: >
+        Both habits are ordinary, which is what makes them hard to see in
+        yourself. Automation bias is a double standard: the same arithmetic
+        gets checked from a person and waved through from a machine. The
+        illusion of understanding is subtler, because following an
+        explanation feels almost exactly like being able to reproduce it. The
+        test that separates them is whether you could rerun the calculation
+        alone and get the same answer. Ask the room to name a number in their
+        own project that would fail that test today.
+
+    - title: "A number wrong on turn one is usually still wrong on turn six"
+      bullets:
+        - "You prompt, read, refine, and run again, and agentic tools spin those cycles on their own."
+        - "Each pass comes back cleaner and surer than the last."
+        - "That polish feels like convergence on the truth. It is nothing of the kind."
+        - "Confidence grows across the loop whether or not accuracy does."
+      note: >
+        This is the part the loop era adds, so spend a minute on it. Nobody
+        stops at a first answer any more, and every extra turn improves the
+        writing whether or not it touches the number. A wrong figure on turn
+        one usually survives to turn six, only better dressed. The practical
+        instruction is narrow and worth stating exactly: check the number on
+        the turn you actually intend to use, not on some earlier turn that
+        looked rougher.
+
+    - title: "Verify the number, not the paragraph"
+      layout: terms
+      terms:
+        - term: "Verification"
+          definition: "an independent check, run by a method outside the model, that a result is actually true"
+      bullets:
+        - "Do not trust the AI's \"40 percent.\""
+        - "Recompute the average nitrate before and after the cleanup from the raw readings."
+        - "Then see what the data really show."
+      note: >
+        The word doing the work in that definition is independent: the check
+        has to come from outside the model, or it is the same source agreeing
+        with itself. Asking the tool whether it is sure is not verification.
+        Recomputing the mean from the readings yourself is. Keep this rule
+        short enough that the room can carry it out of the door.
+
+    - title: "Code that runs is not code that is correct"
+      bullets:
+        - "A summary that reads beautifully is not a summary that is right."
+        - "Nothing about how sure a sentence sounds tells you whether it is true."
+        - "Decide which independent check you run before you repeat the claim as your own."
+      note: >
+        Two different mistakes get made here and both are common. Code that
+        executes cleanly has proved only that it ran, and prose that reads
+        well has proved only that it was written well. Neither is
+        evidence about the number. Close the concept by naming the choice
+        that remains yours: which check, run by what method, before you say
+        the claim out loud.
+
+  "A worked example":
+
+    - title: "One small stream, a buffer planted last year, two years of readings"
+      bullets:
+        - "**Riparian buffer:** a strip of trees and grasses planted along a bank to filter runoff."
+        - "**Nitrate:** a fertilizer nutrient that in excess fuels algal blooms and starves water of oxygen."
+        - "You have weekly nitrate readings in milligrams per liter, the year before and the year after."
+        - "The agency cares because low oxygen kills the trout the restoration was meant to bring back."
+      note: >
+        Set the stakes before the numbers, because they explain why anyone
+        would want the confident answer to be true. The restoration was meant
+        to bring the trout back, and low oxygen is what kills them, so a
+        clean 40 percent is the result everyone involved is hoping for.
+        That hope is exactly the condition under which a fluent summary slips
+        through unchecked.
+
+    - title: "Reaching to quote the clean result is where false confidence would win"
+      quote: "The riparian buffer reduced average nitrate by about 40 percent, a clear environmental success."
+      bullets:
+        - "You asked an AI to summarize the dataset, and this came back."
+        - "The sentence is fluent and sure."
+        - "You feel the relief of a clean result and reach to quote it."
+      note: >
+        Name the moment rather than the error. The failure is not that the
+        tool produced this sentence; it is the reach for the quote, which
+        happens before any check and feels like efficiency. Ask the room to
+        say what they would have done next with this sentence in hand, and
+        whether that step would have caught anything.
+
+    - title: "The real drop is 1.2 mg/L, about 15 percent, not 40"
+      bullets:
+        - "Before-mean 8.1 mg/L. After-mean 6.9 mg/L. Subtract."
+        - "The confident summary overstated the change by more than double."
+        - "Two means and a subtraction from the raw readings settle the number."
+      note: >
+        Do the arithmetic on the board, slowly, because its smallness is the
+        point. Two means and a subtraction is all that stood between the
+        inflated figure and a report carrying your name. Overstating by more
+        than double is not a rounding difference, and nothing in the wording
+        of the summary hinted at it.
+
+    - title: "Even the true 15 percent cannot be pinned on the buffer alone"
+      bullets:
+        - "The readings come from one site with no comparison stream."
+        - "A wet spring could move nitrate just as much."
+        - "So could a change in fertilizer practice upstream."
+        - "Keep this: nitrate fell about 15 percent at this site over one year."
+        - "Drop the inflated figure, and drop the word \"success.\""
+      note: >
+        The second problem hid behind the same polish and is the harder one,
+        because fixing the number does not fix it. With one site and no
+        comparison stream, even an honest 15 percent could come from the
+        weather rather than the planting. Read the kept sentence aloud and
+        have the room notice what it does not say: it reports that nitrate
+        fell, and it credits nobody for it.
+
+    - title: "Recomputing the drop takes about as long as reading the confident sentence"
+      bullets:
+        - "Watch the two printed means, then the drop in mg/L and in percent."
+        - "Compare that percent against the 40 the summary claimed."
+        - "The last lines say what the number still cannot establish."
+      code: 0
+      note: >
+        Run it in front of the room and read the printout in order. The block
+        builds the two years of readings and recomputes the drop, which is
+        the whole verification. Then point at the closing lines: one site, no
+        comparison stream, and a wet spring would look the same. The code
+        settles what the number is, and it deliberately refuses to settle
+        what the number means.

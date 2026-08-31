@@ -1,0 +1,180 @@
+lesson: declare-your-question
+source_sha256: "332c35d1fc6d722e79b9dadbdd49c2589dfc87b934663ba04854c3a1d5132261"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "One sentence, and the whole project answers to it"
+      lead: "Which exact words, out of every way your question could be phrased, become the sentence the project answers to?"
+      bullets:
+        - "Which evidence belongs. Which analysis runs. Which claim ships."
+        - "Every one of those choices checks itself against these words."
+        - "That makes this the highest-stakes sentence of the project so far."
+      note: >
+        This is the decision on the table today. Not a topic, not a hunch: the
+        exact wording. Ask the room to name a later decision that would not be
+        touched by a change in this sentence, and let them try. The point is
+        that there isn't one, because every downstream call is measured against
+        the declaration.
+
+    - title: "Change one word and you change which rows you count"
+      bullets:
+        - "\"dinner entrees\" becomes \"what a student pays for dinner\"."
+        - "You have just changed which rows of the world your project counts."
+        - "\"went together\" becomes \"raised\"."
+        - "You have just promised a comparison your design may never pay for."
+      note: >
+        Take these two swaps slowly, one at a time. The first changes which
+        rows of the world the project counts. The second changes what the
+        project promises: one verb commits you to a comparison the design may
+        never pay for. Words do real work here, which is why the wording is
+        the decision and not the packaging.
+
+    - title: "The declaration is a contract with the evidence, not prose polish"
+      bullets:
+        - "You built rules first: a ledger, a delegation map, a verified exchange."
+        - "You wrote an ownership statement. Those rules were never the point."
+        - "They exist so this decision can be made well."
+        - "Write the contract while changing it still costs nothing."
+      note: >
+        This is where the studio's two purposes meet. The declaration is the
+        first artifact your rules govern end to end, so it is also the first
+        real test of whether those rules do anything. And rewriting a question
+        today costs nothing. Rewriting it later does.
+
+  "The concept":
+
+    - title: "A declaration has two parts, and neither covers for the other"
+      bullets:
+        - "The **lead question**: the one sentence your evidence will answer."
+        - "You classified it by kind and reach in the last lesson."
+        - "The **field card**: the short record pinning down every term that sentence carries [@booth2024craft]."
+      note: >
+        Keep the two separate in your head. The question is what a reader sees.
+        The card is what makes the question mean one thing rather than several.
+        A question without a card is open to interpretation, and a card without
+        a question has nothing to pin down.
+
+    - title: "Four fields pin down what the sentence is actually about"
+      layout: terms
+      terms:
+        - term: "Objective"
+          definition: "what the study intends to describe, predict, or explain"
+        - term: "Unit of analysis"
+          definition: "the kind of entity the answer makes a claim about"
+        - term: "Outcome"
+          definition: "what you will actually record"
+        - term: "Conditions"
+          definition: "the comparison, setting, or time that gives the outcome meaning"
+      note: >
+        Each of these four is a decision you can get wrong quietly. Ask the room for the unit of analysis in their
+        own project right now. Whoever hesitates has found the field their card
+        most needs. The card also carries the question's kind and reach, which
+        came from the compass in the last lesson.
+
+    - title: "A readable question plus a complete card beats a sixty-word question"
+      bullets:
+        - "Do not force every field into one overloaded sentence."
+        - "The card carries kind and reach, from the compass."
+        - "It also carries the **provisional claim boundary**."
+        - "The sentence you hope to defend, and the stronger one you already know you cannot."
+      quote: "A boundary written early is a promise; a boundary written late is an excuse."
+      note: >
+        The temptation is to cram objective, unit, outcome, and conditions into
+        the question sentence itself, and the result is unreadable. Put them on
+        the card instead. Then write the boundary pair now, before any results
+        exist, because a boundary you write after seeing the numbers is
+        indistinguishable from an excuse.
+
+    - title: "Wording delegates well; what the project promises does not"
+      bullets:
+        - "A tool can produce five phrasings of your question in seconds."
+        - "Some of them will be sharper than yours."
+        - "The choice among them stays with you."
+        - "So do the kind, the reach, and the boundary: they decide what the project promises."
+      note: >
+        This is why declaring happens in this studio and not somewhere quieter.
+        It is a delegation exercise with a clean split. Drafting phrasings is
+        genuinely faster with a tool. Deciding which phrasing your name signs
+        is not something a tool can do for you, because it is a promise about
+        what you will defend.
+
+    - title: "A wording you cannot account for is not sharper. It is different."
+      layout: terms
+      terms:
+        - term: "Candidate wording"
+          definition: "the one part of the declaration that delegates well"
+        - term: "Show-what-changed"
+          definition: "for every candidate wording, the tool states exactly which words differ from yours and what each change does to the question's meaning"
+      bullets:
+        - "Run every candidate through this before you adopt a single one."
+        - "Cannot account for a change? Then the sentence is a different question."
+      note: >
+        Show-what-changed is the discipline that makes the delegation safe. It
+        converts a vague feeling that a sentence reads better into a word-level
+        account you can check. Have someone in the room read out a candidate
+        wording and try to name every word that moved. That is the whole
+        method: account for every word, or treat the sentence as a different
+        question.
+
+  "A worked example":
+
+    - title: "The restaurant reader arrives with a classified question"
+      quote: "did menu prices near campus rise faster than overall prices between 2019 and 2025?"
+      bullets:
+        - "Kind: descriptive. Reach: the data at hand."
+        - "The classification is done. The declaration is not."
+      note: >
+        Remember where this reader has been. The last lesson put the question
+        on the compass. That fixed what sort of answer is available, and it did
+        not fix a single term in the sentence. That is the work left, and it is
+        what the field card does.
+
+    - title: "Wording A counts entree prices; wording B counts price plus fee"
+      bullets:
+        - "Wording A pins the outcome to listed dinner-entree prices."
+        - "Wording B counts the listed price plus its delivery fee, across every item type."
+        - "Both run against the same overall-price benchmark."
+      note: >
+        Neither wording is careless. Both are things a reasonable person would
+        write on a first pass. Ask the room which one they would have written,
+        and then ask what would happen if they wrote one and analyzed the
+        other. The block on the next slide runs both against one seeded world.
+
+    - title: "Same world, two sentences, two answers"
+      code: 0
+      bullets:
+        - "Watch the three printed growth figures: the index, wording A, wording B."
+        - "The overall index enters as an input, not as something this code computed."
+        - "Both wordings outran the retrieved index here, by different margins."
+      note: >
+        The world is seeded at 464, so everyone sees the same numbers. Delivery
+        fees barely existed in 2019 and are common in 2025, which is what pulls
+        the two wordings apart. Point at the index line and name it as Lesson
+        2's discipline: you retrieve that number from the agency's table, and
+        the 18% in the code is a stand-in for the one you would retrieve.
+
+    - title: "The card records why wording A won"
+      bullets:
+        - "Objective: describe menu-price growth against the overall index."
+        - "Unit: a menu item retrievable in both years. Outcome: the listed price."
+        - "Conditions: 2019 versus 2025. Kind: descriptive. Reach: the data at hand."
+        - "The comparison in the sentence is now visible in the code."
+      note: >
+        Fixing the outcome and the units before any analysis runs is the
+        standard craft of question formulation [@booth2024craft]. Read the card
+        line by line and check each one against the code the room just saw.
+        That is what keeps the two wordings from blurring into one claim later.
+
+    - title: "The boundary pair says what this sentence will not buy"
+      bullets:
+        - "Hope to defend: \"on this panel, listed prices rose faster than the index\"."
+        - "Will not defend: \"eating near campus became less affordable\"."
+        - "Fees, portions, and wages sit outside these words."
+        - "Wording B is not wrong. It is a different project."
+      note: >
+        The second sentence is the one everybody actually wants to say, and it
+        is the one these words cannot reach. Saying so now costs nothing.
+        Saying so after the analysis looks like backing down. The card is what
+        keeps wording A and wording B from blurring into one claim later.

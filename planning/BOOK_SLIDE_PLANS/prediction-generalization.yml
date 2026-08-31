@@ -1,0 +1,230 @@
+# Slide plan — Chapter 17, "Prediction and Generalization"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: prediction-generalization
+source_sha256: "a481e964f238af9a55b8153d94807a9793465d1cd60992f88a8941b9f802bc2d"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "94% accuracy is not yet a reason to close a beach"
+      bullets:
+        - "A county public-health officer decides week by week whether to post a swimming advisory."
+        - "Blooms of cyanobacteria can turn a safe beach into a health hazard within days."
+        - "A vendor arrives with a model that flags harmful blooms \"with 94% accuracy\"."
+        - "The officer does not act on that number."
+      note: >
+        Put the decision on the table before any vocabulary arrives: whether you
+        are forecasting cases nobody has seen yet, and if you are, what score you
+        would accept as honest. The officer is not being difficult. A single
+        percentage carries no information about what it was compared with, or
+        about which weeks produced it. Ask the room what they would want to know
+        before closing a public beach on a model's say-so.
+
+    - title: "Beat the dumb rule, on weeks the model never saw"
+      quote: "Ninety-four percent compared to WHAT? Most weeks this lake is fine, so if I just say 'no bloom' every single week I am already right about eighty-five percent of the time."
+      bullets:
+        - "The words are a public-health officer's, burned before by an impressive-sounding number."
+        - "Question one: is it better than the dumbest honest rule?"
+        - "Question two: was it earned on cases the model never saw?"
+        - "Get those wrong and you cry wolf or miss a real hazard."
+      note: >
+        These are the two questions the whole chapter trains you to answer before
+        you trust any forecast, and they are worth reading aloud in the officer's
+        voice. The first asks what a free rule already achieves, the second asks
+        where the score was earned. Both failures the chapter names are real: get
+        these wrong and you cry wolf, or you miss a real hazard.
+
+  "The concept":
+
+    - title: "Prediction is descriptive: what will happen, never why"
+      layout: terms
+      terms:
+        - term: "Prediction"
+          definition: "a best guess about a case whose outcome you cannot see yet"
+        - term: "Reach"
+          definition: "the cases a claim is meant to cover"
+        - term: "Generalization"
+          definition: "reach from your sample to a broader population"
+      bullets:
+        - "Forecast whether a lake blooms next week, before next week exists."
+        - "Prediction's reach is unseen cases: units outside your data whose outcome is still unknown."
+        - "Generalization's reach: from the twelve lakes you measured to every lake in the watershed."
+        - "Both go beyond the data in hand. Both need a named crossing that licenses them."
+      note: >
+        This pathway is the book's own addition. The four pathways around it
+        adapt RDSS's design library, and prediction extends that library rather
+        than adapting a part of it, because a forecast is judged by how it
+        performs on cases nobody has seen yet [@blair2023rdss]. Keep the two
+        cousins apart in the room's heads: unseen cases and a broader population
+        are different reaches, and a design that licenses one does not
+        automatically license the other.
+
+    - title: "The baseline is free, and it is the bar you must clear"
+      bullets:
+        - "**Target:** the one column you predict, for example `bloom_next_week`."
+        - "**Baseline:** the dumbest honest rule, usually \"always guess the most common answer\"."
+        - "If 85% of weeks have no bloom, the rule scores 85% for free. That is the bar."
+        - "**Metric:** matched to the target. Accuracy misleads when blooms are rare."
+        - "Score the baseline and every candidate on the same metric, or the comparison means nothing."
+      note: >
+        A forecast earns trust under a four-part contract in fixed order: target,
+        baseline, split, metric, plus a leakage check. Three of the four fit on
+        this slide; the split gets the next two because it is where most
+        honest-looking forecasts go wrong. On the metric, say what recall is
+        before you use it: the share of real blooms the model catches. When
+        blooms are rare that number often matters more than accuracy, because
+        accuracy can stay high while every bloom is missed.
+
+    - title: "Fit on one summer, choose on another, lock the third"
+      bullets:
+        - "**Training set:** the data each candidate model learns from. Your first summer."
+        - "**Selection set:** separate data you use to choose among candidates. Your second summer."
+        - "**Final holdout:** locked away and opened exactly once. Your third summer."
+        - "Run them in that order: fit, then choose, then score your one choice."
+      note: >
+        The middle step is the one people skip, and the reason for it is easy to
+        miss. Comparing three feature lists is itself a use of data, so the data
+        that did the comparing can no longer act as an exam. Ask the room which
+        of the three roles their own project currently has, and which of their
+        data would still be untouched when the final score is due.
+
+    - title: "On average, the score that crowned your winner flatters it"
+      bullets:
+        - "Try twelve models and keep the best score you saw."
+        - "Some model was always going to look best on that particular data."
+        - "Partly because its errors fell kindly there. That gap is **model-selection bias** [@varma2006bias]."
+        - "On one split the flattery can be large, small, or even reversed. Over many splits it points up."
+        - "Change anything after the final score and the holdout has joined development."
+      note: >
+        Report the crowning score as final and you promise performance the model
+        cannot deliver. State the consequence of the last bullet plainly: if the
+        final holdout makes you go back and change a feature, a threshold, or a
+        model, it has stopped being an exam, and you need fresh untouched data
+        for the next final check. In the simple workflow this book teaches,
+        seeing the final score seals the analysis. Specialists have techniques
+        for careful reuse and they are beyond this chapter, so hold the simple
+        rule until you have a defended reason not to.
+
+    - title: "A leak is information you could not have at forecast time"
+      bullets:
+        - "The classic leak: the toxin concentration measured during the bloom."
+        - "A leaked feature inflates your score on today's data and collapses on tomorrow's."
+        - "Time carries its own version. Your exam weeks should come after the weeks you learned from."
+        - "Splitting weeks at random hands the model August while asking it to forecast July."
+        - "Keep the blocks in calendar order, and let the latest block be the one you lock."
+      note: >
+        Choosing your model on the final holdout is the same failure wearing
+        different clothes, since that score was supposed to stand in for data you
+        have never seen. On the calendar point, name what a shuffled split
+        actually answers: how well the model fills in scattered past weeks,
+        rather than how well it forecasts the next one. Bound it the way the
+        chapter does. Specialists relax the calendar default in narrow, argued
+        cases, and none of them starts by shuffling the calendar.
+
+  "A worked example":
+
+    - title: "Your baseline scores 0.85 before you fit anything"
+      bullets:
+        - "You want to warn swimmers a week ahead."
+        - "Target: `bloom_next_week`, one if the lake exceeds the advisory threshold."
+        - "Across three summers of weekly samples, 85% of weeks are clear."
+        - "\"Always say no bloom\" scores 0.85 with no model at all."
+        - "Features known a week early: water temperature, recent rainfall, upstream phosphorus load."
+      note: >
+        Walk the contract in the same order you just taught it, so the room sees
+        the abstraction land on a real column. The feature list is the first
+        place the chapter's discipline shows: each of the three is settled before
+        the week you are forecasting, which is what makes it usable. The model
+        fitted here is a logistic model, a standard yes-or-no classifier.
+
+    - title: "A three-point edge, and its smallness is the honest result"
+      bullets:
+        - "The three summers give you your three roles without any shuffling [@hastie2009elements]."
+        - "Summer one trains. Summer two chooses between a few feature lists. Summer three stays locked."
+        - "You open summer three once, for the winner alone."
+        - "On accuracy, the same metric as the baseline, the model lands around 0.88."
+        - "These scores are constructed for the example."
+      note: >
+        The three-point edge over 0.85 feels small, and its smallness is the
+        result: a modest true win beats a dramatic fake one. Keep the bound the
+        chapter states, because the numbers here were built to teach the ordering
+        rather than measured on a real lake. You still report recall beside
+        accuracy, since accuracy alone hides the missed blooms.
+
+    - title: "0.97 with chlorophyll, and it is the outcome in disguise"
+      bullets:
+        - "A collaborator adds `chlorophyll_a`, the pigment reading. The score leaps to 0.97."
+        - "Ask when chlorophyll is measured: during the very bloom you are forecasting."
+        - "It is the outcome wearing a different label."
+        - "Drop it and the score falls back to 0.88. The timing test, not the accuracy, decides."
+        - "Trained on one shallow lake, so it does not yet generalize to a deep, cold reservoir."
+      note: >
+        This is the move the chapter most wants you to be able to make under
+        pressure, because 0.97 arrives from a well-meaning colleague rather than
+        from a villain. No statistic on the table would have caught it. The
+        catching question is about the timeline of your own data, which is
+        something you know and the numbers do not. The last bullet is the
+        generalization half of the lesson: naming the cases your forecast does
+        not cover is part of reporting it, not an apology for it.
+
+    - title: "Three summers in code, and the last one stays locked"
+      bullets:
+        - "The calendar order is the design: it decides the three roles."
+        - "`temp` and `rain` are known a week early. `chl` is measured during the bloom."
+        - "Three scores on the same locked rows: baseline, honest features, leaking feature."
+      code: 0
+      note: >
+        Run it and read the three printed numbers in order. The scores are
+        constructed for the example; the ordering is the lesson. The third number
+        is not skill, because chlorophyll cannot exist at prediction time, and
+        the printout says so itself. Ask the room which single line they would
+        change to break the honesty of the whole block.
+
+  "A seeded simulation":
+
+    - title: "Twelve polynomials, chosen on selection, scored once"
+      bullets:
+        - "First half: one world, the three roles, and the winner's single final-holdout score."
+        - "Second half: 500 fresh worlds, comparing the winner's true error with the score that crowned it."
+        - "Each half restarts the seed, so either one runs on its own."
+      code: 0
+      note: >
+        The chapter claims two things at once and this code shows both. A model
+        can get better at data it has already seen while getting worse at cases
+        it has never seen. And the score that crowned your winner flatters it on
+        average. Nobody can measure a model's true error exactly, so the code
+        stands in for it with ten thousand fresh points, which is close enough to
+        trust and far more than any real study would have.
+
+    - title: "Only data the fit never touched can tell you to stop at six"
+      bullets:
+        - "Blue training error only falls. Every extra degree bends the model closer to points it has seen."
+        - "Orange selection error bottoms out near degree six, then climbs as the model memorizes noise."
+        - "Nothing in the blue line alone would ever tell you to stop."
+      figure: "../images/sims/ch14_overfitting.png"
+      width: "72%"
+      note: >
+        Read the left panel first and go slowly, because the shape of the two
+        curves is the argument. The diamond is the winner's one final-holdout
+        score, taken after the choice was already settled. Ask the room what they
+        would have concluded from the blue curve alone, then say the answer:
+        nothing in that curve ever tells you to stop.
+
+    - title: "An honest summary names the lean, the typical case, and the tail"
+      bullets:
+        - "Across 500 worlds the winner's true error exceeds its crowning score by 0.025 RMSE on average."
+        - "Median 0.015, and the winner comes out worse than its crown in 64 percent of worlds."
+        - "In the other third, luck ran the other way, so no single split can show you the bias."
+        - "In 4 worlds the gap passed +0.3, topping out at +1.86."
+        - "Those worlds are the procedure's real risk showing itself."
+      note: >
+        Read the right panel as an average, because that is what the bias is: a
+        lean in the pile, not a property of each run. The extreme worlds happen
+        when a wildly flexible fit wins selection and then swings hard outside
+        its data, and any average you report has to own them. An honest summary
+        names the lean, the typical case, and the tail together. In the companion
+        notebook, rerun the simulation at several noise levels and compare the
+        mean, the median, the frequency and the maximum separately: average
+        optimism grows with noise, while one seeded extreme need not move the
+        same way.

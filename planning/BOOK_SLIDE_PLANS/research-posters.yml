@@ -1,0 +1,197 @@
+# Slide plan — Chapter 32, "Research Posters"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: research-posters
+source_sha256: "06c72937fa15d63d7eca71c5f3c20f20c0a26f61af8a32a6bfae2a2e37d2318e"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A stranger reads your tallest bar before your methods"
+      quote: "If your axis starts halfway up the scale, I have caught you before I read a word of your methods."
+      bullets:
+        - 'A skeptical peer, walking a poster session, four feet from your board.'
+        - 'From four feet away one thing is read: does your tallest bar mean what it looks like?'
+        - 'The distrust that follows lands on the whole board, not just the figure.'
+      note: >
+        Open with the visitor, not with the rule. The peer in the chapter says
+        the quiet part out loud: the first thing read is whether the tallest bar
+        means what it looks like it means. Ask the room what happens next if the
+        answer is no, and let them arrive at the chapter's own answer, which is
+        that the distrust spreads from the figure to everything else on the wall.
+
+    - title: "The venue changes the viewing conditions, never the standard"
+      bullets:
+        - 'A journal reader can study a figure for minutes.'
+        - 'A seminar audience may see it for thirty seconds.'
+        - 'A poster visitor may first meet it from four feet away.'
+        - 'At a poster session a stranger gives you ninety seconds and one glance.'
+      note: >
+        Draw the contrast in viewing conditions first, then close it off. The
+        chapter is explicit that the venue never excuses an unlabeled axis, a
+        hidden denominator, an inaccessible color choice, or uncertainty
+        detached from the claim. The short viewing time is not a lower bar, it
+        is the reason the figure has to do most of the talking on its own.
+
+    - title: "A figure can lie with true numbers"
+      bullets:
+        - 'An axis that starts just below your data turns a rounding-error gap into a landslide.'
+        - 'A reader who cannot tell your red bar from your green one receives no message.'
+        - 'Every number can be correct while the picture still overclaims.'
+      note: >
+        This is the sentence the whole chapter hangs on, so say it slowly. The
+        two failures on the slide are different in kind: one exaggerates a real
+        difference, the other deletes the message for part of your audience.
+        Neither is caught by checking the arithmetic, which is why this decision
+        needs its own audit rather than a proofread.
+
+  "The concept":
+
+    - title: "Your headline verb promises more than you think"
+      layout: terms
+      terms:
+        - term: "Headline claim"
+          definition: "the one sentence you want a reader to leave with"
+        - term: "Claim boundary"
+          definition: "the line between what your evidence licenses and what it does not"
+        - term: "Compass position"
+          definition: "the kind and reach of the question your project answered, which fixes what the headline is allowed to say"
+      bullets:
+        - '"Version B raised our sales" promises far more than "Version B sold slightly more."'
+        - 'An observational comparison may say "is associated with," never "causes."'
+        - 'A descriptive question about the weeks you measured licenses no claim about why.'
+      note: >
+        The verb is where the overclaim usually hides, and the poster convention
+        of one leading sentence is what makes it load-bearing
+        [@erren2007poster]. Work the three terms in order with the room: the
+        headline is what you want remembered, the boundary is what your evidence
+        will support, and the compass position is what fixes the boundary before
+        you write a word. Ask someone to say a headline from their own project
+        aloud and have the room name the verb.
+
+    - title: "The picture cannot say more than the data"
+      layout: terms
+      terms:
+        - term: "Figure honesty"
+          definition: "the rule that a figure's picture cannot say more than its data"
+        - term: "Truncated axis"
+          definition: "an axis that starts above the bottom of its scale instead of at the floor"
+        - term: "Uncertainty on the page"
+          definition: "the interval or caveat printed in the same glance as the claim, not buried in a footnote"
+      bullets:
+        - 'If the real gap is three points, the bars should look about three points apart.'
+        - 'A completion-rate axis running 70 to 76 magnifies a small difference into a cliff.'
+        - 'A "±4 points" error bar drawn right on the headline figure.'
+      note: >
+        Three points at once, and the middle one is the concrete instance of the
+        first. The truncated axis is not a styling preference, it is the
+        mechanism by which an honest number becomes a dishonest picture. On the
+        third term, hold the phrase "same glance": a caveat that is true but
+        printed where nobody standing four feet away will read it has not been
+        stated on the page [@alley2013craft].
+
+    - title: "Color alone carries nothing for a red-green color-blind reader"
+      layout: terms
+      terms:
+        - term: "Accessibility"
+          definition: "whether your message reaches readers who perceive differently"
+        - term: "Redundant encoding"
+          definition: "carrying the same distinction in more than one channel, so no single channel is load-bearing"
+      bullets:
+        - 'A red-green bar pair carries nothing for a red-green color-blind reader, roughly 1 in 12 men [@crameri2020colour].'
+        - 'Label each bar with its value and give each a pattern, so color becomes a bonus.'
+        - 'For the web version of a poster, WCAG 2.2 is the published standard [@w3c2024wcag22].'
+        - 'Its normative scope is web content, so a printed board takes the same rules as good practice.'
+      note: >
+        Keep the bound the chapter states, because it is easy to overstate here.
+        The two WCAG rules are that color is never the only visual means of
+        carrying information, and that every informative image needs a text
+        alternative serving the same purpose. Those are normative for web
+        content only, so for a printed board treat them as good practice rather
+        than a formal requirement. Redundant encoding is the move that answers
+        the color-only failure: the value and the pattern each carry the
+        distinction on their own.
+
+    - title: "Fail any one audit and the poster overclaims"
+      quote: "A poster that fails any one of these overclaims, even when its numbers are exactly right."
+      bullets:
+        - 'One judgment made four ways, and each way has a name.'
+        - 'Four audits to run on your own board: claim boundary, figure honesty, uncertainty, accessibility.'
+        - 'Correct arithmetic is no defense against a picture that oversells it.'
+      note: >
+        Land the section on the failure rule rather than on a summary. These are
+        not four preferences to balance against each other; any single miss is
+        enough to make the board claim more than the evidence. Tell the room the
+        four audit names now, because the worked example runs exactly these four
+        against a draft figure, one at a time.
+
+  "A worked example":
+
+    - title: "71 percent against 74, with intervals that overlap"
+      bullets:
+        - 'A business-analytics project comparing two versions of an online store checkout page.'
+        - '**Completion rate:** the share of shoppers who start checkout and finish the purchase.'
+        - 'Across weekly samples Version A means 71 percent, Version B means 74.'
+        - 'The 95% interval on each mean is about ±4 points, so the two overlap.'
+      note: >
+        Set the numbers down before you show the draft figure, so the room holds
+        the evidence in mind and meets the picture second. Three points of
+        difference with intervals of roughly four points either side is the
+        whole tension of the example. Ask what headline that evidence licenses,
+        then show them what the first draft actually said.
+
+    - title: "The first draft fails all four audits at once"
+      bullets:
+        - 'Figure honesty: on an axis floored at 70, the taller bar is drawn four times the shorter.'
+        - 'Uncertainty: the intervals overlap, and nothing on the board shows it.'
+        - 'Claim boundary: "BOOSTS" is a decisive, causal verb for a three-point, overlapping gap.'
+        - 'Accessibility: told apart by red and green alone, with no value a screen reader can read.'
+      note: >
+        The draft is a bar chart with the y-axis running 70 to 76, titled
+        "Version B BOOSTS completion", colored red and green. Walk the four
+        audits in the chapter's order and let the room see that each one lands
+        on a different part of the same picture. Give the uncertainty audit its
+        full weight: a difference the figure sells as decisive might be noise,
+        and nothing on the board shows it.
+
+    - title: "Same data, and only the honesty changed"
+      bullets:
+        - 'Run the axis 0 to 100 and print each mean as a label on its bar.'
+        - 'Draw the ±4-point interval on top of the bar it belongs to.'
+        - 'Separate the bars with a color-blind-safe pair plus a hatch pattern.'
+        - 'Rewrite the headline: "Version B completed about 3 points higher, within overlapping intervals."'
+      note: >
+        Nothing was recomputed and no number was dropped. Point that out
+        explicitly, because the room often expects the fix to be a new analysis.
+        The new headline is longer and less exciting, and it is the one the
+        evidence supports. Designing so the message survives a color-blind
+        reader and a grayscale print is a documented requirement, not a courtesy
+        [@crameri2020colour].
+
+    - title: "Read the printed gap before you look at the bars"
+      code: 0
+      bullets:
+        - 'Watch the printed gap in points, then the overlap line that follows it.'
+        - 'The axis is fixed 0 to 100, so bar heights match the numbers they report.'
+        - 'Each bar carries its value, its interval, and a hatch that survives grayscale.'
+      note: >
+        Run it with SEED = 464 so everyone sees the same two means and the same
+        intervals. The printout is the point of the cell: it states the gap and
+        whether the intervals overlap, which are the two facts the honest
+        headline is built from. Then read the plotting lines as the four audits
+        turned into code, and ask which line you would have to delete to get the
+        dishonest draft back.
+
+    - title: "The figure rules travel; the poster does not"
+      bullets:
+        - 'Honest axes, values on the marks, uncertainty shown where the design licenses it.'
+        - 'Distinctions carried in two channels travel with the figure to any format.'
+        - 'The scan path and the print lock belong to this format alone.'
+        - 'Borrow by naming the technique, never by claiming the whole poster transfers.'
+      note: >
+        Say how far the chapter travels, since most of the room will also build
+        a slide deck or a brief. The figure rules you just worked go with any
+        quantitative figure into any venue. What does not go is the poster's own
+        machinery, the scan path across the page and the lock on the printed
+        board. When you reuse a technique elsewhere, name the technique you are
+        reusing rather than claiming the whole format came with it.

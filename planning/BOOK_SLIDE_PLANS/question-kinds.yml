@@ -1,0 +1,192 @@
+lesson: question-kinds
+source_sha256: "bd4c7ab7f9d04b449ebd9fd7b5590323fe8c42625ca4c6bc6ba48beed8cdc5a6"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Two questions stand between you and any method"
+      quote: >-
+        Before I approve a single method, I make you answer two questions about
+        your question. What kind of answer does it want, and for whom must that
+        answer hold?
+      bullets:
+        - "A committee member asks what, exactly, you are trying to learn."
+        - "Everything downstream sits inside the box those two answers draw."
+      note: >
+        That line is a thesis advisor at your first committee meeting, and it is
+        the whole lesson in one sentence. You come in with a committed problem, a
+        working agreement, a ledger, and one verified delegation, and none of
+        those tell you what would count as an answer. Ask the room: which of the
+        two questions is harder to answer about your own project right now?
+
+    - title: "Misclassify the question and every later method aims wrong"
+      bullets:
+        - "A broad topic cannot tell you which evidence belongs."
+        - "A promising problem cannot tell you what would count as an answer."
+        - "A method that describes what is there cannot tell you what an intervention would change."
+        - "The compass fixes what your evidence may claim before you spend months collecting it."
+      note: >
+        A formal research question can do what a topic and a problem cannot,
+        provided its parts agree. Getting the classification wrong is not a wording
+        slip: the method you pick aims at the target the classification named,
+        and the compass fixes what your evidence may claim before you spend
+        months collecting it. This is why the placement comes before the design
+        and not after it.
+
+  "The concept":
+
+    - title: "The first axis is kind: does answering need an intervention?"
+      layout: terms
+      lead: "The second axis is reach: for which units the answer must hold."
+      terms:
+        - term: "Research question"
+          definition: "the single sentence evidence can answer and be wrong about"
+        - term: "Inquiry compass"
+          definition: "the map that sorts any question by exactly two things"
+        - term: "Descriptive question"
+          definition: "asks what the world is or was, with no intervention needed"
+        - term: "Causal question"
+          definition: "asks what would change if someone intervened"
+      note: >
+        The chapter's own examples separate the two kinds cleanly. What fraction
+        of first-years skip breakfast is descriptive: you look and record. Does a
+        free breakfast raise attendance is causal, because answering it forces a
+        comparison to a world that did not happen. The compass is adapted from
+        Research Design in the Social Sciences (Blair, Coppock, and Humphreys,
+        2023, ch. 7).
+
+    - title: "Prediction is descriptive, never a third kind"
+      bullets:
+        - "**Description** is descriptive about the data at hand."
+        - "**Generalization** is descriptive about a population, paid for with a sampling design."
+        - "**Prediction** is descriptive about unseen cases, forecasting a new case from a pattern."
+        - "Guessing who will drop out is not knowing what makes them drop out [@shmueli2010explain]."
+        - "**Causal reasoning** is the only position that earns the word because."
+      note: >
+        Generalization has to pay for its reach: the sampling design is what lets
+        the units you saw stand in for the ones you did not. Prediction needs
+        something different: only a pattern that travels to a case you have not
+        seen, which leaves you knowing nothing about why that case behaves as it
+        does. Ask the room which of the
+        four positions their current question is closest to, and why the other
+        three are wrong for it.
+
+    - title: "Causal questions have reach too, and it changes the question"
+      bullets:
+        - "The effect for the units you actually studied."
+        - "The effect for a wider population your sample stands in for."
+        - "The effect inside one named subgroup."
+        - "Three different questions with three different answers, so say which one you want."
+      note: >
+        The four names are labels, not boxes that answer anything for you. The
+        chapter's example is exact: the effect of a second register on the twelve
+        lunch periods you timed is not the same quantity as its effect on every
+        weekday lunch this term. So the question itself has to say which of the
+        three you want.
+
+    - title: "Your data never change what kind of question you asked"
+      bullets:
+        - "A question about what an intervention would change stays causal [@blair2023rdss]."
+        - "Managers open a second register only when the line is already long."
+        - "Crowding and registers move together, so the design cannot isolate the answer."
+        - "The honest status is **currently unidentified**, not descriptive."
+      note: >
+        This is the rule that keeps the whole compass honest, and it is the one
+        most often broken. Currently unidentified means the question is still
+        causal and this design does not reach it yet. The temptation is to
+        relabel the question to match the evidence you happen to have, and the
+        relabelling is what turns a design problem into a false claim.
+
+    - title: "Question, warrant, result: keep the three apart"
+      layout: terms
+      lead: "In the periods you observed, two-register counters had longer waits."
+      terms:
+        - term: "Question"
+          definition: "what you asked, and its kind is fixed by its words"
+        - term: "Warrant"
+          definition: "the design's reason your evidence can answer it"
+        - term: "Result"
+          definition: "what this evidence supports anyway"
+      note: >
+        Here the warrant is missing, because crowding decides which counters get
+        the register. The result is still descriptive, real, and worth stating,
+        and it sits beside your causal question rather than replacing it. Keep
+        the bound the chapter puts on this: in some designs the missing warrant
+        is partial rather than absent, and the evidence can still narrow the
+        answer, bounding it or fixing its sign, without pinning it down.
+
+    - title: "Two honest moves, and one dishonest one"
+      bullets:
+        - "Strengthen the design until it can carry a causal answer."
+        - "Or declare a new descriptive question and record the swap as a decision."
+        - "Sliding quietly between the two is how a project claims more than it earned."
+        - "Rewrite it as descriptive only if that is genuinely what you now want to ask."
+      note: >
+        The question that comes up here is whether a causal question with weak
+        data should just be rewritten as descriptive. Your current result may
+        well be descriptive while the causal question sits unanswered beside it.
+        Write currently unidentified next to the causal one, then decide whether
+        to redesign or to change questions. Both are respectable; quietly
+        swapping the question and keeping the causal wording is not.
+
+  "A worked example":
+
+    - title: "One coffee line, four different questions"
+      bullets:
+        - "Curiosity: why is the campus coffee line so slow at noon?"
+        - "Give it edges and it becomes a **topic**: waiting time at campus dining counters."
+        - "You time how long twelve customers wait to be served."
+        - "That one topic hides four questions, one at each compass position."
+      note: >
+        The backdrop is a standard result in operations research: waiting time
+        climbs sharply once customers arrive nearly as fast as the counter can
+        serve them. Notice that nothing about the twelve timings decides the
+        position: one topic hides four questions, and each asks something
+        different of the evidence. Questions 2 and 4 ask for more than twelve
+        timings can give, and the next slide says what.
+
+    - title: "Same counter, same twelve timings, four positions"
+      table: |
+        | The question | Kind | Position |
+        |---|---|---|
+        | Among these twelve customers, what was the average wait? | descriptive | Description |
+        | Across every customer at this counter during weekday lunch, what is the mean wait? | descriptive | Generalization |
+        | A customer walks up tomorrow at noon; how long will they wait? | descriptive | Prediction |
+        | Does opening a second register shorten the wait? | causal | Causal reasoning |
+      bullets:
+        - "Questions 1 to 3 stay descriptive. Only the reach moves."
+        - "Question 4 flips the kind: it needs a comparison to a world that did not happen."
+      note: >
+        Question 2 must hold for a population you did not measure, paid for with
+        a sampling design that makes your twelve stand in for the rest. Question
+        3 only needs a pattern that travels to a case you have not seen, so you
+        forecast the wait without knowing why any particular line runs fast or
+        slow. Question 4 needs the same lunch hour in two worlds, one with a
+        second register and one without, and only one of those worlds actually
+        happens. That imagined comparison is the signature of a causal question.
+
+    - title: "A partner's one question is really two"
+      bullets:
+        - "How long are our lines, and does a second register shorten them?"
+        - "A **double-barreled question** secretly asks two questions of different kinds."
+        - "This one fuses question 1's average with question 4's causal comparison."
+        - "No single design answers both, so split it and let each half keep its position."
+      note: >
+        Offered as one question, it cannot be answered as one. The fix is
+        mechanical: split it into two clean questions, each with its own
+        compass position. Hand the room a sentence with an and in it from their
+        own project and have them try the split out loud.
+
+    - title: "Run it, then break one sentence on purpose"
+      code: 0
+      bullets:
+        - "Twelve timed waits in minutes, at one register during weekday lunch."
+        - "The printed average answers question 1 and nothing else."
+        - "It describes the twelve you recorded, not the counter and not tomorrow."
+      note: >
+        The block builds this example's data and prints the numbers the section
+        quotes. Change one input, rerun, and watch which sentence in the section
+        stops being true. That predicting well and explaining why are different
+        goals, not stages of one goal, is argued in detail in the statistics
+        literature [@shmueli2010explain].

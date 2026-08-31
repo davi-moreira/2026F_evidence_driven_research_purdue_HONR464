@@ -1,0 +1,153 @@
+lesson: observational-causal
+source_sha256: "0e12053616f14b4a454d1ea30bd74fd606cf5c0e5151cd90d5d48ffe6add4cbf"
+sections:
+  "Why this decision matters":
+    - title: "Your advisor's reply: after is not because"
+      bullets:
+        - "You wrote: the treated group did better, so the treatment worked."
+        - "Her reply is the sentence you will hear for the rest of your research life."
+        - "\"After is not because.\""
+        - "\"Show me the world where they were not treated, or admit you are guessing.\""
+      note: >
+        The decision on the table is whether your comparison has earned the
+        word *because*. Picture the thesis advisor reading your first draft,
+        and ask the room how they would answer her today, with the comparison
+        they currently have on paper. Nothing in the data alone settles it.
+    - title: "Almost every question worth asking forbids the clean experiment"
+      bullets:
+        - "You cannot assign a person a disease, a country a war, a wild animal a gut microbe."
+        - "So the craft is deciding when a comparison is trustworthy enough to carry a cause."
+        - "You make that decision out loud and in writing."
+        - "Get it wrong and a paper claims more than its data support."
+        - "Get it right and a modest, bounded claim becomes credible."
+      note: >
+        The clean experiment is not available for most of the questions
+        people care about, so the honest
+        researcher's work moves from running the study to arguing for the
+        comparison. Notice what the payoff is: not a bigger claim, a credible
+        one.
+  "The concept":
+    - title: "A causal claim is a claim about a world you never see"
+      layout: terms
+      lead: "The conditions you compare were set by the world rather than by you, so a causal reading has to be argued rather than assumed [@blair2023rdss]."
+      terms:
+        - term: "Counterfactual"
+          definition: "the outcome that would have happened under the choice that was *not* made"
+        - term: "Confounder"
+          definition: "a third factor that pushes on *both* who gets the treatment and the outcome"
+      note: >
+        The coffee example carries both terms. You never see how long a coffee
+        drinker would have lived if she had not drunk coffee, because she did
+        drink it. And a health-conscious lifestyle raises both the chance of a
+        daily coffee habit and lifespan, so coffee drinkers look longer-lived
+        even if coffee did nothing. This chapter follows the
+        observational-causal pathway of the design library in RDSS.
+    - title: "The back door is the path that steals the credit"
+      bullets:
+        - "A **causal diagram** is a picture of arrows, each meaning \"this directly influences that.\""
+        - "The confounder opens a **back door**: a path linking treatment and outcome through it."
+        - "That path runs through the confounder instead of through any real effect."
+        - "A raw comparison sees both paths at once, and blames the treatment for the confounder's work."
+      note: >
+        Draw it before you compute anything. Ask the room to sketch treatment,
+        outcome, and one third variable for their own project right now. The
+        back door is the reason the raw difference is the wrong number, not a
+        decoration on top of it.
+    - title: "Two moves close the back door without an experiment"
+      layout: terms
+      terms:
+        - term: "Selection on observables"
+          definition: "identifying an effect by adjusting for a set of measured confounders sufficient to block every back-door path"
+        - term: "Natural experiment"
+          definition: "a situation where a chance-like force outside anyone's control decided who got treated, making assignment as-if random"
+      note: >
+        For the first move, compare coffee drinkers and non-drinkers within the
+        same lifestyle group, because lifestyle is what pushes on both. It
+        works only for confounders you can actually see, and the word
+        sufficient is doing real work: the goal is the right set, not the
+        longest one. For the second, a visa lottery decides who makes a trip,
+        so winners and losers differ only by luck.
+    - title: "Adjusting for the wrong variable manufactures bias"
+      bullets:
+        - "A **mediator** sits on the causal path itself."
+        - "Coffee may act on lifespan partly through blood pressure, so adjusting throws away part of the effect."
+        - "A **collider** is a variable that treatment and outcome both push on."
+        - "Adjusting for \"healthy aging\" study membership creates a link that exists nowhere in the world."
+        - "Adjust for common causes, and leave mediators and colliders alone [@pearl2009causality]."
+      note: >
+        Adjusting is not free. The temptation, once a data file is open, is to
+        adjust for everything in it, and that is exactly the move the diagram
+        forbids. Which variables you must adjust for, and which adjustments
+        open new paths rather than closing them, is decided by the diagram and
+        not by what you happen to have measured.
+    - title: "You owe a reader the argument, not the adjustment"
+      bullets:
+        - "An **identification argument** is your written reason that the comparison recovers a real effect."
+        - "Every design here rests on **load-bearing assumptions** the data can never fully confirm [@hernan2020whatif]."
+        - "Selection on observables needs a sufficient adjustment set and groups that overlap."
+        - "A visa-lottery design needs a random lottery that touches lifespans only through the trip."
+        - "Name your design's list. One sentence per assumption is enough."
+      note: >
+        The data can only make these assumptions plausible, never confirm them,
+        which is why the argument is where the work shows. Ask the room to name
+        the single assumption their own comparison rests on. Anyone who cannot
+        name it has just found the next thing to write.
+    - title: "The word is not the argument"
+      bullets:
+        - "The **causal-language boundary** is the point past which your evidence stops earning *because*."
+        - "Past it, the defensible phrase is *associated with*."
+        - "You hit it when you cannot make the identification argument honestly."
+        - "Typing \"natural experiment\" over a comparison does not argue its assumption."
+      note: >
+        Knowing which side of the boundary you are on, and saying so in
+        writing, is the skill this chapter is built around. The failure it
+        guards against is design mimicry: borrowing the vocabulary to decorate
+        a comparison whose assumption was never argued. Ask the room which side
+        their current claim sits on, out loud.
+  "A worked example":
+    - title: "Mice carrying the microbe are leaner. Stake a thesis on it?"
+      bullets:
+        - "You study wild-derived mice in a biology lab."
+        - "Those whose gut carries a particular fiber-digesting bacterium are, on average, leaner."
+        - "The headline writes itself: the microbe causes leanness."
+      note: >
+        Take the vote before the diagram goes up. The pattern is real and the
+        sentence is the one almost anyone would write first. What follows is
+        not a correction of the pattern but a test of the sentence.
+    - title: "Diet fills the third box, and ten thousand mice do not help"
+      bullets:
+        - "Draw three boxes: microbe, leanness, and anything that could drive both."
+        - "Diet is a confounder: high-fiber foragers carry more of the bacterium."
+        - "They also stay leaner for reasons that have nothing to do with the microbe."
+        - "Diet points into both boxes, so the naive comparison mostly measures the diet gap."
+        - "A colony of ten thousand makes that wrong number precise, and no less wrong."
+      note: >
+        A larger sample shrinks noise, not confounding. Stop on that
+        distinction, because sample size is the first fix anyone reaches for.
+        The naive microbe-versus-no-microbe comparison credits the bacterium
+        with work the diet did.
+    - title: "\"We controlled for diet\" is not identification"
+      bullets:
+        - "If you recorded diet, compare carriers to non-carriers within high-fiber, then within low-fiber."
+        - "Average the two honest within-diet differences."
+        - "If the gap collapses toward zero, the microbe was mostly a passenger of diet."
+        - "An unrecorded trait driving both foraging and metabolism keeps the back door open."
+        - "Then your defensible claim is that the microbe is *associated with* leanness."
+      note: >
+        The fix works only for the confounder you measured. Temperament is a
+        trait you may never have recorded, and no adjustment
+        reaches it. The causal question then waits for a real intervention,
+        such as colonizing genetically identical, identically fed mice. That
+        boundary is what this chapter teaches you to see and to say.
+    - title: "Build mice where the microbe does nothing, then read the gap"
+      code: 0
+      bullets:
+        - "Diet drives both the microbe and leanness. The true microbe effect is planted at zero."
+        - "Watch the naive carrier-versus-noncarrier gap against that planted zero."
+        - "Then watch the two within-diet gaps, and their average, come back toward zero."
+      note: >
+        SEED = 464 and n = 10,000, so the run reproduces exactly. The printed
+        close says it plainly: the naive gap is the diet gap wearing the
+        microbe's name, and ten thousand mice make it precise, not true. Run
+        this before you trust any carrier-versus-noncarrier number, including
+        your own.

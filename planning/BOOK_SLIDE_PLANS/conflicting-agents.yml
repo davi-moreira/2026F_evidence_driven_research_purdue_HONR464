@@ -1,0 +1,185 @@
+lesson: conflicting-agents
+source_sha256: "6ac8ab9602f2ea85639c1b35ef55727bc77a860f9330ba8af820e731d21e72bc"
+sections:
+  "Why this decision matters":
+    - title: "Agreement is the easiest thing in the world to manufacture"
+      bullets:
+        - "A **skeptical peer** at your practice defense puts it to you like this."
+        - "The question is not whether they agreed."
+        - "It is whether they could have agreed for the same wrong reason."
+      quote: >
+        Don't tell me your reviewers agreed. Tell me whether they could have
+        agreed for the same wrong reason. Agreement is the easiest thing in the
+        world to manufacture, and the most dangerous to trust.
+      note: >
+        Read the peer's line out loud and stop on the second sentence, because
+        that is the whole chapter in one question. Notice the peer does not
+        dispute that the reviewers agreed. The challenge is about the reason
+        behind the agreement, which is a different thing entirely and much
+        harder to answer. Ask the room how they would answer that question
+        about the last AI review they ran.
+    - title: "Three loops built the same way make one mistake three times"
+      bullets:
+        - "You can run a small team of AI roles, so you can run several loops at once."
+        - "The seductive thought: three roles blessing your draft means three confirmations."
+        - "Same build, same draft, same instructions, so they tend to make the same mistake."
+        - "A loop that keeps running polishes the last answer instead of testing it."
+      note: >
+        Take the seductive thought seriously before you take it apart, because
+        it is the reasonable-sounding version of the mistake. Three loops built
+        the same way and pointed at the same draft with the same instructions
+        are not three witnesses; their agreement is one error repeated three
+        times. The second failure is about duration rather than number: a long
+        loop returns a well-defended version of the first mistake, with better
+        paragraphs around it. Ask who has already read a second AI reply that
+        mostly agreed with the first one.
+  "The concept":
+    - title: "When two roles clash, do not pick a winner yet"
+      bullets:
+        - "**Reconciling conflicting outputs**: decide what to believe by first diagnosing why the roles differ."
+        - "Before you side with the reviewer over the methodologist, ask what would make each of them right."
+        - "There are three cases, and they call for opposite responses."
+      note: >
+        The instinct when two roles disagree is to score the argument and
+        declare a winner, and that instinct skips the only step that tells you
+        anything. Asking what would make each of them right forces you to name
+        the assumption each one is running on. The three cases that follow look
+        similar from the outside, which is why the diagnosis has to come first:
+        one of them is useful, one is empty, and one is your own doing.
+    - title: "Real disagreement is the good case"
+      bullets:
+        - "Your reviewer calls a sentence clear and strong."
+        - "Your methodologist flags that same sentence as reaching past your data."
+        - "The roles genuinely read the evidence differently."
+        - "The clash points straight at the claim you need to check."
+      note: >
+        Two roles reading one sentence in opposite ways has done you a favour,
+        and the chapter says so plainly: this is the good case. The disagreement
+        is a pointer, and what it points at is a specific claim, not a general
+        worry about quality. Ask the room what they would go and check first if
+        they got exactly this pair of comments on their own draft.
+    - title: "Correlated error: one wrong assumption, agreed three times"
+      bullets:
+        - "Three reviewers built from the same base model all miss the same flaw."
+        - "They share the blind spot, so their agreement proves nothing."
+        - "Ask the simple question: could they be wrong the *same* way?"
+        - "If yes, their consensus is one signal, not three [@peker2023collective]."
+      note: >
+        This is the case that costs you most, because it arrives dressed as
+        confirmation and feels like reassurance. The test the chapter gives is
+        one question you can ask on the spot, and it is about the shared
+        assumption rather than the shared answer. Counting to three here is the
+        error: the roles came from one place, so the head-count is a fiction.
+    - title: "Ask a role to confirm your draft and you led the witness"
+      bullets:
+        - "You ask \"confirm my draft is ready,\" and every role obliges."
+        - "The roles agreed only because your prompt framed the task so they had to."
+        - "You led all the witnesses."
+        - "Reframe the ask neutrally and run it again."
+      note: >
+        This case is the one you built yourself, which makes it the cheapest to
+        fix and the easiest to miss. The wording of the ask decided the answer
+        before any role read a word of the draft. The repair is not a better
+        model or another reviewer; it is a neutral question and a second run.
+        Ask the room to say out loud the last thing they typed into a reviewer
+        role, and hunt together for the leading word in it.
+    - title: "Agreement counts only when the roles could have failed apart"
+      layout: terms
+      terms:
+        - term: "Independence check"
+          definition: "a test that makes agreement worth more than a head-count, either an independent method you run yourself or a way you force two roles to be genuinely independent"
+        - term: "Human override"
+          definition: "you take the pen back and make the call in your own words, backed by your own check, even when the roles agreed on something else"
+      note: >
+        The chapter's example of an independence check is deliberately ordinary:
+        two roles bless a cited number, so you open the source and recompute it
+        yourself before you trust either of them [@hong2004diverse]. The override
+        is the moment that follows, and it is written as an action rather than
+        an attitude, because taking the pen back means producing your own words
+        and your own check. The line to leave on the room is the chapter's: a
+        decision that just counted the roles is a vote, and votes among
+        look-alike models are meaningless.
+    - title: "Write your stopping triggers before the round starts"
+      bullets:
+        - "An agentic tool left running keeps looking for a next step."
+        - "If nobody halts it, it takes the decision by default."
+        - "Escalate when an AI output would *settle* a decision that is yours [@bansal2021whole]."
+        - "A trigger you decide with three tidy reviews in front of you is a mood."
+      note: >
+        Escalation is the one moment where the loops have to stop, and a loop
+        with nowhere else to go does not wait politely. The decision gets taken
+        by default, which is not delegation because you never chose it. So the
+        triggers get written before the round: the specific decisions where the
+        loops pause and wait for you. Ask each person for one trigger they will
+        write down before their next round, in the exact words they will read
+        under pressure.
+  "A worked example":
+    - title: "250 adults outside the library, and a tidy 4.0%"
+      bullets:
+        - "The **unemployment rate** is the share of people who want paid work and cannot find it."
+        - "You asked 250 adults outside the public library, over three weekday afternoons."
+        - "Working, or looking for work? You divided one count by the other."
+        - "Your draft: \"unemployment here is 4.0%, in excellent agreement with the official rate.\""
+      note: >
+        Everything in this example rests on one small survey, so keep the
+        method visible: one place, three weekday afternoons, one question.
+        The draft sentence is the one under review, and note how much
+        it claims, because the phrase "excellent agreement" is a precision claim
+        as much as a match. Ask the room what they would want to know before
+        believing that sentence.
+    - title: "Three roles blessed it because all three expected a number near 4%"
+      bullets:
+        - "All three reviewer roles returned the same verdict: \"Looks solid. Matches the published figure.\""
+        - "Each one already expects a number near 4%, the range familiar headline rates sit in."
+        - "So each pattern-matches your estimate and blesses it without checking how you got there."
+        - "That is correlated error wearing the mask of confirmation."
+      note: >
+        Put the diagnosis question from the concept section to this case: could
+        these three be wrong the same way? They can, and the shared blind spot
+        is named exactly, the anchor to the familiar figure. What none of them
+        did is look at how the estimate was produced, which is where the real
+        problem lives. Ask the room whether a fourth role from the same family
+        would have helped.
+    - title: "Your sample never met anyone who was at work"
+      bullets:
+        - "You asked 250 people, so the luck of who walked by is worth a couple of percentage points."
+        - "Weekday afternoons outside a library exclude almost anyone at work all day."
+        - "The tidy \"4.0%\" was luck riding on an honest-looking method."
+        - "The shared anchor to the familiar figure hid that mistake from all three roles."
+      note: >
+        Two separate problems sit under the same number, and it is worth naming
+        them apart. One is sampling luck at n equals 250, which the chapter
+        prices at a couple of percentage points on its own. The other is who
+        could not appear at all, and no sample size fixes that. Neither is
+        exotic, and neither shows up in a verdict that only asks whether the
+        answer looks right.
+    - title: "You take the pen back: 4.0% ± 2.4 percentage points"
+      bullets:
+        - "The agreement would *settle* your headline claim, and that claim is yours."
+        - "You recompute from your raw responses, carrying the uncertainty of 250 people through."
+        - "Consistent with the official rate, far less precise, and from a group missing most workers."
+        - "You override three \"looks great\" verdicts and rewrite the claim with its real uncertainty."
+        - "The roles counted the answer as correct. You checked whether it was earned."
+      note: >
+        This is escalation and override in one move, and notice what triggers
+        it: the agreement would settle the headline claim rather than inform it.
+        The corrected result keeps both bounds the chapter states, the interval
+        and the group that could not be reached, and it stays consistent with
+        the official rate. The closing pair of sentences is the standard to
+        leave the room with. Agreement is worth something only when the agreeing
+        parties can fail independently, which is why diversity of approach
+        rather than head-count is what makes a group better than its members
+        [@hong2004diverse].
+    - title: "Two defensible definitions, two different numbers"
+      code: 0
+      bullets:
+        - "SEED = 464, so the same 250 respondents come back on every run."
+        - "Watch the two printed rates: yours, then the one counting everyone who wants work."
+        - "Neither number is the one the three reviewers blessed."
+      note: >
+        The block builds the survey and computes the rate two defensible ways,
+        and both numbers come from the same afternoon outside the library. Run
+        it, then ask which of the two you would report and what you would have
+        to say about the other. Three reviewers who only checked whether the
+        answer looked right caught none of this, and that is the point of
+        printing both.

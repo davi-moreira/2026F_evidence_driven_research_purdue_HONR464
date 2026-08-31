@@ -1,0 +1,177 @@
+lesson: research-builds
+source_sha256: "b11ac28fb7bdaab17603ed41e08d68db17ff7b17ba365b9a0e0a23b2c86e1141"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "An advisor circles one line in your first draft"
+      bullets:
+        - "\"You cite six papers. Where did they come from, and what argument are they having?\""
+        - "Research never starts from zero."
+        - "Someone has already asked something close to your question."
+        - "Find them before you spend months rediscovering what they already know."
+      note: >
+        The decision on the table is which conversation your question joins,
+        and which leads are worth your time. Ask the room where the six papers
+        in their own draft would come from today. The chapter's answer to the
+        advisor is that someone has already asked something close, and finding
+        those people is the work the rest of the chapter sets up.
+
+    - title: "Miss the study, or build on a paper nobody wrote"
+      bullets:
+        - "Get the search wrong in one direction and you miss the study that answers you."
+        - "Get it wrong in the other and you build on a citation nobody ever wrote."
+        - "Get it right and an afternoon buys you years of other people's work."
+      note: >
+        The chapter names two ways to get the search wrong, and they fail
+        differently. One leaves you rediscovering work that already exists. The
+        other puts a citation nobody ever wrote underneath your argument, which
+        is exactly what the worked example shows a tool doing. Keep the
+        chapter's bound in view: this is the gathering step, so nothing on your
+        list counts as evidence yet.
+
+  "The concept":
+
+    - title: "You join a running argument; you do not found an island"
+      bullets:
+        - "One team measures how a policy moved turnout in one state."
+        - "A second repeats it elsewhere. A third pools both."
+        - "A field is a running argument, each study answering, extending, or challenging the ones before it [@booth2024craft]."
+        - "Your job is not to invent an island. Add one honest sentence."
+      note: >
+        The book's name for this is a cumulative conversation, and it is why a
+        literature search is not an administrative chore. You are looking for
+        the people already arguing about your question, so that your one
+        sentence lands somewhere. Ask the room which argument their question
+        would be joining.
+
+    - title: "Nothing you gathered is a source yet"
+      layout: terms
+      lead: "Everything you gather starts as a lead."
+      terms:
+        - term: "Cumulative conversation"
+          definition: "a running argument where each study answers, extends, or challenges the ones before it"
+        - term: "Lead"
+          definition: "a candidate source you have not checked yet, such as a citation an AI hands you"
+        - term: "Retrieval-verification loop"
+          definition: "ask a tool for leads, retrieve the source yourself, verify it exists and says what was claimed, and document where you found it"
+      note: >
+        A lead stays a lead until you retrieve and read it. The loop has four
+        steps, and this chapter is only the first one, gathering well. The next
+        chapter is where leads earn promotion, so hold the vocabulary strictly
+        now: calling something a source before you have opened it is the error
+        the whole loop exists to prevent.
+
+    - title: "Two solid sources, walked both ways, quickly become ten"
+      bullets:
+        - "Snowballing grows your list from one real source by walking its links two ways [@greenhalgh2005search]."
+        - "Backward citation search reads the source's own reference list for the older work it built on."
+        - "Forward citation search finds the newer papers that cite it."
+        - "The ten arrive with their relationships already visible."
+      note: >
+        Snowballing has to start from one real retrieved source, so the seed is
+        something you retrieve yourself rather than something a tool returns.
+        Backward gives you the older work the source built on, forward the
+        newer work citing it. Ask who has actually opened a reference list this
+        term, and what they found two steps back.
+
+    - title: "A real gap and an abandoned search look identical from your desk"
+      bullets:
+        - "A genuine gap is a question your verified sources actually leave unanswered [@snyder2019literature]."
+        - "You confirm it by looking both ways, backward and forward."
+        - "An unfinished search is one you simply stopped chasing."
+        - "Only one of the two is a contribution."
+      note: >
+        This is the sentence to hold onto: from your desk the two feel the
+        same. What separates them is whether the sources around the empty spot
+        were retrieved and read. Snowballing is what turns a hunch about a gap
+        into something you can defend when someone asks how hard you looked.
+
+    - title: "The evidence map marks the spot no source reaches"
+      bullets:
+        - "Each source becomes one claim node: what it asserts, in one sentence."
+        - "Lines connect claims that agree or contradict."
+        - "One marked spot shows where no source reaches, and that is your candidate gap."
+        - "It is honest only when every node around it is a source you opened yourself."
+      note: >
+        Forcing each source into one sentence is the work, because the node has
+        to state what that source asserts. The map makes agreements and
+        contradictions visible, and it makes the empty spot visible too. Hold
+        the chapter's bound on the last line: the spot becomes honest only when
+        every node around it is a source you opened yourself.
+
+  "A worked example":
+
+    - title: "One question, two parts: how much, and for whom"
+      bullets:
+        - "Your curiosity is voting, and how far people live from the polling place seems to matter."
+        - "Your question: does moving a polling place farther away lower turnout?"
+        - "And does the drop land harder in some neighborhoods than others?"
+      note: >
+        The question carries two parts, an average effect and a difference
+        across neighborhoods. Keep both in view, because the candidate gap at
+        the end of this example lives in the second part and not the first.
+
+    - title: "The journal in the AI's citation does not exist"
+      bullets:
+        - "You ask an AI for the key studies and get one confident citation."
+        - "Two plausible author names, a 2019 date, an official-sounding journal title."
+        - "It reads like a longer version of the real *Electoral Studies*."
+        - "Nothing in your library portal, nothing on Google Scholar, nothing on the publisher's site."
+        - "The citation was manufactured, and it took four minutes to find out."
+      note: >
+        Notice what made it convincing: the shape was right, and the journal
+        name sat close to a real one. Notice also how cheap the check was. You
+        searched the exact title in your library portal, on Google Scholar, and
+        on the publisher's site, and four minutes settled it.
+
+    - title: "One retrieved review becomes six real sources in an hour"
+      bullets:
+        - "Retrieve one real review of polling-place location and turnout, and read it."
+        - "Backward: the older work on the costs of voting it builds on."
+        - "Forward: recent studies using precinct-level administrative records."
+        - "Within an hour your list holds a half-dozen real sources and one live disagreement."
+      note: >
+        This is the loop run properly, and the difference from the failed
+        attempt is that you opened something. One review read carefully carries
+        two directions of search inside it already. Ask what the seed would be
+        for the question each person brought to class.
+
+    - title: "The disagreement is the live edge of the field"
+      bullets:
+        - "Some studies find relocating a polling place shaves a point or two off turnout."
+        - "Others find voters switch to mail ballots and total turnout barely moves."
+        - "That disagreement tells you the question is unsettled."
+        - "For some questions, snowballing finds what database queries miss [@greenhalgh2005search]."
+      note: >
+        A disagreement inside your list is a finding about the field, not a
+        failure of your search. It marks where the open work is. Snowballing
+        being a documented search method is the chapter's claim, and it is
+        stated for some questions, not as a replacement for database searching.
+
+    - title: "The broad question is no gap; the narrow one may be"
+      bullets:
+        - "\"Does distance affect turnout\" is no gap. The literature is enormous."
+        - "Whether the drop concentrates in neighborhoods without a car may be genuine."
+        - "You can defend it only because you gathered the sources around it."
+        - "And because you are about to open every one."
+      note: >
+        This is the decision the chapter says stays yours. The one citation the
+        AI handed you was manufactured, so nothing it gave you narrowed
+        anything. What makes the narrow question defensible is the retrieval
+        you are about to do. Note the chapter's own hedge: the narrower
+        question may be genuine, and only retrieval that comes up empty earns
+        the word.
+
+    - title: "Six records, and the one variable behind the disagreement"
+      code: 0
+      bullets:
+        - "Six retrieved records stand in for the reading you do by hand."
+        - "Watch the two means: records that ignored mail switching against those that measured it."
+        - "No citations are planted here, because a fabricated source is what you are learning to catch."
+      note: >
+        The block is seeded at 464, so the printed numbers are the same on
+        every run. The two means are the point: the disagreement in the table
+        is not noise, and it tracks what each record measured. Ask which of the
+        six records you would want to open first, and why.

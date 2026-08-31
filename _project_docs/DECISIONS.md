@@ -4292,3 +4292,83 @@ The standing worry recorded since 2026-08-26 — that the room had become unifor
 quantitative and the notebooks' no-background floor was set too low — has lost its
 evidence. What remains is one accountant, one aerospace engineer, and two students
 nobody has profiled. Profile them before concluding anything about the ceiling.
+
+---
+
+## D77
+
+**Twelve studio lecture decks, generated from the book (2026-08-31).**
+
+**Ruling.** The course gains a fourth published artifact: **one revealjs lecture
+deck per studio**, twelve in all, at `lecture_slides/studioNN.qmd` and published
+at `<site>/lecture_slides/studioNN.html`. Studio *n* is Week *n* for n = 1..10;
+Studios 11 and 12 are Weeks 15 and 16 (D50). Weeks 11 to 14 are the conference
+block and carry no deck.
+
+**A deck is a GENERATED VIEW of EDR|AI, never a parallel document.** This is the
+book-first loop (D20) applied to a third artifact, on the same terms as the
+companion notebooks (D25): the book is edited, and the deck follows. Nothing on
+a deck is retyped from a chapter.
+
+Each deck runs its studio's own arc, all of it read out of the book at build
+time by `scripts/slide_parts.py`:
+
+1. the studio opener's promise, its opening move, and the milestone ahead;
+2. then, per chapter: a divider carrying the chapter's own "decision on the
+   table", the `> **The research decision.**` thesis verbatim, a key-terms card
+   harvested from the chapter's bold-term definitions, its argument, its figures
+   and mermaid diagrams and worked-example code, its AI failure case, its
+   "Do not delegate" rule verbatim, and its "It is your turn" steps;
+3. then the milestone chapter: what it produces, what you bring, the practice,
+   the four rails at that milestone, and the version rule;
+4. and the one rule, on every deck's last slide.
+
+**The editorial overlay.** Book prose does not fit on a slide unchanged, so each
+chapter carries a slide plan at `planning/BOOK_SLIDE_PLANS/<lesson-id>.yml`:
+per book section, the slides to cut it into, each with a headline, a few short
+lines, and the speaker note the instructor teaches from. A plan is keyed by the
+lesson's **immutable id**, never its number or filename (BOOK_ARCHITECTURE
+schema 1.0). All 40 chapters have one, authored and adversarially verified
+against their chapters. The overlay is OPTIONAL by design: a section with no
+plan falls back to a mechanical rendering, so a deck is always complete.
+
+**How the promise is kept.** A plan records the `source_sha256` of the chapter
+it was written against. `scripts/validate_slide_sync.py` fails when a deck on
+disk differs from a fresh build, when a plan's digest no longer matches its
+chapter (STALE — the chapter moved and the plan must be revisited), when a plan
+names a heading, figure, or code block the chapter does not have, when it cites
+a key absent from `book/references.bib`, or when it breaks the student-facing
+voice rules. It is a CI gate and a PostToolUse hook on `book/**/*.qmd`.
+
+**Schedule.** A **Slides** column joins the schedule table, one `Deck` link per
+row, ninth of nine columns. Two consequences, both deliberate:
+
+- Deck paths are FLAT and SHORT (`lecture_slides/studio01.html`). The rendered
+  schedule page is held to a 65,535-character ceiling and had 2,631 characters
+  of margin; a folder-per-deck path would have breached it.
+- The `data.zip` link left the Notebook column, where it repeated on all 43 rows
+  for a single file, and is stated once in the footer under the table. Margin
+  after both changes: 2,165 characters.
+
+**What does NOT change.** The **Lecture Notebooks 20%** contract (D74) is
+untouched: the notebooks are still the collected weekly artifact, and the decks
+are an instructor-and-student reference beside them, graded on nothing. Whether
+a deck should ever REPLACE the notebook as the collected artifact is a separate
+ruling, with its own weight-table consequences, and is not made here.
+
+**Design.** The decks carry the EDR|AI brand (D29), not a second look: ink
+`#1a1a19` on white, hairline rules, the book's own type colour. Exactly two
+accents, each earning its place by function — crimson `#8a1c2b` for what may not
+be delegated, amber `#9a6a00` for an AI failure. Theme:
+`lecture_slides/_theme/edrai-slides.scss`.
+
+**Kept, not deleted.** Nothing was retired to make room for this.
+
+⚠ **For Davi.** The slide-plan pass read all 40 chapters against what a class
+will see and found eight CHAPTER defects it had no authority to fix — a
+contradiction about how long a check took, one claim carrying two different
+evidence pairs, a pitch that is three minutes in one section and 90 seconds in
+another, prose that disagrees with its own code, a citation inside quotation
+marks, and a chapter still naming Gemini after D30. They are tabled at the foot
+of `planning/BOOK_SLIDE_PLANS/README.md`. Correcting a chapter stales its plan
+by design; that is the mechanism working.

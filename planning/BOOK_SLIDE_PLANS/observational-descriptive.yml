@@ -1,0 +1,210 @@
+# Slide plan — Chapter 14, "Observational Descriptive Research"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: observational-descriptive
+source_sha256: "c859177ec9fc313cee6f28cd096ef2b7a7da90594de7e20893dbd8e5812fb54c"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "The first question is never about your math"
+      lead: "\"Which group did your procedure actually reach?\""
+      bullets:
+        - "A policy stakeholder reads your report before deciding whether it applies to their city."
+        - "The decision on the table: which group your data can honestly speak for."
+        - "That is a question about your procedure, not about your arithmetic."
+      note: >
+        Open with the stakeholder, because the room expects the objection to
+        be technical and it is not. Their first question is not the
+        arithmetic; it is scope, and scope is set by how the data were
+        collected rather than by what was done to them afterwards. Ask the
+        room what their own project's stakeholder would be deciding when they
+        read it.
+
+    - title: "The most common failure is precise, well formatted, and about the wrong group"
+      bullets:
+        - "A result quietly describes one group while claiming to speak for another."
+        - "Nothing in the estimate looks wrong, and the formatting is fine."
+        - "This chapter has you name the group your data reach."
+        - "Then refuse the sentence that swaps it for a group your data never touched."
+      note: >
+        Say plainly that this is the most common failure in observational
+        work, not an exotic one. The reason it goes unnoticed is that the
+        number itself carries no warning label: an estimate about the wrong
+        group looks exactly like an estimate about the right one. The whole
+        chapter is one repair, and the repair is a sentence you write down in
+        advance and refuse to say later.
+
+  "The concept":
+
+    - title: "You sample and measure; you never assign"
+      bullets:
+        - "Pull every roll call record in a legislature; report how often each member crossed party lines."
+        - "No one was assigned a condition. You sampled, measured, and summarized."
+        - "Inquiry and answer strategy are both descriptive: distributions and relationships."
+        - "With care, those estimates generalize to a population."
+        - "On their own they do not identify a causal effect."
+      note: >
+        This is the observational-descriptive pathway of the design library in
+        RDSS [@blair2023rdss]. Keep the boundary sharp while you have their
+        attention: descriptive estimates can travel to a population when the
+        sampling supports it, and they still say nothing about what caused
+        what. Point forward once, then move on. The next chapter takes the
+        other road, with observational data again and no assignment again, but
+        a causal inquiry that has to carry an identification argument to earn
+        its answer.
+
+    - title: "Four boxes stand between your question and your data"
+      layout: terms
+      terms:
+        - term: "Target population"
+          definition: "everyone your question is about: every customer a streaming service will ever bill"
+        - term: "Accessible population"
+          definition: "the part of the target you could reach in principle, given time and cost"
+        - term: "Sampling frame"
+          definition: "the concrete list you actually draw from, such as the current subscriber list"
+        - term: "Sample"
+          definition: "the customers you actually survey, drawn from the frame and no wider"
+      note: >
+        Four groups keep a description honest [@groves2009survey]. Read them
+        downward and name what shrinks at each step: the target is the group
+        you wish you could study, the accessible population is what time and
+        cost leave you, the frame is the list your tool actually pulls from,
+        and the sample is who you drew from that list and no wider. Ask the
+        room to say the frame of their own project out loud, because the
+        chapter calls it the box that misbehaves.
+
+    - title: "The frame crosses the edge of your target, and that is where errors live"
+      figure: "../images/concepts/sampling_groups.png"
+      width: "52%"
+      bullets:
+        - "**Undercoverage:** people who belong in your target and never make the list."
+        - "**Overcoverage:** records on the list for people outside your target altogether."
+        - "**Duplicate:** one person listed twice, quietly given two chances of being picked."
+      note: >
+        The frame is the box that misbehaves, and the picture shows why: it is
+        drawn crossing the edge of the target rather than nested tidily inside
+        it. Treating the frame as a clean slice of the population above it is
+        one of the quietest ways a description goes wrong. Walk the three
+        labels on the diagram one at a time and ask which of the three the
+        room's own list is most likely to have.
+
+    - title: "A survey outside one dining hall selects for people who eat there at lunch"
+      layout: terms
+      terms:
+        - term: "Selection"
+          definition: "any process that decides who lands in your data instead of chance alone"
+        - term: "Nonresponse"
+          definition: "the units you drew who never gave you data"
+      bullets:
+        - "Two processes decide how the boxes differ. These are the two."
+        - "Of 500 people contacted, 300 reply, and the 200 silent ones are rarely random."
+      note: >
+        A claim is honest only when the box it describes matches the box it
+        names, so the useful question is what makes the boxes differ. Both
+        processes are about who ends up in the data, and neither tells you on
+        its own how the missing units differ from the ones you kept. The
+        dining hall example is worth pressing on: the
+        survey never asked anyone where they eat, and it sorted on that
+        anyway.
+
+    - title: "Size shrinks the wobble; it does nothing to a tilt"
+      bullets:
+        - "When either process relates to the thing you are measuring, your summary drifts."
+        - "No amount of extra data pulls it back [@bethlehem2010selection]."
+        - "Size shrinks only the sample-to-sample wobble."
+        - "A systematic tilt in who you reached survives every extra observation [@meng2018paradises]."
+      note: >
+        This is the line the rest of the chapter tests twice, so state it
+        carefully. The condition matters: the drift appears when selection or
+        nonresponse relates to the very thing you are measuring, not whenever
+        anyone is missing. Ask the room for the instinctive fix, hear
+        "collect more data", and then show them why it is the wrong lever.
+
+  "A worked example":
+
+    - title: "A 2% billing-error rate, and the headline writes itself"
+      bullets:
+        - "**Billing-error rate:** the fraction of customers whose monthly charge comes out wrong."
+        - "2 wrong charges in 100 customers is a 2% billing-error rate."
+        - "The analytics team emails a survey to a random draw from the subscriber list."
+        - "The survey reports 2%. The headline: \"the service has a 2% billing-error rate.\""
+      note: >
+        Nothing in this procedure is sloppy. The draw is random and the count
+        is right. Let the room agree that it looks fine before you take it
+        apart, because the point of the example
+        is that competent execution is not what protects you here.
+
+    - title: "The customers hit hardest quit before the survey went out"
+      bullets:
+        - "Target population: every customer the service bills [@groves2009survey]."
+        - "Sampling frame: the current subscriber list, because only those people get the survey."
+        - "Charged twice, or charged after canceling, and most likely to have quit in frustration."
+        - "**Survivorship selection:** a filter that keeps the people least likely to show the problem."
+      note: >
+        Walk the boxes out loud in the chapter's order, then name the trap.
+        The customers with the worst billing errors removed themselves from
+        the frame before anyone surveyed them, which means the filter runs on
+        exactly the outcome being counted. Current subscribers are the
+        contented end of the customer base, not a fair slice of it.
+
+    - title: "One sentence is licensed; the other is the silent upgrade"
+      quote: "among customers still subscribed, the billing-error rate is 2%"
+      bullets:
+        - "That is the licensed claim. It names the box the data reached."
+        - "The sentence to refuse: \"the service's billing-error rate is 2%.\""
+        - "The true rate across everyone billed is almost certainly higher."
+        - "The worst-hit customers were gone before the survey went out."
+      note: >
+        Put both sentences on the board and make the room read the difference
+        aloud, because in speech it is two words. The 2% is honest about one
+        box and dishonest about another. Note the direction as well as the
+        gap: here you can say which way the estimate is off, and the
+        chapter's own red-team prompt asks whether a boundary sentence hides
+        the direction of the drift.
+
+    - title: "Build the whole customer base, let the worst-hit quit, then survey"
+      code: 0
+      bullets:
+        - "Two rates print: everyone billed, and the current subscribers the survey can see."
+        - "A third line reports how many customers left the frame."
+        - "Nothing here is a sampling error. The draw is perfect."
+      note: >
+        Read the `wrong_charge` and `quit` lines as the mechanism: wrong
+        charges happen, and customers who got one quit far more often than
+        customers who did not. The survey can only ever see the second printed
+        number. No sample size, and no random draw from that list, closes the
+        gap to the first.
+
+  "A seeded simulation":
+
+    - title: "Ten honest samples and one convenience sample, all of size 500"
+      code: 0
+      bullets:
+        - "**Seed:** a fixed starting point for a random-number generator."
+        - "The same seed reproduces the same draws, so your run matches the figure."
+        - "A population of 100,000 whose true mean age is known by construction."
+        - "The convenience channel mostly reaches younger people."
+      note: >
+        The worked example argued that who you reach tilts what you measure,
+        and that a bigger sample does not fix the tilt. Here you watch it
+        happen on a population you built, where the true mean age is known by
+        construction and every estimate can be checked against it. Point at
+        the weights line and say what it does: it makes younger people
+        likelier to be drawn, and nothing else about the procedure changes.
+
+    - title: "Same sample size, about sixteen years off"
+      figure: "../images/sims/ch11_sampling_channels.png"
+      width: "58%"
+      bullets:
+        - "The ten random means spread between about 47 and 51, around the truth."
+        - "That spread is honest, quantifiable uncertainty."
+        - "The convenience dot looks as confident as any other, and nothing warns you."
+      note: >
+        Read it the way a reviewer would. The ten random samples never agree
+        exactly, and that disagreement is the kind you can report. The
+        convenience channel has exactly the same sample size and misses the
+        true mean by about sixteen years. Only the sampling procedure tells
+        you which kind of dot you have. In the companion notebook, move the
+        channel's center, the 25 inside weights, and rerun: the tilt follows
+        the channel, never the sample size.

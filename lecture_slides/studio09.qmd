@@ -1,0 +1,2254 @@
+---
+# GENERATED FILE — DO NOT EDIT.
+# Written by scripts/build_studio_slides.py from the EDR|AI book:
+#   book/studios/studio09-write-bound-disclose.qmd      (the studio's promise)
+#   the studio's chapters                                 (its argument)
+#   book/studios/milestone09-write-bound-disclose.qmd   (its milestone)
+# Editorial overlay: planning/BOOK_SLIDE_PLANS/<lesson-id>.yml
+# Lessons on this deck: results-to-claims claim-evidence-tables ai-disclosure poster-to-note
+# Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
+# silently reverted on the next build and fail `--check` in CI.
+title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+subtitle: "Studio 9 — Write, bound, and disclose"
+author: "Davi Moreira"
+format:
+  revealjs:
+    theme: [default, _theme/edrai-slides.scss]
+    width: 1600
+    height: 900
+    margin: 0.07
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: fade
+    background-transition: fade
+    transition-speed: fast
+    incremental: false
+    hash: true
+    hash-type: number
+    history: false
+    progress: true
+    controls: true
+    controls-layout: bottom-right
+    touch: true
+    preview-links: auto
+    link-external-newwindow: true
+    logo: _theme/edrai_logo.png
+    footer: "EDR|AI · Studio 9 — Write, bound, and disclose"
+    chalkboard:
+      buttons: false
+    menu:
+      side: left
+      width: normal
+    code-line-numbers: false
+    highlight-style: github
+    fig-align: center
+---
+
+## What you can defend when you leave
+
+::: {.kicker}
+
+Studio 9
+
+:::
+
+::: {.decision}
+
+[What you can defend when you leave]{.label}
+
+Write the claim you can defend, bounded by what your evidence supports, with
+your AI use disclosed.
+
+:::
+
+
+## The milestone ahead
+
+::: {.kicker}
+
+Studio 9
+
+:::
+
+This studio closes with **[Milestone 9: Your bounded
+claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html)**,
+a short chapter of its own after the lessons. **What it asks you to produce.**
+A stand-alone research note or report draft, a claim-to-evidence table, and
+your AI disclosure statement.
+
+::: {.notes}
+
+Writing is where research leaves your head and can first be misread. This
+milestone turns your audited results into claims a stranger can weigh: each
+one bounded by what the design established, traced to the output that supports
+it, and accompanied by an honest account of what AI did along the way. The
+discipline is simple and strict. A claim with no row in the evidence table
+does not ship.
+
+Milestone 10 adapts these bounded claims to a real audience and rehearses
+their defense. The milestone chapter keeps the working details: the practice
+steps, the versioned record, and how the artifact is assessed.
+
+:::
+
+
+## The lessons in this studio {.dense}
+
+::: {.kicker}
+
+Studio 9 · Road map
+
+:::
+
+- [Lesson 28 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html): your claims with verbs downgraded to what the design established, each carrying its boundary line.
+- [Lesson 29 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html): your claim-evidence table, one row per claim with claim, evidence, trace, and boundary, every number traced to its output.
+- [Lesson 30 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html): your AI-use disclosure, written from the ledger and naming what you did not verify.
+- [Lesson 31 — From Dossier to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html): your stand-alone note draft: the problem-gap-question spine, methods, results with uncertainty, discussion, ordered findings with the headline claim's boundary inside, references, your disclosure placed, and the pointer to the package Studio 11 will freeze.
+
+
+## From Results to Claims {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 1 of this studio · Chapter 28
+
+:::
+
+::: {.divider-line}
+
+the verb in your headline, and how far your evidence lets it reach
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 28
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+Your analysis printed a number. Now you decide the sentence that number lets
+you assert: the headline you will show in public and defend out loud, worded
+so its verb stays inside what your design established and its uncertainty
+rides in the same eye-span. You choose the words. You lock them. You never let
+a tool talk your claim past its boundary.
+
+:::
+
+
+## The words this chapter uses
+
+::: {.kicker}
+
+Chapter 28 · Key terms
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Uncertainty in the same eye-span]{.t}
+
+[the interval or caveat sits right beside the claim, not in a footnote (Wasserstein & Lazar 2016).]{.d}
+
+:::
+
+::: {.term}
+
+[Traceability]{.t}
+
+[every number you show walks back to the exact notebook cell that produced it.]{.d}
+
+:::
+
+::::
+
+::: {.notes}
+
+Each term is defined in the chapter on first use; these are the definitions as
+the book gives them.
+
+:::
+
+
+## A claim that outruns its evidence makes a judge distrust the whole board
+
+::: {.kicker}
+
+Chapter 28 · Why this decision matters
+
+:::
+
+- That is a research-integrity judge, working a poster session.
+- She is not testing your statistics.
+- She is testing whether your words match the evidence underneath them.
+
+::: {.note-card}
+
+If the headline reads 'lowers blood pressure' but the study only watched who
+chose to walk, I stop reading.
+
+:::
+
+::: {.notes}
+
+Open with the judge, because she is the reader every headline eventually
+meets. She points at one number and asks where it came from and what it lets
+you say. Ask the room what she would do at their own poster, and let them
+answer before you define anything.
+
+:::
+
+
+## Your analysis prints a number; your headline asserts a sentence
+
+::: {.kicker}
+
+Chapter 28 · Why this decision matters
+
+:::
+
+- A result is not yet a claim.
+- The gap between the two is where most projects break.
+- The sentence almost always wants to say more than the number earned.
+- Close that gap yourself, before a stranger finds it open.
+
+::: {.notes}
+
+State the gap plainly, then say why it is easy to miss from inside and easy to
+find from outside. Nobody drafts a dishonest headline on purpose; the sentence
+drifts because it almost always wants to say more than the number earned. The
+rest of the chapter is a habit for catching that drift before the poster hall
+does.
+
+:::
+
+
+## A result is a number; a claim is a sentence you will defend
+
+::: {.kicker}
+
+Chapter 28 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Result]{.t}
+
+[a number your analysis produced, such as a difference of 6 points between two group averages]{.d}
+
+:::
+
+::: {.term}
+
+[Claim]{.t}
+
+[a sentence you assert and will defend, such as 'the walking group had lower blood pressure']{.d}
+
+:::
+
+::::
+
+- Turning the first into the second is a decision, not a formatting step.
+- You choose how much the sentence is allowed to say.
+
+::: {.notes}
+
+Both words get used loosely, so pin them down before anything else. The result
+is what the analysis printed. The claim is what you will say out loud and
+defend when someone pushes back. Because you choose how far the sentence
+reaches, this is a research decision that belongs to you.
+
+:::
+
+
+## The kind belongs to the question; the status belongs to the design
+
+::: {.kicker}
+
+Chapter 28 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Question]{.t}
+
+[what you set out to learn, and its kind comes from its own words]{.d}
+
+:::
+
+::: {.term}
+
+[Identification status]{.t}
+
+[whether this design can actually deliver that answer]{.d}
+
+:::
+
+::::
+
+- "Does walking lower blood pressure?" asks what an intervention would change, so it is causal.
+- It stays causal no matter which data you managed to collect.
+- Watched who already chose to walk: not identified by this design, under the assumptions you can defend.
+- Your result is then a descriptive association, real and worth reporting.
+
+::: {.notes}
+
+Four ideas govern the choice, and keeping the first three apart is what stops
+overclaiming before it starts. The question's kind comes from its own words,
+so weak data never downgrades a causal question into a descriptive one. The
+status is whether this design can actually deliver that answer (Blair et al.
+2023): if nothing separates the walking from the kind of person who walks, the
+status is not identified under the assumptions you can defend. The result sits
+beside the causal question rather than replacing it.
+
+:::
+
+
+## "Causal and unidentified" fuses two fields into one status
+
+::: {.kicker}
+
+Chapter 28 · The concept
+
+:::
+
+- The status never repeats the word "causal".
+- Written as one status, it fuses the two fields you just separated.
+- Keep two lines: what the question asks, and what the design delivers.
+
+::: {.notes}
+
+This is the slip to watch for, and it looks harmless. The kind belongs to the
+question and the status belongs to the design, so a status that carries the
+word causal is quietly answering the question it was supposed to leave open.
+Have someone read their own two lines aloud and check that the lines say
+different things.
+
+:::
+
+
+## Four lines you can reuse on any project
+
+::: {.kicker}
+
+Chapter 28 · The concept
+
+:::
+
+- **Question kind:** causal.
+- **Identification status:** not identified by this design under stated assumptions.
+- **Result:** observed association.
+- **Claim boundary:** association only.
+
+::: {.notes}
+
+Put the card on the board and leave it there for the rest of the session. Four
+fields, written out, and it travels to any project you will run. When somebody
+asks whether a headline is honest, the answer gets read off this card instead
+of argued about.
+
+:::
+
+
+## A defended identification argument is what earns a causal verb
+
+::: {.kicker}
+
+Chapter 28 · The concept
+
+:::
+
+::: {.lead}
+
+Your claim boundary lives in the headline verb.
+
+:::
+
+- With no identification argument you write "was associated with lower," never "lowered."
+- What earns the causal verb is the argument, not the size of the gap (Hernán & Robins 2020).
+- Randomizing is the cleanest way to get one.
+- Observational designs can carry causal answers when their assumptions are argued and defended.
+- What you may never do is use the verb without the argument.
+
+::: {.notes}
+
+Read the condition slowly, because it is the whole rule and it is routinely
+dropped. The observational-causal pathway earlier in the book shows designs
+that do reach causal answers, so this is not a ban on observational work. It
+is a requirement that the argument exist and be defended before the verb
+changes.
+
+:::
+
+
+## A bound a reader has to hunt for is a bound doing hidden work
+
+::: {.kicker}
+
+Chapter 28 · The concept
+
+:::
+
+- Print "about 6 points lower (95% interval: 1 to 11)" under the headline.
+- The reader meets the doubt at the same moment as the number.
+- The 6-point gap points back to the one line of code that computed it.
+- A number you cannot trace cannot go up.
+
+::: {.notes}
+
+Two habits make the honesty visible rather than merely asserted. Keeping the
+interval in the same eye-span means a footnote can no longer carry the caveat
+where nobody reads it (Wasserstein & Lazar 2016). Tracing means you can show
+the cell that produced the number when a judge asks. Say plainly that the
+numbers in this chapter's examples are constructed to make the point, and that
+the uncertainty lesson is where intervals get built properly.
+
+:::
+
+
+## Forty volunteers, a 6-point gap, and a headline that reaches too far
+
+::: {.kicker}
+
+Chapter 28 · A worked example
+
+:::
+
+- A small human-physiology pilot: forty volunteers wear a step tracker for a month.
+- Twenty walk at least 8,000 steps a day; twenty do not.
+- Average resting systolic: 128 active, 134 less-active.
+- The draft headline reads "Walking LOWERS blood pressure."
+- Two bars on an axis starting at 125, told apart by red and green alone.
+
+::: {.notes}
+
+Give the setup exactly as the pilot ran, then show the draft board and let the
+room list what is wrong with it before you do. Three problems are sitting
+there: the verb, the truncated axis, and color carrying the whole comparison.
+The result itself, the 6-point gap, is fine.
+
+:::
+
+
+## The verb claims a crossing the design never paid for
+
+::: {.kicker}
+
+Chapter 28 · A worked example
+
+:::
+
+- The question behind this study is causal, and it stays causal.
+- Nobody was assigned to walk.
+- The active group may differ in age, diet, or baseline health.
+- Fill the card, and the honest verb is "was associated with lower."
+
+::: {.notes}
+
+Walk the decision one field at a time. The question is causal, the design
+cannot answer it, and the comparison leaves every group difference untouched.
+Those three fields together fix what the sentence may say. Ask the room which
+single word changes, and make them say why that word and not the number.
+
+:::
+
+
+## Where the axis starts is part of the claim
+
+::: {.kicker}
+
+Chapter 28 · A worked example
+
+:::
+
+- Bars encode magnitude, so starting them at 125 makes 6 points look like a cliff.
+- Start the bars at a meaningful zero.
+- Better: plot the two group averages as points with their intervals.
+- Use a blood-pressure scale a clinician would recognize.
+- Label each bar with its value, so color is never the only channel.
+
+::: {.notes}
+
+Figure honesty is part of the claim audit, not a separate design chore. A
+truncated axis makes the picture assert more than the number does. On the
+labels, say who this is for: a reader who cannot separate red from green, or
+who hears the figure read aloud by a screen reader, should still receive the
+number rather than only the hue.
+
+:::
+
+
+## Same result, a claim that survives the judge
+
+::: {.kicker}
+
+Chapter 28 · A worked example
+
+:::
+
+- Nothing about the result changed.
+- The verb was downgraded, and the interval rides in the same eye-span.
+- A boundary line names what the design does not establish.
+
+::: {.note-card}
+
+In this sample, more-active volunteers averaged about 6 points lower resting
+systolic blood pressure (95% interval: 1 to 11); this is an observed
+association, and this design does not identify whether walking caused the
+drop.
+
+:::
+
+::: {.notes}
+
+Read the locked claim out loud, slowly. It is longer than the draft headline
+and it is the version you can defend when a stranger pushes on it. Point out
+that all three repairs are visible in one sentence: the verb, the interval,
+and the boundary. Say again that this interval is constructed for the example,
+as the chapter states.
+
+:::
+
+
+## The printout shows the difference the poster never did {.denser}
+
+::: {.kicker}
+
+Chapter 28 · A worked example
+
+:::
+
+- The volunteers chose how much to walk, and age drives both.
+- Watch the two group ages printed beside the 6-point gap.
+- The age line is one difference you can see.
+- The design leaves every unseen one untouched.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Forty volunteers who CHOSE how much they walk. Age drives both.
+n = 40
+age = np.r_[rng.normal(31, 7, 20), rng.normal(43, 7, 20)]   # active are younger
+active = np.r_[np.ones(20, bool), np.zeros(20, bool)]
+systolic = np.round(112 + 0.5 * age + rng.normal(0, 6, n))
+
+gap = systolic[~active].mean() - systolic[active].mean()
+print(f"active group mean systolic      : {systolic[active].mean():.0f}")
+print(f"less-active group mean systolic : {systolic[~active].mean():.0f}")
+print(f"observed gap                    : {gap:.0f} points")
+print(f"mean age, active vs less-active : {age[active].mean():.0f} vs "
+      f"{age[~active].mean():.0f}")
+print("\nnobody was assigned to walk. the age line is one difference you can")
+print("see; the design leaves every unseen one untouched, so the verb stays")
+print("'is associated with'")
+```
+
+::: {.notes}
+
+Run the block and stop on the last two prints rather than the gap. Age is
+visible here only because the example was built that way; in a real pilot you
+would not get the list of confounders printed for you. Ask the room what else
+might differ between the two groups, let the answers pile up, and land the
+point: nobody was assigned, so the verb stays "is associated with".
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 28
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You paste your honest headline into a tool and ask it to make it "punchier."
+It returns, with total confidence, "Walking Reduces Blood Pressure by 6
+Points." It reads beautifully and it is wrong. The tool upgraded your verb
+from an association to a cause and dropped your interval, a silent scope
+change dressed up as a copy edit.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 28 · An AI failure case
+
+:::
+
+- You catch it by comparing the new verb to what your design earned.
+- Your question was causal and stays causal, but nobody was assigned to walk, so nothing identifies that answer and "reduces" claims a warrant you never held.
+- You also notice the "6 points" now stands alone with no interval beside it.
+- You revert to "was associated with about 6 points lower (95% interval: 1 to 11)." The fluent rewrite reviewed your style; only you can review your claim.
+
+::: {.notes}
+
+You catch it by comparing the new verb to what your design earned. Your
+question was causal and stays causal, but nobody was assigned to walk, so
+nothing identifies that answer and "reduces" claims a warrant you never held.
+You also notice the "6 points" now stands alone with no interval beside it.
+You revert to "was associated with about 6 points lower (95% interval: 1 to
+11)." The fluent rewrite reviewed your style; only you can review your claim.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 28
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+Three calls stay yours. You choose the **verb in your headline**, the one word
+that fixes your claim boundary. You make the **defend-or-concede call** when a
+question pushes on that boundary out loud. And you make the **lock decision**:
+the judgment that every number is traced, every citation resolves, and the
+claim is ready to be final. A tool can draft questions and hunt sources, but
+it cannot decide what your evidence licenses or when your claim is earned.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 28 · Your move
+
+:::
+
+1. List every result you might put in front of a reader, then write the claim sentence each one licenses.
+2. Check every verb against what your design established, and downgrade the ones that reach too far. "Caused" becomes "was associated with"; "predicts" becomes "flagged."
+3. Write a boundary line beside each claim naming what it does not establish, and put the uncertainty in the same eye-span as the number.
+4. Trace every number back to the cell that produced it and cut the ones you cannot walk back.
+5. Log it in your AI Research Ledger, and verify at least one claim with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html).
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_from_results_to_claims.ipynb) with [Chapter 28](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Claim–Evidence Tables {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 2 of this studio · Chapter 29
+
+:::
+
+::: {.divider-line}
+
+for each claim you make, which specific evidence backs it and where that
+evidence can be found
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 29
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+For every claim your work makes in public, decide which exact piece of
+evidence backs it, where that evidence lives, and what it does not establish.
+Then write all three in one row of a claim–evidence table, before the claim
+reaches anywhere a stranger can point at it.
+
+:::
+
+
+## One vague answer costs you every other number
+
+::: {.kicker}
+
+Chapter 29 · Why this decision matters
+
+:::
+
+- A research-integrity judge, working a poster hall, on what one answer decides.
+- The doubt does not stay on that number. It reaches every other number up there.
+
+::: {.note-card}
+
+Walk me to the line that made it and I trust the whole poster. Say 'it's in
+the analysis somewhere' and I stop believing every other number up there.
+
+:::
+
+::: {.notes}
+
+Read the judge's line as the scene it is: someone stops in front of your
+board, picks a number, and asks where it came from. Notice what the judge says
+happens on a bad answer, because it is the part people do not expect. The cost
+is not one number marked wrong, it is that every other number on the poster
+now looks like the same kind of number. Ask the room which figure on their own
+draft they would least like to be pointed at.
+
+:::
+
+
+## The gap is between a claim you can say and one you can back
+
+::: {.kicker}
+
+Chapter 29 · Why this decision matters
+
+:::
+
+- A poster is a set of promises made in public.
+- Each headline number, each figure, each cited fact: a stranger can test it in ninety seconds.
+- A claim-evidence table closes that gap on purpose, before anyone points a finger.
+- The honesty is built into the work, not patched under pressure.
+
+::: {.notes}
+
+The decision on the table is narrow and it is per claim: for each claim you
+make, which specific evidence backs it and where that evidence can be found.
+Saying a claim is easy and backing it is a separate act, and the whole chapter
+lives in the distance between the two. The table is what makes that distance
+visible to you first, at your desk, rather than to a stranger in a hall.
+
+:::
+
+
+## One row per claim, and the row names its own evidence
+
+::: {.kicker}
+
+Chapter 29 · The concept
+
+:::
+
+- **Claim-evidence table:** a table with one row per claim, pairing each claim with the evidence behind it.
+- Claim column: "Store B sold about 1.4 times as many units per week as Store A."
+- Evidence column: the two weekly sales averages.
+
+::: {.notes}
+
+Keep the first pass this plain, because the instrument is genuinely this
+simple and its difficulty is elsewhere. The store example is a row cut to its
+two core parts: an assertion on the left, the specific thing that produced it
+on the right. The next slide adds the other two columns, trace and boundary,
+and the rest of the chapter is about them.
+
+:::
+
+
+## Four columns carry each row, and Evidence is not Trace {.dense}
+
+::: {.kicker}
+
+Chapter 29 · The concept
+
+:::
+
+:::: {.terms .two}
+
+::: {.term}
+
+[Claim]{.t}
+
+[the statement you assert as true]{.d}
+
+:::
+
+::: {.term}
+
+[Evidence]{.t}
+
+[the exact result or source that backs the claim, with its uncertainty]{.d}
+
+:::
+
+::: {.term}
+
+[Trace]{.t}
+
+[where a number was actually produced, named precisely enough to open]{.d}
+
+:::
+
+::: {.term}
+
+[Boundary]{.t}
+
+[the line between what the evidence licenses and what it does not]{.d}
+
+:::
+
+::::
+
+- Claim: "turnout in these precincts was 61.3 percent."
+- Trace: "cell 16, where `turnout = ballots.sum() / registered.sum()` runs."
+- Boundary: "one county, one midterm election, registered voters only, so this is not the statewide rate."
+
+::: {.notes}
+
+Take Evidence and Trace as two different jobs, since the room will want to
+merge them. Evidence is the result with its uncertainty, which for the turnout
+example is 30 sampled precincts giving 48,900 ballots against 79,800
+registered voters, plus the interval of plus or minus 1.8 points around the
+estimate. Trace is the address where that result was produced, named precisely
+enough that someone can open it. The boundary column carries the claim
+boundary, the line between what the evidence licenses and what it does not
+(ALLEA – All European Academies 2023): here it says that nothing is claimed
+about the statewide rate.
+
+:::
+
+
+## A number you cannot walk back does not belong on the board
+
+::: {.kicker}
+
+Chapter 29 · The concept
+
+:::
+
+- **Traceable number:** one you can walk back to the notebook cell that computed it.
+- **Untraceable number:** one you cannot walk back, typed from memory or rounded by hand.
+- Building the table is the skill, and a blank cell is a visible hole.
+- With every claim in a filled row, an unbacked claim has nowhere to hide (Munafò et al. 2017).
+
+::: {.notes}
+
+The two words are the practical test, and you apply them one number at a time.
+Ask of any figure on the board: can I open the thing that made this, right
+now, in front of someone. If the answer is that you remember writing it down,
+the number is untraceable and the chapter's rule is that it comes off the
+board. The blank cell matters for the same reason: the table does not make
+weak claims strong, it makes them impossible to overlook.
+
+:::
+
+
+## You build Row 1 before the file goes to the printer
+
+::: {.kicker}
+
+Chapter 29 · A worked example
+
+:::
+
+- Your political-science poster reports turnout in one county's midterm election.
+- Headline: "turnout in these precincts was 61.3 percent."
+- Row 1 claim: "turnout was 61.3 ± 1.8 percent."
+- Row 1 evidence: 30 sampled precincts, 47,871 ballots against 78,117 registered voters.
+
+::: {.notes}
+
+The quantity here is the share of registered voters who cast a ballot, in one
+county, in one midterm. The interval comes from the spread of the 30
+precinct-level rates, so the uncertainty is carried in the evidence column
+rather than left off. Row 1's trace is cell 16, the line that divides ballots
+by registered voters, and its boundary is one county, one midterm, registered
+voters only, so nothing is claimed about statewide turnout or about eligible
+adults who never registered.
+
+:::
+
+
+## The table caught 63.0 before a judge did
+
+::: {.kicker}
+
+Chapter 29 · A worked example
+
+:::
+
+- You reach for the trace and the draft board reads 63.0, not 61.3.
+- You had quietly written the officially reported statewide figure instead.
+- Your own cell never produced 63.0.
+- Filling Row 1 is what forced the catch.
+
+::: {.notes}
+
+This is the moment worth slowing down on, because the error is not
+carelessness. Two real numbers were in your head, one from your analysis and
+one from an official release, and the wrong one reached the board. Nothing
+about looking at the poster would have revealed it. Reaching for the trace
+did, which is the argument for filling the column at all.
+
+:::
+
+
+## Row 2 bounds itself: only two definitions were tested
+
+::: {.kicker}
+
+Chapter 29 · A worked example
+
+:::
+
+- Claim: "the estimate barely moves when I change how a registration counts as active."
+- Evidence: under two reasonable definitions the estimates differ by less than your sampling spread.
+- Trace: cell 18, the definition comparison.
+- Boundary: nothing is claimed about looser rolls that keep long-inactive registrations.
+
+::: {.notes}
+
+Row 2 says the estimate barely moves, and a claim worded that way can quietly
+reach past what was tested. The evidence supports a statement about two
+definitions, so the claim has to stay a statement about two definitions. Point
+at the boundary sentence and ask the room what it would take to earn the wider
+version. By the chapter's own boundary, it would take testing the looser
+rolls, which is work, not wording.
+
+:::
+
+
+## Two claims, two rows, every number walked back to a cell
+
+::: {.kicker}
+
+Chapter 29 · A worked example
+
+:::
+
+- Every boundary written down, before the file goes to the printer.
+- That table is what lets your work survive a pointed finger.
+- Tracing every reported claim to the line that produced it is the reproducibility reforms' practical core (Munafò et al. 2017).
+
+::: {.notes}
+
+Two rows is a small table, which is the point: with one row per claim, the
+instrument scales with how much you assert in public, not with how much
+analysis you ran. The reproducibility literature asks for this same discipline
+at the level of a whole field, and the table is the version of it you can run
+on your own poster. Ask each person how many distinct claims their current
+poster makes, counting the ones a figure makes without a sentence, and watch
+the count come out higher than they expected.
+
+:::
+
+
+## Run the traced line; that print is the only number Row 1 may carry {.denser}
+
+::: {.kicker}
+
+Chapter 29 · A worked example
+
+:::
+
+- Watch the line marked `# the traced line`. That is the address Trace points at.
+- The printed turnout and spread are what Row 1 copies, digit for digit.
+- Any board figure this line does not produce is untraceable, whoever published it.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Thirty sampled precincts: ballots cast and registered voters.
+registered = rng.integers(2300, 3000, size=30)
+rate = np.clip(rng.normal(0.625, 0.050, size=30), 0.35, 0.85)
+ballots = np.round(registered * rate).astype(int)
+
+turnout = ballots.sum() / registered.sum()                  # the traced line
+spread = 1.96 * rate.std(ddof=1) / np.sqrt(len(rate)) * 100
+
+print(f"precincts sampled  : {len(registered)}")
+print(f"ballots cast       : {ballots.sum():,}")
+print(f"registered voters  : {registered.sum():,}")
+print(f"turnout            : {turnout*100:.1f} ± {spread:.1f} percent")
+print("\nthat is the number your Trace cell must point at. any figure on the")
+print("board that this line does not produce is untraceable, whoever published it")
+```
+
+::: {.notes}
+
+Run it live if you can, with SEED set to 464 so the printout is the same for
+everyone. Have the room say which printed line feeds Row 1's claim column and
+which ones feed its evidence column. Then make the closing point explicit: the
+last two printed lines are a rule, not a comment, and an official figure from
+a real election office is still untraceable if your own analysis did not
+produce it.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 29
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You paste your poster text and ask an AI tool to build the whole
+claim–evidence table for you. It returns a clean, complete grid, every cell
+filled, and the trace column reads confidently: "turnout value from cell 14."
+You almost accept it. Then you open cell 14, and it totals the registered
+voters; it never divides. The rate you report is produced two cells later, in
+cell 16. The tool guessed a plausible cell number and filled it with full
+confidence, and its tidy finished table hid the wrong trace behind a polished
+look.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 29 · An AI failure case
+
+:::
+
+- You catch it by refusing to trust a trace you have not opened.
+- Reading the actual cell, number in hand, is the whole discipline.
+- A filled table is not a verified table.
+
+::: {.notes}
+
+You catch it by refusing to trust a trace you have not opened. Reading the
+actual cell, number in hand, is the whole discipline. A filled table is not a
+verified table.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 29
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+The **wording of each claim**, the **judgment that a piece of evidence
+actually backs it**, and the **boundary each claim carries** stay yours. An AI
+can list claims and draft rows, but it cannot open your notebook cell to
+confirm a number is real, and it cannot decide the evidence is honest enough
+to print. The call that the table is complete and the work is locked is yours
+to declare and defend.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 29 · Your move
+
+:::
+
+1. Write one row per claim with four columns: claim, evidence, trace, boundary.
+2. Fill the evidence column with the actual result and its uncertainty, not a description of the result.
+3. Fill the trace column by opening the cell or the source and reading the number off the screen.
+4. Write each boundary as a sentence about what the row does not establish, then hunt for blank cells.
+5. Log it in your AI Research Ledger, and verify at least one traced number with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html).
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_claim_evidence_tables.ipynb) with [Chapter 29](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## AI Disclosure and Research Integrity {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 3 of this studio · Chapter 30
+
+:::
+
+::: {.divider-line}
+
+which AI uses you disclose, and what you claim you did to check each one
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 30
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+Decide exactly what you will say about every AI tool you used: which tool, on
+which task, and how you checked what came back. Then record it, so when
+someone asks *"did you use AI, and how did you verify it?"* you answer from a
+checkable record instead of from memory.
+
+:::
+
+
+## The words this chapter uses
+
+::: {.kicker}
+
+Chapter 30 · Key terms
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[AI disclosure]{.t}
+
+[a truthful statement of where and how you used an AI tool in your work (International Committee of Medical Journal Editors 2026).]{.d}
+
+:::
+
+::: {.term}
+
+[Research integrity]{.t}
+
+[the practice of keeping your work honest and traceable, so a reader can see where each result came from and trust it (ALLEA – All European Academies 2023).]{.d}
+
+:::
+
+::::
+
+::: {.notes}
+
+Each term is defined in the chapter on first use; these are the definitions as
+the book gives them.
+
+:::
+
+
+## A result I cannot trace is a result I cannot trust
+
+::: {.kicker}
+
+Chapter 30 · Why this decision matters
+
+:::
+
+- Said by a conference reviewer, standing at your poster.
+- The penalty is not for using the tool.
+- The penalty is for not being able to say where, and how you checked.
+
+::: {.note-card}
+
+"I am not going to penalize you for using an AI tool. I am going to penalize
+you for not being able to tell me where you used it and how you checked it. A
+result I cannot trace back to a source and a verification is a result I cannot
+trust."
+
+:::
+
+::: {.notes}
+
+Read the quote aloud and stop on the second sentence, because that is where
+the reviewer moves the standard. Using an AI tool is not the thing being
+judged here; the ability to locate the use and the check is. Ask the room what
+they would answer right now if a stranger asked them where an AI tool touched
+their project.
+
+:::
+
+
+## "Yes, a bit, and it seemed fine" turns good work into an untrustable result
+
+::: {.kicker}
+
+Chapter 30 · Why this decision matters
+
+:::
+
+- At your research conference, a stranger can ask you the AI-use question.
+- Many journals and conferences now ask authors where and how AI tools were used.
+- So it is not a formality you can wave off.
+- Disclosure is what keeps an honest use of AI honest under questioning.
+
+::: {.notes}
+
+The failure here is fast and public. One vague sentence at the poster, and the
+work stops being checkable in front of the person asking. Point out that the
+chapter calls it good work a moment earlier; what changed is what the reviewer
+can verify about it. That is why the chapter says this is not a formality you
+can wave off.
+
+:::
+
+
+## One sentence can name the tool, the task, and the check
+
+::: {.kicker}
+
+Chapter 30 · The concept
+
+:::
+
+- Which tool: the AI assistant you asked.
+- For which task: drafting the code behind the coverage ratio.
+- How you verified: recomputed by hand before reporting.
+
+::: {.note-card}
+
+"I used Gemini to draft the code that computed my coverage ratio, and I
+recomputed that number by hand before reporting it."
+
+:::
+
+::: {.notes}
+
+Put the finished sentence up before any definition, so the shape is visible
+first. It is short, and it still survives a follow-up question, because each
+clause points at something a reader could go and check. Ask the room to write
+the same sentence for the last thing they delegated, and watch which of the
+three parts goes missing.
+
+:::
+
+
+## Drop any one of the three parts and the disclosure fails
+
+::: {.kicker}
+
+Chapter 30 · The concept
+
+:::
+
+::: {.lead}
+
+Three parts make a disclosure complete by this book's standard.
+
+:::
+
+- Each part maps to a column in your ledger.
+- "I used AI," with no task named, is meaningless.
+- A task with no verification is the gap a reviewer is trained to find.
+
+::: {.notes}
+
+This is a three-part test rather than a spectrum, and the standard is the
+book's own. The second failure is the one that still sounds responsible: the
+tool is named, the job is named, and nothing says the output was ever checked.
+The chapter's own instruction is to check every sentence against a ledger row,
+so run that check on your draft before a reviewer runs it on you.
+
+:::
+
+
+## A complete disclosure is read off your ledger, not written at the end
+
+::: {.kicker}
+
+Chapter 30 · The concept
+
+:::
+
+- Your **AI Research Ledger** is a running table with one row per AI use.
+- Each row records the task, the tool, your decision, and the verification method.
+- You have kept it since you opened it at the start of your project.
+- So the disclosure is already written by the time you need it (Munafò et al. 2017).
+
+::: {.notes}
+
+The ledger is not a new instrument for this chapter. The chapter's claim is
+that you have kept it since the start of the project, which is the whole
+argument for filling it honestly week by week. Anyone reconstructing a
+disclosure from memory at the end is guessing, and the guess is what a
+reviewer catches. Ask the room how many rows their ledger holds right now.
+
+:::
+
+
+## A coverage ratio of 2.0 means the company earned twice what it owed
+
+::: {.kicker}
+
+Chapter 30 · A worked example
+
+:::
+
+- You are presenting a business-analytics poster on a public company's debt.
+- The question: can it comfortably pay the interest it owes?
+- Your headline number is the **interest coverage ratio**.
+- That is operating income divided by the interest owed in a year.
+
+::: {.notes}
+
+Define the ratio before anything else happens, because the disclosure later
+has to name which piece of this number came from where. Operating income is
+the income figure the company reports; the interest expense is what it owes on
+its debt. Keep the definition on the board while you walk through the two AI
+uses.
+
+:::
+
+
+## Two honest AI uses, and neither is safe until it is disclosed and verified
+
+::: {.kicker}
+
+Chapter 30 · A worked example
+
+:::
+
+- First use: finding the company's reported operating income.
+- Second use: writing the short calculation that turns income and interest into a ratio.
+- Both are honest uses.
+- Honest is not the same as checked.
+
+::: {.notes}
+
+Neither of these is a misuse, and the chapter says so plainly, which is the
+point. The risk is not in delegating the retrieval or the arithmetic; it is in
+reporting the result without a record of what was confirmed. Ask which of the
+two uses would be harder to check a month from now if nothing was written
+down.
+
+:::
+
+
+## Editorial guidance requires two of the three columns; the third is this book's
+
+::: {.kicker}
+
+Chapter 30 · A worked example
+
+:::
+
+- Current guidance: name which tool you used, and for what purpose (International Committee of Medical Journal Editors 2026).
+- Responsibility for accuracy and attribution stays with you.
+- A tool can never be an author.
+- How you verified is this book's own requirement on top of that guidance.
+
+::: {.notes}
+
+Be precise about where the rule comes from, because the room will meet both
+standards outside this course. The editorial requirement covers the tool and
+the purpose and fixes responsibility on the named author. The verification
+column is the book's addition, and the chapter gives its reason: a disclosure
+that cannot say how something was checked leaves a reader nothing to trust.
+
+:::
+
+
+## A reported figure and a computed one need different checks
+
+::: {.kicker}
+
+Chapter 30 · A worked example
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Primary-source reading]{.t}
+
+[you opened the company's published annual report and confirmed the operating income the tool gave you]{.d}
+
+:::
+
+::: {.term}
+
+[Alternative code]{.t}
+
+[you recomputed the same number a second way, instead of trusting the AI-generated cell]{.d}
+
+:::
+
+::::
+
+::: {.notes}
+
+The verification method depends on what kind of thing you are checking. A
+reported figure gets checked against the document that reported it; a computed
+figure gets recomputed independently. Both names go in the ledger's
+verification column, so the row says what was done rather than that something
+was done.
+
+:::
+
+
+## Recompute the ratio by hand and watch it land on 2.11
+
+::: {.kicker}
+
+Chapter 30 · A worked example
+
+:::
+
+- The two inputs are 276 and 131, in USD millions, from the annual report.
+- Watch the printed value against the number the AI-generated cell reported.
+- The recomputation is the check, and the ledger row records that you ran it.
+
+```python
+# The number the AI code reported, recomputed by hand.
+operating_income = 276    # USD millions, confirmed against the annual report
+interest_expense = 131    # USD millions, from the same annual report
+coverage_ratio   = operating_income / interest_expense
+print(round(coverage_ratio, 2))   # 2.11 — matches the AI-generated cell
+```
+
+::: {.notes}
+
+Run it live rather than describing it, so the match happens on screen. Point
+out that the comment on the income line is doing real work: that figure was
+confirmed against the annual report, which is the other row's check. The next
+section shows what happens when a disclosure claims a check that no ledger row
+backs.
+
+:::
+
+
+## You read the two rows aloud, and the claim stays bounded
+
+::: {.kicker}
+
+Chapter 30 · A worked example
+
+:::
+
+- The coverage ratio is about 2.1 for this fiscal year.
+- Income confirmed against the annual report; the arithmetic reproduced by hand.
+- You read a single year of reported results.
+- Not a downturn scenario, and not the debt coming due next year.
+
+::: {.notes}
+
+The reviewer's question gets answered from the record, so there is nothing to
+improvise. Note that the boundary is stated in the same breath as the number,
+not extracted later under pressure. Ask the room what a listener learns from
+the last two lines that the ratio alone would have hidden.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 30
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You ask a tool to "write my AI-use disclosure from these notes," and it hands
+back a polished paragraph: *"All AI-generated outputs were independently
+verified against primary sources."* It reads beautifully, and it is false. You
+verified the operating income against the annual report, but you never
+independently checked the interest figure the same tool helped you pull. The
+sentence upgraded one real check into a blanket claim of "all."
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 30 · An AI failure case
+
+:::
+
+- You catch it by reading the disclosure line by line against your ledger.
+- Every sentence claiming a verification must point to a row that names that check.
+- The word "all" has no such row, so it is fabricated and comes out.
+- Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm.
+- A confident paragraph is not a truthful one.
+
+::: {.notes}
+
+You catch it by reading the disclosure line by line against your ledger. Every
+sentence claiming a verification must point to a row that names that check.
+The word "all" has no such row, so it is fabricated and comes out. Your true
+disclosure is narrower and stronger: you name the two checks you ran and the
+one input you did not independently confirm. A confident paragraph is not a
+truthful one. You verify the disclosure against the record, not against how
+responsible it sounds.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 30
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+The honesty of the disclosure is yours alone. You decide **which uses to
+disclose** (including the one you would rather not mention), **whether a
+verification you claim actually happened**, and **whether the final statement
+is true**. A tool can format your ledger into a clean paragraph. It cannot
+know what you really did or certify that you checked it. Signing your name to
+a disclosure you cannot back is the integrity failure this chapter exists to
+prevent.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 30 · Your move
+
+:::
+
+1. Read your AI Research Ledger end to end and list every use, including the one you would rather not mention.
+2. For each use, write the three parts a disclosure needs: which tool, for which task, and how you verified the output.
+3. Turn the rows into a short statement in your own words, then check every sentence against a row.
+4. Say what you did not verify.
+5. Log it in your AI Research Ledger, and verify the finished statement with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html), such as peer reasoning.
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_ai_disclosure_and_research_integrity.ipynb) with [Chapter 30](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## From Dossier to Research Note {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 4 of this studio · Chapter 31
+
+:::
+
+::: {.divider-line}
+
+which finding leads your written note, and how big each claim is allowed to be
+once your voice is no longer in the room
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 31
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+When you turn your research dossier into a written note, decide which finding
+has earned the headline and exactly how big each claim is allowed to be given
+your evidence, then package the note so a stranger can rerun it and reach your
+number without you in the room. Whatever you present along the way — a poster,
+a talk, a brief — is one input to that note, never its source.
+
+:::
+
+
+## The words this chapter uses
+
+::: {.kicker}
+
+Chapter 31 · Key terms
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Working logic]{.t}
+
+[how the dossier and any presentation of it speak: compressed records and, when you present, your live voice filling the silences.]{.d}
+
+:::
+
+::: {.term}
+
+[Paper logic]{.t}
+
+[communication that must stand alone on the page, where every claim is argued in prose because you are not there to answer.]{.d}
+
+:::
+
+::::
+
+::: {.notes}
+
+Each term is defined in the chapter on first use; these are the definitions as
+the book gives them.
+
+:::
+
+
+## The reviewer wants your most defensible result, not your flashiest
+
+::: {.kicker}
+
+Chapter 31 · Why this decision matters
+
+:::
+
+- The decision: which finding leads, and how big its claim is allowed to be.
+- She is asking which finding you would still defend after the room empties.
+- And whether she could rerun your work and watch the same number return.
+
+::: {.note-card}
+
+"Show me your results in the order you trust them. If your flashiest number
+comes from one lucky run and it leads the paper, I already know how this
+review ends. I do not want your most surprising result first. I want your most
+defensible one." — a conference reviewer
+
+:::
+
+::: {.notes}
+
+Read the reviewer's words aloud and let them sit. A big number by itself does
+not impress her; she is telling you the order she reads in, and the order is
+trust, not surprise. Two questions are hiding in that paragraph, and the
+chapter answers both: which finding earns the headline, and could a stranger
+rerun the work and get your number back. Ask the room which of their own
+results would lead today, and whether they would still lead tomorrow.
+
+:::
+
+
+## The note has no you standing next to it
+
+::: {.kicker}
+
+Chapter 31 · Why this decision matters
+
+:::
+
+::: {.lead}
+
+When you present, your voice fills the silences. The page has no voice.
+
+:::
+
+- Every leap a presentation lets you imply, the prose has to earn.
+- In order, for a reader who will never hear you explain it.
+- Whatever you present is one input to the note, never its source.
+
+::: {.notes}
+
+This is the whole reason a dossier or a poster cannot simply be retyped into a
+paper. Standing next to your work, you answer the objection the moment a face
+goes puzzled, so the compressed version survives. On the page nobody asks, so
+nothing gets repaired, and an argument with a hole in it just reads as an
+argument with a hole in it. Keep the chapter's ordering claim: the
+presentation feeds the note, and the note is never a transcript of the
+presentation.
+
+:::
+
+
+## A poster's Gap box says one line; the note argues the paragraph
+
+::: {.kicker}
+
+Chapter 31 · The concept
+
+:::
+
+- Working logic: compressed records, plus your live voice filling the silences.
+- A Gap box reading only 'few studies of wait times at peak hours'.
+- Paper logic: every claim argued in prose, because you are not there to answer.
+- The same gap, written out: what prior work covered, what it skipped, why that matters.
+- Turning one into the other is not adding words. It is making the reasoning visible.
+
+::: {.notes}
+
+Put the two versions of the same gap side by side, because the difference is
+the entire lesson. The poster line is not wrong, it is incomplete on purpose,
+and you were the missing half. The paragraph has to do the work your voice
+did: name the prior studies, say what they left out, and say why the missing
+piece is worth anyone's time. Warn against the usual first attempt, which is
+padding the poster line with adjectives instead of supplying the reasoning it
+never carried.
+
+:::
+
+
+## Problem, gap, question: the spine holds only when the gap is real
+
+::: {.kicker}
+
+Chapter 31 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Problem–gap–question spine]{.t}
+
+[the real trouble your work responds to, the specific thing prior retrievable work has not established, and the answerable question that closes exactly that gap]{.d}
+
+:::
+
+::: {.term}
+
+[Evidence density]{.t}
+
+[the share of a paragraph resting on sources a reader could open rather than bare assertion]{.d}
+
+:::
+
+::::
+
+- Problem: customers give up and leave during the morning rush.
+- Gap: published wait-time studies measure only quiet, steady hours.
+- Question: how much does mobile pre-order cut the wait during the rush here?
+- 'As everyone knows' carries no density. A published figure a reader can recompute carries some.
+
+::: {.notes}
+
+A note carries its reasoning on this backbone (Mensh & Kording 2017), and the
+three pieces have to be linked, not merely present. Test the link out loud:
+does the question close exactly the gap you named, or a wider one you would
+rather answer? The gap is the piece that fails most often, because a gap is
+only real once you have shown what is already known. That showing is what
+evidence density measures, so a gap paragraph with no openable sources in it
+is an assertion wearing a paragraph's clothes.
+
+:::
+
+
+## Best-supported first, one lucky run last
+
+::: {.kicker}
+
+Chapter 31 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Results hierarchy]{.t}
+
+[the order you present findings in, best-supported first and fragile last]{.d}
+
+:::
+
+::::
+
+- A median measured over a thousand simulated mornings leads.
+- One unusually fast order waits at the back, labeled exploratory.
+- Limitations follow the same discipline, sized to what actually threatens the claim.
+- 'Measured on a simulated arrival pattern, not a real Saturday rush.'
+- Not a generic 'more research is needed.'
+
+::: {.notes}
+
+The hierarchy is a claim about trust, so writing it forces you to rank your
+own evidence before a reviewer does it for you. The same discipline governs
+the limitations section, which is where most drafts go slack: a generic call
+for more research costs you nothing and tells the reader nothing. Ask the room
+for the one sentence a hostile reader would raise first about their project,
+and put that sentence in the limitations rather than the filler one.
+
+:::
+
+
+## A note a reader cannot rerun is half a claim
+
+::: {.kicker}
+
+Chapter 31 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Reproducibility capsule]{.t}
+
+[everything a stranger needs to rebuild your number and nothing they must guess]{.d}
+
+:::
+
+::: {.term}
+
+[Restart-and-run-all]{.t}
+
+[clear everything, run every cell top to bottom, and the headline number returns]{.d}
+
+:::
+
+::::
+
+- Pinned data and tool versions.
+- A fixed seed.
+- A decision log.
+- Your AI-use ledger.
+
+::: {.notes}
+
+The chapter is blunt here: readable is only half of the job, and the other
+half is runnable (National Academies of Sciences, Engineering, and Medicine
+2019). Take the capsule's second clause as seriously as the first, because the
+failure mode is not a missing file, it is a step you did by hand and never
+wrote down. Restart-and-run-all is the check that catches it, and it only
+counts on a clean kernel, not on the session where everything already lives in
+memory (Wilson et al. 2017).
+
+:::
+
+
+## '38% faster' is a table row, not yet a claim you can defend
+
+::: {.kicker}
+
+Chapter 31 · A worked example
+
+:::
+
+- You tested a mobile pre-order option for a campus coffee shop.
+- Your claim–evidence table holds the headline row: '38% faster.'
+- The note has to turn that row into a claim you can defend.
+
+::: {.notes}
+
+The row is where your claim–evidence table left you, and it is genuine work: a
+number tied to evidence. What it is not yet is a sentence anyone can weigh,
+because it carries no setting, no sample and no boundary. The next three moves
+are the whole chapter in miniature, so name them before you walk through them:
+rank the findings, size the claim, package it.
+
+:::
+
+
+## The 99% drop is one customer; the 38% is a thousand arrivals
+
+::: {.kicker}
+
+Chapter 31 · A worked example
+
+:::
+
+- Across a thousand simulated arrivals, median wait dropped about 38%.
+- With a tight interval around it.
+- One pre-ordering customer was served almost instantly: a 99% drop.
+- The median leads. The lone customer goes to the back, as one observation.
+
+::: {.notes}
+
+Both numbers came out of the same run, and the bigger one is the one you would
+most enjoy putting on a slide. That is exactly why the ranking rule exists. A
+median over a thousand arrivals is a statement about the procedure; one fast
+order is a statement about one morning and one person. Say plainly what the
+lone customer is allowed to be in the note: one observation, labeled as such,
+not a result.
+
+:::
+
+
+## Drop 'median' and 'simulated' and you promise what you never tested
+
+::: {.kicker}
+
+Chapter 31 · A worked example
+
+:::
+
+- Honest: 'on this simulated arrival pattern, mobile pre-order cut median wait by about 38%.'
+- Interval attached, and the boundary in the same sentence.
+- 'This is a measurement on simulated demand, not a guarantee for a real Saturday rush.'
+- Refused: 'mobile pre-order makes the shop 38% faster.'
+- That drops the demand pattern, drops median, and promises every customer a shorter wait.
+
+::: {.notes}
+
+Read the two sentences one after the other and ask the room which one they
+would rather write. Most people would rather write the refused one, because it
+is shorter and it sounds surer. Then count what the short version quietly
+deleted: the arrival pattern it was measured on, the word median, and the
+difference between a typical customer and every customer. Writing the refused
+version down on purpose is the point of the exercise, since a claim you have
+named is a claim you can catch when it creeps back in during editing.
+
+:::
+
+
+## The capsule is what makes the 38% return on a clean kernel
+
+::: {.kicker}
+
+Chapter 31 · A worked example
+
+:::
+
+- Pin the simulation's seed.
+- Record the machine and library versions.
+- Log that you excluded the first order of the morning, and why.
+- Pass restart-and-run-all so the 38% comes back.
+- The note is now readable and runnable.
+
+::: {.notes}
+
+Notice that the exclusion is logged with its reason, not just recorded. A
+stranger rerunning your work does not need to agree with the choice, but they
+do need to see that it was a choice and know what it was for. This is the
+point where the note stops being a document about your work and starts being a
+thing someone else can operate.
+
+:::
+
+
+## The printout is already the note's order of trust {.denser}
+
+::: {.kicker}
+
+Chapter 31 · A worked example
+
+:::
+
+- The median drop prints with its interval, never on its own.
+- The luckiest customer prints at the bottom, where the note puts it.
+- The code labels that last line as one observation, not a result.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 1000
+service = rng.gamma(2.0, 55.0, size=n)                  # ordinary counter service
+preorder = rng.gamma(2.0, 36.0, size=n)                 # mobile pre-order
+
+med_drop = 1 - np.median(preorder) / np.median(service)
+boot = [1 - np.median(rng.choice(preorder, n)) / np.median(rng.choice(service, n))
+        for _ in range(2000)]
+lo, hi = np.percentile(boot, [2.5, 97.5])
+luckiest = 1 - preorder.min() / np.median(service)
+
+print(f"median wait, ordinary service : {np.median(service):.0f} s")
+print(f"median wait, mobile pre-order : {np.median(preorder):.0f} s")
+print(f"median drop                   : {med_drop*100:.0f}% "
+      f"[{lo*100:.0f}%, {hi*100:.0f}%]")
+print(f"the single luckiest customer  : {luckiest*100:.0f}% faster")
+print("\nthe headline is the first number with its interval. the last one is")
+print("one observation, and it goes at the back of the note labelled as such")
+```
+
+::: {.notes}
+
+The block runs the arrivals and prints the ranked findings in the order the
+note will use them, so the printout is itself the results hierarchy. Point at
+the printed interval and say that the headline sentence has to carry it. Then
+point at the last line, which the code labels for you, and ask what would have
+to be true before that number could move up the page.
+
+:::
+
+
+## An AI failure case {.dense}
+
+::: {.kicker}
+
+Chapter 31
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You paste your discussion into your AI and ask it to make the writing sharper.
+It hands back cleaner prose, and it runs through your spell-check without a
+flag. Buried in the polish, one sentence has changed size. Your original said
+"median wait time dropped about 38% on this simulated arrival pattern." The
+rewrite says "mobile pre-order makes the shop roughly 38% faster." The word
+median is gone, the demand-pattern boundary is gone, and a measurement on
+simulated demand now promises every customer a shorter wait. The sentence
+reads better and claims more.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 31 · An AI failure case
+
+:::
+
+- You catch it by diffing the rewrite against your original sentence and against your printed result.
+- The number came from a median over a seeded simulation, not a mean, and not a real Saturday rush, so the general claim is not licensed.
+- You keep the edits that clarify and reject the one that inflated.
+- Fluent prose is not evidence.
+- You verify the claim, not the polish.
+
+::: {.notes}
+
+You catch it by diffing the rewrite against your original sentence and against
+your printed result. The number came from a median over a seeded simulation,
+not a mean, and not a real Saturday rush, so the general claim is not
+licensed. You keep the edits that clarify and reject the one that inflated.
+Fluent prose is not evidence. You verify the claim, not the polish.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 31
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+Three calls stay yours no matter how fluent the tool is. **Which finding is
+your headline**, **how big that claim is allowed to be**, and **which sources
+are real** are never delegated. An AI can sharpen a sentence, but a sharper
+sentence is not a bigger finding, and clean prose is exactly how an overclaim
+sneaks in. You own the words you put your name on, their boundary, and their
+uncertainty.
+
+:::
+
+
+## It is your turn {.denser}
+
+::: {.kicker}
+
+Chapter 31 · Your move
+
+:::
+
+1. Write your problem–gap–question spine as three short paragraphs.
+2. Order your findings, best-supported first.
+3. Write your headline claim in one sentence, with its boundary inside the same sentence: the setting, the sample, and the population it does not cover.
+4. Size your limitations to what actually threatens the claim.
+5. Assemble the full note, not only its spine: methods (what you did, so a stranger could follow), results with their uncertainty, a discussion sized to the claim, references, your AI-use disclosure placed where the venue expects it, and the pointer to the package Studio 11 will freeze.
+6. Attach your folder to the note and confirm the two agree: the number in your lead sentence is the number a cold restart-and-run-all prints.
+7. Log the drafting round in your AI Research Ledger, and verify at least one output with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html).
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_from_poster_to_research_note.ipynb) with [Chapter 31](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Milestone 9: Your bounded claims {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Studio 9 closes here
+
+:::
+
+::: {.divider-line}
+
+What the lessons handed you becomes one artifact you can defend.
+
+:::
+
+
+## What this milestone produces
+
+::: {.kicker}
+
+Milestone 9
+
+:::
+
+::: {.decision}
+
+[The artifact]{.label}
+
+**What this milestone produces.** A stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement.
+
+:::
+
+
+## What you bring {.dense}
+
+::: {.kicker}
+
+Milestone 9 · Check before you start
+
+:::
+
+- [Lesson 28 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html): your claims with verbs downgraded to what the design established, each carrying its boundary line.
+- [Lesson 29 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html): your claim-evidence table, one row per claim with claim, evidence, trace, and boundary, every number traced to its output.
+- [Lesson 30 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html): your AI-use disclosure, written from the ledger and naming what you did not verify.
+- [Lesson 31 — From Dossier to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html): your stand-alone note draft: the problem-gap-question spine, methods, results with uncertainty, discussion, ordered findings with the headline claim's boundary inside, references, your disclosure placed, and the pointer to the package Studio 11 will freeze.
+
+
+## The practice
+
+::: {.kicker}
+
+Milestone 9 · In the studio
+
+:::
+
+1. Write your claim as one sentence, with its boundary attached in the same sentence.
+2. Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it.
+3. State your uncertainty and your limitations in the words a reader outside your field would use.
+4. Write your AI disclosure from your ledger, not from memory.
+
+
+## The four rails, here
+
+::: {.kicker}
+
+Milestone 9 · Every studio, these four
+
+:::
+
+:::: {.rails}
+
+::: {.rail}
+
+[Ethics, permissions, and data exposure]{.t}
+
+[Disclosure includes what you sent to tools, not only what they produced.]{.d}
+
+:::
+
+::: {.rail}
+
+[Evidence, provenance, and reproducibility]{.t}
+
+[A claim with no row in the table does not appear in the draft.]{.d}
+
+:::
+
+::: {.rail}
+
+[AI activity, verification, and human decisions]{.t}
+
+[The sentence that ships is yours, whatever drafted it.]{.d}
+
+:::
+
+::: {.rail}
+
+[Uncertainty, claim boundary, and revision history]{.t}
+
+[Findings are never communicated as certainties.]{.d}
+
+:::
+
+::::
+
+
+## A version, not a pass
+
+::: {.kicker}
+
+Milestone 9
+
+:::
+
+::: {.note-card}
+
+[How the record works]{.label}
+
+Your milestone artifact is a dated, numbered **version** with the reason for
+the version attached. When later evidence changes it, you write the next
+version rather than editing the last one, because the sequence of changes is
+itself part of your research record.
+
+:::
+
+
+## The one rule {background-color="#1a1a19" .divider}
+
+::: {.divider-line}
+**AI is your arm and your research assistant, not your brain.**
+
+AI can review AI, and a second model is a real auditor of the first. The
+last decision is always human.
+:::
+
+[Studio 9 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio09-write-bound-disclose.html) · [Milestone 9](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)

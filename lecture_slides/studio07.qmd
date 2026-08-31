@@ -1,0 +1,1217 @@
+---
+# GENERATED FILE — DO NOT EDIT.
+# Written by scripts/build_studio_slides.py from the EDR|AI book:
+#   book/studios/studio07-first-analysis.qmd      (the studio's promise)
+#   the studio's chapters                                 (its argument)
+#   book/studios/milestone07-first-analysis.qmd   (its milestone)
+# Editorial overlay: planning/BOOK_SLIDE_PLANS/<lesson-id>.yml
+# Lessons on this deck: ai-as-programmer ai-analytical-assistant
+# Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
+# silently reverted on the next build and fail `--check` in CI.
+title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+subtitle: "Studio 7 — Produce a reproducible first analysis"
+author: "Davi Moreira"
+format:
+  revealjs:
+    theme: [default, _theme/edrai-slides.scss]
+    width: 1600
+    height: 900
+    margin: 0.07
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: fade
+    background-transition: fade
+    transition-speed: fast
+    incremental: false
+    hash: true
+    hash-type: number
+    history: false
+    progress: true
+    controls: true
+    controls-layout: bottom-right
+    touch: true
+    preview-links: auto
+    link-external-newwindow: true
+    logo: _theme/edrai_logo.png
+    footer: "EDR|AI · Studio 7 — Produce a reproducible first analysis"
+    chalkboard:
+      buttons: false
+    menu:
+      side: left
+      width: normal
+    code-line-numbers: false
+    highlight-style: github
+    fig-align: center
+---
+
+## What you can defend when you leave
+
+::: {.kicker}
+
+Studio 7
+
+:::
+
+::: {.decision}
+
+[What you can defend when you leave]{.label}
+
+Produce one honest result you can reproduce from a clean start, with its
+uncertainty attached.
+
+:::
+
+
+## The milestone ahead
+
+::: {.kicker}
+
+Studio 7
+
+:::
+
+This studio closes with **[Milestone 7: Your first reproducible
+analysis](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html)**,
+a short chapter of its own after the lessons. **What it asks you to produce.**
+A route-specific result with an uncertainty statement, a restart-and-run-all
+verification, an environment record, and a claim-to-output check.
+
+::: {.notes}
+
+This is where your project produces its first real number. The milestone asks
+for less than you might expect: one honest result, with its uncertainty
+attached, reproducible from a clean start. The point is not volume. It is a
+result you can trace from claim to output to data cell, because every number
+you will ever defend in this project passes through the discipline you set
+here.
+
+Milestone 8 exists to attack this result; the cleaner your record here, the
+more the attack can teach you. The milestone chapter keeps the working
+details: the practice steps, the versioned record, and how the artifact is
+assessed.
+
+:::
+
+
+## The lessons in this studio
+
+::: {.kicker}
+
+Studio 7 · Road map
+
+:::
+
+- [Lesson 22 — AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html): your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.
+- [Lesson 23 — AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html): your headline estimate with its uncertainty statement and cycle log, two independently re-derived numbers, a placebo run where licensed, the clean-restart record, the environment record, and the claim-to-output trace.
+
+
+## AI as Programmer {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 1 of this studio · Chapter 22
+
+:::
+
+::: {.divider-line}
+
+which quantity your code computes, and which cases it counts
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 22
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+You decide **which quantity your code must compute and over which set of
+cases**, and you keep deciding it at every turn of the loop, because the tool
+rewrites the code each time you press enter. A cell that runs without an error
+is not a result you have earned. It is a draft you have not read.
+
+:::
+
+
+## The officer wants to know which cities the number was computed over
+
+::: {.kicker}
+
+Chapter 22 · Why this decision matters
+
+:::
+
+- The decision on the table: which quantity your code computes, and which cases it counts.
+- He does not care that the code was clean, only what it counted and about whom.
+
+::: {.note-card}
+
+*"Do not read me the percentage. Tell me which cities it was computed over. If your code only saw the towns with an open-data portal, you have not described the state. You have described the portals."* — a **state open-records officer**, asked to act on a transparency report
+
+:::
+
+::: {.notes}
+
+Start with the person who has to act on the number, because he is the one who
+will ask the question the code cannot answer for you. Notice what he does not
+ask about: syntax, style, whether the notebook ran. He asks which cases the
+percentage covers. Ask the room whether they could answer that question, right
+now, for a number already sitting in their own project.
+
+:::
+
+
+## A cell that runs without an error is a draft you have not read
+
+::: {.kicker}
+
+Chapter 22 · Why this decision matters
+
+:::
+
+- An AI writes your analysis code in seconds, and it runs.
+- That is exactly where the danger sits.
+- It writes fluent code for the quantity it *thinks* you asked for.
+- Paste the printed number into your report and you have signed for a quantity you never checked.
+
+::: {.notes}
+
+The speed is what makes this hard. Nothing about a fast, clean result signals
+that the question changed on the way. The tool works over whatever rows sit in
+the dataframe you handed it, and it will not tell you which set that was. The
+chapter's line is worth reading aloud: a cell that runs without an error is
+not a result you have earned.
+
+:::
+
+
+## Pin the number down in words before you ask for any code
+
+::: {.kicker}
+
+Chapter 22 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Descriptive summary]{.t}
+
+[a number or picture that reports what is actually in the cases you can see, such as a share, an average, or a full distribution]{.d}
+
+:::
+
+::: {.term}
+
+[Quantity of interest]{.t}
+
+[the one exact number your code is supposed to produce, pinned down in words before you ask for any code]{.d}
+
+:::
+
+::::
+
+- The tool is the programmer. You are the researcher.
+- Example: "the share of municipalities in the state that post council minutes within seven days of the meeting."
+
+::: {.notes}
+
+The quantity of interest is written in words, not in code, and it is written
+first. That ordering is the whole defense. If the sentence exists before the
+prompt does, you have something to compare the returned code against. If it
+does not, whatever the tool computes becomes your question by default.
+
+:::
+
+
+## Your frame is the set your data covers, not the group you asked about
+
+::: {.kicker}
+
+Chapter 22 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Frame]{.t}
+
+[the concrete set of cases your data actually covers, which is often smaller than the group your question is about]{.d}
+
+:::
+
+::: {.term}
+
+[Convenience sample]{.t}
+
+[a set of cases collected because they were easy to reach, not drawn to stand in for a population]{.d}
+
+:::
+
+::::
+
+- Example: only the cities that publish through an open-data portal.
+- Those tend to be the largest and best-staffed in the state.
+
+::: {.notes}
+
+Frame and quantity are the pair you keep deciding. The portal example matters
+because the gap between the frame and the question is not random: the cities
+that are easiest to reach are also the ones most likely to be complying. Ask
+the room what their own frame is, in a sentence a stranger could check.
+
+:::
+
+
+## A clean run is not a correct result
+
+::: {.kicker}
+
+Chapter 22 · The concept
+
+:::
+
+- A tool can compute a flawless share over the wrong frame.
+- The code still finishes with a green check.
+- A cell can execute with no error and compute a different number than your question needs (Vaithilingam et al. 2022).
+
+::: {.notes}
+
+This is the trap the chapter closes, so slow down here. The arithmetic is not
+in dispute. The share is real over the rows the tool saw. What the green check
+certifies is that the code ran, and nothing more than that. There is no error
+message for computing the wrong quantity.
+
+:::
+
+
+## Coding with AI is a loop, not a wish
+
+::: {.kicker}
+
+Chapter 22 · The concept
+
+:::
+
+- Nobody gets working analysis code from one prompt, and you should not try to.
+- You prompt, read the output, interrogate it, refine, and run it again.
+- Agentic tools now run that loop themselves and hand you a tidy end state.
+- The loop is a real gain in speed. It is also where your frame goes missing.
+
+::: {.notes}
+
+Set the expectation honestly: the first prompt is turn one, not an answer.
+When the tool runs the turns for itself, it writes, executes, reads the error,
+patches, reruns, and reports back with a paragraph about how well it went. You
+gain the speed and you lose sight of the turns, which is the trade this
+chapter asks you to manage rather than refuse.
+
+:::
+
+
+## Verification runs per cycle, not per session
+
+::: {.kicker}
+
+Chapter 22 · The concept
+
+:::
+
+- Any turn can add a filter, drop a join, or reach for a different column.
+- Nothing announces the change. The number just gets prettier.
+- Every time the code changes, ask again: what quantity, over which cases?
+- Read the code, not the tool's summary of the code (Sandve et al. 2013).
+
+::: {.notes}
+
+The code you finally read may not be the code you specified three turns ago.
+That is why checking once at the end does not work. You own two things the
+programmer cannot: you define the quantity and the frame in plain words before
+you delegate (Blair et al. 2023), and you confirm that the code in front of
+you right now computes that quantity over that frame, and not a plausible
+neighbor. When a tool ran the cycles for you, make it surrender the choices it
+made along the way.
+
+:::
+
+
+## Turn one: six clean lines and a reassuring 95%
+
+::: {.kicker}
+
+Chapter 22 · A worked example
+
+:::
+
+- Your question: what share of city councils post their meeting minutes within seven days?
+- You have a spreadsheet scraped from municipal websites.
+- You ask an AI for the Python that returns the share posting on time.
+- The printout says 95%, and the temptation is to write "compliance is strong."
+
+::: {.notes}
+
+Everything here looks like success. The question is plain, the data exist, the
+code runs, the number is high. Instead of writing the sentence, read what the
+code did. That single change of habit is what the rest of the example is built
+on.
+
+:::
+
+
+## Turn two: 40 portal cities standing in for 240
+
+::: {.kicker}
+
+Chapter 22 · A worked example
+
+:::
+
+- The dataframe holds only the 40 municipalities that publish through an open-data portal.
+- There are 240 on the state roster. That is a convenience sample standing in silently.
+- The code also calls `.dropna()`, and the dropped rows are the towns the scraper came back empty on.
+- The 95% describes the best-resourced cities with their worst records deleted.
+
+::: {.notes}
+
+Two separate narrowings, and neither one announced itself. The first was in
+the data you were handed; the second was written by the tool. Both push the
+number the same way, because the towns with the thinnest clerical staff are
+exactly the ones the scraper failed on. Ask the room which of the two would
+have been harder to catch.
+
+:::
+
+
+## Turn three: not knowing is a finding
+
+::: {.kicker}
+
+Chapter 22 · A worked example
+
+:::
+
+- You re-anchor to your quantity: the share over every municipality on the state roster.
+- Unretrievable records get flagged, not dropped.
+- At most one in six municipalities is confirmed to post on time.
+- For most of the state you simply do not know.
+
+::: {.notes}
+
+The refined prompt says precisely what the earlier one left open, and the
+picture changes. Keep the chapter's bound on the new number: one in six is the
+confirmed share, and the rest of the roster is unknown rather than
+non-compliant. That unknown is a finding you report, not a gap to paper over.
+
+:::
+
+
+## The tool wrote correct code for the wrong question
+
+::: {.kicker}
+
+Chapter 22 · A worked example
+
+:::
+
+- An agentic run would have handed you the polished 95% with a confident paragraph.
+- The decision that shrank your state to 40 cities would sit inside a step you never saw.
+- Code that runs cleanly while answering the wrong question is the documented risk of accepting output alone (Vaithilingam et al. 2022).
+- You did the research by deciding what the code was allowed to count.
+
+::: {.notes}
+
+This is the sentence to leave the room with. Nothing was wrong with the code
+as code, and an agent running all three turns would have shown you only the
+tidy end state. The research happened at the point where a human decided which
+cases the number was allowed to cover. That decision has no automated
+substitute.
+
+:::
+
+
+## The 95% is real. Read what it is 95% of. {.densest}
+
+::: {.kicker}
+
+Chapter 22 · A worked example
+
+:::
+
+- Watch three shares in order: portal cities only, the same after `.dropna()`, then the whole roster.
+- The roster line is a range, because unretrievable records are flagged instead of deleted.
+- A fourth line counts the records the scraper never returned.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+roster = 240
+big = np.arange(roster) < 40                    # the open-data portal cities
+on_time = np.zeros(roster, dtype=bool)
+on_time[rng.choice(np.where(big)[0], 38, replace=False)] = True    # 38 of 40
+on_time[rng.choice(np.where(~big)[0], 110, replace=False)] = True  # 110 of 200
+# the scraper comes back empty exactly where clerical staff is thinnest
+scraped = rng.random(roster) < np.where(big, 0.92, 0.62)
+
+portal_only = on_time[big].mean()
+after_dropna = on_time[big & scraped].mean()
+best_case = (on_time | ~scraped).mean()         # unretrievable counted as on time
+worst_case = (on_time & scraped).mean()         # unretrievable counted as late
+
+print(f"turn one, portal cities only        : {portal_only*100:.0f}%")
+print(f"the same after .dropna()            : {after_dropna*100:.0f}%")
+print(f"whole roster, unretrievable flagged : between "
+      f"{worst_case*100:.0f}% and {best_case*100:.0f}%")
+print(f"records the scraper never returned  : {(~scraped).sum()} of {roster}")
+print("\nthe clean run was never wrong about its own rows. it was answering")
+print("a different question than the one you asked")
+```
+
+::: {.notes}
+
+The block reproduces all three turns on the same 240-municipality roster,
+including the rows the scraper never returned. Run it and read the three
+numbers in order, because the movement between them is the lesson. Ask the
+room which of the printed figures they would put in a report, and what
+sentence would have to travel with it.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 22
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You ask for the on-time share and the tool returns tidy code that prints, with
+full confidence, "**95% of councils post minutes on time. Compliance is
+strong.**" The code has no error and reads beautifully. The trap is buried in
+two lines: the input dataframe was already limited to cities with an open-data
+portal, and a `.dropna()` silently removed the towns where no posting date
+came back. The share is real arithmetic over the wrong set.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 22 · An AI failure case
+
+:::
+
+- You catch it by reading the code, not its summary.
+- Printing the dataframe's shape shows 40 municipalities, not 240.
+- Printing the row count before and after `.dropna()` shows how many towns vanished, and looking at which ones reveals the smallest governments in the state.
+- Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses.
+- A green check certified that the code ran, never that it answered your question.
+
+::: {.notes}
+
+You catch it by reading the code, not its summary. Printing the dataframe's
+shape shows 40 municipalities, not 240. Printing the row count before and
+after `.dropna()` shows how many towns vanished, and looking at which ones
+reveals the smallest governments in the state. Recompute over the full roster,
+flag the unretrievable records instead of deleting them, and the reassuring
+95% collapses. A green check certified that the code ran, never that it
+answered your question.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 22
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+You define **what quantity the code computes** and **which set of cases it
+runs over**, and you decide **what the number is allowed to claim**. The tool
+can write the filter, the aggregation, and the plot, and it can run its own
+loop until everything is clean. It cannot decide that 40 portal cities speak
+for a state of 240, or that a compliance rate with the unreachable towns
+deleted is honest. You own the final sentence, its frame, and its boundary.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 22 · Your move
+
+:::
+
+1. Write your quantity of interest in one sentence, and the frame it runs over in a second.
+2. Prompt an AI tool for the code that computes that quantity over that frame.
+3. Read the returned code line by line and ask what each line removes.
+4. Print the shape of the data the number was computed over, and the row count before and after anything that can drop rows.
+5. Write one sentence naming what this number does *not* cover: the cases your frame left out, and what you therefore cannot say about them.
+6. Log this first number in your AI Research Ledger, and verify it with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html). **Alternative code** is the natural pick here: recompute the same quantity a second way and confirm the two roads give one answer.
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch22_ai_as_programmer.ipynb) with [Chapter 22](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## AI as Analytical Assistant {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 2 of this studio · Chapter 23
+
+:::
+
+::: {.divider-line}
+
+which analytical work you hand off, and which numbers you personally re-derive
+before you believe them
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 23
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+You decide **which analytical tasks the assistant runs and which numbers you
+re-derive yourself** before any of them reach a claim. The assistant supplies
+labor by the bucket. Which checks count, which flags are real, and what the
+surviving number means: those stay on your side of the desk.
+
+:::
+
+
+## The discussant does not care that a model ran the checks
+
+::: {.kicker}
+
+Chapter 23 · Why this decision matters
+
+:::
+
+- A discussant at a labor economics seminar, reading your results section.
+- The decision on the table: which analytical work you hand off.
+- And which numbers you personally re-derive before you believe them.
+
+::: {.note-card}
+
+I do not care that a model ran your robustness checks. I care which ones you
+chose, which numbers you re-derived yourself, and which flags you confirmed
+against the data. Show me that trail and I trust your judgment. Show me the
+model's transcript and I trust neither.
+
+:::
+
+::: {.notes}
+
+Read the quote as the discussant would say it, then stop on its last line: the
+transcript buys you nothing. What is being asked for is a short trail of
+choices that stayed yours, and it is asked for out loud, in front of a room.
+Ask your own room whether they could produce that trail today for the last
+number an AI tool handed them.
+
+:::
+
+
+## Paste the table and you have signed your name to numbers you never checked
+
+::: {.kicker}
+
+Chapter 23 · Why this decision matters
+
+:::
+
+- An AI tool can write your analysis code and run a dozen checks in seconds.
+- It hands back a clean table.
+- That speed is exactly why a loose habit is dangerous.
+- This chapter gives you the habit that survives the discussant's question.
+
+::: {.notes}
+
+Nothing here is an argument against the speed. The chapter's worry is the
+habit, not the tool. The problem is that a clean table arrives looking
+finished, so there is no moment that forces you to check it, and the signature
+goes on anyway. The habit in this chapter puts that moment back in on purpose.
+
+:::
+
+
+## A task is checkable; a verdict is not its job
+
+::: {.kicker}
+
+Chapter 23 · The concept
+
+:::
+
+- An AI analytical assistant takes a well-specified analytical task, never your judgment (Vaithilingam et al. 2022).
+- "Recompute this gap after dropping the three people who enrolled with an offer already in hand."
+- It writes and runs that one check.
+
+::: {.notes}
+
+Say the delegated sentence out loud, because the shape of it is the lesson. It
+names the number wanted, the exact columns, and the filter behind it, and it
+asks for none of the interpretation. A request for a verdict on what the
+result means has no checkable answer, so nothing comes back that you could
+verify.
+
+:::
+
+
+## You attack your headline estimate before you defend it
+
+::: {.kicker}
+
+Chapter 23 · The concept
+
+:::
+
+- Your headline estimate is the single number that stands in for your whole finding.
+- "People who went through the program received a first offer about 0.7 standard deviations sooner."
+- Before you defend that number, you try to break it.
+- Breaking it is the labor you delegate.
+
+::: {.notes}
+
+This is the sentence that decides the order of the work. You do not delegate
+the finding, you delegate the attempts to destroy it, and what survives is
+what you take to the seminar. Ask the room to name their own project's
+headline estimate in one sentence right now. Anyone who cannot has just found
+the first thing to fix.
+
+:::
+
+
+## Two attacks do most of the work {.dense}
+
+::: {.kicker}
+
+Chapter 23 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Robustness check]{.t}
+
+[re-runs the same finding under a different but equally defensible choice and asks whether the answer holds]{.d}
+
+:::
+
+::: {.term}
+
+[Placebo test]{.t}
+
+[runs your exact analysis where the effect cannot exist and asks whether what comes back is ordinary for a world with nothing in it]{.d}
+
+:::
+
+::::
+
+- You reported a mean time to first offer, so also compute the median (Simonsohn et al. 2020).
+- Shuffle the "program" and "no program" labels at random, many times (Lipsitch et al. 2010).
+- Random labels always differ a little, so that pile of fake gaps is not zeros.
+- What matters is whether your real gap looks ordinary in that pile, or sits far outside.
+
+::: {.notes}
+
+Keep the bound the chapter puts on the placebo. Random labels always differ a
+little, so the pile of fake gaps is not a pile of zeros, and finding something
+there is not a finding. What the test asks is narrower: does your real gap
+look ordinary in that pile, or does it sit far outside it? The robustness
+check asks a different question, whether the story survives a choice you could
+equally have made.
+
+:::
+
+
+## A number that survived turn four says nothing about turn seven's code
+
+::: {.kicker}
+
+Chapter 23 · The concept
+
+:::
+
+- You will not get your analysis from one prompt.
+- You prompt, read the output, interrogate it, refine, and run it again.
+- Agentic tools now run those cycles on their own, writing and patching until something looks finished.
+- Verification attaches to each cycle, not to the last one.
+
+::: {.notes}
+
+The failure here is quiet. You check a number carefully on an early turn, the
+loop keeps going, and the code that produced the final table is not the code
+you checked. Nothing announces that switch. Ask the room how many cycles their
+last AI-assisted analysis actually took, and how many of those cycles they
+could describe now.
+
+:::
+
+
+## Re-asking until the estimate looks better is a specification search
+
+::: {.kicker}
+
+Chapter 23 · The concept
+
+:::
+
+- Every re-prompt is a fork in your analysis.
+- Keep re-asking until the number improves and you have searched, without telling anyone, including yourself.
+- The fix is cheap: keep a running log, one line per cycle.
+- Say what you asked, what came back, and what you changed and why.
+- An assistant that ran ten silent variants and reported the nicest one is an unlogged search.
+
+::: {.notes}
+
+This is the part of the chapter that bites, because the search does not feel
+like a search. It feels like refining a prompt. The phrase to keep is "without
+telling anyone, including yourself": the log is what makes the forks visible
+to you, not only to a reader. It costs one line per turn.
+
+:::
+
+
+## A tool that ran without an error has not proven its result correct
+
+::: {.kicker}
+
+Chapter 23 · The concept
+
+:::
+
+- The assistant proposes checks, writes code, and prints numbers, cycle after cycle.
+- You decide which checks count, and you log the cycles.
+- You verify every number before it reaches your claim.
+- Verify the number, not the paragraph about the number.
+
+::: {.notes}
+
+Close the section on the division of labor, and make the last line land.
+Models write confident prose about their own output, and that prose is not
+evidence. What you verify is the figure itself, recomputed some other way. A
+green run means the code executed, which is a much smaller claim than the one
+you are about to make.
+
+:::
+
+
+## A four-week program, and a 0.7 standard deviation gap you try to break
+
+::: {.kicker}
+
+Chapter 23 · A worked example
+
+:::
+
+- The program helps people target applications and rehearse interviews.
+- Outcome: weeks from enrollment to first offer.
+- Headline: participants reached an offer about 0.7 standard deviations sooner.
+- You delegate a grid with three handles: the sample, the measurement, the specification.
+
+::: {.notes}
+
+Name the three handles concretely, because the grid is built from them.
+Sample: all enrollees, or drop the three who already had an offer in hand when
+they signed up. Measurement: mean or median weeks to offer. Specification: the
+raw gap, or one adjusted for each person's prior work experience. That is
+eight cells, and every one of them is a choice you could defend.
+
+:::
+
+
+## Eight numbers, two re-derived by hand, and an honest range
+
+::: {.kicker}
+
+Chapter 23 · A worked example
+
+:::
+
+- The assistant returns eight numbers. You do not trust them yet.
+- You recompute two rows by hand with a second, simpler expression, and they match.
+- The direction holds across all eight; the magnitude runs about 0.6 to 0.7 standard deviations.
+- Your honest headline is a direction plus a range, not one flattering number.
+- Three cycles went into getting the grid to run, and all three are in your log.
+
+::: {.notes}
+
+A direction plus a range is a weaker-sounding claim than a single number, and
+it is the one you can defend. Point out that two hand re-derivations, not
+eight, were enough to make the table believable, so the cost of this habit is
+small. The three logged cycles matter for the same reason as the last section:
+they are what says the grid was run once, not searched.
+
+:::
+
+
+## The flag the reviewer named was refuted; the flaw it missed was real
+
+::: {.kicker}
+
+Chapter 23 · A worked example
+
+:::
+
+- Shuffle the program labels and re-run many times. Your real gap sits far out in the tail.
+- That lowers your worry that the machinery alone is manufacturing the effect, as far as this check sees.
+- Asked as a hostile reviewer for the worst flaw, it confidently blames the most experienced workers.
+- You already dropped the already-employed group and the gap held, so the data refute that flag.
+- The flaw it missed: weeks to an offer is not the quality of the offer.
+
+::: {.notes}
+
+Hold the bound on the placebo result. It lowers a worry, as far as this one
+check can see; it does not clear the analysis. Then take the red-team output
+apart: the confident flag was already refuted by a check you had run, and the
+real limit went unmentioned. That limit sets the claim's boundary, so your
+claim stays about speed of placement and says nothing about wages or fit. The
+assistant did the arithmetic. You decided which checks counted and which flags
+the data confirmed.
+
+:::
+
+
+## Build the grid, then run the shuffle yourself {.densest}
+
+::: {.kicker}
+
+Chapter 23 · A worked example
+
+:::
+
+- Watch the eight rows point the same way, then read the printed range.
+- Recompute two rows by hand before you believe any of them.
+- The last line counts how many of 2000 label shuffles produced a gap this large.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 300
+experience = rng.normal(0, 1, size=n)
+enrolled = rng.random(n) < 0.5
+weeks = (18 - 6.0 * enrolled - 1.6 * experience
+         + rng.normal(0, 6.5, size=n))
+had_offer_already = np.zeros(n, dtype=bool)
+had_offer_already[rng.choice(np.where(enrolled)[0], 3, replace=False)] = True
+weeks[had_offer_already] = 1.0
+df = pd.DataFrame({"enrolled": enrolled, "weeks": weeks,
+                   "experience": experience, "pre_offer": had_offer_already})
+
+def gap(d, stat):                      # in standard deviations, sign flipped
+    f = getattr(d.groupby("enrolled")["weeks"], stat)()
+    return (f[False] - f[True]) / d.weeks.std()
+
+grid = []
+for sample, d in (("all enrollees", df), ("dropping pre-offers", df[~df.pre_offer])):
+    for measure in ("mean", "median"):
+        raw = gap(d, measure)
+        adj_resid = d.weeks - np.polyval(np.polyfit(d.experience, d.weeks, 1),
+                                         d.experience)
+        adj = ((adj_resid[~d.enrolled].agg(measure)
+                - adj_resid[d.enrolled].agg(measure)) / d.weeks.std())
+        grid += [{"sample": sample, "measure": measure, "spec": "raw", "gap (sd)": raw},
+                 {"sample": sample, "measure": measure, "spec": "adj. experience",
+                  "gap (sd)": adj}]
+g = pd.DataFrame(grid)
+print(g.round(2).to_string(index=False))
+print(f"\nall eight point the same way; magnitude runs "
+      f"{g['gap (sd)'].min():.1f} to {g['gap (sd)'].max():.1f} sd")
+
+# placebo: shuffle the labels and re-run
+fake = [gap(df.assign(enrolled=rng.permutation(df.enrolled)), "mean")
+        for _ in range(2000)]
+beat = int((np.array(fake) >= gap(df, "mean")).sum())
+print(f"placebo: of 2000 label shuffles, {beat} produced a gap this large")
+```
+
+::: {.notes}
+
+The block builds the grid an assistant would return and then runs the placebo,
+all under SEED = 464, so everyone in the room sees the same numbers. Have them
+predict the sign and rough size before you run it. Reporting the whole grid of
+defensible choices rather than one flattering cell is the discipline
+specification-curve analysis was built to enforce (Simonsohn et al. 2020).
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 23
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You hand an assistant your grid and it returns a polished eight-row table,
+every row near 0.7, and declares the result "fully robust." The run threw no
+error. Here is the trap: its "median" rows silently call the same mean
+function as the "mean" rows, so four of the eight numbers are duplicates
+wearing different labels. The table agrees with itself because it never varied
+the handle it claims to vary. This is the **illusion of completeness**, a
+thorough-looking output missing the one thing that matters, shading into
+**confident fabrication**, a number stated with certainty that never came from
+the code path it names.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 23 · An AI failure case
+
+:::
+
+- You catch it by recomputing one "median" row by hand.
+- The true median gap is 0.55, not 0.70.
+- The grid overstated how much your choices agreed.
+- A green check is not a correct result.
+
+::: {.notes}
+
+You catch it by recomputing one "median" row by hand. The true median gap is
+0.55, not 0.70. The grid overstated how much your choices agreed. A green
+check is not a correct result.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 23
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+Three calls never leave your hands. You decide **which checks count** for the
+claim you want to make, **which flagged problems the data actually confirm**,
+and **the final claim you defend**, with its boundary and its range. The
+assistant proposes and computes. The evidence decides, and you are the one who
+reads the evidence.
+
+:::
+
+
+## It is your turn {.denser}
+
+::: {.kicker}
+
+Chapter 23 · Your move
+
+:::
+
+1. Before the assistant touches anything, write your headline estimate in one sentence and the answer you expect.
+2. Hand over one well-specified task at a time.
+3. Keep a cycle log as you go: one line per turn with what you asked, what came back, and what you changed and why.
+4. Re-derive at least two numbers yourself, by hand or with a second simple expression, before any of them enter a claim.
+5. Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm the fake gap lands in the ordinary part of that pile.
+6. Close with the milestone's three checks: restart and run everything from a clean state and confirm the headline numbers match, record your environment (versions, packages, data files), and trace your provisional claim to the exact output that supports it.
+7. Log the analysis in your AI Research Ledger, cycle log attached, and verify at least one output with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html). **Alternative code** fits a computed gap well.
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch23_ai_as_analytical_assistant.ipynb) with [Chapter 23](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Milestone 7: Your first reproducible analysis {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Studio 7 closes here
+
+:::
+
+::: {.divider-line}
+
+What the lessons handed you becomes one artifact you can defend.
+
+:::
+
+
+## What this milestone produces
+
+::: {.kicker}
+
+Milestone 7
+
+:::
+
+::: {.decision}
+
+[The artifact]{.label}
+
+**What this milestone produces.** A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.
+
+:::
+
+
+## What you bring
+
+::: {.kicker}
+
+Milestone 7 · Check before you start
+
+:::
+
+- [Lesson 22 — AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html): your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.
+- [Lesson 23 — AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html): your headline estimate with its uncertainty statement and cycle log, two independently re-derived numbers, a placebo run where licensed, the clean-restart record, the environment record, and the claim-to-output trace.
+
+
+## The practice
+
+::: {.kicker}
+
+Milestone 7 · In the studio
+
+:::
+
+1. Write the analysis you declared, and only that analysis, before looking at anything else.
+2. Produce the result with its uncertainty statement, in the form your Contract specified.
+3. Restart and run everything from a clean state; if the numbers move, the pipeline is the finding.
+4. Record your environment, and check that every claim you plan to make traces to a specific output.
+
+
+## The four rails, here
+
+::: {.kicker}
+
+Milestone 7 · Every studio, these four
+
+:::
+
+:::: {.rails}
+
+::: {.rail}
+
+[Ethics, permissions, and data exposure]{.t}
+
+[What you send to a tool during analysis is a disclosure decision each time.]{.d}
+
+:::
+
+::: {.rail}
+
+[Evidence, provenance, and reproducibility]{.t}
+
+[Every number in your result traces to a data cell and a line of code.]{.d}
+
+:::
+
+::: {.rail}
+
+[AI activity, verification, and human decisions]{.t}
+
+[Delegate the writing of code freely; verify every returned number against the data yourself.]{.d}
+
+:::
+
+::: {.rail}
+
+[Uncertainty, claim boundary, and revision history]{.t}
+
+[A result reported without uncertainty is not yet a result.]{.d}
+
+:::
+
+::::
+
+
+## A version, not a pass
+
+::: {.kicker}
+
+Milestone 7
+
+:::
+
+::: {.note-card}
+
+[How the record works]{.label}
+
+Your milestone artifact is a dated, numbered **version** with the reason for
+the version attached. When later evidence changes it, you write the next
+version rather than editing the last one, because the sequence of changes is
+itself part of your research record.
+
+:::
+
+
+## The one rule {background-color="#1a1a19" .divider}
+
+::: {.divider-line}
+**AI is your arm and your research assistant, not your brain.**
+
+AI can review AI, and a second model is a real auditor of the first. The
+last decision is always human.
+:::
+
+[Studio 7 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio07-first-analysis.html) · [Milestone 7](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)

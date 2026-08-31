@@ -1,0 +1,152 @@
+lesson: ai-disclosure
+source_sha256: "66a5bd78c75e8583feaca7f4c236e9183589cb1a4d5659920186269b9695d54b"
+sections:
+  "Why this decision matters":
+    - title: "A result I cannot trace is a result I cannot trust"
+      quote: >
+        "I am not going to penalize you for using an AI tool. I am going to
+        penalize you for not being able to tell me where you used it and how you
+        checked it. A result I cannot trace back to a source and a verification
+        is a result I cannot trust."
+      bullets:
+        - "Said by a conference reviewer, standing at your poster."
+        - "The penalty is not for using the tool."
+        - "The penalty is for not being able to say where, and how you checked."
+      note: >
+        Read the quote aloud and stop on the second sentence, because that is
+        where the reviewer moves the standard. Using an AI tool is not the thing
+        being judged here; the ability to locate the use and the check is. Ask
+        the room what they would answer right now if a stranger asked them where
+        an AI tool touched their project.
+    - title: '"Yes, a bit, and it seemed fine" turns good work into an untrustable result'
+      bullets:
+        - "At your research conference, a stranger can ask you the AI-use question."
+        - "Many journals and conferences now ask authors where and how AI tools were used."
+        - "So it is not a formality you can wave off."
+        - "Disclosure is what keeps an honest use of AI honest under questioning."
+      note: >
+        The failure here is fast and public. One vague sentence at the poster,
+        and the work stops being checkable in front of the person asking. Point
+        out that the chapter calls it good work a moment earlier; what changed
+        is what the reviewer can verify about it. That is why the chapter says
+        this is not a formality you can wave off.
+  "The concept":
+    - title: "One sentence can name the tool, the task, and the check"
+      quote: >
+        "I used Gemini to draft the code that computed my coverage ratio, and I
+        recomputed that number by hand before reporting it."
+      bullets:
+        - "Which tool: the AI assistant you asked."
+        - "For which task: drafting the code behind the coverage ratio."
+        - "How you verified: recomputed by hand before reporting."
+      note: >
+        Put the finished sentence up before any definition, so the shape is
+        visible first. It is short, and it still survives a follow-up question,
+        because each clause points at something a reader could go and check. Ask
+        the room to write the same sentence for the last thing they delegated,
+        and watch which of the three parts goes missing.
+    - title: "Drop any one of the three parts and the disclosure fails"
+      lead: "Three parts make a disclosure complete by this book's standard."
+      bullets:
+        - "Each part maps to a column in your ledger."
+        - '"I used AI," with no task named, is meaningless.'
+        - "A task with no verification is the gap a reviewer is trained to find."
+      note: >
+        This is a three-part test rather than a spectrum, and the standard is
+        the book's own. The second failure is the one that still sounds
+        responsible: the tool is named, the job is named, and nothing says the
+        output was ever checked. The chapter's own instruction is to check every
+        sentence against a ledger row, so run that check on your draft before a
+        reviewer runs it on you.
+    - title: "A complete disclosure is read off your ledger, not written at the end"
+      bullets:
+        - "Your **AI Research Ledger** is a running table with one row per AI use."
+        - "Each row records the task, the tool, your decision, and the verification method."
+        - "You have kept it since you opened it at the start of your project."
+        - "So the disclosure is already written by the time you need it [@munafo2017manifesto]."
+      note: >
+        The ledger is not a new instrument for this chapter. The chapter's claim
+        is that you have kept it since the start of the project, which is the
+        whole argument for filling it honestly week by week. Anyone
+        reconstructing a disclosure from memory at the end is guessing, and the
+        guess is what a reviewer catches. Ask the room how many rows their
+        ledger holds right now.
+  "A worked example":
+    - title: "A coverage ratio of 2.0 means the company earned twice what it owed"
+      bullets:
+        - "You are presenting a business-analytics poster on a public company's debt."
+        - "The question: can it comfortably pay the interest it owes?"
+        - "Your headline number is the **interest coverage ratio**."
+        - "That is operating income divided by the interest owed in a year."
+      note: >
+        Define the ratio before anything else happens, because the disclosure
+        later has to name which piece of this number came from where. Operating
+        income is the income figure the company reports; the interest expense is
+        what it owes on its debt. Keep the definition on the board while you walk
+        through the two AI uses.
+    - title: "Two honest AI uses, and neither is safe until it is disclosed and verified"
+      bullets:
+        - "First use: finding the company's reported operating income."
+        - "Second use: writing the short calculation that turns income and interest into a ratio."
+        - "Both are honest uses."
+        - "Honest is not the same as checked."
+      note: >
+        Neither of these is a misuse, and the chapter says so plainly, which is
+        the point. The risk is not in delegating the retrieval or the
+        arithmetic; it is in reporting the result without a record of what was
+        confirmed. Ask which of the two uses would be harder to check a month
+        from now if nothing was written down.
+    - title: "Editorial guidance requires two of the three columns; the third is this book's"
+      bullets:
+        - "Current guidance: name which tool you used, and for what purpose [@icmje2026recommendations]."
+        - "Responsibility for accuracy and attribution stays with you."
+        - "A tool can never be an author."
+        - "How you verified is this book's own requirement on top of that guidance."
+      note: >
+        Be precise about where the rule comes from, because the room will meet
+        both standards outside this course. The editorial requirement covers the
+        tool and the purpose and fixes responsibility on the named author. The
+        verification column is the book's addition, and the chapter gives its
+        reason: a disclosure that cannot say how something was checked leaves a
+        reader nothing to trust.
+    - title: "A reported figure and a computed one need different checks"
+      layout: terms
+      terms:
+        - term: "Primary-source reading"
+          definition: >
+            you opened the company's published annual report and confirmed the
+            operating income the tool gave you
+        - term: "Alternative code"
+          definition: >
+            you recomputed the same number a second way, instead of trusting the
+            AI-generated cell
+      note: >
+        The verification method depends on what kind of thing you are checking.
+        A reported figure gets checked against the document that reported it; a
+        computed figure gets recomputed independently. Both names go in the
+        ledger's verification column, so the row says what was done rather than
+        that something was done.
+    - title: "Recompute the ratio by hand and watch it land on 2.11"
+      bullets:
+        - "The two inputs are 276 and 131, in USD millions, from the annual report."
+        - "Watch the printed value against the number the AI-generated cell reported."
+        - "The recomputation is the check, and the ledger row records that you ran it."
+      code: 0
+      note: >
+        Run it live rather than describing it, so the match happens on screen.
+        Point out that the comment on the income line is doing real work: that
+        figure was confirmed against the annual report, which is the other row's
+        check. The next section shows what happens when a disclosure claims a
+        check that no ledger row backs.
+    - title: "You read the two rows aloud, and the claim stays bounded"
+      bullets:
+        - "The coverage ratio is about 2.1 for this fiscal year."
+        - "Income confirmed against the annual report; the arithmetic reproduced by hand."
+        - "You read a single year of reported results."
+        - "Not a downturn scenario, and not the debt coming due next year."
+      note: >
+        The reviewer's question gets answered from the record, so there is
+        nothing to improvise. Note that the boundary is stated in the same
+        breath as the number, not extracted later under pressure. Ask the room
+        what a listener learns from the last two lines that the ratio alone
+        would have hidden.

@@ -1,0 +1,167 @@
+# Slide plan — lesson `hybrid-complex-designs` (chapter 19, Hybrid and Complex
+# Designs). Prose sections only; the builder already emits the research-decision
+# card, the key-term card, the AI failure case, the Do-not-delegate rule and the
+# "It is your turn" steps.
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: hybrid-complex-designs
+source_sha256: "b1e2a296f919709230516362e8a70066dddde78522da174ae5ac7dab330390ff"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "The economist wants the error budget, not the headline number"
+      quote: "A precise result built on one uncharacterized step is a precise wrong answer."
+      bullets:
+        - "Your reviewer: an antitrust economist reviewing a report on how concentrated a market is."
+        - '"Hand me the error budget: every quantity you measured, how you measured it."'
+        - '"And how each one''s uncertainty flowed into the final answer."'
+      note: >
+        The reviewer here is an antitrust economist, and the demand is specific:
+        not the number, the error budget behind it. Read the quote out loud and
+        stop on the last sentence, because it is the whole chapter in one line.
+        Ask the room who could hand over that budget for their own project this
+        morning, quantity by quantity.
+
+    - title: "A complex design fails quietly, because every piece looks careful"
+      bullets:
+        - "Each piece looks careful on its own, so the whole looks careful too."
+        - "An assembled answer is only as trustworthy as its worst-characterized piece."
+        - "The assembly can amplify a small mistake into a large one."
+        - "The decision: does the extra moving piece earn its place?"
+      note: >
+        This is the failure mode to keep in front of you for the rest of the
+        chapter. Nothing looks broken, because nothing is broken locally. The
+        chapter's decision runs in both directions: an extra piece either buys
+        you something and can be characterized, or it adds an error you cannot
+        account for. Cutting a piece you cannot characterize is as much a design
+        decision as adding one.
+
+  "The concept":
+
+    - title: "MIDA names the four parts; a hybrid design puts more than one piece in them"
+      lead: "Blair, Cooper, Coppock and Humphreys named the four [@blair2019declaring]; RDSS develops them [@blair2023rdss]."
+      bullets:
+        - "**Model:** your written picture of how the world could work."
+        - "**Inquiry:** the one exact quantity you want from it."
+        - "**Data strategy:** every procedure that makes the data, from sampling to measurement."
+        - "**Answer strategy:** what turns those data into an answer, uncertainty included."
+      note: >
+        The Colab lab builds all four of these from scratch, so this is a recall
+        slide, not a first meeting. What changes here is the count. Every part
+        below is about what happens when one of these four holds more than one
+        piece, and the pieces have to be characterized separately before they
+        are allowed to combine.
+
+    - title: "A hybrid design is one with more than one moving piece"
+      layout: terms
+      terms:
+        - term: "Complex, or hybrid, design"
+          definition: "a research design whose four MIDA parts have more than one moving piece: several measurements, stages, or sub-questions stitched into a single answer"
+        - term: "Alignment"
+          definition: "all four parts point at the same single quantity"
+        - term: "Error propagation"
+          definition: "each measured input's uncertainty flows into the final answer, sometimes amplified"
+      note: >
+        Give the chapter's example as soon as the first card is up: a market's
+        concentration score computed from two separate measurements, each drawn
+        from its own source and carrying its own error. The chapter takes the
+        definition itself from RDSS [@blair2023rdss]. The second and third cards
+        are the two ideas that decide whether such a design holds together, and
+        the rest of the chapter is those two ideas applied to one number.
+
+    - title: "Two careful pieces can quietly target different quantities"
+      bullets:
+        - "Complexity breaks alignment in a fresh way."
+        - "Each sub-measurement can be built well and be fine on its own."
+        - "They can still target slightly different quantities."
+        - "Those never combine into the one you named."
+      note: >
+        This is the part checking the arithmetic will not catch, because the
+        arithmetic is not what broke. Both sub-measurements pass their own
+        review, and the combination still returns a number. Ask two people to
+        name the single quantity their inquiry asks for, then ask whether every
+        piece of their design is aimed at that same one.
+
+    - title: "Square a measured share and you roughly double its error"
+      bullets:
+        - "Each measured input's uncertainty flows into the answer, sometimes amplified [@jcgm2008gum]."
+        - "Say your answer depends on the square of a measured share."
+        - "A 1% error in that share becomes roughly a 2% error in the result."
+      note: >
+        Keep the bound the chapter states: uncertainty flows in and is sometimes
+        amplified, not always. What decides it is the arithmetic the input passes
+        through, so squaring, dividing and ratios are the places to look for
+        amplification. Ask the room to point at the step in their own design
+        where a measured value gets squared, divided or ratioed.
+
+    - title: "A small systematic error can hide behind a small random one"
+      layout: terms
+      terms:
+        - term: "Bias"
+          definition: "a systematic tilt that more data does not shrink"
+        - term: "Variance"
+          definition: "run-to-run wobble that more data does shrink"
+      bullets:
+        - "Keep the lab's two failure words close."
+        - "Complexity lets a small systematic error hide behind an impressively small random one."
+      note: >
+        These two words come straight from the lab, and the worked example is
+        about to turn them against you. Say the last line twice, because a
+        tight interval reads as care and can be produced by a design that never
+        looked at its own tilt. The whole trap on the next four slides is one
+        of these two shrinking while the other sits exactly where it was.
+
+  "A worked example":
+
+    - title: "Your city's grocery market gets one score, stitched from two measurements"
+      bullets:
+        - "Does a handful of chains dominate the market, or is it split among many sellers?"
+        - "A **concentration index** rises as a market's sales pile up in fewer hands [@dojftc2023merger]."
+        - "Square each seller's market share, add the squares."
+        - "`share = its revenue / total market revenue`."
+      note: >
+        That one formula is a complex design in miniature. It stitches two
+        sub-measurements into a single answer: each chain's revenue, which you
+        take from a monthly industry survey, and the total market revenue in the
+        denominator, which you have to measure separately. Ask the room which of
+        those two they would check first.
+
+    - title: "Averaging twelve months buys precision, and the index stops wobbling"
+      bullets:
+        - "A single month of reported revenue is noisy."
+        - "A holiday week or a late filing pushes any one chain's figure up or down."
+        - "So average twelve months for each chain before you compute shares."
+        - "That crushes the variance: swap the months and the index moves a point or two at most."
+      note: >
+        Say plainly that this is a smart data-strategy move, because it is. It
+        does exactly what it targets. The repeatability is real, and it is also
+        the thing that will make the result feel trustworthy in a moment when it
+        should not.
+
+    - title: "Repetition does nothing for bias, and squaring amplifies it"
+      bullets:
+        - "The survey covers the chains, not the independent corner stores or online deliveries."
+        - "So the total market revenue you divide by is systematically too small."
+        - "Every share is therefore systematically too large, and shares get squared."
+        - "Your data strategy and your model have drifted apart."
+      note: >
+        An index that reads 2,862 and never wobbles is not a correct index, only
+        a confidently wrong one, and it can push a market across the line
+        competition authorities treat as highly concentrated. The fix is not one
+        more year of the same survey. It is a redesign of the data strategy,
+        taking the denominator from a source built to cover every seller, such as
+        a government economic census.
+
+    - title: "Run the index both ways and watch the wrong number hold still"
+      code: 0
+      bullets:
+        - "The block computes the index with the survey's total and with the true one."
+        - "`uncovered = 22.0` is real sales the survey never reaches."
+        - "Rerun it with different months and watch how little the wrong number moves."
+      note: >
+        SEED is 464, so the printed lines come out the same for you as for
+        everyone else. Read the two index values together, then the closing
+        print: averaging twelve months bought precision, not correctness. Ask
+        which line of code you would have to change to fix the result, and refuse
+        any answer that only changes the months.

@@ -1,0 +1,205 @@
+lesson: ethics-data-governance
+source_sha256: "249ed5c7b9239064a77ea94451ac2f011704e4b8d8f103ee74c27bd44ca337f8"
+sections:
+  "Why this decision matters":
+    - title: "This is the one mistake no later analysis can repair"
+      bullets:
+        - "A bad estimator can be swapped. A weak design can be redesigned."
+        - "Data collected without permission cannot be fixed by any amount of later care."
+        - "The thing that went wrong already happened to someone."
+        - "Work collected without the right permissions often cannot be published or presented."
+      note: >
+        That is why the decision sits exactly here, right after your design becomes
+        executable and right before you execute it. There is a second reason, less
+        noble and just as real: you can find yourself holding data you are not allowed
+        to use, at the worst possible moment. Put the usual objection to the room, that
+        this is overkill for a project this small. The size of the project does not
+        change what happens to the person you interviewed, and small projects get
+        lighter review, not no review.
+
+  "The concept":
+    - title: "Someone else rules on your permission status"
+      layout: terms
+      lead: "This chapter is not legal advice, and rules differ by country, institution, and data source."
+      terms:
+        - term: "Permission status"
+          definition: "a statement of whether you may collect, who decided, and what you are waiting on"
+        - term: "Competent authority"
+          definition: "whoever, at your institution, is empowered to make this ruling"
+      note: >
+        The authority's name differs by country and campus: an ethics committee, a
+        review board, a data protection officer, a supervisor holding delegated
+        authority. Find out which one covers projects like yours before you need it.
+        What the chapter gives you is the ability to recognize which situation you are
+        in and to ask the right person the right question early, not a ruling on what
+        any specific rule requires where you are. The next slide is the four statuses,
+        and the job is to land on exactly one of them and write it down.
+    - title: "Your project lands on exactly one of four statuses"
+      bullets:
+        - "**Cleared:** a published national statistics table, with no individual records in it."
+        - "**Formal determination required:** you plan to interview people about their experience of unemployment."
+        - "**Pending:** protocol submitted, and you refine the interview guide while you wait."
+        - "**Not authorized — stop:** a licence that forbids the use you have in mind."
+      note: >
+        Pending is not a freeze. Work that does not touch people or their data may
+        continue while you wait. And stopping is a design decision, not a failure: the
+        chapter ends with what to do instead, so the fourth card is not the end of a
+        project.
+    - title: "The determination turns on three questions, asked in order"
+      bullets:
+        - "Is this meant to produce knowledge that generalizes? Not 'will I publish it' [@usdhhs2026commonrule]."
+        - "Do living people, or data about identifiable living people, enter your study?"
+        - "How do the data reach you, and are they sensitive?"
+        - "If the first two are yes: assume formal determination required until your competent authority rules otherwise."
+      note: >
+        Whether you intend to publish is not the test in every framework, and some
+        national policies place course-based research expressly inside their scope.
+        The second question covers records, logs, and existing datasets in which
+        individuals can be picked out; it does not stop being about people because the
+        file arrived as a spreadsheet. The third separates collecting directly from
+        people, using data someone else already collected, and sensitive data: health,
+        finances, immigration status, political views, anything that could harm someone
+        if it escaped. Do not talk yourself out of asking. The cost of asking is an
+        email; the cost of not asking is your project.
+    - title: "Six situations look exempt, and often are not"
+      bullets:
+        - "Public posts: availability and permission are separate questions [@franzke2020aoir]."
+        - "Your classmates are human subjects, and classroom power makes consent harder."
+        - "Interviewing a professional about their organization is sometimes outside the scope. Their own experience flips it."
+        - "A public dataset with individual records: access is not identifiability."
+        - "\"I am not going to publish it\" is the most common escape hatch, and the weakest."
+      note: >
+        Some frameworks require both public availability and the absence of any
+        reasonable expectation of privacy before a public-information exemption
+        applies, and platform terms often restrict collection regardless of what any
+        review board says. People posted to an audience, not to a researcher.
+        Interviewing a professional can genuinely be outside the scope while you are
+        collecting facts about an organization rather than about a person. Frameworks
+        generally turn on the kind of activity you are running, not on where the output
+        lands, so a study you never publish can still need a determination. The sixth
+        case is any of the five above plus an AI tool: adding an assistant does not
+        simplify the determination, it adds a party to the handling of the data.
+
+  "A worked example":
+    - title: "Deleting names is not de-identification"
+      bullets:
+        - "The question: do first-generation students use campus advising differently from continuing-generation students?"
+        - "The plan: a short survey of 800, names removed before anything is analyzed."
+        - "De-identification means a person cannot reasonably be picked out of the data."
+        - "Deleting names is not that. The remaining columns can still single someone out [@sweeney2000demographics]."
+      note: >
+        That promise sounds sufficient, and it is the promise most first projects make.
+        The simulation on the next slide runs at SEED 464, so the numbers reproduce
+        exactly. Before you run it, ask the room to predict how many of the 800 will be
+        unique on four ordinary columns.
+    - title: "Four ordinary columns, and two in three respondents are unique"
+      code: 0
+      bullets:
+        - "`share_unique` is the share of rows whose combination of columns occurs exactly once."
+        - "Department alone singles out nobody. Department and year together, still nobody."
+        - "Add country of origin and 30.2% are alone. Add age and 67.6% are."
+      note: >
+        Nothing here is a rare or secret variable; these are four columns a survey
+        collects without thinking. Two in three respondents are uniquely described in a
+        file with no names in it. Anyone who knows one respondent's department, year,
+        country and age can find that person's answers.
+    - title: "The protection failed most for the least common characteristics"
+      code: 1
+      bullets:
+        - "Among respondents from the most common country, 40.3% are unique."
+        - "Among those from less common countries, 97.2% are."
+        - "A measure that works for the majority and fails for a minority is not protection."
+      note: >
+        This is the part worth sitting with. The failure is uneven, and it lands
+        hardest on the people with the least common characteristics, who are often
+        exactly the people a study about belonging is asking about. Nearly every one of
+        them is individually identifiable in a file described as anonymous.
+    - title: "The fix is fewer columns, decided before collection"
+      bullets:
+        - "Not more deleting. Decide which columns your declared analysis actually requires."
+        - "Comparing first-generation and continuing-generation groups may not need country at all."
+        - "Age may be needed only as a range."
+        - "Then the risky combination never exists [@eu2016gdpr]."
+      note: >
+        Data minimisation is the name for this: collecting only what your declared
+        analysis requires. It is available only before collection, because you cannot
+        un-collect a column once it is in the file. Step 3 of the It is your turn
+        section is where you write out every variable you plan to collect and cross out
+        the ones your analysis does not require.
+
+  "Consent is a process":
+    - title: "A signature captures one moment. Consent is a condition you maintain."
+      bullets:
+        - "Informed consent is the ongoing condition that a participant understands and agrees [@belmont1979]."
+        - "They understand what you will do with their words, in language they actually use."
+        - "They can decline without cost, which is hardest where you hold any power."
+        - "They can withdraw later, so you must know which data are theirs."
+      note: >
+        That last requirement sits in tension with anonymity, and the chapter asks you
+        to notice the tension rather than paper over it. If you truly cannot link a
+        response to a person, you cannot honour a withdrawal request either. Decide
+        which one your study needs, and tell participants the truth about it.
+
+  "AI and the exposure question":
+    - title: "Pasting data into an AI tool can be a disclosure"
+      bullets:
+        - "A disclosure passes data to a third party your permission did not cover."
+        - "Your participants agreed to share with you and your project."
+        - "They did not agree to share with whatever service you found convenient."
+        - "That does not make AI unusable here. It makes the boundary matter."
+      note: >
+        Name the boundary out loud: work with the tool on the shape of your data, not
+        its contents. Column names, types, ranges and the analysis you intend are
+        usually safe to describe, and individual records usually are not. Ask it to
+        write the code and run the code yourself, which is the pattern this book
+        teaches everywhere else anyway. If you need to show real values, generate a
+        synthetic sample that shares the structure and none of the people; it debugs
+        your pipeline just as well.
+    - title: "Check the tool before you paste, and report it if you slip"
+      bullets:
+        - "Check retention, whether inputs train the model, human review, and storage location."
+        - "Some agreements prohibit third-party processing outright, and no setting inside the tool changes that."
+        - "An institution-provided tool is not automatically approved for every dataset."
+        - "When a transfer is authorized, send the smallest fragment that does the job."
+      note: >
+        Your AI Research Ledger should record what you sent, not only what came back,
+        so the exposure question has an answer you can produce on request. If you paste
+        something you should not have, the recovery is procedural, not private: stop
+        sharing further, write down exactly what went where and when, and tell your
+        supervisor and your competent authority promptly. Do not conceal it, and do not
+        assume that deleting the conversation undid it.
+
+  "Data governance for a small project":
+    - title: "Four governance decisions you cannot retrofit"
+      bullets:
+        - "Where the data live: one named location, backed up, not scattered."
+        - "Who can open it: name the people. \"The group chat\" is not access control."
+        - "How long you keep it: set an actual date now."
+        - "What happens at the end: deletion, transfer, or deposit under the licence you promised."
+      note: >
+        All four take about ten minutes, and none of them can be added afterwards. On a
+        project this size, who can open it is usually you and your supervisor. Data you
+        no longer need is pure risk, and "forever, just in case" is a decision you are
+        making whether or not you notice.
+
+  "Four situations that must stop or wait":
+    - title: "Four diagnoses, each with a tell you could have caught earlier"
+      lead: "When the answer is stop, you are one design decision away from a different project."
+      bullets:
+        - "Scraping a debt-support forum: you would not read those posts aloud with names attached."
+        - "Surveying your own study group: you can name every respondent."
+        - "Pasting 200 agreement-bound rows: you accepted terms you had not read."
+        - "The interview that turned: you asked about the organization, the answer was about a person."
+      note: >
+        Read the tell first, then the ruling. The forum and the study group both land on
+        formal determination required, and sensitive data plus a personal relationship
+        plus no determination is the combination that ends projects; the pasted
+        spreadsheet is not authorized and has to be reported; the interview that turned
+        is a pause and ask, before transcribing. If you have no institution to consult,
+        the route is data that carry no permission question: published aggregate
+        statistics, licensed open datasets with no individual records, or simulated data
+        you generate yourself. What you may not do is decide for yourself that
+        collecting from people is fine because there was nobody to ask. Close on the
+        chapter's own check: 5,000 hospital discharge records with names and addresses
+        removed still describe identifiable living people, so the answer is formal
+        determination required, not cleared.

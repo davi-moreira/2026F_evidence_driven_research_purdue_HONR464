@@ -1,0 +1,177 @@
+# Slide plan — Chapter 38, "Managing Multiple AI Agents".
+# Prose sections only. The builder already emits the research-decision card,
+# the auto key-terms card (The AI loop, Agentic tools), the AI failure case,
+# the "Do not delegate" rule, and the "It is your turn" steps.
+lesson: managing-ai-agents
+source_sha256: "3ccd704b374d1ddfa00229041be1f7043e13b1eee14ad68b2f2f2b81194ca0fe"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Your advisor wants a draft, not a pile of AI output"
+      lead: "Your **thesis advisor**, reading the draft you are about to defend."
+      quote: >-
+        Bring me a draft, not a pile of AI output. I want to know which part each
+        tool touched, what you told it to do, and how you checked it. If you cannot
+        tell me that, you did not write it.
+      bullets:
+        - "She does not want a louder chorus of tools."
+        - "She wants to see that you broke the job into pieces and ordered them sanely."
+        - "And that you stayed the one person deciding what the draft claims."
+      note: >
+        Read the quote aloud and let it sit. She asks for three things: which
+        part each tool touched, what you told it to do, and how you checked it.
+        What she wants to see is that you broke the job into pieces, put those
+        pieces in a sane order, and stayed the one person who decided what the
+        draft claims. Her closing line sets the stakes plainly: an account you
+        cannot give is a draft you did not write. Ask the room who, in their
+        own project, could answer her three questions right now.
+
+    - title: "Four assistants at once is not four times safer"
+      bullets:
+        - "One assistant can now draft, cite, critique, and polish in a single breath."
+        - "So the temptation is to open four of them and feel four times as safe."
+        - "Four roles with the same instructions tend to miss the same thing, then agree loudly."
+        - "Each role is not one prompt. It is a loop, running until you or it stops."
+        - "Unmanaged, four loops is four times the unsupervised work."
+      note: >
+        The word to press on is "unsupervised". More output is easy to buy and
+        easy to mistake for more rigor. Agreement among four roles reading the
+        same draft under the same instructions is not the independent
+        confirmation it looks like, because they tend to share the blind spot.
+        This chapter is about the management skill that turns a crowd of loops
+        into something you can defend.
+
+  "The concept":
+
+    - title: "Every turn you did not read is a turn you did not supervise"
+      bullets:
+        - "You ask for the citations to be checked."
+        - "An agentic tool searches, reads, rechecks, and revises across several turns [@yao2023react]."
+        - "It comes back to you only at the end."
+        - "Faster, and every one of those turns went unwatched."
+      note: >
+        The unit you are managing is the loop, not the prompt: you prompt, you
+        read, you interrogate, you refine, you run again. An agentic tool runs
+        that same loop on its own, choosing its next step and calling its own
+        tools between your turns. So the real management question is not how
+        many prompts you write. It is how many loops you have running, what
+        each one is allowed to touch, and where they hand off. You orchestrate
+        loops, not prompts.
+
+    - title: "Split \"improve my draft\" into jobs you can pass or fail"
+      layout: terms
+      terms:
+        - term: "Task decomposition"
+          definition: "breaking one large job into smaller subtasks, each with a single clear owner [@malone1994coordination]"
+        - term: "Scoped role"
+          definition: "an AI job narrow enough to state in one sentence and check in one pass"
+      note: >
+        Instead of asking a tool to improve your draft, split the work into
+        check the design, check the citations, and tighten the prose. Each
+        piece now has a pass or fail you can judge. That is what makes the
+        crowd of loops into a workflow: decomposition first, then each piece
+        handed to a role narrow enough that you can state its job in one
+        sentence.
+
+    - title: "A finish line is what makes a loop safe to run"
+      bullets:
+        - "A scoped role: flag every sentence in my results section that claims more than my sample can support."
+        - "That role has a clear finish line. \"Make it better\" does not."
+        - "The loop stops when the job is done."
+        - "And you can tell from the outside whether it is."
+      note: >
+        Notice why the finish line matters operationally, not just
+        aesthetically. A loop with no stated finish line stops only when you or
+        it decides to stop, which leaves you as the stopping condition instead
+        of the job. A loop with a stated finish line can be judged from outside
+        by someone who did not run it, which is exactly what your advisor is
+        asking to do.
+
+    - title: "A worker alone is confident about its own quality"
+      bullets:
+        - "The **worker-critic pair**: one role produces something, a second, separate role attacks it."
+        - "A worker drafts your limitations paragraph."
+        - "A critic hunts for the limitation the worker left out."
+        - "That confidence is exactly the blind spot the worker cannot see from the inside."
+      note: >
+        The pair is the backbone that keeps roles honest, and the word carrying
+        the weight is "separate". Asking the same role whether its own draft
+        was any good gets you the same blind spot with a second coat of
+        polish. Ask the room what the critic in their own project would be
+        pointed at: the draft, or the workflow that produced it.
+
+    - title: "The chain you cannot shorten sets your minimum number of rounds"
+      layout: terms
+      terms:
+        - term: "Dependency"
+          definition: "a required order between two subtasks, where one needs the other's output before it can start"
+        - term: "Critical path"
+          definition: "the longest run of must-follow-must steps in your workflow [@kelley1961critical]"
+      note: >
+        A critic cannot attack a draft the worker has not written yet: that is
+        a dependency. Roles with no dependency between them run at the same
+        time; roles joined by one run in order. Worker drafts, then critic
+        attacks, then you integrate is three steps that cannot collapse into
+        fewer. Count the path in loops, not in messages: a single role may take
+        four turns of prompting to finish its one job and still occupy one node.
+
+  "A worked example":
+
+    - title: "One draft, four roles, and a dorm-floor heart-rate study"
+      lead: "Is a ten-minute post-lunch walk associated with a lower afternoon resting heart rate on your dorm floor?"
+      bullets:
+        - "You have a draft and four AI roles waiting."
+        - "Clarity reviewer: does each sentence read plainly?"
+        - "Methodologist: is \"associated with\" the honest word for what your data can show?"
+        - "Citation-checker: are the two heart-rate studies real, and do they say what you claim?"
+        - "Editor: tighten the prose."
+      note: >
+        This is the split step, done on a real write-up rather than in the
+        abstract. Each role owns one sentence-long job, and each of those jobs
+        has a pass or fail you could grade. Point out that the methodologist's
+        job is the one that touches the claim, which is why it will collide
+        with another role in a few minutes.
+
+    - title: "Three critics read the same draft at the same moment"
+      bullets:
+        - "The worker drafts your limitations paragraph first."
+        - "No critic needs another's output, so all three read it in parallel."
+        - "The citation-checker may run four or five turns, and report a study it cannot find."
+        - "Then you integrate their notes, and the editor tightens what survives."
+        - "Worker to critic, critic to you, you to editor: three arrows deep."
+      note: >
+        Trace the arrows on the board while you say this. The workflow is three
+        arrows deep and three loops wide at its widest point, and those two
+        numbers answer different questions: depth is how many rounds you must
+        wait through, width is how much is happening at once. Each loop takes
+        as many turns as it needs, and the number of turns inside a role does
+        not change its position on the path.
+
+    - title: "The slowest critic sets the schedule"
+      bullets:
+        - "Compare all five roles in sequence against the three critics in parallel."
+        - "The critical path prints as worker, then the slowest critic, then editor."
+        - "So speeding up the other two critics buys nothing."
+        - "The integration node is yours, and it is not in this table."
+      code: 0
+      note: >
+        The block counts turns per role under SEED = 464 and reads the critical
+        path off them. Have the room predict which critic will be slowest before
+        you run it. The point of the printout is not the exact turn counts,
+        which are drawn: it is that only the path is worth optimizing, and that
+        the human node was deliberately left out of the accounting.
+
+    - title: "The integrate step is the one node with no loop attached"
+      bullets:
+        - "The methodologist says your walk-and-heart-rate result is only an association."
+        - "The clarity reviewer loved the sentence that called it an effect."
+        - "No role settles that clash. You do."
+        - "The decision about what the write-up claims never enters the workflow as a delegated task."
+      note: >
+        End the example on the clash, because a clash is what makes the human
+        node visible. The tools drafted, flagged, and polished. You split the
+        job, set the order, decided when each loop had run long enough, and
+        owned the claim that carries your name. Ask which of the two roles the
+        room would have believed if they had only run one of them.

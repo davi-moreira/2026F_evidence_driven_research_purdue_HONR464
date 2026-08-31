@@ -1,0 +1,159 @@
+lesson: verifying-prior-evidence
+source_sha256: "75fd2b58356855c4b257fd6e67e1dd6819b6a6acf679f9f4f90c3e786289c5d3"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Your advisor asks for the conversation, not a pile of summaries"
+      bullets:
+        - 'She hands your first draft back: "Show me the conversation your work joins."'
+        - "Which studies agree, which fight, and where exactly is the hole you say you are filling?"
+        - "That question decides whether your project has a place to stand."
+      note: >
+        Open with the scene, because it is the moment the reader is heading
+        toward. The advisor is not asking for more sources. She is asking
+        whether you can locate your own question inside a running argument.
+        Ask the room: if someone asked you that today, could you answer it for
+        your project?
+
+    - title: "Two ways to get it wrong, and both are expensive"
+      bullets:
+        - "Cite a source that does not exist, and every result resting on it is compromised."
+        - "Same damage if the source is real but does not say what you claim."
+        - "Announce a gap a paper already filled, and you have promised a contribution you cannot deliver."
+        - "This chapter is where you make both calls, on the record."
+      note: >
+        The chapter names two ways to get it wrong: a citation that fails, and
+        a gap a paper already filled. Keep them apart, because the fixes are
+        different. The citation failure has two forms of its own, one caught by
+        trying to retrieve the source and one only by reading it. Both calls
+        are ones you sign, which is why the chapter treats them as a research
+        decision rather than a chore at the end.
+
+  "The concept":
+
+    - title: "A field is a running argument, and your job is to join it"
+      bullets:
+        - "One team reports that a soil treatment raises crop yield."
+        - "The next tests whether the effect holds in a different climate."
+        - "Your job is not to invent an island."
+        - "Find the conversation your question belongs to and add one honest sentence."
+      note: >
+        The cumulative conversation is the idea everything else in the chapter
+        hangs on. Each study answers, extends, or challenges the ones before
+        it. Keep the crop-yield pair concrete before you generalize, and hold
+        the chapter's target in view: one honest sentence added to a running
+        argument, not an island of your own.
+
+    - title: "A lead stays a lead until you retrieve and read it yourself"
+      layout: terms
+      terms:
+        - term: "Lead"
+          definition: "a candidate source you have not confirmed yet"
+        - term: "Retrieval-verification loop"
+          definition: "ask any tool to surface leads, retrieve the actual source yourself, verify it exists and says what was claimed, document where you found it"
+      bullets:
+        - "Four steps, and every source you keep passes through them [@snyder2019literature]."
+        - "Retrieval and verification are what promote a lead into a source."
+      note: >
+        The loop is the habit the whole chapter is trying to install. The tool
+        can do the first step. The other three are yours, and the second one,
+        retrieving the actual source, is where a fabricated citation is caught.
+        Ask the room how many of their current references they have personally
+        opened.
+
+    - title: "Real and mischaracterized are two separate checks"
+      layout: terms
+      terms:
+        - term: "Citation hallucination"
+          definition: "an AI inventing a source that does not exist, dressed in a real-sounding author pair, a recent year, and a plausible journal"
+        - term: "Mischaracterized source"
+          definition: "a real paper cited for a claim it never makes, such as a study reporting a correlation cited as proof of a cause"
+      bullets:
+        - "A source can be real and still be mischaracterized [@ji2023hallucination]."
+        - '"Does it exist" and "does it say this" are two questions. Run both.'
+      note: >
+        This is the slide to slow down on. The instinct is to treat existence
+        as the whole test, so a real paper feels safe once it resolves. The
+        correlation-cited-as-cause example is the one to press: nothing about
+        retrieval catches it, only reading the results section does.
+
+    - title: "Two solid sources, snowballed both ways, become ten"
+      bullets:
+        - "Snowballing walks a verified source's links in two directions."
+        - "Backward: read its reference list to find the older work it built on."
+        - 'Forward: follow the "Cited by" trail to newer works that cite it.'
+      note: >
+        Snowballing is how a small verified set grows without going back to a
+        blind keyword search. It also matters for the next slide, because the
+        gap test asks for one backward and one forward link from each verified
+        source.
+
+    - title: "You earn the word gap only after real sources stay silent"
+      layout: terms
+      terms:
+        - term: "Genuine gap"
+          definition: "a question your verified sources actually leave unanswered, confirmed by looking"
+        - term: "Unfinished search"
+          definition: "a question you simply stopped chasing"
+      bullets:
+        - "From your desk they feel identical, and only one is a real contribution."
+        - "The test is retrieval, followed forward and backward [@greenhalgh2005search]."
+      note: >
+        Keep the bound the chapter puts on the word gap. You have not found a
+        gap because you did not find anything; you have found one when real
+        sources you opened, followed in both directions, still say nothing
+        about your question. Writing "my search is unfinished" is an honest
+        result, not a failure.
+
+  "A worked example":
+
+    - title: "Biochar in sandy fields, and a citation that is nowhere"
+      bullets:
+        - "Your question: does biochar raise maize yield in sandy fields?"
+        - "The AI returns a named author pair, a 2021 date, a real-sounding soil-science journal."
+        - "The finding is tidy: biochar lifted yield by 18 percent."
+        - "You go to read it. Not in the library portal, not on Google Scholar."
+      note: >
+        Biochar is charcoal made from crop waste and mixed into soil, so the
+        question is a real one in crop science. Everything about the returned
+        citation looks right, which is the point. The detail is what makes it
+        convincing, and the detail is not evidence of existence.
+
+    - title: "A missing study is not proof that nobody has tested it"
+      bullets:
+        - "Three things could be true when a citation will not resolve."
+        - "Fabricated whole, and there is nothing to find."
+        - "Garbled: right idea, wrong author or year, so search the claim itself."
+        - "Paywalled or obscure, reachable through your library or by emailing the author."
+        - "Your move is the same in all three: the lead stays out until retrieval succeeds."
+      note: >
+        This is the decision the section is built around. The tempting reading
+        is that an empty search proves the gap, and it proves nothing of the
+        kind. Note that the three cases have different follow-ups but the same
+        bookkeeping rule, which is what keeps the verified column honest.
+
+    - title: "Four retrieved sources, snowballed, and a gap you can defend"
+      bullets:
+        - "You retrieve four soil-science studies through the library database and read each one."
+        - "Backward from a 2019 field trial: the older greenhouse study it built on."
+        - 'Forward through "Cited by": two newer trials in loam and clay.'
+        - "None of the four you retrieved ran the trial in the sandy soil your county farms."
+      note: >
+        Now the conversation is visible: biochar helps yield in some soils, the
+        size of the effect varies, and the sandy case is untested among the
+        sources you opened. That quiet spot is ringed by papers you retrieved
+        yourself, which is exactly what makes it defensible in front of the
+        advisor from the first slide.
+
+    - title: "Twelve leads, four in the verified column"
+      code: 0
+      bullets:
+        - "Watch the tally, not the titles. The block carries no citations at all."
+        - "Four opened. Three garbled, two paywalled, three found nothing."
+        - "The eight that did not open are not evidence that nobody studied your question."
+      note: >
+        Run it and read the counts aloud. The statuses are the evidence here,
+        and the tally is the number that decides whether you have earned the
+        word gap. Ask the room what their own twelve would look like today.

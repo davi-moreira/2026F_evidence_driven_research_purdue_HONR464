@@ -10,7 +10,11 @@
           },
           {
             "type": "command",
-            "command": "f=$(jq -r '.tool_input.file_path // .tool_input.notebook_path // empty'); case \"$f\" in */notebooks/student/nb*_student.ipynb) python3 \"$CLAUDE_PROJECT_DIR/scripts/update_schedule_badges.py\" >&2; \"$CLAUDE_PROJECT_DIR/.venv/bin/python\" \"$CLAUDE_PROJECT_DIR/scripts/voice_lint_notebooks.py\" \"$f\" >&2 || echo 'voice lint FAILED — fix before committing' >&2 ;; esac"
+            "command": "f=$(jq -r '.tool_input.file_path // .tool_input.notebook_path // empty'); case \"$f\" in */notebooks/student/nb*_student.ipynb) python3 \"$CLAUDE_PROJECT_DIR/scripts/update_schedule_badges.py\" >&2; \"$CLAUDE_PROJECT_DIR/.venv/bin/python\" \"$CLAUDE_PROJECT_DIR/scripts/voice_lint_notebooks.py\" \"$f\" >&2 || echo 'voice lint FAILED \u2014 fix before committing' >&2 ;; esac"
+          },
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in */book/*.qmd) \"$CLAUDE_PROJECT_DIR/.venv/bin/python\" \"$CLAUDE_PROJECT_DIR/scripts/build_studio_slides.py\" >&2 || echo \"studio-slide build FAILED\" >&2 ;; esac"
           }
         ]
       }

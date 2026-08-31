@@ -1,0 +1,172 @@
+# Slide plan — Chapter 35, "Difficult Questions and Uncertainty"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: difficult-questions
+source_sha256: "1f6c9ecc9da3debc1ee79c57087cb05a88ef5eac1a0d96be61826f16b107b0a5"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "She trusts you more when you name what your study cannot show"
+      quote: "When a presenter tells me, unprompted, exactly what their study can't show, I trust everything else they said more."
+      bullets:
+        - "A policy stakeholder who has heard a thousand poster pitches."
+        - "Insist it is airtight and she starts looking for the crack herself."
+        - "The decision: how you state your uncertainty and limits out loud, before a stranger forces it."
+      note: >
+        Read the quotation aloud and let it sit before you explain it. She is
+        not testing your confidence; she is testing whether you know where your
+        claim stops. Ask the room which of the two presenters they would
+        believe, and why the unprompted admission is the one that buys trust.
+        The decision on the table is made in advance, out loud, and never
+        improvised in the moment.
+
+    - title: "Your work is already honest. The danger now is your own mouth."
+      bullets:
+        - "Your poster, talk, or page is finished and honest."
+        - "Under pressure one presenter buries a real finding under apology."
+        - "The other upgrades a careful 'went together' into a confident 'caused.'"
+        - "Both misstate the evidence you actually hold."
+      note: >
+        Name both failures as failures of accuracy, not of nerve, because that
+        is what makes them worth preparing against. The apologizer understates
+        a defensible result and the inflater overstates an association, and the
+        listener is misled either way. Everything in this chapter is a script
+        written before the room so that neither move is available to you in it.
+
+  "The concept":
+
+    - title: "ULN speaks a boundary in three beats"
+      layout: terms
+      terms:
+        - term: "Uncertainty statement"
+          definition: "a sentence saying how much your number could wobble, and why"
+        - term: "Limitation"
+          definition: "a true sentence about what your design cannot show"
+        - term: "Next step"
+          definition: "the study that would resolve that limitation"
+      bullets:
+        - "Uncertainty: 'with 812 people, my estimate could sit a few points higher or lower.'"
+        - "Limitation: 'I measured that two things went together, so I cannot say one caused the other.'"
+        - "Delivered together, ULN sounds like expertise, because you name the edge on purpose."
+      note: >
+        Say the three beats in order once, then say them again as one spoken
+        answer, because the order is what makes it land. The limitation beat is
+        a statement about your design and not about your effort
+        [@wasserstein2016asa], which is why it can be written in advance rather
+        than improvised in the room. Ask the room to draft their own next-step
+        beat on the spot: it is the beat that turns an admission into the study
+        that would resolve the limitation.
+
+    - title: "The apology spiral buries a finding you could defend"
+      bullets:
+        - "'Honestly this is probably all wrong, my sample's tiny.'"
+        - "That is self-erasure, and the finding underneath it was real."
+        - "ULN exists to prevent exactly this."
+      note: >
+        This is the failure the three beats are built against, and it is one of
+        the two ways a nervous presenter misstates the evidence; the other is
+        upgrading "went together" into "caused." The sentence on the slide
+        erases a defensible result without telling the listener anything true
+        about it. Ask who has heard themselves say something close to it,
+        and then ask what the precise version would have been.
+
+    - title: "'One campus sample' is precision; 'grain of salt' is hedging"
+      layout: terms
+      terms:
+        - term: "Precision"
+          definition: "naming the exact boundary"
+        - term: "Hedging"
+          definition: "vague self-protection that blurs where the claim stops"
+      bullets:
+        - "'This is one campus sample' tells the listener where your claim stops."
+        - "'Sort of, take it with a grain of salt' tells them nothing."
+        - "Precision informs the listener. Hedging only protects you."
+      note: >
+        The test between the two is simple: after your sentence, does the
+        listener know more about your evidence, or only about your nerves
+        [@vanderbles2019uncertainty]. Hedging feels safer to say and leaves the
+        audience unable to judge anything. Have the room convert one hedge from
+        their own draft into the exact boundary it was hiding.
+
+    - title: "Five prepared questions cover the space"
+      bullets:
+        - "A question bank is a written list of the hardest fair questions a visitor could ask."
+        - "Each one arrives with a prepared answer."
+        - "One per recurring type: method, alternative explanation, so-what, generalization, AI-use."
+        - "Write it down. Do not plan to think of it in the room."
+      note: >
+        Five is one per recurring type, and the types are what give the bank its
+        coverage [@bourne2007oral]: without them you will prepare several
+        versions of the question you already know how to answer. Emphasize fair,
+        which means the hardest reasonable question rather than a caricature.
+        And if your venue's questions arrive as a reviewer report or an editor
+        query instead of aloud, the same bank answers them.
+
+    - title: "An honest don't-know is an admission with content"
+      bullets:
+        - "Name what you cannot say."
+        - "Name the thing you can stand on."
+        - "Name the method that would settle it."
+        - "Use it when a banked question has no full answer."
+      note: >
+        When a banked question has no full answer, that is expected rather than
+        a gap in your preparation. The difference between an honest don't-know
+        and a shrug is the three pieces of content on this slide. Ask the room
+        for the question they most dread and build one of these aloud,
+        together.
+
+  "A worked example":
+
+    - title: "Six seconds faster, and a visitor asks whether the toolbar caused it"
+      bullets:
+        - "You work with usage logs from a small software company's app."
+        - "Some customers chose the compact toolbar; others kept the expanded one."
+        - "Compact users found the target page a median of six seconds faster."
+        - "The visitor: 'so the compact toolbar causes faster navigation?'"
+      note: >
+        This is the question the presenter feared, and it is a fair one, of
+        the alternative-explanation type. Note what is not wrong here: the six
+        seconds are a real difference in the logs, and nobody made a
+        computational mistake. What is at stake is only the verb. Ask the room what they would say next,
+        before you turn the slide.
+
+    - title: "Power users may have chosen compact and been fast anyway"
+      bullets:
+        - "Users picked their own toolbar. Nobody assigned it."
+        - "**Confound:** a third factor that shapes both the choice and the outcome."
+        - "Power users may have chosen compact and been fast with any layout."
+        - "So your study cannot say the toolbar caused the speed."
+      note: >
+        Walk the mechanism out loud rather than asserting the label. Being a
+        power user plausibly pushes someone toward the compact layout and
+        independently makes them fast, so it sits on both sides of the
+        comparison. That is self-selection, and it is why an observational
+        comparison here cannot carry a causal verb.
+
+    - title: "The two-beat reply: the truth, then the interest"
+      bullets:
+        - "'I can't say it causes the speed, because compact users may already be power users.'"
+        - "'The study that would answer you is randomly assigning the toolbar to new users.'"
+        - "'That's what I'd run next.'"
+        - "You refused one word and handed back a research question, not a wall."
+      note: >
+        The two beats are the limitation and the next step, delivered in that
+        order. The second beat is what keeps the exchange from ending in a
+        refusal: the visitor leaves with a design, not with a closed door. Stating uncertainty plainly rather than hiding
+        it does not cost you the audience's trust, which is what the evidence
+        on communicating uncertainty finds [@vanderbles2019uncertainty].
+
+    - title: "Build users the toolbar cannot help, and the six seconds appear anyway"
+      code: 0
+      bullets:
+        - "The simulated seconds depend on being a power user, never on the toolbar."
+        - "Watch the observed median gap against a true toolbar effect of zero."
+        - "Then watch the gap among power users only, and among everyone else."
+      note: >
+        Read the seconds line as the whole argument: the toolbar term is simply
+        absent, so any gap the printout shows was manufactured by who chose
+        what. One line prints the share of compact users who are power users,
+        which is the self-selection made visible. Say the closing sentence the
+        block prints, because it is exactly the sentence the two-beat reply
+        has to carry.

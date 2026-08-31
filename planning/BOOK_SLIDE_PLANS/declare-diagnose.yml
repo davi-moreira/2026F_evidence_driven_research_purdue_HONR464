@@ -1,0 +1,186 @@
+lesson: declare-diagnose
+source_sha256: "5e5c02a769685d55806cfb674d586489dedfcb95ff848c75883309b1bcb3e50c"
+sections:
+  "Why this decision matters":
+    - title: "A methodologist asks how often your design would work"
+      bullets:
+        - "A methodologist on your committee reads your plan and asks one question."
+        - "\"How often would this exact design catch the real effect if you ran it a thousand times?\""
+        - "If your answer is \"I never checked,\" she stops there."
+      note: >
+        The decision on the table is whether this design is strong enough to
+        run, judged before you spend anything collecting data. Ask the room
+        what they would say to her today, with the design they currently have
+        on paper. The honest answer for most first drafts is that nobody has
+        checked, and that is what this chapter fixes.
+    - title: "A design can read beautifully and still come back empty"
+      bullets:
+        - "A sharp question and a clean comparison are not proof of strength."
+        - "The same design can return \"nothing here\" nine times out of ten."
+        - "Or it can land confidently on the wrong number every time."
+        - "Simulation finds that out cheaply, before you collect a single data point."
+      note: >
+        The two failures are different and the chapter keeps them apart all
+        the way through: a design that almost never detects a real effect, and
+        a design that detects the wrong one reliably. Finding either in
+        simulation is cheap. The months you would have spent collecting doomed
+        data go instead to a design that can actually answer your question.
+  "The concept":
+    - title: "Declaring means writing your design so a computer can run it"
+      bullets:
+        - "You already built the four parts of a design."
+        - "A model that generates fake data, and an inquiry it can compute on that data."
+        - "A plan for sampling and assigning conditions, and a rule that turns data into an estimate."
+        - "Example: 40 shoppers, a coin flip for the new checkout screen, two group averages subtracted."
+      note: >
+        The three-step loop of declare, diagnose, and redesign is borrowed
+        from RDSS [@blair2023rdss]. Declaring adds nothing to the design you
+        already have; it only writes it down in a form that can be executed.
+        If someone else could not run your declaration and get an estimate,
+        it is not declared yet.
+    - title: "Diagnosing means watching the estimate behave across many runs"
+      bullets:
+        - "Run the declared design many times on fresh simulated worlds."
+        - "Example: run the coin-flip study 2,000 times and collect all 2,000 estimates."
+        - "Watch how the estimate behaves across those runs, not in any one of them."
+        - "Three numbers start the story, and each answers a different worry."
+      note: >
+        The three worries are: does the design aim at the truth, how much does
+        it wobble, and how often does it detect the effect. Ask the room which
+        of the three they would guess is their own design's weakest, before
+        anyone computes anything. The guess is worth recording, because the
+        diagnosis can contradict it.
+    - title: "Bias counts direction, so misses that cancel are not bias"
+      bullets:
+        - "The truth is 2. Five runs return 0, 1, 2, 3, and 4."
+        - "The errors are -2, -1, 0, +1, +2, which average to zero."
+        - "Bias is zero even though only one run landed on 2."
+        - "Misses that all lean one way tell you the design is tilted."
+      note: >
+        Bias is the average of your errors across the runs, counting
+        direction: each estimate minus the truth, averaged. A design is
+        unbiased when its estimates center on the true answer. Direction is
+        what makes bias different from plain distance. Misses that cancel tell
+        you the design is aimed correctly; misses that all lean one way tell
+        you it is tilted.
+    - title: "Variance is the one problem size reliably helps"
+      bullets:
+        - "Variance is how much the estimate wobbles from one run to the next."
+        - "Example: estimates swinging between -5 and +9 around a true value of 2."
+        - "More of the same kind of data, from the same design, usually shrinks that wobble."
+      note: >
+        Hold this one next to bias, because the difference decides what a
+        redesign should change. Collecting more of the same kind of data
+        usually shrinks the wobble, and it is the one problem size reliably
+        helps. Nothing here says size fixes anything else, and the worked
+        example is about to show a case where it fixes nothing at all.
+    - title: "Power means nothing until you say how you would decide"
+      bullets:
+        - "Power is how often the design detects a real effect."
+        - "Example rule for checkout: call it an effect when the gap exceeds about twice its typical wobble."
+        - "At the usual 5 percent setting, a zero-effect design still cries effect in about 5 runs of 100."
+        - "That threshold is never the chance your one finding is false."
+        - "Clearing the rule in 8 of 100 runs, when the truth is 2, is 8% power: almost useless."
+      note: >
+        A statistical test is the rule you use to decide whether your data
+        conflict enough with "no effect" to call the result real, and the
+        threshold is how demanding that rule is. The threshold is a property
+        of the rule read across imagined repetitions, never the chance that
+        your one finding is false [@greenland2016misinterpretations]. Power
+        moves with everything in the declaration: the test, the threshold, the
+        effect you planted, the sample size, and how the world makes noise.
+        Report the whole card beside the number.
+    - title: "One number is never the whole diagnosis"
+      layout: terms
+      lead: "Bias, variance, and power are properties of the design read across many runs, never off a single study."
+      terms:
+        - term: "Diagnosand"
+          definition: "a property of a design you want to diagnose"
+        - term: "Root mean-squared error"
+          definition: "the typical size of a miss, with big misses weighted extra"
+        - term: "Coverage"
+          definition: "how often the range you report around your estimate actually contains the truth"
+      note: >
+        Blair, Cooper, Coppock, and Humphreys introduced the term diagnosand,
+        and bias, variance, and power are three of them
+        [@blair2019declaring; @blair2023rdss]. They do not exhaust the pile.
+        In the five-run example, the plain average distance is 1.2 but the
+        RMSE is about 1.4, because the two 2-point misses count for more than
+        their share. A design can be unbiased and still miss badly every time,
+        which is exactly why one number is never the whole diagnosis
+        [@morris2019simulation]. The last lesson built these ranges properly;
+        here you only need to know that a diagnosis can ask about them.
+    - title: "Redesign changes exactly one part, then diagnoses again"
+      bullets:
+        - "Change one part in response to the diagnosis, then run the diagnosis again."
+        - "Low power that comes from high variance calls for more data."
+        - "A tilt built into the design calls for a different design."
+        - "More data makes a tilted estimate steadier, not truer."
+      note: >
+        One change at a time is what makes the second diagnosis readable: if
+        you change three things, you cannot say which one moved the numbers.
+        The tilt case is the one people get wrong, and it is worth saying
+        plainly. When the problem is who ends up in which group, a bigger
+        sample buys precision around the wrong answer.
+    - title: "The call to run, revise, or narrow sits outside the loop"
+      figure: "../images/concepts/diagnose_loop.png"
+      width: "62%"
+      lead: "You can go around as many times as the diagnosis asks, changing one thing each time."
+      note: >
+        The loop is declare, diagnose, redesign, and back to declare. What the
+        figure marks off is the honest call at the end: run it as declared,
+        redesign again, or narrow the claim to what this design can deliver.
+        That call is never inside the loop, because no diagnosis can make it
+        for you.
+  "A worked example":
+    - title: "You set the button's true effect yourself, at 8 seconds saved"
+      bullets:
+        - "An online grocer asks whether a one-tap reorder button speeds up checkout."
+        - "The button rebuilds a shopper's last cart in a single press."
+        - "Your outcome is seconds-to-complete."
+        - "In the world you simulate, the button shaves 8 seconds off."
+      note: >
+        You declare it: build shoppers whose baseline checkout times vary a
+        lot, because some browse and some race; flip a coin to assign the
+        button; subtract the two group averages. Notice that you set the true
+        effect yourself. That is what makes the diagnosis readable, because
+        you always know what the right answer was.
+    - title: "The pilot is honest and useless at once"
+      bullets:
+        - "You diagnose a pilot of 12 shoppers per version."
+        - "Bias is near zero, so the design aims true."
+        - "The spread is huge, because per-person times vary so much."
+        - "Power comes back under 10%."
+      note: >
+        This is the pairing the chapter wants on the table: a design can be
+        aimed correctly and still be worthless. It points at the 8-second gain
+        on average, and almost never gets close enough on any single run to
+        prove it. Ask the room what they would change, and hold their answer
+        against the next slide.
+    - title: "Size cured the variance and did nothing for the opt-in design"
+      bullets:
+        - "Raise the sample to 400 per version: power jumps past 90%."
+        - "Now drop the coin flip and let shoppers opt into the button themselves."
+        - "The ones who opt in are the frequent, practiced shoppers who check out faster anyway."
+        - "That design is just as tight at 400 per version, yet it centers on 14 seconds."
+        - "No amount of extra data moves it."
+      note: >
+        The button gets credit for speed that habit delivered. That gap names
+        the last idea. A randomized design can identify the button's effect,
+        meaning pin the time gap on the button and rule out other causes,
+        while the confounded one shows only an association, where the two move
+        together but a common cause could explain it.
+    - title: "The bias column and the power column answer different questions"
+      bullets:
+        - "The block declares all three designs and diagnoses each one."
+        - "That is the whole loop this chapter teaches."
+        - "Read the bias column and the power column as two different questions."
+        - "The last printed line says it: size cured the variance, not the opt-in bias."
+      code: 0
+      note: >
+        The true effect is planted at -8.0 seconds and SEED = 464, so every
+        run here is reproducible. Each design is diagnosed over 2,000 runs.
+        Diagnosing a design by simulating it many times before running it once
+        is standard practice for evaluating statistical methods
+        [@morris2019simulation]. Change one input live, the arm size or the
+        opt-in rule, and watch which column moves.

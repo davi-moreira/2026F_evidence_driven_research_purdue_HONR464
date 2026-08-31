@@ -1,0 +1,204 @@
+# Slide plan — Chapter 36, "Replication and Reproduction"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: replication-reproduction
+source_sha256: "e366ce6385ed4eed7c77314f95cc2d0ac5a0e7f772516692c0cf3f8ae69f69a7"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Hand me your files and let me get the same number back out"
+      quote: "I do not care that your figure is pretty or that the code ran on your laptop. Hand me your files and let me get the same number back out. If I cannot, you do not have a result yet. You have a story. — a **principal investigator** reading a first-year researcher's lab report"
+      bullets:
+        - "The decision: whether a result regenerates from the files alone."
+        - "Then: which of its weaknesses most endangers the headline claim."
+      note: >
+        In a working lab, a number nobody else can regenerate is a liability,
+        not a finding. The reviewer here is applying the standard every result
+        eventually meets, and applying it to a first-year researcher's lab
+        report rather than to a published paper. Ask the room what they would
+        hand over today if someone made this request, and how long it would
+        take them to find it.
+
+    - title: "A poster can round, and a clean notebook can still hide one choice"
+      bullets:
+        - "A poster can round. A caption can overstate."
+        - "The one choice holding the whole claim up rarely announces itself."
+        - "You review someone else's package first, before anyone reviews yours."
+        - "Rank what you find by threat to the claim, not by ease of repair."
+      note: >
+        The chapter puts you on the reviewing side of that standard first, so
+        you learn to see the cracks before someone finds them in your own work.
+        The ranking rule is the second half of the decision and the harder
+        half, because the defect that is easiest to fix is not the one that
+        decides whether the result stands. Keep that pairing in view: the
+        worked example ends by ranking its three findings.
+
+  "The concept":
+
+    - title: "You test the package, not the world"
+      bullets:
+        - "**Reproduction:** the same number from the *same* data and code a study shipped [@nasem2019reproducibility]."
+        - "You open another researcher's notebook, run it top to bottom, check the figure comes back."
+        - "**Replication:** a similar result from a *new* study or new data."
+        - "A second lab runs its own experiment and sees the same effect."
+        - "This chapter is about reproduction."
+      note: >
+        Two words sound alike and mean different things. Reproduction reruns
+        the same data and code the study shipped; replication is a new study
+        or new data asking the same question. This chapter stays with
+        reproduction, so everything after this slide tests the package rather
+        than the world.
+
+    - title: "Restart, run every cell from the top, and see whether the headline returns"
+      layout: terms
+      terms:
+        - term: "Reproducibility package"
+          definition: "the full bundle a study ships so someone else can rebuild its numbers: the data, the code, the run order, any random seed, and the write-up"
+        - term: "Headline number"
+          definition: "the one figure the main claim rests on"
+        - term: "Restart-and-run-all"
+          definition: "clearing the notebook's memory and running every cell from the top with no manual fixes"
+      bullets:
+        - "A headline number sounds like this: \"the supplement raised larval growth by 0.5 mm.\""
+        - "If a number only appears when cells run out of order, it is not reproducible [@wilson2017goodenough]."
+      note: >
+        Rebuild the headline number first, because it is the one figure the
+        rest of the audit is about. The restart matters more than it sounds: a
+        notebook keeps values in memory, so a number can survive on the screen
+        only because the cells were run out of order. Ask who in the room has
+        ever had a result vanish after a kernel restart.
+
+    - title: "A clean run proves the code executes, not that the write-up is true"
+      layout: terms
+      terms:
+        - term: "Claims-vs-computation agreement"
+          definition: "checks that every sentence the write-up asserts is backed by a number the code actually prints"
+        - term: "Alternative specification"
+          definition: "a different but equally defensible way to compute the same headline, to see whether the answer depends on an undisclosed choice"
+        - term: "Hidden assumption"
+          definition: "a claim the analysis quietly relies on and never states, which the result would collapse without"
+        - term: "Pseudoreplication"
+          definition: "treating repeated measurements from the same animal, plate, or tank as independent data points when the real experimental unit is the animal, plate, or tank"
+      bullets:
+        - "Three audits run on top of the clean run."
+        - "The most dangerous hidden assumption in biology has a name."
+      note: >
+        Take the three audits in order, because each one asks something the run
+        itself cannot answer. Pseudoreplication is the named one, credited to
+        Hurlbert, 1984 [@hurlbert1984pseudoreplication], and it is the one the
+        worked example is built to catch. Before the zebrafish appear, ask the
+        room to name the experimental unit in their own project, and to say
+        what was actually assigned.
+
+  "A worked example":
+
+    - title: "Six tanks, 240 larvae, and a poster that says 0.5 mm"
+      bullets:
+        - "A package from another lab tests a probiotic added to zebrafish tank water."
+        - "Three tanks get the probiotic, three get plain water."
+        - "Each tank holds about 40 larvae, and body length is recorded for every larva."
+        - "The poster reads: \"The probiotic increased larval body length by 0.5 mm.\""
+        - "The figures in this worked example are constructed."
+      note: >
+        Read the setup slowly, because every finding later in this example
+        comes out of these two sentences. Six tanks and 240 larvae is the
+        number pair to hold on to. The treatment went into the water of a tank.
+        The ruler went to a larva. Say the last line out loud, so nobody leaves
+        thinking a real probiotic study is being reported.
+
+    - title: "The code says 0.43. The write-up says 0.5."
+      bullets:
+        - "You restart-and-run-all. The code splits larvae by tank type and differences the means."
+        - "The package reproduces, which is a real success."
+        - "Rounding does not explain the gap: 0.43 rounds to 0.4."
+        - "That mismatch is your first finding, and it earns you the right to push harder."
+      note: >
+        Give the success its due before the criticism, because a package that
+        runs top to bottom from a clean start is already a real result. Then
+        hold the two numbers side by side, since the rounding check is what
+        turns a shrug into a finding.
+
+    - title: "Death after treatment is not an ordinary blank cell"
+      bullets:
+        - "The package dropped larvae that died before the final measurement and never said so."
+        - "**Post-treatment event:** something that happens after treatment and that treatment may cause."
+        - "If the probiotic changes which larvae survive, the survivors differ between tanks."
+        - "Their length difference is then a comparison between different populations."
+      note: >
+        This is the choice nobody declared, and it does not show up anywhere in
+        the output. Put the question to the room: why is this blank different
+        from an ordinary missing value? A larva that died has no day-30 length
+        to be missing, because that measurement never existed. Treatment being
+        able to cause the missingness is what makes it dangerous rather than
+        merely annoying.
+
+    - title: "Carrying a dead larva's last length forward is a claim about biology"
+      bullets:
+        - "That patch produces 0.31 mm. Resist calling it an equally defensible alternative."
+        - "It assumes a last measurement stands in for a final length the larva never had."
+        - "0.43 and 0.31 answer different questions with different assumptions."
+        - "The gap between them is not a range, and reporting it as one is a third error."
+      note: >
+        The temptation is strong, because filling the blanks makes the analysis
+        run and hands you a second number that looks like a sensitivity check.
+        It is not one. A neutral default is a choice you could defend without
+        knowing any biology, and this one smuggles in a statement about what a
+        dead larva would have measured. Two numbers only bound an answer when
+        both answer the same question.
+
+    - title: "Report survival by tank type first, then length among the survivors"
+      bullets:
+        - "Label that pair as exactly what it is."
+        - "It is an honest description of what happened in the tanks."
+        - "It does not deliver an overall causal effect of the probiotic on day-30 length."
+        - "Matching survival percentages do not rescue the comparison."
+      note: >
+        No rearrangement of these numbers will produce the causal effect,
+        because day-30 length does not exist for a larva that died. Two tanks
+        can lose the same fraction and still lose different kinds of larvae, so
+        equal survival is not the reassurance it looks like. If the study needs
+        one headline outcome, the fix is upstream: predefine a combined outcome
+        before analysis, such as survived-and-reached-a-given-length, and
+        defend why that ordering answers the biological question.
+
+    - title: "Six tanks, not 240 larvae, and the interval reaches zero"
+      bullets:
+        - "The package reports its gap as if all 240 larvae were independent."
+        - "The probiotic was assigned by tank, so tankmates share water, food, and crowding."
+        - "Average each tank first, then compare three treated tanks against three controls."
+        - "The point estimate barely moved. The honest uncertainty around it exploded."
+      note: >
+        The original interval was tight and well above zero. Recomputed at the
+        tank level, it widens until its lower edge touches zero. That is
+        pseudoreplication [@hurlbert1984pseudoreplication], and it is the
+        weakness with teeth, because the estimate barely moved while the
+        certainty around it did not survive. The real experimental unit is the
+        tank, and there are only six of them.
+
+    - title: "Rank by threat to the claim, not by ease of repair"
+      bullets:
+        - "First: pseudoreplication, because it can dissolve the \"clear effect\" claim."
+        - "Second: the undisclosed handling of dead larvae, which decides which larvae the number describes."
+        - "Third: 0.43 reported as 0.5, real and a genuine reporting failure."
+        - "It is also the smallest threat to whether an effect exists."
+      note: >
+        Notice that this ranking runs close to the reverse of the order in
+        which the findings turned up, and close to the reverse of how easy each
+        one is to fix. Correcting the 0.5 repairs a sentence in the write-up.
+        The tank-level analysis can dissolve the "clear effect" claim. Ask the
+        room to rank the three themselves before you show this slide.
+
+    - title: "Three defensible numbers, and none of them is 0.50"
+      bullets:
+        - "Watch the death counts: the probiotic changes who dies."
+        - "Compare survivors, everyone, and tank means against the poster's 0.50 mm."
+        - "The unit of randomization was the tank, not the larva."
+      code: 0
+      note: >
+        Run this before you accept any single number, including the one printed
+        on the poster. The block builds the package's data and computes the
+        difference three defensible ways, with death depending on both the
+        treatment and the larva's length, which is what makes it a
+        post-treatment event here. SEED is 464, so every run in the room
+        returns the same numbers.

@@ -1,0 +1,178 @@
+# Slide plan — Chapter 20, "Data Provenance and Data Quality".
+# Prose sections only. The builder already emits the research-decision card,
+# the auto key-terms card (Data provenance, Data quality), the AI failure
+# case, the "Do not delegate" rule, and the "It is your turn" steps.
+lesson: data-provenance
+source_sha256: "99f1b5db92c89da5ac33a06ca9df964627e0b2700df3d561191f17a037c2d577"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Your advisor asks where the 72 percent came from"
+      quote: "Who counted the ballots, and 72 percent of what? Of registered voters, of adults, of adults actually eligible to vote?"
+      bullets:
+        - "You wrote that turnout in this county was 72 percent."
+        - "The question is not which website you copied it off."
+        - "Bring the office that certified the count, or take the number out."
+      note: >
+        The scene is the first draft of a background section, read by the
+        researcher who will eventually sign off on your project. Two things are
+        being asked at once: who produced the count, and 72 percent of which
+        population. Ask the room which borrowed number in their own project
+        would survive that question today.
+
+    - title: "Precision is not the same as trust"
+      bullets:
+        - "A value with no traceable origin is a rumor with a decimal point."
+        - "A number does not become true by arriving looking tidy."
+        - "Ask two questions of everything you borrow."
+        - "Where did it come from, and is it any good for what I need it for?"
+      note: >
+        The decision on the table is whether a number you did not produce
+        yourself is solid enough to carry your project's weight. You make that
+        call twice, once on where the value came from and whose hands it passed
+        through, and once on whether it was produced well enough for the use you
+        have in mind. Those are two different tests, and a citation can pass the
+        first and fail the second.
+
+  "The concept":
+
+    - title: "A turnout figure traces back to the office that certified the count"
+      bullets:
+        - "The news story reports the figure."
+        - "A state summary table re-reports it."
+        - "The county election office certified the count that produced it."
+        - "A value is only as trustworthy as the primary source at the end of its chain."
+      note: >
+        Provenance is a chain, and the chain has a direction and an end. Walk it
+        backwards with the room, one link at a time. Each link either produced
+        the value or copied it, and only one of them did the producing. Stop at
+        the link that produced the value, because that is where the number's
+        trustworthiness rests.
+
+    - title: "One link produced the value. The rest copied it."
+      layout: terms
+      terms:
+        - term: "Primary source"
+          definition: "the original record where a value was first produced, such as the county's certified canvass reporting the final vote totals"
+        - term: "Secondary source"
+          definition: "a source that re-reports a value it did not produce, such as a newspaper table, an encyclopedia entry, or a data aggregator"
+      note: >
+        These two words do the work for the rest of the chapter, so define them
+        before anyone uses them. The certified canvass is the official document
+        where the totals were settled. The newspaper table, the encyclopedia
+        entry and the aggregator all sit in the same category: they copy. That
+        is why the chain has to be walked to its end before the number counts.
+
+    - title: "The same real number can be right for one question and wrong for yours"
+      bullets:
+        - "Turnout over registered voters answers whether registered people showed up."
+        - "It is the wrong number for how much of the adult population takes part."
+        - "Quality is fitness for *your* use: real, method you can name, definition your question needs."
+        - "A **mischaracterized value** is a real number attached to the wrong definition or method."
+      note: >
+        Nothing is wrong with the registered-voter rate itself. It was produced
+        correctly and it reports exactly what it says it reports. The defect
+        appears only when it is carried into a question about everyone eligible.
+        The chapter's two examples of mischaracterization are a survey's
+        self-reported turnout presented as an official count, and a
+        registered-voter rate cited as though it covered the whole eligible
+        population.
+
+    - title: "A file with no answers to those questions is not yet data"
+      bullets:
+        - "Whole datasets carry the same two questions, column by column."
+        - "Who produced this variable, and who cleaned it?"
+        - "What did they drop?"
+        - "Does the definition behind the column match the one in your question?"
+      note: >
+        The chapter's line is blunt: a file that lands in your folder with no
+        answers to those questions is a rumor in a spreadsheet. Nothing about
+        the file format tells you any of this, which is why a clean download
+        feels finished when it is not. Have the room run these four questions
+        against one column of a dataset a collaborator handed them.
+
+    - title: "A citation you have not opened is a lead, not a source"
+      lead: "One habit settles both questions: the retrieval-verification loop."
+      bullets:
+        - "**Ask** a tool to surface a value and its source."
+        - "**Retrieve** the primary source yourself."
+        - "**Verify** that it exists and reports that value under that definition."
+        - "**Document** where you found it."
+      note: >
+        The loop settles both questions with one habit. The step that gets
+        skipped is the second, because the first already produced something that
+        looks finished, and the chapter says plainly that opening a source is
+        still your job. Finish the rule as the chapter writes it: a lead, not a
+        source, however confident the tool that handed it to you.
+
+  "A worked example":
+
+    - title: "A source that looks entirely real is where the loop starts"
+      bullets:
+        - "You are studying whether a local election reform changed participation."
+        - "You need one number for your background section: county turnout in a recent presidential election."
+        - "The assistant answers in about a second: seventy-two percent, with a source that looks entirely real."
+        - "You run the loop instead of copying the number."
+      note: >
+        Set the scene as a small, ordinary task, because that is when the check
+        gets skipped. Nothing about the answer looks suspicious, and that is the
+        point of choosing it. The loop is not a way of distrusting the tool. It
+        is what turns the lead the tool gave you into a source you can cite.
+
+    - title: "Provenance: search the exact title, then walk one link back"
+      bullets:
+        - "If the source resolves nowhere, the value is orphaned and you drop it."
+        - "If the page is real, ask whether it produced the number or republished it."
+        - "That question usually sends you back to the state's official results summary."
+        - "Behind that sits the county clerk's certified canvass, where the totals were settled."
+      note: >
+        Two tests, in this order. The first is existence, and it is fast. The
+        second is production, and it is the one that moves you down the chain.
+        Name the end of this particular chain out loud, then ask the room what
+        the end of the chain looks like for the number their own headline claim
+        leans on hardest.
+
+    - title: "Three denominators, three turnout numbers, one election"
+      bullets:
+        - "Open the canvass and read what the percentage is *of*."
+        - "Registered voters, all adults, or adults eligible to vote?"
+        - "Eligible excludes noncitizens and, in some states, people with certain felony convictions."
+        - "The gaps between those three are not small."
+      note: >
+        Then ask a second question of the same figure: was it counted or
+        estimated? Ballots cast are counted. Eligible-population denominators
+        are estimated from census data. Survey turnout is self-reported, and
+        people reliably overstate whether they voted, so that is a third kind of
+        number again. A figure is not comparable to another until you know which
+        of the three you are holding.
+
+    - title: "When two documented sources disagree, the disagreement is the finding"
+      bullets:
+        - "Cross-check against an independent source that documents its own methods."
+        - "The United States Elections Project publishes voting-eligible-population turnout estimates and explains its denominator."
+        - "The Census Bureau's Current Population Survey Voting and Registration Supplement reports self-reported turnout."
+        - "Report both, name the definition behind each, and say which one your question needs and why."
+      note: >
+        Agreement is the easy case: when the certified canvass and an
+        independent reference agree on both the count and the definition, the
+        number has earned a place in your project. Disagreement is not a failure
+        of the check, and it is not a reason to pick the friendlier figure. You
+        report both and defend the choice. That a value's usefulness depends on
+        its documented origin and on fitness for the specific use, not on
+        precision alone, is the standard framing of data quality
+        [@wang1996beyond].
+
+    - title: "One numerator, three denominators, and the spread the label decides"
+      code: 0
+      bullets:
+        - "Nothing is randomly drawn here. Provenance is a chain, not a sample."
+        - "Watch the spread in percentage points across the three published figures."
+        - "Replace the placeholders with numbers you retrieve from the canvass and a named census table."
+      note: >
+        Say plainly that this block is not a simulation. It is the same
+        numerator divided by the three denominators a real turnout figure might
+        be resting on, so the size of the labelling decision is visible rather
+        than argued. Run it, then read the last printed line to the room: a
+        figure with no stated denominator is not yet evidence.

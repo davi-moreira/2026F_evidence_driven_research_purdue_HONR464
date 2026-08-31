@@ -1,0 +1,162 @@
+# Slide plan — lesson `mida` (chapter 10, Model, Inquiry, Data Strategy, and
+# Answer Strategy). Prose sections only; the builder already emits the
+# research-decision card, the AI failure case, the Do-not-delegate rule and the
+# "It is your turn" steps.
+lesson: mida
+source_sha256: "adec5eed8dba7cd3f14fe51d731bf70afb1b1816bd6b75c506f98bd2295a5edb"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "An analytics lead asks for the number first, then the route to it"
+      bullets:
+        - "She reads your one-page design before you spend months on it."
+        - '"Show me the exact number you are after."'
+        - '"Then show me that the way you collect and crunch the data can actually reach that number."'
+        - '"If those two drift apart, every result you bring me answers a question I never asked."'
+      note: >
+        This is the reader you are writing the design for. Her worry is not
+        about your effort or your tools. It is about whether the number you can
+        actually produce is the number you promised her. Ask the room whose
+        one-page design would survive that question this morning.
+
+    - title: "Getting the four parts to agree on paper is the cheapest check you run"
+      quote: "A design that skips this step is not rigorous. It is a hope with good formatting."
+      bullets:
+        - "Do the check before you inspect any outcome-bearing field."
+        - "Do it before you compute the answer."
+      note: >
+        The order is deliberate. The four parts agree first, and only then does
+        anything with an outcome in it get opened. That is why this is the
+        cheapest quality check available: it runs on one page, and it catches
+        the drift before the months of collection rather than after.
+
+  "The concept":
+
+    - title: "Any research design can be written as four parts, and the four have names"
+      lead: "Blair, Cooper, Coppock and Humphreys named that framework MIDA, one letter each [@blair2019declaring]."
+      layout: terms
+      terms:
+        - term: "Model"
+          definition: "your written picture of how the world could work: which things exist and what could affect what"
+        - term: "Inquiry"
+          definition: "the one exact quantity you want from that world, named before any outcome arrives"
+        - term: "Data strategy"
+          definition: "every procedure that makes your data exist: who gets sampled, who gets which condition when you assign one, how each outcome is measured"
+        - term: "Answer strategy"
+          definition: "the whole procedure that turns those data into an answer, uncertainty included"
+      note: >
+        Blair, Coppock and Humphreys developed the framework at book length in
+        Research Design in the Social Sciences. The four labels are theirs; the
+        plain language here is this book putting them to work on a first
+        quantitative project. All four are written down before any data exist.
+
+    - title: "Written for one recommender, each part is a single plain sentence"
+      bullets:
+        - "Model: a listener's chance of accepting a recommended song runs from 0 to 1."
+        - "A new recommender could nudge that chance up."
+        - "Inquiry: the average lift in accept rate the new recommender causes across listeners."
+        - "Data strategy: randomly send each session to the old or new recommender, then log every accept."
+        - "Answer strategy: accept rate in the new group minus the old, reported with an interval."
+      note: >
+        Read the four in order and you can hear them connect. The model makes a
+        quantity askable, the data strategy produces the raw material, the
+        answer strategy does the arithmetic and says how sure it is. The inquiry
+        is the one that forces a choice: if you need the word "and" to state it,
+        you have two inquiries and you have to pick the one you would defend
+        first.
+
+    - title: "The dashed arrow is the check that matters"
+      figure: "../images/concepts/mida_map.png"
+      width: "58%"
+      bullets:
+        - "Top row is what you want to learn. Bottom row is how you plan to learn it."
+        - "All four are written down before you collect anything."
+        - "The dashed arrow asks whether your answer strategy reaches the inquiry you named."
+      note: >
+        Model makes the inquiry askable, and the data strategy feeds the answer
+        strategy. Only one arrow in the picture is dashed, and it runs upward,
+        from the answer strategy back to the inquiry. Ask two people to say in
+        one sentence why their own answer strategy reaches their own inquiry.
+
+    - title: "The four are not a checklist, and they have to align"
+      bullets:
+        - "You do not fill them in any order [@blair2023rdss]."
+        - "Align means your data and answer strategies reach the inquiry your model makes askable."
+        - "Misaligned: a causal inquiry, but the people who see the new version differ systematically."
+        - "That comparison delivers an **association**: two things move together, with no proof one caused the other."
+      note: >
+        Nothing in the arithmetic will tell you the alignment broke. The
+        subtraction still runs and still returns a number. What changes is what
+        that number is allowed to be called, and the only place to catch it is
+        the design page, before collection.
+
+    - title: "Your data do not get to rewrite your question"
+      bullets:
+        - "The inquiry is still causal. This design simply does not reach it."
+        - "The absence of randomizing does not settle the matter either."
+        - "Observational designs can carry causal answers with a defended identification argument suited to the design."
+        - "Honest diagnosis: causal inquiry, currently unidentified under this data and answer strategy [@hernan2020whatif]."
+        - "Naming that on paper is the whole job here."
+      note: >
+        This is the easy lesson to get wrong. Alignment never licenses relabeling
+        a causal question as descriptive because the data are weak. It licenses
+        one sentence: the question stays, and this design does not answer it.
+        Whether an observational design can be defended for a causal claim is a
+        later chapter's whole subject, so the identification argument has to suit
+        the design, not just be asserted.
+
+  "A worked example":
+
+    - title: "Each listener has two accept rates; the inquiry is their average difference"
+      bullets:
+        - "A music-streaming company tests whether a new autoplay recommender raises how often listeners keep the track."
+        - "Model: one accept rate under the old recommender, one under the new."
+        - "The new one could be higher, lower, or the same."
+        - "Inquiry: the average difference across all listeners. One number, causal in kind."
+        - "Data strategy buckets each session at random; the answer strategy subtracts the two rates."
+      note: >
+        Notice what the model does not claim. It does not say the new
+        recommender is better, only that each listener has two possible rates
+        and the difference could go either way. The inquiry then picks one
+        number out of that world, and everything after it has to reach that
+        number.
+
+    - title: "Random bucketing is what licenses the word \"causes\""
+      bullets:
+        - "The inquiry asks for a caused difference."
+        - "Random bucketing breaks the link between who the listener is and which version they see."
+        - "Nothing about the listener decides which version they get, so the four parts agree."
+      note: >
+        The alignment audit for the good version takes one sentence, and this is
+        it. Ask the room to say why randomizing earns the word causes here. The
+        answer is not that randomizing sounds rigorous. It is that the thing
+        deciding the version is no longer anything about the person.
+
+    - title: "The shortcut changes the claim, not the question"
+      bullets:
+        - "Ship the new recommender to new users, compare them against existing users on the old one."
+        - "New and existing users differ in ways that also move accept rate."
+        - "The inquiry stays exactly what it was: the caused lift."
+        - "What the evidence supports drops from \"causes\" to \"is associated with\"."
+        - "Same question, broken alignment."
+      note: >
+        Keep the chapter's precision here. The inquiry does not change; the claim
+        the evidence supports does, which leaves a causal inquiry that is
+        currently unidentified. Declaring a design as four linked parts, so that
+        misalignment becomes visible before data collection, is the approach set
+        out in the design-declaration literature [@blair2023rdss].
+
+    - title: "Same model, same inquiry: watch the second number miss the truth"
+      code: 0
+      bullets:
+        - "The simulation builds a true caused lift of 4 points into every listener."
+        - "Data strategy 1 buckets at random. Data strategy 2 ships the new version to new users."
+        - "SEED = 464, so the three printed numbers come out the same for you."
+      note: >
+        Run it, then read the three printed lines together. The randomized
+        estimate lands near the lift that was built in; the new-versus-existing
+        comparison does not, because here the new users are the lighter
+        listeners. The inquiry never moved. Only the data strategy did, and that
+        was enough to lose the answer.

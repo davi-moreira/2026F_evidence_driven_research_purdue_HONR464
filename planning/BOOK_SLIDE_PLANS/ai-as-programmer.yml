@@ -1,0 +1,179 @@
+lesson: ai-as-programmer
+source_sha256: "b097dd8886aae6bc86ea5783b7f6b2f4b37baae21d48c70113de53fddc8bfd67"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "The officer wants to know which cities the number was computed over"
+      quote: >
+        *"Do not read me the percentage. Tell me which cities it was computed over.
+        If your code only saw the towns with an open-data portal, you have not
+        described the state. You have described the portals."*
+        — a **state open-records officer**, asked to act on a transparency report
+      bullets:
+        - "The decision on the table: which quantity your code computes, and which cases it counts."
+        - "He does not care that the code was clean, only what it counted and about whom."
+      note: >
+        Start with the person who has to act on the number, because he is the
+        one who will ask the question the code cannot answer for you. Notice
+        what he does not ask about: syntax, style, whether the notebook ran.
+        He asks which cases the percentage covers. Ask the room whether they
+        could answer that question, right now, for a number already sitting in
+        their own project.
+
+    - title: "A cell that runs without an error is a draft you have not read"
+      bullets:
+        - "An AI writes your analysis code in seconds, and it runs."
+        - "That is exactly where the danger sits."
+        - "It writes fluent code for the quantity it *thinks* you asked for."
+        - "Paste the printed number into your report and you have signed for a quantity you never checked."
+      note: >
+        The speed is what makes this hard. Nothing about a fast, clean result
+        signals that the question changed on the way. The tool works over
+        whatever rows sit in the dataframe you handed it, and it will not tell
+        you which set that was. The chapter's line is worth reading aloud: a
+        cell that runs without an error is not a result you have earned.
+
+  "The concept":
+
+    - title: "Pin the number down in words before you ask for any code"
+      layout: terms
+      terms:
+        - term: "Descriptive summary"
+          definition: "a number or picture that reports what is actually in the cases you can see, such as a share, an average, or a full distribution"
+        - term: "Quantity of interest"
+          definition: "the one exact number your code is supposed to produce, pinned down in words before you ask for any code"
+      bullets:
+        - "The tool is the programmer. You are the researcher."
+        - 'Example: "the share of municipalities in the state that post council minutes within seven days of the meeting."'
+      note: >
+        The quantity of interest is written in words, not in code, and it is
+        written first. That ordering is the whole defense. If the sentence
+        exists before the prompt does, you have something to compare the
+        returned code against. If it does not, whatever the tool computes
+        becomes your question by default.
+
+    - title: "Your frame is the set your data covers, not the group you asked about"
+      layout: terms
+      terms:
+        - term: "Frame"
+          definition: "the concrete set of cases your data actually covers, which is often smaller than the group your question is about"
+        - term: "Convenience sample"
+          definition: "a set of cases collected because they were easy to reach, not drawn to stand in for a population"
+      bullets:
+        - "Example: only the cities that publish through an open-data portal."
+        - "Those tend to be the largest and best-staffed in the state."
+      note: >
+        Frame and quantity are the pair you keep deciding. The portal example
+        matters because the gap between the frame and the question is not
+        random: the cities that are easiest to reach are also the ones most
+        likely to be complying. Ask the room what their own frame is, in a
+        sentence a stranger could check.
+
+    - title: "A clean run is not a correct result"
+      bullets:
+        - "A tool can compute a flawless share over the wrong frame."
+        - "The code still finishes with a green check."
+        - "A cell can execute with no error and compute a different number than your question needs [@vaithilingam2022expectation]."
+      note: >
+        This is the trap the chapter closes, so slow down here. The arithmetic
+        is not in dispute. The share is real over the rows the tool saw. What
+        the green check certifies is that the code ran, and nothing more than
+        that. There is no error message for computing the wrong
+        quantity.
+
+    - title: "Coding with AI is a loop, not a wish"
+      bullets:
+        - "Nobody gets working analysis code from one prompt, and you should not try to."
+        - "You prompt, read the output, interrogate it, refine, and run it again."
+        - "Agentic tools now run that loop themselves and hand you a tidy end state."
+        - "The loop is a real gain in speed. It is also where your frame goes missing."
+      note: >
+        Set the expectation honestly: the first prompt is turn one, not an
+        answer. When the tool runs the turns for itself, it writes, executes,
+        reads the error, patches, reruns, and reports back with a paragraph
+        about how well it went. You gain the speed and you lose sight of the
+        turns, which is the trade this chapter asks you to manage rather than
+        refuse.
+
+    - title: "Verification runs per cycle, not per session"
+      bullets:
+        - "Any turn can add a filter, drop a join, or reach for a different column."
+        - "Nothing announces the change. The number just gets prettier."
+        - "Every time the code changes, ask again: what quantity, over which cases?"
+        - "Read the code, not the tool's summary of the code [@sandve2013ten]."
+      note: >
+        The code you finally read may not be the code you specified three turns
+        ago. That is why checking once at the end does not work. You own two
+        things the programmer cannot: you define the quantity and the frame in
+        plain words before you delegate [@blair2023rdss], and you confirm that
+        the code in front of you right now computes that quantity over that
+        frame, and not a plausible neighbor. When a tool ran the cycles for
+        you, make it surrender the choices it made along the way.
+
+  "A worked example":
+
+    - title: "Turn one: six clean lines and a reassuring 95%"
+      bullets:
+        - "Your question: what share of city councils post their meeting minutes within seven days?"
+        - "You have a spreadsheet scraped from municipal websites."
+        - "You ask an AI for the Python that returns the share posting on time."
+        - 'The printout says 95%, and the temptation is to write "compliance is strong."'
+      note: >
+        Everything here looks like success. The question is plain, the data
+        exist, the code runs, the number is high. Instead of writing the
+        sentence, read what the code did. That single change of habit is what
+        the rest of the example is built on.
+
+    - title: "Turn two: 40 portal cities standing in for 240"
+      bullets:
+        - "The dataframe holds only the 40 municipalities that publish through an open-data portal."
+        - "There are 240 on the state roster. That is a convenience sample standing in silently."
+        - "The code also calls `.dropna()`, and the dropped rows are the towns the scraper came back empty on."
+        - "The 95% describes the best-resourced cities with their worst records deleted."
+      note: >
+        Two separate narrowings, and neither one announced itself. The first
+        was in the data you were handed; the second was written by the tool.
+        Both push the number the same way, because the towns with the thinnest
+        clerical staff are exactly the ones the scraper failed on. Ask the room
+        which of the two would have been harder to catch.
+
+    - title: "Turn three: not knowing is a finding"
+      bullets:
+        - "You re-anchor to your quantity: the share over every municipality on the state roster."
+        - "Unretrievable records get flagged, not dropped."
+        - "At most one in six municipalities is confirmed to post on time."
+        - "For most of the state you simply do not know."
+      note: >
+        The refined prompt says precisely what the earlier one left open, and
+        the picture changes. Keep the chapter's bound on the new number: one in
+        six is the confirmed share, and the rest of the roster is unknown
+        rather than non-compliant. That unknown is a finding you report, not a
+        gap to paper over.
+
+    - title: "The tool wrote correct code for the wrong question"
+      bullets:
+        - "An agentic run would have handed you the polished 95% with a confident paragraph."
+        - "The decision that shrank your state to 40 cities would sit inside a step you never saw."
+        - "Code that runs cleanly while answering the wrong question is the documented risk of accepting output alone [@vaithilingam2022expectation]."
+        - "You did the research by deciding what the code was allowed to count."
+      note: >
+        This is the sentence to leave the room with. Nothing was wrong with the
+        code as code, and an agent running all three turns would have shown you
+        only the tidy end state. The research happened at the point where a
+        human decided which cases the number was allowed to cover. That
+        decision has no automated substitute.
+
+    - title: "The 95% is real. Read what it is 95% of."
+      code: 0
+      bullets:
+        - "Watch three shares in order: portal cities only, the same after `.dropna()`, then the whole roster."
+        - "The roster line is a range, because unretrievable records are flagged instead of deleted."
+        - "A fourth line counts the records the scraper never returned."
+      note: >
+        The block reproduces all three turns on the same 240-municipality
+        roster, including the rows the scraper never returned. Run it and read
+        the three numbers in order, because the movement between them is the
+        lesson. Ask the room which of the printed figures they would put in a
+        report, and what sentence would have to travel with it.

@@ -1,0 +1,169 @@
+lesson: responsibility-ownership
+source_sha256: "e42bde95a153c2f268a93b224b8aa4e4e59b56c6c84c7af14155bf853ed52d95"
+sections:
+  "Why this decision matters":
+    - title: "An editor does not ask which software wrote it"
+      quote: >
+        "When something in this paper turns out to be wrong, I do not ask which
+        software wrote it. I ask whose name is on it. That person answers for
+        every line."
+      bullets:
+        - "A journal editor, to a first-time author, on what happens when a paper is wrong."
+        - "The question is never which tool. The question is whose name."
+      note: >
+        Read the quote out loud and let it sit for a second before you move on.
+        The editor is not making a rule about AI, and that is the point: the
+        rule about names predates every tool in the room. Ask who in here has
+        already put their name on something an AI helped write.
+    - title: "Your name goes on a poster, a note, and a defense"
+      bullets:
+        - "You finish this book with work that carries your name."
+        - "An AI may find sources, draft a paragraph, or compute a number."
+        - "None of that moves the responsibility off you."
+        - "Draw the line on purpose, before someone else draws it for you."
+      note: >
+        Name the three things concretely: a poster or one-figure summary, a
+        research note, and a defense in front of people who can ask anything.
+        The reviewer, the reader, and your future self all hold the named
+        author accountable, so the line gets drawn either way. Drawing it
+        yourself, now, is the only part you control.
+  "The concept":
+    - title: "Ownership rests on accountability, and disclosure makes it visible"
+      layout: terms
+      terms:
+        - term: "Intellectual ownership"
+          definition: >
+            being the author of, and answerable for, every claim that appears
+            under your name, whatever tool helped produce it
+            [@icmje2026recommendations]
+        - term: "Accountability"
+          definition: >
+            being the person who answers for the work's correctness and
+            integrity when it is questioned [@nasem2017integrity]
+        - term: "AI-use disclosure"
+          definition: >
+            a short, honest record of which AI tool did which task and how you
+            verified its output [@allen2014credit]
+        - term: "A never-delegate decision"
+          definition: >
+            a judgment that stays yours no matter how capable the tool becomes
+      note: >
+        These four words carry the whole chapter, so give them the definitions
+        the book gives them rather than a paraphrase. Ownership is the state,
+        accountability is what it costs you when the work is questioned, and
+        disclosure is how a reader can see where your judgment entered. The
+        never-delegate list is the short set of calls that never reaches the
+        tool at all.
+    - title: "At your defense, the AI computed it is not an answer"
+      bullets:
+        - "An AI drafts your methods paragraph: creek chloride exceeded a safety threshold."
+        - "You own that sentence, and if it is wrong, the mistake is yours."
+        - "At your defense, someone asks how you know a number."
+        - '"The AI computed it" is not an answer.'
+        - '"I recomputed it from my own measurements, and here is the check" is.'
+      note: >
+        Walk the room through the exchange as it actually happens: someone asks
+        how you know a number, and there are only two kinds of reply. One names
+        a tool, which locates the answer outside you. The other names a check
+        you ran and can show. Ask what the second reply requires you to have
+        kept while you worked.
+    - title: "Disclosure is not a confession; it protects you"
+      bullets:
+        - "It shows exactly where your own judgment entered the work."
+        - 'Example: "an AI assistant located candidate sources; I retrieved and confirmed each one in the library catalog."'
+        - "Two halves: what the tool did, and what you did about it."
+      note: >
+        The instinct is to treat disclosure as an admission that weakens the
+        work, and that instinct gets it backwards. A disclosure that names the
+        tool's task and your verification is a record of judgment, and the
+        reader can locate it. Point out which half of the example sentence is
+        the tool's and which one is yours.
+    - title: "You rarely send one prompt anymore, so I used AI for analysis says nothing"
+      bullets:
+        - "You ask, you read, you push back, you ask again."
+        - "An agentic tool may run dozens of those cycles on its own."
+        - "Say what you specified, roughly what the loop did, what you checked."
+        - "Nobody remembers cycle eleven a month later. Your ledger does."
+      note: >
+        This is the part of disclosure that has genuinely gotten harder, and
+        the chapter says so plainly. A loop with dozens of cycles cannot be
+        reconstructed from memory a month later, which is the practical reason
+        the ledger exists rather than a bureaucratic one. Ask how many cycles
+        they ran on their last delegation, and whether they could write down
+        what happened in cycle three.
+    - title: "An AI can list candidate measures; choosing the one you defend is yours"
+      bullets:
+        - "Which question you pursue stays yours."
+        - "What your evidence licenses stays yours."
+        - "The ethics of the study, and your name on the work, stay yours."
+        - "Use AI freely for reach and speed. Keep ownership, accountability, and honest disclosure for yourself."
+      note: >
+        The water-quality example is the cleanest version of the split: listing
+        candidate measures is reach, and picking the one you will stand behind
+        is judgment. Read the four never-delegate calls as a list of decisions,
+        not topics, because that is how the It is your turn step asks for them.
+        The closing rule is deliberately short, so say it as written.
+  "A worked example":
+    - title: "Ten samples from the creek behind campus"
+      bullets:
+        - "You test whether winter road salt raises chloride in the creek."
+        - "Chloride is a dissolved salt ion that harms freshwater life above certain levels."
+        - "You collect ten water samples on one day, at one site."
+        - "Then you ask an AI tool to help write up the result."
+      note: >
+        Set the scene before the tool speaks, because the shape of the evidence
+        is what decides the argument later. Ten samples, one site, one day. Keep
+        those three facts visible on the board; every ownership call in the next
+        slides comes back to them.
+    - title: "The drafted paragraph reads like a finished result"
+      quote: >
+        "Mean chloride was 310 mg/L, well above the U.S. EPA chronic
+        aquatic-life criterion of 230 mg/L, so the creek is unsafe for aquatic
+        life."
+      bullets:
+        - "You asked the tool to help write up the result. It returned this."
+        - "Fluent, specific, and ready to paste into your write-up."
+        - "The ownership decision: which parts will you personally stand behind?"
+      note: >
+        Ask the room to mark the sentence up before you show the next slide.
+        There are three distinct things in it: a number from your data, a number
+        from a published document, and a word that generalizes far past both.
+        Fluency is what makes the sentence hard to question, which is exactly
+        why it needs splitting.
+    - title: "Split it into pieces you can own"
+      bullets:
+        - "Recompute the mean of your ten samples. You get 304, not 310."
+        - "Open the EPA criteria document and confirm the published figure yourself."
+        - 'The word "unsafe" claims the whole creek all winter, from ten samples on one day.'
+        - "Narrow it: elevated chloride in these samples, at this site, on this date."
+      note: >
+        Each piece gets the check its own kind of claim needs. Your number is
+        recomputed, the published number is retrieved from the primary source,
+        and the word that overreached is narrowed to what the evidence licenses.
+        Note that the narrowed claim is still a finding; it is just a finding
+        you can defend when someone asks how you know.
+    - title: "Run the one-minute check before you read the next line"
+      bullets:
+        - "The block builds the ten samples and recomputes their mean."
+        - "Watch the printed mean against the drafted 310 mg/L."
+        - "The criterion is not printed here. Retrieve it yourself, then compare."
+      code: 0
+      note: >
+        Run it live and let the gap between the recomputed mean and 310 appear
+        on the screen rather than describing it. The seed is 464, so everyone
+        sees the same ten samples. Point out that the script deliberately
+        refuses to print the criterion, because that number has to come from
+        the EPA document, not from anything on this slide.
+    - title: "You own the corrected sentence; you would not have owned the original"
+      bullets:
+        - "The tool drafted the paragraph."
+        - "You did the checking, retrieving, and rewriting that made the claim yours."
+        - "Now the disclosure writes itself from what actually happened."
+        - "Editorial guidance takes the same position on authorship [@icmje2026recommendations]."
+      note: >
+        Close the example on the sequence, not on the moral: draft, check,
+        retrieve, narrow, then disclose what you did. The disclosure is easy to
+        write at this point precisely because the work of ownership already
+        happened. The chapter cites editorial guidance that authorship cannot
+        be delegated to a tool and that the named author answers for every
+        claim, so this is the field's position, not only the book's.

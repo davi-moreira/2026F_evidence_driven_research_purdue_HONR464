@@ -1,0 +1,196 @@
+lesson: research-pitches
+source_sha256: "633252df0b51de036271304a4dca10b2af59960106a8b02c136965b90b35191c"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A finished poster is silent until a visitor stops"
+      bullets:
+        - "A finished poster is silent."
+        - "The moment a visitor stops, your voice takes over."
+        - "Speaking is faster than reading, so you compress on the fly."
+        - "That is where claims quietly grow."
+      note: >
+        Under a little pressure, "was associated with" slides into "causes,"
+        and "on data it never saw" drops out. Nobody plans either move; they
+        happen mid-sentence, because the shorter version is easier to say.
+        Ask the room which qualifier on their own board would be the first to
+        fall out if a stranger interrupted them.
+
+    - title: "What she remembers is the presenter who said where the claim stops"
+      bullets:
+        - "A skeptical peer is working the room at a research conference."
+        - "She stops at maybe forty posters in an afternoon."
+        - "The ones who oversold lost her on the second sentence."
+      quote: >
+        What I remember is not the one with the most data. It is the one whose
+        presenter told me, in one clean breath, exactly what they found and
+        exactly where it stops.
+      note: >
+        Read her line slowly, because it sets the standard the rest of the
+        chapter meets: one clean breath, the finding, and the stop. She is not
+        rewarding modesty for its own sake; she is rewarding a presenter whose
+        spoken sentence she can trust. Ask the room what they would say if a
+        visitor gave them one breath this afternoon.
+
+    - title: "You want a pitch you can say cold, without widening the claim"
+      bullets:
+        - "She is not testing your data."
+        - "She is testing whether your spoken sentence still matches the sentence on your board."
+        - "So you build a pitch you can say cold, under pressure."
+        - "It never widens the claim your evidence earned."
+      note: >
+        The research decision names three venues: a thirty-second pitch, a
+        three-minute walk, and a twenty-minute seminar. They are not one
+        artifact at three speeds, because each makes a different promise to
+        the audience, and the claim has to survive both compression and
+        expansion without growing stronger in the shorter version. Ask the
+        room which of the three they will actually stand up in this term.
+
+  "The concept":
+
+    - title: "A pitch is a prepared spoken version, cut to a fixed slice of time"
+      layout: terms
+      terms:
+        - term: "Pitch"
+          definition: "a short, prepared spoken version of your project, built to fit a fixed slice of time [@bourne2007oral]"
+        - term: "Pitch architecture"
+          definition: "the fixed set of beats each version moves through: hook, claim, evidence, boundary, invitation [@alley2013craft]"
+      bullets:
+        - "The thirty seconds you give a visitor who pauses is one pitch."
+        - "The guided tour you give the one who stays is another."
+        - "Different lengths, one skeleton."
+      note: >
+        Prepared is the word to sit on. A pitch is not the paragraph you
+        improvise when someone stops; it is written and rehearsed before the
+        day. Ask the room how long their longest slot is and how long the
+        shortest, because those two numbers are what the rest of this lesson
+        has to fit.
+
+    - title: "Five beats, and pressure comes for the fourth one"
+      bullets:
+        - "**Hook**: one sentence a stranger outside your field cares about."
+        - "**Claim**: your headline, said plainly and inside its limits."
+        - "**Evidence**: the finding that earns the claim, one spoken sentence at a time."
+        - "**Boundary sentence**: one sentence naming what the claim does not show."
+        - "**Invitation**: a reason to look closer."
+      note: >
+        The boundary sentence is the beat pressure will try to drop, so you
+        rehearse it until it is reflex. The chapter's own hook is a help desk
+        that drowns in tickets every morning and cannot tell which will drag
+        on, which a stranger outside computing can still picture. Ask each
+        person in the room for a hook from their own project, out loud, in one
+        sentence.
+
+    - title: "One skeleton at three lengths, and the boundary is in all three"
+      bullets:
+        - "**30-second hook**: hook, claim, boundary, invitation, with no evidence yet."
+        - "**90-second walk**: the hook plus two or three evidence beats."
+        - "**Full pitch**: three to five minutes."
+        - "Deciding what goes in each length is the choice this chapter equips."
+      note: >
+        Look at what the shortest version keeps and what it drops. Evidence
+        goes first, and the boundary stays, which is the opposite of what
+        instinct does under time pressure. Ask the room which beat they would
+        have cut to reach thirty seconds, then show them the list again.
+
+    - title: "Compression loses a detail. Inflation loses the truth."
+      bullets:
+        - 'Full: "on data the model had never seen, it flagged four of every five slow tickets."'
+        - 'Compressed: "on new tickets, it caught most of the slow ones."'
+        - 'Inflated: "my model predicts which tickets will be slow."'
+        - "The same rule governs every length you speak."
+      note: >
+        Read the second and third lines back to back and ask the room which
+        words moved. Both are shorter than the original and both sound
+        cleaner, which is why the difference is easy to miss out loud. The
+        compressed line still says where the number came from; the inflated
+        line has dropped the condition that made it honest.
+
+    - title: "The excited-mouth upgrade is your spoken verb outrunning your written one"
+      bullets:
+        - 'You wrote "is associated with." Your mouth says "causes."'
+        - "The boundary moves while nobody watches the words."
+        - "That is the failure to hunt in your own pitch."
+      note: >
+        Name this one clearly, because it is the failure the rest of the
+        chapter is built to catch. It does not arrive as a decision to
+        overstate; it arrives as a verb swap in the middle of a sentence you
+        have said many times. Ask the room to name the verb on their own
+        poster and the stronger verb their mouth would reach for.
+
+  "A worked example":
+
+    - title: "Your headline is 78% precision on tickets the model never saw"
+      layout: terms
+      terms:
+        - term: "Held-out set"
+          definition: "a slice of your data the model never learned from, kept aside so its score is honest"
+        - term: "Precision"
+          definition: "the share of a model's flags that turn out correct"
+      bullets:
+        - "You trained on 4,000 past tickets and tested on 1,000 the model never saw."
+        - 'On that held-out set, when it flagged a ticket "slow," it was right about 78% of the time.'
+        - 'Poster headline: "On held-out tickets, the model flagged slow ones with 78% precision."'
+      note: >
+        Every word in that headline is carrying weight. "Held-out" says where
+        the number came from, and "precision" says which number it is out of
+        the several a model reports. Ask the room to delete one word from the
+        headline and say aloud what the sentence now claims.
+
+    - title: "The claim, compressed for speech, still says 'never seen'"
+      bullets:
+        - '**Hook:** "a help desk drowns in tickets every morning and cannot tell which will drag on."'
+        - '**Claim:** "On tickets it had never seen, my model flagged the slow ones,"'
+        - '"and when it raised a flag it was right about three times in four."'
+        - '**Invitation:** "The surprising part is which tickets fooled it. Want the walk?"'
+      note: >
+        "About three times in four" is the same 78%, in words a stranger can
+        hold without writing anything down, and "on tickets it had never seen"
+        is the held-out set said out loud. Nothing here is jargon and nothing
+        here is bigger than the poster. The boundary beat is missing from this
+        slide on purpose: ask the room to name what is not here before you
+        move on, because the next slide is that beat. Then ask them to say
+        their own claim beat in spoken numbers and check it against the board.
+
+    - title: "The boundary sentence is the beat you rehearse to reflex"
+      bullets:
+        - '"That number is precision on a held-out slice, not overall accuracy,"'
+        - '"and the model still misses some slow tickets."'
+        - "The fix is mechanical: mark the boundary sentence in your script."
+        - "Say it at every length, even the 30-second one."
+      note: >
+        This one sentence does two jobs: it names which number you quoted, and
+        it names what the model still gets wrong. It is also the beat that
+        disappears when you are excited and the visitor is checking the time,
+        which is why marking it is a step rather than a good intention. In
+        the turn, writing this sentence comes before anything else you write.
+
+    - title: "Drop two words and you have claimed what your test never showed"
+      bullets:
+        - 'Drop "held-out" and you have claimed the model works on any ticket.'
+        - "Your test never showed that."
+        - 'Swap "precision" for "accuracy" and you quote a number your poster does not report.'
+        - "Both feel natural, because the shorter sentence sounds cleaner."
+      note: >
+        Both slips are the excited-mouth upgrade, and neither needs bad faith
+        to happen. Building the spoken version around one claim and its
+        boundary, rather than compressing the whole paper, is standard advice
+        for research talks [@bourne2007oral]. Ask the room which single word
+        of their own headline would do the most damage if it fell out.
+
+    - title: "Run it: the number in the claim, and the number behind the boundary"
+      bullets:
+        - "1,000 held-out tickets, and about 22% of them really do drag on."
+        - "Precision is the headline number: right when it flags."
+        - "Recall is the second number, the share of slow ones caught."
+        - "SEED is 464, so every run in the room prints the same numbers."
+      code: 0
+      note: >
+        The block prints both numbers the pitch depends on: the one in the
+        claim, and the one the boundary sentence is about. Recall is why the
+        boundary says the model still misses some slow tickets, so a listener
+        who hears only precision hears a better model than you built. Change
+        the false-alarm rate, rerun, and ask the room whether the headline
+        sentence is still true.

@@ -1,0 +1,297 @@
+/*-- scss:defaults --*/
+// EDR|AI slide theme — one brand with the book and the course site (D29).
+// Ink on white, hairline rules, a single accent per FUNCTION (never for
+// decoration): crimson marks what may not be delegated, amber marks an AI
+// failure. Everything else is ink, muted ink, or paper.
+
+$presentation-font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
+$presentation-font-size-root: 32px;
+$presentation-heading-font: $presentation-font-family;
+$presentation-heading-color: #1a1a19;
+$presentation-heading-font-weight: 700;
+$presentation-line-height: 1.42;
+
+$body-bg: #ffffff;
+$body-color: #1a1a19;
+$link-color: #1a1a19;
+$link-color-hover: #8a1c2b;
+$selection-bg: #e8eaec;
+
+$code-block-bg: #f4f4f3;
+$code-block-border-color: #d0d7de;
+
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------- tokens
+:root {
+  --edrai-ink: #1a1a19;
+  --edrai-muted: #5c5f63;
+  --edrai-faint: #8b9096;
+  --edrai-rule: #d0d7de;
+  --edrai-wash: #f4f4f3;
+  --edrai-paper: #ffffff;
+  --edrai-crimson: #8a1c2b;   // what stays human
+  --edrai-amber: #9a6a00;     // where AI failed
+  --r-link-color: var(--edrai-ink);
+  --r-link-color-dark: var(--edrai-ink);
+  --r-link-color-hover: var(--edrai-crimson);
+}
+
+.reveal { -webkit-font-smoothing: antialiased; }
+
+// Content reads left-aligned; only the title and divider slides center.
+.reveal .slides section,
+.reveal .slides > section > section { text-align: left; }
+
+// ------------------------------------------------------ slide layout
+// Every content slide is a column: eyebrow, then title, then the body,
+// which takes the remaining height and centres itself in it. Without this
+// the body sits jammed under the title with the lower half of a 900px
+// canvas empty, and the eyebrow (written after the heading, because a
+// Pandoc slide begins AT its heading) renders BELOW the title rule.
+// reveal sets `display: block` INLINE on the section it is showing, so the
+// flex container has to out-rank it.
+.reveal .slides > section:not(.quarto-title-block):not(.stack) {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.2% 0 4.5%;
+  box-sizing: border-box;
+}
+.reveal .slides > section > h2 { order: 2; flex: 0 0 auto; margin-top: 0; }
+.reveal .slides > section > .kicker { order: 1; flex: 0 0 auto; }
+.reveal .slides > section > *:not(h2):not(.kicker) { order: 3; }
+// The body starts directly under the title and the leftover height stays as
+// air at the foot. A title that floats to a different height on every slide
+// is restless to teach from; a fixed one is calm.
+.reveal .slides > section > *:not(h2):not(.kicker) { margin-top: .35em; }
+.reveal .slides > section > .kicker + h2 { margin-bottom: .45em; }
+
+// Density. reveal does not shrink text to fit, so a slide that carries a
+// long numbered list or a code block runs under the footer. The BUILDER
+// measures what it emitted and stamps one of these; nothing here guesses.
+.reveal .slides > section.dense { font-size: .84em; }
+.reveal .slides > section.denser { font-size: .72em; }
+.reveal .slides > section.densest { font-size: .62em; }
+.reveal .slides > section.dense h2 { font-size: 1.28em; }
+.reveal .slides > section.denser h2 { font-size: 1.2em; }
+.reveal .slides > section.densest h2 { font-size: 1.14em; }
+.reveal .slides > section.denser ul > li,
+.reveal .slides > section.denser ol > li,
+.reveal .slides > section.densest ul > li,
+.reveal .slides > section.densest ol > li { margin-bottom: .22em; }
+
+// ------------------------------------------------------------ eyebrow
+// Small-caps label above a headline: "Lesson 3 · The concept".
+.reveal .kicker {
+  font-size: .5em; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--edrai-faint); font-weight: 600;
+  margin: 0 0 .55em; line-height: 1.2;
+}
+.reveal .kicker p { margin: 0; }
+
+// ------------------------------------------------------- title slide
+// Quarto builds this slide itself from `title` / `subtitle` / `author`, so
+// the deck generator writes no markup for it and it is styled here instead.
+.reveal .slides section.quarto-title-block {
+  text-align: left;
+  border-left: 12px solid var(--edrai-ink);
+  padding-left: 1.1em;
+}
+.reveal .slides section.quarto-title-block h1.title {
+  font-size: .95em;
+  letter-spacing: .015em;
+  color: var(--edrai-muted);
+  font-weight: 600;
+  margin: 0 0 .55em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.reveal .slides section.quarto-title-block .subtitle {
+  font-size: 1.9em;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--edrai-ink);
+  letter-spacing: -0.014em;
+  margin: 0 0 .5em;
+  max-width: 18em;
+}
+.reveal .slides section.quarto-title-block .quarto-title-authors {
+  display: block;
+  border-top: 1px solid var(--edrai-rule);
+  padding-top: .6em;
+  margin-top: .3em;
+}
+.reveal .slides section.quarto-title-block .quarto-title-author,
+.reveal .slides section.quarto-title-block .quarto-title-author-name {
+  display: block;
+  font-size: .62em;
+  color: var(--edrai-muted);
+  text-align: left;
+}
+// The book's one message, printed under the byline on every deck's opener.
+.reveal .slides section.quarto-title-block .quarto-title-authors::after {
+  content: "AI is your arm and your research assistant, not your brain.";
+  display: block;
+  font-size: .52em;
+  font-style: italic;
+  color: var(--edrai-faint);
+  margin-top: .55em;
+}
+
+// ---------------------------------------------------- section divider
+// Full-bleed ink. Reveal paints the section background via data-background.
+.reveal section[data-background-color="#1a1a19"] h1,
+.reveal section[data-background-color="#1a1a19"] h2,
+.reveal section[data-background-color="#1a1a19"] p,
+.reveal section[data-background-color="#1a1a19"] .kicker,
+.reveal section[data-background-color="#1a1a19"] li { color: #ffffff; }
+.reveal section[data-background-color="#1a1a19"] .kicker { color: #9aa0a6; }
+.reveal section[data-background-color="#1a1a19"] h1,
+.reveal section[data-background-color="#1a1a19"] h2 { border-bottom: none; }
+.reveal section[data-background-color="#1a1a19"] .divider-line {
+  font-size: .72em; color: #c6c9cc; font-style: italic;
+  max-width: 24em; margin-top: .6em; line-height: 1.45;
+}
+.reveal section[data-background-color="#1a1a19"] a {
+  color: #ffffff !important; border-bottom-color: #4a4d50; }
+
+// ------------------------------------------------------------- cards
+// One shared card geometry; the variants only change the rule colour.
+.reveal .card {
+  background: var(--edrai-wash);
+  border-left: 10px solid var(--edrai-ink);
+  border-radius: 6px;
+  padding: .85em 1.15em;
+  margin: .35em 0;
+  line-height: 1.45;
+}
+.reveal .card > :first-child { margin-top: 0; }
+.reveal .card > :last-child { margin-bottom: 0; }
+
+// The chapter's own thesis, verbatim from the book.
+.reveal .decision {
+  @extend .card;
+  font-size: 1.04em;
+  background: #f7f7f6;
+  border-left-color: var(--edrai-ink);
+}
+.reveal .decision .label {
+  display: block; font-size: .58em; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--edrai-faint);
+  font-weight: 700; margin-bottom: .45em;
+}
+
+// "Do not delegate" — the calls that stay human.
+.reveal .rule-human {
+  @extend .card;
+  background: #fbf4f5;
+  border-left-color: var(--edrai-crimson);
+}
+.reveal .rule-human .label {
+  display: block; font-size: .58em; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--edrai-crimson);
+  font-weight: 700; margin-bottom: .45em;
+}
+.reveal .rule-human strong { color: var(--edrai-crimson); }
+
+// An AI failure case.
+.reveal .failure {
+  @extend .card;
+  background: #fbf7ef;
+  border-left-color: var(--edrai-amber);
+}
+.reveal .failure .label {
+  display: block; font-size: .58em; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--edrai-amber);
+  font-weight: 700; margin-bottom: .45em;
+}
+.reveal .failure .said {
+  font-style: italic; color: var(--edrai-muted);
+  border-left: 3px solid var(--edrai-rule); padding-left: .8em; margin: .5em 0;
+}
+
+// A quiet note card (no accent).
+.reveal .note-card {
+  @extend .card;
+  background: #f4f6f8; border-left-color: var(--edrai-faint);
+}
+
+// ---------------------------------------------------------- key terms
+.reveal .terms { display: grid; grid-template-columns: 1fr; gap: .5em; margin-top: .3em; }
+.reveal .terms.two { grid-template-columns: 1fr 1fr; }
+.reveal .term {
+  border: 1px solid var(--edrai-rule); border-radius: 6px;
+  padding: .6em .85em; background: var(--edrai-paper); font-size: .84em;
+  line-height: 1.4;
+}
+.reveal .term .t { display: block; font-weight: 700; color: var(--edrai-ink);
+  margin-bottom: .18em; }
+.reveal .term .d { color: var(--edrai-muted); }
+
+// --------------------------------------------------------- four rails
+.reveal .rails { display: grid; grid-template-columns: 1fr 1fr; gap: .55em; }
+.reveal .rail {
+  border-top: 3px solid var(--edrai-ink); padding-top: .45em;
+  font-size: .78em; line-height: 1.4;
+}
+.reveal .rail .t { display: block; font-weight: 700; margin-bottom: .18em; }
+.reveal .rail .d { color: var(--edrai-muted); }
+
+// --------------------------------------------------------- your turn
+.reveal .turn { border-top: 1px solid var(--edrai-rule);
+  padding-top: .6em; margin-top: .5em; font-size: .82em;
+  color: var(--edrai-muted); }
+.reveal .turn a { font-weight: 600; }
+
+// ------------------------------------------------------------- misc
+.reveal blockquote {
+  border-left: 4px solid var(--edrai-rule); background: none;
+  box-shadow: none; font-style: italic; color: var(--edrai-muted);
+  padding: .1em 0 .1em 1em; width: 100%; margin: .4em 0;
+}
+.reveal table { font-size: .78em; border-collapse: collapse; }
+.reveal table th { border-bottom: 2px solid var(--edrai-ink); text-align: left;
+  font-weight: 700; }
+.reveal table td, .reveal table th { padding: .34em .6em; }
+.reveal table tr { border-bottom: 1px solid var(--edrai-rule); }
+
+.reveal pre { box-shadow: none; border: 1px solid var(--edrai-rule);
+  border-radius: 6px; width: 100%; }
+.reveal pre code { padding: .7em .9em; font-size: .74em; line-height: 1.4;
+  max-height: 560px; }
+.reveal code { color: var(--edrai-ink); }
+.reveal :not(pre) > code { background: var(--edrai-wash);
+  border: 1px solid var(--edrai-rule); border-radius: 4px;
+  padding: .04em .26em; font-size: .88em; }
+
+.reveal figure figcaption, .reveal .figure-caption {
+  font-size: .58em; color: var(--edrai-faint); font-style: italic;
+  text-align: center; margin-top: .4em;
+}
+.reveal img { border-radius: 4px; }
+
+.reveal .footer, .reveal .slide-number {
+  color: var(--edrai-faint) !important; font-size: .5em;
+}
+.reveal .slide-number { background: none; }
+
+.reveal .progress { color: var(--edrai-ink); height: 3px; }
+
+// Quarto parks the logo bottom-right, exactly where reveal draws the
+// next-slide arrow; the two overlapped. The logo moves to the opposite
+// corner, above the hamburger, and stays small enough to read as a mark.
+.reveal .slide-logo {
+  left: 1.1em; right: auto; bottom: 3.4em;
+  max-height: 34px !important; width: auto !important; opacity: .5;
+}
+.reveal .controls { right: 12px; bottom: 12px; }
+
+// Small print for a dense slide.
+.reveal .small { font-size: .82em; }
+.reveal .smaller { font-size: .7em; }
+.reveal .muted { color: var(--edrai-muted); }
+
+// Two-column helper that keeps the gutter honest.
+.reveal .columns { gap: 1.2em; }

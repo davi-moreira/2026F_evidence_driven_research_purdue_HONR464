@@ -1,0 +1,194 @@
+lesson: curiosity-to-problem
+source_sha256: "245bb457f1be9dc54e6e4aae0d0f43b3642897f48b8eeb747dc803a5b07d5320"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A meal that cost eleven dollars in 2019 now costs sixteen"
+      bullets:
+        - "You find a restaurant menu from 2019."
+        - "Your first reaction may be immediate: prices near campus have exploded."
+        - "That reaction is useful."
+        - "It is also not yet a finding."
+      note: >
+        Start here because the first explanation arrives fast and feels
+        complete. Ask the room what they would have concluded from those two
+        numbers alone, and write it on the board before you move on. The next
+        slide lists five other explanations for the same two numbers.
+
+    - title: "Research begins when the first explanation stops being the only one"
+      bullets:
+        - "Perhaps restaurant prices rose faster than prices generally."
+        - "Perhaps the old menu was unusually cheap."
+        - "Perhaps portions changed."
+        - "Perhaps fees moved out of the listed price."
+        - "Perhaps the example is memorable precisely because it is unusual."
+      note: >
+        None of these has been checked, and that is the point: five rival
+        readings of the same two numbers. Ask the room which one they could
+        rule out fastest, and with what evidence. A curiosity that cannot
+        survive this list is not ready to take months of work.
+
+    - title: "You need a curiosity strong enough to survive alternatives"
+      bullets:
+        - "You do not need a polished question yet."
+        - "AI can propose explanations, comparisons, affected groups, or implications you missed."
+        - "Use that help, mark what the tool introduced, and preserve the exchange."
+        - "The final commitment stays yours."
+      note: >
+        You will be the one who must pursue, revise, and defend the problem,
+        which is why the commitment cannot be handed over. Marking what the
+        tool introduced is not bookkeeping for its own sake: it is how you can
+        later say which parts of the framing were yours. Ask the room to name
+        one curiosity they would still chase if every tool disappeared
+        tomorrow.
+
+  "The concept":
+
+    - title: "The jump is yours to make; the cycle then returns to experience"
+      bullets:
+        - "Experience: something in the world catches your attention."
+        - "The jump to a possible explanation is abduction, and it is yours to make."
+        - "Derivation and verification are delegable, then checked."
+        - "The cycle is redrawn from Zahavy's reconstruction of Einstein's account [@zahavy2026jump]."
+      mermaid: 0
+      note: >
+        The notes on the arrows, marking what you may delegate and what you may
+        not, are this book's rather than Zahavy's. Point at the return arrow:
+        verification sends you back to experience, so the cycle turns rather
+        than ends. Ask the room which of the three arrows they have already
+        delegated to a tool this week.
+
+    - title: "Abduction creates a candidate, not proof"
+      bullets:
+        - "Restaurant prices seem to change every third week."
+        - '"Payday timing moves menu updates" is an abductive possibility.'
+        - "It gives you something to check."
+        - "It does not become evidence by sounding plausible."
+      note: >
+        Experience does not logically dictate one explanation; the researcher
+        makes a jump toward an idea that could make sense of it. Deduction asks
+        what must follow if an explanation is true, and induction looks for
+        patterns across observations, while abduction proposes what might
+        explain the pattern in the first place. Ask the room for a second
+        abductive possibility for the same third-week pattern, then ask what
+        evidence would separate the two.
+
+    - title: "Einstein's jump did not begin with a loud error signal"
+      bullets:
+        - "Newtonian physics already fit the data well."
+        - "The reorganizing idea came from thought experiments about falling observers."
+        - "The paper calls models strong at recombining patterns, and increasingly useful for derivation."
+        - "Zahavy argues they lack the grounding in experience the jump begins from [@zahavy2026jump]."
+        - "Treat that as an argued position, not a settled boundary."
+      note: >
+        The position paper was written at Google DeepMind and uses Einstein's
+        route to general relativity to make the case. Position papers exist to
+        be tested, and tools keep improving, so nobody should carry this out of
+        the room as a proven limit on what a model can do. The practical point
+        holds either way: you answer for the claim, so the jump is yours to
+        make and to defend.
+
+    - title: "Once your curiosity is on the page, AI joins as a divergence partner"
+      bullets:
+        - "Ask for alternative explanations, overlooked comparisons, or questions challenging your belief."
+        - "Mark every person, population, outcome, mechanism, or comparison it introduces as NEW."
+        - "Accept no novelty claim and no citation without checking."
+        - "Keep or reject each direction with a reason."
+        - "What the tool cannot do is care."
+      note: >
+        The jump stops being a solo performance once its first line is written,
+        which is why the order matters: your sentence first, the tool second.
+        You choose what you would chase even if every tool disappeared
+        tomorrow. Ask the room for one direction they would reject, and for the
+        reason they would write down next to it.
+
+    - title: "Reason down four moves, then stop at the problem"
+      bullets:
+        - "**Experience.** What happened, or what did you notice?"
+        - "**Curiosity.** What do you want to understand about it?"
+        - "**Topic.** What area of inquiry contains that curiosity?"
+        - "**Research problem.** What is not yet understood well enough for the decision, explanation, or audience you care about?"
+        - "The four moves follow the standard treatment of research problems [@booth2024craft]."
+      note: >
+        Each move strips one layer of vagueness, and you can see where it
+        leaves by reading the four lines in order. Stop at the problem. Units,
+        outcomes, conditions, question kind and claim reach belong to the
+        formal declaration that closes the next studio, so anyone reaching for
+        them here is working ahead of the material.
+
+    - title: "An answer that confirms what everyone believes teaches almost nothing"
+      bullets:
+        - 'A 2026 essay in *Science*, "Advancing science by designing for surprise" [@evans2026surprise].'
+        - "Elicit informed predictions first, then compare them with what the evidence shows."
+        - "Before you look at evidence, write the answer you currently expect."
+        - "Name one person for whom a different answer would be genuinely surprising."
+        - "The more surprising the claim, the more evidence it takes."
+      note: >
+        The essay starts from a blunt fact and then makes it usable: the
+        ordering is what does the work, predictions before evidence, so you can
+        see whether a result would move anyone. The warning travels with the
+        tool. Surprise is a place to aim your question, never a license to
+        inflate your answer.
+
+    - title: "Your expected answer is a planning proxy, not a measurement"
+      layout: terms
+      terms:
+        - term: "Audience"
+          definition: "the informed readers whose expectations your result would move"
+        - term: "Expected answer"
+          definition: "the sentence you write, before any evidence, giving the answer you currently expect"
+      note: >
+        The gap the essay names sits at the level of an audience, not at the
+        level of any one researcher, so a result that surprises only you does
+        not qualify. Treat the written sentence as a planning proxy for that
+        gap rather than a measure of what anyone learned, which would take
+        evidence about the audience you do not have yet. Keep the sentence:
+        late in the book you hold your evidence up against it.
+
+  "A worked example":
+
+    - title: '"Does moving more actually help you sleep?" cannot be studied as written'
+      bullets:
+        - "It is a real feeling. It names no one and measures nothing."
+        - "Give it edges: physical activity and sleep quality in undergraduates. That is a topic."
+        - "**Research problem:** we do not know whether more daily walking goes with better-rated sleep among residence-hall first-years."
+        - "That points at one missing piece, not a whole subject."
+      note: >
+        Walk the funnel out loud, one line per stop, and ask the room where the
+        vagueness leaves. The topic still contains no unknown; the problem does,
+        because it names what we do not know. Stop at the problem, since the
+        formal question that fixes units, outcome and reach is the close of the
+        next studio, after your rules and ledger exist.
+
+    - title: "The sleep problem clears all three tests, with contribution still provisional"
+      lead: "Then test the problem three ways [@hulley2013designing]."
+      bullets:
+        - "**Importance:** anyone advising sleep-deprived first-years wants the answer."
+        - "**Feasibility:** step counts and a nightly rating are collectable in a few weeks."
+        - "**Contribution:** studied broadly in adults, far less in this dorm-living first-year group."
+        - "Contribution stays provisional until Studio 3 maps the existing evidence."
+        - "The funnel and its tests follow the standard treatment of research problems [@booth2024craft]."
+      note: >
+        Contribution stays provisional, because you cannot know a gap is real
+        until Studio 3 maps the existing evidence, so score it honestly now and
+        revisit it then. Feasibility means the access, data and time you
+        actually have, not the ones you wish you had. The curiosity is now a
+        problem you could defend in front of someone who wants to know why this
+        one and not another.
+
+    - title: "The problem sentence names groups you can build out of the data"
+      bullets:
+        - "The block builds this example's data and prints the numbers the section quotes."
+        - "Watch the two edge groups: more than 8,000 steps, fewer than 4,000."
+        - "The middle group is neither, and the question does not ask about it."
+        - "Change one input and watch which sentence above stops being true."
+      code: 0
+      note: >
+        Sixty residence-hall first-years, average daily steps and a one-to-ten
+        sleep rating. SEED is 464, so every run in the room produces the same
+        numbers. What matters is not the size of the difference between the
+        edge groups; it is that they exist in the data at all. Ask the room to
+        raise the noise on the sleep rating and report which sentence from the
+        previous slides breaks first.

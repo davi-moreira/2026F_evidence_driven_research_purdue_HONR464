@@ -1,0 +1,197 @@
+# Slide plan — Chapter 33, "Poster Criticism"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: poster-criticism
+source_sha256: "f7da1f6b2cb09540d4dc13e92e26e24120ffe3b2015fe991b54ef3ee7f9a65c1"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A judge stops at one number on your board"
+      lead: "The decision on the table: honest enough to become permanent, or one more fix first?"
+      bullets:
+        - "A **research-integrity judge** probes whether a poster's claims are actually backed."
+        - "\"Where did this come from?\""
+        - "Walk them to the exact line of code and the whole poster earns trust."
+        - "Say \"somewhere in the analysis\" and they stop believing every other number."
+      note: >
+        Put the room in the last hour before a poster prints. The judge is one
+        person walking your row, and the whole encounter lands on a single
+        number: where did this come from? Name the asymmetry out loud. One
+        traceable number buys trust across the whole board, and one untraceable
+        number spends it just as widely. Ask the room which number on their own
+        draft they would least like to be asked about.
+
+    - title: "Once the file goes to the printer you cannot patch it"
+      bullets:
+        - "The honesty has to be built in before the poster leaves your hands."
+        - "This is the last audit between a draft poster and a permanent one."
+        - "Done, or one more fix first. You make that call."
+      note: >
+        Most drafts can be revised after someone objects, and a printed poster
+        cannot, which is the entire reason the chapter exists. Say plainly
+        that the audit is not a formality run to satisfy anyone else: it is the
+        only remaining chance to change what the artifact says. The call itself
+        stays with the author, and the rest of the chapter is what you run
+        before making it.
+
+  "The concept":
+
+    - title: "Three passes, and each one ends in a decision only you can make"
+      bullets:
+        - "Pass one: the **gallery-walk audit**, a fixed checklist instead of a glance."
+        - "Pass two: the **oral defense**, questions you cannot edit afterward."
+        - "Pass three: the lock, when the poster stops being changeable."
+      note: >
+        Name the three passes in order before you unpack any of them, so the
+        room hears that the chapter is a sequence and not a list of tips. The
+        gallery-walk audit is structured on purpose: you stop at a poster and
+        run the same fixed checklist rather than glancing and moving on, which
+        is what makes it repeatable on your own work. The oral defense is the
+        live conversation at your board. The lock is the end of the line.
+
+    - title: "The claim boundary sits in the headline verb"
+      layout: terms
+      terms:
+        - term: "Claim boundary"
+          definition: "the line between what your evidence licenses and what it does not"
+        - term: "Figure honesty"
+          definition: "a chart cannot say more than its data"
+        - term: "Redundant encoding"
+          definition: "carrying a distinction in more than one channel"
+      bullets:
+        - "An observational field trial may say \"is associated with,\" never \"causes.\""
+        - "An axis starting just below the data draws a small gap as a canyon."
+        - "A value label plus a hatch pattern, so color is never the only signal."
+      note: >
+        Three terms, and each one has a physical place on a poster. The claim
+        boundary lives in the headline verb, so the fix on this chapter's
+        example is one word rather than a rewrite. Figure honesty is about the
+        picture and the numbers agreeing, and the case the chapter works is an
+        axis that starts just below the data. Redundant encoding is the fix for
+        the accessibility check: a second channel carries the distinction, so
+        color is never the only signal a color-blind reader can lose
+        [@crameri2020colour].
+
+    - title: "Four questions, and a fifth about who can receive the claim"
+      bullets:
+        - "Claim boundary: does the headline stay inside its evidence?"
+        - "Figure honesty: does the picture match the numbers?"
+        - "Read path: does a stranger find the headline in ninety seconds [@erren2007poster]?"
+        - "Uncertainty: does the interval sit beside the claim, not buried in a footnote?"
+        - "Accessibility: can every reader receive the claim [@crameri2020colour]?"
+      note: >
+        This is the checklist you actually run, and it is short enough to hold
+        in your head at someone else's board. Four questions form the core of
+        the gallery-walk audit and accessibility is the fifth check. Read the
+        read-path question as written: a stranger, and ninety seconds. Have the
+        room run these five out loud on any poster image you can put on the
+        screen before they run them on their own draft.
+
+    - title: "Defend what your evidence licenses; concede what it never bought"
+      bullets:
+        - "Three lenses cover almost every hard question at your board."
+        - "An outsider tests whether your claim survives translation."
+        - "A specialist probes a design choice."
+        - "A skeptic offers a rival explanation for the same evidence."
+        - "**Defend-versus-concede:** conceding means narrowing the claim on the spot."
+      note: >
+        The three lenses are how you rehearse: the chapter says they cover
+        almost every hard question you will get. The judgment underneath is
+        defend-versus-concede, and the chapter is specific about which way to go. You defend when the objection asks for something your evidence
+        already licenses, and you concede when it asks for a crossing your
+        design never paid for. Your **compass position**, the kind and reach of
+        the question your project answered, is what tells you which case you
+        are in.
+
+    - title: "The audit before the lock is the most consequential one you run"
+      bullets:
+        - "**Terminal lock:** the moment the poster becomes final and unchangeable."
+        - "**Claim-evidence traceability:** every number traces to the exact cell that produced it."
+        - "That is what lets you show the line when a judge points at your board."
+      note: >
+        The lock is a moment; the audit you run just before it is the one the
+        chapter calls the most consequential on the whole project, because
+        nothing after it can be corrected. Traceability is the precondition
+        rather than a nice extra: if you cannot find the cell now,
+        you certainly cannot find it while someone waits at your board. Ask the
+        room to pick one number on their draft and locate its cell in under a
+        minute, and see how many can.
+
+  "A worked example":
+
+    - title: "Compost RAISES corn yield, on fields the grower chose"
+      bullets:
+        - "A plant-biology poster, with a bar chart of mean grain yield at its center."
+        - "Compost-amended plots against plots that got none. A red bar and a green bar."
+        - "185 and 191 bushels per acre. A gap of 6."
+        - "The y-axis starts at 180, and no interval is shown."
+        - "Nothing was randomized. The grower decided which fields got compost."
+      note: >
+        Read the setup before anyone judges it, because every flaw in this
+        poster is visible in these five lines and the room should find them
+        rather than be told. Hold the last line for a beat: the assignment of
+        compost to fields was a human choice, not a coin flip, and that single
+        fact is what the headline verb cannot survive. Ask what they would
+        change first before you show the audit.
+
+    - title: "Each audit catches a different flaw on the same board"
+      bullets:
+        - "Claim boundary: \"raises\" is causal, but a richer field could bring both compost and yield."
+        - "Honest headline: compost is associated with about 6 more bushels per acre."
+        - "Figure honesty: an axis floored at 180 draws 6 bushels several times taller than it is."
+        - "Uncertainty: a 95% interval of roughly ±9 bushels per acre swamps a 6-bushel gap."
+        - "Accessibility: red-green bars fail a reviewer who is red-green color-blind."
+      note: >
+        Run the audits in order and let the room watch the poster come apart in
+        a structured way rather than by general suspicion. Four of the five bite
+        here; the read path is the one this example never tests. The fix for
+        the axis is to run it from 0, and the fix for the missing interval is to
+        put it beside the headline where the claim is. Roughly one man in twelve
+        is red-green color-blind, so the accessibility item is not optional
+        politeness: color-only encoding loses readers whose vision it never
+        reaches [@crameri2020colour]. The fix here is value labels plus a hatch
+        pattern.
+
+    - title: "You cannot fix everything, so rank by how far the error travels"
+      bullets:
+        - "The claim-boundary hit travels farthest."
+        - "A reviewer who catches one causal overreach distrusts the whole board."
+        - "So you lock the associational verb first."
+        - "That decision, made by you and defended out loud, is the work of this chapter."
+      note: >
+        This is the practical heart of the chapter. Ranking is necessary because
+        the print deadline is real and the hit list is longer than the hour you
+        have. The ranking rule is reach: a flaw that changes how a reader treats
+        every other number on the board outranks a flaw confined to one panel.
+        Ranking belongs to the spine the chapter says travels to any format,
+        while the gallery walk and the print lock stay poster procedure. The
+        axis and the color pair still get fixed, in ranked order; they simply do
+        not go first.
+
+    - title: "Rebuild the board's data and print the interval it left off"
+      bullets:
+        - "Watch the two means and then the gap the poster headlined."
+        - "Watch the interval the board never showed."
+        - "The last printed line is the one the headline's verb depends on."
+      code: 0
+      note: >
+        Walk the code as a rebuild of the poster, not as syntax. The assignment
+        line is the one to point at: composted fields are the ones above the
+        median soil quality, so the grower's choice is written into the data
+        generation. The last print compares mean soil quality for composted and
+        uncomposted fields, and that comparison is why "raises" cannot stand.
+        Ask the room to predict its sign before you run the cell.
+
+    - title: "The redraw runs the axis from zero and stops relying on color"
+      bullets:
+        - "`ax.set_ylim(0, 230)` puts the 6-bushel gap back at its true size."
+        - "Two grays plus a hatch pattern carry the distinction without color."
+        - "Error bars put the interval beside the bars instead of nowhere."
+      note: >
+        Walk the redraw as the audit's three fixable hits applied at once, and
+        hold it against the description of the original board that opened this
+        example. The claim-boundary hit is the one the picture cannot fix,
+        because no amount of honest drawing turns a grower's choice into a randomized
+        trial. That is the split to leave the room with: the figure fixes what
+        the figure controls, and the verb is a decision you make in words.

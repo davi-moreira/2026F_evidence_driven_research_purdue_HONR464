@@ -1,0 +1,2331 @@
+---
+# GENERATED FILE — DO NOT EDIT.
+# Written by scripts/build_studio_slides.py from the EDR|AI book:
+#   book/studios/studio10-adapt-and-defend.qmd      (the studio's promise)
+#   the studio's chapters                                 (its argument)
+#   book/studios/milestone10-adapt-and-defend.qmd   (its milestone)
+# Editorial overlay: planning/BOOK_SLIDE_PLANS/<lesson-id>.yml
+# Lessons on this deck: research-posters poster-criticism research-pitches difficult-questions
+# Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
+# silently reverted on the next build and fail `--check` in CI.
+title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+subtitle: "Studio 10 — Prepare to publish or present"
+author: "Davi Moreira"
+format:
+  revealjs:
+    theme: [default, _theme/edrai-slides.scss]
+    width: 1600
+    height: 900
+    margin: 0.07
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: fade
+    background-transition: fade
+    transition-speed: fast
+    incremental: false
+    hash: true
+    hash-type: number
+    history: false
+    progress: true
+    controls: true
+    controls-layout: bottom-right
+    touch: true
+    preview-links: auto
+    link-external-newwindow: true
+    logo: _theme/edrai_logo.png
+    footer: "EDR|AI · Studio 10 — Prepare to publish or present"
+    chalkboard:
+      buttons: false
+    menu:
+      side: left
+      width: normal
+    code-line-numbers: false
+    highlight-style: github
+    fig-align: center
+---
+
+## What you can defend when you leave
+
+::: {.kicker}
+
+Studio 10
+
+:::
+
+::: {.decision}
+
+[What you can defend when you leave]{.label}
+
+Turn your bounded claims into an artifact ready for publication or
+presentation, and rehearse defending it against real questions.
+
+:::
+
+
+## The milestone ahead {.dense}
+
+::: {.kicker}
+
+Studio 10
+
+:::
+
+This studio closes with **[Milestone 10: Your artifact, ready to publish or
+present](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html)**,
+a short chapter of its own after the lessons. **What it asks you to produce.**
+A short venue contract and one artifact ready for publication or presentation
+that satisfies it - a paper or research note, a seminar or conference talk, a
+poster, or another venue's format - with a content map tracing every
+load-bearing claim and number, and a defense rehearsal record. This is not yet
+public release.
+
+::: {.notes}
+
+A claim becomes public the moment an audience can question it, and audiences
+do not read contracts. They read papers, hear seminars, scan posters, and ask
+hard questions. This milestone produces the artifact itself, ready for
+publication or presentation: a manuscript a venue could receive, a talk a room
+could hear, a poster a conference could hang, each satisfying its venue
+contract. The poster lessons carry the fully worked visual example; the paper
+route develops your Studio 9 note; the venue contract and content map carry
+every format. The rehearsal record matters as much as the artifact: the
+questions you cannot answer yet are the truest map of what remains.
+
+Milestone 11 lets strangers rerun what you have just defended, which is the
+one test rehearsal cannot give you. The milestone chapter keeps the working
+details: the practice steps, the versioned record, and how the artifact is
+assessed.
+
+:::
+
+
+## The lessons in this studio {.denser}
+
+::: {.kicker}
+
+Studio 10 · Road map
+
+:::
+
+- [Lesson 32 — Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html): if your venue is a poster, or your format carries a quantitative figure: the draft with labeled values, uncertainty shown as the design licenses (interval or caveat), and a headline verbed to your boundary.
+- [Lesson 33 — Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html): if your venue is a poster: the gallery-walk audit of your draft, hits ranked by how far the error travels, fixed once, and the lock call.
+- [Lesson 34 — Research Pitches, Talks, and Seminars](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html): if you will speak, whether a pitch, a seminar, or a conference talk: your 30-second and 3-minute spines, built boundary-first, tested aloud on an outsider, and expanded to the venue's length.
+- [Lesson 35 — Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html): your five hardest fair questions with defend-or-concede answers, and your uncertainty-and-limitations statement in ULN form.
+
+
+## Research Posters {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 1 of this studio · Chapter 32
+
+:::
+
+::: {.divider-line}
+
+whether your headline figure's picture says exactly what its numbers say, and
+nothing more
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 32
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+If your artifact carries a quantitative visual, decide what that visual must
+let the audience see and what uncertainty must stay visible. If your venue is
+a poster, also decide how the figure participates in the page's scan path. You
+own the headline verb, and you own the call that the picture never says more
+than the data.
+
+:::
+
+
+## A stranger reads your tallest bar before your methods
+
+::: {.kicker}
+
+Chapter 32 · Why this decision matters
+
+:::
+
+- A skeptical peer, walking a poster session, four feet from your board.
+- From four feet away one thing is read: does your tallest bar mean what it looks like?
+- The distrust that follows lands on the whole board, not just the figure.
+
+::: {.note-card}
+
+If your axis starts halfway up the scale, I have caught you before I read a
+word of your methods.
+
+:::
+
+::: {.notes}
+
+Open with the visitor, not with the rule. The peer in the chapter says the
+quiet part out loud: the first thing read is whether the tallest bar means
+what it looks like it means. Ask the room what happens next if the answer is
+no, and let them arrive at the chapter's own answer, which is that the
+distrust spreads from the figure to everything else on the wall.
+
+:::
+
+
+## The venue changes the viewing conditions, never the standard
+
+::: {.kicker}
+
+Chapter 32 · Why this decision matters
+
+:::
+
+- A journal reader can study a figure for minutes.
+- A seminar audience may see it for thirty seconds.
+- A poster visitor may first meet it from four feet away.
+- At a poster session a stranger gives you ninety seconds and one glance.
+
+::: {.notes}
+
+Draw the contrast in viewing conditions first, then close it off. The chapter
+is explicit that the venue never excuses an unlabeled axis, a hidden
+denominator, an inaccessible color choice, or uncertainty detached from the
+claim. The short viewing time is not a lower bar, it is the reason the figure
+has to do most of the talking on its own.
+
+:::
+
+
+## A figure can lie with true numbers
+
+::: {.kicker}
+
+Chapter 32 · Why this decision matters
+
+:::
+
+- An axis that starts just below your data turns a rounding-error gap into a landslide.
+- A reader who cannot tell your red bar from your green one receives no message.
+- Every number can be correct while the picture still overclaims.
+
+::: {.notes}
+
+This is the sentence the whole chapter hangs on, so say it slowly. The two
+failures on the slide are different in kind: one exaggerates a real
+difference, the other deletes the message for part of your audience. Neither
+is caught by checking the arithmetic, which is why this decision needs its own
+audit rather than a proofread.
+
+:::
+
+
+## Your headline verb promises more than you think
+
+::: {.kicker}
+
+Chapter 32 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Headline claim]{.t}
+
+[the one sentence you want a reader to leave with]{.d}
+
+:::
+
+::: {.term}
+
+[Claim boundary]{.t}
+
+[the line between what your evidence licenses and what it does not]{.d}
+
+:::
+
+::: {.term}
+
+[Compass position]{.t}
+
+[the kind and reach of the question your project answered, which fixes what the headline is allowed to say]{.d}
+
+:::
+
+::::
+
+- "Version B raised our sales" promises far more than "Version B sold slightly more."
+- An observational comparison may say "is associated with," never "causes."
+- A descriptive question about the weeks you measured licenses no claim about why.
+
+::: {.notes}
+
+The verb is where the overclaim usually hides, and the poster convention of
+one leading sentence is what makes it load-bearing (Erren & Bourne 2007). Work
+the three terms in order with the room: the headline is what you want
+remembered, the boundary is what your evidence will support, and the compass
+position is what fixes the boundary before you write a word. Ask someone to
+say a headline from their own project aloud and have the room name the verb.
+
+:::
+
+
+## The picture cannot say more than the data
+
+::: {.kicker}
+
+Chapter 32 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Figure honesty]{.t}
+
+[the rule that a figure's picture cannot say more than its data]{.d}
+
+:::
+
+::: {.term}
+
+[Truncated axis]{.t}
+
+[an axis that starts above the bottom of its scale instead of at the floor]{.d}
+
+:::
+
+::: {.term}
+
+[Uncertainty on the page]{.t}
+
+[the interval or caveat printed in the same glance as the claim, not buried in a footnote]{.d}
+
+:::
+
+::::
+
+- If the real gap is three points, the bars should look about three points apart.
+- A completion-rate axis running 70 to 76 magnifies a small difference into a cliff.
+- A "±4 points" error bar drawn right on the headline figure.
+
+::: {.notes}
+
+Three points at once, and the middle one is the concrete instance of the
+first. The truncated axis is not a styling preference, it is the mechanism by
+which an honest number becomes a dishonest picture. On the third term, hold
+the phrase "same glance": a caveat that is true but printed where nobody
+standing four feet away will read it has not been stated on the page (Alley
+2013).
+
+:::
+
+
+## Color alone carries nothing for a red-green color-blind reader
+
+::: {.kicker}
+
+Chapter 32 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Accessibility]{.t}
+
+[whether your message reaches readers who perceive differently]{.d}
+
+:::
+
+::: {.term}
+
+[Redundant encoding]{.t}
+
+[carrying the same distinction in more than one channel, so no single channel is load-bearing]{.d}
+
+:::
+
+::::
+
+- A red-green bar pair carries nothing for a red-green color-blind reader, roughly 1 in 12 men (Crameri et al. 2020).
+- Label each bar with its value and give each a pattern, so color becomes a bonus.
+- For the web version of a poster, WCAG 2.2 is the published standard (World Wide Web Consortium 2024).
+- Its normative scope is web content, so a printed board takes the same rules as good practice.
+
+::: {.notes}
+
+Keep the bound the chapter states, because it is easy to overstate here. The
+two WCAG rules are that color is never the only visual means of carrying
+information, and that every informative image needs a text alternative serving
+the same purpose. Those are normative for web content only, so for a printed
+board treat them as good practice rather than a formal requirement. Redundant
+encoding is the move that answers the color-only failure: the value and the
+pattern each carry the distinction on their own.
+
+:::
+
+
+## Fail any one audit and the poster overclaims
+
+::: {.kicker}
+
+Chapter 32 · The concept
+
+:::
+
+- One judgment made four ways, and each way has a name.
+- Four audits to run on your own board: claim boundary, figure honesty, uncertainty, accessibility.
+- Correct arithmetic is no defense against a picture that oversells it.
+
+::: {.note-card}
+
+A poster that fails any one of these overclaims, even when its numbers are
+exactly right.
+
+:::
+
+::: {.notes}
+
+Land the section on the failure rule rather than on a summary. These are not
+four preferences to balance against each other; any single miss is enough to
+make the board claim more than the evidence. Tell the room the four audit
+names now, because the worked example runs exactly these four against a draft
+figure, one at a time.
+
+:::
+
+
+## 71 percent against 74, with intervals that overlap
+
+::: {.kicker}
+
+Chapter 32 · A worked example
+
+:::
+
+- A business-analytics project comparing two versions of an online store checkout page.
+- **Completion rate:** the share of shoppers who start checkout and finish the purchase.
+- Across weekly samples Version A means 71 percent, Version B means 74.
+- The 95% interval on each mean is about ±4 points, so the two overlap.
+
+::: {.notes}
+
+Set the numbers down before you show the draft figure, so the room holds the
+evidence in mind and meets the picture second. Three points of difference with
+intervals of roughly four points either side is the whole tension of the
+example. Ask what headline that evidence licenses, then show them what the
+first draft actually said.
+
+:::
+
+
+## The first draft fails all four audits at once
+
+::: {.kicker}
+
+Chapter 32 · A worked example
+
+:::
+
+- Figure honesty: on an axis floored at 70, the taller bar is drawn four times the shorter.
+- Uncertainty: the intervals overlap, and nothing on the board shows it.
+- Claim boundary: "BOOSTS" is a decisive, causal verb for a three-point, overlapping gap.
+- Accessibility: told apart by red and green alone, with no value a screen reader can read.
+
+::: {.notes}
+
+The draft is a bar chart with the y-axis running 70 to 76, titled "Version B
+BOOSTS completion", colored red and green. Walk the four audits in the
+chapter's order and let the room see that each one lands on a different part
+of the same picture. Give the uncertainty audit its full weight: a difference
+the figure sells as decisive might be noise, and nothing on the board shows
+it.
+
+:::
+
+
+## Same data, and only the honesty changed
+
+::: {.kicker}
+
+Chapter 32 · A worked example
+
+:::
+
+- Run the axis 0 to 100 and print each mean as a label on its bar.
+- Draw the ±4-point interval on top of the bar it belongs to.
+- Separate the bars with a color-blind-safe pair plus a hatch pattern.
+- Rewrite the headline: "Version B completed about 3 points higher, within overlapping intervals."
+
+::: {.notes}
+
+Nothing was recomputed and no number was dropped. Point that out explicitly,
+because the room often expects the fix to be a new analysis. The new headline
+is longer and less exciting, and it is the one the evidence supports.
+Designing so the message survives a color-blind reader and a grayscale print
+is a documented requirement, not a courtesy (Crameri et al. 2020).
+
+:::
+
+
+## Read the printed gap before you look at the bars {.densest}
+
+::: {.kicker}
+
+Chapter 32 · A worked example
+
+:::
+
+- Watch the printed gap in points, then the overlap line that follows it.
+- The axis is fixed 0 to 100, so bar heights match the numbers they report.
+- Each bar carries its value, its interval, and a hatch that survives grayscale.
+
+```python
+import numpy as np, pandas as pd
+import matplotlib.pyplot as plt
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+weeks = 12
+a = rng.normal(0.68, 0.070, size=weeks)
+b = np.random.default_rng(SEED + 1).normal(0.705, 0.070, size=weeks)
+means = np.array([a.mean(), b.mean()]) * 100
+ci = np.array([1.96 * v.std(ddof=1) / np.sqrt(weeks) for v in (a, b)]) * 100
+print(f"Version A: {means[0]:.0f}% ± {ci[0]:.0f}   "
+      f"Version B: {means[1]:.0f}% ± {ci[1]:.0f}   gap {means[1]-means[0]:.0f} pts")
+print(f"intervals overlap: {means[0] + ci[0] > means[1] - ci[1]}")
+
+# the honest figure: zero baseline, intervals drawn, pattern not colour alone
+fig, ax = plt.subplots(figsize=(4.2, 3.2))
+ax.bar(["Version A", "Version B"], means, yerr=ci, capsize=6,
+       color=["#4a4a4a", "#a8a8a8"], hatch=["", "//"], edgecolor="black")
+ax.set_ylim(0, 100)
+ax.set_ylabel("completion rate (%)")
+ax.set_title("Completion rate by checkout version")
+for i, (m, e) in enumerate(zip(means, ci)):
+    ax.text(i, m + e + 3, f"{m:.0f}% ± {e:.0f}", ha="center", fontsize=9)
+plt.tight_layout()
+plt.show()
+```
+
+::: {.notes}
+
+Run it with SEED = 464 so everyone sees the same two means and the same
+intervals. The printout is the point of the cell: it states the gap and
+whether the intervals overlap, which are the two facts the honest headline is
+built from. Then read the plotting lines as the four audits turned into code,
+and ask which line you would have to delete to get the dishonest draft back.
+
+:::
+
+
+## The figure rules travel; the poster does not
+
+::: {.kicker}
+
+Chapter 32 · A worked example
+
+:::
+
+- Honest axes, values on the marks, uncertainty shown where the design licenses it.
+- Distinctions carried in two channels travel with the figure to any format.
+- The scan path and the print lock belong to this format alone.
+- Borrow by naming the technique, never by claiming the whole poster transfers.
+
+::: {.notes}
+
+Say how far the chapter travels, since most of the room will also build a
+slide deck or a brief. The figure rules you just worked go with any
+quantitative figure into any venue. What does not go is the poster's own
+machinery, the scan path across the page and the lock on the printed board.
+When you reuse a technique elsewhere, name the technique you are reusing
+rather than claiming the whole format came with it.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 32
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You paste the described figure and ask your AI for the hardest reviewer
+questions. It returns a confident, well-organized list of six: sample size,
+how many weeks were sampled, generalization to other product pages, seasonal
+traffic, and two more. Every question is reasonable, and not one mentions the
+truncated axis, the single worst flaw on the board. The list looks complete,
+so it is tempting to trust it and move on.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 32 · An AI failure case
+
+:::
+
+- You catch it by mapping each returned question to an audit.
+- Claim boundary, sampling, and methods all draw questions; figure honesty draws none.
+- That empty row is the finding.
+- You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped.
+- Fluency is not completeness.
+
+::: {.notes}
+
+You catch it by mapping each returned question to an audit. Claim boundary,
+sampling, and methods all draw questions; figure honesty draws none. That
+empty row is the finding. You check the number your own cell printed, the
+exaggeration the floored axis creates, and you add the figure-honesty hit the
+tidy list skipped. Fluency is not completeness. The check lives in your own
+audit list, the one you wrote before you asked.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 32
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+The words of your headline and the verb that carries its boundary are yours.
+So is the judgment that the figure's impression matches its number, the call
+that the uncertainty is visible in the same glance, and the decision that the
+page is honest enough to lock. AI can generate the skeptic's questions and
+scan your code for color-only channels. It cannot see your board, and it
+cannot decide the claim was earned. Those stay with you.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 32 · Your move
+
+:::
+
+1. Choose the single figure that carries your lead claim, and draw it with the axis running the full scale of the measure.
+2. Print each value as a label on the mark it belongs to, and show the uncertainty the design licenses right on the figure so the uncertainty arrives in the same glance as the number.
+3. Carry every meaningful distinction in at least two channels, so color is never the only signal a reader can lose.
+4. Write the headline above the figure using the verb your claim boundary allows, and lay out the rest of the page so a stranger finds that headline in under a minute.
+5. Log it in your AI Research Ledger, and verify at least one number on the page with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html).
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_research_posters.ipynb) with [Chapter 32](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Poster Criticism {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 2 of this studio · Chapter 33
+
+:::
+
+::: {.divider-line}
+
+whether this draft is honest enough to become permanent, or needs one more fix
+first
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 33
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+If your venue is a poster, run the gallery walk and the print-lock audit
+before the artifact leaves your control. Whatever your format, you decide
+whether the draft is done or needs one more fix, and you defend the lock call
+out loud.
+
+:::
+
+
+## A judge stops at one number on your board
+
+::: {.kicker}
+
+Chapter 33 · Why this decision matters
+
+:::
+
+::: {.lead}
+
+The decision on the table: honest enough to become permanent, or one more fix
+first?
+
+:::
+
+- A **research-integrity judge** probes whether a poster's claims are actually backed.
+- "Where did this come from?"
+- Walk them to the exact line of code and the whole poster earns trust.
+- Say "somewhere in the analysis" and they stop believing every other number.
+
+::: {.notes}
+
+Put the room in the last hour before a poster prints. The judge is one person
+walking your row, and the whole encounter lands on a single number: where did
+this come from? Name the asymmetry out loud. One traceable number buys trust
+across the whole board, and one untraceable number spends it just as widely.
+Ask the room which number on their own draft they would least like to be asked
+about.
+
+:::
+
+
+## Once the file goes to the printer you cannot patch it
+
+::: {.kicker}
+
+Chapter 33 · Why this decision matters
+
+:::
+
+- The honesty has to be built in before the poster leaves your hands.
+- This is the last audit between a draft poster and a permanent one.
+- Done, or one more fix first. You make that call.
+
+::: {.notes}
+
+Most drafts can be revised after someone objects, and a printed poster cannot,
+which is the entire reason the chapter exists. Say plainly that the audit is
+not a formality run to satisfy anyone else: it is the only remaining chance to
+change what the artifact says. The call itself stays with the author, and the
+rest of the chapter is what you run before making it.
+
+:::
+
+
+## Three passes, and each one ends in a decision only you can make
+
+::: {.kicker}
+
+Chapter 33 · The concept
+
+:::
+
+- Pass one: the **gallery-walk audit**, a fixed checklist instead of a glance.
+- Pass two: the **oral defense**, questions you cannot edit afterward.
+- Pass three: the lock, when the poster stops being changeable.
+
+::: {.notes}
+
+Name the three passes in order before you unpack any of them, so the room
+hears that the chapter is a sequence and not a list of tips. The gallery-walk
+audit is structured on purpose: you stop at a poster and run the same fixed
+checklist rather than glancing and moving on, which is what makes it
+repeatable on your own work. The oral defense is the live conversation at your
+board. The lock is the end of the line.
+
+:::
+
+
+## The claim boundary sits in the headline verb
+
+::: {.kicker}
+
+Chapter 33 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Claim boundary]{.t}
+
+[the line between what your evidence licenses and what it does not]{.d}
+
+:::
+
+::: {.term}
+
+[Figure honesty]{.t}
+
+[a chart cannot say more than its data]{.d}
+
+:::
+
+::: {.term}
+
+[Redundant encoding]{.t}
+
+[carrying a distinction in more than one channel]{.d}
+
+:::
+
+::::
+
+- An observational field trial may say "is associated with," never "causes."
+- An axis starting just below the data draws a small gap as a canyon.
+- A value label plus a hatch pattern, so color is never the only signal.
+
+::: {.notes}
+
+Three terms, and each one has a physical place on a poster. The claim boundary
+lives in the headline verb, so the fix on this chapter's example is one word
+rather than a rewrite. Figure honesty is about the picture and the numbers
+agreeing, and the case the chapter works is an axis that starts just below the
+data. Redundant encoding is the fix for the accessibility check: a second
+channel carries the distinction, so color is never the only signal a
+color-blind reader can lose (Crameri et al. 2020).
+
+:::
+
+
+## Four questions, and a fifth about who can receive the claim
+
+::: {.kicker}
+
+Chapter 33 · The concept
+
+:::
+
+- Claim boundary: does the headline stay inside its evidence?
+- Figure honesty: does the picture match the numbers?
+- Read path: does a stranger find the headline in ninety seconds (Erren & Bourne 2007)?
+- Uncertainty: does the interval sit beside the claim, not buried in a footnote?
+- Accessibility: can every reader receive the claim (Crameri et al. 2020)?
+
+::: {.notes}
+
+This is the checklist you actually run, and it is short enough to hold in your
+head at someone else's board. Four questions form the core of the gallery-walk
+audit and accessibility is the fifth check. Read the read-path question as
+written: a stranger, and ninety seconds. Have the room run these five out loud
+on any poster image you can put on the screen before they run them on their
+own draft.
+
+:::
+
+
+## Defend what your evidence licenses; concede what it never bought
+
+::: {.kicker}
+
+Chapter 33 · The concept
+
+:::
+
+- Three lenses cover almost every hard question at your board.
+- An outsider tests whether your claim survives translation.
+- A specialist probes a design choice.
+- A skeptic offers a rival explanation for the same evidence.
+- **Defend-versus-concede:** conceding means narrowing the claim on the spot.
+
+::: {.notes}
+
+The three lenses are how you rehearse: the chapter says they cover almost
+every hard question you will get. The judgment underneath is
+defend-versus-concede, and the chapter is specific about which way to go. You
+defend when the objection asks for something your evidence already licenses,
+and you concede when it asks for a crossing your design never paid for. Your
+**compass position**, the kind and reach of the question your project
+answered, is what tells you which case you are in.
+
+:::
+
+
+## The audit before the lock is the most consequential one you run
+
+::: {.kicker}
+
+Chapter 33 · The concept
+
+:::
+
+- **Terminal lock:** the moment the poster becomes final and unchangeable.
+- **Claim-evidence traceability:** every number traces to the exact cell that produced it.
+- That is what lets you show the line when a judge points at your board.
+
+::: {.notes}
+
+The lock is a moment; the audit you run just before it is the one the chapter
+calls the most consequential on the whole project, because nothing after it
+can be corrected. Traceability is the precondition rather than a nice extra:
+if you cannot find the cell now, you certainly cannot find it while someone
+waits at your board. Ask the room to pick one number on their draft and locate
+its cell in under a minute, and see how many can.
+
+:::
+
+
+## Compost RAISES corn yield, on fields the grower chose
+
+::: {.kicker}
+
+Chapter 33 · A worked example
+
+:::
+
+- A plant-biology poster, with a bar chart of mean grain yield at its center.
+- Compost-amended plots against plots that got none. A red bar and a green bar.
+- 185 and 191 bushels per acre. A gap of 6.
+- The y-axis starts at 180, and no interval is shown.
+- Nothing was randomized. The grower decided which fields got compost.
+
+::: {.notes}
+
+Read the setup before anyone judges it, because every flaw in this poster is
+visible in these five lines and the room should find them rather than be told.
+Hold the last line for a beat: the assignment of compost to fields was a human
+choice, not a coin flip, and that single fact is what the headline verb cannot
+survive. Ask what they would change first before you show the audit.
+
+:::
+
+
+## Each audit catches a different flaw on the same board
+
+::: {.kicker}
+
+Chapter 33 · A worked example
+
+:::
+
+- Claim boundary: "raises" is causal, but a richer field could bring both compost and yield.
+- Honest headline: compost is associated with about 6 more bushels per acre.
+- Figure honesty: an axis floored at 180 draws 6 bushels several times taller than it is.
+- Uncertainty: a 95% interval of roughly ±9 bushels per acre swamps a 6-bushel gap.
+- Accessibility: red-green bars fail a reviewer who is red-green color-blind.
+
+::: {.notes}
+
+Run the audits in order and let the room watch the poster come apart in a
+structured way rather than by general suspicion. Four of the five bite here;
+the read path is the one this example never tests. The fix for the axis is to
+run it from 0, and the fix for the missing interval is to put it beside the
+headline where the claim is. Roughly one man in twelve is red-green
+color-blind, so the accessibility item is not optional politeness: color-only
+encoding loses readers whose vision it never reaches (Crameri et al. 2020).
+The fix here is value labels plus a hatch pattern.
+
+:::
+
+
+## You cannot fix everything, so rank by how far the error travels
+
+::: {.kicker}
+
+Chapter 33 · A worked example
+
+:::
+
+- The claim-boundary hit travels farthest.
+- A reviewer who catches one causal overreach distrusts the whole board.
+- So you lock the associational verb first.
+- That decision, made by you and defended out loud, is the work of this chapter.
+
+::: {.notes}
+
+This is the practical heart of the chapter. Ranking is necessary because the
+print deadline is real and the hit list is longer than the hour you have. The
+ranking rule is reach: a flaw that changes how a reader treats every other
+number on the board outranks a flaw confined to one panel. Ranking belongs to
+the spine the chapter says travels to any format, while the gallery walk and
+the print lock stay poster procedure. The axis and the color pair still get
+fixed, in ranked order; they simply do not go first.
+
+:::
+
+
+## Rebuild the board's data and print the interval it left off {.densest}
+
+::: {.kicker}
+
+Chapter 33 · A worked example
+
+:::
+
+- Watch the two means and then the gap the poster headlined.
+- Watch the interval the board never showed.
+- The last printed line is the one the headline's verb depends on.
+
+```python
+import numpy as np, pandas as pd
+import matplotlib.pyplot as plt
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Fields the GROWER chose. Richer fields got the compost.
+n_plots = 60
+soil_quality = rng.normal(0, 1, size=n_plots)
+composted = soil_quality > np.median(soil_quality)          # not randomized
+yield_bu = 184 + 4.5 * soil_quality + rng.normal(0, 11, size=n_plots)
+
+means = np.array([yield_bu[~composted].mean(), yield_bu[composted].mean()])
+ci = np.array([1.96 * yield_bu[g].std(ddof=1) / np.sqrt(g.sum())
+               for g in (~composted, composted)])
+print(f"no compost : {means[0]:.0f} bu/ac ± {ci[0]:.0f}")
+print(f"composted  : {means[1]:.0f} bu/ac ± {ci[1]:.0f}")
+print(f"gap        : {means[1]-means[0]:.0f} bu/ac")
+print(f"mean soil quality, composted vs not : "
+      f"{soil_quality[composted].mean():+.1f} vs {soil_quality[~composted].mean():+.1f}")
+
+fig, ax = plt.subplots(figsize=(4.2, 3.2))
+ax.bar(["no compost", "composted"], means, yerr=ci, capsize=6,
+       color=["#4a4a4a", "#a8a8a8"], hatch=["", "//"], edgecolor="black")
+ax.set_ylim(0, 230)
+ax.set_ylabel("grain yield (bu/ac)")
+ax.set_title("Yield by compost status (grower-chosen fields)")
+plt.tight_layout()
+plt.show()
+```
+
+::: {.notes}
+
+Walk the code as a rebuild of the poster, not as syntax. The assignment line
+is the one to point at: composted fields are the ones above the median soil
+quality, so the grower's choice is written into the data generation. The last
+print compares mean soil quality for composted and uncomposted fields, and
+that comparison is why "raises" cannot stand. Ask the room to predict its sign
+before you run the cell.
+
+:::
+
+
+## The redraw runs the axis from zero and stops relying on color
+
+::: {.kicker}
+
+Chapter 33 · A worked example
+
+:::
+
+- `ax.set_ylim(0, 230)` puts the 6-bushel gap back at its true size.
+- Two grays plus a hatch pattern carry the distinction without color.
+- Error bars put the interval beside the bars instead of nowhere.
+
+::: {.notes}
+
+Walk the redraw as the audit's three fixable hits applied at once, and hold it
+against the description of the original board that opened this example. The
+claim-boundary hit is the one the picture cannot fix, because no amount of
+honest drawing turns a grower's choice into a randomized trial. That is the
+split to leave the room with: the figure fixes what the figure controls, and
+the verb is a decision you make in words.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 33
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You describe your compost figure to your AI and ask for the hardest skeptic
+questions. Back comes a crisp six-item list: the sample size, the single
+growing season, the soil-test method, generalizability to other regions, cost,
+and the definition of "yield." It reads as thorough, and the temptation is to
+treat the poster as fully audited.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 33 · An AI failure case
+
+:::
+
+- It is not.
+- The list never mentions the truncated axis, and never mentions the red-green bars.
+- Those are the two most concrete, most fixable flaws on the board, and the polished list quietly skipped both.
+- This is the illusion of completeness: a long, organized answer that omits the thing that matters most.
+- Here is how you catch it.
+
+::: {.notes}
+
+It is not. The list never mentions the truncated axis, and never mentions the
+red-green bars. Those are the two most concrete, most fixable flaws on the
+board, and the polished list quietly skipped both. This is the illusion of
+completeness: a long, organized answer that omits the thing that matters most.
+
+Here is how you catch it. You map each question to one audit. Four land on
+claim boundary and uncertainty, none on figure honesty, none on accessibility.
+Two whole audits are missing, which tells you the list is incomplete no matter
+how confident it reads. Then you check the survivors against the exaggeration
+factor your own notebook cell printed, and cut any question that assumes a gap
+other than the 6 bushels you computed. The completeness check is yours, not
+the tool's.
+
+A boundary note before the practice. The walk, the board, and the lock below
+are poster procedure: a gallery walk tests what a viewer notices from across
+the room, and a print lock tests what fails when the file becomes a physical
+object. A manuscript needs a different cold read, and a talk needs a timed
+rehearsal; do not rename either one a gallery walk. What travels to any format
+is the audit's spine: read the claim against its boundary, rank the hits by
+how far the error travels, take the three lenses, revise once, then make the
+lock call. The Studio 10 milestone shows where that spine lands when your
+venue wants a talk, a deck, or a page.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 33
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+These stay yours, however fluent the tool sounds. The words of your headline
+claim, and the verb that keeps it inside your compass position. The call, made
+out loud, to defend a point or concede it. And the decision that the poster is
+honest enough to lock. The tool can generate hard questions and scan a figure
+for color traps; deciding what your evidence licenses, and answering for it at
+the board, is yours.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 33 · Your move
+
+:::
+
+1. Run the gallery-walk audit on your own draft as if you had never seen it: claim boundary, figure honesty, read path, uncertainty, accessibility.
+2. Rank the hits by how far the error travels.
+3. Field the three lenses out loud: an outsider, a specialist, and a skeptic with a rival explanation.
+4. Revise once, fixing the hits in ranked order, then make the lock call.
+5. Log it in your AI Research Ledger, and verify at least one fixed number with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html).
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_poster_criticism.ipynb) with [Chapter 33](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Research Pitches, Talks, and Seminars {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 3 of this studio · Chapter 34
+
+:::
+
+::: {.divider-line}
+
+what gets cut when you say your claim out loud, and what never gets cut
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 34
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+Build a spoken spine that survives your venue's actual length. A thirty-second
+pitch, a three-minute walk, and a twenty-minute seminar are not one artifact
+at different speeds; each makes a different promise to the audience, and the
+claim must survive both compression and expansion without growing stronger in
+the shorter version.
+
+:::
+
+
+## The words this chapter uses
+
+::: {.kicker}
+
+Chapter 34 · Key terms
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Compression]{.t}
+
+[a shorter version of a claim that keeps its boundary.]{.d}
+
+:::
+
+::: {.term}
+
+[Inflation]{.t}
+
+[a version that quietly makes the claim bigger.]{.d}
+
+:::
+
+::::
+
+::: {.notes}
+
+Each term is defined in the chapter on first use; these are the definitions as
+the book gives them.
+
+:::
+
+
+## A finished poster is silent until a visitor stops
+
+::: {.kicker}
+
+Chapter 34 · Why this decision matters
+
+:::
+
+- A finished poster is silent.
+- The moment a visitor stops, your voice takes over.
+- Speaking is faster than reading, so you compress on the fly.
+- That is where claims quietly grow.
+
+::: {.notes}
+
+Under a little pressure, "was associated with" slides into "causes," and "on
+data it never saw" drops out. Nobody plans either move; they happen
+mid-sentence, because the shorter version is easier to say. Ask the room which
+qualifier on their own board would be the first to fall out if a stranger
+interrupted them.
+
+:::
+
+
+## What she remembers is the presenter who said where the claim stops
+
+::: {.kicker}
+
+Chapter 34 · Why this decision matters
+
+:::
+
+- A skeptical peer is working the room at a research conference.
+- She stops at maybe forty posters in an afternoon.
+- The ones who oversold lost her on the second sentence.
+
+::: {.note-card}
+
+What I remember is not the one with the most data. It is the one whose
+presenter told me, in one clean breath, exactly what they found and exactly
+where it stops.
+
+:::
+
+::: {.notes}
+
+Read her line slowly, because it sets the standard the rest of the chapter
+meets: one clean breath, the finding, and the stop. She is not rewarding
+modesty for its own sake; she is rewarding a presenter whose spoken sentence
+she can trust. Ask the room what they would say if a visitor gave them one
+breath this afternoon.
+
+:::
+
+
+## You want a pitch you can say cold, without widening the claim
+
+::: {.kicker}
+
+Chapter 34 · Why this decision matters
+
+:::
+
+- She is not testing your data.
+- She is testing whether your spoken sentence still matches the sentence on your board.
+- So you build a pitch you can say cold, under pressure.
+- It never widens the claim your evidence earned.
+
+::: {.notes}
+
+The research decision names three venues: a thirty-second pitch, a
+three-minute walk, and a twenty-minute seminar. They are not one artifact at
+three speeds, because each makes a different promise to the audience, and the
+claim has to survive both compression and expansion without growing stronger
+in the shorter version. Ask the room which of the three they will actually
+stand up in this term.
+
+:::
+
+
+## A pitch is a prepared spoken version, cut to a fixed slice of time
+
+::: {.kicker}
+
+Chapter 34 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Pitch]{.t}
+
+[a short, prepared spoken version of your project, built to fit a fixed slice of time (Bourne 2007)]{.d}
+
+:::
+
+::: {.term}
+
+[Pitch architecture]{.t}
+
+[the fixed set of beats each version moves through: hook, claim, evidence, boundary, invitation (Alley 2013)]{.d}
+
+:::
+
+::::
+
+- The thirty seconds you give a visitor who pauses is one pitch.
+- The guided tour you give the one who stays is another.
+- Different lengths, one skeleton.
+
+::: {.notes}
+
+Prepared is the word to sit on. A pitch is not the paragraph you improvise
+when someone stops; it is written and rehearsed before the day. Ask the room
+how long their longest slot is and how long the shortest, because those two
+numbers are what the rest of this lesson has to fit.
+
+:::
+
+
+## Five beats, and pressure comes for the fourth one
+
+::: {.kicker}
+
+Chapter 34 · The concept
+
+:::
+
+- **Hook**: one sentence a stranger outside your field cares about.
+- **Claim**: your headline, said plainly and inside its limits.
+- **Evidence**: the finding that earns the claim, one spoken sentence at a time.
+- **Boundary sentence**: one sentence naming what the claim does not show.
+- **Invitation**: a reason to look closer.
+
+::: {.notes}
+
+The boundary sentence is the beat pressure will try to drop, so you rehearse
+it until it is reflex. The chapter's own hook is a help desk that drowns in
+tickets every morning and cannot tell which will drag on, which a stranger
+outside computing can still picture. Ask each person in the room for a hook
+from their own project, out loud, in one sentence.
+
+:::
+
+
+## One skeleton at three lengths, and the boundary is in all three
+
+::: {.kicker}
+
+Chapter 34 · The concept
+
+:::
+
+- **30-second hook**: hook, claim, boundary, invitation, with no evidence yet.
+- **90-second walk**: the hook plus two or three evidence beats.
+- **Full pitch**: three to five minutes.
+- Deciding what goes in each length is the choice this chapter equips.
+
+::: {.notes}
+
+Look at what the shortest version keeps and what it drops. Evidence goes
+first, and the boundary stays, which is the opposite of what instinct does
+under time pressure. Ask the room which beat they would have cut to reach
+thirty seconds, then show them the list again.
+
+:::
+
+
+## Compression loses a detail. Inflation loses the truth.
+
+::: {.kicker}
+
+Chapter 34 · The concept
+
+:::
+
+- Full: "on data the model had never seen, it flagged four of every five slow tickets."
+- Compressed: "on new tickets, it caught most of the slow ones."
+- Inflated: "my model predicts which tickets will be slow."
+- The same rule governs every length you speak.
+
+::: {.notes}
+
+Read the second and third lines back to back and ask the room which words
+moved. Both are shorter than the original and both sound cleaner, which is why
+the difference is easy to miss out loud. The compressed line still says where
+the number came from; the inflated line has dropped the condition that made it
+honest.
+
+:::
+
+
+## The excited-mouth upgrade is your spoken verb outrunning your written one
+
+::: {.kicker}
+
+Chapter 34 · The concept
+
+:::
+
+- You wrote "is associated with." Your mouth says "causes."
+- The boundary moves while nobody watches the words.
+- That is the failure to hunt in your own pitch.
+
+::: {.notes}
+
+Name this one clearly, because it is the failure the rest of the chapter is
+built to catch. It does not arrive as a decision to overstate; it arrives as a
+verb swap in the middle of a sentence you have said many times. Ask the room
+to name the verb on their own poster and the stronger verb their mouth would
+reach for.
+
+:::
+
+
+## Your headline is 78% precision on tickets the model never saw
+
+::: {.kicker}
+
+Chapter 34 · A worked example
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Held-out set]{.t}
+
+[a slice of your data the model never learned from, kept aside so its score is honest]{.d}
+
+:::
+
+::: {.term}
+
+[Precision]{.t}
+
+[the share of a model's flags that turn out correct]{.d}
+
+:::
+
+::::
+
+- You trained on 4,000 past tickets and tested on 1,000 the model never saw.
+- On that held-out set, when it flagged a ticket "slow," it was right about 78% of the time.
+- Poster headline: "On held-out tickets, the model flagged slow ones with 78% precision."
+
+::: {.notes}
+
+Every word in that headline is carrying weight. "Held-out" says where the
+number came from, and "precision" says which number it is out of the several a
+model reports. Ask the room to delete one word from the headline and say aloud
+what the sentence now claims.
+
+:::
+
+
+## The claim, compressed for speech, still says 'never seen'
+
+::: {.kicker}
+
+Chapter 34 · A worked example
+
+:::
+
+- **Hook:** "a help desk drowns in tickets every morning and cannot tell which will drag on."
+- **Claim:** "On tickets it had never seen, my model flagged the slow ones,"
+- "and when it raised a flag it was right about three times in four."
+- **Invitation:** "The surprising part is which tickets fooled it. Want the walk?"
+
+::: {.notes}
+
+"About three times in four" is the same 78%, in words a stranger can hold
+without writing anything down, and "on tickets it had never seen" is the
+held-out set said out loud. Nothing here is jargon and nothing here is bigger
+than the poster. The boundary beat is missing from this slide on purpose: ask
+the room to name what is not here before you move on, because the next slide
+is that beat. Then ask them to say their own claim beat in spoken numbers and
+check it against the board.
+
+:::
+
+
+## The boundary sentence is the beat you rehearse to reflex
+
+::: {.kicker}
+
+Chapter 34 · A worked example
+
+:::
+
+- "That number is precision on a held-out slice, not overall accuracy,"
+- "and the model still misses some slow tickets."
+- The fix is mechanical: mark the boundary sentence in your script.
+- Say it at every length, even the 30-second one.
+
+::: {.notes}
+
+This one sentence does two jobs: it names which number you quoted, and it
+names what the model still gets wrong. It is also the beat that disappears
+when you are excited and the visitor is checking the time, which is why
+marking it is a step rather than a good intention. In the turn, writing this
+sentence comes before anything else you write.
+
+:::
+
+
+## Drop two words and you have claimed what your test never showed
+
+::: {.kicker}
+
+Chapter 34 · A worked example
+
+:::
+
+- Drop "held-out" and you have claimed the model works on any ticket.
+- Your test never showed that.
+- Swap "precision" for "accuracy" and you quote a number your poster does not report.
+- Both feel natural, because the shorter sentence sounds cleaner.
+
+::: {.notes}
+
+Both slips are the excited-mouth upgrade, and neither needs bad faith to
+happen. Building the spoken version around one claim and its boundary, rather
+than compressing the whole paper, is standard advice for research talks
+(Bourne 2007). Ask the room which single word of their own headline would do
+the most damage if it fell out.
+
+:::
+
+
+## Run it: the number in the claim, and the number behind the boundary {.denser}
+
+::: {.kicker}
+
+Chapter 34 · A worked example
+
+:::
+
+- 1,000 held-out tickets, and about 22% of them really do drag on.
+- Precision is the headline number: right when it flags.
+- Recall is the second number, the share of slow ones caught.
+- SEED is 464, so every run in the room prints the same numbers.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# 1,000 held-out tickets the model never trained on.
+held_out = 1000
+slow = rng.random(held_out) < 0.22                    # 22% really do drag on
+flagged = np.where(slow, rng.random(held_out) < 0.62,   # caught
+                         rng.random(held_out) < 0.037)  # false alarms
+
+precision = slow[flagged].mean()
+recall = flagged[slow].mean()
+print(f"tickets flagged 'slow'   : {flagged.sum()}")
+print(f"precision (right when it flags) : {precision*100:.0f}%")
+print(f"recall (share of slow ones caught): {recall*100:.0f}%")
+print(f"\nthe headline number is the first one. the second is what the")
+print("boundary sentence is about: the model still misses some slow tickets")
+```
+
+::: {.notes}
+
+The block prints both numbers the pitch depends on: the one in the claim, and
+the one the boundary sentence is about. Recall is why the boundary says the
+model still misses some slow tickets, so a listener who hears only precision
+hears a better model than you built. Change the false-alarm rate, rerun, and
+ask the room whether the headline sentence is still true.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 34
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You paste your 90-second walk and ask a tool to compress it to a 30-second
+hook. Back comes a crisp, confident line: "My model predicts slow help-desk
+tickets 78% of the time." It reads beautifully, and it is wrong twice. It
+dropped "held-out," so it now claims the model works on any ticket, and it
+turned precision into a general "78% of the time," a number your poster never
+reports. The sentence is shorter and smoother than yours, which is exactly the
+trap.
+
+:::
+
+
+## How it failed {.dense}
+
+::: {.kicker}
+
+Chapter 34 · An AI failure case
+
+:::
+
+- You catch it by putting the compressed line next to your poster's boundary sentence and reading them word for word.
+- "Predicts ... 78% of the time" does not match "precision on a held-out slice." Then you say the line to a friend, who asks, "so it's right 78% of the time on any ticket?" That question is the widened claim coming back at you.
+- You keep your own boundary sentence and drop the tool's version.
+- If your talk carries slides, the slides serve the spoken spine and never replace it.
+- Build the talk first, add a slide only where a listener needs to see what they cannot hold in memory, and give every quantitative visual the figure discipline from the poster chapter: honest axes, values on the marks, and uncertainty shown where the design licenses it, as an interval or an honest caveat.
+
+::: {.notes}
+
+You catch it by putting the compressed line next to your poster's boundary
+sentence and reading them word for word. "Predicts ... 78% of the time" does
+not match "precision on a held-out slice." Then you say the line to a friend,
+who asks, "so it's right 78% of the time on any ticket?" That question is the
+widened claim coming back at you. You keep your own boundary sentence and drop
+the tool's version.
+
+If your talk carries slides, the slides serve the spoken spine and never
+replace it. Build the talk first, add a slide only where a listener needs to
+see what they cannot hold in memory, and give every quantitative visual the
+figure discipline from the poster chapter: honest axes, values on the marks,
+and uncertainty shown where the design licenses it, as an interval or an
+honest caveat. A seminar is the same spine grown to the venue's length, not a
+different animal: problem, gap, and question, then method, evidence, boundary
+and limitations, and the next step, each section expanded until it fills its
+share of the time, with the boundary still spoken aloud.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 34
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+Three calls stay yours. You decide **which claim your evidence actually
+supports**, **where the claim must stop** (the exact boundary sentence), and
+**whether a compressed sentence still says what the poster says**. A tool can
+trim words and flag jargon. It cannot decide the shorter sentence is still
+true, and it will not be standing at the board when the stranger asks. You say
+the sentence. You own it.
+
+:::
+
+
+## It is your turn {.denser}
+
+::: {.kicker}
+
+Chapter 34 · Your move
+
+:::
+
+1. Write your boundary sentence first, on its own line, and mark it.
+2. Build the 30-second version: hook, claim, boundary, invitation, with no evidence beats yet.
+3. Build the 3-minute version: the same skeleton with two or three evidence beats and the same boundary sentence, word for word.
+4. Expand to your venue's actual length: grow the 3-minute spine section by section (problem and gap, question, method, evidence, boundary and limitations, next step) until it fills the time, and write the transformation memo line for what each expansion added.
+5. Say the versions out loud to someone outside your field and have them repeat your claim back to you.
+6. Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html), such as peer reasoning.
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_research_pitches.ipynb) with [Chapter 34](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Difficult Questions and Uncertainty {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Lesson 4 of this studio · Chapter 35
+
+:::
+
+::: {.divider-line}
+
+how you will state your study's uncertainty and its limits out loud, before a
+stranger forces the question
+
+:::
+
+
+## The research decision
+
+::: {.kicker}
+
+Chapter 35
+
+:::
+
+::: {.decision}
+
+[The research decision]{.label}
+
+Prepare to answer the hardest reasonable question in the channel your venue
+actually uses: live discussion, a reviewer report, an editor query, or a
+written response. The answer does the same work in every channel — name the
+concern, state what the evidence supports, acknowledge what it does not
+resolve, and show what changes as a result — and you prepare it in advance,
+never improvise it.
+
+:::
+
+
+## She trusts you more when you name what your study cannot show
+
+::: {.kicker}
+
+Chapter 35 · Why this decision matters
+
+:::
+
+- A policy stakeholder who has heard a thousand poster pitches.
+- Insist it is airtight and she starts looking for the crack herself.
+- The decision: how you state your uncertainty and limits out loud, before a stranger forces it.
+
+::: {.note-card}
+
+When a presenter tells me, unprompted, exactly what their study can't show, I
+trust everything else they said more.
+
+:::
+
+::: {.notes}
+
+Read the quotation aloud and let it sit before you explain it. She is not
+testing your confidence; she is testing whether you know where your claim
+stops. Ask the room which of the two presenters they would believe, and why
+the unprompted admission is the one that buys trust. The decision on the table
+is made in advance, out loud, and never improvised in the moment.
+
+:::
+
+
+## Your work is already honest. The danger now is your own mouth.
+
+::: {.kicker}
+
+Chapter 35 · Why this decision matters
+
+:::
+
+- Your poster, talk, or page is finished and honest.
+- Under pressure one presenter buries a real finding under apology.
+- The other upgrades a careful 'went together' into a confident 'caused.'
+- Both misstate the evidence you actually hold.
+
+::: {.notes}
+
+Name both failures as failures of accuracy, not of nerve, because that is what
+makes them worth preparing against. The apologizer understates a defensible
+result and the inflater overstates an association, and the listener is misled
+either way. Everything in this chapter is a script written before the room so
+that neither move is available to you in it.
+
+:::
+
+
+## ULN speaks a boundary in three beats
+
+::: {.kicker}
+
+Chapter 35 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Uncertainty statement]{.t}
+
+[a sentence saying how much your number could wobble, and why]{.d}
+
+:::
+
+::: {.term}
+
+[Limitation]{.t}
+
+[a true sentence about what your design cannot show]{.d}
+
+:::
+
+::: {.term}
+
+[Next step]{.t}
+
+[the study that would resolve that limitation]{.d}
+
+:::
+
+::::
+
+- Uncertainty: 'with 812 people, my estimate could sit a few points higher or lower.'
+- Limitation: 'I measured that two things went together, so I cannot say one caused the other.'
+- Delivered together, ULN sounds like expertise, because you name the edge on purpose.
+
+::: {.notes}
+
+Say the three beats in order once, then say them again as one spoken answer,
+because the order is what makes it land. The limitation beat is a statement
+about your design and not about your effort (Wasserstein & Lazar 2016), which
+is why it can be written in advance rather than improvised in the room. Ask
+the room to draft their own next-step beat on the spot: it is the beat that
+turns an admission into the study that would resolve the limitation.
+
+:::
+
+
+## The apology spiral buries a finding you could defend
+
+::: {.kicker}
+
+Chapter 35 · The concept
+
+:::
+
+- 'Honestly this is probably all wrong, my sample's tiny.'
+- That is self-erasure, and the finding underneath it was real.
+- ULN exists to prevent exactly this.
+
+::: {.notes}
+
+This is the failure the three beats are built against, and it is one of the
+two ways a nervous presenter misstates the evidence; the other is upgrading
+"went together" into "caused." The sentence on the slide erases a defensible
+result without telling the listener anything true about it. Ask who has heard
+themselves say something close to it, and then ask what the precise version
+would have been.
+
+:::
+
+
+## 'One campus sample' is precision; 'grain of salt' is hedging
+
+::: {.kicker}
+
+Chapter 35 · The concept
+
+:::
+
+:::: {.terms}
+
+::: {.term}
+
+[Precision]{.t}
+
+[naming the exact boundary]{.d}
+
+:::
+
+::: {.term}
+
+[Hedging]{.t}
+
+[vague self-protection that blurs where the claim stops]{.d}
+
+:::
+
+::::
+
+- 'This is one campus sample' tells the listener where your claim stops.
+- 'Sort of, take it with a grain of salt' tells them nothing.
+- Precision informs the listener. Hedging only protects you.
+
+::: {.notes}
+
+The test between the two is simple: after your sentence, does the listener
+know more about your evidence, or only about your nerves (van der Bles et al.
+2019). Hedging feels safer to say and leaves the audience unable to judge
+anything. Have the room convert one hedge from their own draft into the exact
+boundary it was hiding.
+
+:::
+
+
+## Five prepared questions cover the space
+
+::: {.kicker}
+
+Chapter 35 · The concept
+
+:::
+
+- A question bank is a written list of the hardest fair questions a visitor could ask.
+- Each one arrives with a prepared answer.
+- One per recurring type: method, alternative explanation, so-what, generalization, AI-use.
+- Write it down. Do not plan to think of it in the room.
+
+::: {.notes}
+
+Five is one per recurring type, and the types are what give the bank its
+coverage (Bourne 2007): without them you will prepare several versions of the
+question you already know how to answer. Emphasize fair, which means the
+hardest reasonable question rather than a caricature. And if your venue's
+questions arrive as a reviewer report or an editor query instead of aloud, the
+same bank answers them.
+
+:::
+
+
+## An honest don't-know is an admission with content
+
+::: {.kicker}
+
+Chapter 35 · The concept
+
+:::
+
+- Name what you cannot say.
+- Name the thing you can stand on.
+- Name the method that would settle it.
+- Use it when a banked question has no full answer.
+
+::: {.notes}
+
+When a banked question has no full answer, that is expected rather than a gap
+in your preparation. The difference between an honest don't-know and a shrug
+is the three pieces of content on this slide. Ask the room for the question
+they most dread and build one of these aloud, together.
+
+:::
+
+
+## Six seconds faster, and a visitor asks whether the toolbar caused it
+
+::: {.kicker}
+
+Chapter 35 · A worked example
+
+:::
+
+- You work with usage logs from a small software company's app.
+- Some customers chose the compact toolbar; others kept the expanded one.
+- Compact users found the target page a median of six seconds faster.
+- The visitor: 'so the compact toolbar causes faster navigation?'
+
+::: {.notes}
+
+This is the question the presenter feared, and it is a fair one, of the
+alternative-explanation type. Note what is not wrong here: the six seconds are
+a real difference in the logs, and nobody made a computational mistake. What
+is at stake is only the verb. Ask the room what they would say next, before
+you turn the slide.
+
+:::
+
+
+## Power users may have chosen compact and been fast anyway
+
+::: {.kicker}
+
+Chapter 35 · A worked example
+
+:::
+
+- Users picked their own toolbar. Nobody assigned it.
+- **Confound:** a third factor that shapes both the choice and the outcome.
+- Power users may have chosen compact and been fast with any layout.
+- So your study cannot say the toolbar caused the speed.
+
+::: {.notes}
+
+Walk the mechanism out loud rather than asserting the label. Being a power
+user plausibly pushes someone toward the compact layout and independently
+makes them fast, so it sits on both sides of the comparison. That is
+self-selection, and it is why an observational comparison here cannot carry a
+causal verb.
+
+:::
+
+
+## The two-beat reply: the truth, then the interest
+
+::: {.kicker}
+
+Chapter 35 · A worked example
+
+:::
+
+- 'I can't say it causes the speed, because compact users may already be power users.'
+- 'The study that would answer you is randomly assigning the toolbar to new users.'
+- 'That's what I'd run next.'
+- You refused one word and handed back a research question, not a wall.
+
+::: {.notes}
+
+The two beats are the limitation and the next step, delivered in that order.
+The second beat is what keeps the exchange from ending in a refusal: the
+visitor leaves with a design, not with a closed door. Stating uncertainty
+plainly rather than hiding it does not cost you the audience's trust, which is
+what the evidence on communicating uncertainty finds (van der Bles et al.
+2019).
+
+:::
+
+
+## Build users the toolbar cannot help, and the six seconds appear anyway {.denser}
+
+::: {.kicker}
+
+Chapter 35 · A worked example
+
+:::
+
+- The simulated seconds depend on being a power user, never on the toolbar.
+- Watch the observed median gap against a true toolbar effect of zero.
+- Then watch the gap among power users only, and among everyone else.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 1200
+power_user = rng.random(n) < 0.35        # fast with ANY layout
+compact = rng.random(n) < np.where(power_user, 0.72, 0.28)   # they self-select
+seconds = (34 - 13.5 * power_user
+           + rng.normal(0, 6, size=n))   # the toolbar itself does nothing
+
+observed = np.median(seconds[~compact]) - np.median(seconds[compact])
+within = [np.median(seconds[~compact & g]) - np.median(seconds[compact & g])
+          for g in (power_user, ~power_user)]
+print(f"observed median gap            : {observed:.0f} s faster for compact")
+print(f"true effect of the toolbar     : 0 s")
+print(f"gap among power users only     : {within[0]:+.0f} s")
+print(f"gap among everyone else        : {within[1]:+.0f} s")
+print(f"share of compact users who are power users : "
+      f"{power_user[compact].mean()*100:.0f}%")
+print("\nthe six seconds are real and the toolbar did not cause them. that is")
+print("exactly the sentence the two-beat reply has to carry")
+```
+
+::: {.notes}
+
+Read the seconds line as the whole argument: the toolbar term is simply
+absent, so any gap the printout shows was manufactured by who chose what. One
+line prints the share of compact users who are power users, which is the
+self-selection made visible. Say the closing sentence the block prints,
+because it is exactly the sentence the two-beat reply has to carry.
+
+:::
+
+
+## An AI failure case
+
+::: {.kicker}
+
+Chapter 35
+
+:::
+
+::: {.failure}
+
+[Where the tool failed]{.label}
+
+You paste your limitation into an AI tool and ask it to "make this sound more
+confident for the poster." It returns a fluent, polished sentence: "The
+compact toolbar improves navigation speed, with strong results across users."
+It runs clean, it reads well, and it is wrong. The tool quietly swapped "was
+associated with faster times" for "improves," and "improves" is a causal verb
+your observational logs cannot support. This is a silent scope change dressed
+as helpful editing.
+
+:::
+
+
+## How it failed
+
+::: {.kicker}
+
+Chapter 35 · An AI failure case
+
+:::
+
+- You catch it by reading the AI's verb against your poster's headline, word for word.
+- Your headline says "associated with." The rewrite says "improves." The kind of claim moved while the sentence got prettier.
+- You keep your own verb, and log that the polish inflated the claim.
+
+::: {.notes}
+
+You catch it by reading the AI's verb against your poster's headline, word for
+word. Your headline says "associated with." The rewrite says "improves." The
+kind of claim moved while the sentence got prettier. You keep your own verb,
+and log that the polish inflated the claim.
+
+:::
+
+
+## Do not delegate
+
+::: {.kicker}
+
+Chapter 35
+
+:::
+
+::: {.rule-human}
+
+[This stays yours]{.label}
+
+Three decisions never leave your hands: **which claim your evidence actually
+supports**, **where that claim must stop**, and **how you acknowledge its
+uncertainty and limitations**. The tool can draft a question or flag a word,
+but only you decide the compass position your design can bear and the one word
+you must refuse aloud. Your honest don't-know is yours to mean, not to recite.
+
+:::
+
+
+## It is your turn {.dense}
+
+::: {.kicker}
+
+Chapter 35 · Your move
+
+:::
+
+1. Write the five hardest fair questions someone could ask you, one for each type: method, alternative explanation, why-it-matters, generalization, AI use.
+2. Draft a two-sentence answer to each and mark it defend or concede.
+3. Write your uncertainty-and-limitations statement in ULN form: how much your number could wobble and why, the one thing your design cannot show, and the study that would settle it.
+4. Read it aloud and cut every self-erasing word, replacing each with the exact boundary it was hiding.
+5. Log it in your AI Research Ledger, and verify at least one prepared answer with a named method from the [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html), such as peer reasoning.
+
+::: {.turn}
+Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_difficult_questions_and_uncertainty.ipynb) with [Chapter 35](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html) open beside it. Log every delegation in your AI Research Ledger.
+:::
+
+::: {.notes}
+
+The chapter's numbered steps, in the book's own order. The AI prompts each
+step carries live in the companion notebook.
+
+:::
+
+
+## Milestone 10: Your artifact, ready to publish or present {background-color="#1a1a19" .divider}
+
+::: {.kicker}
+
+Studio 10 closes here
+
+:::
+
+::: {.divider-line}
+
+What the lessons handed you becomes one artifact you can defend.
+
+:::
+
+
+## What this milestone produces
+
+::: {.kicker}
+
+Milestone 10
+
+:::
+
+::: {.decision}
+
+[The artifact]{.label}
+
+**What this milestone produces.** A short venue contract and one artifact ready for publication or presentation that satisfies it - a paper or research note, a seminar or conference talk, a poster, or another venue's format - with a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release.
+
+:::
+
+
+## What you bring
+
+::: {.kicker}
+
+Milestone 10 · Check before you start
+
+:::
+
+- [Lesson 35 — Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html): your five hardest fair questions with defend-or-concede answers, and your uncertainty-and-limitations statement in ULN form.
+
+
+## The practice {.dense}
+
+::: {.kicker}
+
+Milestone 10 · In the studio
+
+:::
+
+1. Write your venue contract using the guide above, then say what your claim must lose to fit that format.
+2. Write a transformation memo from your Studio 9 note: what expands, what compresses, what moves, what becomes visual, and what becomes spoken.
+3. Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live.
+4. Build the artifact to its venue contract, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
+5. Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the manuscript to a cold reader.
+6. Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are the agenda for the studio that owns them.
+
+
+## The four rails, here
+
+::: {.kicker}
+
+Milestone 10 · Every studio, these four
+
+:::
+
+:::: {.rails}
+
+::: {.rail}
+
+[Ethics, permissions, and data exposure]{.t}
+
+[An adaptation that drops the limitations is not a shorter version, it is a different claim.]{.d}
+
+:::
+
+::: {.rail}
+
+[Evidence, provenance, and reproducibility]{.t}
+
+[Every figure that travels carries its verification with it.]{.d}
+
+:::
+
+::: {.rail}
+
+[AI activity, verification, and human decisions]{.t}
+
+[If AI edits the artifact or generates questions, record what changed and verify the result; every defend-or-concede decision remains yours.]{.d}
+
+:::
+
+::: {.rail}
+
+[Uncertainty, claim boundary, and revision history]{.t}
+
+[The shorter the format, the more explicit the boundary has to be.]{.d}
+
+:::
+
+::::
+
+
+## A version, not a pass
+
+::: {.kicker}
+
+Milestone 10
+
+:::
+
+::: {.note-card}
+
+[How the record works]{.label}
+
+Your milestone artifact is a dated, numbered **version** with the reason for
+the version attached. When later evidence changes it, you write the next
+version rather than editing the last one, because the sequence of changes is
+itself part of your research record.
+
+:::
+
+
+## The one rule {background-color="#1a1a19" .divider}
+
+::: {.divider-line}
+**AI is your arm and your research assistant, not your brain.**
+
+AI can review AI, and a second model is a real auditor of the first. The
+last decision is always human.
+:::
+
+[Studio 10 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio10-adapt-and-defend.html) · [Milestone 10](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)

@@ -1,0 +1,224 @@
+# Slide plan — Chapter 24, "Robustness and Sensitivity"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: robustness-sensitivity
+source_sha256: "044756fc2b36034c7c153be6e86c143eb677fb2ddcd9eb77a9a38e961ca1e3d2"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A reviewer's first question is about the versions you did not show"
+      quote: >-
+        Everyone shows me the version of the analysis that worked. I assume
+        that one exists. My real question is what happened to all the
+        reasonable versions you could have run instead, and whether you
+        looked at them before or after you saw this answer.
+      bullets:
+        - "The decision on the table: which alternative versions you commit to running and reporting."
+        - "You choose them before you see any of their answers."
+        - "Then you report every one of them."
+      note: >
+        The line belongs to a journal reviewer, opening the first serious read
+        your work will get. That reviewer is not accusing you of cheating. The
+        question that matters is the last sentence of the card, so read it out
+        slowly and let it sit before you show anyone a method.
+
+    - title: "Without the list, a delicate truth and a lucky slice look identical"
+      bullets:
+        - "Almost every real estimate depends on choices you could have made differently."
+        - "Any single choice can flatter the result."
+        - "Report only the version that worked and nobody can separate a delicate truth from luck [@simmons2011falsepositive]."
+      note: >
+        This is a plain fact about analysis, not a claim about anyone's
+        honesty. The chapter's answer is a habit that answers the reviewer's
+        question before it is asked. Keep the decision card's bound in view
+        while you say it: a check you think of later is still worth running, as
+        long as you label it as one you added after seeing results and report
+        it with the rest.
+
+  "The concept":
+
+    - title: "Two named attacks, and people mix them up constantly"
+      layout: terms
+      terms:
+        - term: "Robustness check"
+          definition: "re-running the same finding under a different but equally defensible choice, to see whether the answer stays"
+        - term: "Sensitivity check"
+          definition: "deliberately changing an assumption to see how far the answer moves [@rosenbaum2002observational]"
+      bullets:
+        - "You reported an average order value, so recompute it without the wholesale buyer."
+        - "You assumed checkout logged every purchase, so ask what a missed two percent does."
+        - "An estimate is one number that depends on several choices, and a critic attacks them."
+      note: >
+        Some fields call the second one a sensitivity analysis, and the two
+        names travel together for a reason: both attacks aim at the same
+        target. Say the difference in one line and make the room repeat it. A
+        robustness check swaps a choice you could have made either way. A
+        sensitivity check moves an assumption you cannot check at all and asks
+        how far the answer travels. Since a critic will attack your choices,
+        you attack them first.
+
+    - title: "The headline estimate has four handles you can turn"
+      lead: "**Headline estimate:** the single number that stands in for your whole finding."
+      bullets:
+        - "**Sample:** which data you keep."
+        - "**Measurement:** how you turn a concept into a number."
+        - "**Specification:** the bundle of modeling choices behind the estimate."
+        - "**Metric:** the yardstick you report."
+        - "Any honest plan turns one or more of them."
+      note: >
+        These four words carry the rest of the chapter, so spend a minute here.
+        Ask each person to name the four handles on their own project out loud
+        before the worked example arrives, because the example will move much
+        faster than the vocabulary does. A plan that turns none of them is not
+        a plan.
+
+    - title: "Before a dot joins the curve it passes a three-part gate"
+      lead: "A **specification curve** plots one estimate under many defensible choices, side by side [@simonsohn2020specification] [@steegen2016multiverse]."
+      bullets:
+        - "Same substantive claim: every version tests the one question the curve is about."
+        - "Commensurable inside a panel: same units, same group, same kind of quantity."
+        - "Changing who is counted, what the outcome means, or its scale opens another panel."
+        - "No version may define its group by something the treatment could have changed."
+      note: >
+        The chapter's example question is whether the offer raises shoppers'
+        spending, and every dot has to be an answer to that. A choice that
+        changes who is counted does not disqualify the analysis; it belongs in
+        its own labeled panel rather than mixed silently into this one. The strict third
+        rule rules out "average order value among the shoppers who actually
+        bought something", because whether someone bought is downstream of the
+        offer. Keep the chapter's bound: that comparison may be worth
+        reporting, in its own place, clearly labeled for what it is, and
+        specialists do define careful causal quantities for post-treatment
+        subgroups with different assumptions and different machinery. What is
+        ruled out is treating a raw survivor-style contrast as one more dot.
+
+    - title: "A curve that agrees cannot see the flaw every version shares"
+      bullets:
+        - "A curve entirely on one side of zero shows stability across the choices you listed."
+        - "Choose the comparison group wrong and all sixteen versions inherit that error."
+        - "They lean the same way together, and the picture looks reassuring."
+        - "**Shared bias:** the common error running underneath an entire curve."
+      note: >
+        The picture looks most reassuring exactly when it should not, which is
+        why this slide follows the gate rather than closing the chapter. Ask
+        the room what every version of their own analysis has in common, since
+        the curve cannot test that thing. Naming the shared threat in one
+        sentence is all the curve leaves you able to do about it.
+
+    - title: "The spread says what your choices did, not what chance could do"
+      bullets:
+        - "**Specification spread:** the span your answer covered across the versions you ran."
+        - "It runs from lowest dot to highest, and says only how far your choices moved it."
+        - "Every dot still carries sampling wobble of its own."
+        - "Keep the lead estimate's uncertainty a separate, labeled thing."
+      note: >
+        The wobble on each dot is the uncertainty you already learned to state
+        with a standard error and an interval, and the spread is not a
+        substitute for it. Two facts, two sentences, never merged. Report the
+        spread as what your choices did, and report the uncertainty of your
+        lead estimate beside it under its own name.
+
+    - title: "Twenty turns of the AI loop is twenty specifications"
+      bullets:
+        - "**Specification searching:** running many analyses, reporting only the one you wanted, without disclosing the search."
+        - "Its opposite is **pre-listed checks**: written down and all reported, before any result."
+        - "Each prompt-and-refine cycle can change a filter, a variable, or a model."
+        - "Re-prompt because the number disappointed you and you have run a search."
+        - "Keep your own log of the cycles; the tool kept none for you."
+      note: >
+        The most notorious version of specification searching is hunting for a
+        statistically significant result, which researchers call p-hacking, and
+        it is not the only version. Working with an assistant means working in
+        a loop of prompt, read, interrogate, refine, run again, with agentic
+        tools now spinning those cycles on their own. That is why the log is
+        yours to keep. Ask the room how many analyses their last assistant
+        session actually ran, and watch how few can say.
+
+  "A worked example":
+
+    - title: "A discount, and a twelve percent headline you attack before defending"
+      bullets:
+        - "Your team randomly assigns a loyalty discount and asks whether the offer raises spending."
+        - "Target fixed before anything ran: 30-day spending per shopper you assigned."
+        - "Shoppers who spent nothing are counted in."
+        - "Headline: about twelve percent more than those not offered; these numbers are constructed."
+      note: >
+        Say the target in the chapter's exact words, because the whole example
+        depends on it staying the same across every version that follows.
+        Counting the shoppers who spent nothing is part of the definition, not
+        a detail. The constructed-numbers bound sits on the slide because the
+        chapter states it in the same breath as the headline. Then attack the
+        number across the four handles before anyone else gets the chance.
+
+    - title: "Four handles turned, and one comparison kept off the curve"
+      bullets:
+        - "Sample: all shoppers, or all except the wholesale account placing bulk orders."
+        - "Measurement: the total amount charged, or shipping and taxes stripped out."
+        - "Specification: no adjustment, or adjusted for spending in the weeks before."
+        - "Metric: the gain in dollars, or the gain as a percent."
+        - "Averaging only over shoppers who ordered goes in its own labeled section."
+      note: >
+        The wholesale exclusion is legitimate on your definition of a customer,
+        not a convenient one, and saying which it is out loud is the whole
+        difference. The last line is the gate doing its work: the discount can
+        change who places an order, so that comparison answers a different
+        question about a different group.
+
+    - title: "One span per panel, never a span across them"
+      bullets:
+        - "Adjustment keeps the same people, outcome and units, so its versions share a panel."
+        - "Dropping the wholesale account changes who is counted, so it opens a second."
+        - "Stripping shipping and taxes changes what spending means, so it opens a third."
+        - "Primary panel: positive in every pre-listed version, about eight to twelve percent."
+        - "Excluding the wholesale account, the same versions ran ten to fifteen percent."
+      note: >
+        Dollars versus percent is one comparison shown on two scales, not two
+        pieces of evidence, so it never adds a dot at all. A single
+        eight-to-fifteen range stretched across all three panels would compare
+        a net-of-tax number to a gross one, over different sets of shoppers,
+        and mean nothing. Read the chapter's reporting sentence aloud and then
+        name what sits beside it: the lead estimate is twelve percent, with its
+        own sampling uncertainty stated with it. Collapsing the two into "the
+        honest range is eight to fifteen" claims a precision nobody computed.
+
+    - title: "Three null checks get muddled, and each has its own procedure"
+      layout: terms
+      terms:
+        - term: "Assignment-based null check"
+          definition: "re-runs the assignment your study actually performed, with the same group sizes and the same blocking"
+        - term: "Permutation check"
+          definition: "shuffles labels that were not randomly assigned, and answers something only if the groups were exchangeable"
+        - term: "Negative control"
+          definition: "points your analysis at an exposure, outcome, or period that should be causally null"
+      bullets:
+        - "One redraw proves nothing, so you build a pile of fake gaps."
+        - "That pile is what your machinery produces when the offer does nothing at all."
+        - "This trial randomized, so use the first to build the pile."
+      note: >
+        Statisticians call the first one randomization inference: keep every
+        enrolled shopper and their observed outcomes, re-draw who is offered
+        using the exact procedure the real study used, and recompute the gap
+        many times. In most observational data you cannot argue the groups were
+        exchangeable, and shuffling anyway builds a pile describing a world you
+        never had. A negative control runs through the same measurement and
+        bias pathways, such as checking for an effect of the offer in the weeks
+        before it launched, and it works whether or not anything was
+        randomized. Here the comparison is a smell test that the uncertainty
+        chapter later finishes: a real gap the no-effect pile produces
+        routinely warns you that your machinery, not the discount, may be doing
+        the work.
+
+    - title: "Check that every row answers the same question before reading a number"
+      bullets:
+        - "All eight rows share one **estimand**, the quantity estimated: spending per shopper assigned."
+        - "The printed range is a spread of defensible answers, not a confidence interval."
+        - "The last block averages over orderers only, on a group the offer itself selected."
+      code: 0
+      note: >
+        The block turns all four handles and prints the whole grid, plus the
+        one comparison that must stay off it. Walk the three nested loops as
+        sample, then measurement, then specification, which is where the eight
+        rows come from, rather than reading the syntax line by line. Then stop
+        on the final print and ask the room to say, using the gate, why that
+        number does not belong on the curve.

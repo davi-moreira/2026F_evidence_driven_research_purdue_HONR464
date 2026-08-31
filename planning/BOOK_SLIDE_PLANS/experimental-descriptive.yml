@@ -1,0 +1,167 @@
+# Slide plan — Chapter 16, "Experimental Descriptive Research"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: experimental-descriptive
+source_sha256: "76d56819bace6e5a87029ec0ee90e598fbbd00f4bf755ccbee90e4e6330d4229"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "Your advisor stops at one line of your methods page"
+      quote: >-
+        "You randomized," they say, "so you wrote *causes*. Show me the question
+        first."
+      bullets:
+        - "Random assignment feels causal by reflex."
+        - "That reflex is the trap this chapter defuses."
+      note: >
+        The decision on the table is whether the number your randomized study
+        reports is a property the world already has, or an effect you would go
+        out and cause. Nothing in the coin flip answers that for you. Ask the
+        room to read their lead question aloud and underline its verb: does it
+        ask how much of something already sits out there, or what would change
+        after an intervention?
+
+    - title: "The question fixes the kind, not the procedure"
+      bullets:
+        - >-
+          Aim the flip at "what would change if we deployed this?" That is a
+          causal study.
+        - >-
+          Aim it at "how much of this property sits in the world right now?" That
+          is a measurement.
+        - "Mislabel the second as the first and you overclaim."
+        - "You promise a lever your evidence never tested."
+      note: >
+        The same procedure sits under both, so the procedure cannot be what
+        settles the kind. The cost of the mislabel is not one wrong word: a
+        careful reader who catches the overclaim stops trusting the rest of your
+        work. This is why the naming of the kind comes before anything about the
+        randomization itself.
+
+  "The concept":
+
+    - title: "Random assignment can do the work of a measurement design"
+      bullets:
+        - "RDSS calls this the experimental-descriptive pathway [@blair2023rdss]."
+        - "The design reveals a characteristic units do not hand over directly."
+        - "The inquiry stays descriptive, so randomizing alone licenses no causal claim."
+      note: >
+        This is the pathway's whole shape in one line: the coin flip is there to
+        expose something, not to test something you would deploy. Keep the bound
+        the chapter puts on it. Randomizing reveals a property the units never
+        hand over directly. It does not by itself buy you the word because, and
+        it does not yet make the reading trustworthy, which is what the next two
+        slides are about.
+
+    - title: "An experiment can be an instrument rather than an intervention"
+      layout: terms
+      lead: >-
+        A latent characteristic: how much a search interface's position pulls
+        clicks, apart from how good each result is [@joachims2005clickthrough].
+      terms:
+        - term: "Latent characteristic"
+          definition: "a real property you cannot read off directly, so a design has to reveal it"
+        - term: "Controlled stimulus"
+          definition: "a version of a prompt, item, or setting that you fix on purpose and assign by chance"
+        - term: "Experiment as a measurement instrument"
+          definition: "using randomly assigned controlled stimuli to expose a latent characteristic and report it as a plain description"
+      bullets:
+        - "The controlled stimulus: the same result in slot 1 for some sessions, slot 5 for others."
+        - "Chance decides which, so any difference pins to the version and not to who received it."
+        - "What you report is the estimand: the exact quantity the design is built to state."
+      note: >
+        The definitions and the slot example are the chapter's own. The estimand
+        here describes the world as it stands, which is what keeps the inquiry
+        descriptive even with a coin flip inside it. Have the room name the
+        latent characteristic in their own project before the next slide.
+
+    - title: "A measurement can be confident and still wrong"
+      bullets:
+        - "The setup itself is one of the ingredients of the number."
+        - "Two artifacts do most of the damage."
+        - "Randomizing who sees what does nothing about a bias that hits every unit alike."
+        - "So you design those two out separately."
+      note: >
+        This is the part people skip once the randomization is in place, because
+        a randomized number feels finished. It is not, since the instrument and
+        the situation both leave their marks on the reading. The next slide names
+        the two artifacts and the property they threaten.
+
+    - title: "Demand and instrument effects both threaten construct validity"
+      layout: terms
+      lead: >-
+        A demand effect: users who notice they are in a study click more
+        carefully than they would at home [@orne1962demand].
+      terms:
+        - term: "Demand effect"
+          definition: "when the people being measured guess what you are looking for and drift toward it"
+        - term: "Instrument effect"
+          definition: "when the measuring device or wording moves the reading on its own"
+        - term: "Construct validity"
+          definition: "the degree to which your number estimates the concept you meant rather than something adjacent"
+      bullets:
+        - "An instrument effect: the logger credits position with attention slot 1's larger thumbnail earned."
+        - "Both threaten construct validity, so your number may estimate something adjacent [@cronbach1955construct]."
+      note: >
+        Randomizing who sees what does nothing about a bias that hits every unit
+        alike, which is why these two have to be designed out separately. A
+        number can be confident, well randomized, and still be a reading of the
+        wrong concept. Ask the room which of the two their own measurement is
+        more exposed to, and what they would change to rule it out.
+
+  "A worked example":
+
+    - title: "A streaming team needs a number nobody publishes"
+      bullets:
+        - "How much of a track's play count comes from where it sits?"
+        - "And how much from how well it matches the listener?"
+        - "Nobody prints that number anywhere, so they build an instrument."
+        - "One fixed probe track: identical audio, identical artwork, slot assigned at random."
+      note: >
+        The shelf is "Recommended for you", and the probe runs on a random slice
+        of sessions across six slots. Because the track never changes and the slot
+        is dealt by chance, the spread in play rate across slots isolates the pull
+        of position alone. The estimand is the shelf's attention curve: how much
+        each rank commands, described for these sessions.
+
+    - title: "There is a causal effect inside the study, and the question stays descriptive"
+      bullets:
+        - >-
+          Honest: "for these sessions, slot 1 drew about three times the plays of
+          slot 5, at equal quality."
+        - 'Forbidden: "promoting tracks to slot 1 will triple their plays."'
+        - "The second sentence is causal and deployable, and the design never tested it."
+      note: >
+        Slot really does move clicks inside the experiment, so the temptation to
+        write the deployable sentence is strong and feels earned. Slow down here.
+        The design put one fixed probe track through six slots, so it never varied
+        which track goes on top, and it cannot say what promoting a different
+        track would do. The question asked how much position pulls, and that is
+        the sentence the evidence supports.
+
+    - title: "Guard the two artifacts before you trust even the descriptive number"
+      lead: "The redesign renders every slot identically and logs impressions server-side."
+      bullets:
+        - "A demand effect if the probe looks like an ad."
+        - "An instrument effect if slot 1's larger art or a slot-keyed logger inflates the count."
+        - "Randomizing the slot does not fix a bias that hits every unit alike."
+      note: >
+        Randomizing position while holding the item identical is the standard way
+        to separate presentation from quality in ranked interfaces
+        [@joachims2005clickthrough]. Notice that both fixes are design moves,
+        which is why the chapter says you design these out separately rather than
+        correcting them afterwards.
+
+    - title: "Run it: the randomization is real, the claim it licenses is still descriptive"
+      code: 0
+      bullets:
+        - "12,000 sessions, one identical probe track, slot dealt by chance."
+        - "Watch the play rate fall from slot 1 down to slot 6."
+        - "The last lines print the slot 1 versus slot 5 ratio, at identical audio and artwork."
+        - "Then they print what the number does not say."
+      note: >
+        The block deals the probe track's slot at random and reports the attention
+        curve. The printed disclaimer is the lesson: this says nothing about what
+        promoting a different track to slot 1 would do. Change the attention
+        values, rerun, and ask which sentence in the section stops being true.

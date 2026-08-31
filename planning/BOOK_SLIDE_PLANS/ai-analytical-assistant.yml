@@ -1,0 +1,187 @@
+# Slide plan — Chapter 23, "AI as Analytical Assistant"
+# (lesson id: ai-analytical-assistant).
+#
+# Prose sections only. The builder already emits the research-decision card,
+# the key-term card, the AI failure case, the "Do not delegate" rule and the
+# "It is your turn" steps straight from the chapter.
+lesson: ai-analytical-assistant
+source_sha256: "24b066c6dbb8ed271f7d732833db6c5bf32e658b6d1221409f29fe7a7d852f41"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: 'The discussant does not care that a model ran the checks'
+      bullets:
+        - 'A discussant at a labor economics seminar, reading your results section.'
+        - 'The decision on the table: which analytical work you hand off.'
+        - 'And which numbers you personally re-derive before you believe them.'
+      quote: 'I do not care that a model ran your robustness checks. I care which ones you chose, which numbers you re-derived yourself, and which flags you confirmed against the data. Show me that trail and I trust your judgment. Show me the model''s transcript and I trust neither.'
+      note: >
+        Read the quote as the discussant would say it, then stop on its last
+        line: the transcript buys you nothing. What is being asked for is a
+        short trail of choices that stayed yours, and it is asked for out
+        loud, in front of a room. Ask your own room whether they could produce
+        that trail today for the last number an AI tool handed them.
+
+    - title: 'Paste the table and you have signed your name to numbers you never checked'
+      bullets:
+        - 'An AI tool can write your analysis code and run a dozen checks in seconds.'
+        - 'It hands back a clean table.'
+        - 'That speed is exactly why a loose habit is dangerous.'
+        - 'This chapter gives you the habit that survives the discussant''s question.'
+      note: >
+        Nothing here is an argument against the speed. The chapter's worry is
+        the habit, not the tool. The problem is that a clean table arrives
+        looking finished, so there is no moment that forces you to check it,
+        and the signature goes on anyway. The habit in this chapter puts that
+        moment back in on purpose.
+
+  "The concept":
+
+    - title: 'A task is checkable; a verdict is not its job'
+      bullets:
+        - 'An AI analytical assistant takes a well-specified analytical task, never your judgment [@vaithilingam2022expectation].'
+        - '"Recompute this gap after dropping the three people who enrolled with an offer already in hand."'
+        - 'It writes and runs that one check.'
+      note: >
+        Say the delegated sentence out loud, because the shape of it is the
+        lesson. It names the number wanted, the exact columns, and the filter
+        behind it, and it asks for none of the interpretation. A request for a
+        verdict on what the result means has no checkable answer, so nothing
+        comes back that you could verify.
+
+    - title: 'You attack your headline estimate before you defend it'
+      bullets:
+        - 'Your headline estimate is the single number that stands in for your whole finding.'
+        - '"People who went through the program received a first offer about 0.7 standard deviations sooner."'
+        - 'Before you defend that number, you try to break it.'
+        - 'Breaking it is the labor you delegate.'
+      note: >
+        This is the sentence that decides the order of the work. You do not
+        delegate the finding, you delegate the attempts to destroy it, and
+        what survives is what you take to the seminar. Ask the room to name
+        their own project's headline estimate in one sentence right now.
+        Anyone who cannot has just found the first thing to fix.
+
+    - title: 'Two attacks do most of the work'
+      layout: terms
+      terms:
+        - term: 'Robustness check'
+          definition: 're-runs the same finding under a different but equally defensible choice and asks whether the answer holds'
+        - term: 'Placebo test'
+          definition: 'runs your exact analysis where the effect cannot exist and asks whether what comes back is ordinary for a world with nothing in it'
+      bullets:
+        - 'You reported a mean time to first offer, so also compute the median [@simonsohn2020specification].'
+        - 'Shuffle the "program" and "no program" labels at random, many times [@lipsitch2010negative].'
+        - 'Random labels always differ a little, so that pile of fake gaps is not zeros.'
+        - 'What matters is whether your real gap looks ordinary in that pile, or sits far outside.'
+      note: >
+        Keep the bound the chapter puts on the placebo. Random labels always
+        differ a little, so the pile of fake gaps is not a pile of zeros, and
+        finding something there is not a finding. What the test asks is
+        narrower: does your real gap look ordinary in that pile, or does it
+        sit far outside it? The robustness check asks a different question,
+        whether the story survives a choice you could equally have made.
+
+    - title: 'A number that survived turn four says nothing about turn seven''s code'
+      bullets:
+        - 'You will not get your analysis from one prompt.'
+        - 'You prompt, read the output, interrogate it, refine, and run it again.'
+        - 'Agentic tools now run those cycles on their own, writing and patching until something looks finished.'
+        - 'Verification attaches to each cycle, not to the last one.'
+      note: >
+        The failure here is quiet. You check a number carefully on an early
+        turn, the loop keeps going, and the code that produced the final table
+        is not the code you checked. Nothing announces that switch. Ask the
+        room how many cycles their last AI-assisted analysis actually took,
+        and how many of those cycles they could describe now.
+
+    - title: 'Re-asking until the estimate looks better is a specification search'
+      bullets:
+        - 'Every re-prompt is a fork in your analysis.'
+        - 'Keep re-asking until the number improves and you have searched, without telling anyone, including yourself.'
+        - 'The fix is cheap: keep a running log, one line per cycle.'
+        - 'Say what you asked, what came back, and what you changed and why.'
+        - 'An assistant that ran ten silent variants and reported the nicest one is an unlogged search.'
+      note: >
+        This is the part of the chapter that bites, because the search does
+        not feel like a search. It feels like refining a prompt. The phrase to
+        keep is "without telling anyone, including yourself": the log is what
+        makes the forks visible to you, not only to a reader. It costs one
+        line per turn.
+
+    - title: 'A tool that ran without an error has not proven its result correct'
+      bullets:
+        - 'The assistant proposes checks, writes code, and prints numbers, cycle after cycle.'
+        - 'You decide which checks count, and you log the cycles.'
+        - 'You verify every number before it reaches your claim.'
+        - 'Verify the number, not the paragraph about the number.'
+      note: >
+        Close the section on the division of labor, and make the last line
+        land. Models write confident prose about their own output, and that
+        prose is not evidence. What you verify is the figure itself,
+        recomputed some other way. A green run means the code executed, which
+        is a much smaller claim than the one you are about to make.
+
+  "A worked example":
+
+    - title: 'A four-week program, and a 0.7 standard deviation gap you try to break'
+      bullets:
+        - 'The program helps people target applications and rehearse interviews.'
+        - 'Outcome: weeks from enrollment to first offer.'
+        - 'Headline: participants reached an offer about 0.7 standard deviations sooner.'
+        - 'You delegate a grid with three handles: the sample, the measurement, the specification.'
+      note: >
+        Name the three handles concretely, because the grid is built from
+        them. Sample: all enrollees, or drop the three who already had an
+        offer in hand when they signed up. Measurement: mean or median weeks
+        to offer. Specification: the raw gap, or one adjusted for each
+        person's prior work experience. That is eight cells, and every one of
+        them is a choice you could defend.
+
+    - title: 'Eight numbers, two re-derived by hand, and an honest range'
+      bullets:
+        - 'The assistant returns eight numbers. You do not trust them yet.'
+        - 'You recompute two rows by hand with a second, simpler expression, and they match.'
+        - 'The direction holds across all eight; the magnitude runs about 0.6 to 0.7 standard deviations.'
+        - 'Your honest headline is a direction plus a range, not one flattering number.'
+        - 'Three cycles went into getting the grid to run, and all three are in your log.'
+      note: >
+        A direction plus a range is a weaker-sounding claim than a single
+        number, and it is the one you can defend. Point out that two hand
+        re-derivations, not eight, were enough to make the table believable,
+        so the cost of this habit is small. The three logged cycles matter for
+        the same reason as the last section: they are what says the grid was
+        run once, not searched.
+
+    - title: 'The flag the reviewer named was refuted; the flaw it missed was real'
+      bullets:
+        - 'Shuffle the program labels and re-run many times. Your real gap sits far out in the tail.'
+        - 'That lowers your worry that the machinery alone is manufacturing the effect, as far as this check sees.'
+        - 'Asked as a hostile reviewer for the worst flaw, it confidently blames the most experienced workers.'
+        - 'You already dropped the already-employed group and the gap held, so the data refute that flag.'
+        - 'The flaw it missed: weeks to an offer is not the quality of the offer.'
+      note: >
+        Hold the bound on the placebo result. It lowers a worry, as far as
+        this one check can see; it does not clear the analysis. Then take the
+        red-team output apart: the confident flag was already refuted by a
+        check you had run, and the real limit went unmentioned. That limit
+        sets the claim's boundary, so your claim stays about speed of
+        placement and says nothing about wages or fit. The assistant did the
+        arithmetic. You decided which checks counted and which flags the data
+        confirmed.
+
+    - title: 'Build the grid, then run the shuffle yourself'
+      code: 0
+      bullets:
+        - 'Watch the eight rows point the same way, then read the printed range.'
+        - 'Recompute two rows by hand before you believe any of them.'
+        - 'The last line counts how many of 2000 label shuffles produced a gap this large.'
+      note: >
+        The block builds the grid an assistant would return and then runs the
+        placebo, all under SEED = 464, so everyone in the room sees the same
+        numbers. Have them predict the sign and rough size before you run it.
+        Reporting the whole grid of defensible choices rather than one
+        flattering cell is the discipline specification-curve analysis was
+        built to enforce [@simonsohn2020specification].

@@ -1,0 +1,201 @@
+# Slide plan — Chapter 26, "AI as Adversarial Reviewer"
+# Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
+lesson: ai-adversarial-reviewer
+source_sha256: "fb33f74862de8c5dad7e142e6c245b5ff6c88c84a09433e1bc74833e0f28887e"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "The person who signs off is the one fielding the complaints"
+      bullets:
+        - "You propose rolling a store change out to every store in the chain."
+        - "The operations manager's sign-off is what lets it get there."
+        - "That manager also answers for it when the checkout lines say otherwise."
+        - "Example: complaints about backed-up queues on the first busy Saturday."
+      note: >
+        Open on the person, not on the method. The operations manager is the
+        one whose sign-off carries your change to every store, and the one
+        fielding the complaints when the new self-checkout layout backs the
+        queues up. That is why their concern is blunt, and why you read it out
+        before anyone hears the word "reviewer".
+
+    - title: '"I trust the check, not the graph"'
+      quote: "Do not tell me the numbers got better. Tell me which check you ran that would have caught it if they hadn't. I trust the check, not the graph."
+      bullets:
+        - "The decision on the table: which of the flaws a reviewer names are real."
+        - "Settled by a check you run, not by how sure the reviewer sounded."
+      note: >
+        Read the manager's line aloud, then say what it is asking for. It is
+        not asking whether the numbers improved. It is asking which check you
+        ran that would have caught the failure had there been one. Put that
+        to the room as a question: what would your own check have to look
+        like before this manager believed your result?
+
+    - title: "A confident number and a fluent critique fail the same way"
+      bullets:
+        - "A confident measurement can be wrong."
+        - "So can a fluent AI critique, and so can a clean-looking table."
+        - "All three can be wrong in the same convincing way."
+        - "What the manager wants sounds least impressive and matters most."
+        - "The check you committed to before you looked, and the flag you verified."
+      note: >
+        The three things that can fail here look nothing alike on the page,
+        and they fail identically: convincingly. That is the reason the
+        chapter puts the committed check ahead of the result. Confidence is
+        not evidence, so the only thing that separates a real flaw from an
+        invented one is a measurement you ran against your own data.
+
+  "The concept":
+
+    - title: "A reviewer's job is to attack your result, not to praise it"
+      layout: terms
+      terms:
+        - term: "Adversarial reviewer"
+          definition: "a reader whose job is to attack your result and find where it breaks, not to praise it"
+        - term: "Robustness check"
+          definition: "re-runs the same finding under a different but equally defensible choice, and sees whether the answer holds"
+        - term: "Placebo test"
+          definition: "runs your exact procedure where the effect cannot exist, and asks whether what comes back is ordinary for a world with nothing in it"
+      bullets:
+        - "The reviewer can be a colleague, one AI tool, or a panel of models."
+        - "Each of the three fails in its own way."
+        - "You defend a result by trying to break it first."
+      note: >
+        The chapter's example of an adversarial reviewer is a peer who tries
+        to show your measured improvement was luck rather than a real change.
+        Keep the two checks apart in the room's heads. A robustness check asks
+        whether the answer holds under a different defensible choice; a
+        placebo test asks what your machinery returns in a world where there
+        is nothing to find.
+
+    - title: "You measured at one time of day, so measure at two more"
+      bullets:
+        - "Robustness: you measured the improvement during one time of day."
+        - "So measure it in two other realistic time blocks as well."
+        - "Placebo: compare two stretches of the old layout against each other."
+        - "Repeat over many pairs, since any two stretches differ a little by chance."
+        - 'An "improvement" far larger than the rest of that pile is your measurement lying.'
+      note: >
+        The placebo needs the repetition to mean anything, so do not skip the
+        last line. Two stretches of an unchanged layout will never come back
+        exactly equal, and the question is not whether the gap is zero. It is
+        whether your gap is ordinary for a world with nothing in it, which you
+        can only answer once you have a pile of such gaps to compare against.
+
+    - title: "Reporting only the hour where your change wins has a name"
+      bullets:
+        - "**Specification searching:** many versions run, only the flattering one reported, the search undisclosed [@simmons2011falsepositive]."
+        - "Its everyday name is p-hacking."
+        - "Example: you measure ten different hours and show only the hour that wins."
+        - "The cure is **pre-listed checks**, committed to before you see any result [@nosek2018preregistration]."
+        - "Example: write down three time blocks and one placebo, run all four, report every number."
+      note: >
+        The habit that keeps an attack honest is order, not effort. Running
+        ten analyses is not the problem; running ten and disclosing one is.
+        Say plainly what the pre-listed set buys you: every number in it gets
+        reported, including the ones that did not help, so nobody has to take
+        your word for what else you tried.
+
+    - title: "Two reviewers wrong the same way is an echo, not a confirmation"
+      bullets:
+        - "**Correlated error:** two reviewers wrong in the same way [@peker2023collective]."
+        - "Their agreement is an echo, not a confirmation."
+        - "Example: two AI models share a blind spot and flag the same non-issue."
+        - "Both sound equally certain while doing it."
+        - "A panel of confident reviewers is not three pieces of evidence."
+      note: >
+        This failure earns its own name because AI reviewers make it
+        constantly. Two models can share a blind spot and flag the same
+        non-issue with equal confidence, so what looks like a second opinion is
+        the first one repeated. Treat matching answers as one candidate to
+        check, and ask the room how they would tell an echo from a confirmation
+        without running anything.
+
+    - title: "An agentic reviewer finds more, and still does not get a vote"
+      bullets:
+        - "Point a tool at your whole analysis: it reads your code, reruns it, tries variants."
+        - "It returns a ranked list of problems, and it will find real errors you missed."
+        - "Every item on that list is still a proposal."
+        - "Each still needs the same treatment: name the check, run it, read your own output."
+        - "A longer, better organized list is more tempting to accept wholesale."
+      note: >
+        Give the tool its due first, because the chapter does: this is a
+        genuine upgrade over a single prompt. What it does not change is who
+        adjudicates. The better the list looks, the harder you hold the line,
+        because a reviewer proposes a flaw and the data decide whether it is
+        real. Confidence, human or machine, tells you nothing about whether
+        the flaw exists.
+
+  "A worked example":
+
+    - title: "You attack the p95 drop from 210 to 137 before you defend it"
+      bullets:
+        - "Your store installed a new self-checkout layout, and your data say lines moved faster."
+        - "**p95 wait time:** the wait 95 out of 100 customers come in under."
+        - "Fairer than the average, because it catches the long waits people complain about."
+        - "A p95 of 210 seconds means only the slowest 5 percent waited longer."
+        - "Your headline is a p95 drop from 210 seconds to 137."
+      note: >
+        Define p95 before the headline lands, because the whole example is
+        about the tail rather than the typical customer. The average hides
+        exactly the waits the operations manager hears about. Then state the
+        move the chapter is teaching: the attack comes from you, first,
+        before anyone else gets the chance.
+
+    - title: "Three reviewers, three fatal flaws, all confident and all different"
+      bullets:
+        - "The first says the win is driven by a single unusually quiet morning."
+        - "The second says you cherry-picked the one customer mix where the layout helps."
+        - "The third says you compared a fully staffed week against a short-handed one."
+        - "On the third reading, you measured staffing rather than the layout."
+        - "All three are confident, and all three disagree."
+      note: >
+        Stop here and ask the room which reviewer they would believe. The
+        point of the disagreement is that certainty cannot be the tiebreaker,
+        because all three have it and all three point somewhere different. Each
+        objection is specific enough to name a measurement, which is what makes
+        the next slide possible.
+
+    - title: "Turn each flaw into a check, and two of them dissolve"
+      bullets:
+        - "Leave-one-out drops the quiet morning and recomputes the p95: it barely moves."
+        - "So the first flaw is refuted."
+        - "Your pre-listed grid reruns the drop across three customer mixes: it holds in all three."
+        - "The placebo compares two stretches of the old layout, and comes back near zero."
+        - "The two loudest flags dissolved the moment a check touched them."
+      note: >
+        Walk the placebo logic slowly, since it is the least obvious of the
+        three. An improvement between two stretches of the unchanged old
+        layout would have proved the third reviewer right, because it would
+        show the machinery manufacturing gaps out of nothing. It came back
+        near zero, so the machinery is clean. You did not trust the loudest
+        voice; you turned each flaw into something you could run.
+
+    - title: "Watch which line decides, not which reviewer sounded surest"
+      bullets:
+        - "Watch the leave-one-out range: the drop survives dropping any single morning."
+        - "Watch the three mixes side by side, old p95 against new."
+        - "Watch the placebo: the old layout against itself should come back near zero."
+      code: 0
+      note: >
+        Run it as three answers to three named objections, in the order the
+        reviewers raised them. Committing to the checks before seeing the
+        results is what keeps this from becoming a search for the version you
+        liked [@nosek2018preregistration]. Change one input and ask which
+        printed line would have caught it.
+
+    - title: "The flaw that survives is the one no measurement can remove"
+      bullets:
+        - "None of the three reviewers raised it."
+        - "This ran at one store, on weekdays, not across the chain."
+        - "No further measurement removes that, so the honest claim is bounded."
+        - "You measured a p95 improvement for these three customer mixes, at this store."
+        - "Not a guarantee for every location your company runs."
+      note: >
+        Separate the two kinds of flaw out loud, because the difference
+        decides what you do next. A measurement problem is answered by
+        running something; a boundary problem is answered only by narrowing
+        the claim until the claim is true. Notice that the surviving flaw is
+        the one no reviewer named, which is a reason to keep adjudicating
+        after the panel goes quiet.

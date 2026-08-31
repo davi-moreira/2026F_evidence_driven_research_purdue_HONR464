@@ -1,0 +1,209 @@
+# Slide plan — Chapter 4, "Specify, Delegate, Interrogate, Inspect, Verify,
+# Document, Defend" (lesson id: sdiivdd).
+#
+# Prose sections only. The builder already emits the research-decision card,
+# the AI failure case, the "Do not delegate" rule and the "It is your turn"
+# steps straight from the chapter.
+lesson: sdiivdd
+source_sha256: "3cac46469ca388f6ecde27366ab8f0736c025e5a2f37fb89b67a150bd54c8e33"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: 'A lift you cannot reproduce is a rumor'
+      bullets:
+        - 'An analytics lead, reading a claim that a new checkout page converts better.'
+        - 'The decision: improvise every delegation, or run one fixed checklist each time.'
+      quote: 'Show me the comparison, not the number. Who saw each version, over which days, and measured against what? A lift I cannot reproduce is a rumor.'
+      note: >
+        That reviewer does not care how confident the output sounded. What
+        the lead wants is the comparison behind the number: who saw each
+        version, over which days, measured against what. Ask the room what
+        they would have to put on the table to answer that, and whether they
+        could produce it for the last result an AI tool handed them.
+
+    - title: 'Paste the output and you have signed your name to a guess'
+      bullets:
+        - 'A tool can write the code, run it, and hand back a tidy result in one breath.'
+        - 'That speed is exactly why a loose habit is dangerous.'
+        - 'The question every serious reader asks: what did you set up, what did you hand off?'
+        - 'And how did you check it before you believed it?'
+      note: >
+        If you paste the result straight into your work, you have imported a
+        guess and signed your name to it. The reviewer does not care how
+        confident the output sounded. The habit in this chapter answers that
+        question every time, so you never have to reconstruct the answer from
+        memory.
+
+  "The concept":
+
+    - title: 'SDIIVDD is Ask, Verify, Document opened up'
+      layout: terms
+      lead: 'Seven steps, run in the same order every time you hand research work to an AI tool.'
+      terms:
+        - term: 'Checklist'
+          definition: 'seven steps you run every time you hand research work to an AI tool, in the same order'
+        - term: 'Protocol'
+          definition: 'a fixed sequence of steps you run every time, so you never skip the check that matters'
+        - term: 'Delegate'
+          definition: 'to assign a checkable chunk of work, not your judgment'
+        - term: 'Never-delegate decisions'
+          definition: 'the calls you always own: what you are really asking, what counts as a fair test, and what your evidence licenses you to claim'
+      note: >
+        The name is only the first letter of each step: Specify, Delegate,
+        Interrogate, Inspect, Verify, Document, Defend. No matter how small
+        the task looks, the order does not change. Run it the way a pilot runs
+        a preflight checklist [@degani1993checklists]. Not because you have
+        forgotten how to fly, but because the item you would have skipped is
+        the one that bites.
+
+    - title: 'The first four steps happen before you believe anything'
+      bullets:
+        - '**Specify.** Write the exact task and your own expected answer before you ask.'
+        - '**Delegate.** Hand over a checkable chunk of work, never your judgment.'
+        - '**Interrogate.** Ask the draft what it assumes.'
+        - '**Inspect.** Read what the tool produced, not its summary of itself.'
+      note: >
+        Specify sounds like this: compare conversion on the old and new
+        checkout pages, I expect the new page to win by a few percent, not by
+        half, and both versions have to be measured on the same days.
+        Interrogate sounds like this: when you report turnout, is the
+        denominator registered voters or every voting-age adult? Inspect means
+        opening the analysis script and seeing which wells it treats as
+        controls, instead of trusting the comment that says controls were
+        excluded.
+
+    - title: 'The last three steps are what make the result yours'
+      bullets:
+        - '**Verify.** Confirm the result with a real, independent check before you trust it.'
+        - '**Document.** Log the tool, the task, the prompt, and how you checked.'
+        - '**Defend.** State the result in your own words, with the tool out of the room.'
+        - 'Defend: turnout was six points higher in these precincts, among registered voters, in this one election.'
+      note: >
+        Verify, on the inflation example, means recomputing the adjustment by
+        hand from the two published index values and seeing whether you land
+        on the same number. Document is one ledger row: the tool wrote the
+        conversion script, and you re-derived one week's rate by hand, in a
+        record that travels with your work. The defended sentence carries its
+        own boundary, "in this one election", because that is what the
+        evidence covers.
+
+    - title: 'Specify and Defend are the human bookends'
+      bullets:
+        - 'Two of the seven stay human no matter how good the tool gets.'
+        - 'Everything you hand off sits safely between them.'
+        - 'A tool can run the comparison for you.'
+        - 'Only you decide the comparison was fair enough to report.'
+      note: >
+        These are the never-delegate decisions: what you are really asking,
+        what counts as a fair test, and what your evidence licenses you to
+        claim. Ask the room which of the seven steps they skipped the last
+        time they used an AI tool, and whether it was one of these two. If it
+        was, the work between the bookends had nothing holding it in place.
+
+    - title: 'The middle four steps are a loop, not a straight line'
+      bullets:
+        - 'You prompt, read the output, interrogate it, refine, and run it again.'
+        - 'One task can send you around that loop five times.'
+        - 'Going around is not a sign you are doing it badly.'
+        - 'Be a little suspicious of a first output that needs no second pass.'
+      note: >
+        Steps 2 through 5 are the loop, and a first output that needs no
+        second pass is rare enough to deserve a second look. The loop is also
+        where AI earns its keep as a brainstorming partner: ask it for
+        candidate questions, rival explanations, designs you had not
+        considered. Generate widely with it; the choosing stays yours.
+
+    - title: 'When the tool runs the loop, your checks happen only if you insist'
+      bullets:
+        - 'Agentic tools plan, write code, run it, read the error, rewrite, and run again.'
+        - 'Many cycles deep, they hand you one clean result. That is a real gain in reach.'
+        - 'The interrogating and inspecting between cycles never happened, unless you insisted.'
+        - 'The cycles can be automated. The bookends cannot.'
+      note: >
+        The checklist is how you keep command either way. When you run the
+        loop, it tells you what to do on each pass. When the tool runs the
+        loop, it tells you what to hold the tool to: a specification written
+        before the first cycle, the intermediate work opened and read rather
+        than summarized, and an independent check on the final number, before
+        you say anything in your own name.
+
+    - title: '126,000 conversations, and the same seven steps'
+      bullets:
+        - 'A Wharton Generative AI Labs team asked whether human persuasion tactics move a chatbot.'
+        - 'A model does not answer the same way twice, so each prompt runs hundreds of times.'
+        - 'First study, early 2025, run through a web interface: 28,000 conversations, one model.'
+        - 'Follow-up: a coding agent drove the tool. 126,000 conversations, three models at once.'
+        - 'Compliance rose from about 35 percent to about 51 percent [@meincke2026persuading].'
+      note: >
+        The question was whether an appeal to authority, or a reminder that
+        everyone else has already agreed, would move a model into answering a
+        request it was built to refuse. Settling that means comparing rates,
+        not anecdotes, which is why the team built a tool to do the running.
+        For the follow-up they described the experiment to the agent in plain
+        language: it offered different ways to word a condition, ran pilots,
+        sent the whole design to three models at once, and read the raw
+        answers back to flag the ones that broke the pattern.
+
+    - title: 'Scale is not rigor'
+      bullets:
+        - 'Delegated: configuring the runs, launching them in parallel, the first pass over transcripts.'
+        - 'Never delegated: the plain request, the persuasive one, what counts as complying.'
+        - 'The case shows the science got bigger. It does not show it got better.'
+        - 'A specification you got wrong gets more expensive the faster it runs.'
+      note: >
+        The team's own summary names this chapter's first and last steps:
+        the researcher "still makes the scientific decisions, determining what
+        question is worth asking, what counts as a fair comparison, and
+        whether the results are meaningful." Nothing here shows the agent
+        improved the science. Whether the comparison was fair, and whether 51
+        percent means what it appears to mean, still rest with the seven
+        researchers whose names are on the paper.
+
+  "A worked example":
+
+    - title: 'A sale week charged version A a crowd version B never met'
+      bullets:
+        - 'You are checking whether a new checkout page converts better than the old one.'
+        - 'Conversion rate is the share of visits that end in a purchase.'
+        - 'Interrogate: the tool admits it pooled every session in the file.'
+        - 'Inspect: a site-wide sale filled week 1, and the new page went live only in week 2.'
+      note: >
+        Specify came first: the new page should win by a few percent at most,
+        and the two versions have to be measured on the same days, on the same
+        kind of shopper. Delegate was the script that computes each version's
+        rate from the session log and reports the difference. The sale filled
+        the site with bargain hunters who browse and leave, so the script
+        charged version A an entire week of window shoppers that version B
+        never saw. If the room needs the rate spelled out: 40 purchases out of
+        1,000 visits is 4 percent.
+
+    - title: 'Two rows, one log, and only one survives Verify'
+      bullets:
+        - 'The pooled row is what the tool''s script reported.'
+        - 'The week 2 row is what survived Inspect and Verify.'
+        - 'Watch the relative difference collapse once both versions run side by side.'
+      code: 0
+      note: >
+        The block builds the session log and computes the number both ways.
+        The log is constructed with exact purchase counts per cell, shuffled
+        into session order, under SEED = 464. Have the room predict the pooled
+        figure before you run it, then read the two printed lines against each
+        other.
+
+    - title: 'Defend states the result and what it does not establish'
+      bullets:
+        - 'Verify: restrict both versions to the second week and recompute.'
+        - 'Also confirm both versions count a purchase the same way.'
+        - 'Document: log the prompt, the fix, and the verified numbers.'
+        - 'Defend: the new page converted about 6 percent better over the five shared days.'
+        - 'Then name the bounds: no sale period tested, no separate look at mobile traffic.'
+      note: >
+        The defended sentence in full: "among shoppers who saw either version
+        during the five days both were live, the new page converted about 6
+        percent better. I have not tested it during a sale, and I have not
+        looked at mobile traffic separately." Running a fixed checklist rather
+        than trusting recall is an old and well-studied safeguard in
+        high-stakes work [@degani1993checklists]. The tool did the typing. You
+        did the research.

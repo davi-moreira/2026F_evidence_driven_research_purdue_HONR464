@@ -1,0 +1,170 @@
+# Slide plan — Chapter 2, "AI Is Your Arm, Not Your Brain".
+# Prose sections only. The builder already emits the research-decision card,
+# the auto key-terms card (Delegation, Verification), the AI failure case,
+# the "Do not delegate" rule, and the "It is your turn" steps.
+lesson: ai-arm-not-brain
+source_sha256: "1dc08b950a0d546aa3316b2b79d19410c9952fb3743c6f944d6b804eba1487a2"
+
+sections:
+
+  "Why this decision matters":
+
+    - title: "A CPA's signature says: I checked this, and I will answer for it"
+      bullets:
+        - "A **certified public accountant (CPA)** is licensed to sign off on a company's financial statements."
+        - "That signature makes them personally answerable for the numbers."
+        - "Investors turn to the CPA if the figures prove wrong."
+        - "Signing is not a claim that the accounting software ran without errors."
+      note: >
+        Picture an audit review. When a CPA signs, they are not certifying
+        that the software behaved. They are saying, "I checked this, and I will
+        answer for it." That is the posture this book asks you to adopt from
+        page one. Ask the room who, in their own project, would be the person
+        holding the pen.
+
+    - title: "A tool cannot sign your work. You can."
+      bullets:
+        - "An AI tool can fetch a statistic, draft a paragraph, or write working code in seconds."
+        - "A brainstorm can produce a possibility. It cannot make a factual statement reliable."
+        - "So the question is not what the tool can produce."
+        - "It is what you handed it, and how you checked what came back."
+      note: >
+        You arrive here with a curiosity commitment and one logged line for
+        every AI activity that shaped it. The stakes now change: the decision
+        on the table is what has to happen to an AI's output before you are
+        willing to call it evidence. Speed is not the issue here. Answerability is.
+
+  "The concept":
+
+    - title: "The arm reaches. It does not decide what is true."
+      bullets:
+        - "The rule that names the chapter: AI as your arm, not your brain."
+        - "The tool can reach, fetch, draft, and compute for you."
+        - "It does not get to decide what is true or what you claim."
+        - "Let it draft a summary of a government statistics release, then confirm every number yourself."
+      note: >
+        Read the rule literally. An arm is useful because it does the work you
+        direct, and it does not choose the work. The summary example is
+        the whole shape of the lesson in one sentence: delegated production,
+        retained judgment, and a check you run on every number before the
+        summary counts for anything.
+
+    - title: "Verification runs by a method outside the model"
+      bullets:
+        - "Delegate a well-specified task: find three published sources for last year's county unemployment rate."
+        - "Verify by opening the statistical agency's real data table and reading the number yourself."
+        - "Trusting what the tool typed is not a check."
+      note: >
+        Delegation and verification are the two moves that put the rule into
+        practice, and they are only useful as a pair. The word doing the work
+        in the definition of verification is "independent": the check has to
+        come from outside the model, which rules out asking the same tool
+        whether it was right.
+
+    - title: "A wrong answer looks exactly like a right one"
+      layout: terms
+      terms:
+        - term: "Hallucination"
+          definition: "confident, polished output that is simply made up, such as a citation to a report that does not exist"
+        - term: "Retrievable"
+          definition: "a source is retrievable when you can open the actual document and confirm it"
+      note: >
+        Verification cannot be skipped because a wrong AI answer looks exactly
+        like a right one [@ji2023hallucination]. A tool may quote a median
+        starting salary and attribute it to a "National Graduate Earnings
+        Survey" that was never published. Tone is identical for real and
+        invented, so tone cannot be your filter. Retrievability is.
+
+    - title: "Four calls stay yours, however good the tool gets"
+      lead: "A never-delegate decision is a call that stays yours no matter how good the tool becomes."
+      bullets:
+        - "Which question you pursue."
+        - "What your evidence licenses."
+        - "The ethics of the work."
+        - "How you state your uncertainty."
+      note: >
+        A tool may list several ways to adjust old prices for inflation, but
+        deciding which one your analysis requires is yours to own. Notice that
+        none of these four are things a better model fixes. They are decisions
+        about what you are willing to defend, and defending is not a task you
+        can hand out.
+
+    - title: "Ask, then Verify, then Document"
+      bullets:
+        - "Use the tool ambitiously."
+        - "Confirm every fact and number yourself."
+        - "Log the tool, the task, and the check in a record that travels with your work [@nist2024genai]."
+      note: >
+        This is the habit in three words, and it is deliberately short enough
+        to remember mid-task. Ambition is part of it: the rule is not "use AI
+        less", it is "check what you use". The record is what makes the check
+        visible to anyone reading your work later, including you.
+
+    - title: "The ledger opens now, and backfills what came before"
+      bullets:
+        - "The curiosity studio opened with the discovery cycle Zahavy presents through Einstein [@zahavy2026jump]."
+        - "There you worked upstream, where a possible explanation begins."
+        - "This lesson starts downstream, once an idea exists."
+        - "Every line from that studio becomes a row of its own, marked retrospective."
+        - "The date a ledger opens does not erase an earlier delegation."
+      note: >
+        The curiosity studio opened with the discovery cycle Zahavy presents
+        through Einstein: experience, an explanatory jump, predictions, and a
+        return to evidence. Downstream, AI can help locate evidence, draft
+        text, transform data, or inspect code, and those abilities are worth
+        having precisely when their products are verified. That is why the
+        ledger opens here rather than earlier.
+
+  "A worked example":
+
+    - title: "A 2019 menu price and a 2025 price are not comparable as they stand"
+      bullets:
+        - "The question: did meals near you get more expensive after a 2019 local minimum-wage increase?"
+        - "A dollar buys less now than it did then."
+        - "The **Consumer Price Index (CPI)** is a published number tracking what a typical household's basket costs over time."
+        - "A higher value means the same basket costs more."
+      note: >
+        Start with the comparison the reader actually wants to make, because
+        the measurement problem only appears once you try. The CPI is the
+        published number that makes the two years commensurable, and naming it
+        is already a decision about which price index fits a question about
+        what households pay.
+
+    - title: "Sort the work before you ask"
+      bullets:
+        - "Delegate: locating candidate published price series."
+        - "Delegate: listing the inputs an inflation adjustment needs."
+        - "Keep: that a consumer index, not a producer or wholesale index, fits what households pay."
+        - "Keep: the base year you convert every price into."
+        - "Keep: whether a source is authoritative."
+      note: >
+        Sorting comes before prompting, not after. You ask an AI assistant for
+        the series and it returns "consumer prices rose roughly 23 percent
+        between 2019 and 2025," citing a statistical agency. That sentence is
+        a candidate input, not a result, and it arrived from the delegated
+        column, not the kept one.
+
+    - title: "Recompute it yourself, or it was never evidence"
+      bullets:
+        - "Open the agency's actual data table and read the two index values yourself."
+        - "Recompute the percentage change by hand."
+        - "If it confirms the number, you log a verified input."
+        - "If it differs, or cannot be found at all, the number was never evidence."
+      note: >
+        Either way your comparison rests on a number you retrieved, not one a
+        model typed. The habit this drills, opening the source rather than
+        trusting the sentence, is the documented defense against fluent
+        invented detail [@ji2023hallucination]. Ask the room what they would
+        do with the 23 percent figure if the table could not be found.
+
+    - title: "The code takes the index on faith, exactly as the tool did"
+      bullets:
+        - "Watch the two index values: they are placeholders standing in until you retrieve the real ones."
+        - "Replace them and rerun; nothing in the code can check them for you."
+        - "The thirty 2019 menu prices are simulated, seeded at 464."
+      code: 0
+      note: >
+        Run it, then say what it cannot do for you. The arithmetic runs the
+        same way whether the two index values are real or invented, which is
+        why retrieving and checking them is the part you keep. A block that
+        runs cleanly on invented inputs still produces an invented answer.
