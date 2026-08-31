@@ -718,16 +718,18 @@ def lab_meeting_table(meetings: list[dict]) -> str:
     columns are all KEPT — D75 deletes nothing — and the per-slot puzzles are
     still live, because each opens its lecture's instructor-led block.
     """
+    # D75: the calendar column no longer carries a drawn slot number, because
+    # there is no draw. Any non-empty value simply marks a lecture that opens
+    # with a lab meeting. A legacy "slot NN" value is still honoured so that a
+    # future edition can reinstate the draw without touching this function.
     slots = []
     for r in meetings:
         raw = (r.get("srl_slot") or "").strip()
         if not raw:
             continue
         m = re.search(r"slot\s*(\d+)", raw, re.I)
-        if not m:
-            raise SystemExit(f"✗ unparseable srl_slot on meeting {r['meeting']}: {raw!r}")
-        slots.append((int(m.group(1)), r))
-    slots.sort()
+        slots.append((int(m.group(1)) if m else len(slots) + 1, r))
+    slots.sort(key=lambda t: int(t[1]["meeting"]))
 
     # The notebook that carries each lecture, and the Sunday it is handed in.
     # Until D74 this column held a PREPARATION deadline — the filled notebook
@@ -736,7 +738,7 @@ def lab_meeting_table(meetings: list[dict]) -> str:
     # for the lab meeting, and the notebook is collected weekly like every other.
     due_of = {rec["nb"]: rec["due"] for rec in notebook_submissions(meetings)}
 
-    lines = ["| Slot | Meeting | Lecture date | Notebook · due (11:59 PM) "
+    lines = ["| # | Meeting | Lecture date | Notebook · due (11:59 PM) "
              "| Week | Studio | Lecture | Frame |",
              "|---|---|---|---|---|---|---|---|"]
     for slot, r in slots:

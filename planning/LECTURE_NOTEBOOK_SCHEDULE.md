@@ -9,9 +9,9 @@ calendar forces it — the term ends first, so the last notebook closes on the l
 day of class.
 
 It is graded **by completion** inside **Lecture Notebooks (20%)**: worked
-through and handed in, or not. Nothing in it is scored right or wrong, and how
-your lab-meeting report went never reaches this grade, because the report carries
-no score at all (D74).
+through and handed in, or not. Nothing in it is scored right or wrong, and nothing
+you say in the ten-minute lab meeting that opens class ever reaches this grade,
+because nothing in that round is graded at all (D74, D75).
 
 There are **16** of them and the **2 lowest credits are dropped
 automatically** (⌈0.10 × N⌉), so 14 valid, on-time submissions earn the full
@@ -38,11 +38,11 @@ is written to be correct for all 16, so nothing has to be edited per
 assignment except the title and the due date.
 
 <!-- lecture-notebook-instruction:begin -->
-**What this assignment collects.** Your week's lecture notebook — the same `nbNN` you opened in class, with your own work in it: the **📣 My Report Plan** cell wherever the notebook has one (lines 1–4 when the lab meeting is yours, line 5 when it is not; Week 1 and the async module carry no such cell), the in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row for each lecture. Open the notebook from its badge on the course website, then **File → Save a copy in Drive** so the copy is yours, and finish whatever class left open before you hand it in.
+**What this assignment collects.** Your week's lecture notebook — the same `nbNN` you opened in class, with your own work in it: the in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row for each lecture. Open the notebook from its badge on the course website, then **File → Save a copy in Drive** so the copy is yours, and finish whatever class left open before you hand it in.
 
 **What to hand in.** One notebook per week. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**). If you hand in the PDF, run **Runtime → Run all** and expand every collapsed section first: printing captures what is on the screen, so an unrun or folded cell arrives empty. Name the file `LASTNAME_nb<nn>`, keeping whichever extension the file you uploaded actually has. Answer in your own words, keep every question in order, and add a ledger row for anything you delegated to an AI tool.
 
-**How it is graded.** Completion only: worked through, handed in, and on time, or not. Your answers are never graded right or wrong here, and how your lab meeting went does not enter this grade — the report itself carries no score. A notebook up to seven days late earns half credit; after that it earns none. Your lowest few lecture-notebook credits are dropped automatically, so one bad week does not need an email.
+**How it is graded.** Completion only: worked through, handed in, and on time, or not. Your answers are never graded right or wrong here, and nothing you say in the lab meeting that opens class enters this grade. A notebook up to seven days late earns half credit; after that it earns none. Your lowest few lecture-notebook credits are dropped automatically, so one bad week does not need an email.
 <!-- lecture-notebook-instruction:end -->
 
 ---
