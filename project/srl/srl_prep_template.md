@@ -24,15 +24,20 @@
 > assigned reporter and the slot draw, and removed the injected **📣 My Report Plan**
 > cell from every notebook; the lecture's own cell is now simply
 > `### 📣 Lab Meeting`.)*
+>
+> **This worksheet is doubly moot today.** There is no lead to prepare for and,
+> since D75, no reporter to prepare as: nothing about the lab meeting is prepared
+> before class, by anyone. It is kept whole all the same, for a future edition that
+> reinstates the role.
 
 > ⛔ **Retired procedure — read the next blockquote as history.** There is no
 > day-before submission any more. You hand in the week's lecture notebook on
 > completion, at **11:59 PM on the Sunday that ends the studio week**,
-> under **Lecture Notebooks (20%)**. For your ten minutes as reporter you submit
-> nothing in advance and plan nothing on this sheet: you bring one decision from
-> your own project and the evidence behind it. Sections 1–7 below are still a
-> useful private worksheet if you like planning on paper, and section 10's AI-use
-> disclosure is the same habit your ledger asks of you every week.
+> under **Lecture Notebooks (20%)**. For the lab meeting there is nothing to plan on
+> this sheet or anywhere else: nobody is assigned to it and nothing is prepared for
+> it. Sections 1–7 below are still a useful private worksheet if you like planning
+> your own work on paper, and section 10's AI-use disclosure is the same habit your
+> ledger asks of you every week.
 
 > **You do not have to fill this in.** What you submit the day before your lead
 > is **your lecture's notebook**, with its **🎤 My Lead Plan** cell complete and

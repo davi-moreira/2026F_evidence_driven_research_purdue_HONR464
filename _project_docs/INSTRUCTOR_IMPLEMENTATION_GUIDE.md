@@ -108,9 +108,9 @@ Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
 to present, on any lecture. **D75 withdrew the D69/D71 slot draw for this
 edition**, so there is no draw to run, no packet to build, no dates to announce
 and no swap rule to administer. Nothing about the lab meeting is prepared before
-class, by anyone, including you. The ten minutes reach every student every
-lecture instead of one student every fourth lecture, and there is no slot on a
-calendar for anyone to dread.
+class, by anyone, including you. The ten minutes are open to every student in
+every lecture rather than owned by one assigned student per lecture, and there is
+no slot on a calendar for anyone to dread.
 
 **How to run the ten minutes.** Ask the room how the projects are going, and let
 the room answer. Three things are worth having in the air: what somebody decided
@@ -167,7 +167,12 @@ The intervention protocol in `project/srl/srl_handbook.md` ("How the instructor
 will step in") still reads usefully for the moments a peer discussion needs a
 hand, but the room is yours from minute 10 and needs no handing back.
 Reinstating the reporter model costs one flag (`INJECT_REPORT_PLAN = True`) and
-one draw.
+one draw. For the record, so nobody has to reconstruct it: under D74 every Mon/Wed
+lecture from Week 2 had one assigned reporter who spent seven minutes on a
+decision from their own project and the evidence behind it, then took three
+minutes of questions, with the slots drawn at semester start and the preparation
+lines held in the injected `### 📣 My Report Plan` cell. The full ruling is
+`_project_docs/DECISIONS.md` D74; D75 withdrew it.
 
 ---
 

@@ -25,11 +25,12 @@
 > cell from every notebook; the lecture's own cell is now simply
 > `### 📣 Lab Meeting`.)*
 
-> ⛔ **This form is not collected in Fall 2026.** Reports are ungraded, and the
-> feedback happens live: the three minutes of questions after each report are where
-> a classmate finds out what landed and what did not. The four prompts below are
-> still a good private checklist for the question you ask in those three minutes,
-> and the form is kept whole for a future edition that reinstates the role.
+> ⛔ **This form is not collected in Fall 2026.** Nothing said in the lab meeting is
+> graded, and there is nobody to fill a form out about, since no lecture has a
+> designated lead or reporter. Whatever a classmate learns about how they came across,
+> they learn live, inside the open round. The four prompts below are still a good
+> private checklist for the question you ask a classmate in those ten minutes, and the
+> form is kept whole for a future edition that reinstates the role.
 
 *You fill this out for whoever led today. It takes under three minutes, and it is
 the fastest way your classmate gets better before their next slot. Be specific

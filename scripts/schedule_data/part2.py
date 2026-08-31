@@ -47,11 +47,12 @@ challenge are instructor-owned and open the block that starts at minute 10. D75
 withdrew the assignment inside the lab meeting: nobody is designated to report,
 nothing is prepared, and the instructor asks the room how the projects are going
 — what was decided since last time, what the evidence looks like, where somebody
-is stuck. Nothing said there is graded. Scored colleague audits run inside Wednesday's
-laboratory in Weeks 5, 6, and 8 and are never assigned as homework and never
-scheduled on a Friday; Week 7's colleague material is UNSCORED reading inside
-the lecture blocks (its clean-but-wrong pipeline and its uncertainty-free result
-card), with the instructor's accuracy lock still naming the seeded flaws aloud."""
+is stuck. Nothing said there is graded. Scored colleague audits run inside
+Wednesday's laboratory in Weeks 5, 6, and 8 and are never assigned as homework
+and never scheduled on a Friday; Week 7's colleague material is UNSCORED
+reading inside the lecture blocks (its clean-but-wrong pipeline and its
+uncertainty-free result card), with the instructor's accuracy lock still naming
+the seeded flaws aloud."""
 
 MEETINGS_P2 = [
     # ------------------------------------------------------------------ M15

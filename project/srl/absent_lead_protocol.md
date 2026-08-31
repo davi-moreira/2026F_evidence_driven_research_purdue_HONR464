@@ -23,6 +23,11 @@
 > assigned reporter and the slot draw, and removed the injected **📣 My Report Plan**
 > cell from every notebook; the lecture's own cell is now simply
 > `### 📣 Lab Meeting`.)*
+>
+> **This protocol is doubly moot today.** There is no lead who can be absent and,
+> since D75, no reporter either, so nobody holds a slot that can be missed and there
+> is no preparation that can fail to arrive. It is kept whole all the same, for a
+> future edition that reinstates the role.
 
 **(Instructor-only; not published to students.)**
 
@@ -39,30 +44,30 @@ derail a class.*
 *Everything after this section is the retired SRL procedure, kept for a future
 edition. This section is what applies in Fall 2026.*
 
-There is no graded lead who can be absent. If the lecture's **reporter** is absent,
-or arrives with nothing to report, the ten-minute lab meeting simply does not run and
-the instructor opens the lecture at minute 0. Nothing is lost and nothing is
-penalized, because the report is ungraded and the instructor owns the lecture from
-minute 10 either way.
+There is no graded lead who can be absent, and under D75 there is no designated
+reporter either. The ten-minute lab meeting is an **open round**: ask the room how
+the projects are going, and take what comes back. Nobody holds a slot, so nobody can
+miss one, and nothing was prepared, so nothing can arrive unusable. On a thin or
+quiet day, ask the question anyway, take whatever answers arrive, and open the lesson
+early. Nothing is lost and nothing is penalized, because nothing said in the lab
+meeting is graded and the instructor owns the lecture from minute 10 either way.
 
-- **No standby is drawn.** Asking a second student to improvise a report on someone
-  else's project would defeat the point of the format, which is that the reporter is
-  the only person who has been inside the work they describe.
-- **Offer a later reporting slot**, by swap with another student's agreement or from
-  calendar slack, so the student still gets the rehearsal before the Expo. Nothing
-  rides on it for their grade.
+- **No standby is drawn**, because there is nobody to stand in for. The whole
+  standby question went away with the assignment.
+- **No make-up is owed.** There is no slot to miss, so there is nothing to swap,
+  reschedule or recover, and no rehearsal debt to settle before the Expo.
 - **The notebook is unaffected.** Every student hands in the week's lecture notebook
   by 11:59 PM on the Sunday that ends the studio week, under **Lecture Notebooks
-  (20%)**, whether or not they reported and whether or not they were in the room.
-  Lateness there is handled by that contract's own credit rule (`1.0` / `0.5` within
-  seven days / `0`) and its two automatic drops, not by this protocol.
+  (20%)**, whether or not they spoke in the lab meeting and whether or not they were
+  in the room. Lateness there is handled by that contract's own credit rule (`1.0` /
+  `0.5` within seven days / `0`) and its two automatic drops, not by this protocol.
 - **The escalation ladder below does not run**, because there is no preparation to
-  submit and no preparation grade to affect. A pattern of missed reports is an
-  attendance and engagement conversation, not a penalty.
+  submit and no preparation grade to affect. A room that stays silent week after week
+  is an attendance and engagement conversation, not a penalty.
 
-The cell this protocol calls the **SRL Lead Brief** is now
-`### 📣 Lab Meeting: Today's Reporter`, and its run of show belongs to the
-instructor.
+The cell this protocol calls the **SRL Lead Brief** is now `### 📣 Lab Meeting`, and
+its run of show belongs to the instructor. The **📣 My Report Plan** cell that D74
+injected below it was removed by D75, so no notebook carries one.
 
 ---
 

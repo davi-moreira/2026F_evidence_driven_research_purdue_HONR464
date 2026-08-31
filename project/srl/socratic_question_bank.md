@@ -28,10 +28,11 @@
 > **This bank is kept in full and it is still in active use.** All 68 questions
 > stand word for word. From minute 10 the instructor leads the lecture and asks
 > them, and a lecture's own selection appears in its notebook as
-> `### 🔎 Questions to Keep You Thinking`. Your use for it is the **three minutes of
-> questions** after each lab-meeting report: when a classmate has just walked the
-> room through a decision from their project, this is where you find the question
-> worth asking. Read "when you lead" below as "when it is your turn to ask".
+> `### 🔎 Questions to Keep You Thinking`. Your use for it is the **ten-minute lab
+> meeting** that opens every Monday and Wednesday: nobody is assigned to it and
+> nothing is prepared for it, so when a classmate says where their project stands,
+> this is where you find the question worth asking back. Read "when you lead" below as
+> "when you have a question to ask".
 
 *A reservoir of questions you can use word for word when you lead. Every
 question here is written to be said out loud by you, in class, exactly as it
@@ -248,8 +249,9 @@ group.*
 to your exact puzzle. The best SRLs do not read these verbatim forever. They
 learn the shape of a good question here, then write their own.*
 
-*⛔ Retired detail: there is no prep template to build this edition. Read the
-paragraph above as it applies now — lift three or four of these and adapt them to
-the decision on the table, whether that is a classmate's report or your own work.
-The last sentence is the durable one either way: learn the shape of a good question
-here, then write your own.*
+*⛔ Retired detail: there is no prep template to build this edition, and nothing
+about the lab meeting is prepared in advance. Read the paragraph above as it applies
+now — lift three or four of these and adapt them to the decision on the table,
+whether that is something a classmate says in the open round or your own work. The
+last sentence is the durable one either way: learn the shape of a good question here,
+then write your own.*

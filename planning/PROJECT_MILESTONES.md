@@ -38,16 +38,27 @@ exceptions: M1 (assigned in class on day 1), M16 (packages exchanged at the
 Week-13 studio; brief posted with the async module).
 
 Since **D74** the Mon/Wed development moments also include the **ten-minute lab
-meeting** that opens each lecture from Week 2: one student is that lecture's
-**reporter** and spends seven minutes on a decision from their own project and
-the evidence behind it, then three minutes on the room's questions. The report
-is the milestone-in-progress said out loud, and it is deliberately **not
-graded** — the instructor leads from minute 10. What *is* collected from those
-lectures is the weekly notebook itself, under the separate **Lecture Notebooks**
-completion contract (20%, one `nbNN` per week, due the Sunday that ends the
-studio week, graded on completion only). A lecture notebook is **not** a
-milestone and never enters the M-mean; a milestone is never scored on how the
-live report went.
+meeting** that opens each lecture from Week 2, and since **D75** that meeting is
+an **open round with nothing assigned**: the instructor asks the room how the
+projects are going, and the room answers — what was decided since last time, what
+the evidence looks like, where somebody is stuck. It is the
+milestone-in-progress said out loud, by whoever has something to say. **No
+student is designated to report, on any lecture; there is no slot draw, no
+assigned question, and nothing is prepared before class.** Nothing said there is
+**graded** — the instructor leads the lesson from minute 10. What *is* collected
+from those lectures is the weekly notebook itself, under the separate **Lecture
+Notebooks** completion contract (20%, one `nbNN` per week, due the Sunday that
+ends the studio week, graded on completion only). A lecture notebook is **not** a
+milestone and never enters the M-mean; a milestone is never scored on anything
+said in a lab meeting.
+
+*Retired in place.* D74 had populated those ten minutes with a designated
+**reporter** — seven minutes on a decision from their own project, three minutes
+on the room's questions, prepared in a **📣 My Report Plan** notebook cell. D75
+withdrew the designation, the draw and the cell; the drawn roster, both SRL
+scripts and the generator's report-plan constant are kept on disk, unapplied, for
+a future edition. **No milestone, due date, rubric or weight changed with it** —
+the chain below is exactly as D55, D66 and D74 left it.
 
 Meeting numbers `M2…M43` below are MEETINGS (calendar backbone); milestone IDs
 are `M1…M16`.

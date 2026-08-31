@@ -200,11 +200,12 @@ the instructor, and D75 left it untouched.
   beside every lab-meeting brief (lines 1–4 for that lecture's reporter, line 5
   for everyone else). **D75 retired it**: with no reporter and no preparation,
   there is nothing for it to hold. It is no longer injected and must never be
-  authored in a cell source. Deleted from nothing: the `REPORT_PLAN` constant
+  authored in a cell source. Nothing was deleted: the `REPORT_PLAN` constant
   stays verbatim in `scripts/nbbuild.py`, gated off by `INJECT_REPORT_PLAN =
   False`, so flipping that flag back to `True` restores the cell.
 - `### 🎤 SRL Lead Brief`, `### 🎤 My Lead Plan` and
-  `### 🎤 Lead's Questions` — the pre-D74 markers for these three cells.
+  `### 🎤 Lead's Questions` — the pre-D74 markers for the lecture-opening
+  brief, the preparation cell and the questions cell.
 
 D74 retired the Student Research Lead role **in place** and deleted nothing, and
 D75 did the same with the reporter assignment: `project/srl/` (handbook, rubric,
@@ -269,8 +270,9 @@ them. Exempt: nb01 (orientation), nb14 (async), nb13 (conference week — the
 reflection path completes at the Expo and the reflection studio).
 
 The moves sit inside the day's D74 minute frame (Monday **10 / 21 / 12 / 7**,
-Wednesday **10 / 20 / 12 / 8**, both summing to 50; D75 changed no frame). The first ten minutes are
-the lab meeting; the puzzle folds into the front of the investigation block, and
+Wednesday **10 / 20 / 12 / 8**, both summing to 50; D75 changed no frame). The
+first ten minutes are the lab meeting, an open round on the projects with nobody
+assigned; the puzzle folds into the front of the investigation block, and
 the seven moves plus the 📒 row run from minute 10 on. Section boundaries 3 and 4
 are unchanged (31–43 / 43–50 Monday, 30–42 / 42–50 Wednesday), so D22's and D34's
 later-block rulings stand. Friday's 5 / 40 / 5 studio frame is untouched.

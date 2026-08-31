@@ -16,9 +16,9 @@ and no CV-first / test-set machinery. The unit of production is the **week**, an
 its downstream artifacts are the **session guide** (how the instructor runs the
 room) and the **milestone brief** (what the students build).
 
-**Since D74 the week's notebook is itself collected.** Every student submits the
-`nbNN` they worked in class, once a week, graded on completion under the 20%
-**Lecture Notebooks** category. Nothing changes in how a notebook is produced, but
+**Since D74 the week's notebook is itself collected** (D75 changed none of its
+numbers). Every student submits the `nbNN` they worked in class, once a week,
+graded on completion under the 20% **Lecture Notebooks** category. Nothing changes in how a notebook is produced, but
 it is no longer only a teaching surface: what the reader writes in it is what gets
 handed in, so authoring must leave visible room to write and must fit the 50
 minutes. See "The weekly notebook is collected" below.
@@ -44,7 +44,7 @@ Never delete a quiz file or a quiz script; a future edition turns the step back 
 | Datasets + downloadable bundle | `notebooks/data/…`, `notebooks/data/data.zip` | tracked |
 | Session guide | `session_guides/NN_session_guide.md` | ignored (generator tracked) |
 | Milestone brief | `_research_project/2026Fall/milestone_NN_<slug>.md` | tracked |
-| Schedule data (per meeting, incl. the lab-meeting reporter fields) | `scripts/schedule_data/partN.py` | tracked |
+| Schedule data (per meeting, incl. the legacy `srl_*` fields) | `scripts/schedule_data/partN.py` | tracked |
 | Meeting schedule (generated) | `planning/MEETING_SCHEDULE.{csv,md}` | tracked |
 | Public schedule page (generated) | `schedule.qmd` → `docs/` | tracked |
 | Instructor tab (private-repo badges) | `instructor.qmd` → `docs/instructor.html` | tracked (ships openly, D35) |
@@ -79,11 +79,17 @@ Every topic notebook must carry the blocks the template and the v2 rules require
 - a **Sources & Provenance** section with real, retrievable citations only
   (CLAUDE.md → Evidence-Integrity), and the setup discipline `SEED = 464`, no
   seaborn;
-- per lecture, a `### 📣 Lab Meeting: Today's Reporter` brief right after
-  `# Lecture N`, then the `### 🧩 Research Puzzle`, with the lecture's three
-  questions in `### 🔎 Questions to Keep You Thinking` just past the puzzle (D74;
-  `validate_notebooks.py` counts the first two per lecture). Do **not** author the
-  `### 📣 My Report Plan` cell: `nbbuild.py` injects it beside every brief.
+- per lecture, a `### 📣 Lab Meeting` cell right after `# Lecture N`, then the
+  `### 🧩 Research Puzzle`, with the lecture's three questions in
+  `### 🔎 Questions to Keep You Thinking` just past the puzzle (D74, heading
+  shortened by D75; `validate_notebooks.py` counts the first two per lecture and
+  matches the lab-meeting cell by the string `Lab Meeting` in a level-3 heading).
+  The cell says plainly that nobody is assigned to report, that nothing is
+  prepared in advance, and that none of it is graded. The
+  `### 📣 My Report Plan` cell is **retired**: D75 ended the reporter
+  assignment, so `nbbuild.py` no longer injects it (`INJECT_REPORT_PLAN = False`,
+  with the `REPORT_PLAN` constant kept for a future edition). Never author it in
+  a cell source.
 
 **A2. Build the notebook.** One command does the whole chain:
 
@@ -106,17 +112,17 @@ runs `voice_lint_notebooks.py` whenever a student notebook is written.
 
 ### Phase B — Schedule (only if sequencing changed)
 
-Skip this phase if the week's placement, driving questions, reporter assignment,
-or milestone mapping did not change.
+Skip this phase if the week's placement, driving questions, lecture focus, or
+milestone mapping did not change.
 
-**B1. Edit the meeting data** in `scripts/schedule_data/partN.py`. This is where
-each Mon/Wed lecture carries its **`srl_slot`** — since D74 the **lab-meeting
-reporter slot** for that lecture — and its **`srl_focus`** (that lecture's puzzle
-focus). The field keys keep their historical `srl_*` names for machine continuity
-with the generators and the schedule page; what they now name is the reporter, not
-a lead. The draw itself carries over unchanged from D69/D71 (25 slots, 6 students,
-4 or 5 each), so do not re-draw. Fridays are studios and async meetings are
-self-contained; both leave these fields empty (they are in `OPTIONAL_EMPTY`).
+**B1. Edit the meeting data** in `scripts/schedule_data/partN.py`. Each Mon/Wed
+lecture carries an **`srl_focus`** (that lecture's puzzle or challenge focus)
+beside the legacy **`srl_slot`** field. The field keys keep their historical
+`srl_*` names for machine continuity with the generators and the schedule page.
+**D75 assigns nobody**: it withdrew the D69/D71 draw for this edition, so there is
+no slot to allocate, no student to name, and nothing to re-draw. Fridays are
+studios and async meetings are self-contained; both leave these fields empty (they
+are in `OPTIONAL_EMPTY`).
 
 **B2. If the calendar backbone itself moved** (a date, day, or modality changed),
 regenerate the verified backbone first — `build_meeting_schedule.py` validates
@@ -146,7 +152,9 @@ with **no dates and no meeting numbers** (CLAUDE.md → Lecture Labels, Never Da
 The printed run-of-show frames come from `course_config.yaml lab_meeting:`, which
 D74 set to Monday **10 / 21 / 12 / 7** and Wednesday **10 / 20 / 12 / 8** (Friday's
 studio stays **5 / 40 / 5**); each frame's first ten minutes are the lab meeting,
-and each set still sums to 50.
+and each set still sums to 50. D75 left every frame alone and changed only what
+happens inside those ten minutes: an open round on the projects, with nobody
+assigned to present.
 
 ### Phase D — Milestone brief
 
@@ -197,7 +205,7 @@ private instructor repo + GitHub auth is the protection. Always publish through
 
 ---
 
-## The weekly notebook is collected (D74)
+## The weekly notebook is collected (D74, content list amended D75)
 
 The lecture notebook is a graded artifact, so the production pipeline now has a
 consumer it did not have before: the student's own submission.
@@ -207,17 +215,18 @@ consumer it did not have before: the student's own submission.
   Fri Dec 11). The dated list is `planning/LECTURE_NOTEBOOK_SCHEDULE.md`
   (generated); the machine spine is `course_config.yaml lecture_notebooks:`.
 - **How it is graded.** Completion only: worked through and handed in. Never on
-  whether the answers came out right, and never on how that student's live lab
-  meeting report went. Credit `1.0` on time, `0.5` within seven days, `0`
+  whether the answers came out right, and never on anything a student said in a
+  lab meeting. Credit `1.0` on time, `0.5` within seven days, `0`
   otherwise; `N = 16`, `d = 2`; the block is
   `20.0 × (sum of the highest 14 credits) / 14`.
 - **Where it is submitted.** On the course platform, by hand, like the milestone
   briefs (Phase D3). There is no generator for the LMS side.
 - **What that changes in Phase A.** Every writing move must leave a visible,
-  fillable place in the notebook (the 📣 report-plan lines, the seven in-class
-  moves, the 📒 ledger row per lecture), the required path must be completable
-  inside the 50 minutes, and nothing below a lecture's `### ⏸` line — or behind a
-  🏠 label — may ever be needed for the credit. The milestone studio notebooks
+  fillable place in the notebook (the seven in-class moves and the 📒 ledger
+  row per lecture; D75 removed the 📣 report-plan cell, so the content list
+  names no lab-meeting cell), the required path must be completable inside the 50
+  minutes, and nothing below a lecture's `### ⏸` line — or behind a 🏠 label —
+  may ever be needed for the credit. The milestone studio notebooks
   (`msNN`) are unaffected: they arrive with their milestone, not under this
   category.
 
@@ -256,7 +265,7 @@ E  sync_instructor_repo.sh ─► [make_dataset_zip] ─► quarto render ─►
 ```
 
 Phase A is always required. Phase B runs only when the week's placement, questions,
-reporter assignment, or milestone mapping change. The schedule (B) must be current before
+lecture focus, or milestone mapping change. The schedule (B) must be current before
 the session guides (C) are regenerated, because the guides are parsed from
 `MEETING_SCHEDULE.csv`.
 
@@ -269,7 +278,7 @@ the session guides (C) are regenerated, because the guides are parsed from
 | A1 author cell source | ✅ | review the compass declaration + solutions |
 | A2 `nbbuild.py` build/execute/strip | ✅ | — |
 | A3 `audit_sources.py` | ✅ | — |
-| B schedule data + regenerate | ✅ | confirm the reporter draw |
+| B schedule data + regenerate | ✅ | confirm the week's focus lines |
 | C `build_session_guides.py` | ✅ | — |
 | D1 milestone brief | ✅ | approve scope |
 | D3 Brightspace page | — | ✅ (copy from the brief) |
@@ -301,4 +310,8 @@ retired for this edition by D58, with the banks and builders kept. Updated
 2026-08-31 for D74: the Student Research Lead became the ten-minute lab meeting
 (retired in place — no SRL file or script is ever deleted), the MW frames became
 10 / 21 / 12 / 7 and 10 / 20 / 12 / 8, and the weekly lecture notebook became a
-collected 20% completion contract.*
+collected 20% completion contract. Updated again the same day for D75: the lab
+meeting keeps its ten minutes and loses its reporter — no assignment, no draw, no
+preparation, and no injected 📣 My Report Plan cell — with the frames, the
+weights and the Lecture Notebooks contract untouched, and every retired
+instrument kept on disk.*

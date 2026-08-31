@@ -138,8 +138,9 @@ Two design passes found that the fear the format produced was design-caused,
 and that its largest source was being graded on teaching unfamiliar
 quantitative content to peers. D74 removed that source rather than softening
 it, replacing the lead with an ungraded **reporter** who spoke for seven
-minutes about their own project and took three minutes of questions.
-**Nothing is deleted.** All of `project/srl/` (handbook, rubric,
+minutes about their own project and took three minutes of questions — a model
+argued at the time to rehearse the exact performance the Expo grades in
+November. **Nothing is deleted.** All of `project/srl/` (handbook, rubric,
 Socratic question bank, AI integration guide, prep template, peer feedback
 form, submission instructions, absent-lead and instructor-intervention
 protocols), `scripts/assign_srl_slots.py`, and `scripts/build_srl_packet.py`
@@ -149,9 +150,13 @@ is kept in full and re-owned to the instructor (in the notebooks as
 **🔎 Questions to Keep You Thinking**).
 
 **D75 withdrew the assignment as well — this passage's slot draw is retired in
-place.** D74 had carried the D69/D71 draw over unchanged (25 slots, drawn
-`4/4/4/4/4/5` at six students) and renamed what it produced, so each lecture had
-a reporter instead of a lead. **That is no longer in force.** No reporter is
+place.** D74 had carried the D69/D71 draw over unchanged — 25 slots, drawn
+`4/4/4/4/4/5` at six students, assigned at random at the start of the semester
+with no sequential rotation and no seats — and renamed what it produced, so each
+lecture had a reporter instead of a lead. That lecture's reporter filled the
+**📣 Lab Meeting: Today's Reporter** brief's companion **📣 My Report Plan** cell
+(lines 1–4) before class and everyone else filled its last line, so the whole room
+arrived with a question. **That is no longer in force.** No reporter is
 designated on any lecture, the draw is withdrawn for this edition, no question is
 assigned, and nothing is prepared. The reasoning: a designated, dated,
 individually-owned slot is still a performance with your name on a calendar, and

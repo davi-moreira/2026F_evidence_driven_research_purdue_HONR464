@@ -45,15 +45,16 @@ numbers.*
   largely self-addressed: they describe how to handle a spreading error, a dead room,
   and a missed AI failure while running the lecture yourself, and the "flag, don't
   grab" instinct applies to the class rather than to a lead.
-- **Where they still apply to a student** is the ten-minute lab meeting: minutes 0–7,
-  where the reporter walks the room through a decision from their own project, and
-  minutes 7–10, where the room questions them. That is a student's room for ten
-  minutes, and the whole "step in on purpose, then hand it straight back" stance
-  governs it. The report is **ungraded**, so nothing here is a scoring judgement:
-  protect the person, keep the clock, and let a wobble be a wobble.
+- **Where they still apply to students** is the ten-minute lab meeting, which under
+  D75 is an **open round**: ask how the projects are going, and whoever has something
+  says it. Nobody is designated, nobody prepared anything, and nothing said there is
+  graded, so none of those ten minutes is a scoring judgement. The "step in on
+  purpose, then hand it straight back" stance still governs them: protect the person,
+  keep the clock, and let a wobble be a wobble. Silence is not something to punish; it
+  is a prompt to ask a smaller and more concrete question.
 - **The checkpoints moved.** See the corrected frames under intervention 4.
 - **Nothing is graded live any more.** The rubric section below is retired, and so
-  are the prep-review touchpoints, since no preparation is submitted in advance.
+  are the prep-review touchpoints, since nothing is submitted or prepared in advance.
 
 ---
 
@@ -148,13 +149,13 @@ instructor is the visible clock so the lead does not have to watch it.
 
 ## Grading live with the rubric  ⛔ *(retired procedure)*
 
-> ⛔ **Nothing is graded live this edition.** The report is ungraded and
-> `srl_rubric.md` is not applied. What is collected is the week's lecture notebook
-> from every student, on completion, under **Lecture Notebooks (20%)** — due 11:59
-> PM on the Sunday that ends the studio week, credit `1.0` / `0.5` within seven
+> ⛔ **Nothing is graded live this edition.** Nothing said in the lab meeting is
+> graded and `srl_rubric.md` is not applied. What is collected is the week's lecture
+> notebook from every student, on completion, under **Lecture Notebooks (20%)** — due
+> 11:59 PM on the Sunday that ends the studio week, credit `1.0` / `0.5` within seven
 > days / `0`, `N = 16`, `d = 2`. The section below is kept for a future edition;
 > its habit of noting specific moments rather than impressions is still worth
-> keeping for oral feedback after a report.
+> keeping for whatever you say back to a student in the open round.
 
 Score `srl_rubric.md`'s nine rows in real time, on a printed or on-screen copy,
 during the session itself. Waiting until afterward loses the specific moments the
@@ -177,13 +178,12 @@ score should rest on.
 
 ## Prep-review touchpoints  ⛔ *(retired procedure)*
 
-> ⛔ **No preparation is submitted in advance.** There is no day-before notebook
-> review and no one-week-out brief confirmation, because the reporter prepares ten
-> minutes on their own project and hands in nothing for it. The lecture's own cell
-> is now `### 📣 Lab Meeting: Today's Reporter`, whose run of show is the
-> instructor's, and `### 📣 My Report Plan` is filled in by the reporter (lines 1–4)
-> and by everyone else (line 5, the question they bring). A light touchpoint worth
-> keeping: a week out, remind the reporter which decision they might report on.
+> ⛔ **No preparation happens at all.** There is no day-before notebook review, no
+> one-week-out brief confirmation, and no advance request of any kind, because under
+> D75 nobody is assigned to the lab meeting and nobody prepares for it. The lecture's
+> own cell is now `### 📣 Lab Meeting`, whose run of show is the instructor's, and
+> the `### 📣 My Report Plan` cell D74 injected below it was removed from every
+> notebook. The only thing left to prepare is your own opening question.
 
 The score is shaped before the session, at two fixed touchpoints.
 

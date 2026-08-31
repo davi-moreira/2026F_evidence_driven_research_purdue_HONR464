@@ -36,26 +36,26 @@ is kept whole for a future edition. This section is what is actually true in Fal
 2026.*
 
 Every Monday and Wednesday lecture from Week 2 opens with a **ten-minute lab
-meeting**. One of you is that lecture's **reporter**, and the reporting slots were
-drawn at random at the start of the semester exactly as the lead slots were, so you
-know yours early.
+meeting**, and it is an **open round**. Nobody is assigned to it, on any lecture.
+There is no draw, no list of dates, and nothing to get ready the night before.
 
-- **Minutes 0–7 — you report.** Seven minutes on one decision from **your own
-  project** and the evidence behind it. Not the week's concept, not a reading: a
-  decision you actually made, what you had to go on, and what you are still unsure
-  about. You are the only person in the room who has been inside your project, so
-  you are never being asked to teach unfamiliar material to your classmates.
-- **Minutes 7–10 — the room asks.** Three minutes of questions from your
-  classmates. When it is someone else's turn, `socratic_question_bank.md` in this
-  folder is where to find the question worth asking.
-- **From minute 10 — the instructor leads.** Accuracy, the AI tooling and the clock
-  are the instructor's, not yours. The 🧩 Research Puzzle that used to open the
-  lecture now folds into the front of the investigation block, opened by the
+- **Minutes 0–10 — the instructor asks the room how the projects are going.** You
+  answer when you have something to say: what you decided since last time, what your
+  evidence is starting to look like, where you are stuck. You speak from your own
+  project, the one thing in the room you have actually been inside, so you are never
+  asked to explain unfamiliar material to your classmates.
+- **Questions run both ways in those ten minutes.** When a classmate says where they
+  are, `socratic_question_bank.md` in this folder is where to find the question worth
+  asking back.
+- **From minute 10 — the instructor leads the lesson.** Accuracy, the AI tooling and
+  the clock are the instructor's, not yours. The 🧩 Research Puzzle that used to open
+  the lecture now folds into the front of the investigation block, opened by the
   instructor.
 
-**Your report is not graded.** There is no live rubric, no preparation to submit the
-day before, and no penalty attached to how the ten minutes go. It is a rehearsal for
-the poster presentation and the Expo in November, which are graded.
+**Nothing said in the lab meeting is graded.** There is no live rubric, nothing to
+submit in advance, no slot with your name on it, and no penalty attached to how the
+ten minutes go. It is unpressured rehearsal for the poster presentation and the Expo
+in November, which are graded.
 
 ### What is graded instead: Lecture Notebooks (20%)
 
@@ -74,9 +74,9 @@ the
 notebook `nbNN` you worked in class, due **11:59 PM on the Sunday that ends that
 studio week** (Week 16 closes Friday Dec 11, the last class day). It is graded on
 **completion only** — worked through and handed in — never on whether your answers
-came out right, and never on how your report went. Credit is `1.0` on time, `0.5`
-within seven days, `0` after that. Across the `16` weeks the lowest `2` credits drop
-automatically, so
+came out right, and never on anything you did or did not say in a lab meeting.
+Credit is `1.0` on time, `0.5` within seven days, `0` after that. Across the `16`
+weeks the lowest `2` credits drop automatically, so
 
 ```
 lecture notebook points = 20.0 × (sum of your highest 14 credits) / 14
@@ -190,10 +190,11 @@ the ledger.
 
 ## Your slots
 
-> **Still true, under a new name.** The same random draw now names each lecture's
-> **reporter** rather than its lead. Nothing was redrawn, the counts per person are
-> unchanged, and the posting on the course platform is still the single source of
-> truth for your dates.
+> ⛔ **Withdrawn — you hold no slots.** D75 withdrew the draw itself, so no lecture
+> carries your name, nothing was renamed or reassigned, and there are no dates for
+> you to look up. If Week 1 told you which meetings were yours, those slots are
+> withdrawn; the course platform carries the correction. The section below describes
+> the retired assignment and is kept for a future edition.
 
 Lead slots are **assigned at random at the beginning of the semester**, so you
 will know which lectures are yours from the first week. Nothing rotates and
@@ -209,12 +210,11 @@ This handbook never prints dates on purpose, so it never goes stale.
 ## Your SRL Lead Brief  ⛔ *(retired procedure)*
 
 > ⛔ **Renamed and re-owned.** The cell described below still opens every lecture,
-> but it is now `### 📣 Lab Meeting: Today's Reporter` and its run of show belongs
-> to the instructor. The planning cell injected below it is now `### 📣 My Report
-> Plan`, whose first four lines are for that lecture's reporter and whose fifth is
-> for everyone else, so the whole room arrives with a question. The lecture's
-> question set is now `### 🔎 Questions to Keep You Thinking`, every question kept
-> word for word.
+> but it is now `### 📣 Lab Meeting` and its run of show belongs to the instructor.
+> The planning cell D74 injected below it, `### 📣 My Report Plan`, was removed by
+> D75: no notebook carries one, because nothing about the lab meeting is prepared in
+> advance. The lecture's question set is now `### 🔎 Questions to Keep You Thinking`,
+> every question kept word for word.
 
 Every led lecture opens with an **SRL Lead Brief** at the very start of that
 lecture's notebook. It is a normal, student-visible section, so the whole class
@@ -237,9 +237,9 @@ the moves the rubric grades; everything else is yours to make interesting.
 > ⛔ **The notebook is no longer submitted the day before.** You now hand in the
 > week's notebook on completion, at **11:59 PM on the Sunday that ends the studio
 > week**, under **Lecture Notebooks (20%)** — not the day before one person's
-> lecture, and not only if you are the one reporting. To prepare for your ten minutes as
-> reporter you submit nothing in advance: you bring one decision from your own
-> project and the evidence behind it. The rhythm below is the retired SRL
+> lecture, and on the same terms for everyone. For the lab meeting itself there is
+> nothing to prepare at all: no submission, no plan, no assigned question. You bring
+> whatever your project has actually been doing. The rhythm below is the retired SRL
 > preparation timeline, kept for a future edition.
 
 Good SRL sessions are built, not improvised. Here is the rhythm.
@@ -361,19 +361,18 @@ it keeps your session accurate.
 
 ## Logistics this semester, in one place
 
-- Your **reporting slots** were assigned at random at the start of the semester and
-  are posted on the **course platform** in Week 1. Look your dates up on the
-  **Schedule page** for the format and the notebook.
-- You prepare your ten minutes yourself, and you **submit nothing in advance** for
-  them. Bring one decision from your own project and the evidence behind it.
+- **You hold no slots.** Nobody is assigned to the lab meeting, on any lecture, so
+  there is no draw and no list of dates to check.
+- **You prepare nothing for it**, in advance or otherwise. When the instructor asks
+  how the projects are going, you say where yours actually stands.
 - You hand in **the week's lecture notebook**, worked through, by **11:59 PM on the
   Sunday that ends that studio week** (Week 16 closes Friday Dec 11). That is
   **Lecture Notebooks (20%)**, and it is graded on completion only.
 - Each session still ends with the class recording an **AI Research Ledger** line and
   a **Claim Ticket**, the two records that travel with every session in this course.
-- **Your report is not graded**, so the SRL rubric in this folder is not applied and
-  the peer feedback form is not collected. Feedback on a report happens live, in the
-  three minutes of questions.
+- **Nothing said in the lab meeting is graded**, so the SRL rubric in this folder is
+  not applied and the peer feedback form is not collected. Whatever you hear back
+  happens live, inside the ten minutes themselves.
 
 ---
 

@@ -43,7 +43,8 @@ one person's slot.** Instead, you hand in **the week's lecture notebook**, the
 - **Due 11:59 PM on the Sunday that ends that studio week.** Week 16 closes Friday
   Dec 11, the last class day.
 - **Graded on completion only.** Worked through and handed in. Never on whether your
-  answers came out right, and never on how your ten minutes as reporter went.
+  answers came out right, and never on anything you did or did not say in a lab
+  meeting.
 - **Credit** is `1.0` on time, `0.5` within seven days, `0` after that. Across the
   `16` weeks the lowest `2` credits drop automatically, so
   `lecture notebook points = 20.0 × (sum of your highest 14 credits) / 14`.
@@ -69,9 +70,10 @@ The dated list lives in `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, and your course
 platform carries the same dates. Where the platform and this repository disagree on
 a date, the platform is right.
 
-Your ten minutes as that lecture's **reporter** are separate and **ungraded**: seven
-minutes on a decision from your own project and the evidence behind it, then three
-minutes of questions from the room. Nothing is handed in for them.
+The ten-minute **lab meeting** that opens each Monday and Wednesday lecture is
+separate, and it collects nothing at all. It is an open round: the instructor asks
+how the projects are going and the room answers. Nobody is assigned to it, nothing is
+prepared for it, and nothing said in it is graded.
 
 ---
 
@@ -112,9 +114,10 @@ projects. Nothing you write here is graded right or wrong.
 
 ## The rubric your session is scored on  ⛔ *(not applied this edition)*
 
-> ⛔ **This rubric is not applied in Fall 2026.** Your report is ungraded, so no
-> live score is taken. The nine rows are reproduced below exactly as written, for a
-> future edition that reinstates the role.
+> ⛔ **This rubric is not applied in Fall 2026.** Nobody leads or reports, and
+> nothing said in the lab meeting is graded, so no live score is taken. All nine rows
+> are reproduced below exactly as written, for a future edition that reinstates the
+> role.
 
 You are graded **live**, during your session, on the nine rows below. Each lead
 is scored on its own, and together those scores make up the SRL share of your

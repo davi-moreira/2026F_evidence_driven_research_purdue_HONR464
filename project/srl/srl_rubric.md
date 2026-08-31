@@ -25,10 +25,11 @@
 > cell from every notebook; the lecture's own cell is now simply
 > `### 📣 Lab Meeting`.)*
 
-> ⛔ **This rubric is not applied in Fall 2026.** Your ten minutes as reporter
-> are ungraded, so no live score is taken against the nine rows below. They are
-> kept exactly as written, every row and every band, for a future edition that
-> reinstates the role. What is graded instead is **Lecture Notebooks (20%)**, on
+> ⛔ **This rubric is not applied in Fall 2026.** There is no lead and no reporter
+> to score: the ten-minute lab meeting is an open round, nobody is assigned to it and
+> nothing said in it is graded, so no live score is taken against the nine rows below.
+> All nine are kept exactly as written, every row and every band, for a future edition
+> that reinstates the role. What is graded instead is **Lecture Notebooks (20%)**, on
 > completion only.
 
 *How your leading is graded. Read this before your first slot so you know what
