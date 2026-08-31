@@ -51,8 +51,8 @@ SOURCES = REPO / "_production_kit" / "nb_sources"
 # lecture's ⏸ line is optional depth, never homework.
 FRAME_MON = (
     "🗺️ **Today's frame (Monday, 10 / 21 / 12 / 7):** open with the 📣 **lab "
-    "meeting**: one reporter, one decision from their own project, the room's "
-    "questions · then the 🧩 puzzle "
+    "meeting**: an open round on where the projects stand, with no one "
+    "assigned and nothing prepared · then the 🧩 puzzle "
     "and 🔮 **Predict First** · investigate with 🛠️ **Run the Study** and "
     "your AI · verify with 🔍 **Read the Evidence** · drill 📝 **Practice** "
     "aloud and take ⚖️ **Make a Design Choice** · close in the room with "
@@ -61,8 +61,8 @@ FRAME_MON = (
     "everything below the ⏸ line are optional depth.")
 FRAME_WED = (
     "🗺️ **Today's frame (Wednesday, 10 / 20 / 12 / 8):** open with the 📣 "
-    "**lab meeting**: one reporter, one decision from their own project, the "
-    "room's questions · then the 🧩 "
+    "**lab meeting**: an open round on where the projects stand, with no "
+    "one assigned and nothing prepared · then the 🧩 "
     "challenge, a spoken 📝 **Practice** retrieval drill, and 🔮 **Predict "
     "First** · attack the problem with 🛠️ **Run the Study**, 🔁 modifying "
     "the prompt and 🔬 interrogating what comes back · verify with 🔍 **Read "
@@ -89,16 +89,20 @@ FRAME_SPECIAL = {13: FRAME_CONF}   # conference week: the path ends at the Expo
 
 LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
 
-# D74: every lecture opens with a LAB MEETING. One student is that lecture's
-# reporter and brings a decision from their OWN project; the room questions it.
-# The report plan is the one thing the brief above does not already give them,
-# so it is injected at build time next to the frame, keeping all 25 brief
-# locations identical and the gitignored sources free of it. Line 5 is for
-# everyone who is not reporting, so the whole room arrives with a question.
-# The notebook itself is collected WEEKLY from every student and graded on
-# completion (D74). nb01's briefs are the instructor-led Week-1 models and take
-# no report plan (FRAME_EXEMPT).
+# D74/D75: every lecture opens with a LAB MEETING. D75 (2026-08-31) withdrew
+# the assigned-reporter model: nobody is designated, nothing is prepared in
+# advance, and the instructor simply asks the room how the projects are going
+# for the first ten minutes. The 📣 My Report Plan cell that D74 injected here
+# is therefore RETIRED, not deleted: REPORT_PLAN below is kept verbatim for a
+# future edition that reinstates the role, and INJECT_REPORT_PLAN gates it off.
+# The notebook itself is still collected WEEKLY from every student and graded on
+# completion (D74), and that contract no longer names any lab-meeting cell.
 BRIEF_MARK = re.compile(r"(?m)^\s*###[^\n]*Lab Meeting")
+
+#: D75: False retires the per-lecture report-plan cell. Set True to bring the
+#: assigned-reporter model back; nothing else needs changing.
+INJECT_REPORT_PLAN = False
+
 REPORT_PLAN = (
     "### 📣 My Report Plan\n\n"
     "*If this lecture's lab-meeting slot is yours, fill lines 1–4 in before "
@@ -228,7 +232,8 @@ def _write_instructor(cells, out: Path, frames_nb: int | None = None) -> Path:
             if m and frames_nb is not None and frames_nb not in FRAME_EXEMPT:
                 nb.cells.append(nbformat.v4.new_markdown_cell(
                     _frame_for(int(m.group(1)), n_lectures, frames_nb)))
-            if (BRIEF_MARK.search(source) and "### 📣 My Report Plan" not in source
+            if (INJECT_REPORT_PLAN and BRIEF_MARK.search(source)
+                    and "### 📣 My Report Plan" not in source
                     and frames_nb is not None and frames_nb not in FRAME_EXEMPT):
                 nb.cells.append(nbformat.v4.new_markdown_cell(REPORT_PLAN))
         elif kind == "code":

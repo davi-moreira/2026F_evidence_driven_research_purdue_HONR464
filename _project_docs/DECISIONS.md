@@ -4147,3 +4147,65 @@ Evidence Defense, which would give the oral outcome direct graded evidence
 without disturbing any D74 top-level weight; (c) finish propagating D54, whose
 "Instructor/TA Evaluation is 100% the M13 poster" rule is still contradicted by
 `project/final_dossier/evidence_defense_protocol.md` and by `syllabus.qmd`.
+
+---
+
+## D75 — The lab meeting loses its reporter: an open round, nothing assigned (2026-08-31)
+
+**Ruling.** The lab meeting **stays** as the opening moment of every Mon/Wed
+lecture from Week 2, ten minutes, exactly where D74 put it. What changes is
+everything about how it is populated:
+
+- **No reporter is assigned.** Nobody is designated to present, on any lecture.
+- **No slot draw.** The D69/D71 assignment is **withdrawn** for this edition.
+- **No assigned question or request.** Nothing of the form "lines 1 to 4 if the
+  slot is yours, line 5 if it is not." The room is asked nothing in advance.
+- **No preparation.** Nothing about the lab meeting is prepared before class, by
+  anyone.
+- **The 📣 My Report Plan cell is removed** from every notebook.
+
+What it is instead: **the instructor asks the room how the projects are going**,
+and the room answers. What was decided since last time, what the evidence looks
+like, where somebody is stuck. From minute 10 the instructor leads the lesson, as
+D74 already ruled.
+
+**Why.** D74 removed the fear of teaching unfamiliar content but kept a
+designated, dated, individually-owned slot with a preparation cell attached. That
+is still a performance with your name on a calendar. Davi asked for the moment
+without the assignment. An open round has no slot to dread, needs no draw, no
+packet, no announcement and no swap rule, and it reaches every student every
+lecture instead of one student every fourth lecture.
+
+**Nothing else about D74 moves.** The Mon 10/21/12/7 and Wed 10/20/12/8 frames
+stand, both still summing to 50, and section boundaries 3 and 4 remain untouched,
+so every D22 and D34 ruling survives. The weight table is unchanged:
+**attendance 1 · participation 9 · IYT Practice 15 · Lecture Notebooks 20 · Final
+Project 55 = 100**. The Lecture Notebooks completion contract is unchanged in
+every number — `N = 16`, `d = 2`,
+`20.0 × (sum of the highest 14 credits) / 14`, the Sunday rule, D74a's Fri Sep 4
+Week-1 override and the Fri Dec 11 Week-16 close. Only its *content* list changes:
+it no longer names any lab-meeting cell, because there no longer is one.
+
+**Notebook cells.** `### 📣 Lab Meeting: Today's Reporter` → **`### 📣 Lab
+Meeting`**, carrying one fixed stanza that states plainly that nobody is assigned
+and nothing is prepared. The injected `### 📣 My Report Plan` cell is gone. The
+🧩 Research Puzzle and the 🔎 Questions to Keep You Thinking guide are untouched.
+
+**Ruling — delete nothing, again.** As under D74 and D58 before it, retirement
+never means deletion. Kept on disk, unapplied: all of `project/srl/`,
+`scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py`, the drawn roster in
+`_adm/roster/`, and `nbbuild.py`'s `REPORT_PLAN` constant, which is now gated by
+`INJECT_REPORT_PLAN = False`. Setting that flag back to `True` and restoring the
+draw is the whole cost of reinstating the reporter model in a future edition.
+
+**⚠ Action for Davi, outside the repository.** If the Week-1 announcement
+`_announcements/03_srl_slots_and_logistics.md` was already posted, students have
+been told they hold slots on named dates. **Those slots are withdrawn and they
+need to hear it**, in a short follow-up announcement: the lab meeting stays, no
+one is assigned, nothing is prepared, and nothing about it is graded. The
+repository cannot do this; the platform is where students actually read.
+
+**Open, unchanged from D74a.** Codex's three referred questions still stand:
+moving the notebook off Sunday, splitting the 10-point Instructor/TA Evaluation
+between the M13 poster and the Evidence Defense, and finishing the D54
+propagation. D75 touches none of them.

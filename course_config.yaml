@@ -121,44 +121,53 @@ ai_policy:
     also_permitted: "Microsoft Copilot (Purdue-provided) and other tools, with disclosure"
 
 # ---------------------------------------------------------------------------
-# The LAB MEETING (D74, 2026-08-31). Supersedes the Student Research Lead (SRL)
-# system as the class format. Every Mon/Wed lecture from Week 2 opens with a
-# ten-minute lab meeting: ONE student is that lecture's reporter and brings a
-# decision from their OWN project (7 min), then the room questions it (3 min).
-# The reporter does not teach the lecture's concept and is not graded on the
-# report — the instructor leads the investigation from minute 10 and owns
-# accuracy, the AI tooling and the clock. What IS graded is the lecture
-# notebook, collected weekly from EVERY student on completion; see
-# lecture_notebooks: below.
+# The LAB MEETING (D74, amended by D75 on 2026-08-31). Supersedes the Student
+# Research Lead (SRL) system as the class format. Every Mon/Wed lecture from
+# Week 2 opens with a ten-minute lab meeting: the INSTRUCTOR asks the room how
+# the projects are going, and the room answers. From minute 10 the instructor
+# leads the lesson and owns accuracy, the AI tooling and the clock.
 #
-# D74 RETIRES the SRL grade category and the live 9-row rubric, and DELETES
-# nothing: project/srl/ (handbook, rubric, question bank, AI integration guide,
-# prep template, peer feedback form, submission instructions, absent-lead and
-# intervention protocols), scripts/assign_srl_slots.py and
-# scripts/build_srl_packet.py are all KEPT for a future edition, exactly as D58
-# kept the quiz banks. The random draw itself CARRIES OVER unchanged: 25 slots
-# over 6 students is still 4/4/4/4/4/5, one reporter per lecture.
+# D75 WITHDREW the assigned-reporter model D74 had introduced. There is NO
+# designated reporter, NO slot assignment, NO prepared report and NO assigned
+# question. Nothing about the lab meeting is prepared in advance and nothing
+# about it is graded. It is a standing check-in, not a performance, and it may
+# never acquire an assignment mechanic without a new ruling.
+#
+# What IS graded is the lecture notebook, collected weekly from EVERY student
+# on completion; see lecture_notebooks: below. That contract names no
+# lab-meeting cell.
+#
+# D74/D75 RETIRE the SRL grade category, the live 9-row rubric, the slot draw
+# and the 📣 My Report Plan cell, and DELETE nothing: project/srl/ (handbook,
+# rubric, question bank, AI integration guide, prep template, peer feedback
+# form, submission instructions, absent-lead and intervention protocols),
+# scripts/assign_srl_slots.py, scripts/build_srl_packet.py, the drawn roster in
+# _adm/roster/ and nbbuild.py's REPORT_PLAN constant are all KEPT for a future
+# edition, exactly as D58 kept the quiz banks.
 # This block was named `srl:` before D74.
 # ---------------------------------------------------------------------------
 lab_meeting:
-  reporting_lectures: 25           # all Mon/Wed lectures except Week 1 (M1, M2)
-  reports_per_student: "4 or 5"    # 25 slots / 6 students; the remainder is drawn
-  assignment: "random draw at the start of the semester — no sequential rotation, no seats; the D69/D71 draw carries over unchanged"
-  brief_home: "each lecture's 📣 Lab Meeting brief opens that lecture in its notebook"
-  report_minutes: 7                # the reporter's own-project report
-  question_minutes: 3              # the room's questions to the reporter
-  graded: false                    # the live report carries no score (D74)
-  prep_cadence: "fill 📣 My Report Plan before class; the notebook itself is submitted weekly under lecture_notebooks:"
-  first_slot_meeting: 4            # Mon Aug 31 (first lab meeting)
-  model: "report a decision from your own project, then take the room's questions"
-  retired_instrument: "project/srl/srl_rubric.md — KEPT on disk, not applied this edition"
+  lectures_with_lab_meeting: 25    # all Mon/Wed lectures except Week 1 (M1, M2)
+  reporter: none                   # D75: nobody is designated, ever
+  assignment: "none — D75 withdrew the slot draw; no student is assigned to present and no question is assigned"
+  brief_home: "each lecture's 📣 Lab Meeting cell opens that lecture in its notebook"
+  minutes: 10                      # one open round, not a timed report
+  prepared_in_advance: false       # D75: nothing is prepared, by anyone
+  graded: false                    # nothing said in the lab meeting carries a score
+  prep_cadence: "none — come able to say where your project actually is; the notebook is submitted weekly under lecture_notebooks:"
+  first_meeting: 4                 # Mon Aug 31 (first lab meeting)
+  model: "the instructor asks the room how the projects are going, and the room answers"
+  retired_instruments:             # KEPT on disk, not applied this edition
+    - "project/srl/srl_rubric.md — the live 9-row SRL rubric"
+    - "scripts/nbbuild.py REPORT_PLAN — the 📣 My Report Plan cell (INJECT_REPORT_PLAN = False)"
+    - "the D69/D71 slot draw and _adm/roster/2026F_HONR46400_srl_assignment.csv"
   monday_sections:                 # minutes must sum to 50
-    - {name: "Lab meeting: reporter and the room", min: 10}
+    - {name: "Lab meeting: how the projects are going", min: 10}
     - {name: "Guided AI research-partner investigation", min: 21}
     - {name: "Human verification + instructor formalization", min: 12}
     - {name: "Decision and defense", min: 7}
   wednesday_sections:
-    - {name: "Lab meeting: reporter and the room", min: 10}
+    - {name: "Lab meeting: how the projects are going", min: 10}
     - {name: "Intensive applied AI laboratory", min: 20}
     - {name: "Peer defense and adversarial questioning", min: 12}
     - {name: "Transfer to the final project", min: 8}

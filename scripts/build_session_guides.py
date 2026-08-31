@@ -54,7 +54,7 @@ for _day, _secs in SRL_SECTIONS.items():
     _total = sum(s["min"] for s in _secs)
     assert _total == _MEETING_MIN, (
         f"{_day} SRL sections sum to {_total} min, expected {_MEETING_MIN}")
-FIRST_SRL_MEETING = _SRL["first_slot_meeting"]
+FIRST_SRL_MEETING = _SRL["first_meeting"]
 
 COLAB = ("https://colab.research.google.com/github/"
          "davi-moreira/2026F_evidence_driven_research_purdue_HONR464/"
