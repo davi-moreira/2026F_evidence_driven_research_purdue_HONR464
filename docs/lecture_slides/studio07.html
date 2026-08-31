@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Davi Moreira">
+  <title>HONR 46400: Evidence-Driven Research (Fall 2026) – HONR 46400 · Evidence-Driven Research</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <p class="subtitle">Studio 7 — Produce a reproducible first analysis</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Davi Moreira 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+<h2>What you can defend when you leave</h2>
+<div class="kicker">
+<p>Studio 7</p>
+</div>
+<div class="decision">
+<p><span class="label">What you can defend when you leave</span></p>
+<p>Produce one honest result you can reproduce from a clean start, with its uncertainty attached.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The milestone ahead</h2>
+<div class="kicker">
+<p>Studio 7</p>
+</div>
+<p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html">Milestone 7: Your first reproducible analysis</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.</p>
+<aside class="notes">
+<p>This is where your project produces its first real number. The milestone asks for less than you might expect: one honest result, with its uncertainty attached, reproducible from a clean start. The point is not volume. It is a result you can trace from claim to output to data cell, because every number you will ever defend in this project passes through the discipline you set here.</p>
+<p>Milestone 8 exists to attack this result; the cleaner your record here, the more the attack can teach you. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The lessons in this studio</h2>
+<div class="kicker">
+<p>Studio 7 · Road map</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html">Lesson 22 — AI as Programmer</a>: your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html">Lesson 23 — AI as Analytical Assistant</a>: your headline estimate with its uncertainty statement and cycle log, two independently re-derived numbers, a placebo run where licensed, the clean-restart record, the environment record, and the claim-to-output trace.</li>
+</ul>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>AI as Programmer</h2>
+<div class="kicker">
+<p>Lesson 1 of this studio · Chapter 22</p>
+</div>
+<div class="divider-line">
+<p>which quantity your code computes, and which cases it counts</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 22</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>You decide <strong>which quantity your code must compute and over which set of cases</strong>, and you keep deciding it at every turn of the loop, because the tool rewrites the code each time you press enter. A cell that runs without an error is not a result you have earned. It is a draft you have not read.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The officer wants to know which cities the number was computed over</h2>
+<div class="kicker">
+<p>Chapter 22 · Why this decision matters</p>
+</div>
+<ul>
+<li>The decision on the table: which quantity your code computes, and which cases it counts.</li>
+<li>He does not care that the code was clean, only what it counted and about whom.</li>
+</ul>
+<div class="note-card">
+<p><em>“Do not read me the percentage. Tell me which cities it was computed over. If your code only saw the towns with an open-data portal, you have not described the state. You have described the portals.”</em> — a <strong>state open-records officer</strong>, asked to act on a transparency report</p>
+</div>
+<aside class="notes">
+<p>Start with the person who has to act on the number, because he is the one who will ask the question the code cannot answer for you. Notice what he does not ask about: syntax, style, whether the notebook ran. He asks which cases the percentage covers. Ask the room whether they could answer that question, right now, for a number already sitting in their own project.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A cell that runs without an error is a draft you have not read</h2>
+<div class="kicker">
+<p>Chapter 22 · Why this decision matters</p>
+</div>
+<ul>
+<li>An AI writes your analysis code in seconds, and it runs.</li>
+<li>That is exactly where the danger sits.</li>
+<li>It writes fluent code for the quantity it <em>thinks</em> you asked for.</li>
+<li>Paste the printed number into your report and you have signed for a quantity you never checked.</li>
+</ul>
+<aside class="notes">
+<p>The speed is what makes this hard. Nothing about a fast, clean result signals that the question changed on the way. The tool works over whatever rows sit in the dataframe you handed it, and it will not tell you which set that was. The chapter’s line is worth reading aloud: a cell that runs without an error is not a result you have earned.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Pin the number down in words before you ask for any code</h2>
+<div class="kicker">
+<p>Chapter 22 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Descriptive summary</span></p>
+<p><span class="d">a number or picture that reports what is actually in the cases you can see, such as a share, an average, or a full distribution</span></p>
+</div>
+<div class="term">
+<p><span class="t">Quantity of interest</span></p>
+<p><span class="d">the one exact number your code is supposed to produce, pinned down in words before you ask for any code</span></p>
+</div>
+</div>
+<ul>
+<li>The tool is the programmer. You are the researcher.</li>
+<li>Example: “the share of municipalities in the state that post council minutes within seven days of the meeting.”</li>
+</ul>
+<aside class="notes">
+<p>The quantity of interest is written in words, not in code, and it is written first. That ordering is the whole defense. If the sentence exists before the prompt does, you have something to compare the returned code against. If it does not, whatever the tool computes becomes your question by default.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Your frame is the set your data covers, not the group you asked about</h2>
+<div class="kicker">
+<p>Chapter 22 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Frame</span></p>
+<p><span class="d">the concrete set of cases your data actually covers, which is often smaller than the group your question is about</span></p>
+</div>
+<div class="term">
+<p><span class="t">Convenience sample</span></p>
+<p><span class="d">a set of cases collected because they were easy to reach, not drawn to stand in for a population</span></p>
+</div>
+</div>
+<ul>
+<li>Example: only the cities that publish through an open-data portal.</li>
+<li>Those tend to be the largest and best-staffed in the state.</li>
+</ul>
+<aside class="notes">
+<p>Frame and quantity are the pair you keep deciding. The portal example matters because the gap between the frame and the question is not random: the cities that are easiest to reach are also the ones most likely to be complying. Ask the room what their own frame is, in a sentence a stranger could check.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A clean run is not a correct result</h2>
+<div class="kicker">
+<p>Chapter 22 · The concept</p>
+</div>
+<ul>
+<li>A tool can compute a flawless share over the wrong frame.</li>
+<li>The code still finishes with a green check.</li>
+<li>A cell can execute with no error and compute a different number than your question needs (Vaithilingam et al.&nbsp;2022).</li>
+</ul>
+<aside class="notes">
+<p>This is the trap the chapter closes, so slow down here. The arithmetic is not in dispute. The share is real over the rows the tool saw. What the green check certifies is that the code ran, and nothing more than that. There is no error message for computing the wrong quantity.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Coding with AI is a loop, not a wish</h2>
+<div class="kicker">
+<p>Chapter 22 · The concept</p>
+</div>
+<ul>
+<li>Nobody gets working analysis code from one prompt, and you should not try to.</li>
+<li>You prompt, read the output, interrogate it, refine, and run it again.</li>
+<li>Agentic tools now run that loop themselves and hand you a tidy end state.</li>
+<li>The loop is a real gain in speed. It is also where your frame goes missing.</li>
+</ul>
+<aside class="notes">
+<p>Set the expectation honestly: the first prompt is turn one, not an answer. When the tool runs the turns for itself, it writes, executes, reads the error, patches, reruns, and reports back with a paragraph about how well it went. You gain the speed and you lose sight of the turns, which is the trade this chapter asks you to manage rather than refuse.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Verification runs per cycle, not per session</h2>
+<div class="kicker">
+<p>Chapter 22 · The concept</p>
+</div>
+<ul>
+<li>Any turn can add a filter, drop a join, or reach for a different column.</li>
+<li>Nothing announces the change. The number just gets prettier.</li>
+<li>Every time the code changes, ask again: what quantity, over which cases?</li>
+<li>Read the code, not the tool’s summary of the code (Sandve et al.&nbsp;2013).</li>
+</ul>
+<aside class="notes">
+<p>The code you finally read may not be the code you specified three turns ago. That is why checking once at the end does not work. You own two things the programmer cannot: you define the quantity and the frame in plain words before you delegate (Blair et al.&nbsp;2023), and you confirm that the code in front of you right now computes that quantity over that frame, and not a plausible neighbor. When a tool ran the cycles for you, make it surrender the choices it made along the way.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Turn one: six clean lines and a reassuring 95%</h2>
+<div class="kicker">
+<p>Chapter 22 · A worked example</p>
+</div>
+<ul>
+<li>Your question: what share of city councils post their meeting minutes within seven days?</li>
+<li>You have a spreadsheet scraped from municipal websites.</li>
+<li>You ask an AI for the Python that returns the share posting on time.</li>
+<li>The printout says 95%, and the temptation is to write “compliance is strong.”</li>
+</ul>
+<aside class="notes">
+<p>Everything here looks like success. The question is plain, the data exist, the code runs, the number is high. Instead of writing the sentence, read what the code did. That single change of habit is what the rest of the example is built on.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Turn two: 40 portal cities standing in for 240</h2>
+<div class="kicker">
+<p>Chapter 22 · A worked example</p>
+</div>
+<ul>
+<li>The dataframe holds only the 40 municipalities that publish through an open-data portal.</li>
+<li>There are 240 on the state roster. That is a convenience sample standing in silently.</li>
+<li>The code also calls <code>.dropna()</code>, and the dropped rows are the towns the scraper came back empty on.</li>
+<li>The 95% describes the best-resourced cities with their worst records deleted.</li>
+</ul>
+<aside class="notes">
+<p>Two separate narrowings, and neither one announced itself. The first was in the data you were handed; the second was written by the tool. Both push the number the same way, because the towns with the thinnest clerical staff are exactly the ones the scraper failed on. Ask the room which of the two would have been harder to catch.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Turn three: not knowing is a finding</h2>
+<div class="kicker">
+<p>Chapter 22 · A worked example</p>
+</div>
+<ul>
+<li>You re-anchor to your quantity: the share over every municipality on the state roster.</li>
+<li>Unretrievable records get flagged, not dropped.</li>
+<li>At most one in six municipalities is confirmed to post on time.</li>
+<li>For most of the state you simply do not know.</li>
+</ul>
+<aside class="notes">
+<p>The refined prompt says precisely what the earlier one left open, and the picture changes. Keep the chapter’s bound on the new number: one in six is the confirmed share, and the rest of the roster is unknown rather than non-compliant. That unknown is a finding you report, not a gap to paper over.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The tool wrote correct code for the wrong question</h2>
+<div class="kicker">
+<p>Chapter 22 · A worked example</p>
+</div>
+<ul>
+<li>An agentic run would have handed you the polished 95% with a confident paragraph.</li>
+<li>The decision that shrank your state to 40 cities would sit inside a step you never saw.</li>
+<li>Code that runs cleanly while answering the wrong question is the documented risk of accepting output alone (Vaithilingam et al.&nbsp;2022).</li>
+<li>You did the research by deciding what the code was allowed to count.</li>
+</ul>
+<aside class="notes">
+<p>This is the sentence to leave the room with. Nothing was wrong with the code as code, and an agent running all three turns would have shown you only the tidy end state. The research happened at the point where a human decided which cases the number was allowed to cover. That decision has no automated substitute.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 densest">
+<h2>The 95% is real. Read what it is 95% of.</h2>
+<div class="kicker">
+<p>Chapter 22 · A worked example</p>
+</div>
+<ul>
+<li>Watch three shares in order: portal cities only, the same after <code>.dropna()</code>, then the whole roster.</li>
+<li>The roster line is a range, because unretrievable records are flagged instead of deleted.</li>
+<li>A fourth line counts the records the scraper never returned.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>roster <span class="op">=</span> <span class="dv">240</span></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>big <span class="op">=</span> np.arange(roster) <span class="op">&lt;</span> <span class="dv">40</span>                    <span class="co"># the open-data portal cities</span></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>on_time <span class="op">=</span> np.zeros(roster, dtype<span class="op">=</span><span class="bu">bool</span>)</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>on_time[rng.choice(np.where(big)[<span class="dv">0</span>], <span class="dv">38</span>, replace<span class="op">=</span><span class="va">False</span>)] <span class="op">=</span> <span class="va">True</span>    <span class="co"># 38 of 40</span></span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>on_time[rng.choice(np.where(<span class="op">~</span>big)[<span class="dv">0</span>], <span class="dv">110</span>, replace<span class="op">=</span><span class="va">False</span>)] <span class="op">=</span> <span class="va">True</span>  <span class="co"># 110 of 200</span></span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># the scraper comes back empty exactly where clerical staff is thinnest</span></span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a>scraped <span class="op">=</span> rng.random(roster) <span class="op">&lt;</span> np.where(big, <span class="fl">0.92</span>, <span class="fl">0.62</span>)</span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a>portal_only <span class="op">=</span> on_time[big].mean()</span>
+<span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a>after_dropna <span class="op">=</span> on_time[big <span class="op">&amp;</span> scraped].mean()</span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a>best_case <span class="op">=</span> (on_time <span class="op">|</span> <span class="op">~</span>scraped).mean()         <span class="co"># unretrievable counted as on time</span></span>
+<span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a>worst_case <span class="op">=</span> (on_time <span class="op">&amp;</span> scraped).mean()         <span class="co"># unretrievable counted as late</span></span>
+<span id="cb1-17"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"turn one, portal cities only        : </span><span class="sc">{</span>portal_only<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-19"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"the same after .dropna()            : </span><span class="sc">{</span>after_dropna<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-20"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"whole roster, unretrievable flagged : between "</span></span>
+<span id="cb1-21"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>worst_case<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">% and </span><span class="sc">{</span>best_case<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-22"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"records the scraper never returned  : </span><span class="sc">{</span>(<span class="op">~</span>scraped)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> of </span><span class="sc">{</span>roster<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-23"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the clean run was never wrong about its own rows. it was answering"</span>)</span>
+<span id="cb1-24"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a different question than the one you asked"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>The block reproduces all three turns on the same 240-municipality roster, including the rows the scraper never returned. Run it and read the three numbers in order, because the movement between them is the lesson. Ask the room which of the printed figures they would put in a report, and what sentence would have to travel with it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 22</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You ask for the on-time share and the tool returns tidy code that prints, with full confidence, “<strong>95% of councils post minutes on time. Compliance is strong.</strong>” The code has no error and reads beautifully. The trap is buried in two lines: the input dataframe was already limited to cities with an open-data portal, and a <code>.dropna()</code> silently removed the towns where no posting date came back. The share is real arithmetic over the wrong set.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 22 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by reading the code, not its summary.</li>
+<li>Printing the dataframe’s shape shows 40 municipalities, not 240.</li>
+<li>Printing the row count before and after <code>.dropna()</code> shows how many towns vanished, and looking at which ones reveals the smallest governments in the state.</li>
+<li>Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses.</li>
+<li>A green check certified that the code ran, never that it answered your question.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by reading the code, not its summary. Printing the dataframe’s shape shows 40 municipalities, not 240. Printing the row count before and after <code>.dropna()</code> shows how many towns vanished, and looking at which ones reveals the smallest governments in the state. Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses. A green check certified that the code ran, never that it answered your question.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 22</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>You define <strong>what quantity the code computes</strong> and <strong>which set of cases it runs over</strong>, and you decide <strong>what the number is allowed to claim</strong>. The tool can write the filter, the aggregation, and the plot, and it can run its own loop until everything is clean. It cannot decide that 40 portal cities speak for a state of 240, or that a compliance rate with the unreachable towns deleted is honest. You own the final sentence, its frame, and its boundary.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 22 · Your move</p>
+</div>
+<ol type="1">
+<li>Write your quantity of interest in one sentence, and the frame it runs over in a second.</li>
+<li>Prompt an AI tool for the code that computes that quantity over that frame.</li>
+<li>Read the returned code line by line and ask what each line removes.</li>
+<li>Print the shape of the data the number was computed over, and the row count before and after anything that can drop rows.</li>
+<li>Write one sentence naming what this number does <em>not</em> cover: the cases your frame left out, and what you therefore cannot say about them.</li>
+<li>Log this first number in your AI Research Ledger, and verify it with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>. <strong>Alternative code</strong> is the natural pick here: recompute the same quantity a second way and confirm the two roads give one answer.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch22_ai_as_programmer.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html">Chapter 22</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>AI as Analytical Assistant</h2>
+<div class="kicker">
+<p>Lesson 2 of this studio · Chapter 23</p>
+</div>
+<div class="divider-line">
+<p>which analytical work you hand off, and which numbers you personally re-derive before you believe them</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 23</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>You decide <strong>which analytical tasks the assistant runs and which numbers you re-derive yourself</strong> before any of them reach a claim. The assistant supplies labor by the bucket. Which checks count, which flags are real, and what the surviving number means: those stay on your side of the desk.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The discussant does not care that a model ran the checks</h2>
+<div class="kicker">
+<p>Chapter 23 · Why this decision matters</p>
+</div>
+<ul>
+<li>A discussant at a labor economics seminar, reading your results section.</li>
+<li>The decision on the table: which analytical work you hand off.</li>
+<li>And which numbers you personally re-derive before you believe them.</li>
+</ul>
+<div class="note-card">
+<p>I do not care that a model ran your robustness checks. I care which ones you chose, which numbers you re-derived yourself, and which flags you confirmed against the data. Show me that trail and I trust your judgment. Show me the model’s transcript and I trust neither.</p>
+</div>
+<aside class="notes">
+<p>Read the quote as the discussant would say it, then stop on its last line: the transcript buys you nothing. What is being asked for is a short trail of choices that stayed yours, and it is asked for out loud, in front of a room. Ask your own room whether they could produce that trail today for the last number an AI tool handed them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Paste the table and you have signed your name to numbers you never checked</h2>
+<div class="kicker">
+<p>Chapter 23 · Why this decision matters</p>
+</div>
+<ul>
+<li>An AI tool can write your analysis code and run a dozen checks in seconds.</li>
+<li>It hands back a clean table.</li>
+<li>That speed is exactly why a loose habit is dangerous.</li>
+<li>This chapter gives you the habit that survives the discussant’s question.</li>
+</ul>
+<aside class="notes">
+<p>Nothing here is an argument against the speed. The chapter’s worry is the habit, not the tool. The problem is that a clean table arrives looking finished, so there is no moment that forces you to check it, and the signature goes on anyway. The habit in this chapter puts that moment back in on purpose.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A task is checkable; a verdict is not its job</h2>
+<div class="kicker">
+<p>Chapter 23 · The concept</p>
+</div>
+<ul>
+<li>An AI analytical assistant takes a well-specified analytical task, never your judgment (Vaithilingam et al.&nbsp;2022).</li>
+<li>“Recompute this gap after dropping the three people who enrolled with an offer already in hand.”</li>
+<li>It writes and runs that one check.</li>
+</ul>
+<aside class="notes">
+<p>Say the delegated sentence out loud, because the shape of it is the lesson. It names the number wanted, the exact columns, and the filter behind it, and it asks for none of the interpretation. A request for a verdict on what the result means has no checkable answer, so nothing comes back that you could verify.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You attack your headline estimate before you defend it</h2>
+<div class="kicker">
+<p>Chapter 23 · The concept</p>
+</div>
+<ul>
+<li>Your headline estimate is the single number that stands in for your whole finding.</li>
+<li>“People who went through the program received a first offer about 0.7 standard deviations sooner.”</li>
+<li>Before you defend that number, you try to break it.</li>
+<li>Breaking it is the labor you delegate.</li>
+</ul>
+<aside class="notes">
+<p>This is the sentence that decides the order of the work. You do not delegate the finding, you delegate the attempts to destroy it, and what survives is what you take to the seminar. Ask the room to name their own project’s headline estimate in one sentence right now. Anyone who cannot has just found the first thing to fix.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 dense">
+<h2>Two attacks do most of the work</h2>
+<div class="kicker">
+<p>Chapter 23 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Robustness check</span></p>
+<p><span class="d">re-runs the same finding under a different but equally defensible choice and asks whether the answer holds</span></p>
+</div>
+<div class="term">
+<p><span class="t">Placebo test</span></p>
+<p><span class="d">runs your exact analysis where the effect cannot exist and asks whether what comes back is ordinary for a world with nothing in it</span></p>
+</div>
+</div>
+<ul>
+<li>You reported a mean time to first offer, so also compute the median (Simonsohn et al.&nbsp;2020).</li>
+<li>Shuffle the “program” and “no program” labels at random, many times (Lipsitch et al.&nbsp;2010).</li>
+<li>Random labels always differ a little, so that pile of fake gaps is not zeros.</li>
+<li>What matters is whether your real gap looks ordinary in that pile, or sits far outside.</li>
+</ul>
+<aside class="notes">
+<p>Keep the bound the chapter puts on the placebo. Random labels always differ a little, so the pile of fake gaps is not a pile of zeros, and finding something there is not a finding. What the test asks is narrower: does your real gap look ordinary in that pile, or does it sit far outside it? The robustness check asks a different question, whether the story survives a choice you could equally have made.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A number that survived turn four says nothing about turn seven’s code</h2>
+<div class="kicker">
+<p>Chapter 23 · The concept</p>
+</div>
+<ul>
+<li>You will not get your analysis from one prompt.</li>
+<li>You prompt, read the output, interrogate it, refine, and run it again.</li>
+<li>Agentic tools now run those cycles on their own, writing and patching until something looks finished.</li>
+<li>Verification attaches to each cycle, not to the last one.</li>
+</ul>
+<aside class="notes">
+<p>The failure here is quiet. You check a number carefully on an early turn, the loop keeps going, and the code that produced the final table is not the code you checked. Nothing announces that switch. Ask the room how many cycles their last AI-assisted analysis actually took, and how many of those cycles they could describe now.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Re-asking until the estimate looks better is a specification search</h2>
+<div class="kicker">
+<p>Chapter 23 · The concept</p>
+</div>
+<ul>
+<li>Every re-prompt is a fork in your analysis.</li>
+<li>Keep re-asking until the number improves and you have searched, without telling anyone, including yourself.</li>
+<li>The fix is cheap: keep a running log, one line per cycle.</li>
+<li>Say what you asked, what came back, and what you changed and why.</li>
+<li>An assistant that ran ten silent variants and reported the nicest one is an unlogged search.</li>
+</ul>
+<aside class="notes">
+<p>This is the part of the chapter that bites, because the search does not feel like a search. It feels like refining a prompt. The phrase to keep is “without telling anyone, including yourself”: the log is what makes the forks visible to you, not only to a reader. It costs one line per turn.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A tool that ran without an error has not proven its result correct</h2>
+<div class="kicker">
+<p>Chapter 23 · The concept</p>
+</div>
+<ul>
+<li>The assistant proposes checks, writes code, and prints numbers, cycle after cycle.</li>
+<li>You decide which checks count, and you log the cycles.</li>
+<li>You verify every number before it reaches your claim.</li>
+<li>Verify the number, not the paragraph about the number.</li>
+</ul>
+<aside class="notes">
+<p>Close the section on the division of labor, and make the last line land. Models write confident prose about their own output, and that prose is not evidence. What you verify is the figure itself, recomputed some other way. A green run means the code executed, which is a much smaller claim than the one you are about to make.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A four-week program, and a 0.7 standard deviation gap you try to break</h2>
+<div class="kicker">
+<p>Chapter 23 · A worked example</p>
+</div>
+<ul>
+<li>The program helps people target applications and rehearse interviews.</li>
+<li>Outcome: weeks from enrollment to first offer.</li>
+<li>Headline: participants reached an offer about 0.7 standard deviations sooner.</li>
+<li>You delegate a grid with three handles: the sample, the measurement, the specification.</li>
+</ul>
+<aside class="notes">
+<p>Name the three handles concretely, because the grid is built from them. Sample: all enrollees, or drop the three who already had an offer in hand when they signed up. Measurement: mean or median weeks to offer. Specification: the raw gap, or one adjusted for each person’s prior work experience. That is eight cells, and every one of them is a choice you could defend.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Eight numbers, two re-derived by hand, and an honest range</h2>
+<div class="kicker">
+<p>Chapter 23 · A worked example</p>
+</div>
+<ul>
+<li>The assistant returns eight numbers. You do not trust them yet.</li>
+<li>You recompute two rows by hand with a second, simpler expression, and they match.</li>
+<li>The direction holds across all eight; the magnitude runs about 0.6 to 0.7 standard deviations.</li>
+<li>Your honest headline is a direction plus a range, not one flattering number.</li>
+<li>Three cycles went into getting the grid to run, and all three are in your log.</li>
+</ul>
+<aside class="notes">
+<p>A direction plus a range is a weaker-sounding claim than a single number, and it is the one you can defend. Point out that two hand re-derivations, not eight, were enough to make the table believable, so the cost of this habit is small. The three logged cycles matter for the same reason as the last section: they are what says the grid was run once, not searched.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The flag the reviewer named was refuted; the flaw it missed was real</h2>
+<div class="kicker">
+<p>Chapter 23 · A worked example</p>
+</div>
+<ul>
+<li>Shuffle the program labels and re-run many times. Your real gap sits far out in the tail.</li>
+<li>That lowers your worry that the machinery alone is manufacturing the effect, as far as this check sees.</li>
+<li>Asked as a hostile reviewer for the worst flaw, it confidently blames the most experienced workers.</li>
+<li>You already dropped the already-employed group and the gap held, so the data refute that flag.</li>
+<li>The flaw it missed: weeks to an offer is not the quality of the offer.</li>
+</ul>
+<aside class="notes">
+<p>Hold the bound on the placebo result. It lowers a worry, as far as this one check can see; it does not clear the analysis. Then take the red-team output apart: the confident flag was already refuted by a check you had run, and the real limit went unmentioned. That limit sets the claim’s boundary, so your claim stays about speed of placement and says nothing about wages or fit. The assistant did the arithmetic. You decided which checks counted and which flags the data confirmed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 densest">
+<h2>Build the grid, then run the shuffle yourself</h2>
+<div class="kicker">
+<p>Chapter 23 · A worked example</p>
+</div>
+<ul>
+<li>Watch the eight rows point the same way, then read the printed range.</li>
+<li>Recompute two rows by hand before you believe any of them.</li>
+<li>The last line counts how many of 2000 label shuffles produced a gap this large.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">300</span></span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a>experience <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="dv">1</span>, size<span class="op">=</span>n)</span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a>enrolled <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.5</span></span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>weeks <span class="op">=</span> (<span class="dv">18</span> <span class="op">-</span> <span class="fl">6.0</span> <span class="op">*</span> enrolled <span class="op">-</span> <span class="fl">1.6</span> <span class="op">*</span> experience</span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">6.5</span>, size<span class="op">=</span>n))</span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a>had_offer_already <span class="op">=</span> np.zeros(n, dtype<span class="op">=</span><span class="bu">bool</span>)</span>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>had_offer_already[rng.choice(np.where(enrolled)[<span class="dv">0</span>], <span class="dv">3</span>, replace<span class="op">=</span><span class="va">False</span>)] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb2-12"><a aria-hidden="true" tabindex="-1"></a>weeks[had_offer_already] <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb2-13"><a aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">"enrolled"</span>: enrolled, <span class="st">"weeks"</span>: weeks,</span>
+<span id="cb2-14"><a aria-hidden="true" tabindex="-1"></a>                   <span class="st">"experience"</span>: experience, <span class="st">"pre_offer"</span>: had_offer_already})</span>
+<span id="cb2-15"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gap(d, stat):                      <span class="co"># in standard deviations, sign flipped</span></span>
+<span id="cb2-17"><a aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="bu">getattr</span>(d.groupby(<span class="st">"enrolled"</span>)[<span class="st">"weeks"</span>], stat)()</span>
+<span id="cb2-18"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f[<span class="va">False</span>] <span class="op">-</span> f[<span class="va">True</span>]) <span class="op">/</span> d.weeks.std()</span>
+<span id="cb2-19"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> []</span>
+<span id="cb2-21"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sample, d <span class="kw">in</span> ((<span class="st">"all enrollees"</span>, df), (<span class="st">"dropping pre-offers"</span>, df[<span class="op">~</span>df.pre_offer])):</span>
+<span id="cb2-22"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> measure <span class="kw">in</span> (<span class="st">"mean"</span>, <span class="st">"median"</span>):</span>
+<span id="cb2-23"><a aria-hidden="true" tabindex="-1"></a>        raw <span class="op">=</span> gap(d, measure)</span>
+<span id="cb2-24"><a aria-hidden="true" tabindex="-1"></a>        adj_resid <span class="op">=</span> d.weeks <span class="op">-</span> np.polyval(np.polyfit(d.experience, d.weeks, <span class="dv">1</span>),</span>
+<span id="cb2-25"><a aria-hidden="true" tabindex="-1"></a>                                         d.experience)</span>
+<span id="cb2-26"><a aria-hidden="true" tabindex="-1"></a>        adj <span class="op">=</span> ((adj_resid[<span class="op">~</span>d.enrolled].agg(measure)</span>
+<span id="cb2-27"><a aria-hidden="true" tabindex="-1"></a>                <span class="op">-</span> adj_resid[d.enrolled].agg(measure)) <span class="op">/</span> d.weeks.std())</span>
+<span id="cb2-28"><a aria-hidden="true" tabindex="-1"></a>        grid <span class="op">+=</span> [{<span class="st">"sample"</span>: sample, <span class="st">"measure"</span>: measure, <span class="st">"spec"</span>: <span class="st">"raw"</span>, <span class="st">"gap (sd)"</span>: raw},</span>
+<span id="cb2-29"><a aria-hidden="true" tabindex="-1"></a>                 {<span class="st">"sample"</span>: sample, <span class="st">"measure"</span>: measure, <span class="st">"spec"</span>: <span class="st">"adj. experience"</span>,</span>
+<span id="cb2-30"><a aria-hidden="true" tabindex="-1"></a>                  <span class="st">"gap (sd)"</span>: adj}]</span>
+<span id="cb2-31"><a aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> pd.DataFrame(grid)</span>
+<span id="cb2-32"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g.<span class="bu">round</span>(<span class="dv">2</span>).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb2-33"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">all eight point the same way; magnitude runs "</span></span>
+<span id="cb2-34"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>g[<span class="st">'gap (sd)'</span>]<span class="sc">.</span><span class="bu">min</span>()<span class="sc">:.1f}</span><span class="ss"> to </span><span class="sc">{</span>g[<span class="st">'gap (sd)'</span>]<span class="sc">.</span><span class="bu">max</span>()<span class="sc">:.1f}</span><span class="ss"> sd"</span>)</span>
+<span id="cb2-35"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a aria-hidden="true" tabindex="-1"></a><span class="co"># placebo: shuffle the labels and re-run</span></span>
+<span id="cb2-37"><a aria-hidden="true" tabindex="-1"></a>fake <span class="op">=</span> [gap(df.assign(enrolled<span class="op">=</span>rng.permutation(df.enrolled)), <span class="st">"mean"</span>)</span>
+<span id="cb2-38"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>)]</span>
+<span id="cb2-39"><a aria-hidden="true" tabindex="-1"></a>beat <span class="op">=</span> <span class="bu">int</span>((np.array(fake) <span class="op">&gt;=</span> gap(df, <span class="st">"mean"</span>)).<span class="bu">sum</span>())</span>
+<span id="cb2-40"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"placebo: of 2000 label shuffles, </span><span class="sc">{</span>beat<span class="sc">}</span><span class="ss"> produced a gap this large"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>The block builds the grid an assistant would return and then runs the placebo, all under SEED = 464, so everyone in the room sees the same numbers. Have them predict the sign and rough size before you run it. Reporting the whole grid of defensible choices rather than one flattering cell is the discipline specification-curve analysis was built to enforce (Simonsohn et al.&nbsp;2020).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 23</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You hand an assistant your grid and it returns a polished eight-row table, every row near 0.7, and declares the result “fully robust.” The run threw no error. Here is the trap: its “median” rows silently call the same mean function as the “mean” rows, so four of the eight numbers are duplicates wearing different labels. The table agrees with itself because it never varied the handle it claims to vary. This is the <strong>illusion of completeness</strong>, a thorough-looking output missing the one thing that matters, shading into <strong>confident fabrication</strong>, a number stated with certainty that never came from the code path it names.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 23 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by recomputing one “median” row by hand.</li>
+<li>The true median gap is 0.55, not 0.70.</li>
+<li>The grid overstated how much your choices agreed.</li>
+<li>A green check is not a correct result.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by recomputing one “median” row by hand. The true median gap is 0.55, not 0.70. The grid overstated how much your choices agreed. A green check is not a correct result.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 23</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Three calls never leave your hands. You decide <strong>which checks count</strong> for the claim you want to make, <strong>which flagged problems the data actually confirm</strong>, and <strong>the final claim you defend</strong>, with its boundary and its range. The assistant proposes and computes. The evidence decides, and you are the one who reads the evidence.</p>
+</div>
+</section>
+<section class="slide level2 denser">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 23 · Your move</p>
+</div>
+<ol type="1">
+<li>Before the assistant touches anything, write your headline estimate in one sentence and the answer you expect.</li>
+<li>Hand over one well-specified task at a time.</li>
+<li>Keep a cycle log as you go: one line per turn with what you asked, what came back, and what you changed and why.</li>
+<li>Re-derive at least two numbers yourself, by hand or with a second simple expression, before any of them enter a claim.</li>
+<li>Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm the fake gap lands in the ordinary part of that pile.</li>
+<li>Close with the milestone’s three checks: restart and run everything from a clean state and confirm the headline numbers match, record your environment (versions, packages, data files), and trace your provisional claim to the exact output that supports it.</li>
+<li>Log the analysis in your AI Research Ledger, cycle log attached, and verify at least one output with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>. <strong>Alternative code</strong> fits a computed gap well.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch23_ai_as_analytical_assistant.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html">Chapter 23</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Milestone 7: Your first reproducible analysis</h2>
+<div class="kicker">
+<p>Studio 7 closes here</p>
+</div>
+<div class="divider-line">
+<p>What the lessons handed you becomes one artifact you can defend.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What this milestone produces</h2>
+<div class="kicker">
+<p>Milestone 7</p>
+</div>
+<div class="decision">
+<p><span class="label">The artifact</span></p>
+<p><strong>What this milestone produces.</strong> A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What you bring</h2>
+<div class="kicker">
+<p>Milestone 7 · Check before you start</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html">Lesson 22 — AI as Programmer</a>: your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html">Lesson 23 — AI as Analytical Assistant</a>: your headline estimate with its uncertainty statement and cycle log, two independently re-derived numbers, a placebo run where licensed, the clean-restart record, the environment record, and the claim-to-output trace.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The practice</h2>
+<div class="kicker">
+<p>Milestone 7 · In the studio</p>
+</div>
+<ol type="1">
+<li>Write the analysis you declared, and only that analysis, before looking at anything else.</li>
+<li>Produce the result with its uncertainty statement, in the form your Contract specified.</li>
+<li>Restart and run everything from a clean state; if the numbers move, the pipeline is the finding.</li>
+<li>Record your environment, and check that every claim you plan to make traces to a specific output.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>The four rails, here</h2>
+<div class="kicker">
+<p>Milestone 7 · Every studio, these four</p>
+</div>
+<div class="rails">
+<div class="rail">
+<p><span class="t">Ethics, permissions, and data exposure</span></p>
+<p><span class="d">What you send to a tool during analysis is a disclosure decision each time.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Evidence, provenance, and reproducibility</span></p>
+<p><span class="d">Every number in your result traces to a data cell and a line of code.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">AI activity, verification, and human decisions</span></p>
+<p><span class="d">Delegate the writing of code freely; verify every returned number against the data yourself.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Uncertainty, claim boundary, and revision history</span></p>
+<p><span class="d">A result reported without uncertainty is not yet a result.</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>A version, not a pass</h2>
+<div class="kicker">
+<p>Milestone 7</p>
+</div>
+<div class="note-card">
+<p><span class="label">How the record works</span></p>
+<p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
+</div>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>The one rule</h2>
+<div class="divider-line">
+<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
+<p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
+</div>
+<p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio07-first-analysis.html">Studio 7 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html">Milestone 7</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="_theme/edrai_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>EDR|AI · Studio 7 — Produce a reproducible first analysis</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 7.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

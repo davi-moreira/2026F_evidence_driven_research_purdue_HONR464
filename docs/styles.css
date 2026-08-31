@@ -53,12 +53,17 @@ img[src*="colab-badge"] {
   padding: .3rem; text-align: left; word-wrap: break-word; vertical-align: top;
 }
 .overflow-table td:nth-child(3), .overflow-table td:nth-child(4) { font-weight: 700; }
+/* 9 columns since the Slides column landed: # · Date · Week · Studio · Topic ·
+   Slides · Notebook · Milestone · Required reading. */
 .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 3%; }
 .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 7%; }
 .overflow-table th:nth-child(3), .overflow-table td:nth-child(3) { width: 5%; }
-.overflow-table th:nth-child(4), .overflow-table td:nth-child(4) { width: 13%; }
-.overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 19%; }
-.overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 7%; }
-.overflow-table th:nth-child(7), .overflow-table td:nth-child(7) { width: 12%; }
-.overflow-table th:nth-child(8), .overflow-table td:nth-child(8) { width: 34%; }
+.overflow-table th:nth-child(4), .overflow-table td:nth-child(4) { width: 12%; }
+.overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 18%; }
+.overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 5%; }
+.overflow-table th:nth-child(7), .overflow-table td:nth-child(7) { width: 7%; }
+.overflow-table th:nth-child(8), .overflow-table td:nth-child(8) { width: 11%; }
+.overflow-table th:nth-child(9), .overflow-table td:nth-child(9) { width: 32%; }
+/* The Slides column is one short link per row; keep it on one line. */
+.overflow-table td:nth-child(6) { white-space: nowrap; font-weight: 700; }
 .below-table { font-size: .85rem; line-height: 1.2; margin-top: 1rem; }

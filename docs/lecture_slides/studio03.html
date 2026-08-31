@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Davi Moreira">
+  <title>HONR 46400: Evidence-Driven Research (Fall 2026) – HONR 46400 · Evidence-Driven Research</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <p class="subtitle">Studio 3 — Ground it in verified evidence</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Davi Moreira 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+<h2>What you can defend when you leave</h2>
+<div class="kicker">
+<p>Studio 3</p>
+</div>
+<div class="decision">
+<p><span class="label">What you can defend when you leave</span></p>
+<p>Find out what is already known, verify that it is actually known, and let it change your question.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The milestone ahead</h2>
+<div class="kicker">
+<p>Studio 3</p>
+</div>
+<p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone03-ground-in-evidence.html">Milestone 3: Your evidence base</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> An evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Studio 2 declaration.</p>
+<aside class="notes">
+<p>No question is asked in an empty room. Before you spend months answering yours, this milestone makes you find out what is already known, verify that it is actually known rather than merely repeated, and let the verified record change your question. It is also where the book’s evidence rail becomes physical: the registry you assemble here is what every later citation traces back to, all the way to the release audit in Studio 12.</p>
+<p>Milestone 4 takes your revised question and the gap your evidence map exposed, and writes them into a research contract that can be diagnosed. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The lessons in this studio</h2>
+<div class="kicker">
+<p>Studio 3 · Road map</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/07-research-builds-on-research.html">Lesson 8 — Research Builds on Research</a>: your candidate source list with a status column, seeded by your own search, an AI sweep, and hand snowballing, with a lead source marked.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html">Lesson 9 — Finding and Verifying Prior Evidence</a>: your verified sources, your evidence map with its quiet spot, your gap written as one bounded sentence, and your revised declaration — or the defended reason it holds.</li>
+</ul>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Research Builds on Research</h2>
+<div class="kicker">
+<p>Lesson 1 of this studio · Chapter 8</p>
+</div>
+<div class="divider-line">
+<p>which conversation your question joins, and which leads are worth your time</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 8</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Which conversation your question joins, and which of the candidate sources a search or an AI hands you are worth chasing. You decide what goes on the list and what gets dropped. Nothing on that list counts as evidence yet.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>An advisor circles one line in your first draft</h2>
+<div class="kicker">
+<p>Chapter 8 · Why this decision matters</p>
+</div>
+<ul>
+<li>“You cite six papers. Where did they come from, and what argument are they having?”</li>
+<li>Research never starts from zero.</li>
+<li>Someone has already asked something close to your question.</li>
+<li>Find them before you spend months rediscovering what they already know.</li>
+</ul>
+<aside class="notes">
+<p>The decision on the table is which conversation your question joins, and which leads are worth your time. Ask the room where the six papers in their own draft would come from today. The chapter’s answer to the advisor is that someone has already asked something close, and finding those people is the work the rest of the chapter sets up.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Miss the study, or build on a paper nobody wrote</h2>
+<div class="kicker">
+<p>Chapter 8 · Why this decision matters</p>
+</div>
+<ul>
+<li>Get the search wrong in one direction and you miss the study that answers you.</li>
+<li>Get it wrong in the other and you build on a citation nobody ever wrote.</li>
+<li>Get it right and an afternoon buys you years of other people’s work.</li>
+</ul>
+<aside class="notes">
+<p>The chapter names two ways to get the search wrong, and they fail differently. One leaves you rediscovering work that already exists. The other puts a citation nobody ever wrote underneath your argument, which is exactly what the worked example shows a tool doing. Keep the chapter’s bound in view: this is the gathering step, so nothing on your list counts as evidence yet.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You join a running argument; you do not found an island</h2>
+<div class="kicker">
+<p>Chapter 8 · The concept</p>
+</div>
+<ul>
+<li>One team measures how a policy moved turnout in one state.</li>
+<li>A second repeats it elsewhere. A third pools both.</li>
+<li>A field is a running argument, each study answering, extending, or challenging the ones before it (Booth et al.&nbsp;2024).</li>
+<li>Your job is not to invent an island. Add one honest sentence.</li>
+</ul>
+<aside class="notes">
+<p>The book’s name for this is a cumulative conversation, and it is why a literature search is not an administrative chore. You are looking for the people already arguing about your question, so that your one sentence lands somewhere. Ask the room which argument their question would be joining.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Nothing you gathered is a source yet</h2>
+<div class="kicker">
+<p>Chapter 8 · The concept</p>
+</div>
+<div class="lead">
+<p>Everything you gather starts as a lead.</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Cumulative conversation</span></p>
+<p><span class="d">a running argument where each study answers, extends, or challenges the ones before it</span></p>
+</div>
+<div class="term">
+<p><span class="t">Lead</span></p>
+<p><span class="d">a candidate source you have not checked yet, such as a citation an AI hands you</span></p>
+</div>
+<div class="term">
+<p><span class="t">Retrieval-verification loop</span></p>
+<p><span class="d">ask a tool for leads, retrieve the source yourself, verify it exists and says what was claimed, and document where you found it</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>A lead stays a lead until you retrieve and read it. The loop has four steps, and this chapter is only the first one, gathering well. The next chapter is where leads earn promotion, so hold the vocabulary strictly now: calling something a source before you have opened it is the error the whole loop exists to prevent.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two solid sources, walked both ways, quickly become ten</h2>
+<div class="kicker">
+<p>Chapter 8 · The concept</p>
+</div>
+<ul>
+<li>Snowballing grows your list from one real source by walking its links two ways (Greenhalgh &amp; Peacock 2005).</li>
+<li>Backward citation search reads the source’s own reference list for the older work it built on.</li>
+<li>Forward citation search finds the newer papers that cite it.</li>
+<li>The ten arrive with their relationships already visible.</li>
+</ul>
+<aside class="notes">
+<p>Snowballing has to start from one real retrieved source, so the seed is something you retrieve yourself rather than something a tool returns. Backward gives you the older work the source built on, forward the newer work citing it. Ask who has actually opened a reference list this term, and what they found two steps back.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A real gap and an abandoned search look identical from your desk</h2>
+<div class="kicker">
+<p>Chapter 8 · The concept</p>
+</div>
+<ul>
+<li>A genuine gap is a question your verified sources actually leave unanswered (Snyder 2019).</li>
+<li>You confirm it by looking both ways, backward and forward.</li>
+<li>An unfinished search is one you simply stopped chasing.</li>
+<li>Only one of the two is a contribution.</li>
+</ul>
+<aside class="notes">
+<p>This is the sentence to hold onto: from your desk the two feel the same. What separates them is whether the sources around the empty spot were retrieved and read. Snowballing is what turns a hunch about a gap into something you can defend when someone asks how hard you looked.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The evidence map marks the spot no source reaches</h2>
+<div class="kicker">
+<p>Chapter 8 · The concept</p>
+</div>
+<ul>
+<li>Each source becomes one claim node: what it asserts, in one sentence.</li>
+<li>Lines connect claims that agree or contradict.</li>
+<li>One marked spot shows where no source reaches, and that is your candidate gap.</li>
+<li>It is honest only when every node around it is a source you opened yourself.</li>
+</ul>
+<aside class="notes">
+<p>Forcing each source into one sentence is the work, because the node has to state what that source asserts. The map makes agreements and contradictions visible, and it makes the empty spot visible too. Hold the chapter’s bound on the last line: the spot becomes honest only when every node around it is a source you opened yourself.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>One question, two parts: how much, and for whom</h2>
+<div class="kicker">
+<p>Chapter 8 · A worked example</p>
+</div>
+<ul>
+<li>Your curiosity is voting, and how far people live from the polling place seems to matter.</li>
+<li>Your question: does moving a polling place farther away lower turnout?</li>
+<li>And does the drop land harder in some neighborhoods than others?</li>
+</ul>
+<aside class="notes">
+<p>The question carries two parts, an average effect and a difference across neighborhoods. Keep both in view, because the candidate gap at the end of this example lives in the second part and not the first.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The journal in the AI’s citation does not exist</h2>
+<div class="kicker">
+<p>Chapter 8 · A worked example</p>
+</div>
+<ul>
+<li>You ask an AI for the key studies and get one confident citation.</li>
+<li>Two plausible author names, a 2019 date, an official-sounding journal title.</li>
+<li>It reads like a longer version of the real <em>Electoral Studies</em>.</li>
+<li>Nothing in your library portal, nothing on Google Scholar, nothing on the publisher’s site.</li>
+<li>The citation was manufactured, and it took four minutes to find out.</li>
+</ul>
+<aside class="notes">
+<p>Notice what made it convincing: the shape was right, and the journal name sat close to a real one. Notice also how cheap the check was. You searched the exact title in your library portal, on Google Scholar, and on the publisher’s site, and four minutes settled it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>One retrieved review becomes six real sources in an hour</h2>
+<div class="kicker">
+<p>Chapter 8 · A worked example</p>
+</div>
+<ul>
+<li>Retrieve one real review of polling-place location and turnout, and read it.</li>
+<li>Backward: the older work on the costs of voting it builds on.</li>
+<li>Forward: recent studies using precinct-level administrative records.</li>
+<li>Within an hour your list holds a half-dozen real sources and one live disagreement.</li>
+</ul>
+<aside class="notes">
+<p>This is the loop run properly, and the difference from the failed attempt is that you opened something. One review read carefully carries two directions of search inside it already. Ask what the seed would be for the question each person brought to class.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The disagreement is the live edge of the field</h2>
+<div class="kicker">
+<p>Chapter 8 · A worked example</p>
+</div>
+<ul>
+<li>Some studies find relocating a polling place shaves a point or two off turnout.</li>
+<li>Others find voters switch to mail ballots and total turnout barely moves.</li>
+<li>That disagreement tells you the question is unsettled.</li>
+<li>For some questions, snowballing finds what database queries miss (Greenhalgh &amp; Peacock 2005).</li>
+</ul>
+<aside class="notes">
+<p>A disagreement inside your list is a finding about the field, not a failure of your search. It marks where the open work is. Snowballing being a documented search method is the chapter’s claim, and it is stated for some questions, not as a replacement for database searching.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The broad question is no gap; the narrow one may be</h2>
+<div class="kicker">
+<p>Chapter 8 · A worked example</p>
+</div>
+<ul>
+<li>“Does distance affect turnout” is no gap. The literature is enormous.</li>
+<li>Whether the drop concentrates in neighborhoods without a car may be genuine.</li>
+<li>You can defend it only because you gathered the sources around it.</li>
+<li>And because you are about to open every one.</li>
+</ul>
+<aside class="notes">
+<p>This is the decision the chapter says stays yours. The one citation the AI handed you was manufactured, so nothing it gave you narrowed anything. What makes the narrow question defensible is the retrieval you are about to do. Note the chapter’s own hedge: the narrower question may be genuine, and only retrieval that comes up empty earns the word.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>Six records, and the one variable behind the disagreement</h2>
+<div class="kicker">
+<p>Chapter 8 · A worked example</p>
+</div>
+<ul>
+<li>Six retrieved records stand in for the reading you do by hand.</li>
+<li>Watch the two means: records that ignored mail switching against those that measured it.</li>
+<li>No citations are planted here, because a fabricated source is what you are learning to catch.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Six retrieved records on polling-place distance and turnout. NO fabricated</span></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># citations appear here: these are anonymous stand-ins for records you open</span></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># yourself. The one thing that differs is what each record measured.</span></span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>measured_switching <span class="op">=</span> np.array([<span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>, <span class="va">True</span>])</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>effects <span class="op">=</span> np.<span class="bu">round</span>(np.where(measured_switching, <span class="op">-</span><span class="fl">0.2</span>, <span class="op">-</span><span class="fl">1.5</span>)</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.35</span>, size<span class="op">=</span><span class="dv">6</span>), <span class="dv">2</span>)</span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"record"</span>: [<span class="ss">f"record </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)],</span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a>                    <span class="st">"turnout change (pp)"</span>: effects,</span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a>                    <span class="st">"measured mail switching"</span>: measured_switching}).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">mean where switching was ignored : "</span></span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>effects[<span class="op">~</span>measured_switching]<span class="sc">.</span>mean()<span class="sc">:+.2f}</span><span class="ss"> pp"</span>)</span>
+<span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean where switching was measured: "</span></span>
+<span id="cb1-17"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>effects[measured_switching]<span class="sc">.</span>mean()<span class="sc">:+.2f}</span><span class="ss"> pp"</span>)</span>
+<span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the live disagreement is not noise. it tracks what each record measured"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>The block is seeded at 464, so the printed numbers are the same on every run. The two means are the point: the disagreement in the table is not noise, and it tracks what each record measured. Ask which of the six records you would want to open first, and why.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 8</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>The most common failure here is <strong>citation hallucination</strong>, the taxonomy’s <em>confident fabrication</em>: the model invents a source and presents it with full confidence. In the worked example it produced a plausible author pair, a 2019 date, and a journal that does not exist. You caught it in a minute by searching the exact title in quotes across your library portal and Google Scholar and finding nothing. Fluent confidence is not evidence. If you cannot locate a source where it should live, treat it as fabricated until you prove otherwise.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 8</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Two decisions never leave your hands. Whether a source counts as <strong>verified</strong>: only reading it yourself settles that. And whether your <strong>gap is real</strong>: only retrieval that comes up empty earns the word. What your project may claim follows from those two. An AI can point; it cannot certify.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 8 · Your move</p>
+</div>
+<ol type="1">
+<li>Write your lead question at the top of a fresh page.</li>
+<li>Search once yourself before you delegate.</li>
+<li>Ask an AI for five more candidates on the same question, each with authors, year, exact title, and venue.</li>
+<li>Snowball your seed by hand.</li>
+<li>Put all of them in one candidate list with a status column, and write <code>lead</code> in every row.</li>
+<li>Log the delegation in your AI Research Ledger, and verify at least one candidate now with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>; primary-source reading is the one that fits.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch08_research_builds_on_research.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/07-research-builds-on-research.html">Chapter 8</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Finding and Verifying Prior Evidence</h2>
+<div class="kicker">
+<p>Lesson 2 of this studio · Chapter 9</p>
+</div>
+<div class="divider-line">
+<p>which leads become verified evidence, and whether the quiet spot on your map is a real gap</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 9</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Which of your candidate leads survive retrieval and reading, and therefore become evidence you may build on, and whether the quiet spot they leave on your map is a genuine gap or a search you stopped too early.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Your advisor asks for the conversation, not a pile of summaries</h2>
+<div class="kicker">
+<p>Chapter 9 · Why this decision matters</p>
+</div>
+<ul>
+<li>She hands your first draft back: “Show me the conversation your work joins.”</li>
+<li>Which studies agree, which fight, and where exactly is the hole you say you are filling?</li>
+<li>That question decides whether your project has a place to stand.</li>
+</ul>
+<aside class="notes">
+<p>Open with the scene, because it is the moment the reader is heading toward. The advisor is not asking for more sources. She is asking whether you can locate your own question inside a running argument. Ask the room: if someone asked you that today, could you answer it for your project?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two ways to get it wrong, and both are expensive</h2>
+<div class="kicker">
+<p>Chapter 9 · Why this decision matters</p>
+</div>
+<ul>
+<li>Cite a source that does not exist, and every result resting on it is compromised.</li>
+<li>Same damage if the source is real but does not say what you claim.</li>
+<li>Announce a gap a paper already filled, and you have promised a contribution you cannot deliver.</li>
+<li>This chapter is where you make both calls, on the record.</li>
+</ul>
+<aside class="notes">
+<p>The chapter names two ways to get it wrong: a citation that fails, and a gap a paper already filled. Keep them apart, because the fixes are different. The citation failure has two forms of its own, one caught by trying to retrieve the source and one only by reading it. Both calls are ones you sign, which is why the chapter treats them as a research decision rather than a chore at the end.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A field is a running argument, and your job is to join it</h2>
+<div class="kicker">
+<p>Chapter 9 · The concept</p>
+</div>
+<ul>
+<li>One team reports that a soil treatment raises crop yield.</li>
+<li>The next tests whether the effect holds in a different climate.</li>
+<li>Your job is not to invent an island.</li>
+<li>Find the conversation your question belongs to and add one honest sentence.</li>
+</ul>
+<aside class="notes">
+<p>The cumulative conversation is the idea everything else in the chapter hangs on. Each study answers, extends, or challenges the ones before it. Keep the crop-yield pair concrete before you generalize, and hold the chapter’s target in view: one honest sentence added to a running argument, not an island of your own.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A lead stays a lead until you retrieve and read it yourself</h2>
+<div class="kicker">
+<p>Chapter 9 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Lead</span></p>
+<p><span class="d">a candidate source you have not confirmed yet</span></p>
+</div>
+<div class="term">
+<p><span class="t">Retrieval-verification loop</span></p>
+<p><span class="d">ask any tool to surface leads, retrieve the actual source yourself, verify it exists and says what was claimed, document where you found it</span></p>
+</div>
+</div>
+<ul>
+<li>Four steps, and every source you keep passes through them (Snyder 2019).</li>
+<li>Retrieval and verification are what promote a lead into a source.</li>
+</ul>
+<aside class="notes">
+<p>The loop is the habit the whole chapter is trying to install. The tool can do the first step. The other three are yours, and the second one, retrieving the actual source, is where a fabricated citation is caught. Ask the room how many of their current references they have personally opened.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Real and mischaracterized are two separate checks</h2>
+<div class="kicker">
+<p>Chapter 9 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Citation hallucination</span></p>
+<p><span class="d">an AI inventing a source that does not exist, dressed in a real-sounding author pair, a recent year, and a plausible journal</span></p>
+</div>
+<div class="term">
+<p><span class="t">Mischaracterized source</span></p>
+<p><span class="d">a real paper cited for a claim it never makes, such as a study reporting a correlation cited as proof of a cause</span></p>
+</div>
+</div>
+<ul>
+<li>A source can be real and still be mischaracterized (Ji et al.&nbsp;2023).</li>
+<li>“Does it exist” and “does it say this” are two questions. Run both.</li>
+</ul>
+<aside class="notes">
+<p>This is the slide to slow down on. The instinct is to treat existence as the whole test, so a real paper feels safe once it resolves. The correlation-cited-as-cause example is the one to press: nothing about retrieval catches it, only reading the results section does.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two solid sources, snowballed both ways, become ten</h2>
+<div class="kicker">
+<p>Chapter 9 · The concept</p>
+</div>
+<ul>
+<li>Snowballing walks a verified source’s links in two directions.</li>
+<li>Backward: read its reference list to find the older work it built on.</li>
+<li>Forward: follow the “Cited by” trail to newer works that cite it.</li>
+</ul>
+<aside class="notes">
+<p>Snowballing is how a small verified set grows without going back to a blind keyword search. It also matters for the next slide, because the gap test asks for one backward and one forward link from each verified source.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You earn the word gap only after real sources stay silent</h2>
+<div class="kicker">
+<p>Chapter 9 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Genuine gap</span></p>
+<p><span class="d">a question your verified sources actually leave unanswered, confirmed by looking</span></p>
+</div>
+<div class="term">
+<p><span class="t">Unfinished search</span></p>
+<p><span class="d">a question you simply stopped chasing</span></p>
+</div>
+</div>
+<ul>
+<li>From your desk they feel identical, and only one is a real contribution.</li>
+<li>The test is retrieval, followed forward and backward (Greenhalgh &amp; Peacock 2005).</li>
+</ul>
+<aside class="notes">
+<p>Keep the bound the chapter puts on the word gap. You have not found a gap because you did not find anything; you have found one when real sources you opened, followed in both directions, still say nothing about your question. Writing “my search is unfinished” is an honest result, not a failure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Biochar in sandy fields, and a citation that is nowhere</h2>
+<div class="kicker">
+<p>Chapter 9 · A worked example</p>
+</div>
+<ul>
+<li>Your question: does biochar raise maize yield in sandy fields?</li>
+<li>The AI returns a named author pair, a 2021 date, a real-sounding soil-science journal.</li>
+<li>The finding is tidy: biochar lifted yield by 18 percent.</li>
+<li>You go to read it. Not in the library portal, not on Google Scholar.</li>
+</ul>
+<aside class="notes">
+<p>Biochar is charcoal made from crop waste and mixed into soil, so the question is a real one in crop science. Everything about the returned citation looks right, which is the point. The detail is what makes it convincing, and the detail is not evidence of existence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A missing study is not proof that nobody has tested it</h2>
+<div class="kicker">
+<p>Chapter 9 · A worked example</p>
+</div>
+<ul>
+<li>Three things could be true when a citation will not resolve.</li>
+<li>Fabricated whole, and there is nothing to find.</li>
+<li>Garbled: right idea, wrong author or year, so search the claim itself.</li>
+<li>Paywalled or obscure, reachable through your library or by emailing the author.</li>
+<li>Your move is the same in all three: the lead stays out until retrieval succeeds.</li>
+</ul>
+<aside class="notes">
+<p>This is the decision the section is built around. The tempting reading is that an empty search proves the gap, and it proves nothing of the kind. Note that the three cases have different follow-ups but the same bookkeeping rule, which is what keeps the verified column honest.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Four retrieved sources, snowballed, and a gap you can defend</h2>
+<div class="kicker">
+<p>Chapter 9 · A worked example</p>
+</div>
+<ul>
+<li>You retrieve four soil-science studies through the library database and read each one.</li>
+<li>Backward from a 2019 field trial: the older greenhouse study it built on.</li>
+<li>Forward through “Cited by”: two newer trials in loam and clay.</li>
+<li>None of the four you retrieved ran the trial in the sandy soil your county farms.</li>
+</ul>
+<aside class="notes">
+<p>Now the conversation is visible: biochar helps yield in some soils, the size of the effect varies, and the sandy case is untested among the sources you opened. That quiet spot is ringed by papers you retrieved yourself, which is exactly what makes it defensible in front of the advisor from the first slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>Twelve leads, four in the verified column</h2>
+<div class="kicker">
+<p>Chapter 9 · A worked example</p>
+</div>
+<ul>
+<li>Watch the tally, not the titles. The block carries no citations at all.</li>
+<li>Four opened. Three garbled, two paywalled, three found nothing.</li>
+<li>The eight that did not open are not evidence that nobody studied your question.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Twelve leads returned by a search, each with what happened when you tried to</span></span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># retrieve it. The statuses are anonymous: no citation appears here, real or</span></span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># invented. Four opened; the rest are still leads.</span></span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>status <span class="op">=</span> rng.permutation([<span class="st">"retrieved"</span>] <span class="op">*</span> <span class="dv">4</span></span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a>                         <span class="op">+</span> [<span class="st">"garbled (real, wrong metadata)"</span>] <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a>                         <span class="op">+</span> [<span class="st">"paywalled (request sent)"</span>] <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>                         <span class="op">+</span> [<span class="st">"nothing found"</span>] <span class="op">*</span> <span class="dv">3</span>)</span>
+<span id="cb2-12"><a aria-hidden="true" tabindex="-1"></a>leads <span class="op">=</span> pd.DataFrame({<span class="st">"lead"</span>: <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">13</span>), <span class="st">"retrieval status"</span>: status})</span>
+<span id="cb2-13"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(leads.to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb2-14"><a aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> pd.Series(status).value_counts()</span>
+<span id="cb2-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> counts.to_string())</span>
+<span id="cb2-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">verified column           : </span><span class="sc">{</span>counts<span class="sc">.</span>get(<span class="st">'retrieved'</span>, <span class="dv">0</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"everything else stays OUT until retrieval succeeds — a lead you could"</span>)</span>
+<span id="cb2-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"not open is not evidence that nobody has studied your question"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Run it and read the counts aloud. The statuses are the evidence here, and the tally is the number that decides whether you have earned the word gap. Ask the room what their own twelve would look like today.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 dense">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 9</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>The failure to expect here is confident fabrication. Ask a general-purpose tool for “the most-cited study on biochar and maize yield in sandy soil” and it will often produce one, complete with a DOI-shaped string and a real journal name, because producing a fluent citation is exactly what it is built to do. The detail is not evidence of existence. You catch it the moment you try to retrieve it: paste the exact title in quotation marks into the library database and Google Scholar. If nothing resolves anywhere it should live, the citation is fabricated until proven otherwise, and it never enters your ledger. The fluency was the trap; the empty search result is the tell.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 9</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Two calls stay yours alone, because your name goes on the map. First, <strong>whether a source counts as verified</strong>: you retrieved it, opened it, and read the claim yourself, so no AI summary substitutes for the paper. Second, <strong>whether your gap is genuine</strong>: you walked one backward and one forward link from each verified source and the question still stands unanswered. An AI can point; only you can vouch.</p>
+</div>
+</section>
+<section class="slide level2 denser">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 9 · Your move</p>
+</div>
+<ol type="1">
+<li>Try to retrieve every candidate on your list.</li>
+<li>Open the ones that resolve and read them.</li>
+<li>Criticize each one.</li>
+<li>Draw your evidence map: one node per verified source, lines between the ones that agree, and a marked line between any two that disagree.</li>
+<li>Find the quiet spot on the map and write your gap as one bounded sentence: “Across the sources I retrieved and verified, ___ has not been established for ___.” If the honest version is “my search is still unfinished,” write that instead.</li>
+<li>Close the loop on your declaration: rewrite your declared question in light of the map, or defend leaving it unchanged with a reason tied to a specific node, and record the resulting version with its reason.</li>
+<li>Log the verification work in your AI Research Ledger, naming the method you used from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>; primary-source reading is the one that fits every citation.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch09_finding_and_verifying_prior_evidence.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html">Chapter 9</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Milestone 3: Your evidence base</h2>
+<div class="kicker">
+<p>Studio 3 closes here</p>
+</div>
+<div class="divider-line">
+<p>What the lessons handed you becomes one artifact you can defend.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What this milestone produces</h2>
+<div class="kicker">
+<p>Milestone 3</p>
+</div>
+<div class="decision">
+<p><span class="label">The artifact</span></p>
+<p><strong>What this milestone produces.</strong> An evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Studio 2 declaration.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What you bring</h2>
+<div class="kicker">
+<p>Milestone 3 · Check before you start</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/07-research-builds-on-research.html">Lesson 8 — Research Builds on Research</a>: your candidate source list with a status column, seeded by your own search, an AI sweep, and hand snowballing, with a lead source marked.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html">Lesson 9 — Finding and Verifying Prior Evidence</a>: your verified sources, your evidence map with its quiet spot, your gap written as one bounded sentence, and your revised declaration — or the defended reason it holds.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The practice</h2>
+<div class="kicker">
+<p>Milestone 3 · In the studio</p>
+</div>
+<ol type="1">
+<li>Search deliberately and log every search: where you looked, what terms, what you found and did not.</li>
+<li>Verify each source you intend to cite by retrieving and reading it, never by trusting a summary.</li>
+<li>Build the evidence map: what is settled, what is contested, what is missing.</li>
+<li>Write the revision: how your question changed, or a defended statement of why it did not.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>The four rails, here</h2>
+<div class="kicker">
+<p>Milestone 3 · Every studio, these four</p>
+</div>
+<div class="rails">
+<div class="rail">
+<p><span class="t">Ethics, permissions, and data exposure</span></p>
+<p><span class="d">Record the licence and terms of any dataset you found here, before you plan to use it.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Evidence, provenance, and reproducibility</span></p>
+<p><span class="d">This studio IS the evidence rail’s home; every later citation traces to this registry.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">AI activity, verification, and human decisions</span></p>
+<p><span class="d">Every AI-suggested source is unverified until you have opened it yourself.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Uncertainty, claim boundary, and revision history</span></p>
+<p><span class="d">Note where the literature disagrees; that disagreement is uncertainty you inherit.</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>A version, not a pass</h2>
+<div class="kicker">
+<p>Milestone 3</p>
+</div>
+<div class="note-card">
+<p><span class="label">How the record works</span></p>
+<p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
+</div>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>The one rule</h2>
+<div class="divider-line">
+<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
+<p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
+</div>
+<p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio03-ground-in-evidence.html">Studio 3 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone03-ground-in-evidence.html">Milestone 3</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="_theme/edrai_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>EDR|AI · Studio 3 — Ground it in verified evidence</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 7.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

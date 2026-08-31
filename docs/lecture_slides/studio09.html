@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Davi Moreira">
+  <title>HONR 46400: Evidence-Driven Research (Fall 2026) – HONR 46400 · Evidence-Driven Research</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <p class="subtitle">Studio 9 — Write, bound, and disclose</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Davi Moreira 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+<h2>What you can defend when you leave</h2>
+<div class="kicker">
+<p>Studio 9</p>
+</div>
+<div class="decision">
+<p><span class="label">What you can defend when you leave</span></p>
+<p>Write the claim you can defend, bounded by what your evidence supports, with your AI use disclosed.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The milestone ahead</h2>
+<div class="kicker">
+<p>Studio 9</p>
+</div>
+<p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html">Milestone 9: Your bounded claims</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> A stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement.</p>
+<aside class="notes">
+<p>Writing is where research leaves your head and can first be misread. This milestone turns your audited results into claims a stranger can weigh: each one bounded by what the design established, traced to the output that supports it, and accompanied by an honest account of what AI did along the way. The discipline is simple and strict. A claim with no row in the evidence table does not ship.</p>
+<p>Milestone 10 adapts these bounded claims to a real audience and rehearses their defense. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 dense">
+<h2>The lessons in this studio</h2>
+<div class="kicker">
+<p>Studio 9 · Road map</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html">Lesson 28 — From Results to Claims</a>: your claims with verbs downgraded to what the design established, each carrying its boundary line.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html">Lesson 29 — Claim–Evidence Tables</a>: your claim-evidence table, one row per claim with claim, evidence, trace, and boundary, every number traced to its output.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html">Lesson 30 — AI Disclosure and Research Integrity</a>: your AI-use disclosure, written from the ledger and naming what you did not verify.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html">Lesson 31 — From Dossier to Research Note</a>: your stand-alone note draft: the problem-gap-question spine, methods, results with uncertainty, discussion, ordered findings with the headline claim’s boundary inside, references, your disclosure placed, and the pointer to the package Studio 11 will freeze.</li>
+</ul>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>From Results to Claims</h2>
+<div class="kicker">
+<p>Lesson 1 of this studio · Chapter 28</p>
+</div>
+<div class="divider-line">
+<p>the verb in your headline, and how far your evidence lets it reach</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 28</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Your analysis printed a number. Now you decide the sentence that number lets you assert: the headline you will show in public and defend out loud, worded so its verb stays inside what your design established and its uncertainty rides in the same eye-span. You choose the words. You lock them. You never let a tool talk your claim past its boundary.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The words this chapter uses</h2>
+<div class="kicker">
+<p>Chapter 28 · Key terms</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Uncertainty in the same eye-span</span></p>
+<p><span class="d">the interval or caveat sits right beside the claim, not in a footnote (Wasserstein &amp; Lazar 2016).</span></p>
+</div>
+<div class="term">
+<p><span class="t">Traceability</span></p>
+<p><span class="d">every number you show walks back to the exact notebook cell that produced it.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>Each term is defined in the chapter on first use; these are the definitions as the book gives them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A claim that outruns its evidence makes a judge distrust the whole board</h2>
+<div class="kicker">
+<p>Chapter 28 · Why this decision matters</p>
+</div>
+<ul>
+<li>That is a research-integrity judge, working a poster session.</li>
+<li>She is not testing your statistics.</li>
+<li>She is testing whether your words match the evidence underneath them.</li>
+</ul>
+<div class="note-card">
+<p>If the headline reads ‘lowers blood pressure’ but the study only watched who chose to walk, I stop reading.</p>
+</div>
+<aside class="notes">
+<p>Open with the judge, because she is the reader every headline eventually meets. She points at one number and asks where it came from and what it lets you say. Ask the room what she would do at their own poster, and let them answer before you define anything.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Your analysis prints a number; your headline asserts a sentence</h2>
+<div class="kicker">
+<p>Chapter 28 · Why this decision matters</p>
+</div>
+<ul>
+<li>A result is not yet a claim.</li>
+<li>The gap between the two is where most projects break.</li>
+<li>The sentence almost always wants to say more than the number earned.</li>
+<li>Close that gap yourself, before a stranger finds it open.</li>
+</ul>
+<aside class="notes">
+<p>State the gap plainly, then say why it is easy to miss from inside and easy to find from outside. Nobody drafts a dishonest headline on purpose; the sentence drifts because it almost always wants to say more than the number earned. The rest of the chapter is a habit for catching that drift before the poster hall does.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A result is a number; a claim is a sentence you will defend</h2>
+<div class="kicker">
+<p>Chapter 28 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Result</span></p>
+<p><span class="d">a number your analysis produced, such as a difference of 6 points between two group averages</span></p>
+</div>
+<div class="term">
+<p><span class="t">Claim</span></p>
+<p><span class="d">a sentence you assert and will defend, such as ‘the walking group had lower blood pressure’</span></p>
+</div>
+</div>
+<ul>
+<li>Turning the first into the second is a decision, not a formatting step.</li>
+<li>You choose how much the sentence is allowed to say.</li>
+</ul>
+<aside class="notes">
+<p>Both words get used loosely, so pin them down before anything else. The result is what the analysis printed. The claim is what you will say out loud and defend when someone pushes back. Because you choose how far the sentence reaches, this is a research decision that belongs to you.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The kind belongs to the question; the status belongs to the design</h2>
+<div class="kicker">
+<p>Chapter 28 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Question</span></p>
+<p><span class="d">what you set out to learn, and its kind comes from its own words</span></p>
+</div>
+<div class="term">
+<p><span class="t">Identification status</span></p>
+<p><span class="d">whether this design can actually deliver that answer</span></p>
+</div>
+</div>
+<ul>
+<li>“Does walking lower blood pressure?” asks what an intervention would change, so it is causal.</li>
+<li>It stays causal no matter which data you managed to collect.</li>
+<li>Watched who already chose to walk: not identified by this design, under the assumptions you can defend.</li>
+<li>Your result is then a descriptive association, real and worth reporting.</li>
+</ul>
+<aside class="notes">
+<p>Four ideas govern the choice, and keeping the first three apart is what stops overclaiming before it starts. The question’s kind comes from its own words, so weak data never downgrades a causal question into a descriptive one. The status is whether this design can actually deliver that answer (Blair et al. 2023): if nothing separates the walking from the kind of person who walks, the status is not identified under the assumptions you can defend. The result sits beside the causal question rather than replacing it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>“Causal and unidentified” fuses two fields into one status</h2>
+<div class="kicker">
+<p>Chapter 28 · The concept</p>
+</div>
+<ul>
+<li>The status never repeats the word “causal”.</li>
+<li>Written as one status, it fuses the two fields you just separated.</li>
+<li>Keep two lines: what the question asks, and what the design delivers.</li>
+</ul>
+<aside class="notes">
+<p>This is the slip to watch for, and it looks harmless. The kind belongs to the question and the status belongs to the design, so a status that carries the word causal is quietly answering the question it was supposed to leave open. Have someone read their own two lines aloud and check that the lines say different things.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Four lines you can reuse on any project</h2>
+<div class="kicker">
+<p>Chapter 28 · The concept</p>
+</div>
+<ul>
+<li><strong>Question kind:</strong> causal.</li>
+<li><strong>Identification status:</strong> not identified by this design under stated assumptions.</li>
+<li><strong>Result:</strong> observed association.</li>
+<li><strong>Claim boundary:</strong> association only.</li>
+</ul>
+<aside class="notes">
+<p>Put the card on the board and leave it there for the rest of the session. Four fields, written out, and it travels to any project you will run. When somebody asks whether a headline is honest, the answer gets read off this card instead of argued about.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A defended identification argument is what earns a causal verb</h2>
+<div class="kicker">
+<p>Chapter 28 · The concept</p>
+</div>
+<div class="lead">
+<p>Your claim boundary lives in the headline verb.</p>
+</div>
+<ul>
+<li>With no identification argument you write “was associated with lower,” never “lowered.”</li>
+<li>What earns the causal verb is the argument, not the size of the gap (Hernán &amp; Robins 2020).</li>
+<li>Randomizing is the cleanest way to get one.</li>
+<li>Observational designs can carry causal answers when their assumptions are argued and defended.</li>
+<li>What you may never do is use the verb without the argument.</li>
+</ul>
+<aside class="notes">
+<p>Read the condition slowly, because it is the whole rule and it is routinely dropped. The observational-causal pathway earlier in the book shows designs that do reach causal answers, so this is not a ban on observational work. It is a requirement that the argument exist and be defended before the verb changes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A bound a reader has to hunt for is a bound doing hidden work</h2>
+<div class="kicker">
+<p>Chapter 28 · The concept</p>
+</div>
+<ul>
+<li>Print “about 6 points lower (95% interval: 1 to 11)” under the headline.</li>
+<li>The reader meets the doubt at the same moment as the number.</li>
+<li>The 6-point gap points back to the one line of code that computed it.</li>
+<li>A number you cannot trace cannot go up.</li>
+</ul>
+<aside class="notes">
+<p>Two habits make the honesty visible rather than merely asserted. Keeping the interval in the same eye-span means a footnote can no longer carry the caveat where nobody reads it (Wasserstein &amp; Lazar 2016). Tracing means you can show the cell that produced the number when a judge asks. Say plainly that the numbers in this chapter’s examples are constructed to make the point, and that the uncertainty lesson is where intervals get built properly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Forty volunteers, a 6-point gap, and a headline that reaches too far</h2>
+<div class="kicker">
+<p>Chapter 28 · A worked example</p>
+</div>
+<ul>
+<li>A small human-physiology pilot: forty volunteers wear a step tracker for a month.</li>
+<li>Twenty walk at least 8,000 steps a day; twenty do not.</li>
+<li>Average resting systolic: 128 active, 134 less-active.</li>
+<li>The draft headline reads “Walking LOWERS blood pressure.”</li>
+<li>Two bars on an axis starting at 125, told apart by red and green alone.</li>
+</ul>
+<aside class="notes">
+<p>Give the setup exactly as the pilot ran, then show the draft board and let the room list what is wrong with it before you do. Three problems are sitting there: the verb, the truncated axis, and color carrying the whole comparison. The result itself, the 6-point gap, is fine.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The verb claims a crossing the design never paid for</h2>
+<div class="kicker">
+<p>Chapter 28 · A worked example</p>
+</div>
+<ul>
+<li>The question behind this study is causal, and it stays causal.</li>
+<li>Nobody was assigned to walk.</li>
+<li>The active group may differ in age, diet, or baseline health.</li>
+<li>Fill the card, and the honest verb is “was associated with lower.”</li>
+</ul>
+<aside class="notes">
+<p>Walk the decision one field at a time. The question is causal, the design cannot answer it, and the comparison leaves every group difference untouched. Those three fields together fix what the sentence may say. Ask the room which single word changes, and make them say why that word and not the number.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Where the axis starts is part of the claim</h2>
+<div class="kicker">
+<p>Chapter 28 · A worked example</p>
+</div>
+<ul>
+<li>Bars encode magnitude, so starting them at 125 makes 6 points look like a cliff.</li>
+<li>Start the bars at a meaningful zero.</li>
+<li>Better: plot the two group averages as points with their intervals.</li>
+<li>Use a blood-pressure scale a clinician would recognize.</li>
+<li>Label each bar with its value, so color is never the only channel.</li>
+</ul>
+<aside class="notes">
+<p>Figure honesty is part of the claim audit, not a separate design chore. A truncated axis makes the picture assert more than the number does. On the labels, say who this is for: a reader who cannot separate red from green, or who hears the figure read aloud by a screen reader, should still receive the number rather than only the hue.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Same result, a claim that survives the judge</h2>
+<div class="kicker">
+<p>Chapter 28 · A worked example</p>
+</div>
+<ul>
+<li>Nothing about the result changed.</li>
+<li>The verb was downgraded, and the interval rides in the same eye-span.</li>
+<li>A boundary line names what the design does not establish.</li>
+</ul>
+<div class="note-card">
+<p>In this sample, more-active volunteers averaged about 6 points lower resting systolic blood pressure (95% interval: 1 to 11); this is an observed association, and this design does not identify whether walking caused the drop.</p>
+</div>
+<aside class="notes">
+<p>Read the locked claim out loud, slowly. It is longer than the draft headline and it is the version you can defend when a stranger pushes on it. Point out that all three repairs are visible in one sentence: the verb, the interval, and the boundary. Say again that this interval is constructed for the example, as the chapter states.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>The printout shows the difference the poster never did</h2>
+<div class="kicker">
+<p>Chapter 28 · A worked example</p>
+</div>
+<ul>
+<li>The volunteers chose how much to walk, and age drives both.</li>
+<li>Watch the two group ages printed beside the 6-point gap.</li>
+<li>The age line is one difference you can see.</li>
+<li>The design leaves every unseen one untouched.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Forty volunteers who CHOSE how much they walk. Age drives both.</span></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">40</span></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> np.r_[rng.normal(<span class="dv">31</span>, <span class="dv">7</span>, <span class="dv">20</span>), rng.normal(<span class="dv">43</span>, <span class="dv">7</span>, <span class="dv">20</span>)]   <span class="co"># active are younger</span></span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>active <span class="op">=</span> np.r_[np.ones(<span class="dv">20</span>, <span class="bu">bool</span>), np.zeros(<span class="dv">20</span>, <span class="bu">bool</span>)]</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>systolic <span class="op">=</span> np.<span class="bu">round</span>(<span class="dv">112</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> age <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">6</span>, n))</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a>gap <span class="op">=</span> systolic[<span class="op">~</span>active].mean() <span class="op">-</span> systolic[active].mean()</span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"active group mean systolic      : </span><span class="sc">{</span>systolic[active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"less-active group mean systolic : </span><span class="sc">{</span>systolic[<span class="op">~</span>active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"observed gap                    : </span><span class="sc">{</span>gap<span class="sc">:.0f}</span><span class="ss"> points"</span>)</span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean age, active vs less-active : </span><span class="sc">{</span>age[active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss"> vs "</span></span>
+<span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>age[<span class="op">~</span>active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">nobody was assigned to walk. the age line is one difference you can"</span>)</span>
+<span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"see; the design leaves every unseen one untouched, so the verb stays"</span>)</span>
+<span id="cb1-19"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"'is associated with'"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Run the block and stop on the last two prints rather than the gap. Age is visible here only because the example was built that way; in a real pilot you would not get the list of confounders printed for you. Ask the room what else might differ between the two groups, let the answers pile up, and land the point: nobody was assigned, so the verb stays “is associated with”.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 28</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You paste your honest headline into a tool and ask it to make it “punchier.” It returns, with total confidence, “Walking Reduces Blood Pressure by 6 Points.” It reads beautifully and it is wrong. The tool upgraded your verb from an association to a cause and dropped your interval, a silent scope change dressed up as a copy edit.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 28 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by comparing the new verb to what your design earned.</li>
+<li>Your question was causal and stays causal, but nobody was assigned to walk, so nothing identifies that answer and “reduces” claims a warrant you never held.</li>
+<li>You also notice the “6 points” now stands alone with no interval beside it.</li>
+<li>You revert to “was associated with about 6 points lower (95% interval: 1 to 11).” The fluent rewrite reviewed your style; only you can review your claim.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by comparing the new verb to what your design earned. Your question was causal and stays causal, but nobody was assigned to walk, so nothing identifies that answer and “reduces” claims a warrant you never held. You also notice the “6 points” now stands alone with no interval beside it. You revert to “was associated with about 6 points lower (95% interval: 1 to 11).” The fluent rewrite reviewed your style; only you can review your claim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 28</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Three calls stay yours. You choose the <strong>verb in your headline</strong>, the one word that fixes your claim boundary. You make the <strong>defend-or-concede call</strong> when a question pushes on that boundary out loud. And you make the <strong>lock decision</strong>: the judgment that every number is traced, every citation resolves, and the claim is ready to be final. A tool can draft questions and hunt sources, but it cannot decide what your evidence licenses or when your claim is earned.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 28 · Your move</p>
+</div>
+<ol type="1">
+<li>List every result you might put in front of a reader, then write the claim sentence each one licenses.</li>
+<li>Check every verb against what your design established, and downgrade the ones that reach too far. “Caused” becomes “was associated with”; “predicts” becomes “flagged.”</li>
+<li>Write a boundary line beside each claim naming what it does not establish, and put the uncertainty in the same eye-span as the number.</li>
+<li>Trace every number back to the cell that produced it and cut the ones you cannot walk back.</li>
+<li>Log it in your AI Research Ledger, and verify at least one claim with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_from_results_to_claims.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html">Chapter 28</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Claim–Evidence Tables</h2>
+<div class="kicker">
+<p>Lesson 2 of this studio · Chapter 29</p>
+</div>
+<div class="divider-line">
+<p>for each claim you make, which specific evidence backs it and where that evidence can be found</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 29</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>For every claim your work makes in public, decide which exact piece of evidence backs it, where that evidence lives, and what it does not establish. Then write all three in one row of a claim–evidence table, before the claim reaches anywhere a stranger can point at it.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>One vague answer costs you every other number</h2>
+<div class="kicker">
+<p>Chapter 29 · Why this decision matters</p>
+</div>
+<ul>
+<li>A research-integrity judge, working a poster hall, on what one answer decides.</li>
+<li>The doubt does not stay on that number. It reaches every other number up there.</li>
+</ul>
+<div class="note-card">
+<p>Walk me to the line that made it and I trust the whole poster. Say ‘it’s in the analysis somewhere’ and I stop believing every other number up there.</p>
+</div>
+<aside class="notes">
+<p>Read the judge’s line as the scene it is: someone stops in front of your board, picks a number, and asks where it came from. Notice what the judge says happens on a bad answer, because it is the part people do not expect. The cost is not one number marked wrong, it is that every other number on the poster now looks like the same kind of number. Ask the room which figure on their own draft they would least like to be pointed at.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The gap is between a claim you can say and one you can back</h2>
+<div class="kicker">
+<p>Chapter 29 · Why this decision matters</p>
+</div>
+<ul>
+<li>A poster is a set of promises made in public.</li>
+<li>Each headline number, each figure, each cited fact: a stranger can test it in ninety seconds.</li>
+<li>A claim-evidence table closes that gap on purpose, before anyone points a finger.</li>
+<li>The honesty is built into the work, not patched under pressure.</li>
+</ul>
+<aside class="notes">
+<p>The decision on the table is narrow and it is per claim: for each claim you make, which specific evidence backs it and where that evidence can be found. Saying a claim is easy and backing it is a separate act, and the whole chapter lives in the distance between the two. The table is what makes that distance visible to you first, at your desk, rather than to a stranger in a hall.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>One row per claim, and the row names its own evidence</h2>
+<div class="kicker">
+<p>Chapter 29 · The concept</p>
+</div>
+<ul>
+<li><strong>Claim-evidence table:</strong> a table with one row per claim, pairing each claim with the evidence behind it.</li>
+<li>Claim column: “Store B sold about 1.4 times as many units per week as Store A.”</li>
+<li>Evidence column: the two weekly sales averages.</li>
+</ul>
+<aside class="notes">
+<p>Keep the first pass this plain, because the instrument is genuinely this simple and its difficulty is elsewhere. The store example is a row cut to its two core parts: an assertion on the left, the specific thing that produced it on the right. The next slide adds the other two columns, trace and boundary, and the rest of the chapter is about them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 dense">
+<h2>Four columns carry each row, and Evidence is not Trace</h2>
+<div class="kicker">
+<p>Chapter 29 · The concept</p>
+</div>
+<div class="terms two">
+<div class="term">
+<p><span class="t">Claim</span></p>
+<p><span class="d">the statement you assert as true</span></p>
+</div>
+<div class="term">
+<p><span class="t">Evidence</span></p>
+<p><span class="d">the exact result or source that backs the claim, with its uncertainty</span></p>
+</div>
+<div class="term">
+<p><span class="t">Trace</span></p>
+<p><span class="d">where a number was actually produced, named precisely enough to open</span></p>
+</div>
+<div class="term">
+<p><span class="t">Boundary</span></p>
+<p><span class="d">the line between what the evidence licenses and what it does not</span></p>
+</div>
+</div>
+<ul>
+<li>Claim: “turnout in these precincts was 61.3 percent.”</li>
+<li>Trace: “cell 16, where <code>turnout = ballots.sum() / registered.sum()</code> runs.”</li>
+<li>Boundary: “one county, one midterm election, registered voters only, so this is not the statewide rate.”</li>
+</ul>
+<aside class="notes">
+<p>Take Evidence and Trace as two different jobs, since the room will want to merge them. Evidence is the result with its uncertainty, which for the turnout example is 30 sampled precincts giving 48,900 ballots against 79,800 registered voters, plus the interval of plus or minus 1.8 points around the estimate. Trace is the address where that result was produced, named precisely enough that someone can open it. The boundary column carries the claim boundary, the line between what the evidence licenses and what it does not (ALLEA – All European Academies 2023): here it says that nothing is claimed about the statewide rate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A number you cannot walk back does not belong on the board</h2>
+<div class="kicker">
+<p>Chapter 29 · The concept</p>
+</div>
+<ul>
+<li><strong>Traceable number:</strong> one you can walk back to the notebook cell that computed it.</li>
+<li><strong>Untraceable number:</strong> one you cannot walk back, typed from memory or rounded by hand.</li>
+<li>Building the table is the skill, and a blank cell is a visible hole.</li>
+<li>With every claim in a filled row, an unbacked claim has nowhere to hide (Munafò et al.&nbsp;2017).</li>
+</ul>
+<aside class="notes">
+<p>The two words are the practical test, and you apply them one number at a time. Ask of any figure on the board: can I open the thing that made this, right now, in front of someone. If the answer is that you remember writing it down, the number is untraceable and the chapter’s rule is that it comes off the board. The blank cell matters for the same reason: the table does not make weak claims strong, it makes them impossible to overlook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You build Row 1 before the file goes to the printer</h2>
+<div class="kicker">
+<p>Chapter 29 · A worked example</p>
+</div>
+<ul>
+<li>Your political-science poster reports turnout in one county’s midterm election.</li>
+<li>Headline: “turnout in these precincts was 61.3 percent.”</li>
+<li>Row 1 claim: “turnout was 61.3 ± 1.8 percent.”</li>
+<li>Row 1 evidence: 30 sampled precincts, 47,871 ballots against 78,117 registered voters.</li>
+</ul>
+<aside class="notes">
+<p>The quantity here is the share of registered voters who cast a ballot, in one county, in one midterm. The interval comes from the spread of the 30 precinct-level rates, so the uncertainty is carried in the evidence column rather than left off. Row 1’s trace is cell 16, the line that divides ballots by registered voters, and its boundary is one county, one midterm, registered voters only, so nothing is claimed about statewide turnout or about eligible adults who never registered.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The table caught 63.0 before a judge did</h2>
+<div class="kicker">
+<p>Chapter 29 · A worked example</p>
+</div>
+<ul>
+<li>You reach for the trace and the draft board reads 63.0, not 61.3.</li>
+<li>You had quietly written the officially reported statewide figure instead.</li>
+<li>Your own cell never produced 63.0.</li>
+<li>Filling Row 1 is what forced the catch.</li>
+</ul>
+<aside class="notes">
+<p>This is the moment worth slowing down on, because the error is not carelessness. Two real numbers were in your head, one from your analysis and one from an official release, and the wrong one reached the board. Nothing about looking at the poster would have revealed it. Reaching for the trace did, which is the argument for filling the column at all.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Row 2 bounds itself: only two definitions were tested</h2>
+<div class="kicker">
+<p>Chapter 29 · A worked example</p>
+</div>
+<ul>
+<li>Claim: “the estimate barely moves when I change how a registration counts as active.”</li>
+<li>Evidence: under two reasonable definitions the estimates differ by less than your sampling spread.</li>
+<li>Trace: cell 18, the definition comparison.</li>
+<li>Boundary: nothing is claimed about looser rolls that keep long-inactive registrations.</li>
+</ul>
+<aside class="notes">
+<p>Row 2 says the estimate barely moves, and a claim worded that way can quietly reach past what was tested. The evidence supports a statement about two definitions, so the claim has to stay a statement about two definitions. Point at the boundary sentence and ask the room what it would take to earn the wider version. By the chapter’s own boundary, it would take testing the looser rolls, which is work, not wording.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two claims, two rows, every number walked back to a cell</h2>
+<div class="kicker">
+<p>Chapter 29 · A worked example</p>
+</div>
+<ul>
+<li>Every boundary written down, before the file goes to the printer.</li>
+<li>That table is what lets your work survive a pointed finger.</li>
+<li>Tracing every reported claim to the line that produced it is the reproducibility reforms’ practical core (Munafò et al.&nbsp;2017).</li>
+</ul>
+<aside class="notes">
+<p>Two rows is a small table, which is the point: with one row per claim, the instrument scales with how much you assert in public, not with how much analysis you ran. The reproducibility literature asks for this same discipline at the level of a whole field, and the table is the version of it you can run on your own poster. Ask each person how many distinct claims their current poster makes, counting the ones a figure makes without a sentence, and watch the count come out higher than they expected.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>Run the traced line; that print is the only number Row 1 may carry</h2>
+<div class="kicker">
+<p>Chapter 29 · A worked example</p>
+</div>
+<ul>
+<li>Watch the line marked <code># the traced line</code>. That is the address Trace points at.</li>
+<li>The printed turnout and spread are what Row 1 copies, digit for digit.</li>
+<li>Any board figure this line does not produce is untraceable, whoever published it.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Thirty sampled precincts: ballots cast and registered voters.</span></span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a>registered <span class="op">=</span> rng.integers(<span class="dv">2300</span>, <span class="dv">3000</span>, size<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a>rate <span class="op">=</span> np.clip(rng.normal(<span class="fl">0.625</span>, <span class="fl">0.050</span>, size<span class="op">=</span><span class="dv">30</span>), <span class="fl">0.35</span>, <span class="fl">0.85</span>)</span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>ballots <span class="op">=</span> np.<span class="bu">round</span>(registered <span class="op">*</span> rate).astype(<span class="bu">int</span>)</span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a>turnout <span class="op">=</span> ballots.<span class="bu">sum</span>() <span class="op">/</span> registered.<span class="bu">sum</span>()                  <span class="co"># the traced line</span></span>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>spread <span class="op">=</span> <span class="fl">1.96</span> <span class="op">*</span> rate.std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(<span class="bu">len</span>(rate)) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-12"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"precincts sampled  : </span><span class="sc">{</span><span class="bu">len</span>(registered)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-14"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"ballots cast       : </span><span class="sc">{</span>ballots<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb2-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"registered voters  : </span><span class="sc">{</span>registered<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb2-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"turnout            : </span><span class="sc">{</span>turnout<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss"> ± </span><span class="sc">{</span>spread<span class="sc">:.1f}</span><span class="ss"> percent"</span>)</span>
+<span id="cb2-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">that is the number your Trace cell must point at. any figure on the"</span>)</span>
+<span id="cb2-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"board that this line does not produce is untraceable, whoever published it"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Run it live if you can, with SEED set to 464 so the printout is the same for everyone. Have the room say which printed line feeds Row 1’s claim column and which ones feed its evidence column. Then make the closing point explicit: the last two printed lines are a rule, not a comment, and an official figure from a real election office is still untraceable if your own analysis did not produce it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 29</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You paste your poster text and ask an AI tool to build the whole claim–evidence table for you. It returns a clean, complete grid, every cell filled, and the trace column reads confidently: “turnout value from cell 14.” You almost accept it. Then you open cell 14, and it totals the registered voters; it never divides. The rate you report is produced two cells later, in cell 16. The tool guessed a plausible cell number and filled it with full confidence, and its tidy finished table hid the wrong trace behind a polished look.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 29 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by refusing to trust a trace you have not opened.</li>
+<li>Reading the actual cell, number in hand, is the whole discipline.</li>
+<li>A filled table is not a verified table.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by refusing to trust a trace you have not opened. Reading the actual cell, number in hand, is the whole discipline. A filled table is not a verified table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 29</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>The <strong>wording of each claim</strong>, the <strong>judgment that a piece of evidence actually backs it</strong>, and the <strong>boundary each claim carries</strong> stay yours. An AI can list claims and draft rows, but it cannot open your notebook cell to confirm a number is real, and it cannot decide the evidence is honest enough to print. The call that the table is complete and the work is locked is yours to declare and defend.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 29 · Your move</p>
+</div>
+<ol type="1">
+<li>Write one row per claim with four columns: claim, evidence, trace, boundary.</li>
+<li>Fill the evidence column with the actual result and its uncertainty, not a description of the result.</li>
+<li>Fill the trace column by opening the cell or the source and reading the number off the screen.</li>
+<li>Write each boundary as a sentence about what the row does not establish, then hunt for blank cells.</li>
+<li>Log it in your AI Research Ledger, and verify at least one traced number with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_claim_evidence_tables.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html">Chapter 29</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>AI Disclosure and Research Integrity</h2>
+<div class="kicker">
+<p>Lesson 3 of this studio · Chapter 30</p>
+</div>
+<div class="divider-line">
+<p>which AI uses you disclose, and what you claim you did to check each one</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 30</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Decide exactly what you will say about every AI tool you used: which tool, on which task, and how you checked what came back. Then record it, so when someone asks <em>“did you use AI, and how did you verify it?”</em> you answer from a checkable record instead of from memory.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The words this chapter uses</h2>
+<div class="kicker">
+<p>Chapter 30 · Key terms</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">AI disclosure</span></p>
+<p><span class="d">a truthful statement of where and how you used an AI tool in your work (International Committee of Medical Journal Editors 2026).</span></p>
+</div>
+<div class="term">
+<p><span class="t">Research integrity</span></p>
+<p><span class="d">the practice of keeping your work honest and traceable, so a reader can see where each result came from and trust it (ALLEA – All European Academies 2023).</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>Each term is defined in the chapter on first use; these are the definitions as the book gives them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A result I cannot trace is a result I cannot trust</h2>
+<div class="kicker">
+<p>Chapter 30 · Why this decision matters</p>
+</div>
+<ul>
+<li>Said by a conference reviewer, standing at your poster.</li>
+<li>The penalty is not for using the tool.</li>
+<li>The penalty is for not being able to say where, and how you checked.</li>
+</ul>
+<div class="note-card">
+<p>“I am not going to penalize you for using an AI tool. I am going to penalize you for not being able to tell me where you used it and how you checked it. A result I cannot trace back to a source and a verification is a result I cannot trust.”</p>
+</div>
+<aside class="notes">
+<p>Read the quote aloud and stop on the second sentence, because that is where the reviewer moves the standard. Using an AI tool is not the thing being judged here; the ability to locate the use and the check is. Ask the room what they would answer right now if a stranger asked them where an AI tool touched their project.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>“Yes, a bit, and it seemed fine” turns good work into an untrustable result</h2>
+<div class="kicker">
+<p>Chapter 30 · Why this decision matters</p>
+</div>
+<ul>
+<li>At your research conference, a stranger can ask you the AI-use question.</li>
+<li>Many journals and conferences now ask authors where and how AI tools were used.</li>
+<li>So it is not a formality you can wave off.</li>
+<li>Disclosure is what keeps an honest use of AI honest under questioning.</li>
+</ul>
+<aside class="notes">
+<p>The failure here is fast and public. One vague sentence at the poster, and the work stops being checkable in front of the person asking. Point out that the chapter calls it good work a moment earlier; what changed is what the reviewer can verify about it. That is why the chapter says this is not a formality you can wave off.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>One sentence can name the tool, the task, and the check</h2>
+<div class="kicker">
+<p>Chapter 30 · The concept</p>
+</div>
+<ul>
+<li>Which tool: the AI assistant you asked.</li>
+<li>For which task: drafting the code behind the coverage ratio.</li>
+<li>How you verified: recomputed by hand before reporting.</li>
+</ul>
+<div class="note-card">
+<p>“I used Gemini to draft the code that computed my coverage ratio, and I recomputed that number by hand before reporting it.”</p>
+</div>
+<aside class="notes">
+<p>Put the finished sentence up before any definition, so the shape is visible first. It is short, and it still survives a follow-up question, because each clause points at something a reader could go and check. Ask the room to write the same sentence for the last thing they delegated, and watch which of the three parts goes missing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Drop any one of the three parts and the disclosure fails</h2>
+<div class="kicker">
+<p>Chapter 30 · The concept</p>
+</div>
+<div class="lead">
+<p>Three parts make a disclosure complete by this book’s standard.</p>
+</div>
+<ul>
+<li>Each part maps to a column in your ledger.</li>
+<li>“I used AI,” with no task named, is meaningless.</li>
+<li>A task with no verification is the gap a reviewer is trained to find.</li>
+</ul>
+<aside class="notes">
+<p>This is a three-part test rather than a spectrum, and the standard is the book’s own. The second failure is the one that still sounds responsible: the tool is named, the job is named, and nothing says the output was ever checked. The chapter’s own instruction is to check every sentence against a ledger row, so run that check on your draft before a reviewer runs it on you.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A complete disclosure is read off your ledger, not written at the end</h2>
+<div class="kicker">
+<p>Chapter 30 · The concept</p>
+</div>
+<ul>
+<li>Your <strong>AI Research Ledger</strong> is a running table with one row per AI use.</li>
+<li>Each row records the task, the tool, your decision, and the verification method.</li>
+<li>You have kept it since you opened it at the start of your project.</li>
+<li>So the disclosure is already written by the time you need it (Munafò et al.&nbsp;2017).</li>
+</ul>
+<aside class="notes">
+<p>The ledger is not a new instrument for this chapter. The chapter’s claim is that you have kept it since the start of the project, which is the whole argument for filling it honestly week by week. Anyone reconstructing a disclosure from memory at the end is guessing, and the guess is what a reviewer catches. Ask the room how many rows their ledger holds right now.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A coverage ratio of 2.0 means the company earned twice what it owed</h2>
+<div class="kicker">
+<p>Chapter 30 · A worked example</p>
+</div>
+<ul>
+<li>You are presenting a business-analytics poster on a public company’s debt.</li>
+<li>The question: can it comfortably pay the interest it owes?</li>
+<li>Your headline number is the <strong>interest coverage ratio</strong>.</li>
+<li>That is operating income divided by the interest owed in a year.</li>
+</ul>
+<aside class="notes">
+<p>Define the ratio before anything else happens, because the disclosure later has to name which piece of this number came from where. Operating income is the income figure the company reports; the interest expense is what it owes on its debt. Keep the definition on the board while you walk through the two AI uses.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two honest AI uses, and neither is safe until it is disclosed and verified</h2>
+<div class="kicker">
+<p>Chapter 30 · A worked example</p>
+</div>
+<ul>
+<li>First use: finding the company’s reported operating income.</li>
+<li>Second use: writing the short calculation that turns income and interest into a ratio.</li>
+<li>Both are honest uses.</li>
+<li>Honest is not the same as checked.</li>
+</ul>
+<aside class="notes">
+<p>Neither of these is a misuse, and the chapter says so plainly, which is the point. The risk is not in delegating the retrieval or the arithmetic; it is in reporting the result without a record of what was confirmed. Ask which of the two uses would be harder to check a month from now if nothing was written down.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Editorial guidance requires two of the three columns; the third is this book’s</h2>
+<div class="kicker">
+<p>Chapter 30 · A worked example</p>
+</div>
+<ul>
+<li>Current guidance: name which tool you used, and for what purpose (International Committee of Medical Journal Editors 2026).</li>
+<li>Responsibility for accuracy and attribution stays with you.</li>
+<li>A tool can never be an author.</li>
+<li>How you verified is this book’s own requirement on top of that guidance.</li>
+</ul>
+<aside class="notes">
+<p>Be precise about where the rule comes from, because the room will meet both standards outside this course. The editorial requirement covers the tool and the purpose and fixes responsibility on the named author. The verification column is the book’s addition, and the chapter gives its reason: a disclosure that cannot say how something was checked leaves a reader nothing to trust.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A reported figure and a computed one need different checks</h2>
+<div class="kicker">
+<p>Chapter 30 · A worked example</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Primary-source reading</span></p>
+<p><span class="d">you opened the company’s published annual report and confirmed the operating income the tool gave you</span></p>
+</div>
+<div class="term">
+<p><span class="t">Alternative code</span></p>
+<p><span class="d">you recomputed the same number a second way, instead of trusting the AI-generated cell</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>The verification method depends on what kind of thing you are checking. A reported figure gets checked against the document that reported it; a computed figure gets recomputed independently. Both names go in the ledger’s verification column, so the row says what was done rather than that something was done.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Recompute the ratio by hand and watch it land on 2.11</h2>
+<div class="kicker">
+<p>Chapter 30 · A worked example</p>
+</div>
+<ul>
+<li>The two inputs are 276 and 131, in USD millions, from the annual report.</li>
+<li>Watch the printed value against the number the AI-generated cell reported.</li>
+<li>The recomputation is the check, and the ledger row records that you ran it.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># The number the AI code reported, recomputed by hand.</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>operating_income <span class="op">=</span> <span class="dv">276</span>    <span class="co"># USD millions, confirmed against the annual report</span></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>interest_expense <span class="op">=</span> <span class="dv">131</span>    <span class="co"># USD millions, from the same annual report</span></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>coverage_ratio   <span class="op">=</span> operating_income <span class="op">/</span> interest_expense</span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(coverage_ratio, <span class="dv">2</span>))   <span class="co"># 2.11 — matches the AI-generated cell</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Run it live rather than describing it, so the match happens on screen. Point out that the comment on the income line is doing real work: that figure was confirmed against the annual report, which is the other row’s check. The next section shows what happens when a disclosure claims a check that no ledger row backs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You read the two rows aloud, and the claim stays bounded</h2>
+<div class="kicker">
+<p>Chapter 30 · A worked example</p>
+</div>
+<ul>
+<li>The coverage ratio is about 2.1 for this fiscal year.</li>
+<li>Income confirmed against the annual report; the arithmetic reproduced by hand.</li>
+<li>You read a single year of reported results.</li>
+<li>Not a downturn scenario, and not the debt coming due next year.</li>
+</ul>
+<aside class="notes">
+<p>The reviewer’s question gets answered from the record, so there is nothing to improvise. Note that the boundary is stated in the same breath as the number, not extracted later under pressure. Ask the room what a listener learns from the last two lines that the ratio alone would have hidden.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 30</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You ask a tool to “write my AI-use disclosure from these notes,” and it hands back a polished paragraph: <em>“All AI-generated outputs were independently verified against primary sources.”</em> It reads beautifully, and it is false. You verified the operating income against the annual report, but you never independently checked the interest figure the same tool helped you pull. The sentence upgraded one real check into a blanket claim of “all.”</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 30 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by reading the disclosure line by line against your ledger.</li>
+<li>Every sentence claiming a verification must point to a row that names that check.</li>
+<li>The word “all” has no such row, so it is fabricated and comes out.</li>
+<li>Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm.</li>
+<li>A confident paragraph is not a truthful one.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by reading the disclosure line by line against your ledger. Every sentence claiming a verification must point to a row that names that check. The word “all” has no such row, so it is fabricated and comes out. Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm. A confident paragraph is not a truthful one. You verify the disclosure against the record, not against how responsible it sounds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 30</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>The honesty of the disclosure is yours alone. You decide <strong>which uses to disclose</strong> (including the one you would rather not mention), <strong>whether a verification you claim actually happened</strong>, and <strong>whether the final statement is true</strong>. A tool can format your ledger into a clean paragraph. It cannot know what you really did or certify that you checked it. Signing your name to a disclosure you cannot back is the integrity failure this chapter exists to prevent.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 30 · Your move</p>
+</div>
+<ol type="1">
+<li>Read your AI Research Ledger end to end and list every use, including the one you would rather not mention.</li>
+<li>For each use, write the three parts a disclosure needs: which tool, for which task, and how you verified the output.</li>
+<li>Turn the rows into a short statement in your own words, then check every sentence against a row.</li>
+<li>Say what you did not verify.</li>
+<li>Log it in your AI Research Ledger, and verify the finished statement with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>, such as peer reasoning.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_ai_disclosure_and_research_integrity.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html">Chapter 30</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>From Dossier to Research Note</h2>
+<div class="kicker">
+<p>Lesson 4 of this studio · Chapter 31</p>
+</div>
+<div class="divider-line">
+<p>which finding leads your written note, and how big each claim is allowed to be once your voice is no longer in the room</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 31</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>When you turn your research dossier into a written note, decide which finding has earned the headline and exactly how big each claim is allowed to be given your evidence, then package the note so a stranger can rerun it and reach your number without you in the room. Whatever you present along the way — a poster, a talk, a brief — is one input to that note, never its source.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The words this chapter uses</h2>
+<div class="kicker">
+<p>Chapter 31 · Key terms</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Working logic</span></p>
+<p><span class="d">how the dossier and any presentation of it speak: compressed records and, when you present, your live voice filling the silences.</span></p>
+</div>
+<div class="term">
+<p><span class="t">Paper logic</span></p>
+<p><span class="d">communication that must stand alone on the page, where every claim is argued in prose because you are not there to answer.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>Each term is defined in the chapter on first use; these are the definitions as the book gives them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The reviewer wants your most defensible result, not your flashiest</h2>
+<div class="kicker">
+<p>Chapter 31 · Why this decision matters</p>
+</div>
+<ul>
+<li>The decision: which finding leads, and how big its claim is allowed to be.</li>
+<li>She is asking which finding you would still defend after the room empties.</li>
+<li>And whether she could rerun your work and watch the same number return.</li>
+</ul>
+<div class="note-card">
+<p>“Show me your results in the order you trust them. If your flashiest number comes from one lucky run and it leads the paper, I already know how this review ends. I do not want your most surprising result first. I want your most defensible one.” — a conference reviewer</p>
+</div>
+<aside class="notes">
+<p>Read the reviewer’s words aloud and let them sit. A big number by itself does not impress her; she is telling you the order she reads in, and the order is trust, not surprise. Two questions are hiding in that paragraph, and the chapter answers both: which finding earns the headline, and could a stranger rerun the work and get your number back. Ask the room which of their own results would lead today, and whether they would still lead tomorrow.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The note has no you standing next to it</h2>
+<div class="kicker">
+<p>Chapter 31 · Why this decision matters</p>
+</div>
+<div class="lead">
+<p>When you present, your voice fills the silences. The page has no voice.</p>
+</div>
+<ul>
+<li>Every leap a presentation lets you imply, the prose has to earn.</li>
+<li>In order, for a reader who will never hear you explain it.</li>
+<li>Whatever you present is one input to the note, never its source.</li>
+</ul>
+<aside class="notes">
+<p>This is the whole reason a dossier or a poster cannot simply be retyped into a paper. Standing next to your work, you answer the objection the moment a face goes puzzled, so the compressed version survives. On the page nobody asks, so nothing gets repaired, and an argument with a hole in it just reads as an argument with a hole in it. Keep the chapter’s ordering claim: the presentation feeds the note, and the note is never a transcript of the presentation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A poster’s Gap box says one line; the note argues the paragraph</h2>
+<div class="kicker">
+<p>Chapter 31 · The concept</p>
+</div>
+<ul>
+<li>Working logic: compressed records, plus your live voice filling the silences.</li>
+<li>A Gap box reading only ‘few studies of wait times at peak hours’.</li>
+<li>Paper logic: every claim argued in prose, because you are not there to answer.</li>
+<li>The same gap, written out: what prior work covered, what it skipped, why that matters.</li>
+<li>Turning one into the other is not adding words. It is making the reasoning visible.</li>
+</ul>
+<aside class="notes">
+<p>Put the two versions of the same gap side by side, because the difference is the entire lesson. The poster line is not wrong, it is incomplete on purpose, and you were the missing half. The paragraph has to do the work your voice did: name the prior studies, say what they left out, and say why the missing piece is worth anyone’s time. Warn against the usual first attempt, which is padding the poster line with adjectives instead of supplying the reasoning it never carried.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Problem, gap, question: the spine holds only when the gap is real</h2>
+<div class="kicker">
+<p>Chapter 31 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Problem–gap–question spine</span></p>
+<p><span class="d">the real trouble your work responds to, the specific thing prior retrievable work has not established, and the answerable question that closes exactly that gap</span></p>
+</div>
+<div class="term">
+<p><span class="t">Evidence density</span></p>
+<p><span class="d">the share of a paragraph resting on sources a reader could open rather than bare assertion</span></p>
+</div>
+</div>
+<ul>
+<li>Problem: customers give up and leave during the morning rush.</li>
+<li>Gap: published wait-time studies measure only quiet, steady hours.</li>
+<li>Question: how much does mobile pre-order cut the wait during the rush here?</li>
+<li>‘As everyone knows’ carries no density. A published figure a reader can recompute carries some.</li>
+</ul>
+<aside class="notes">
+<p>A note carries its reasoning on this backbone (Mensh &amp; Kording 2017), and the three pieces have to be linked, not merely present. Test the link out loud: does the question close exactly the gap you named, or a wider one you would rather answer? The gap is the piece that fails most often, because a gap is only real once you have shown what is already known. That showing is what evidence density measures, so a gap paragraph with no openable sources in it is an assertion wearing a paragraph’s clothes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Best-supported first, one lucky run last</h2>
+<div class="kicker">
+<p>Chapter 31 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Results hierarchy</span></p>
+<p><span class="d">the order you present findings in, best-supported first and fragile last</span></p>
+</div>
+</div>
+<ul>
+<li>A median measured over a thousand simulated mornings leads.</li>
+<li>One unusually fast order waits at the back, labeled exploratory.</li>
+<li>Limitations follow the same discipline, sized to what actually threatens the claim.</li>
+<li>‘Measured on a simulated arrival pattern, not a real Saturday rush.’</li>
+<li>Not a generic ‘more research is needed.’</li>
+</ul>
+<aside class="notes">
+<p>The hierarchy is a claim about trust, so writing it forces you to rank your own evidence before a reviewer does it for you. The same discipline governs the limitations section, which is where most drafts go slack: a generic call for more research costs you nothing and tells the reader nothing. Ask the room for the one sentence a hostile reader would raise first about their project, and put that sentence in the limitations rather than the filler one.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A note a reader cannot rerun is half a claim</h2>
+<div class="kicker">
+<p>Chapter 31 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Reproducibility capsule</span></p>
+<p><span class="d">everything a stranger needs to rebuild your number and nothing they must guess</span></p>
+</div>
+<div class="term">
+<p><span class="t">Restart-and-run-all</span></p>
+<p><span class="d">clear everything, run every cell top to bottom, and the headline number returns</span></p>
+</div>
+</div>
+<ul>
+<li>Pinned data and tool versions.</li>
+<li>A fixed seed.</li>
+<li>A decision log.</li>
+<li>Your AI-use ledger.</li>
+</ul>
+<aside class="notes">
+<p>The chapter is blunt here: readable is only half of the job, and the other half is runnable (National Academies of Sciences, Engineering, and Medicine 2019). Take the capsule’s second clause as seriously as the first, because the failure mode is not a missing file, it is a step you did by hand and never wrote down. Restart-and-run-all is the check that catches it, and it only counts on a clean kernel, not on the session where everything already lives in memory (Wilson et al.&nbsp;2017).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>‘38% faster’ is a table row, not yet a claim you can defend</h2>
+<div class="kicker">
+<p>Chapter 31 · A worked example</p>
+</div>
+<ul>
+<li>You tested a mobile pre-order option for a campus coffee shop.</li>
+<li>Your claim–evidence table holds the headline row: ‘38% faster.’</li>
+<li>The note has to turn that row into a claim you can defend.</li>
+</ul>
+<aside class="notes">
+<p>The row is where your claim–evidence table left you, and it is genuine work: a number tied to evidence. What it is not yet is a sentence anyone can weigh, because it carries no setting, no sample and no boundary. The next three moves are the whole chapter in miniature, so name them before you walk through them: rank the findings, size the claim, package it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The 99% drop is one customer; the 38% is a thousand arrivals</h2>
+<div class="kicker">
+<p>Chapter 31 · A worked example</p>
+</div>
+<ul>
+<li>Across a thousand simulated arrivals, median wait dropped about 38%.</li>
+<li>With a tight interval around it.</li>
+<li>One pre-ordering customer was served almost instantly: a 99% drop.</li>
+<li>The median leads. The lone customer goes to the back, as one observation.</li>
+</ul>
+<aside class="notes">
+<p>Both numbers came out of the same run, and the bigger one is the one you would most enjoy putting on a slide. That is exactly why the ranking rule exists. A median over a thousand arrivals is a statement about the procedure; one fast order is a statement about one morning and one person. Say plainly what the lone customer is allowed to be in the note: one observation, labeled as such, not a result.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Drop ‘median’ and ‘simulated’ and you promise what you never tested</h2>
+<div class="kicker">
+<p>Chapter 31 · A worked example</p>
+</div>
+<ul>
+<li>Honest: ‘on this simulated arrival pattern, mobile pre-order cut median wait by about 38%.’</li>
+<li>Interval attached, and the boundary in the same sentence.</li>
+<li>‘This is a measurement on simulated demand, not a guarantee for a real Saturday rush.’</li>
+<li>Refused: ‘mobile pre-order makes the shop 38% faster.’</li>
+<li>That drops the demand pattern, drops median, and promises every customer a shorter wait.</li>
+</ul>
+<aside class="notes">
+<p>Read the two sentences one after the other and ask the room which one they would rather write. Most people would rather write the refused one, because it is shorter and it sounds surer. Then count what the short version quietly deleted: the arrival pattern it was measured on, the word median, and the difference between a typical customer and every customer. Writing the refused version down on purpose is the point of the exercise, since a claim you have named is a claim you can catch when it creeps back in during editing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The capsule is what makes the 38% return on a clean kernel</h2>
+<div class="kicker">
+<p>Chapter 31 · A worked example</p>
+</div>
+<ul>
+<li>Pin the simulation’s seed.</li>
+<li>Record the machine and library versions.</li>
+<li>Log that you excluded the first order of the morning, and why.</li>
+<li>Pass restart-and-run-all so the 38% comes back.</li>
+<li>The note is now readable and runnable.</li>
+</ul>
+<aside class="notes">
+<p>Notice that the exclusion is logged with its reason, not just recorded. A stranger rerunning your work does not need to agree with the choice, but they do need to see that it was a choice and know what it was for. This is the point where the note stops being a document about your work and starts being a thing someone else can operate.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>The printout is already the note’s order of trust</h2>
+<div class="kicker">
+<p>Chapter 31 · A worked example</p>
+</div>
+<ul>
+<li>The median drop prints with its interval, never on its own.</li>
+<li>The luckiest customer prints at the bottom, where the note puts it.</li>
+<li>The code labels that last line as one observation, not a result.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>service <span class="op">=</span> rng.gamma(<span class="fl">2.0</span>, <span class="fl">55.0</span>, size<span class="op">=</span>n)                  <span class="co"># ordinary counter service</span></span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>preorder <span class="op">=</span> rng.gamma(<span class="fl">2.0</span>, <span class="fl">36.0</span>, size<span class="op">=</span>n)                 <span class="co"># mobile pre-order</span></span>
+<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>med_drop <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> np.median(preorder) <span class="op">/</span> np.median(service)</span>
+<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>boot <span class="op">=</span> [<span class="dv">1</span> <span class="op">-</span> np.median(rng.choice(preorder, n)) <span class="op">/</span> np.median(rng.choice(service, n))</span>
+<span id="cb4-11"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>)]</span>
+<span id="cb4-12"><a aria-hidden="true" tabindex="-1"></a>lo, hi <span class="op">=</span> np.percentile(boot, [<span class="fl">2.5</span>, <span class="fl">97.5</span>])</span>
+<span id="cb4-13"><a aria-hidden="true" tabindex="-1"></a>luckiest <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> preorder.<span class="bu">min</span>() <span class="op">/</span> np.median(service)</span>
+<span id="cb4-14"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"median wait, ordinary service : </span><span class="sc">{</span>np<span class="sc">.</span>median(service)<span class="sc">:.0f}</span><span class="ss"> s"</span>)</span>
+<span id="cb4-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"median wait, mobile pre-order : </span><span class="sc">{</span>np<span class="sc">.</span>median(preorder)<span class="sc">:.0f}</span><span class="ss"> s"</span>)</span>
+<span id="cb4-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"median drop                   : </span><span class="sc">{</span>med_drop<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">% "</span></span>
+<span id="cb4-18"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"[</span><span class="sc">{</span>lo<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%, </span><span class="sc">{</span>hi<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%]"</span>)</span>
+<span id="cb4-19"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"the single luckiest customer  : </span><span class="sc">{</span>luckiest<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">% faster"</span>)</span>
+<span id="cb4-20"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the headline is the first number with its interval. the last one is"</span>)</span>
+<span id="cb4-21"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"one observation, and it goes at the back of the note labelled as such"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>The block runs the arrivals and prints the ranked findings in the order the note will use them, so the printout is itself the results hierarchy. Point at the printed interval and say that the headline sentence has to carry it. Then point at the last line, which the code labels for you, and ask what would have to be true before that number could move up the page.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 dense">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 31</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You paste your discussion into your AI and ask it to make the writing sharper. It hands back cleaner prose, and it runs through your spell-check without a flag. Buried in the polish, one sentence has changed size. Your original said “median wait time dropped about 38% on this simulated arrival pattern.” The rewrite says “mobile pre-order makes the shop roughly 38% faster.” The word median is gone, the demand-pattern boundary is gone, and a measurement on simulated demand now promises every customer a shorter wait. The sentence reads better and claims more.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 31 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by diffing the rewrite against your original sentence and against your printed result.</li>
+<li>The number came from a median over a seeded simulation, not a mean, and not a real Saturday rush, so the general claim is not licensed.</li>
+<li>You keep the edits that clarify and reject the one that inflated.</li>
+<li>Fluent prose is not evidence.</li>
+<li>You verify the claim, not the polish.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by diffing the rewrite against your original sentence and against your printed result. The number came from a median over a seeded simulation, not a mean, and not a real Saturday rush, so the general claim is not licensed. You keep the edits that clarify and reject the one that inflated. Fluent prose is not evidence. You verify the claim, not the polish.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 31</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Three calls stay yours no matter how fluent the tool is. <strong>Which finding is your headline</strong>, <strong>how big that claim is allowed to be</strong>, and <strong>which sources are real</strong> are never delegated. An AI can sharpen a sentence, but a sharper sentence is not a bigger finding, and clean prose is exactly how an overclaim sneaks in. You own the words you put your name on, their boundary, and their uncertainty.</p>
+</div>
+</section>
+<section class="slide level2 denser">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 31 · Your move</p>
+</div>
+<ol type="1">
+<li>Write your problem–gap–question spine as three short paragraphs.</li>
+<li>Order your findings, best-supported first.</li>
+<li>Write your headline claim in one sentence, with its boundary inside the same sentence: the setting, the sample, and the population it does not cover.</li>
+<li>Size your limitations to what actually threatens the claim.</li>
+<li>Assemble the full note, not only its spine: methods (what you did, so a stranger could follow), results with their uncertainty, a discussion sized to the claim, references, your AI-use disclosure placed where the venue expects it, and the pointer to the package Studio 11 will freeze.</li>
+<li>Attach your folder to the note and confirm the two agree: the number in your lead sentence is the number a cold restart-and-run-all prints.</li>
+<li>Log the drafting round in your AI Research Ledger, and verify at least one output with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_from_poster_to_research_note.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html">Chapter 31</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Milestone 9: Your bounded claims</h2>
+<div class="kicker">
+<p>Studio 9 closes here</p>
+</div>
+<div class="divider-line">
+<p>What the lessons handed you becomes one artifact you can defend.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What this milestone produces</h2>
+<div class="kicker">
+<p>Milestone 9</p>
+</div>
+<div class="decision">
+<p><span class="label">The artifact</span></p>
+<p><strong>What this milestone produces.</strong> A stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>What you bring</h2>
+<div class="kicker">
+<p>Milestone 9 · Check before you start</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html">Lesson 28 — From Results to Claims</a>: your claims with verbs downgraded to what the design established, each carrying its boundary line.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html">Lesson 29 — Claim–Evidence Tables</a>: your claim-evidence table, one row per claim with claim, evidence, trace, and boundary, every number traced to its output.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html">Lesson 30 — AI Disclosure and Research Integrity</a>: your AI-use disclosure, written from the ledger and naming what you did not verify.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html">Lesson 31 — From Dossier to Research Note</a>: your stand-alone note draft: the problem-gap-question spine, methods, results with uncertainty, discussion, ordered findings with the headline claim’s boundary inside, references, your disclosure placed, and the pointer to the package Studio 11 will freeze.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The practice</h2>
+<div class="kicker">
+<p>Milestone 9 · In the studio</p>
+</div>
+<ol type="1">
+<li>Write your claim as one sentence, with its boundary attached in the same sentence.</li>
+<li>Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it.</li>
+<li>State your uncertainty and your limitations in the words a reader outside your field would use.</li>
+<li>Write your AI disclosure from your ledger, not from memory.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>The four rails, here</h2>
+<div class="kicker">
+<p>Milestone 9 · Every studio, these four</p>
+</div>
+<div class="rails">
+<div class="rail">
+<p><span class="t">Ethics, permissions, and data exposure</span></p>
+<p><span class="d">Disclosure includes what you sent to tools, not only what they produced.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Evidence, provenance, and reproducibility</span></p>
+<p><span class="d">A claim with no row in the table does not appear in the draft.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">AI activity, verification, and human decisions</span></p>
+<p><span class="d">The sentence that ships is yours, whatever drafted it.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Uncertainty, claim boundary, and revision history</span></p>
+<p><span class="d">Findings are never communicated as certainties.</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>A version, not a pass</h2>
+<div class="kicker">
+<p>Milestone 9</p>
+</div>
+<div class="note-card">
+<p><span class="label">How the record works</span></p>
+<p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
+</div>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>The one rule</h2>
+<div class="divider-line">
+<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
+<p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
+</div>
+<p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio09-write-bound-disclose.html">Studio 9 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html">Milestone 9</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="_theme/edrai_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>EDR|AI · Studio 9 — Write, bound, and disclose</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 7.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

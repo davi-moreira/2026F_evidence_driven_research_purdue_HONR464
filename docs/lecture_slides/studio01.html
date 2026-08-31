@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Davi Moreira">
+  <title>HONR 46400: Evidence-Driven Research (Fall 2026) – HONR 46400 · Evidence-Driven Research</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <p class="subtitle">Studio 1 — Begin with your curiosity</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Davi Moreira 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+<h2>What you can defend when you leave</h2>
+<div class="kicker">
+<p>Studio 1</p>
+</div>
+<div class="decision">
+<p><span class="label">What you can defend when you leave</span></p>
+<p>Start from the one thing AI cannot supply: a curiosity you own. Commit it, stretch it with your tools, and choose the research problem worth months of your work.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>Start without a tool</h2>
+<p>Research starts with something that will not leave you alone: a pattern you keep noticing, a contradiction, a decision you want to understand. This first move is yours alone. Write four lines by hand.</p>
+</section>
+<section class="slide level2">
+<h2>Start without a tool <em>(cont.)</em></h2>
+<div class="kicker">
+<p>Start without a tool</p>
+</div>
+<ol type="1">
+<li>One thing you genuinely want to understand, in one sentence.</li>
+<li>Why an answer would matter, and to whom.</li>
+<li>What you currently think the answer might be. A starting belief, not a claim.</li>
+<li>One kind of evidence that could make you revise that belief.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Start without a tool <em>(cont.)</em></h2>
+<div class="kicker">
+<p>Start without a tool</p>
+</div>
+<p>Keep what you wrote. Lesson 1 shows why this page is where research starts and why the jump on it is yours, then helps you stretch it, with AI welcome at the table, into the problem your project will chase.</p>
+</section>
+<section class="slide level2">
+<h2>The milestone ahead</h2>
+<div class="kicker">
+<p>Studio 1</p>
+</div>
+<p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-frame-the-inquiry.html">Milestone 1: Your curiosity, committed</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Your committed curiosity with its starting belief and the evidence that would revise it, the brainstormed candidates with what you kept and rejected and why, and one chosen research problem, scored and red-teamed, with your expected answer on record.</p>
+<aside class="notes">
+<p>Research begins with a jump that is yours to make. Einstein sketched discovery as a cycle: you start from experience, you leap to an idea that could explain it, and you reason down to predictions you can check. The leap has a name, abduction, and a Google DeepMind position paper by Tom Zahavy argues that today’s AI cannot make it: the tools have mastered patterns and derivations, but they have only text about the world, not the experience the jump starts from (Zahavy 2026). Take that as an argued position rather than a settled boundary. Either way the jump is yours, because you are the one who answers for the claim. This first milestone puts it on the record: the curiosity you committed by hand, the candidates you and your tools stretched it into, and the one research problem you chose to chase.</p>
+<p>Milestone 2 sets the rules that protect this curiosity, opens the ledger that records every delegation, verifies your first AI assistance, and closes the arc by declaring your formal research question. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The lessons in this studio</h2>
+<div class="kicker">
+<p>Studio 1 · Road map</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html">Lesson 1 — From Curiosity to a Research Problem</a>: your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer.</li>
+</ul>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>From Curiosity to a Research Problem</h2>
+<div class="kicker">
+<p>Lesson 1 of this studio · Chapter 1</p>
+</div>
+<div class="divider-line">
+<p>which one research problem, out of everything your curiosity could become, gets months of your work</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 1</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Begin with an experience that will not leave you alone. Decide which curiosity you are willing to own, let AI widen the possibilities without choosing for you, and commit to one research problem with your reasons attached. The formal research question comes later, after your working rules and ledger exist.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The words this chapter uses</h2>
+<div class="kicker">
+<p>Chapter 1 · Key terms</p>
+</div>
+<div class="terms two">
+<div class="term">
+<p><span class="t">Abduction</span></p>
+<p><span class="d">proposing what might explain a pattern in the first place, where deduction asks what must follow if an explanation is true and induction looks for patterns across observations.</span></p>
+</div>
+<div class="term">
+<p><span class="t">Importance</span></p>
+<p><span class="d">asks who could use the answer, and for what.</span></p>
+</div>
+<div class="term">
+<p><span class="t">Feasibility</span></p>
+<p><span class="d">asks whether you can reach suitable evidence with the time, skills, and permissions you actually have.</span></p>
+</div>
+<div class="term">
+<p><span class="t">Possible contribution</span></p>
+<p><span class="d">asks what the project might add — and stays provisional, because you cannot know a gap is real until Studio 3 maps the existing evidence.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>Each term is defined in the chapter on first use; these are the definitions as the book gives them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A meal that cost eleven dollars in 2019 now costs sixteen</h2>
+<div class="kicker">
+<p>Chapter 1 · Why this decision matters</p>
+</div>
+<ul>
+<li>You find a restaurant menu from 2019.</li>
+<li>Your first reaction may be immediate: prices near campus have exploded.</li>
+<li>That reaction is useful.</li>
+<li>It is also not yet a finding.</li>
+</ul>
+<aside class="notes">
+<p>Start here because the first explanation arrives fast and feels complete. Ask the room what they would have concluded from those two numbers alone, and write it on the board before you move on. The next slide lists five other explanations for the same two numbers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Research begins when the first explanation stops being the only one</h2>
+<div class="kicker">
+<p>Chapter 1 · Why this decision matters</p>
+</div>
+<ul>
+<li>Perhaps restaurant prices rose faster than prices generally.</li>
+<li>Perhaps the old menu was unusually cheap.</li>
+<li>Perhaps portions changed.</li>
+<li>Perhaps fees moved out of the listed price.</li>
+<li>Perhaps the example is memorable precisely because it is unusual.</li>
+</ul>
+<aside class="notes">
+<p>None of these has been checked, and that is the point: five rival readings of the same two numbers. Ask the room which one they could rule out fastest, and with what evidence. A curiosity that cannot survive this list is not ready to take months of work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You need a curiosity strong enough to survive alternatives</h2>
+<div class="kicker">
+<p>Chapter 1 · Why this decision matters</p>
+</div>
+<ul>
+<li>You do not need a polished question yet.</li>
+<li>AI can propose explanations, comparisons, affected groups, or implications you missed.</li>
+<li>Use that help, mark what the tool introduced, and preserve the exchange.</li>
+<li>The final commitment stays yours.</li>
+</ul>
+<aside class="notes">
+<p>You will be the one who must pursue, revise, and defend the problem, which is why the commitment cannot be handed over. Marking what the tool introduced is not bookkeeping for its own sake: it is how you can later say which parts of the framing were yours. Ask the room to name one curiosity they would still chase if every tool disappeared tomorrow.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 dense">
+<h2>The jump is yours to make; the cycle then returns to experience</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<ul>
+<li>Experience: something in the world catches your attention.</li>
+<li>The jump to a possible explanation is abduction, and it is yours to make.</li>
+<li>Derivation and verification are delegable, then checked.</li>
+<li>The cycle is redrawn from Zahavy’s reconstruction of Einstein’s account (Zahavy 2026).</li>
+</ul>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  E["Experience&lt;br/&gt;something in the world catches"] -- "the jump: a possible explanation&lt;br/&gt;(abduction, yours to make)" --&gt; J["Ideas and assumptions&lt;br/&gt;what could explain it"]
+  J -- "derivation&lt;br/&gt;(delegable, then checked)" --&gt; P["Predictions&lt;br/&gt;what else should be true"]
+  P -- "verification against evidence&lt;br/&gt;(delegable, then checked)" --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>The notes on the arrows, marking what you may delegate and what you may not, are this book’s rather than Zahavy’s. Point at the return arrow: verification sends you back to experience, so the cycle turns rather than ends. Ask the room which of the three arrows they have already delegated to a tool this week.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Abduction creates a candidate, not proof</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<ul>
+<li>Restaurant prices seem to change every third week.</li>
+<li>“Payday timing moves menu updates” is an abductive possibility.</li>
+<li>It gives you something to check.</li>
+<li>It does not become evidence by sounding plausible.</li>
+</ul>
+<aside class="notes">
+<p>Experience does not logically dictate one explanation; the researcher makes a jump toward an idea that could make sense of it. Deduction asks what must follow if an explanation is true, and induction looks for patterns across observations, while abduction proposes what might explain the pattern in the first place. Ask the room for a second abductive possibility for the same third-week pattern, then ask what evidence would separate the two.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Einstein’s jump did not begin with a loud error signal</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<ul>
+<li>Newtonian physics already fit the data well.</li>
+<li>The reorganizing idea came from thought experiments about falling observers.</li>
+<li>The paper calls models strong at recombining patterns, and increasingly useful for derivation.</li>
+<li>Zahavy argues they lack the grounding in experience the jump begins from (Zahavy 2026).</li>
+<li>Treat that as an argued position, not a settled boundary.</li>
+</ul>
+<aside class="notes">
+<p>The position paper was written at Google DeepMind and uses Einstein’s route to general relativity to make the case. Position papers exist to be tested, and tools keep improving, so nobody should carry this out of the room as a proven limit on what a model can do. The practical point holds either way: you answer for the claim, so the jump is yours to make and to defend.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Once your curiosity is on the page, AI joins as a divergence partner</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<ul>
+<li>Ask for alternative explanations, overlooked comparisons, or questions challenging your belief.</li>
+<li>Mark every person, population, outcome, mechanism, or comparison it introduces as NEW.</li>
+<li>Accept no novelty claim and no citation without checking.</li>
+<li>Keep or reject each direction with a reason.</li>
+<li>What the tool cannot do is care.</li>
+</ul>
+<aside class="notes">
+<p>The jump stops being a solo performance once its first line is written, which is why the order matters: your sentence first, the tool second. You choose what you would chase even if every tool disappeared tomorrow. Ask the room for one direction they would reject, and for the reason they would write down next to it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Reason down four moves, then stop at the problem</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<ul>
+<li><strong>Experience.</strong> What happened, or what did you notice?</li>
+<li><strong>Curiosity.</strong> What do you want to understand about it?</li>
+<li><strong>Topic.</strong> What area of inquiry contains that curiosity?</li>
+<li><strong>Research problem.</strong> What is not yet understood well enough for the decision, explanation, or audience you care about?</li>
+<li>The four moves follow the standard treatment of research problems (Booth et al.&nbsp;2024).</li>
+</ul>
+<aside class="notes">
+<p>Each move strips one layer of vagueness, and you can see where it leaves by reading the four lines in order. Stop at the problem. Units, outcomes, conditions, question kind and claim reach belong to the formal declaration that closes the next studio, so anyone reaching for them here is working ahead of the material.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An answer that confirms what everyone believes teaches almost nothing</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<ul>
+<li>A 2026 essay in <em>Science</em>, “Advancing science by designing for surprise” (Evans et al.&nbsp;2026).</li>
+<li>Elicit informed predictions first, then compare them with what the evidence shows.</li>
+<li>Before you look at evidence, write the answer you currently expect.</li>
+<li>Name one person for whom a different answer would be genuinely surprising.</li>
+<li>The more surprising the claim, the more evidence it takes.</li>
+</ul>
+<aside class="notes">
+<p>The essay starts from a blunt fact and then makes it usable: the ordering is what does the work, predictions before evidence, so you can see whether a result would move anyone. The warning travels with the tool. Surprise is a place to aim your question, never a license to inflate your answer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Your expected answer is a planning proxy, not a measurement</h2>
+<div class="kicker">
+<p>Chapter 1 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Audience</span></p>
+<p><span class="d">the informed readers whose expectations your result would move</span></p>
+</div>
+<div class="term">
+<p><span class="t">Expected answer</span></p>
+<p><span class="d">the sentence you write, before any evidence, giving the answer you currently expect</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>The gap the essay names sits at the level of an audience, not at the level of any one researcher, so a result that surprises only you does not qualify. Treat the written sentence as a planning proxy for that gap rather than a measure of what anyone learned, which would take evidence about the audience you do not have yet. Keep the sentence: late in the book you hold your evidence up against it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>“Does moving more actually help you sleep?” cannot be studied as written</h2>
+<div class="kicker">
+<p>Chapter 1 · A worked example</p>
+</div>
+<ul>
+<li>It is a real feeling. It names no one and measures nothing.</li>
+<li>Give it edges: physical activity and sleep quality in undergraduates. That is a topic.</li>
+<li><strong>Research problem:</strong> we do not know whether more daily walking goes with better-rated sleep among residence-hall first-years.</li>
+<li>That points at one missing piece, not a whole subject.</li>
+</ul>
+<aside class="notes">
+<p>Walk the funnel out loud, one line per stop, and ask the room where the vagueness leaves. The topic still contains no unknown; the problem does, because it names what we do not know. Stop at the problem, since the formal question that fixes units, outcome and reach is the close of the next studio, after your rules and ledger exist.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The sleep problem clears all three tests, with contribution still provisional</h2>
+<div class="kicker">
+<p>Chapter 1 · A worked example</p>
+</div>
+<div class="lead">
+<p>Then test the problem three ways (Hulley et al.&nbsp;2013).</p>
+</div>
+<ul>
+<li><strong>Importance:</strong> anyone advising sleep-deprived first-years wants the answer.</li>
+<li><strong>Feasibility:</strong> step counts and a nightly rating are collectable in a few weeks.</li>
+<li><strong>Contribution:</strong> studied broadly in adults, far less in this dorm-living first-year group.</li>
+<li>Contribution stays provisional until Studio 3 maps the existing evidence.</li>
+<li>The funnel and its tests follow the standard treatment of research problems (Booth et al.&nbsp;2024).</li>
+</ul>
+<aside class="notes">
+<p>Contribution stays provisional, because you cannot know a gap is real until Studio 3 maps the existing evidence, so score it honestly now and revisit it then. Feasibility means the access, data and time you actually have, not the ones you wish you had. The curiosity is now a problem you could defend in front of someone who wants to know why this one and not another.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>The problem sentence names groups you can build out of the data</h2>
+<div class="kicker">
+<p>Chapter 1 · A worked example</p>
+</div>
+<ul>
+<li>The block builds this example’s data and prints the numbers the section quotes.</li>
+<li>Watch the two edge groups: more than 8,000 steps, fewer than 4,000.</li>
+<li>The middle group is neither, and the question does not ask about it.</li>
+<li>Change one input and watch which sentence above stops being true.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Sixty residence-hall first-years: average daily steps and a 1-10 sleep rating.</span></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>steps <span class="op">=</span> rng.normal(<span class="dv">6200</span>, <span class="dv">2300</span>, size<span class="op">=</span><span class="dv">60</span>).clip(<span class="dv">1000</span>, <span class="dv">15000</span>)</span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>sleep <span class="op">=</span> np.clip(<span class="fl">4.6</span> <span class="op">+</span> <span class="fl">0.00035</span> <span class="op">*</span> steps <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">1.1</span>, size<span class="op">=</span><span class="dv">60</span>), <span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> np.where(steps <span class="op">&gt;</span> <span class="dv">8000</span>, <span class="st">"more than 8,000 steps"</span>,</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>                 np.where(steps <span class="op">&lt;</span> <span class="dv">4000</span>, <span class="st">"fewer than 4,000 steps"</span>, <span class="st">"in between"</span>))</span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"group"</span>: group, <span class="st">"sleep rating"</span>: sleep})</span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a>      .groupby(<span class="st">"group"</span>)[<span class="st">"sleep rating"</span>].agg([<span class="st">"size"</span>, <span class="st">"mean"</span>]).<span class="bu">round</span>(<span class="dv">2</span>).to_string())</span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the question asks about the two edge groups; the middle is neither"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Sixty residence-hall first-years, average daily steps and a one-to-ten sleep rating. SEED is 464, so every run in the room produces the same numbers. What matters is not the size of the difference between the edge groups; it is that they exist in the data at all. Ask the room to raise the noise on the sleep rating and report which sentence from the previous slides breaks first.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 1</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You ask a tool to <em>“turn my curiosity about sleep and health into a research question.”</em> It replies, with total confidence: <em>“Does blue-light exposure before bed reduce REM sleep in college undergraduates? Studies show blue light suppresses melatonin.”</em> It sounds authoritative, and it is wrong for you.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 1 · An AI failure case</p>
+</div>
+<ul>
+<li>It fails in two ways.</li>
+<li>First, it silently changed your scope.</li>
+<li>You never chose blue light or REM sleep, yet the question now hangs on both.</li>
+<li>That is a <strong>silent scope change</strong>, and you catch it by reading the tool’s units, outcome, and population against the ones you committed.</li>
+<li>Yours were steps and a sleep rating, not screens and REM.</li>
+</ul>
+<aside class="notes">
+<p>It fails in two ways. First, it silently changed your scope. You never chose blue light or REM sleep, yet the question now hangs on both. That is a <strong>silent scope change</strong>, and you catch it by reading the tool’s units, outcome, and population against the ones you committed. Yours were steps and a sleep rating, not screens and REM. Second, the melatonin line is stated as settled fact with no source. Before repeating it, you find and open a real study yourself, and if you cannot, you treat it as <strong>confident fabrication</strong> and drop it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 1</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Three calls stay yours alone. <strong>Which problem</strong> you commit to. <strong>How you word</strong> the question, including its units, outcome, and population. And the <strong>judgment</strong> on whether it is important and genuinely new. A tool can widen your options and attack your choice. It cannot make the choice, because only you carry the reasons you will have to give when someone asks why this problem and not another.</p>
+</div>
+</section>
+<section class="slide level2 denser">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 1 · Your move</p>
+</div>
+<ol type="1">
+<li>Copy your opening move’s four lines here, date them, and label them version zero: the first entry of your project’s record.</li>
+<li>Take the strongest curiosity you now hold and walk it down the funnel in writing: experience, curiosity, topic, research problem.</li>
+<li>Run the ownership test on the problem you are converging on: would you still chase it if every AI tool disappeared tomorrow, and is the scope one you chose rather than one the tool drifted you into?</li>
+<li>Score it on importance, feasibility, and contribution, one honest sentence each.</li>
+<li>Write a second candidate problem from the same curiosity and scope it the same way.</li>
+<li>Under the problem you kept, write your expected answer in one sentence, and name one real person or role for whom a different answer would be genuinely surprising.</li>
+<li>Ask an AI to attack your chosen problem on all three tests, and keep only the objections that survive your own reasoning.</li>
+<li>Finish by handing your problem sentence to someone who knows nothing about your project.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_from_curiosity_to_a_research_problem.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html">Chapter 1</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Milestone 1: Your curiosity, committed</h2>
+<div class="kicker">
+<p>Studio 1 closes here</p>
+</div>
+<div class="divider-line">
+<p>What the lessons handed you becomes one artifact you can defend.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What this milestone produces</h2>
+<div class="kicker">
+<p>Milestone 1</p>
+</div>
+<div class="decision">
+<p><span class="label">The artifact</span></p>
+<p><strong>What this milestone produces.</strong> Your committed curiosity with its starting belief and the evidence that would revise it, the brainstormed candidates with what you kept and rejected and why, and one chosen research problem, scored and red-teamed, with your expected answer on record.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What you bring</h2>
+<div class="kicker">
+<p>Milestone 1 · Check before you start</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html">Lesson 1 — From Curiosity to a Research Problem</a>: your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The practice</h2>
+<div class="kicker">
+<p>Milestone 1 · In the studio</p>
+</div>
+<ol type="1">
+<li>Copy your opening move’s four lines as the artifact’s version zero, dated.</li>
+<li>Widen the curiosity: write two candidate directions yourself, then run the structured brainstorm and mark everything it introduced as NEW.</li>
+<li>Choose the research problem and score it honestly on importance, feasibility, and contribution, one sentence each.</li>
+<li>Write your expected answer and name one real person or role for whom a different answer would be genuinely surprising.</li>
+<li>Keep the trail: candidates kept and rejected, each with its reason, and the NEW elements you adopted as your own.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>The four rails, here</h2>
+<div class="kicker">
+<p>Milestone 1 · Every studio, these four</p>
+</div>
+<div class="rails">
+<div class="rail">
+<p><span class="t">Ethics, permissions, and data exposure</span></p>
+<p><span class="d">Note now whether chasing this curiosity would require people, and flag it before anything is designed.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Evidence, provenance, and reproducibility</span></p>
+<p><span class="d">Your starting belief is a claim to check, not to defend; write it so evidence can move it.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">AI activity, verification, and human decisions</span></p>
+<p><span class="d">Brainstorm freely, and mark every AI stretch NEW; start a simple exchange log now, and Studio 2 turns it into your AI Research Ledger.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Uncertainty, claim boundary, and revision history</span></p>
+<p><span class="d">Write what would change your mind while nothing is yet at stake; that sentence is the seed of every later boundary.</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>A version, not a pass</h2>
+<div class="kicker">
+<p>Milestone 1</p>
+</div>
+<div class="note-card">
+<p><span class="label">How the record works</span></p>
+<p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
+</div>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>The one rule</h2>
+<div class="divider-line">
+<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
+<p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
+</div>
+<p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio01-frame-the-inquiry.html">Studio 1 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-frame-the-inquiry.html">Milestone 1</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="_theme/edrai_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>EDR|AI · Studio 1 — Begin with your curiosity</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 7.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

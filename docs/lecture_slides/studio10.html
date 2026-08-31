@@ -1,0 +1,2528 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Davi Moreira">
+  <title>HONR 46400: Evidence-Driven Research (Fall 2026) – HONR 46400 · Evidence-Driven Research</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <p class="subtitle">Studio 10 — Prepare to publish or present</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Davi Moreira 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+<h2>What you can defend when you leave</h2>
+<div class="kicker">
+<p>Studio 10</p>
+</div>
+<div class="decision">
+<p><span class="label">What you can defend when you leave</span></p>
+<p>Turn your bounded claims into an artifact ready for publication or presentation, and rehearse defending it against real questions.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>The milestone ahead</h2>
+<div class="kicker">
+<p>Studio 10</p>
+</div>
+<p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html">Milestone 10: Your artifact, ready to publish or present</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> A short venue contract and one artifact ready for publication or presentation that satisfies it - a paper or research note, a seminar or conference talk, a poster, or another venue’s format - with a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release.</p>
+<aside class="notes">
+<p>A claim becomes public the moment an audience can question it, and audiences do not read contracts. They read papers, hear seminars, scan posters, and ask hard questions. This milestone produces the artifact itself, ready for publication or presentation: a manuscript a venue could receive, a talk a room could hear, a poster a conference could hang, each satisfying its venue contract. The poster lessons carry the fully worked visual example; the paper route develops your Studio 9 note; the venue contract and content map carry every format. The rehearsal record matters as much as the artifact: the questions you cannot answer yet are the truest map of what remains.</p>
+<p>Milestone 11 lets strangers rerun what you have just defended, which is the one test rehearsal cannot give you. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>The lessons in this studio</h2>
+<div class="kicker">
+<p>Studio 10 · Road map</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html">Lesson 32 — Research Posters</a>: if your venue is a poster, or your format carries a quantitative figure: the draft with labeled values, uncertainty shown as the design licenses (interval or caveat), and a headline verbed to your boundary.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html">Lesson 33 — Poster Criticism</a>: if your venue is a poster: the gallery-walk audit of your draft, hits ranked by how far the error travels, fixed once, and the lock call.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html">Lesson 34 — Research Pitches, Talks, and Seminars</a>: if you will speak, whether a pitch, a seminar, or a conference talk: your 30-second and 3-minute spines, built boundary-first, tested aloud on an outsider, and expanded to the venue’s length.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html">Lesson 35 — Difficult Questions and Uncertainty</a>: your five hardest fair questions with defend-or-concede answers, and your uncertainty-and-limitations statement in ULN form.</li>
+</ul>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Research Posters</h2>
+<div class="kicker">
+<p>Lesson 1 of this studio · Chapter 32</p>
+</div>
+<div class="divider-line">
+<p>whether your headline figure’s picture says exactly what its numbers say, and nothing more</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 32</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>If your artifact carries a quantitative visual, decide what that visual must let the audience see and what uncertainty must stay visible. If your venue is a poster, also decide how the figure participates in the page’s scan path. You own the headline verb, and you own the call that the picture never says more than the data.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>A stranger reads your tallest bar before your methods</h2>
+<div class="kicker">
+<p>Chapter 32 · Why this decision matters</p>
+</div>
+<ul>
+<li>A skeptical peer, walking a poster session, four feet from your board.</li>
+<li>From four feet away one thing is read: does your tallest bar mean what it looks like?</li>
+<li>The distrust that follows lands on the whole board, not just the figure.</li>
+</ul>
+<div class="note-card">
+<p>If your axis starts halfway up the scale, I have caught you before I read a word of your methods.</p>
+</div>
+<aside class="notes">
+<p>Open with the visitor, not with the rule. The peer in the chapter says the quiet part out loud: the first thing read is whether the tallest bar means what it looks like it means. Ask the room what happens next if the answer is no, and let them arrive at the chapter’s own answer, which is that the distrust spreads from the figure to everything else on the wall.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The venue changes the viewing conditions, never the standard</h2>
+<div class="kicker">
+<p>Chapter 32 · Why this decision matters</p>
+</div>
+<ul>
+<li>A journal reader can study a figure for minutes.</li>
+<li>A seminar audience may see it for thirty seconds.</li>
+<li>A poster visitor may first meet it from four feet away.</li>
+<li>At a poster session a stranger gives you ninety seconds and one glance.</li>
+</ul>
+<aside class="notes">
+<p>Draw the contrast in viewing conditions first, then close it off. The chapter is explicit that the venue never excuses an unlabeled axis, a hidden denominator, an inaccessible color choice, or uncertainty detached from the claim. The short viewing time is not a lower bar, it is the reason the figure has to do most of the talking on its own.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A figure can lie with true numbers</h2>
+<div class="kicker">
+<p>Chapter 32 · Why this decision matters</p>
+</div>
+<ul>
+<li>An axis that starts just below your data turns a rounding-error gap into a landslide.</li>
+<li>A reader who cannot tell your red bar from your green one receives no message.</li>
+<li>Every number can be correct while the picture still overclaims.</li>
+</ul>
+<aside class="notes">
+<p>This is the sentence the whole chapter hangs on, so say it slowly. The two failures on the slide are different in kind: one exaggerates a real difference, the other deletes the message for part of your audience. Neither is caught by checking the arithmetic, which is why this decision needs its own audit rather than a proofread.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Your headline verb promises more than you think</h2>
+<div class="kicker">
+<p>Chapter 32 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Headline claim</span></p>
+<p><span class="d">the one sentence you want a reader to leave with</span></p>
+</div>
+<div class="term">
+<p><span class="t">Claim boundary</span></p>
+<p><span class="d">the line between what your evidence licenses and what it does not</span></p>
+</div>
+<div class="term">
+<p><span class="t">Compass position</span></p>
+<p><span class="d">the kind and reach of the question your project answered, which fixes what the headline is allowed to say</span></p>
+</div>
+</div>
+<ul>
+<li>“Version B raised our sales” promises far more than “Version B sold slightly more.”</li>
+<li>An observational comparison may say “is associated with,” never “causes.”</li>
+<li>A descriptive question about the weeks you measured licenses no claim about why.</li>
+</ul>
+<aside class="notes">
+<p>The verb is where the overclaim usually hides, and the poster convention of one leading sentence is what makes it load-bearing (Erren &amp; Bourne 2007). Work the three terms in order with the room: the headline is what you want remembered, the boundary is what your evidence will support, and the compass position is what fixes the boundary before you write a word. Ask someone to say a headline from their own project aloud and have the room name the verb.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The picture cannot say more than the data</h2>
+<div class="kicker">
+<p>Chapter 32 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Figure honesty</span></p>
+<p><span class="d">the rule that a figure’s picture cannot say more than its data</span></p>
+</div>
+<div class="term">
+<p><span class="t">Truncated axis</span></p>
+<p><span class="d">an axis that starts above the bottom of its scale instead of at the floor</span></p>
+</div>
+<div class="term">
+<p><span class="t">Uncertainty on the page</span></p>
+<p><span class="d">the interval or caveat printed in the same glance as the claim, not buried in a footnote</span></p>
+</div>
+</div>
+<ul>
+<li>If the real gap is three points, the bars should look about three points apart.</li>
+<li>A completion-rate axis running 70 to 76 magnifies a small difference into a cliff.</li>
+<li>A “±4 points” error bar drawn right on the headline figure.</li>
+</ul>
+<aside class="notes">
+<p>Three points at once, and the middle one is the concrete instance of the first. The truncated axis is not a styling preference, it is the mechanism by which an honest number becomes a dishonest picture. On the third term, hold the phrase “same glance”: a caveat that is true but printed where nobody standing four feet away will read it has not been stated on the page (Alley 2013).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Color alone carries nothing for a red-green color-blind reader</h2>
+<div class="kicker">
+<p>Chapter 32 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Accessibility</span></p>
+<p><span class="d">whether your message reaches readers who perceive differently</span></p>
+</div>
+<div class="term">
+<p><span class="t">Redundant encoding</span></p>
+<p><span class="d">carrying the same distinction in more than one channel, so no single channel is load-bearing</span></p>
+</div>
+</div>
+<ul>
+<li>A red-green bar pair carries nothing for a red-green color-blind reader, roughly 1 in 12 men (Crameri et al.&nbsp;2020).</li>
+<li>Label each bar with its value and give each a pattern, so color becomes a bonus.</li>
+<li>For the web version of a poster, WCAG 2.2 is the published standard (World Wide Web Consortium 2024).</li>
+<li>Its normative scope is web content, so a printed board takes the same rules as good practice.</li>
+</ul>
+<aside class="notes">
+<p>Keep the bound the chapter states, because it is easy to overstate here. The two WCAG rules are that color is never the only visual means of carrying information, and that every informative image needs a text alternative serving the same purpose. Those are normative for web content only, so for a printed board treat them as good practice rather than a formal requirement. Redundant encoding is the move that answers the color-only failure: the value and the pattern each carry the distinction on their own.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Fail any one audit and the poster overclaims</h2>
+<div class="kicker">
+<p>Chapter 32 · The concept</p>
+</div>
+<ul>
+<li>One judgment made four ways, and each way has a name.</li>
+<li>Four audits to run on your own board: claim boundary, figure honesty, uncertainty, accessibility.</li>
+<li>Correct arithmetic is no defense against a picture that oversells it.</li>
+</ul>
+<div class="note-card">
+<p>A poster that fails any one of these overclaims, even when its numbers are exactly right.</p>
+</div>
+<aside class="notes">
+<p>Land the section on the failure rule rather than on a summary. These are not four preferences to balance against each other; any single miss is enough to make the board claim more than the evidence. Tell the room the four audit names now, because the worked example runs exactly these four against a draft figure, one at a time.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>71 percent against 74, with intervals that overlap</h2>
+<div class="kicker">
+<p>Chapter 32 · A worked example</p>
+</div>
+<ul>
+<li>A business-analytics project comparing two versions of an online store checkout page.</li>
+<li><strong>Completion rate:</strong> the share of shoppers who start checkout and finish the purchase.</li>
+<li>Across weekly samples Version A means 71 percent, Version B means 74.</li>
+<li>The 95% interval on each mean is about ±4 points, so the two overlap.</li>
+</ul>
+<aside class="notes">
+<p>Set the numbers down before you show the draft figure, so the room holds the evidence in mind and meets the picture second. Three points of difference with intervals of roughly four points either side is the whole tension of the example. Ask what headline that evidence licenses, then show them what the first draft actually said.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The first draft fails all four audits at once</h2>
+<div class="kicker">
+<p>Chapter 32 · A worked example</p>
+</div>
+<ul>
+<li>Figure honesty: on an axis floored at 70, the taller bar is drawn four times the shorter.</li>
+<li>Uncertainty: the intervals overlap, and nothing on the board shows it.</li>
+<li>Claim boundary: “BOOSTS” is a decisive, causal verb for a three-point, overlapping gap.</li>
+<li>Accessibility: told apart by red and green alone, with no value a screen reader can read.</li>
+</ul>
+<aside class="notes">
+<p>The draft is a bar chart with the y-axis running 70 to 76, titled “Version B BOOSTS completion”, colored red and green. Walk the four audits in the chapter’s order and let the room see that each one lands on a different part of the same picture. Give the uncertainty audit its full weight: a difference the figure sells as decisive might be noise, and nothing on the board shows it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Same data, and only the honesty changed</h2>
+<div class="kicker">
+<p>Chapter 32 · A worked example</p>
+</div>
+<ul>
+<li>Run the axis 0 to 100 and print each mean as a label on its bar.</li>
+<li>Draw the ±4-point interval on top of the bar it belongs to.</li>
+<li>Separate the bars with a color-blind-safe pair plus a hatch pattern.</li>
+<li>Rewrite the headline: “Version B completed about 3 points higher, within overlapping intervals.”</li>
+</ul>
+<aside class="notes">
+<p>Nothing was recomputed and no number was dropped. Point that out explicitly, because the room often expects the fix to be a new analysis. The new headline is longer and less exciting, and it is the one the evidence supports. Designing so the message survives a color-blind reader and a grayscale print is a documented requirement, not a courtesy (Crameri et al.&nbsp;2020).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 densest">
+<h2>Read the printed gap before you look at the bars</h2>
+<div class="kicker">
+<p>Chapter 32 · A worked example</p>
+</div>
+<ul>
+<li>Watch the printed gap in points, then the overlap line that follows it.</li>
+<li>The axis is fixed 0 to 100, so bar heights match the numbers they report.</li>
+<li>Each bar carries its value, its interval, and a hatch that survives grayscale.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>weeks <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> rng.normal(<span class="fl">0.68</span>, <span class="fl">0.070</span>, size<span class="op">=</span>weeks)</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.random.default_rng(SEED <span class="op">+</span> <span class="dv">1</span>).normal(<span class="fl">0.705</span>, <span class="fl">0.070</span>, size<span class="op">=</span>weeks)</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>means <span class="op">=</span> np.array([a.mean(), b.mean()]) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>ci <span class="op">=</span> np.array([<span class="fl">1.96</span> <span class="op">*</span> v.std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(weeks) <span class="cf">for</span> v <span class="kw">in</span> (a, b)]) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Version A: </span><span class="sc">{</span>means[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss">% ± </span><span class="sc">{</span>ci[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss">   "</span></span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Version B: </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="sc">:.0f}</span><span class="ss">% ± </span><span class="sc">{</span>ci[<span class="dv">1</span>]<span class="sc">:.0f}</span><span class="ss">   gap </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="op">-</span>means[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss"> pts"</span>)</span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"intervals overlap: </span><span class="sc">{</span>means[<span class="dv">0</span>] <span class="op">+</span> ci[<span class="dv">0</span>] <span class="op">&gt;</span> means[<span class="dv">1</span>] <span class="op">-</span> ci[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a><span class="co"># the honest figure: zero baseline, intervals drawn, pattern not colour alone</span></span>
+<span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">4.2</span>, <span class="fl">3.2</span>))</span>
+<span id="cb1-17"><a aria-hidden="true" tabindex="-1"></a>ax.bar([<span class="st">"Version A"</span>, <span class="st">"Version B"</span>], means, yerr<span class="op">=</span>ci, capsize<span class="op">=</span><span class="dv">6</span>,</span>
+<span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a>       color<span class="op">=</span>[<span class="st">"#4a4a4a"</span>, <span class="st">"#a8a8a8"</span>], hatch<span class="op">=</span>[<span class="st">""</span>, <span class="st">"//"</span>], edgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb1-19"><a aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb1-20"><a aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"completion rate (%)"</span>)</span>
+<span id="cb1-21"><a aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Completion rate by checkout version"</span>)</span>
+<span id="cb1-22"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (m, e) <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">zip</span>(means, ci)):</span>
+<span id="cb1-23"><a aria-hidden="true" tabindex="-1"></a>    ax.text(i, m <span class="op">+</span> e <span class="op">+</span> <span class="dv">3</span>, <span class="ss">f"</span><span class="sc">{</span>m<span class="sc">:.0f}</span><span class="ss">% ± </span><span class="sc">{</span>e<span class="sc">:.0f}</span><span class="ss">"</span>, ha<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb1-24"><a aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-25"><a aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Run it with SEED = 464 so everyone sees the same two means and the same intervals. The printout is the point of the cell: it states the gap and whether the intervals overlap, which are the two facts the honest headline is built from. Then read the plotting lines as the four audits turned into code, and ask which line you would have to delete to get the dishonest draft back.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The figure rules travel; the poster does not</h2>
+<div class="kicker">
+<p>Chapter 32 · A worked example</p>
+</div>
+<ul>
+<li>Honest axes, values on the marks, uncertainty shown where the design licenses it.</li>
+<li>Distinctions carried in two channels travel with the figure to any format.</li>
+<li>The scan path and the print lock belong to this format alone.</li>
+<li>Borrow by naming the technique, never by claiming the whole poster transfers.</li>
+</ul>
+<aside class="notes">
+<p>Say how far the chapter travels, since most of the room will also build a slide deck or a brief. The figure rules you just worked go with any quantitative figure into any venue. What does not go is the poster’s own machinery, the scan path across the page and the lock on the printed board. When you reuse a technique elsewhere, name the technique you are reusing rather than claiming the whole format came with it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 32</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You paste the described figure and ask your AI for the hardest reviewer questions. It returns a confident, well-organized list of six: sample size, how many weeks were sampled, generalization to other product pages, seasonal traffic, and two more. Every question is reasonable, and not one mentions the truncated axis, the single worst flaw on the board. The list looks complete, so it is tempting to trust it and move on.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 32 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by mapping each returned question to an audit.</li>
+<li>Claim boundary, sampling, and methods all draw questions; figure honesty draws none.</li>
+<li>That empty row is the finding.</li>
+<li>You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped.</li>
+<li>Fluency is not completeness.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by mapping each returned question to an audit. Claim boundary, sampling, and methods all draw questions; figure honesty draws none. That empty row is the finding. You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped. Fluency is not completeness. The check lives in your own audit list, the one you wrote before you asked.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 32</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>The words of your headline and the verb that carries its boundary are yours. So is the judgment that the figure’s impression matches its number, the call that the uncertainty is visible in the same glance, and the decision that the page is honest enough to lock. AI can generate the skeptic’s questions and scan your code for color-only channels. It cannot see your board, and it cannot decide the claim was earned. Those stay with you.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 32 · Your move</p>
+</div>
+<ol type="1">
+<li>Choose the single figure that carries your lead claim, and draw it with the axis running the full scale of the measure.</li>
+<li>Print each value as a label on the mark it belongs to, and show the uncertainty the design licenses right on the figure so the uncertainty arrives in the same glance as the number.</li>
+<li>Carry every meaningful distinction in at least two channels, so color is never the only signal a reader can lose.</li>
+<li>Write the headline above the figure using the verb your claim boundary allows, and lay out the rest of the page so a stranger finds that headline in under a minute.</li>
+<li>Log it in your AI Research Ledger, and verify at least one number on the page with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_research_posters.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html">Chapter 32</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Poster Criticism</h2>
+<div class="kicker">
+<p>Lesson 2 of this studio · Chapter 33</p>
+</div>
+<div class="divider-line">
+<p>whether this draft is honest enough to become permanent, or needs one more fix first</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 33</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>If your venue is a poster, run the gallery walk and the print-lock audit before the artifact leaves your control. Whatever your format, you decide whether the draft is done or needs one more fix, and you defend the lock call out loud.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>A judge stops at one number on your board</h2>
+<div class="kicker">
+<p>Chapter 33 · Why this decision matters</p>
+</div>
+<div class="lead">
+<p>The decision on the table: honest enough to become permanent, or one more fix first?</p>
+</div>
+<ul>
+<li>A <strong>research-integrity judge</strong> probes whether a poster’s claims are actually backed.</li>
+<li>“Where did this come from?”</li>
+<li>Walk them to the exact line of code and the whole poster earns trust.</li>
+<li>Say “somewhere in the analysis” and they stop believing every other number.</li>
+</ul>
+<aside class="notes">
+<p>Put the room in the last hour before a poster prints. The judge is one person walking your row, and the whole encounter lands on a single number: where did this come from? Name the asymmetry out loud. One traceable number buys trust across the whole board, and one untraceable number spends it just as widely. Ask the room which number on their own draft they would least like to be asked about.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Once the file goes to the printer you cannot patch it</h2>
+<div class="kicker">
+<p>Chapter 33 · Why this decision matters</p>
+</div>
+<ul>
+<li>The honesty has to be built in before the poster leaves your hands.</li>
+<li>This is the last audit between a draft poster and a permanent one.</li>
+<li>Done, or one more fix first. You make that call.</li>
+</ul>
+<aside class="notes">
+<p>Most drafts can be revised after someone objects, and a printed poster cannot, which is the entire reason the chapter exists. Say plainly that the audit is not a formality run to satisfy anyone else: it is the only remaining chance to change what the artifact says. The call itself stays with the author, and the rest of the chapter is what you run before making it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Three passes, and each one ends in a decision only you can make</h2>
+<div class="kicker">
+<p>Chapter 33 · The concept</p>
+</div>
+<ul>
+<li>Pass one: the <strong>gallery-walk audit</strong>, a fixed checklist instead of a glance.</li>
+<li>Pass two: the <strong>oral defense</strong>, questions you cannot edit afterward.</li>
+<li>Pass three: the lock, when the poster stops being changeable.</li>
+</ul>
+<aside class="notes">
+<p>Name the three passes in order before you unpack any of them, so the room hears that the chapter is a sequence and not a list of tips. The gallery-walk audit is structured on purpose: you stop at a poster and run the same fixed checklist rather than glancing and moving on, which is what makes it repeatable on your own work. The oral defense is the live conversation at your board. The lock is the end of the line.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The claim boundary sits in the headline verb</h2>
+<div class="kicker">
+<p>Chapter 33 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Claim boundary</span></p>
+<p><span class="d">the line between what your evidence licenses and what it does not</span></p>
+</div>
+<div class="term">
+<p><span class="t">Figure honesty</span></p>
+<p><span class="d">a chart cannot say more than its data</span></p>
+</div>
+<div class="term">
+<p><span class="t">Redundant encoding</span></p>
+<p><span class="d">carrying a distinction in more than one channel</span></p>
+</div>
+</div>
+<ul>
+<li>An observational field trial may say “is associated with,” never “causes.”</li>
+<li>An axis starting just below the data draws a small gap as a canyon.</li>
+<li>A value label plus a hatch pattern, so color is never the only signal.</li>
+</ul>
+<aside class="notes">
+<p>Three terms, and each one has a physical place on a poster. The claim boundary lives in the headline verb, so the fix on this chapter’s example is one word rather than a rewrite. Figure honesty is about the picture and the numbers agreeing, and the case the chapter works is an axis that starts just below the data. Redundant encoding is the fix for the accessibility check: a second channel carries the distinction, so color is never the only signal a color-blind reader can lose (Crameri et al.&nbsp;2020).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Four questions, and a fifth about who can receive the claim</h2>
+<div class="kicker">
+<p>Chapter 33 · The concept</p>
+</div>
+<ul>
+<li>Claim boundary: does the headline stay inside its evidence?</li>
+<li>Figure honesty: does the picture match the numbers?</li>
+<li>Read path: does a stranger find the headline in ninety seconds (Erren &amp; Bourne 2007)?</li>
+<li>Uncertainty: does the interval sit beside the claim, not buried in a footnote?</li>
+<li>Accessibility: can every reader receive the claim (Crameri et al.&nbsp;2020)?</li>
+</ul>
+<aside class="notes">
+<p>This is the checklist you actually run, and it is short enough to hold in your head at someone else’s board. Four questions form the core of the gallery-walk audit and accessibility is the fifth check. Read the read-path question as written: a stranger, and ninety seconds. Have the room run these five out loud on any poster image you can put on the screen before they run them on their own draft.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Defend what your evidence licenses; concede what it never bought</h2>
+<div class="kicker">
+<p>Chapter 33 · The concept</p>
+</div>
+<ul>
+<li>Three lenses cover almost every hard question at your board.</li>
+<li>An outsider tests whether your claim survives translation.</li>
+<li>A specialist probes a design choice.</li>
+<li>A skeptic offers a rival explanation for the same evidence.</li>
+<li><strong>Defend-versus-concede:</strong> conceding means narrowing the claim on the spot.</li>
+</ul>
+<aside class="notes">
+<p>The three lenses are how you rehearse: the chapter says they cover almost every hard question you will get. The judgment underneath is defend-versus-concede, and the chapter is specific about which way to go. You defend when the objection asks for something your evidence already licenses, and you concede when it asks for a crossing your design never paid for. Your <strong>compass position</strong>, the kind and reach of the question your project answered, is what tells you which case you are in.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The audit before the lock is the most consequential one you run</h2>
+<div class="kicker">
+<p>Chapter 33 · The concept</p>
+</div>
+<ul>
+<li><strong>Terminal lock:</strong> the moment the poster becomes final and unchangeable.</li>
+<li><strong>Claim-evidence traceability:</strong> every number traces to the exact cell that produced it.</li>
+<li>That is what lets you show the line when a judge points at your board.</li>
+</ul>
+<aside class="notes">
+<p>The lock is a moment; the audit you run just before it is the one the chapter calls the most consequential on the whole project, because nothing after it can be corrected. Traceability is the precondition rather than a nice extra: if you cannot find the cell now, you certainly cannot find it while someone waits at your board. Ask the room to pick one number on their draft and locate its cell in under a minute, and see how many can.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Compost RAISES corn yield, on fields the grower chose</h2>
+<div class="kicker">
+<p>Chapter 33 · A worked example</p>
+</div>
+<ul>
+<li>A plant-biology poster, with a bar chart of mean grain yield at its center.</li>
+<li>Compost-amended plots against plots that got none. A red bar and a green bar.</li>
+<li>185 and 191 bushels per acre. A gap of 6.</li>
+<li>The y-axis starts at 180, and no interval is shown.</li>
+<li>Nothing was randomized. The grower decided which fields got compost.</li>
+</ul>
+<aside class="notes">
+<p>Read the setup before anyone judges it, because every flaw in this poster is visible in these five lines and the room should find them rather than be told. Hold the last line for a beat: the assignment of compost to fields was a human choice, not a coin flip, and that single fact is what the headline verb cannot survive. Ask what they would change first before you show the audit.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Each audit catches a different flaw on the same board</h2>
+<div class="kicker">
+<p>Chapter 33 · A worked example</p>
+</div>
+<ul>
+<li>Claim boundary: “raises” is causal, but a richer field could bring both compost and yield.</li>
+<li>Honest headline: compost is associated with about 6 more bushels per acre.</li>
+<li>Figure honesty: an axis floored at 180 draws 6 bushels several times taller than it is.</li>
+<li>Uncertainty: a 95% interval of roughly ±9 bushels per acre swamps a 6-bushel gap.</li>
+<li>Accessibility: red-green bars fail a reviewer who is red-green color-blind.</li>
+</ul>
+<aside class="notes">
+<p>Run the audits in order and let the room watch the poster come apart in a structured way rather than by general suspicion. Four of the five bite here; the read path is the one this example never tests. The fix for the axis is to run it from 0, and the fix for the missing interval is to put it beside the headline where the claim is. Roughly one man in twelve is red-green color-blind, so the accessibility item is not optional politeness: color-only encoding loses readers whose vision it never reaches (Crameri et al.&nbsp;2020). The fix here is value labels plus a hatch pattern.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You cannot fix everything, so rank by how far the error travels</h2>
+<div class="kicker">
+<p>Chapter 33 · A worked example</p>
+</div>
+<ul>
+<li>The claim-boundary hit travels farthest.</li>
+<li>A reviewer who catches one causal overreach distrusts the whole board.</li>
+<li>So you lock the associational verb first.</li>
+<li>That decision, made by you and defended out loud, is the work of this chapter.</li>
+</ul>
+<aside class="notes">
+<p>This is the practical heart of the chapter. Ranking is necessary because the print deadline is real and the hit list is longer than the hour you have. The ranking rule is reach: a flaw that changes how a reader treats every other number on the board outranks a flaw confined to one panel. Ranking belongs to the spine the chapter says travels to any format, while the gallery walk and the print lock stay poster procedure. The axis and the color pair still get fixed, in ranked order; they simply do not go first.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 densest">
+<h2>Rebuild the board’s data and print the interval it left off</h2>
+<div class="kicker">
+<p>Chapter 33 · A worked example</p>
+</div>
+<ul>
+<li>Watch the two means and then the gap the poster headlined.</li>
+<li>Watch the interval the board never showed.</li>
+<li>The last printed line is the one the headline’s verb depends on.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Fields the GROWER chose. Richer fields got the compost.</span></span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a>n_plots <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>soil_quality <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="dv">1</span>, size<span class="op">=</span>n_plots)</span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a>composted <span class="op">=</span> soil_quality <span class="op">&gt;</span> np.median(soil_quality)          <span class="co"># not randomized</span></span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a>yield_bu <span class="op">=</span> <span class="dv">184</span> <span class="op">+</span> <span class="fl">4.5</span> <span class="op">*</span> soil_quality <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">11</span>, size<span class="op">=</span>n_plots)</span>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a aria-hidden="true" tabindex="-1"></a>means <span class="op">=</span> np.array([yield_bu[<span class="op">~</span>composted].mean(), yield_bu[composted].mean()])</span>
+<span id="cb2-13"><a aria-hidden="true" tabindex="-1"></a>ci <span class="op">=</span> np.array([<span class="fl">1.96</span> <span class="op">*</span> yield_bu[g].std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(g.<span class="bu">sum</span>())</span>
+<span id="cb2-14"><a aria-hidden="true" tabindex="-1"></a>               <span class="cf">for</span> g <span class="kw">in</span> (<span class="op">~</span>composted, composted)])</span>
+<span id="cb2-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"no compost : </span><span class="sc">{</span>means[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss"> bu/ac ± </span><span class="sc">{</span>ci[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb2-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"composted  : </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="sc">:.0f}</span><span class="ss"> bu/ac ± </span><span class="sc">{</span>ci[<span class="dv">1</span>]<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb2-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"gap        : </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="op">-</span>means[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss"> bu/ac"</span>)</span>
+<span id="cb2-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean soil quality, composted vs not : "</span></span>
+<span id="cb2-19"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>soil_quality[composted]<span class="sc">.</span>mean()<span class="sc">:+.1f}</span><span class="ss"> vs </span><span class="sc">{</span>soil_quality[<span class="op">~</span>composted]<span class="sc">.</span>mean()<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
+<span id="cb2-20"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">4.2</span>, <span class="fl">3.2</span>))</span>
+<span id="cb2-22"><a aria-hidden="true" tabindex="-1"></a>ax.bar([<span class="st">"no compost"</span>, <span class="st">"composted"</span>], means, yerr<span class="op">=</span>ci, capsize<span class="op">=</span><span class="dv">6</span>,</span>
+<span id="cb2-23"><a aria-hidden="true" tabindex="-1"></a>       color<span class="op">=</span>[<span class="st">"#4a4a4a"</span>, <span class="st">"#a8a8a8"</span>], hatch<span class="op">=</span>[<span class="st">""</span>, <span class="st">"//"</span>], edgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb2-24"><a aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">230</span>)</span>
+<span id="cb2-25"><a aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"grain yield (bu/ac)"</span>)</span>
+<span id="cb2-26"><a aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Yield by compost status (grower-chosen fields)"</span>)</span>
+<span id="cb2-27"><a aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-28"><a aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Walk the code as a rebuild of the poster, not as syntax. The assignment line is the one to point at: composted fields are the ones above the median soil quality, so the grower’s choice is written into the data generation. The last print compares mean soil quality for composted and uncomposted fields, and that comparison is why “raises” cannot stand. Ask the room to predict its sign before you run the cell.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The redraw runs the axis from zero and stops relying on color</h2>
+<div class="kicker">
+<p>Chapter 33 · A worked example</p>
+</div>
+<ul>
+<li><code>ax.set_ylim(0, 230)</code> puts the 6-bushel gap back at its true size.</li>
+<li>Two grays plus a hatch pattern carry the distinction without color.</li>
+<li>Error bars put the interval beside the bars instead of nowhere.</li>
+</ul>
+<aside class="notes">
+<p>Walk the redraw as the audit’s three fixable hits applied at once, and hold it against the description of the original board that opened this example. The claim-boundary hit is the one the picture cannot fix, because no amount of honest drawing turns a grower’s choice into a randomized trial. That is the split to leave the room with: the figure fixes what the figure controls, and the verb is a decision you make in words.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 33</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You describe your compost figure to your AI and ask for the hardest skeptic questions. Back comes a crisp six-item list: the sample size, the single growing season, the soil-test method, generalizability to other regions, cost, and the definition of “yield.” It reads as thorough, and the temptation is to treat the poster as fully audited.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 33 · An AI failure case</p>
+</div>
+<ul>
+<li>It is not.</li>
+<li>The list never mentions the truncated axis, and never mentions the red-green bars.</li>
+<li>Those are the two most concrete, most fixable flaws on the board, and the polished list quietly skipped both.</li>
+<li>This is the illusion of completeness: a long, organized answer that omits the thing that matters most.</li>
+<li>Here is how you catch it.</li>
+</ul>
+<aside class="notes">
+<p>It is not. The list never mentions the truncated axis, and never mentions the red-green bars. Those are the two most concrete, most fixable flaws on the board, and the polished list quietly skipped both. This is the illusion of completeness: a long, organized answer that omits the thing that matters most.</p>
+<p>Here is how you catch it. You map each question to one audit. Four land on claim boundary and uncertainty, none on figure honesty, none on accessibility. Two whole audits are missing, which tells you the list is incomplete no matter how confident it reads. Then you check the survivors against the exaggeration factor your own notebook cell printed, and cut any question that assumes a gap other than the 6 bushels you computed. The completeness check is yours, not the tool’s.</p>
+<p>A boundary note before the practice. The walk, the board, and the lock below are poster procedure: a gallery walk tests what a viewer notices from across the room, and a print lock tests what fails when the file becomes a physical object. A manuscript needs a different cold read, and a talk needs a timed rehearsal; do not rename either one a gallery walk. What travels to any format is the audit’s spine: read the claim against its boundary, rank the hits by how far the error travels, take the three lenses, revise once, then make the lock call. The Studio 10 milestone shows where that spine lands when your venue wants a talk, a deck, or a page.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 33</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>These stay yours, however fluent the tool sounds. The words of your headline claim, and the verb that keeps it inside your compass position. The call, made out loud, to defend a point or concede it. And the decision that the poster is honest enough to lock. The tool can generate hard questions and scan a figure for color traps; deciding what your evidence licenses, and answering for it at the board, is yours.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 33 · Your move</p>
+</div>
+<ol type="1">
+<li>Run the gallery-walk audit on your own draft as if you had never seen it: claim boundary, figure honesty, read path, uncertainty, accessibility.</li>
+<li>Rank the hits by how far the error travels.</li>
+<li>Field the three lenses out loud: an outsider, a specialist, and a skeptic with a rival explanation.</li>
+<li>Revise once, fixing the hits in ranked order, then make the lock call.</li>
+<li>Log it in your AI Research Ledger, and verify at least one fixed number with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_poster_criticism.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html">Chapter 33</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Research Pitches, Talks, and Seminars</h2>
+<div class="kicker">
+<p>Lesson 3 of this studio · Chapter 34</p>
+</div>
+<div class="divider-line">
+<p>what gets cut when you say your claim out loud, and what never gets cut</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 34</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Build a spoken spine that survives your venue’s actual length. A thirty-second pitch, a three-minute walk, and a twenty-minute seminar are not one artifact at different speeds; each makes a different promise to the audience, and the claim must survive both compression and expansion without growing stronger in the shorter version.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The words this chapter uses</h2>
+<div class="kicker">
+<p>Chapter 34 · Key terms</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Compression</span></p>
+<p><span class="d">a shorter version of a claim that keeps its boundary.</span></p>
+</div>
+<div class="term">
+<p><span class="t">Inflation</span></p>
+<p><span class="d">a version that quietly makes the claim bigger.</span></p>
+</div>
+</div>
+<aside class="notes">
+<p>Each term is defined in the chapter on first use; these are the definitions as the book gives them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A finished poster is silent until a visitor stops</h2>
+<div class="kicker">
+<p>Chapter 34 · Why this decision matters</p>
+</div>
+<ul>
+<li>A finished poster is silent.</li>
+<li>The moment a visitor stops, your voice takes over.</li>
+<li>Speaking is faster than reading, so you compress on the fly.</li>
+<li>That is where claims quietly grow.</li>
+</ul>
+<aside class="notes">
+<p>Under a little pressure, “was associated with” slides into “causes,” and “on data it never saw” drops out. Nobody plans either move; they happen mid-sentence, because the shorter version is easier to say. Ask the room which qualifier on their own board would be the first to fall out if a stranger interrupted them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>What she remembers is the presenter who said where the claim stops</h2>
+<div class="kicker">
+<p>Chapter 34 · Why this decision matters</p>
+</div>
+<ul>
+<li>A skeptical peer is working the room at a research conference.</li>
+<li>She stops at maybe forty posters in an afternoon.</li>
+<li>The ones who oversold lost her on the second sentence.</li>
+</ul>
+<div class="note-card">
+<p>What I remember is not the one with the most data. It is the one whose presenter told me, in one clean breath, exactly what they found and exactly where it stops.</p>
+</div>
+<aside class="notes">
+<p>Read her line slowly, because it sets the standard the rest of the chapter meets: one clean breath, the finding, and the stop. She is not rewarding modesty for its own sake; she is rewarding a presenter whose spoken sentence she can trust. Ask the room what they would say if a visitor gave them one breath this afternoon.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>You want a pitch you can say cold, without widening the claim</h2>
+<div class="kicker">
+<p>Chapter 34 · Why this decision matters</p>
+</div>
+<ul>
+<li>She is not testing your data.</li>
+<li>She is testing whether your spoken sentence still matches the sentence on your board.</li>
+<li>So you build a pitch you can say cold, under pressure.</li>
+<li>It never widens the claim your evidence earned.</li>
+</ul>
+<aside class="notes">
+<p>The research decision names three venues: a thirty-second pitch, a three-minute walk, and a twenty-minute seminar. They are not one artifact at three speeds, because each makes a different promise to the audience, and the claim has to survive both compression and expansion without growing stronger in the shorter version. Ask the room which of the three they will actually stand up in this term.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A pitch is a prepared spoken version, cut to a fixed slice of time</h2>
+<div class="kicker">
+<p>Chapter 34 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Pitch</span></p>
+<p><span class="d">a short, prepared spoken version of your project, built to fit a fixed slice of time (Bourne 2007)</span></p>
+</div>
+<div class="term">
+<p><span class="t">Pitch architecture</span></p>
+<p><span class="d">the fixed set of beats each version moves through: hook, claim, evidence, boundary, invitation (Alley 2013)</span></p>
+</div>
+</div>
+<ul>
+<li>The thirty seconds you give a visitor who pauses is one pitch.</li>
+<li>The guided tour you give the one who stays is another.</li>
+<li>Different lengths, one skeleton.</li>
+</ul>
+<aside class="notes">
+<p>Prepared is the word to sit on. A pitch is not the paragraph you improvise when someone stops; it is written and rehearsed before the day. Ask the room how long their longest slot is and how long the shortest, because those two numbers are what the rest of this lesson has to fit.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Five beats, and pressure comes for the fourth one</h2>
+<div class="kicker">
+<p>Chapter 34 · The concept</p>
+</div>
+<ul>
+<li><strong>Hook</strong>: one sentence a stranger outside your field cares about.</li>
+<li><strong>Claim</strong>: your headline, said plainly and inside its limits.</li>
+<li><strong>Evidence</strong>: the finding that earns the claim, one spoken sentence at a time.</li>
+<li><strong>Boundary sentence</strong>: one sentence naming what the claim does not show.</li>
+<li><strong>Invitation</strong>: a reason to look closer.</li>
+</ul>
+<aside class="notes">
+<p>The boundary sentence is the beat pressure will try to drop, so you rehearse it until it is reflex. The chapter’s own hook is a help desk that drowns in tickets every morning and cannot tell which will drag on, which a stranger outside computing can still picture. Ask each person in the room for a hook from their own project, out loud, in one sentence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>One skeleton at three lengths, and the boundary is in all three</h2>
+<div class="kicker">
+<p>Chapter 34 · The concept</p>
+</div>
+<ul>
+<li><strong>30-second hook</strong>: hook, claim, boundary, invitation, with no evidence yet.</li>
+<li><strong>90-second walk</strong>: the hook plus two or three evidence beats.</li>
+<li><strong>Full pitch</strong>: three to five minutes.</li>
+<li>Deciding what goes in each length is the choice this chapter equips.</li>
+</ul>
+<aside class="notes">
+<p>Look at what the shortest version keeps and what it drops. Evidence goes first, and the boundary stays, which is the opposite of what instinct does under time pressure. Ask the room which beat they would have cut to reach thirty seconds, then show them the list again.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Compression loses a detail. Inflation loses the truth.</h2>
+<div class="kicker">
+<p>Chapter 34 · The concept</p>
+</div>
+<ul>
+<li>Full: “on data the model had never seen, it flagged four of every five slow tickets.”</li>
+<li>Compressed: “on new tickets, it caught most of the slow ones.”</li>
+<li>Inflated: “my model predicts which tickets will be slow.”</li>
+<li>The same rule governs every length you speak.</li>
+</ul>
+<aside class="notes">
+<p>Read the second and third lines back to back and ask the room which words moved. Both are shorter than the original and both sound cleaner, which is why the difference is easy to miss out loud. The compressed line still says where the number came from; the inflated line has dropped the condition that made it honest.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The excited-mouth upgrade is your spoken verb outrunning your written one</h2>
+<div class="kicker">
+<p>Chapter 34 · The concept</p>
+</div>
+<ul>
+<li>You wrote “is associated with.” Your mouth says “causes.”</li>
+<li>The boundary moves while nobody watches the words.</li>
+<li>That is the failure to hunt in your own pitch.</li>
+</ul>
+<aside class="notes">
+<p>Name this one clearly, because it is the failure the rest of the chapter is built to catch. It does not arrive as a decision to overstate; it arrives as a verb swap in the middle of a sentence you have said many times. Ask the room to name the verb on their own poster and the stronger verb their mouth would reach for.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Your headline is 78% precision on tickets the model never saw</h2>
+<div class="kicker">
+<p>Chapter 34 · A worked example</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Held-out set</span></p>
+<p><span class="d">a slice of your data the model never learned from, kept aside so its score is honest</span></p>
+</div>
+<div class="term">
+<p><span class="t">Precision</span></p>
+<p><span class="d">the share of a model’s flags that turn out correct</span></p>
+</div>
+</div>
+<ul>
+<li>You trained on 4,000 past tickets and tested on 1,000 the model never saw.</li>
+<li>On that held-out set, when it flagged a ticket “slow,” it was right about 78% of the time.</li>
+<li>Poster headline: “On held-out tickets, the model flagged slow ones with 78% precision.”</li>
+</ul>
+<aside class="notes">
+<p>Every word in that headline is carrying weight. “Held-out” says where the number came from, and “precision” says which number it is out of the several a model reports. Ask the room to delete one word from the headline and say aloud what the sentence now claims.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The claim, compressed for speech, still says ‘never seen’</h2>
+<div class="kicker">
+<p>Chapter 34 · A worked example</p>
+</div>
+<ul>
+<li><strong>Hook:</strong> “a help desk drowns in tickets every morning and cannot tell which will drag on.”</li>
+<li><strong>Claim:</strong> “On tickets it had never seen, my model flagged the slow ones,”</li>
+<li>“and when it raised a flag it was right about three times in four.”</li>
+<li><strong>Invitation:</strong> “The surprising part is which tickets fooled it. Want the walk?”</li>
+</ul>
+<aside class="notes">
+<p>“About three times in four” is the same 78%, in words a stranger can hold without writing anything down, and “on tickets it had never seen” is the held-out set said out loud. Nothing here is jargon and nothing here is bigger than the poster. The boundary beat is missing from this slide on purpose: ask the room to name what is not here before you move on, because the next slide is that beat. Then ask them to say their own claim beat in spoken numbers and check it against the board.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The boundary sentence is the beat you rehearse to reflex</h2>
+<div class="kicker">
+<p>Chapter 34 · A worked example</p>
+</div>
+<ul>
+<li>“That number is precision on a held-out slice, not overall accuracy,”</li>
+<li>“and the model still misses some slow tickets.”</li>
+<li>The fix is mechanical: mark the boundary sentence in your script.</li>
+<li>Say it at every length, even the 30-second one.</li>
+</ul>
+<aside class="notes">
+<p>This one sentence does two jobs: it names which number you quoted, and it names what the model still gets wrong. It is also the beat that disappears when you are excited and the visitor is checking the time, which is why marking it is a step rather than a good intention. In the turn, writing this sentence comes before anything else you write.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Drop two words and you have claimed what your test never showed</h2>
+<div class="kicker">
+<p>Chapter 34 · A worked example</p>
+</div>
+<ul>
+<li>Drop “held-out” and you have claimed the model works on any ticket.</li>
+<li>Your test never showed that.</li>
+<li>Swap “precision” for “accuracy” and you quote a number your poster does not report.</li>
+<li>Both feel natural, because the shorter sentence sounds cleaner.</li>
+</ul>
+<aside class="notes">
+<p>Both slips are the excited-mouth upgrade, and neither needs bad faith to happen. Building the spoken version around one claim and its boundary, rather than compressing the whole paper, is standard advice for research talks (Bourne 2007). Ask the room which single word of their own headline would do the most damage if it fell out.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>Run it: the number in the claim, and the number behind the boundary</h2>
+<div class="kicker">
+<p>Chapter 34 · A worked example</p>
+</div>
+<ul>
+<li>1,000 held-out tickets, and about 22% of them really do drag on.</li>
+<li>Precision is the headline number: right when it flags.</li>
+<li>Recall is the second number, the share of slow ones caught.</li>
+<li>SEED is 464, so every run in the room prints the same numbers.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># 1,000 held-out tickets the model never trained on.</span></span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>held_out <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>slow <span class="op">=</span> rng.random(held_out) <span class="op">&lt;</span> <span class="fl">0.22</span>                    <span class="co"># 22% really do drag on</span></span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>flagged <span class="op">=</span> np.where(slow, rng.random(held_out) <span class="op">&lt;</span> <span class="fl">0.62</span>,   <span class="co"># caught</span></span>
+<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a>                         rng.random(held_out) <span class="op">&lt;</span> <span class="fl">0.037</span>)  <span class="co"># false alarms</span></span>
+<span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>precision <span class="op">=</span> slow[flagged].mean()</span>
+<span id="cb3-12"><a aria-hidden="true" tabindex="-1"></a>recall <span class="op">=</span> flagged[slow].mean()</span>
+<span id="cb3-13"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"tickets flagged 'slow'   : </span><span class="sc">{</span>flagged<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb3-14"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"precision (right when it flags) : </span><span class="sc">{</span>precision<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb3-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"recall (share of slow ones caught): </span><span class="sc">{</span>recall<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb3-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">the headline number is the first one. the second is what the"</span>)</span>
+<span id="cb3-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"boundary sentence is about: the model still misses some slow tickets"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>The block prints both numbers the pitch depends on: the one in the claim, and the one the boundary sentence is about. Recall is why the boundary says the model still misses some slow tickets, so a listener who hears only precision hears a better model than you built. Change the false-alarm rate, rerun, and ask the room whether the headline sentence is still true.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 34</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You paste your 90-second walk and ask a tool to compress it to a 30-second hook. Back comes a crisp, confident line: “My model predicts slow help-desk tickets 78% of the time.” It reads beautifully, and it is wrong twice. It dropped “held-out,” so it now claims the model works on any ticket, and it turned precision into a general “78% of the time,” a number your poster never reports. The sentence is shorter and smoother than yours, which is exactly the trap.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 34 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by putting the compressed line next to your poster’s boundary sentence and reading them word for word.</li>
+<li>“Predicts … 78% of the time” does not match “precision on a held-out slice.” Then you say the line to a friend, who asks, “so it’s right 78% of the time on any ticket?” That question is the widened claim coming back at you.</li>
+<li>You keep your own boundary sentence and drop the tool’s version.</li>
+<li>If your talk carries slides, the slides serve the spoken spine and never replace it.</li>
+<li>Build the talk first, add a slide only where a listener needs to see what they cannot hold in memory, and give every quantitative visual the figure discipline from the poster chapter: honest axes, values on the marks, and uncertainty shown where the design licenses it, as an interval or an honest caveat.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by putting the compressed line next to your poster’s boundary sentence and reading them word for word. “Predicts … 78% of the time” does not match “precision on a held-out slice.” Then you say the line to a friend, who asks, “so it’s right 78% of the time on any ticket?” That question is the widened claim coming back at you. You keep your own boundary sentence and drop the tool’s version.</p>
+<p>If your talk carries slides, the slides serve the spoken spine and never replace it. Build the talk first, add a slide only where a listener needs to see what they cannot hold in memory, and give every quantitative visual the figure discipline from the poster chapter: honest axes, values on the marks, and uncertainty shown where the design licenses it, as an interval or an honest caveat. A seminar is the same spine grown to the venue’s length, not a different animal: problem, gap, and question, then method, evidence, boundary and limitations, and the next step, each section expanded until it fills its share of the time, with the boundary still spoken aloud.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 34</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Three calls stay yours. You decide <strong>which claim your evidence actually supports</strong>, <strong>where the claim must stop</strong> (the exact boundary sentence), and <strong>whether a compressed sentence still says what the poster says</strong>. A tool can trim words and flag jargon. It cannot decide the shorter sentence is still true, and it will not be standing at the board when the stranger asks. You say the sentence. You own it.</p>
+</div>
+</section>
+<section class="slide level2 denser">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 34 · Your move</p>
+</div>
+<ol type="1">
+<li>Write your boundary sentence first, on its own line, and mark it.</li>
+<li>Build the 30-second version: hook, claim, boundary, invitation, with no evidence beats yet.</li>
+<li>Build the 3-minute version: the same skeleton with two or three evidence beats and the same boundary sentence, word for word.</li>
+<li>Expand to your venue’s actual length: grow the 3-minute spine section by section (problem and gap, question, method, evidence, boundary and limitations, next step) until it fills the time, and write the transformation memo line for what each expansion added.</li>
+<li>Say the versions out loud to someone outside your field and have them repeat your claim back to you.</li>
+<li>Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>, such as peer reasoning.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_research_pitches.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html">Chapter 34</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Difficult Questions and Uncertainty</h2>
+<div class="kicker">
+<p>Lesson 4 of this studio · Chapter 35</p>
+</div>
+<div class="divider-line">
+<p>how you will state your study’s uncertainty and its limits out loud, before a stranger forces the question</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>The research decision</h2>
+<div class="kicker">
+<p>Chapter 35</p>
+</div>
+<div class="decision">
+<p><span class="label">The research decision</span></p>
+<p>Prepare to answer the hardest reasonable question in the channel your venue actually uses: live discussion, a reviewer report, an editor query, or a written response. The answer does the same work in every channel — name the concern, state what the evidence supports, acknowledge what it does not resolve, and show what changes as a result — and you prepare it in advance, never improvise it.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>She trusts you more when you name what your study cannot show</h2>
+<div class="kicker">
+<p>Chapter 35 · Why this decision matters</p>
+</div>
+<ul>
+<li>A policy stakeholder who has heard a thousand poster pitches.</li>
+<li>Insist it is airtight and she starts looking for the crack herself.</li>
+<li>The decision: how you state your uncertainty and limits out loud, before a stranger forces it.</li>
+</ul>
+<div class="note-card">
+<p>When a presenter tells me, unprompted, exactly what their study can’t show, I trust everything else they said more.</p>
+</div>
+<aside class="notes">
+<p>Read the quotation aloud and let it sit before you explain it. She is not testing your confidence; she is testing whether you know where your claim stops. Ask the room which of the two presenters they would believe, and why the unprompted admission is the one that buys trust. The decision on the table is made in advance, out loud, and never improvised in the moment.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Your work is already honest. The danger now is your own mouth.</h2>
+<div class="kicker">
+<p>Chapter 35 · Why this decision matters</p>
+</div>
+<ul>
+<li>Your poster, talk, or page is finished and honest.</li>
+<li>Under pressure one presenter buries a real finding under apology.</li>
+<li>The other upgrades a careful ‘went together’ into a confident ‘caused.’</li>
+<li>Both misstate the evidence you actually hold.</li>
+</ul>
+<aside class="notes">
+<p>Name both failures as failures of accuracy, not of nerve, because that is what makes them worth preparing against. The apologizer understates a defensible result and the inflater overstates an association, and the listener is misled either way. Everything in this chapter is a script written before the room so that neither move is available to you in it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>ULN speaks a boundary in three beats</h2>
+<div class="kicker">
+<p>Chapter 35 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Uncertainty statement</span></p>
+<p><span class="d">a sentence saying how much your number could wobble, and why</span></p>
+</div>
+<div class="term">
+<p><span class="t">Limitation</span></p>
+<p><span class="d">a true sentence about what your design cannot show</span></p>
+</div>
+<div class="term">
+<p><span class="t">Next step</span></p>
+<p><span class="d">the study that would resolve that limitation</span></p>
+</div>
+</div>
+<ul>
+<li>Uncertainty: ‘with 812 people, my estimate could sit a few points higher or lower.’</li>
+<li>Limitation: ‘I measured that two things went together, so I cannot say one caused the other.’</li>
+<li>Delivered together, ULN sounds like expertise, because you name the edge on purpose.</li>
+</ul>
+<aside class="notes">
+<p>Say the three beats in order once, then say them again as one spoken answer, because the order is what makes it land. The limitation beat is a statement about your design and not about your effort (Wasserstein &amp; Lazar 2016), which is why it can be written in advance rather than improvised in the room. Ask the room to draft their own next-step beat on the spot: it is the beat that turns an admission into the study that would resolve the limitation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The apology spiral buries a finding you could defend</h2>
+<div class="kicker">
+<p>Chapter 35 · The concept</p>
+</div>
+<ul>
+<li>‘Honestly this is probably all wrong, my sample’s tiny.’</li>
+<li>That is self-erasure, and the finding underneath it was real.</li>
+<li>ULN exists to prevent exactly this.</li>
+</ul>
+<aside class="notes">
+<p>This is the failure the three beats are built against, and it is one of the two ways a nervous presenter misstates the evidence; the other is upgrading “went together” into “caused.” The sentence on the slide erases a defensible result without telling the listener anything true about it. Ask who has heard themselves say something close to it, and then ask what the precise version would have been.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>‘One campus sample’ is precision; ‘grain of salt’ is hedging</h2>
+<div class="kicker">
+<p>Chapter 35 · The concept</p>
+</div>
+<div class="terms">
+<div class="term">
+<p><span class="t">Precision</span></p>
+<p><span class="d">naming the exact boundary</span></p>
+</div>
+<div class="term">
+<p><span class="t">Hedging</span></p>
+<p><span class="d">vague self-protection that blurs where the claim stops</span></p>
+</div>
+</div>
+<ul>
+<li>‘This is one campus sample’ tells the listener where your claim stops.</li>
+<li>‘Sort of, take it with a grain of salt’ tells them nothing.</li>
+<li>Precision informs the listener. Hedging only protects you.</li>
+</ul>
+<aside class="notes">
+<p>The test between the two is simple: after your sentence, does the listener know more about your evidence, or only about your nerves (van der Bles et al. 2019). Hedging feels safer to say and leaves the audience unable to judge anything. Have the room convert one hedge from their own draft into the exact boundary it was hiding.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Five prepared questions cover the space</h2>
+<div class="kicker">
+<p>Chapter 35 · The concept</p>
+</div>
+<ul>
+<li>A question bank is a written list of the hardest fair questions a visitor could ask.</li>
+<li>Each one arrives with a prepared answer.</li>
+<li>One per recurring type: method, alternative explanation, so-what, generalization, AI-use.</li>
+<li>Write it down. Do not plan to think of it in the room.</li>
+</ul>
+<aside class="notes">
+<p>Five is one per recurring type, and the types are what give the bank its coverage (Bourne 2007): without them you will prepare several versions of the question you already know how to answer. Emphasize fair, which means the hardest reasonable question rather than a caricature. And if your venue’s questions arrive as a reviewer report or an editor query instead of aloud, the same bank answers them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An honest don’t-know is an admission with content</h2>
+<div class="kicker">
+<p>Chapter 35 · The concept</p>
+</div>
+<ul>
+<li>Name what you cannot say.</li>
+<li>Name the thing you can stand on.</li>
+<li>Name the method that would settle it.</li>
+<li>Use it when a banked question has no full answer.</li>
+</ul>
+<aside class="notes">
+<p>When a banked question has no full answer, that is expected rather than a gap in your preparation. The difference between an honest don’t-know and a shrug is the three pieces of content on this slide. Ask the room for the question they most dread and build one of these aloud, together.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Six seconds faster, and a visitor asks whether the toolbar caused it</h2>
+<div class="kicker">
+<p>Chapter 35 · A worked example</p>
+</div>
+<ul>
+<li>You work with usage logs from a small software company’s app.</li>
+<li>Some customers chose the compact toolbar; others kept the expanded one.</li>
+<li>Compact users found the target page a median of six seconds faster.</li>
+<li>The visitor: ‘so the compact toolbar causes faster navigation?’</li>
+</ul>
+<aside class="notes">
+<p>This is the question the presenter feared, and it is a fair one, of the alternative-explanation type. Note what is not wrong here: the six seconds are a real difference in the logs, and nobody made a computational mistake. What is at stake is only the verb. Ask the room what they would say next, before you turn the slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Power users may have chosen compact and been fast anyway</h2>
+<div class="kicker">
+<p>Chapter 35 · A worked example</p>
+</div>
+<ul>
+<li>Users picked their own toolbar. Nobody assigned it.</li>
+<li><strong>Confound:</strong> a third factor that shapes both the choice and the outcome.</li>
+<li>Power users may have chosen compact and been fast with any layout.</li>
+<li>So your study cannot say the toolbar caused the speed.</li>
+</ul>
+<aside class="notes">
+<p>Walk the mechanism out loud rather than asserting the label. Being a power user plausibly pushes someone toward the compact layout and independently makes them fast, so it sits on both sides of the comparison. That is self-selection, and it is why an observational comparison here cannot carry a causal verb.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>The two-beat reply: the truth, then the interest</h2>
+<div class="kicker">
+<p>Chapter 35 · A worked example</p>
+</div>
+<ul>
+<li>‘I can’t say it causes the speed, because compact users may already be power users.’</li>
+<li>‘The study that would answer you is randomly assigning the toolbar to new users.’</li>
+<li>‘That’s what I’d run next.’</li>
+<li>You refused one word and handed back a research question, not a wall.</li>
+</ul>
+<aside class="notes">
+<p>The two beats are the limitation and the next step, delivered in that order. The second beat is what keeps the exchange from ending in a refusal: the visitor leaves with a design, not with a closed door. Stating uncertainty plainly rather than hiding it does not cost you the audience’s trust, which is what the evidence on communicating uncertainty finds (van der Bles et al. 2019).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 denser">
+<h2>Build users the toolbar cannot help, and the six seconds appear anyway</h2>
+<div class="kicker">
+<p>Chapter 35 · A worked example</p>
+</div>
+<ul>
+<li>The simulated seconds depend on being a power user, never on the toolbar.</li>
+<li>Watch the observed median gap against a true toolbar effect of zero.</li>
+<li>Then watch the gap among power users only, and among everyone else.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1200</span></span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>power_user <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.35</span>        <span class="co"># fast with ANY layout</span></span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>compact <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> np.where(power_user, <span class="fl">0.72</span>, <span class="fl">0.28</span>)   <span class="co"># they self-select</span></span>
+<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a>seconds <span class="op">=</span> (<span class="dv">34</span> <span class="op">-</span> <span class="fl">13.5</span> <span class="op">*</span> power_user</span>
+<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>           <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">6</span>, size<span class="op">=</span>n))   <span class="co"># the toolbar itself does nothing</span></span>
+<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a aria-hidden="true" tabindex="-1"></a>observed <span class="op">=</span> np.median(seconds[<span class="op">~</span>compact]) <span class="op">-</span> np.median(seconds[compact])</span>
+<span id="cb4-12"><a aria-hidden="true" tabindex="-1"></a>within <span class="op">=</span> [np.median(seconds[<span class="op">~</span>compact <span class="op">&amp;</span> g]) <span class="op">-</span> np.median(seconds[compact <span class="op">&amp;</span> g])</span>
+<span id="cb4-13"><a aria-hidden="true" tabindex="-1"></a>          <span class="cf">for</span> g <span class="kw">in</span> (power_user, <span class="op">~</span>power_user)]</span>
+<span id="cb4-14"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"observed median gap            : </span><span class="sc">{</span>observed<span class="sc">:.0f}</span><span class="ss"> s faster for compact"</span>)</span>
+<span id="cb4-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"true effect of the toolbar     : 0 s"</span>)</span>
+<span id="cb4-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"gap among power users only     : </span><span class="sc">{</span>within[<span class="dv">0</span>]<span class="sc">:+.0f}</span><span class="ss"> s"</span>)</span>
+<span id="cb4-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"gap among everyone else        : </span><span class="sc">{</span>within[<span class="dv">1</span>]<span class="sc">:+.0f}</span><span class="ss"> s"</span>)</span>
+<span id="cb4-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"share of compact users who are power users : "</span></span>
+<span id="cb4-19"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>power_user[compact]<span class="sc">.</span>mean()<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb4-20"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the six seconds are real and the toolbar did not cause them. that is"</span>)</span>
+<span id="cb4-21"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"exactly the sentence the two-beat reply has to carry"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Read the seconds line as the whole argument: the toolbar term is simply absent, so any gap the printout shows was manufactured by who chose what. One line prints the share of compact users who are power users, which is the self-selection made visible. Say the closing sentence the block prints, because it is exactly the sentence the two-beat reply has to carry.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>An AI failure case</h2>
+<div class="kicker">
+<p>Chapter 35</p>
+</div>
+<div class="failure">
+<p><span class="label">Where the tool failed</span></p>
+<p>You paste your limitation into an AI tool and ask it to “make this sound more confident for the poster.” It returns a fluent, polished sentence: “The compact toolbar improves navigation speed, with strong results across users.” It runs clean, it reads well, and it is wrong. The tool quietly swapped “was associated with faster times” for “improves,” and “improves” is a causal verb your observational logs cannot support. This is a silent scope change dressed as helpful editing.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>How it failed</h2>
+<div class="kicker">
+<p>Chapter 35 · An AI failure case</p>
+</div>
+<ul>
+<li>You catch it by reading the AI’s verb against your poster’s headline, word for word.</li>
+<li>Your headline says “associated with.” The rewrite says “improves.” The kind of claim moved while the sentence got prettier.</li>
+<li>You keep your own verb, and log that the polish inflated the claim.</li>
+</ul>
+<aside class="notes">
+<p>You catch it by reading the AI’s verb against your poster’s headline, word for word. Your headline says “associated with.” The rewrite says “improves.” The kind of claim moved while the sentence got prettier. You keep your own verb, and log that the polish inflated the claim.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Do not delegate</h2>
+<div class="kicker">
+<p>Chapter 35</p>
+</div>
+<div class="rule-human">
+<p><span class="label">This stays yours</span></p>
+<p>Three decisions never leave your hands: <strong>which claim your evidence actually supports</strong>, <strong>where that claim must stop</strong>, and <strong>how you acknowledge its uncertainty and limitations</strong>. The tool can draft a question or flag a word, but only you decide the compass position your design can bear and the one word you must refuse aloud. Your honest don’t-know is yours to mean, not to recite.</p>
+</div>
+</section>
+<section class="slide level2 dense">
+<h2>It is your turn</h2>
+<div class="kicker">
+<p>Chapter 35 · Your move</p>
+</div>
+<ol type="1">
+<li>Write the five hardest fair questions someone could ask you, one for each type: method, alternative explanation, why-it-matters, generalization, AI use.</li>
+<li>Draft a two-sentence answer to each and mark it defend or concede.</li>
+<li>Write your uncertainty-and-limitations statement in ULN form: how much your number could wobble and why, the one thing your design cannot show, and the study that would settle it.</li>
+<li>Read it aloud and cut every self-erasing word, replacing each with the exact boundary it was hiding.</li>
+<li>Log it in your AI Research Ledger, and verify at least one prepared answer with a named method from the <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a>, such as peer reasoning.</li>
+</ol>
+<div class="turn">
+<p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_difficult_questions_and_uncertainty.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html">Chapter 35</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
+<aside class="notes">
+<p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>Milestone 10: Your artifact, ready to publish or present</h2>
+<div class="kicker">
+<p>Studio 10 closes here</p>
+</div>
+<div class="divider-line">
+<p>What the lessons handed you becomes one artifact you can defend.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What this milestone produces</h2>
+<div class="kicker">
+<p>Milestone 10</p>
+</div>
+<div class="decision">
+<p><span class="label">The artifact</span></p>
+<p><strong>What this milestone produces.</strong> A short venue contract and one artifact ready for publication or presentation that satisfies it - a paper or research note, a seminar or conference talk, a poster, or another venue’s format - with a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release.</p>
+</div>
+</section>
+<section class="slide level2">
+<h2>What you bring</h2>
+<div class="kicker">
+<p>Milestone 10 · Check before you start</p>
+</div>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html">Lesson 35 — Difficult Questions and Uncertainty</a>: your five hardest fair questions with defend-or-concede answers, and your uncertainty-and-limitations statement in ULN form.</li>
+</ul>
+</section>
+<section class="slide level2 dense">
+<h2>The practice</h2>
+<div class="kicker">
+<p>Milestone 10 · In the studio</p>
+</div>
+<ol type="1">
+<li>Write your venue contract using the guide above, then say what your claim must lose to fit that format.</li>
+<li>Write a transformation memo from your Studio 9 note: what expands, what compresses, what moves, what becomes visual, and what becomes spoken.</li>
+<li>Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live.</li>
+<li>Build the artifact to its venue contract, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.</li>
+<li>Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the manuscript to a cold reader.</li>
+<li>Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are the agenda for the studio that owns them.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>The four rails, here</h2>
+<div class="kicker">
+<p>Milestone 10 · Every studio, these four</p>
+</div>
+<div class="rails">
+<div class="rail">
+<p><span class="t">Ethics, permissions, and data exposure</span></p>
+<p><span class="d">An adaptation that drops the limitations is not a shorter version, it is a different claim.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Evidence, provenance, and reproducibility</span></p>
+<p><span class="d">Every figure that travels carries its verification with it.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">AI activity, verification, and human decisions</span></p>
+<p><span class="d">If AI edits the artifact or generates questions, record what changed and verify the result; every defend-or-concede decision remains yours.</span></p>
+</div>
+<div class="rail">
+<p><span class="t">Uncertainty, claim boundary, and revision history</span></p>
+<p><span class="d">The shorter the format, the more explicit the boundary has to be.</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+<h2>A version, not a pass</h2>
+<div class="kicker">
+<p>Milestone 10</p>
+</div>
+<div class="note-card">
+<p><span class="label">How the record works</span></p>
+<p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
+</div>
+</section>
+<section class="slide level2 divider" data-background-color="#1a1a19">
+<h2>The one rule</h2>
+<div class="divider-line">
+<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
+<p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
+</div>
+<p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio10-adapt-and-defend.html">Studio 10 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html">Milestone 10</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="_theme/edrai_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>EDR|AI · Studio 10 — Prepare to publish or present</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 7.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
