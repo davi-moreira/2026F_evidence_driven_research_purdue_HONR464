@@ -141,10 +141,12 @@ nothing graded.
 
 **⚠ If the slot announcement already went out.** The Week-1 announcement
 `_announcements/03_srl_slots_and_logistics.md` told students they hold slots on
-named dates. **Those slots are withdrawn, and students need to hear it from you**
-on the course platform: the lab meeting stays, no one is assigned, nothing is
-prepared, and nothing about it is graded. The repository cannot deliver that
-message.
+named dates. **Those slots are withdrawn, and students need to hear it from
+you** on the course platform: the lab meeting stays, no one is assigned, nothing
+is prepared, and nothing about it is graded. The follow-up is drafted at
+`_announcements/2026-08-31_lab_meeting_no_slots.md`; post it as a new
+announcement rather than editing the old one, so everyone gets the notification.
+The repository cannot deliver that message for you.
 
 **Retired in place — delete nothing (D74 Ruling 5, D75 again).** The Student
 Research Lead grade category and the live nine-row rubric are **not applied this
@@ -249,10 +251,10 @@ class day). Baseline **N = 16**, drop **d = 2**, so the block is
 `20.0 × (sum of the highest 14 credits) / 14`.
 
 - Grade it on **completion only**: worked through and handed in. Never on whether
-  the answers came out right, and never on how that student's live report went.
+  the answers came out right, and never on anything said in the lab meeting.
   Open the file, confirm the week's writing cells carry the student's own work
-  (the 📣 report-plan lines, the seven in-class moves, the 📒 ledger row per
-  lecture), enter the credit, and move on. It is not a second milestone.
+  (the seven in-class moves and the 📒 ledger row per lecture), enter the
+  credit, and move on. It is not a second milestone.
 - Nothing below a lecture's `### ⏸` line, and nothing behind a 🏠 label, counts
   toward the credit; that material is optional depth.
 - It is **not participation** and never carries participation's ±0.9 contribution
@@ -434,9 +436,9 @@ exchange as follows:
 | Final Project grading + project modes | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | Brightspace gradebook (generated) | `brightspace/gradebook_spec.md` |
 | Lecture Notebooks contract + schedule | `course_config.yaml lecture_notebooks:`, `planning/LECTURE_NOTEBOOK_SCHEDULE.md` |
-| SRL suite (retired this edition, kept on disk) | `project/srl/`, `scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py` |
+| SRL suite + the withdrawn slot draw (retired this edition, kept on disk) | `project/srl/`, `scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py`, `_adm/roster/` |
 | Session guides (generated) | `scripts/build_session_guides.py` → `session_guides/` |
-| Schedule data (reporter slots, in the `srl_*` fields) | `scripts/schedule_data/part1–4.py` |
+| Schedule data (the legacy `srl_*` fields; D75 assigns no one) | `scripts/schedule_data/part1–4.py` |
 | GenAI Studio roles + setup | `genai_studio/` *(forthcoming)* |
 | Conference/presentation protocols | `project/conference/` |
 | Course-eval analysis | `scripts/analyze_course_eval.py` |

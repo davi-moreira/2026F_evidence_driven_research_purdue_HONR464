@@ -385,7 +385,8 @@ decisions are documented, not just outcomes (`scripts/audit_sources.py`,
   (15 → 20 course points)**, so the **Final Project rises 50% → 55%**. Nothing
   was deleted: every SRL file and script is kept for a future edition, and the
   per-lecture questions guide is kept in full and re-owned to the instructor.
-  The D69/D71 draw carries over unchanged and now names reporters. Also
+  The D69/D71 draw carries over unchanged and now names reporters *(both the
+  reporter and the draw were withdrawn the same day — see v6, D75)*. Also
   corrected here: the calendar prose, which had read 42 in-person meetings and
   one async module rather than **41 in person and 2 asynchronous online
   sessions**.
