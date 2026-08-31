@@ -9,16 +9,22 @@ Two families of student-facing instructions are handed to students as PDFs:
 Each PDF sits in the SAME FOLDER as the source it is developed from, named with
 the same stem, so the pair is always obvious.
 
-THE SRL SUITE IS RETIRED, AND STILL RENDERS (D74, 2026-08-31)
--------------------------------------------------------------
+THE SRL SUITE IS RETIRED, AND STILL RENDERS (D74, narrowed by D75, 2026-08-31)
+------------------------------------------------------------------------------
 D74 retired the Student Research Lead ROLE and its grade category, replacing it
-with the ten-minute lab meeting: one student reports a decision from their own
-project, the report is not graded, and the instructor leads the lecture from
-minute 10. Under D74's ruling that nothing is deleted, the whole suite is KEPT
-on disk and KEPT in this build, exactly as D58 kept the quiz banks. What changes
-is the labelling: every SRL PDF says on its face, in its title and its page
-footer, that it is retired for this edition and kept for a future one, so a
-document that is out of use can never be mistaken for a live instrument.
+with a ten-minute lab meeting in which one assigned student reported. D75 then
+withdrew that assignment: the ten minutes stay, but NO student is designated, on
+any lecture, ever, nothing is prepared before class, and nothing said there is
+graded. The instructor asks the room how the projects are going, the room
+answers, and from minute 10 the instructor leads the lesson.
+
+Under D74's ruling that nothing is deleted, the whole suite is KEPT on disk and
+KEPT in this build, exactly as D58 kept the quiz banks. The documents survive, so
+this script keeps rendering them. What changes is the labelling: every SRL PDF
+says on its face, in its title and its page footer, that it is retired for this
+edition and kept for a future one, so a document that is out of use can never be
+mistaken for a live instrument. `SRL_STATUS` below carries the D75 wording, and
+it is the one place to correct if the block changes again.
 
 THE MILESTONE RULE (instructor ruling, 2026-08-23)
 --------------------------------------------------
@@ -304,18 +310,19 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
 
 
 # ---------------------------------------------------------------------------
-# the retired-but-kept label on every SRL document (D74)
+# the retired-but-kept label on every SRL document (D74, reworded by D75)
 
 #: Shown under the title of every SRL PDF, unless the source document already
 #: says the same thing in its own words. No em dash, no date, no clock time and
 #: no semester label, so it passes the same gates as everything else here.
 SRL_STATUS = (
     "> **Retired for this edition, kept for a future one.** The Student "
-    "Research Lead role was replaced by the ten-minute lab meeting, in which "
-    "one student reports a decision from their own project and the room asks "
-    "questions. That report is not graded, and the instructor leads the lecture "
-    "from minute 10. This document is preserved in full and is not in use or "
-    "assessed this edition."
+    "Research Lead role was replaced by a ten-minute lab meeting that opens "
+    "each Monday and Wednesday lecture. Nobody is assigned to it: the "
+    "instructor asks the room how the projects are going, and the room answers. "
+    "Nothing is prepared beforehand, nothing said there is graded, and from "
+    "minute 10 the instructor leads the lesson. This document is preserved in "
+    "full and is not in use or assessed this edition."
 )
 
 #: Page footer for the suite, and the parenthetical appended to its titles.
@@ -430,11 +437,12 @@ def main() -> None:
         title = no_em_dash(title)
         fatal, warn = scan(body, label)
         if key.startswith("srl:") and fatal:
-            # D74: the suite is retired FOR A NAMED EDITION and kept on file, so
-            # its banner names that edition and the weekly notebook deadline that
-            # replaced the role. Failing the build on those would mean shipping
-            # no retired-suite PDF at all, which is the one outcome D74 forbids.
-            # Reported below, rendered anyway. Milestones keep the hard gate.
+            # D74/D75: the suite is retired FOR A NAMED EDITION and kept on
+            # file, so its banner names that edition and the weekly notebook
+            # deadline that replaced the role. Failing the build on those would
+            # mean shipping no retired-suite PDF at all, which is the one outcome
+            # D74 forbids and D75 restates. Reported below, rendered anyway.
+            # Milestones keep the hard gate.
             all_edition += fatal
             fatal = []
         all_fatal += fatal
@@ -447,7 +455,7 @@ def main() -> None:
 
     if all_edition:
         print(f"\n⚠️  {len(all_edition)} edition-specific mention(s) inside the "
-              f"RETIRED SRL suite, rendered by design (D74):")
+              f"RETIRED SRL suite, rendered by design (D74/D75):")
         for w in all_edition:
             print(w)
     if all_warn:

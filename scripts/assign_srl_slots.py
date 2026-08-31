@@ -1,5 +1,25 @@
 #!/usr/bin/env python3
-"""Draw the lab-meeting REPORTER assignment for the semester.
+"""Draw the lab-meeting REPORTER assignment for the semester. WITHDRAWN by D75.
+
+WITHDRAWN BY D75 (2026-08-31), KEPT ON DISK
+-------------------------------------------
+D74 made ONE assigned student the reporter at every Mon/Wed lab meeting. D75
+withdraws that assignment entirely. The ten-minute opening block stays; the
+assignment does not. NO student is designated, on any lecture, ever. There is no
+draw, no assigned question or request, and no preparation of any kind before
+class by anybody. The instructor asks the room how the projects are going and
+the room answers: what was decided since last time, what the evidence looks
+like, where somebody is stuck. From minute 10 the instructor leads the lesson,
+and nothing said in the lab meeting is graded.
+
+So this draw does not run. `DRAW_ENABLED = False` below is the guard, and
+`main()` stops on it rather than writing an assignment nobody is bound by. Every
+line of the drawing logic is KEPT below, unchanged, under D75's ruling that
+nothing is deleted: setting `DRAW_ENABLED = True` reinstates the draw for a
+future edition that wants assigned reporters back.
+
+The rest of this docstring describes the draw as it stood under D74, preserved
+for that future edition.
 
 Every Mon/Wed lecture from Week 2 opens with a ten-minute LAB MEETING. One
 student is that lecture's REPORTER: seven minutes on a decision from their OWN
@@ -41,7 +61,7 @@ excluded from the redraw, so a late roster change never moves a date a student
 has already been told to prepare for. Everything after the locked slots is
 redrawn from scratch.
 
-Usage:
+Usage (inert while DRAW_ENABLED is False; each invocation prints why):
     .venv/bin/python scripts/assign_srl_slots.py
     .venv/bin/python scripts/assign_srl_slots.py --seed 464 --dry-run
     .venv/bin/python scripts/assign_srl_slots.py --ignore-locks   # clean draw
@@ -64,6 +84,14 @@ OUT_MD = ROOT / "_adm" / "roster" / "2026F_HONR46400_srl_assignment.md"
 SEED = 464
 MAX_TRIES = 200_000
 
+#: D75 (2026-08-31) withdrew the reporter assignment: no student is designated
+#: at any lab meeting, so there is nothing to draw. This flag is the guard and
+#: `main()` stops on it, so running the script can never silently produce an
+#: assignment that no longer applies to anybody. Everything below is kept
+#: working and unchanged for a future edition that wants assigned reporters
+#: back: set this to True and the draw runs exactly as it did under D74.
+DRAW_ENABLED = False
+
 # Slots whose reporter was ALREADY ANNOUNCED to the class and is therefore
 # frozen. The first draw (5 students, 2026-08-22) was posted before the roster
 # grew to 7 on 2026-08-25; it has since settled back at 6 (D71, a same-size
@@ -71,7 +99,10 @@ MAX_TRIES = 200_000
 # students are already preparing, so they keep their dates; slots 3+ are redrawn
 # across the full roster. Keyed by slot number, valued by roster `display_name`.
 # The names were drawn while the job was still called Student Research Lead;
-# D74 renamed the job, not the draw, so the locks stand as they are.
+# D74 renamed the job, not the draw, so the locks stand as they are. D75 then
+# withdrew the assignment altogether, so nothing is locked in practice this
+# edition: these two names are kept, untouched, for the future edition that
+# turns DRAW_ENABLED back on.
 LOCKED = {
     1: "Erika Chiommino",      # Mon Aug 31 - Week 2 Monday
     2: "Aren Dominic Damayo",  # Wed Sep 2  - Week 2 Wednesday
@@ -227,6 +258,27 @@ def draw(
 
 
 def main() -> int:
+    if not DRAW_ENABLED:
+        print(
+            "D75 (2026-08-31) withdrew the lab-meeting reporter assignment.\n"
+            "\n"
+            "The ten-minute lab meeting still opens every Mon/Wed lecture, but\n"
+            "NO student is designated as its reporter, on any lecture, ever.\n"
+            "There is no draw, no assigned question or request, and no\n"
+            "preparation before class by anybody: the instructor asks the room\n"
+            "how the projects are going and the room answers, and from minute 10\n"
+            "the instructor leads the lesson. Nothing said there is graded.\n"
+            "\n"
+            "So nothing was drawn and nothing was written. Any assignment still\n"
+            "sitting in _adm/roster/ is the withdrawn D74 draw: kept on file, and\n"
+            "binding on nobody.\n"
+            "\n"
+            "The whole draw is preserved below this guard, unchanged. To\n"
+            "reinstate it for a future edition that wants assigned reporters\n"
+            "back, set DRAW_ENABLED = True at the top of this file."
+        )
+        return 0
+
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--dry-run", action="store_true", help="print, do not write")
@@ -262,6 +314,10 @@ def main() -> int:
             }
         )
 
+    # Everything from here down is the withdrawn D74 arrangement, unreachable
+    # while DRAW_ENABLED is False and kept verbatim. It still names the 📣 My
+    # Report Plan cell, which D75 removed from every notebook, so an edition
+    # that re-enables the draw has to restore that cell or reword this output.
     # `prep_due` is the CALENDAR DAY BEFORE the lecture: the day the reporter's
     # 📣 My Report Plan cell should be filled in (D66's day-before cadence, kept).
     # Under D74 nothing is handed in on that date. The plan travels inside the

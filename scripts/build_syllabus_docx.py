@@ -645,11 +645,11 @@ def main():
     para(doc, " Each week you work in that week's lecture notebook during "
               "class, and you hand that same notebook in at the end of the week. "
               "This work is graded for completion, not for whether your answers "
-              "came out right and not for how your lab-meeting report went: full "
-              "credit when it arrives on time, half credit when it arrives within "
-              "seven days of the deadline. The lowest few credits are dropped "
-              "automatically. The due dates and the submission instructions are "
-              "posted on the course page.",
+              "came out right and not for anything you say in the lab meeting "
+              "that opens class: full credit when it arrives on time, half "
+              "credit when it arrives within seven days of the deadline. The "
+              "lowest few credits are dropped automatically. The due dates and "
+              "the submission instructions are posted on the course page.",
          bold_prefix="Lecture Notebooks:")
 
     # the Final Project section — QM474's text, the D53 wording, verbatim

@@ -7,8 +7,8 @@ level 3 (RAG-supported assistant). Optional, all weeks.*
 
 Help you think a research problem through by **asking you questions**, not by
 handing you answers. This role is the everyday study companion: when you are
-stuck understanding a course concept, preparing the report you will give at a
-lab meeting, or trying to sharpen a half-formed idea, it draws out your
+stuck understanding a course concept, working out a decision your own project
+has just reached, or trying to sharpen a half-formed idea, it draws out your
 reasoning the way a good tutor would. It exists so that the work stays yours.
 
 The instructor runs the Socratic investigation in class, from minute ten of
@@ -17,10 +17,10 @@ your own, on your own thinking, whenever you want it.
 
 ## Scope
 
-**In scope:** clarifying a course concept in your own words; rehearsing the
-seven-minute report you will give at a lab meeting and the questions the room
-may ask you; pressure-testing your reasoning with questions; surfacing an
-assumption you did not notice you were making.
+**In scope:** clarifying a course concept in your own words; talking through a
+decision your project has reached and the questions someone could fairly put to
+it; pressure-testing your reasoning with questions; surfacing an assumption you
+did not notice you were making.
 
 **Out of scope:** giving you the answer to a milestone task; writing any part of
 a deliverable; the specialized audits the other twelve roles perform. If your
@@ -76,10 +76,10 @@ point back to the never-delegate boundary and the ledger).
 
 ## Expected Input
 
-Paste your current thinking: the concept you are stuck on, the project decision
-you plan to report at the next lab meeting, or the reasoning you want
-questioned. Say what you are trying to figure out. The more of your own attempt
-you paste, the better the questions.
+Paste your current thinking: the concept you are stuck on, the decision your
+project has reached, or the reasoning you want questioned. Say what you are
+trying to figure out. The more of your own attempt you paste, the better the
+questions.
 
 ## Output Schema
 
@@ -131,16 +131,17 @@ model.
 3. Read the questions; answer them yourself, in writing if it helps.
 4. Verify any named concept against the course materials.
 
-This role is **optional** and available any time. It is most useful when you are
-preparing your lab-meeting report or when a concept has not clicked yet. It is
-never a substitute for doing a milestone, and the lab-meeting report itself is
-not graded, so use the tutor to think, not to perform.
+This role is **optional** and available any time. It is most useful when a
+concept has not clicked yet, or when you want your own reasoning about a project
+decision questioned before you carry it further. It is never a substitute for
+doing a milestone. Nothing here is preparation for the lab meeting either: that
+is an open round, nobody is assigned to speak and nothing said in it is graded.
+Use the tutor to think, not to perform.
 
 ## Instructor Use
 
-Not a grading input. If you read a student's **📣 My Report Plan** before class,
-the tutor's questions can show you how they are framing the decision they are
-about to report. It is also a rehearsal bench for your own minute-ten Socratic
+Not a grading input, and not connected to the lab meeting, which assigns nobody
+and collects nothing. It is a rehearsal bench for your own minute-ten Socratic
 investigation: paste the concept and see which questions it proposes, then
 decide for yourself which ones the room needs. Watch for the failure mode where
 a student has let the tutor answer for them; the ledger row and the student's

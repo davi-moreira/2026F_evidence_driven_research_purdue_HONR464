@@ -3,12 +3,14 @@
 > ### ⚠️ Retired for the Fall 2026 edition — kept for a future one
 >
 > **The Student Research Lead role does not run this semester.** Every Monday and
-> Wednesday lecture from Week 2 opens with a ten-minute **Lab Meeting** instead: one
-> student is that lecture's **reporter**, spending **seven minutes on a decision from
-> their own project and the evidence behind it**, then **three minutes of questions
-> from the room**. The reporter does not teach the lecture's concept and **the report
-> is not graded**. **The instructor leads from minute 10** and owns accuracy, the AI
-> tooling and the clock.
+> Wednesday lecture from Week 2 opens with a ten-minute **Lab Meeting** instead, and
+> it is an **open round**: the instructor asks the room how the projects are going,
+> and the room answers — what was decided since last time, what the evidence looks
+> like, where somebody is stuck. **No reporter is designated**, on any lecture. There
+> is **no slot draw** (the assignment that once named dates is withdrawn), **no
+> preparation of any kind** before class, by anyone, and **nothing said in the lab
+> meeting is graded**. **The instructor leads the lesson from minute 10** and owns
+> accuracy, the AI tooling and the clock.
 >
 > The **25% Student Research Lead** grade category retired with the role. It was
 > replaced by **Lecture Notebooks (20%)**, a completion contract: every student hands
@@ -17,7 +19,10 @@
 > **Nothing below has been removed.** This document is kept whole for a future
 > edition that reinstates the role. Where a procedure would mislead a reader today,
 > it carries a ⛔ **Retired procedure** note naming what happens instead.
-> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+> *(Rulings: `_project_docs/DECISIONS.md`, D74 and D75, 2026-08-31. D75 withdrew the
+> assigned reporter and the slot draw, and removed the injected **📣 My Report Plan**
+> cell from every notebook; the lecture's own cell is now simply
+> `### 📣 Lab Meeting`.)*
 
 **(Instructor-only; not published to students.)**
 

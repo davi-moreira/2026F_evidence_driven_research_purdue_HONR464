@@ -26,7 +26,8 @@ All four are DERIVED, never hand-written, so they cannot drift from the calendar
       Every number in its header comes from course_config.yaml's
       `lecture_notebooks:` block; every date comes from the meeting calendar.
 
-  planning/SRL_ASSIGNMENT_SCHEDULE.md            (the lab meeting, D74)
+  planning/SRL_ASSIGNMENT_SCHEDULE.md            (the lab meeting, D74; the
+      draw WITHDRAWN by D75)
       One row per lab-meeting slot: which lecture it is, which frame it runs,
       which weekly notebook carries it, and the puzzle that opens the
       instructor-led block.
@@ -37,6 +38,16 @@ All four are DERIVED, never hand-written, so they cannot drift from the calendar
       reporter does not teach the concept, and the report is not graded. The
       filename stays as it is: D74 deletes nothing, and the Brightspace kit
       points at this path.
+
+      D75 WITHDREW THE ASSIGNMENT ENTIRELY. There is no draw, no designated
+      reporter on any lecture, no assigned question or request, and nothing to
+      prepare before class. The ten-minute opening block stays as an OPEN ROUND
+      the instructor runs: the instructor asks the room how the projects are
+      going, and the room answers. Nothing said in it is graded. This page and
+      this generator are KEPT — D75 deletes nothing — and the page now opens
+      with a banner saying so, with the slot table below preserved only as the
+      record of the withdrawn draw. The per-slot puzzles stay live: each still
+      opens its lecture's instructor-led investigation block.
 
       NO STUDENT NAMES. The draw itself is FERPA-protected student data and
       lives only in the gitignored `_adm/roster/` (scripts/assign_srl_slots.py,
@@ -486,11 +497,9 @@ for all twelve, so nothing has to be edited per studio.
 #: the generated page and in course_config.yaml, so they cannot drift from here.
 LECTURE_NOTEBOOK_INSTRUCTION = """\
 **What this assignment collects.** Your week's lecture notebook — the same \
-`nbNN` you opened in class, with your own work in it: the **📣 My Report Plan** \
-cell wherever the notebook has one (lines 1–4 when the lab meeting is yours, \
-line 5 when it is not; Week 1 and the async module carry no such cell), the \
-in-class moves, the exercises you worked, and one **📒 AI Research Ledger** row \
-for each lecture. Open the notebook from its badge on the course website, then \
+`nbNN` you opened in class, with your own work in it: the in-class moves, the \
+exercises you worked, and one **📒 AI Research Ledger** row for each lecture. \
+Open the notebook from its badge on the course website, then \
 **File → Save a copy in Drive** so the copy is yours, and finish whatever class \
 left open before you hand it in.
 
@@ -504,8 +513,8 @@ own words, keep every question in order, and add a ledger row for anything you \
 delegated to an AI tool.
 
 **How it is graded.** Completion only: worked through, handed in, and on time, or \
-not. Your answers are never graded right or wrong here, and how your lab meeting \
-went does not enter this grade — the report itself carries no score. A notebook \
+not. Your answers are never graded right or wrong here, and nothing you say in \
+the lab meeting that opens class enters this grade. A notebook \
 up to seven days late earns half credit; after that it earns none. Your lowest \
 few lecture-notebook credits are dropped automatically, so one bad week does not \
 need an email."""
@@ -624,9 +633,9 @@ calendar forces it — the term ends first, so the last notebook closes on the l
 day of class.
 
 It is graded **by completion** inside **Lecture Notebooks ({weight:g}%)**: worked
-through and handed in, or not. Nothing in it is scored right or wrong, and how
-your lab-meeting report went never reaches this grade, because the report carries
-no score at all (D74).
+through and handed in, or not. Nothing in it is scored right or wrong, and nothing
+you say in the ten-minute lab meeting that opens class ever reaches this grade,
+because nothing in that round is graded at all (D74, D75).
 
 There are **{baseline}** of them and the **{drops} lowest credits are dropped
 automatically** (⌈0.10 × N⌉), so {kept} valid, on-time submissions earn the full
@@ -674,32 +683,40 @@ One assignment per week, each collecting that week's notebook.
 
 
 # ---------------------------------------------------------------------------
-# 4. lab-meeting reporter slots (D74; the Student Research Lead role retired)
+# 4. lab-meeting slots (D74; the draw and the reporter withdrawn by D75)
 
-#: The fifty-minute frames, restated by D74. Both still sum to 50, and section
-#: boundaries 3 and 4 are untouched (31–43 / 43–50 Monday, 30–42 / 42–50
-#: Wednesday), so D22's and D34's later-block rulings stand. What changed is the
-#: opener: the lab meeting takes the first ten minutes, and the 🧩 Research
-#: Puzzle folds into the front of the investigation block, run by the instructor.
+#: The fifty-minute frames, restated by D74 and untouched by D75. Both still sum
+#: to 50, and section boundaries 3 and 4 are untouched (31–43 / 43–50 Monday,
+#: 30–42 / 42–50 Wednesday), so D22's and D34's later-block rulings stand. What
+#: changed is the opener: the lab meeting takes the first ten minutes, and the
+#: 🧩 Research Puzzle folds into the front of the investigation block, run by
+#: the instructor. D75 changed only WHO speaks in those ten minutes — no one is
+#: assigned, and the instructor runs an open round with the whole room.
 FRAME = {
     "Mon": ("Monday · guided investigation",
-            "0–10 lab meeting: the reporter and the room · "
+            "0–10 lab meeting: the instructor's open round · "
             "10–31 guided AI investigation (instructor, opening on the puzzle) · "
             "31–43 verification and formalization · 43–50 decision and defense"),
     "Wed": ("Wednesday · applied AI laboratory",
-            "0–10 lab meeting: the reporter and the room · "
+            "0–10 lab meeting: the instructor's open round · "
             "10–30 applied AI laboratory · 30–38 peer defense · "
             "38–42 synthesis and accuracy lock · 42–50 project transfer"),
 }
 
 
 def lab_meeting_table(meetings: list[dict]) -> str:
-    """The reporter slot schedule (written to SRL_OUT, whose name is kept).
+    """The slot schedule (written to SRL_OUT, whose name is kept).
 
     D74 retired the Student Research Lead ROLE and kept everything else: the
     same 25 Monday/Wednesday slots, drawn the same way, now name each lecture's
     REPORTER. The `srl_slot` / `srl_focus` columns of the calendar are read
     unchanged, because the draw carried over unchanged.
+
+    D75 then withdrew the assignment: no slot is given to anyone, so this page
+    is emitted with a banner saying so and the table below it stands as the
+    record of the withdrawn draw. The function, the file and the calendar
+    columns are all KEPT — D75 deletes nothing — and the per-slot puzzles are
+    still live, because each opens its lecture's instructor-led block.
     """
     slots = []
     for r in meetings:
@@ -714,9 +731,9 @@ def lab_meeting_table(meetings: list[dict]) -> str:
 
     # The notebook that carries each lecture, and the Sunday it is handed in.
     # Until D74 this column held a PREPARATION deadline — the filled notebook
-    # 11:59 PM the calendar day before the lecture (D66). There is no
-    # preparation submission any more: the 📣 My Report Plan cell is filled in
-    # before class, and the notebook is collected weekly with everyone else's.
+    # 11:59 PM the calendar day before the lecture (D66). D74 dropped that
+    # deadline, and D75 dropped preparation altogether: nobody prepares anything
+    # for the lab meeting, and the notebook is collected weekly like every other.
     due_of = {rec["nb"]: rec["due"] for rec in notebook_submissions(meetings)}
 
     lines = ["| Slot | Meeting | Lecture date | Notebook · due (11:59 PM) "
@@ -735,11 +752,12 @@ def lab_meeting_table(meetings: list[dict]) -> str:
             f"| **{slot:02d}** | {r['meeting']} | {pretty(r['date'], r['day'])} "
             f"| {nb} | {week} | {studio} | {title} | {name} |")
 
-    puzzles = ["\n---\n\n## The puzzle for each slot\n",
-               "Kept in full, and re-owned. Each puzzle below opens the "
+    puzzles = ["\n---\n\n## The puzzle for each lecture — still live\n",
+               "Kept in full, and re-owned. This section is the one part of the "
+               "page D75 did not withdraw. Each puzzle below opens the "
                "instructor-led investigation block that follows the lab "
-               "meeting; the reporter's ten minutes come from their own "
-               "project instead.\n"]
+               "meeting; the ten minutes before it are the open round, which "
+               "has no script, no assigned speaker and no preparation.\n"]
     for slot, r in slots:
         focus = re.sub(r"\s+", " ", (r.get("srl_focus") or "").strip())
         title = re.sub(r"\s+", " ", r["title"]).strip()
@@ -747,49 +765,83 @@ def lab_meeting_table(meetings: list[dict]) -> str:
                        f"{title}\n\n> {focus}\n")
 
     weight = _config()["assessment"]["lecture_notebooks"]
-    head = f"""# Lab Meeting — Reporter Slot Schedule
+    head = f"""# Lab Meeting — Slot Schedule *(the draw is withdrawn)*
 
 *Generated by `scripts/build_participation_schedules.py`. Do not hand-edit.*
 
+> **⚠️ D75 withdrew the slot draw. Nobody is assigned to any lecture.**
+>
+> The ten-minute lab meeting that opens every Monday and Wednesday lecture
+> **stays**. The assignment behind it does not. For this edition there is **no
+> draw**, **no designated reporter on any lecture**, **no assigned question or
+> request**, and **no preparation of any kind before class**, by anyone. The
+> **📣 My Report Plan** cell has been removed from every notebook.
+>
+> **What the ten minutes are now.** The instructor asks the room how the projects
+> are going, and the room answers: what you decided since last time, what your
+> evidence looks like, where you are stuck. From minute 10 the instructor leads
+> the lesson, exactly as D74 already ruled. **Nothing said in the lab meeting is
+> graded.**
+>
+> **Everything below this banner is preserved only as the record of the withdrawn
+> draw** — the slot structure, the frames, and the notebook column — because D75
+> deletes nothing and the structure is worth reusing in a future edition. Read it
+> as history, not as an assignment. The one exception is the puzzle list at the
+> end: those are still live, and each still opens its lecture's instructor-led
+> block.
+
+---
+
+## The withdrawn draw, kept as a record
+
 **{len(slots)} lab meetings**, one opening every Monday and Wednesday lecture from
 Week 2 onward. Week 1's two lectures carry no reporter, because the format is
-modeled there first. Slots are drawn **randomly at the start of the semester**,
+modeled there first. Slots were drawn **randomly at the start of the semester**,
 with no rotation and no seats (D22), and **D74 carried that draw over unchanged**:
-the same {len(slots)} slots now name each lecture's **reporter** rather than its
-lead, and there was no re-draw.
+the same {len(slots)} slots named each lecture's **reporter** rather than its
+lead, and there was no re-draw. **D75 then withdrew the assignment entirely**, so
+no slot in the table below is given to anyone.
 
-**What the ten minutes are.** The reporter spends **seven minutes** on one
-decision from **their own project** and the evidence behind it, then takes
-**three minutes** of questions from the room. The reporter does not teach the
-lecture's concept, and the report is **not graded**. The instructor leads from
-minute 10 and owns accuracy, the AI tooling and the clock (D74).
+**What the ten minutes were, under D74.** The reporter spent **seven minutes** on
+one decision from **their own project** and the evidence behind it, then took
+**three minutes** of questions from the room. The reporter did not teach the
+lecture's concept, and the report was **not graded**. The instructor led from
+minute 10 and owned accuracy, the AI tooling and the clock (D74). **D75 kept the
+instructor's half of that and dropped the reporter's:** the same ten minutes are
+now an open round with nobody assigned to it.
 
-**This table carries no names.** The draw is FERPA-protected student data: it is
+**This table carries no names.** The draw is FERPA-protected student data: it was
 made by `scripts/assign_srl_slots.py` and written only into the gitignored
 `_adm/roster/`, and the per-slot messages come from
-`scripts/build_srl_packet.py`. What is safe to keep here is the slot structure,
-which is also the part that survives into the next edition.
+`scripts/build_srl_packet.py`. Both scripts and the drawn roster are **kept on
+disk and unapplied** (D75, like D74 before it, deletes nothing). What is safe to
+keep here is the slot structure, which is also the part that survives into the
+next edition.
 
-**What everyone owes.** Nothing is submitted the night before. You fill in the
-**📣 My Report Plan** cell of that week's notebook **before class** — lines 1–4
-when the lab meeting is yours, line 5 when it is not, so the whole room arrives
-with a question — and the notebook itself is handed in **once a week**, on the
+**What everyone owes — nothing, since D75.** You prepare nothing for the lab
+meeting and submit nothing the night before; you arrive ready to say how your
+project is going. Your week's notebook is still handed in **once a week**, on the
 Sunday that ends the studio week. Dates are in
 [`LECTURE_NOTEBOOK_SCHEDULE.md`](LECTURE_NOTEBOOK_SCHEDULE.md), and the "Notebook
-· due" column below repeats the one that covers each slot.
+· due" column below repeats the one that covers each slot. What D74 asked for, and
+D75 withdrew, was this: *"You fill in the 📣 My Report Plan cell of that week's
+notebook before class — lines 1–4 when the lab meeting is yours, line 5 when it is
+not, so the whole room arrives with a question."* That cell no longer exists in
+any notebook.
 
-**Weight.** The report itself carries **none**. D74 retired the **25% Student
+**Weight.** The lab meeting carries **none**. D74 retired the **25% Student
 Research Lead** category and opened **Lecture Notebooks ({weight}%)** in its
 place, graded by completion. The SRL suite in `project/srl/` — the handbook, the
 rubric, the Socratic question bank, the AI integration guide, the prep template,
 the peer feedback form and both protocols, with the handout PDFs
 `scripts/build_handout_pdfs.py` builds from them — is **kept on disk for a future
-edition and is not applied to this one** (D74 Ruling 5, which deletes nothing).
-The per-lecture questions guide is kept in full and re-owned to the instructor.
+edition and is not applied to this one** (D74 Ruling 5 and D75, neither of which
+deletes anything). The per-lecture questions guide is kept in full and re-owned to
+the instructor.
 
 ---
 
-## The slots
+## The slots *(the withdrawn draw)*
 
 """
     return head + "\n".join(lines) + "\n" + "\n".join(puzzles)

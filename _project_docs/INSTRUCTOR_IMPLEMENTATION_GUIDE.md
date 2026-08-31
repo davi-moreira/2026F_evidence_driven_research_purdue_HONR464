@@ -4,7 +4,7 @@
 design rationale. For **why** the course is shaped this way, read
 `planning/COURSE_MASTER_PLAN.md` and `_project_docs/DECISIONS.md` (D17–D21 for
 the v2 build; **D74** for the current class format, the minute frames and the
-weights).
+weights; **D75** for the lab meeting as it actually runs, with nobody assigned).
 For the machine-readable spine (dates, weights, milestone IDs), read
 `course_config.yaml`. On any conflict, dates defer to
 `planning/CALENDAR_BACKBONE.csv` and intent defers to the master plan.
@@ -12,8 +12,9 @@ For the machine-readable spine (dates, weights, milestone IDs), read
 The course is a 6-student honors seminar meeting **Mon/Wed/Fri, 50 minutes**,
 across **43 meetings** (41 in person + 2 async). Individual projects are the
 default; students may form a project group with instructor approval before
-shared work begins. Since D74 the instructor's job is to **chair** the ten-minute
-lab meeting that opens each Mon/Wed lecture, **lead** the investigation from
+shared work begins. Since D74, amended by D75, your job is to **open** each
+Mon/Wed lecture with the ten-minute lab meeting, asking the room how the projects
+are going with nobody assigned to present, **lead** the investigation from
 minute 10 with accuracy, the AI tooling and the clock in your hands, **run** the
 Friday studios, and **grade the chain** on a fast, predictable cadence.
 
@@ -27,14 +28,15 @@ enforced by the session-guide generator and printed in each meeting's guide.
 ### Monday — lab meeting, then guided investigation (10 / 21 / 12 / 7)
 
 The lecture opens with the ten-minute **lab meeting**; from minute 10 the room is
-yours (D74).
+yours (D74, amended D75).
 
-- **0–10 — lab meeting.** One student is today's **reporter**: seven minutes on a
-  decision their own project has actually reached and the evidence behind it,
-  then three minutes of questions from the room. Keep the clock. Do not let the
-  report become a lesson on the day's concept, and do not score it. If the
-  questions stall, put the first one yourself and hand it straight back to the
-  room.
+- **0–10 — lab meeting.** An open round: ask the room how the projects are going.
+  What did you decide since last time, what does the evidence behind it look
+  like, where are you stuck. **Nobody is assigned to present and nothing was
+  prepared**, so you carry the round: ask, follow up, move on before anyone
+  stalls, and try to reach everyone in the room across the ten minutes rather
+  than everything from one person. Keep the clock. Do not let it become a lesson
+  on the day's concept, and score nothing.
 - **10–31 — guided AI investigation.** Yours. Open the 🧩 Research Puzzle, make
   everyone commit an answer in writing before any AI opens, then steer the
   investigation and monitor the AI output for factual errors as it appears.
@@ -46,7 +48,7 @@ yours (D74).
 
 ### Wednesday — lab meeting, then applied AI laboratory (10 / 20 / 12 / 8)
 
-- **0–10 — lab meeting** (the day's reporter, then the room's questions) ·
+- **0–10 — lab meeting** (the same open round on the projects, nobody assigned) ·
   **10–30 — retrieval challenge and applied AI laboratory** (yours; open with the
   spoken retrieval drill) · **30–38 — peer defense and adversarial questioning**
   (you keep the questions coming and the answers honest) · **38–42 — synthesis +
@@ -80,8 +82,10 @@ absorbed those ten minutes. The banks in `_quizzes/2026Fall/weekly/` and the
 `scripts/audit_answer_length.py` gate are kept for a future edition; never delete
 them, and do not print or grade anything from them this term.
 
-**Week 1 is instructor-led** (both lectures) and carries no reporter; it models
-the format before the lab meetings begin in Week 2.
+**Week 1 is instructor-led** (both lectures) and holds no lab meeting of its
+own: there are no project decisions to talk about yet. Use its opening minutes to
+model what the round sounds like, from your own chair, so Week 2 can start
+without explaining itself.
 
 ### The async module
 
@@ -98,66 +102,70 @@ Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
 
 ---
 
-## 2. The lab meeting pipeline (D74)
+## 2. The lab meeting (D74, amended D75)
 
-**Assign the reporter slots first — randomly.** There are **25 reporting
-lectures** (all Mon/Wed except Week 1's two launch meetings) and 6 students, so
-**each student reports 4 or 5 times** — 25 does not divide by 6, and which
-student carries the extra slot was drawn with the rest of the assignment. Nothing
-about the report is scored, so an uneven count cannot affect a grade. **D74
-carries the D69/D71 draw over unchanged: no re-draw.** Slot 1 is **meeting 4
-(Mon Aug 31**, nb02 Lecture 1). The slot-to-meeting mapping and the
-Monday/Wednesday format live in the schedule data
-(`scripts/schedule_data/part1–4.py`, in the fields whose keys are still
-`srl_slot` + `srl_focus` for machine continuity) and surface on the public
-**Schedule** page; students read their dates there.
+**There is nothing to assign and nothing to prepare.** No student is designated
+to present, on any lecture. **D75 withdrew the D69/D71 slot draw for this
+edition**, so there is no draw to run, no packet to build, no dates to announce
+and no swap rule to administer. Nothing about the lab meeting is prepared before
+class, by anyone, including you. The ten minutes reach every student every
+lecture instead of one student every fourth lecture, and there is no slot on a
+calendar for anyone to dread.
 
-**What the reporter brings.** Seven minutes on a decision **their own project**
-has actually reached since the last lab meeting, the evidence behind it, and the
-part they are still unsure about; then three minutes of questions from the room.
-They are the only person present who has been inside that project, so there is no
-concept they can get wrong in front of peers. This is also the rehearsal for the
-poster conversation the Expo grades in November.
+**How to run the ten minutes.** Ask the room how the projects are going, and let
+the room answer. Three things are worth having in the air: what somebody decided
+since the last meeting, what the evidence behind that decision looks like, and
+where somebody is stuck. Follow up on the answer that is doing the most work,
+move on before anyone stalls, and aim to hear from everyone across a week rather
+than everything from one person in one day. If the room goes quiet, name a
+concrete thing you saw in a studio or a milestone and ask its author what
+happened next. Keep the clock: at minute 10 you take the lesson (§1), and on
+Wednesdays you still run the 38–42 accuracy lock.
 
-**The cadence** (per reporter):
+**Two things not to do.** Do not let the round become a lesson on the day's
+concept, and do not score it. Say out loud in Week 1, and again at the first lab
+meeting, that nothing said here is graded: the fear this format exists to remove
+comes back the moment the room suspects it is being marked.
 
-1. **Before class** — the reporter fills lines 1–4 of the student-visible
-   `### 📣 My Report Plan` cell that sits beside the `### 📣 Lab Meeting:
-   Today's Reporter` brief opening their lecture (right after `# Lecture N`).
-   Everyone else fills line 5, so the whole room arrives with a question. There
-   is no day-before preparation submission and no overnight review to return:
-   both retired with the role, and the notebook itself is collected at the end of
-   the week (§3).
-2. **Day of** — you chair the ten minutes and keep the clock, then lead from
-   minute 10 (§1) and on Wednesdays run the 38–42 accuracy lock.
+**Nothing to grade live.** What is collected is the **weekly lecture notebook**,
+from every student, on completion (§3). The lab meeting itself carries no score
+and produces no artifact.
 
-**Nothing to grade live.** The report carries no score. What is collected is the
-**weekly lecture notebook**, from every student, on completion (§3). Say this out
-loud in Week 1 and again at the first lab meeting: the fear this format was
-designed to remove comes back the moment the room suspects the report is being
-marked.
-
-**The questions guide is yours now.** Each lecture's three questions live in the
+**The questions guide is yours.** Each lecture's three questions live in the
 notebook's `### 🔎 Questions to Keep You Thinking` cell, every one of them kept
 verbatim from the earlier design, each with its `Ask after:` moment and its
-listen-for hint. Open each item only when its moment is reached.
+listen-for hint. Open each item only when its moment is reached. The
+`### 📣 Lab Meeting` cell that opens each lecture in the notebook states the
+same contract the room is living under: nobody assigned, nothing prepared,
+nothing graded.
 
-**Retired in place — delete nothing (D74 Ruling 5).** The Student Research Lead
-grade category and the live nine-row rubric are **not applied this edition**, and
-no SRL file is removed. `project/srl/` (handbook, rubric, Socratic question bank,
-AI integration guide, prep template, peer feedback form, submission instructions,
-absent-lead and instructor-intervention protocols), `scripts/assign_srl_slots.py`
-and `scripts/build_srl_packet.py` all stay on disk for a future edition, exactly
-as D58 kept the quiz banks. The rubric's nine criteria (conceptual correctness,
-quality of Socratic questions, exposing assumptions, productive use of AI,
-interrogating AI output, inclusion of classmates, time management, connection to
-research decisions, and handling incorrect or uncertain answers) and the
-classmate feedback form (`project/srl/srl_peer_feedback_form.md`) are intact on
-disk for whoever brings the role back. Do not score anything on
-`project/srl/srl_rubric.md` this term. The intervention protocol in
-`project/srl/srl_handbook.md` ("How the instructor will step in") still reads
-usefully for the moments a peer discussion needs a hand, but the room is yours
-from minute 10 and needs no handing back.
+**⚠ If the slot announcement already went out.** The Week-1 announcement
+`_announcements/03_srl_slots_and_logistics.md` told students they hold slots on
+named dates. **Those slots are withdrawn, and students need to hear it from you**
+on the course platform: the lab meeting stays, no one is assigned, nothing is
+prepared, and nothing about it is graded. The repository cannot deliver that
+message.
+
+**Retired in place — delete nothing (D74 Ruling 5, D75 again).** The Student
+Research Lead grade category and the live nine-row rubric are **not applied this
+edition**, and neither is the reporter assignment D74 kept from D69/D71. No file
+is removed. `project/srl/` (handbook, rubric, Socratic question bank, AI
+integration guide, prep template, peer feedback form, submission instructions,
+absent-lead and instructor-intervention protocols), `scripts/assign_srl_slots.py`,
+`scripts/build_srl_packet.py`, the drawn roster under `_adm/roster/` and
+`scripts/nbbuild.py`'s `REPORT_PLAN` constant (gated off by `INJECT_REPORT_PLAN =
+False`) all stay on disk for a future edition, exactly as D58 kept the quiz banks.
+The rubric's nine criteria (conceptual correctness, quality of Socratic
+questions, exposing assumptions, productive use of AI, interrogating AI output,
+inclusion of classmates, time management, connection to research decisions, and
+handling incorrect or uncertain answers) and the classmate feedback form
+(`project/srl/srl_peer_feedback_form.md`) are intact on disk for whoever brings
+the role back. Do not score anything on `project/srl/srl_rubric.md` this term.
+The intervention protocol in `project/srl/srl_handbook.md` ("How the instructor
+will step in") still reads usefully for the moments a peer discussion needs a
+hand, but the room is yours from minute 10 and needs no handing back.
+Reinstating the reporter model costs one flag (`INJECT_REPORT_PLAN = True`) and
+one draw.
 
 ---
 

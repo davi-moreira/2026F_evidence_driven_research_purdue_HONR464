@@ -1,5 +1,33 @@
 #!/usr/bin/env python3
-"""Build the lab-meeting distribution packet for the semester.
+"""Build the lab-meeting distribution packet for the semester. WITHDRAWN by D75.
+
+WITHDRAWN BY D75 (2026-08-31), KEPT ON DISK
+-------------------------------------------
+D74 made ONE assigned student the reporter at every Mon/Wed lab meeting, and
+this script told each of them so. D75 withdraws that assignment entirely. The
+ten-minute opening block stays; the assignment does not. NO student is
+designated, on any lecture, ever. There is no draw, no assigned question or
+request, and no preparation of any kind before class by anybody. The instructor
+asks the room how the projects are going and the room answers, and from minute
+10 the instructor leads the lesson. Nothing said in the lab meeting is graded.
+
+With nobody assigned there is no packet to distribute, so this script does not
+run. `PACKET_ENABLED = False` below is the guard and `main()` stops on it.
+
+**Whatever this script wrote before is now STALE AND RETIRED**: the slot briefs
+under `_adm/roster/srl_packet/`, the per-student summaries beside them, and the
+class announcement at `_announcements/03_srl_slots_and_logistics.md` all name
+slots nobody holds, dates nobody is bound by, and a 📣 My Report Plan cell that
+D75 removed from every notebook. Those files are kept on file, exactly as D58
+kept the quiz banks, and none of them may be sent to anybody.
+
+Every generator below is KEPT unchanged for a future edition that wants assigned
+reporters back: set `PACKET_ENABLED = True` here, re-enable the draw in
+`scripts/assign_srl_slots.py`, and reword the generated prose, which still
+describes the withdrawn D74 arrangement.
+
+The rest of this docstring describes the packet as it stood under D74, preserved
+for that future edition.
 
 `assign_srl_slots.py` draws who reports at which lecture. This script turns that
 draw into the things Davi actually sends: one class announcement, one reporter
@@ -62,6 +90,14 @@ OUT = ROOT / "_adm" / "roster" / "srl_packet"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 SRL_DIR = f"https://github.com/{nbmap.REPO_SLUG}/tree/main/project/srl"
 
+#: D75 (2026-08-31) withdrew the reporter assignment, so there is nobody to send
+#: a packet to. This flag is the guard and `main()` stops on it, so a run can
+#: never quietly refresh an announcement that names slots no student holds.
+#: Everything below is kept working and unchanged for a future edition that
+#: wants assigned reporters back: set this to True, turn the draw back on in
+#: `scripts/assign_srl_slots.py`, and reword the D74 prose the builders emit.
+PACKET_ENABLED = False
+
 
 def srl_file(name: str) -> str:
     return f"https://github.com/{nbmap.REPO_SLUG}/blob/main/project/srl/{name}"
@@ -71,6 +107,11 @@ def srl_file(name: str) -> str:
 # notebooks use. Both still sum to 50: Monday 10/21/12/7, Wednesday 10/20/12/8,
 # with the Wednesday third block still split 30-38 / 38-42 as D34 set it. The
 # lab meeting takes the opener; everything from minute 10 is the instructor's.
+# The minute frames are unchanged by D75 and remain correct. What is stale is
+# the "yours" wording in the 0-10 row and every reporter sentence built from it:
+# D75 withdrew the assignment, so those ten minutes belong to the whole room and
+# to nobody in particular. Kept verbatim, unreachable while PACKET_ENABLED is
+# False, and to be reworded by any edition that turns the packet back on.
 FRAMES = {
     "Mon": {
         "name": "Monday — the guided investigation",
@@ -631,6 +672,33 @@ Prof. Moreira
 
 
 def main() -> int:
+    if not PACKET_ENABLED:
+        print(
+            "D75 (2026-08-31) withdrew the lab-meeting reporter assignment, so\n"
+            "there is no packet to build.\n"
+            "\n"
+            "The ten-minute lab meeting still opens every Mon/Wed lecture, but\n"
+            "NO student is designated as its reporter, nothing is prepared\n"
+            "before class by anybody, and nothing said there is graded: the\n"
+            "instructor asks the room how the projects are going and the room\n"
+            "answers, and from minute 10 the instructor leads the lesson.\n"
+            "\n"
+            "Nothing was written. What is already on disk from the last run is\n"
+            "STALE AND RETIRED: the slot briefs and per-student summaries under\n"
+            "_adm/roster/srl_packet/, and the announcement at\n"
+            "_announcements/03_srl_slots_and_logistics.md, name slots nobody\n"
+            "holds, dates nobody is bound by, and a report plan cell that no\n"
+            "longer exists in any notebook. They are kept on file only. Do not\n"
+            "post or send any of them.\n"
+            "\n"
+            "Every generator is preserved below this guard, unchanged. To build\n"
+            "the packet again for a future edition that wants assigned reporters\n"
+            "back, set PACKET_ENABLED = True at the top of this file, re-enable\n"
+            "the draw in scripts/assign_srl_slots.py, and reword the D74 prose\n"
+            "the builders emit."
+        )
+        return 0
+
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--slot", type=int,
                     help="build only this slot's reporter message")

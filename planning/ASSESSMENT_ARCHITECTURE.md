@@ -16,7 +16,8 @@ participation **2026-07-29 (D31)**, revised by **D51 (2026-08-22)**, clarified
 by **D52 (2026-08-23)**, given their published syllabus wording by **D53
 (2026-08-23)**, turned into a completion contract for Participation by **D57
 (2026-08-23)**, amended by **D58 (2026-08-23)**, amended again by **D61
-(2026-08-23)**, and last amended by **D74 (2026-08-31)**. D52 supersedes D51's
+(2026-08-23)**, amended by **D74 (2026-08-31)**, and last amended by **D75
+(2026-08-31)**, which changed no weight at all. D52 supersedes D51's
 split between Final Project Milestones and Final Project. All project grading now
 lives in one 55% Final Project category, using QM474's exact five component items
 under names that were never renamed. D53 then replaced the syllabus prose for
@@ -31,19 +32,27 @@ retired quiz category, and the Friday studio frame.
 
 **D74 (2026-08-31) is the current ruling on the weights.** The **Student Research
 Lead category is retired for this edition**, and with it the live nine-row rubric.
-Every Mon/Wed lecture from Week 2 now opens with a ten-minute **lab meeting** in
-which one student, that lecture's **reporter**, spends seven minutes on a decision
-from their own project and three minutes taking the room's questions; the report
-is **not graded** and the instructor leads from minute 10. In the retired
-category's place stands **Lecture Notebooks at 20%**, the course's **third
-undivided completion contract**: the notebook `nbNN` worked in class is now
-collected once a week per student and graded on completion only. The five points
-that remain — `1 + 9 + 15 + 20 = 45` — are forced inside the Final Project, which
-rises from **50% to 55%** with **Milestone Deliverables rising from 15 to 20
-course points**. No Final Project component was renamed, and no scoring rule
-inside a component changed. **Nothing was deleted:** every SRL artefact stays on
-disk for a future edition, exactly as D58 kept the quiz banks (see "SRL grading
-pipeline — retired for this edition" at the end of this file).
+Every Mon/Wed lecture from Week 2 now opens with a ten-minute **lab meeting**, and
+**D75 (2026-08-31) is the current ruling on what happens inside it**: the
+instructor asks the room how the projects are going, and the room answers — what
+was decided since last time, what the evidence looks like, where somebody is
+stuck. **Nothing said there is graded**, and the instructor leads the lesson from
+minute 10. D74 had filled those same ten minutes with a designated **reporter**
+(seven minutes on a decision from their own project, three minutes of questions
+from the room); **D75 withdrew the assignment entirely** — no reporter on any
+lecture, no slot draw, no assigned question, and no preparation of any kind before
+class, by anyone. In the retired category's place stands **Lecture Notebooks at
+20%**, the course's **third undivided completion contract**: the notebook `nbNN`
+worked in class is now collected once a week per student and graded on completion
+only. The five points that remain — `1 + 9 + 15 + 20 = 45` — are forced inside the
+Final Project, which rises from **50% to 55%** with **Milestone Deliverables
+rising from 15 to 20 course points**. No Final Project component was renamed, and
+no scoring rule inside a component changed. **D75 moved no weight, no formula, no
+`N` and no drop count** — it changed only how the ten-minute opener is populated.
+**Nothing was deleted:** every SRL artefact stays on disk for a future edition,
+exactly as D58 kept the quiz banks (see "SRL grading pipeline — retired for this
+edition" at the end of this file), and D75 added the drawn roster and the
+notebook generator's report-plan constant to that kept-on-disk list.
 
 This file, `course_config.yaml assessment:`, and the syllabus Assessments table
 must match exactly.
@@ -66,13 +75,16 @@ deleted — see "Quizzes — retired for this edition" below.
 
 **No Student Research Lead category.** D74 retired it for this edition: no live
 lead is scored, and the nine-row rubric is not applied. The lecture opener is now
-the ungraded ten-minute lab meeting. All of `project/srl/` — handbook, rubric,
-Socratic question bank, AI integration guide, prep template, peer feedback form,
-submission instructions, absent-lead and instructor-intervention protocols — plus
-`scripts/assign_srl_slots.py` and `scripts/build_srl_packet.py` are kept for a
-future edition and are never deleted. The per-lecture questions guide is kept in
-full and re-owned to the instructor. See "SRL grading pipeline — retired for this
-edition" below.
+the ungraded ten-minute lab meeting, which since **D75** carries no assignment at
+all — no reporter, no draw, no assigned question, no preparation. All of
+`project/srl/` — handbook, rubric, Socratic question bank, AI integration guide,
+prep template, peer feedback form, submission instructions, absent-lead and
+instructor-intervention protocols — plus `scripts/assign_srl_slots.py`,
+`scripts/build_srl_packet.py`, the drawn roster in `_adm/roster/`, and
+`scripts/nbbuild.py`'s `REPORT_PLAN` constant (now gated by
+`INJECT_REPORT_PLAN = False`) are kept for a future edition and are never
+deleted. The per-lecture questions guide is kept in full and re-owned to the
+instructor. See "SRL grading pipeline — retired for this edition" below.
 
 ## QM474 authority and the five Final Project items
 
@@ -374,11 +386,22 @@ lecture notebook points = 20.0 × (sum of the highest N − d credits) / (N − 
 **Completion means completion.** A notebook earns its credit when it has been
 worked through and handed in. It is never scored on whether the answers came out
 right, never scored on the quality of the reasoning inside it, and **never scored
-on how that week's live lab-meeting report went** — the report carries no grade at
-all. The submission covers the whole week's work in that notebook: the
-`📣 My Report Plan` cell (lines 1–4 when the lab-meeting slot is yours, line 5
-otherwise, so the whole room arrives with a question), the seven in-class moves,
-and the `📒` AI Research Ledger row for each lecture.
+on anything said in that week's lab meeting** — the lab meeting carries no grade
+at all. The submission covers the whole week's work in that notebook: **the seven
+in-class moves and the `📒` AI Research Ledger row for each lecture**. That is the
+whole content list; it names no lab-meeting cell.
+
+> **Amended by D75 (2026-08-31).** This list carried a third item until D75: the
+> injected `📣 My Report Plan` cell, filled lines 1–4 when the lab-meeting slot was
+> yours and line 5 otherwise, so the whole room arrived with a question. **That
+> cell no longer exists.** D75 withdrew the reporter assignment, and
+> `scripts/nbbuild.py` stops injecting the cell (`INJECT_REPORT_PLAN = False`), so
+> it can no longer be part of what is collected — nothing about the lab meeting is
+> prepared, by anyone. The `REPORT_PLAN` constant stays in the script, unapplied,
+> for a future edition. **Every number in this contract is untouched:** `N = 16`,
+> `d = 2`, the credit rule, the Sunday rule with D74a's Fri Sep 4 Week-1 override
+> and the Fri Dec 11 Week-16 close, and the `20.0 × …` formula are exactly as D74
+> set them.
 
 This is **not participation**. It has its own N, its own drop allowance and its
 own formula, it never joins the participation credit pool, and it never carries
@@ -445,8 +468,8 @@ category is never permission to delete a quiz file or a quiz script.
 - **D74 stopped paying for a performance and started paying for the work.** The
   25% Student Research Lead category is retired for this edition. Twenty of its
   points became **Lecture Notebooks**, a completion contract over the sixteen
-  notebooks every student already works in class; the live lab-meeting report that
-  replaced the lead carries **no grade at all**. This is the third completion
+  notebooks every student already works in class; the lab meeting that replaced
+  the lead carries **no grade at all**. This is the third completion
   contract in a course that now grades three kinds of steady effort by completion —
   showing up to the shared instruments (9%), practising the book (15%), and doing
   the weekly lab work (20%) — and reserves judgment-based scoring for the project
@@ -457,6 +480,12 @@ category is never permission to delete a quiz file or a quiz script.
   component the notebooks feed most directly, so the course's largest single
   weight is still the sixteen-step chain that builds the research. The Final
   Project as a whole rises 50% → 55%.
+- **D75 moved nothing in this table.** Withdrawing the reporter assignment did not
+  touch a weight, a formula, an `N`, a drop count or a scoring rule; the four
+  completion and project categories stand exactly as D74 left them. It is recorded
+  here only because it is the reason the Lecture Notebooks content list no longer
+  names a lab-meeting cell: the graded thing was never the report, and now there
+  is no report to not grade.
 
 ## Rubric DNA — five virtues, one menu
 
@@ -496,8 +525,9 @@ teeth behind the course's discipline:
 - **SRL live cap — not applied this edition (D74), kept for a future one.**
   Presenting an AI answer as settled without verifying it capped SRL rubric row 4
   (Productive use of AI) at Beginning (`srl_rubric.md`). The rubric is not applied
-  this edition, so the cap has nothing to bite on: the lab-meeting report is
-  ungraded. The rule and the rubric stay on disk unchanged. The discipline itself
+  this edition, so the cap has nothing to bite on: nothing said in the lab meeting
+  is graded, and since D75 nobody is even assigned to speak in it. The rule and
+  the rubric stay on disk unchanged. The discipline itself
   does not lapse — an unverified AI answer presented as settled still meets the
   evidence-integrity and verification caps above wherever it reaches a graded
   deliverable, and the instructor still corrects it live under the accuracy lock.
@@ -548,34 +578,76 @@ board.
 - **Reproduction sign-off** — at **M16**, a classmate attests whether the peer's
   headline number reproduces from the package alone.
 
-## The lab meeting — ungraded, and what it replaced (D74)
+## The lab meeting — ungraded, and what it replaced (D74, amended D75)
 
-Every Mon/Wed lecture from Week 2 opens with a **ten-minute lab meeting**. One
-student is that lecture's **reporter**: seven minutes on a decision from their own
-project and the evidence behind it, then three minutes of questions from the room.
-The reporter does not teach the lecture's concept, and **the instructor leads from
-minute 10**, owning accuracy, the AI tooling and the clock.
+Every Mon/Wed lecture from Week 2 opens with a **ten-minute lab meeting**. Since
+**D75** it is an **open round**: the instructor asks the room how the projects are
+going, and the room answers — what was decided since last time, what the evidence
+looks like, where somebody is stuck. **Nobody is designated to present, on any
+lecture. Nothing is prepared in advance, by anyone.** From minute 10 the
+instructor leads the lesson, owning accuracy, the AI tooling and the clock.
 
-**Nothing about the report is scored.** There is no rubric, no per-slot points, no
-preparation grade and no penalty for a weak report. The one graded thing in the
-neighbourhood is the notebook itself, collected weekly under **Lecture Notebooks
-(20%)** on completion — and that credit is earned by working the notebook through,
-never by how the live report went. A student who reports badly and hands in a
-worked notebook loses nothing.
+**Nothing said in the lab meeting is scored.** There is no rubric, no per-slot
+points, no preparation grade and no penalty for having little to say on a given
+day. The one graded thing in the neighbourhood is the notebook itself, collected
+weekly under **Lecture Notebooks (20%)** on completion — and that credit is earned
+by working the notebook through, never by anything that happened in the opening
+ten minutes.
 
-The draw is unchanged from D69/D71: **25 reporting lectures over 6 students, drawn
-`4/4/4/4/4/5`**, one reporter per lecture, assigned at random at the start of the
-semester with no rotation and no seats. D74 renamed what the draw produces — each
-lecture now has a reporter rather than a lead — and did not re-run it. The machine
-record is `course_config.yaml lab_meeting:` (the block was named `srl:` before
-D74), and the dated draw is `planning/SRL_ASSIGNMENT_SCHEDULE.md`.
+### The reporter and the draw — withdrawn by D75, kept here as the record
+
+*Not in force.* What follows is how D74 populated these same ten minutes, kept as
+the record and as the starting point if a future edition brings the assignment
+back.
+
+> One student was that lecture's **reporter**: seven minutes on a decision from
+> their own project and the evidence behind it, then three minutes of questions
+> from the room. The reporter did not teach the lecture's concept. The report was
+> already ungraded under D74 — no rubric, no per-slot points, no preparation
+> grade — so a student who reported badly and handed in a worked notebook lost
+> nothing. The draw was unchanged from D69/D71: **25 reporting lectures over the
+> enrolled students, drawn `4/4/4/4/4/5` at six**, one reporter per lecture,
+> assigned at random at the start of the semester with no rotation and no seats.
+> D74 renamed what the draw produced — each lecture had a reporter rather than a
+> lead — and did not re-run it. Each lecture's notebook carried an injected
+> **📣 My Report Plan** cell, filled lines 1–4 by that lecture's reporter and line
+> 5 by everyone else.
+
+**D75 withdrew all of it for this edition** — the designation, the draw, the
+assigned question and the preparation cell — because a designated, dated,
+individually-owned slot is still a performance with your name on a calendar, and
+Davi asked for the moment without the assignment. An open round needs no draw, no
+packet, no announcement and no swap rule, and it reaches every student every
+lecture instead of one student every fourth lecture.
+
+**Deleted: nothing.** `scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py`,
+the drawn roster in `_adm/roster/`, `planning/SRL_ASSIGNMENT_SCHEDULE.md` and
+`scripts/nbbuild.py`'s `REPORT_PLAN` constant all stay on disk, unapplied.
+Restoring the reporter model in a future edition costs setting
+`INJECT_REPORT_PLAN = True` and re-running the draw. The machine record of the
+current arrangement is `course_config.yaml lab_meeting:` (the block was named
+`srl:` before D74), where `reporter: none`, `assignment: none` and
+`prepared_in_advance: false` are the operative fields.
+
+**One thing D75 cannot do from this repository.** If the Week-1 announcement
+telling students they hold slots on named dates was already posted, those slots
+are withdrawn and the students need to hear it on the course platform: the lab
+meeting stays, no one is assigned, nothing is prepared, and nothing about it is
+graded.
+
+The notebook cell that opens each lecture is now headed **`### 📣 Lab Meeting`**
+(it read `### 📣 Lab Meeting: Today's Reporter` under D74). The 🧩 Research Puzzle
+and the 🔎 Questions to Keep You Thinking guide are untouched.
 
 ### SRL grading pipeline — retired for this edition, kept for a future one
 
 **No SRL score is produced this edition.** The 25% category is retired and the
-nine-row rubric is not applied. What follows is the pipeline as it stood, kept
-here as the record and as the starting point if a future edition brings the role
-back. It is not in force.
+nine-row rubric is not applied. **D75 went further and withdrew the slot draw
+itself**, so not even the ungraded reporter designation survives: no student holds
+a lecture. What follows is the pipeline as it stood, kept here as the record and
+as the starting point if a future edition brings the role back. It is not in
+force, and every count in it describes the draw as it was run, not the roster as
+it stands.
 
 1. The lead worked from the SRL brief **about one week ahead** and submitted a
    **filled notebook by 11:59 PM the calendar day before the lecture** for
@@ -606,7 +678,10 @@ all of `project/srl/` — `srl_handbook.md`, `srl_rubric.md`,
 `socratic_question_bank.md`, `srl_ai_integration_guide.md`, `srl_prep_template.md`,
 `srl_peer_feedback_form.md`, `srl_submission_instructions.md`,
 `absent_lead_protocol.md`, `instructor_intervention_protocol.md` and their PDFs —
-together with `scripts/assign_srl_slots.py` and `scripts/build_srl_packet.py`. The
+together with `scripts/assign_srl_slots.py` and `scripts/build_srl_packet.py`, and
+since **D75** the drawn roster in `_adm/roster/`,
+`planning/SRL_ASSIGNMENT_SCHEDULE.md`, and `scripts/nbbuild.py`'s `REPORT_PLAN`
+constant behind `INJECT_REPORT_PLAN = False`. The
 per-lecture questions guide is kept **in full** and re-owned to the instructor, who
 now runs those questions from minute 10. Retiring the category is never permission
 to delete an SRL file, an SRL script, or an SRL section.
@@ -618,4 +693,7 @@ and the only graded live performance left in the course is the M15 Expo
 presentation — 30% of a 10-point component, so **3 course points**. Whether the
 defense should stay ungraded practice, gain weight, or be retired is **not yet
 ruled**. Do not resolve it in this file; record the ruling here once Davi makes
-it.
+it. **D75 does not touch it**, and leaves the other questions carried forward from
+D74a open as well: moving the notebook deadline off Sunday, splitting the 10-point
+Instructor/TA Evaluation between the M13 poster and the Evidence Defense, and
+finishing the D54 propagation.

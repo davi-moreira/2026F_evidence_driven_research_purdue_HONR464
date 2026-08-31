@@ -53,6 +53,15 @@ Where the three sit in the grade:
 > stays 9% and IYT Practice stays 15%, both with every mechanic untouched; the
 > five points freed by the retirement went inside the Final Project, which is now
 > 55%.
+>
+> **Amended 2026-08-31 (D75).** The ten-minute lab meeting that opens every
+> Monday and Wednesday lecture **loses its assigned reporter**: nobody is
+> designated, no slot is drawn, and nothing is prepared before class. The
+> 📣 My Report Plan cell is gone from the notebooks with it. **Every number in
+> all three contracts is untouched** — Lecture Notebooks is still 20%, still
+> N = 16, still d = 2, still the same formula, the same Sunday rule and the same
+> two moved dates. What changed is only the list of what a submitted notebook
+> must contain, which can no longer name a cell that no longer exists.
 
 ---
 
@@ -220,14 +229,19 @@ A **valid lecture-notebook submission** has all four of:
    you actually uploaded, the same pattern the "It is your turn" uploads use —
    that the instructor can actually open;
 2. the week's own notebook, with the in-class cells worked rather than left as
-   the placeholder they shipped with: the 📣 **My Report Plan** cell wherever the
-   notebook carries one (lines 1 to 4 when the lab-meeting slot is yours, line 5
-   otherwise, so everyone arrives with a question — Week 1 and the async module
-   have no such cell and owe none), the in-class moves, and each lecture's
+   the placeholder they shipped with: the in-class moves and each lecture's
    exercises;
 3. the 📒 **AI Research Ledger** row for each lecture in the week;
 4. answers in the student's own words. The material below the ⏸ line and every
    🏠-labelled prompt is optional depth, and its absence never costs a credit.
+
+**The lab meeting contributes nothing to this credit.** The ten minutes that open
+every Monday and Wednesday lecture are an open round: the instructor asks the room
+how the projects are going, and the room answers. **Nobody is assigned to report,
+nothing is prepared before class, and nothing said there is graded** (D75). There
+is no 📣 My Report Plan cell in any notebook any more, so no notebook credit
+depends on one, and no week's credit depends on whether you happened to speak.
+Your credit rests on the four conditions above and on nothing else.
 
 **Completion is checked, not judged.** The four conditions above are the whole
 test, and each is something a grader can see rather than assess: the file opens,
@@ -272,11 +286,11 @@ it never receives the two syllabus bonuses, and its credits never enter the
 participation ledger. The two blocks share their mechanics and nothing else.
 
 Nothing here is scored on **content**. Not whether the estimate was right, not
-whether the plot was pretty, not whether the code ran the first time, and not how
-the ten-minute lab-meeting report went. The reporter's live report carries no
-score anywhere in the course (D74), and the notebook credit does not depend on it
-either. The quality of the thinking is judged later, in the milestone that week
-feeds.
+whether the plot was pretty, not whether the code ran the first time, and not
+anything you said — or did not say — in the ten-minute lab meeting. That opening
+round carries no score anywhere in the course (D74, D75), and the notebook credit
+does not depend on it either. The quality of the thinking is judged later, in the
+milestone that week feeds.
 
 ---
 
@@ -315,11 +329,12 @@ a credit. What is scored is that the notebook was worked and handed in. Say this
 early, because a student who believes otherwise will quietly stop submitting the
 weeks that went badly, which are exactly the weeks worth reading.
 
-**How the lab meeting went** *(Lecture Notebooks)*. The ten-minute report given
-as that lecture's reporter is not graded at all: not for polish, not for the
-strength of the decision reported, not for how the room's questions landed. It
-carries no score anywhere in the course, and the week's notebook credit does not
-depend on it either.
+**How the lab meeting went** *(Lecture Notebooks)*. The ten minutes that open each
+Monday and Wednesday lecture are not graded at all: not for whether you spoke, not
+for the strength of the decision you reported, not for how the room's questions
+landed. Nobody is assigned to report and nothing is prepared in advance (D75), so
+there is nothing there to score. The round carries no score anywhere in the
+course, and the week's notebook credit does not depend on it either.
 
 **Whether you used AI** *(all three)*. Using a tool while reading or while
 working a notebook is allowed. Concealing it is the violation, and that is the

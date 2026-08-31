@@ -132,7 +132,7 @@ Student Use, and Instructor Use.
 
 | Role file | Reviews | Course home |
 |---|---|---|
-| `roles/socratic_research_tutor.md` | Your thinking, by questioning — never by answering | All weeks; lab-meeting report prep |
+| `roles/socratic_research_tutor.md` | Your thinking, by questioning — never by answering | All weeks; optional, any time |
 | `roles/evidence_citation_verifier.md` | Whether a citation is specific enough to be checkable (you still retrieve it) | Week 3 · M3 |
 | `roles/research_question_diagnostician.md` | Question classification on the compass (kind × reach) and scope | Week 2 · M2 |
 | `roles/mida_design_reviewer.md` | Your MIDA declaration (Model, Inquiry, Data, Answer) and diagnosis plan | Week 4 · M4 |

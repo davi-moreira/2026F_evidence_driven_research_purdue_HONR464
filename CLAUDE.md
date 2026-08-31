@@ -213,34 +213,39 @@ milestone briefs (`_research_project/2026Fall/`).
 
 ---
 
-## 🚨 CRITICAL RULE — The Lab Meeting & 50-Minute Architectures  *(D17/D18, amended D22/D33/D34; recast by D74)*
+## 🚨 CRITICAL RULE — The Lab Meeting & 50-Minute Architectures  *(D17/D18, amended D22/D33/D34; recast by D74, reopened by D75)*
 
 **Every Mon/Wed lecture from Week 2 opens with a ten-minute LAB MEETING.** D74
-RETIRED the Student Research Lead role as a graded role and this replaces it. One
-student is that lecture's **reporter**: seven minutes on a decision from **their
-own project** and the evidence behind it, then three minutes of questions from the
-room. The reporter does **not** teach the lecture's concept, and the report is
-**not graded**. **The instructor leads from minute 10** and owns accuracy, the AI
-tooling and the clock.
+retired the Student Research Lead role and put the lab meeting in its place;
+**D75 withdrew the assigned reporter that briefly came with it**. The ten minutes
+stay. The assignment is gone: **nobody is designated to present, on any lecture,
+ever. There is no slot draw, no assigned question or request, and nothing about
+the lab meeting is prepared before class, by anyone.**
 
-Slots are **randomly assigned at the start of the semester** (no rotation, no
-seats). The D69/D71 draw **carries over unchanged** — 25 slots over **6 students**
-is still 4/4/4/4/4/5 — and now names each lecture's *reporter* instead of its
-lead. There is no re-draw and no new fairness argument.
+What runs instead is an open round. **The instructor asks the room how the
+projects are going, and the room answers** — what was decided since last time,
+what the evidence looks like, where somebody is stuck. **Nothing said in the lab
+meeting is graded.** **The instructor leads the lesson from minute 10** and owns
+accuracy, the AI tooling and the clock, exactly as D74 already ruled.
 
-Each lecture's brief is a STUDENT-VISIBLE `### 📣 Lab Meeting: Today's Reporter`
-cell that opens that lecture in its notebook (right after `# Lecture N`, before
-the 🧩 Research Puzzle). Two companion cells travel with it: `### 📣 My Report
-Plan` (lines 1–4 for the reporter, line 5 for everyone else, so the whole room
-arrives with a question) and `### 🔎 Questions to Keep You Thinking`. Briefs must
-stay simple to follow and explicitly leave room for the reporter's own staging.
-`course_config.yaml`'s `srl:` block is now `lab_meeting:`. Fixed section frames,
-enforced by the session-guide generator (sums = 50):
+The D69/D71 slot draw is **WITHDRAWN for this edition**. There is no re-draw, no
+swap rule and no fairness argument left to make, because there are no slots.
 
-- **Monday:** 0–10 lab meeting (the reporter's decision, then the room's
-  questions) · 10–31 guided AI research-partner investigation, opening with the
-  🧩 Research Puzzle the instructor now runs · 31–43 human verification +
-  instructor formalization · 43–50 decision & defense (ledger + Claim Ticket).
+Each lecture's brief is a STUDENT-VISIBLE `### 📣 Lab Meeting` cell that opens
+that lecture in its notebook (right after `# Lecture N`, before the 🧩 Research
+Puzzle), carrying one fixed stanza that says plainly that nobody is assigned and
+nothing is prepared. **Two cells travel with a lecture and only two:** that
+📣 Lab Meeting brief and `### 🔎 Questions to Keep You Thinking`. The
+`### 📣 My Report Plan` cell D74 injected is **REMOVED from every notebook**
+(centrally: `scripts/nbbuild.py` now sets `INJECT_REPORT_PLAN = False`). Briefs
+must stay simple to follow and leave the round open. `course_config.yaml`'s
+`srl:` block is now `lab_meeting:` — read it, never edit it. Fixed section
+frames, enforced by the session-guide generator (sums = 50):
+
+- **Monday:** 0–10 lab meeting (an open round on where the projects stand) ·
+  10–31 guided AI research-partner investigation, opening with the 🧩 Research
+  Puzzle the instructor now runs · 31–43 human verification + instructor
+  formalization · 43–50 decision & defense (ledger + Claim Ticket).
 - **Wednesday:** 0–10 lab meeting · 10–30 intensive applied AI laboratory ·
   30–42 peer defense + adversarial questioning (internal split, D34: defense to
   38, then 38–42 synthesis + instructor accuracy lock — the block itself is
@@ -291,9 +296,10 @@ never the platform, and record the correction. The repository still owns the
 *rules*; the platform owns the *dates students see*. The studio-feedback survey
 takes the same treatment through
 `course_config.yaml participation.items.studio_feedback.overrides` (Studio 2 →
-Tue Sep 8). The **SRL preparation submission retired with the role** (D74): the
-reporter fills `### 📣 My Report Plan` before class and hands it in inside that
-week's lecture notebook, on the Lecture Notebooks deadline.
+Tue Sep 8). The **SRL preparation submission retired with the role** (D74), and
+**D75 retired the report plan that briefly stood in for it**: nothing is prepared
+or handed in for the lab meeting, on any schedule. The week's lecture notebook is
+still collected on its own Lecture Notebooks deadline.
 
 **All seven active-learning moves + the lecture's 📒 ledger row run INSIDE the
 50 minutes (D33)**, above each lecture's `### ⏸ Optional depth from here`
@@ -303,13 +309,26 @@ homework. In-class weights: 📝 aloud · ⚖️ one committed line defended alo
 placement (exempt: nb01, nb14, nb13 — conference week's below-⏸ is the Expo +
 reflection-studio path).
 
-Week 1's two lectures are instructor-led to model the format. **SRL material is
-retired IN PLACE, never deleted** (D74, Ruling 5): `project/srl/` keeps the
-handbook, rubric, Socratic question bank, AI-integration guide, prep template,
-peer-feedback form, submission instructions and the absent-lead / instructor-
-intervention protocols, each marked *retired for this edition, kept for a future
-one*; the **per-lecture questions guide is KEPT IN FULL** and re-owned to the
-instructor. (The book's SRL appendix was retired by D35 — the book's For
+Week 1's two lectures are instructor-led to model the format.
+
+**DELETE NOTHING — the retirement is IN PLACE** (D74 Ruling 5, restated by D75,
+the same rule that kept D58's quiz banks). Kept on disk, unapplied this edition:
+
+- all of `project/srl/` — handbook, rubric, Socratic question bank,
+  AI-integration guide, prep template, peer-feedback form, submission
+  instructions and the absent-lead / instructor-intervention protocols, each
+  marked *retired for this edition, kept for a future one*;
+- `scripts/assign_srl_slots.py` and `scripts/build_srl_packet.py`, both intact;
+- the **drawn roster** in `_adm/roster/`, left exactly as the draw wrote it;
+- `nbbuild.py`'s `REPORT_PLAN` constant, kept verbatim and gated off by
+  `INJECT_REPORT_PLAN = False`.
+
+**Never delete a file, a script, a section, a rubric row, a question or a
+protocol.** Where a document's whole subject is now retired, add a clear status
+banner and leave the content intact. Flipping `INJECT_REPORT_PLAN` back to `True`
+and rerunning the draw is the whole cost of reinstating the reporter model in a
+future edition. The **per-lecture questions guide is KEPT IN FULL** and re-owned
+to the instructor. (The book's SRL appendix was retired by D35 — the book's For
 Instructors appendix links `project/srl/`.) The milestone chain and
 weekly-architecture orientation live in nb01 Lecture 1 (not on the syllabus).
 
@@ -392,7 +411,8 @@ Student Research Lead category.
 - Due **11:59 PM on the Sunday that ends the studio week**; Week 16 closes **Fri
   Dec 11**, the last class day.
 - Graded on **completion only**: worked through and handed in. Never on whether
-  the answers came out right, and never on how the live lab-meeting report went.
+  the answers came out right, and never on anything said in the lab meeting,
+  which is ungraded and requires no preparation from anyone (D75).
 - Credit `1.0` on time / `0.5` within seven days / `0` otherwise.
 - `N = 16`, so `d = ⌈0.10 × 16⌉ = 2`, dropped automatically.
 - `lecture notebook points = 20.0 × (sum of the highest 14 credits) / 14`.
@@ -678,7 +698,41 @@ material.
 
 ---
 
-**Version:** 7.1 — D74, the Lab Meeting replaces the Student Research Lead and the
+**Version:** 7.2 — D75, the lab meeting loses its reporter: an open round, nothing
+assigned (2026-08-31, DECISIONS.md D75): the ten-minute lab meeting that opens every
+Mon/Wed lecture from Week 2 **stays exactly where D74 put it**, and everything about how
+it is populated is **withdrawn** — **no reporter is designated, on any lecture, ever; no
+slot draw (the D69/D71 assignment is WITHDRAWN for this edition); no assigned question or
+request** (nothing of the form "lines 1 to 4 if the slot is yours, line 5 if it is not");
+**and no preparation of any kind, by anyone, before class**. What runs instead is an open
+round: **the instructor asks the room how the projects are going, and the room answers** —
+what was decided since last time, what the evidence looks like, where somebody is stuck —
+and from minute 10 the instructor leads the lesson, exactly as D74 already ruled. **Nothing
+said in the lab meeting is graded.** Notebook cells: `### 📣 Lab Meeting: Today's Reporter`
+→ **`### 📣 Lab Meeting`**, carrying one fixed stanza that states plainly that nobody is
+assigned and nothing is prepared, and the injected **`### 📣 My Report Plan` cell is
+REMOVED from every notebook** (done centrally: `scripts/nbbuild.py` now sets
+`INJECT_REPORT_PLAN = False`), so **the two cells that travel with a lecture are now just
+the 📣 Lab Meeting brief and 🔎 Questions to Keep You Thinking**. The 🧩 Research Puzzle is
+untouched. **Nothing else about D74 moves:** the **Monday 10 / 21 / 12 / 7** and
+**Wednesday 10 / 20 / 12 / 8** frames still sum to 50, section boundaries 3 and 4 are
+unchanged so every D22 and D34 ruling stands, Friday's 5 / 40 / 5 studio frame (D58) is
+unaffected, and the weight table is untouched — attendance 1 · participation 9 · IYT
+Practice 15 · Lecture Notebooks 20 · Final Project 55 (= 100). The **Lecture Notebooks 20%**
+contract is unchanged in every number (N = 16, d = 2, `20.0 × (sum of the highest 14
+credits) / 14`, the Sunday rule with D74a's Fri Sep 4 Week-1 override, and the Fri Dec 11
+Week-16 close); **only its content list changes** — it no longer names the 📣 My Report Plan
+cell or any other lab-meeting cell, because there no longer is one. **DELETE NOTHING, again**
+(D74 Ruling 5 restated, the parallel to D58's quiz banks): all of `project/srl/`,
+`scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py`, the **drawn roster** in
+`_adm/roster/` and `nbbuild.py`'s **`REPORT_PLAN`** constant stay on disk, retired IN PLACE
+— setting `INJECT_REPORT_PLAN = True` and rerunning the draw is the whole cost of
+reinstating the reporter model in a future edition. ⚠ Action for Davi OUTSIDE the
+repository: if the Week-1 announcement `_announcements/03_srl_slots_and_logistics.md` was
+already posted, students have been told they hold slots on named dates and **need to hear
+that those slots are withdrawn** — the lab meeting stays, no one is assigned, nothing is
+prepared, and nothing about it is graded.
+(7.1 — D74, the Lab Meeting replaces the Student Research Lead and the
 lecture notebook becomes a collected contract (2026-08-31, DECISIONS.md D74): the **25%
 Student Research Lead category is RETIRED** along with its live nine-row rubric, and every
 Mon/Wed lecture from Week 2 now opens with a **ten-minute lab meeting** — one **reporter**
@@ -928,5 +982,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

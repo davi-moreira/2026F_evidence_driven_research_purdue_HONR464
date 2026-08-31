@@ -30,11 +30,14 @@ OUT_MD = REPO / "planning" / "MEETING_SCHEDULE.md"
 
 # Fields allowed to be empty. The two lab-meeting fields keep their historical
 # `srl_*` key names so existing readers of MEETING_SCHEDULE.csv keep working,
-# but the concept behind them changed with D74: `srl_slot` now carries the
-# LAB-MEETING REPORTER slot for that lecture, and `srl_focus` the
-# instructor-owned puzzle or challenge that opens the lecture's own block from
-# minute 10. Both are empty for studios, async modules, and the instructor-led
-# Week 1.
+# but the concept behind them changed with D74 and again with D75: `srl_slot` no
+# longer carries an ASSIGNMENT of any kind. It is now the LAB-MEETING MARKER —
+# one identical string on every lecture that opens with the ten-minute open
+# round, because D75 withdrew the reporter, the slot draw and the preparation,
+# and nothing distinguishes one lecture's round from another's. `srl_focus`
+# still carries the instructor-owned puzzle or challenge that opens the
+# lecture's own block from minute 10. Both are empty for studios, async modules,
+# and the instructor-led Week 1.
 OPTIONAL_EMPTY = {"srl_slot", "srl_focus"}
 
 
@@ -79,8 +82,9 @@ def main() -> None:
 
     # --- write MD -----------------------------------------------------------
     labels = {
-        # Key names kept for compatibility; the concept is the D74 lab meeting.
-        "srl_slot": "Lab meeting reporter slot",
+        # Key names kept for compatibility; the concept is the D74 lab meeting,
+        # with D75's open round in place of any assignment.
+        "srl_slot": "Lab meeting",
         "srl_focus": "Lecture puzzle focus (instructor-led, from minute 10)",
         "driving_question": "Driving question",
         "secondary_questions": "Secondary questions",

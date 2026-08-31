@@ -135,35 +135,39 @@ Multi-lecture notebooks open EACH lecture with an explicit `# Lecture N` heading
 cell (Lecture 1 right before section `## 1.`; later lectures after a horizontal
 rule) — never meeting numbers, never dates, never italic boundary markers.
 
-**Every lecture opens with a Lab Meeting brief, then the puzzle cell.** From
-Week 2 on, each Mon/Wed lecture opens with a ten-minute **lab meeting** (D74;
-`course_config.yaml lab_meeting`; `planning/COURSE_MASTER_PLAN.md` §3): one
-student is that lecture's **reporter** and spends seven minutes on a decision
-from their OWN project and the evidence behind it, then takes three minutes of
-questions from the room. The reporter does **not** teach the lecture's concept,
-and the report is **not** graded. The instructor leads from minute 10 and owns
-accuracy, the AI tooling and the clock. Reporter slots are randomly assigned at
-semester start (the D69/D71 draw, carried over unchanged by D74: 25 slots over
-6 students, 4 or 5 each). The brief is a STUDENT-VISIBLE markdown cell placed
-immediately after `# Lecture N` (D22, renamed and re-owned by D74):
+**Every lecture opens with a Lab Meeting cell, then the puzzle cell.** From
+Week 2 on, each Mon/Wed lecture opens with a ten-minute **lab meeting** (D74,
+re-scoped by D75; `course_config.yaml lab_meeting`;
+`planning/COURSE_MASTER_PLAN.md` §3): your instructor asks the room how the
+projects are going, and the room answers. What was decided since last time, what
+the evidence looks like, where somebody is stuck. **Nobody is designated to
+report**, on any lecture; nothing about the lab meeting is prepared before class,
+by anyone; and nothing said in the ten minutes is graded. Your instructor leads
+the lesson from minute 10 and owns accuracy, the AI tooling and the clock. D75
+withdrew the D69/D71 slot draw for this edition, so no notebook cell names a
+slot, a date, or a person. The cell is a STUDENT-VISIBLE markdown cell placed
+immediately after `# Lecture N` (D22, renamed and re-owned by D74, re-scoped by
+D75):
 
 ```markdown
-### 📣 Lab Meeting: Today's Reporter
+### 📣 Lab Meeting
 
 *This lecture opens with a ten-minute lab meeting. …*
 
-[Mission (one sentence) · run-of-show table with the day's fixed minute frame ·
-what the reporter brings (a decision their own project has actually reached, and
-the evidence behind it) and the room's three minutes of questions · one AI trap
-to watch for · checkpoint minute marks · a "Make it yours" paragraph leaving the
-reporter room for their own staging.]
+[One fixed stanza saying plainly that your instructor asks the room how the
+projects are going, that nobody is assigned and nothing is prepared in advance,
+and that none of it is graded · where the lecture goes from minute 10 · a
+run-of-show table carrying the day's fixed minute frame · one AI trap to watch
+for · checkpoint minute marks · a closing line: come able to say where your own
+project actually is.]
 ```
 
-Keep the brief simple and short (about 40 lines), with zero em dashes, second
+Keep the cell simple and short (about 40 lines), with zero em dashes, second
 person. The role names "Student Research Lead"/"Student-led" stay allow-listed
 by the voice linter so the retired-but-preserved material still lints; all other
-voice rules apply, so a brief never says "the instructor" or "students". The
-brief is followed by the puzzle the reader chews on before any exposition or AI:
+voice rules apply, so the cell writes "your instructor", never "the instructor",
+and never "students". The cell is followed by the puzzle the reader chews on
+before any exposition or AI:
 
 ```markdown
 ### 🧩 Research Puzzle
@@ -175,29 +179,39 @@ before we go further. No AI yet.)*
 "you"; poses a genuine question; is answerable by reasoning, not lookup.]
 ```
 
-D74 kept the puzzle's body exactly as it was and changed only who opens it.
+D74 kept the puzzle's body exactly as it was and changed only who opens it, and
+D75 left it untouched.
 
-One `### 📣 Lab Meeting: Today's Reporter` AND one `### 🧩 Research Puzzle` per
-`# Lecture N` (both machine-checked; `validate_notebooks.py` matches the brief by
-the string `Lab Meeting` in a level-3 heading). Week 1's two launch lectures are
-instructor-led and carry no reporter; they still carry both cells (the brief
-models the format the reader will inherit) and take no report plan.
+One `### 📣 Lab Meeting` AND one `### 🧩 Research Puzzle` per `# Lecture N`
+(both machine-checked). `validate_notebooks.py` matches the lab-meeting cell by
+the string `Lab Meeting` in a level-3 heading, so the shortened D75 heading
+satisfies the check exactly as the longer D74 one did; no validator change was
+needed. Week 1's two launch lectures still carry both cells (the lab-meeting cell
+models the format the reader will meet from Week 2 on).
 
-**Two companion cells.** `nbbuild.py` injects `### 📣 My Report Plan` beside each
-brief at build time — lines 1–4 for the reporter, line 5 for everyone else, so
-the whole room arrives with a question. Never author it in the cell source, and
-note that nb01 and nb14 take none (`FRAME_EXEMPT`). The brief's three questions
-live just past the puzzle in `### 🔎 Questions to Keep You Thinking`, each with
-its `Ask after:` moment and listen-for hint; D74 kept every question verbatim and
-re-owned the cell to the instructor.
+**The companion cell.** The lecture's three questions live just past the puzzle
+in `### 🔎 Questions to Keep You Thinking`, each with its `Ask after:` moment
+and listen-for hint; D74 kept every question verbatim and re-owned the cell to
+the instructor, and D75 left it untouched.
 
-**Retired names, kept in the record.** `### 🎤 SRL Lead Brief`,
-`### 🎤 My Lead Plan` and `### 🎤 Lead's Questions` were the pre-D74 markers for
-these three cells. D74 retired the Student Research Lead role **in place** and
-deleted nothing: `project/srl/` (handbook, rubric, question bank, prep template,
-peer feedback form, protocols), `scripts/assign_srl_slots.py` and
-`scripts/build_srl_packet.py` all stay on disk for a future edition, exactly as
-D58 kept the quiz banks.
+**Retired names, kept in the record.**
+
+- `### 📣 My Report Plan` — the D74 preparation cell that `nbbuild.py` injected
+  beside every lab-meeting brief (lines 1–4 for that lecture's reporter, line 5
+  for everyone else). **D75 retired it**: with no reporter and no preparation,
+  there is nothing for it to hold. It is no longer injected and must never be
+  authored in a cell source. Deleted from nothing: the `REPORT_PLAN` constant
+  stays verbatim in `scripts/nbbuild.py`, gated off by `INJECT_REPORT_PLAN =
+  False`, so flipping that flag back to `True` restores the cell.
+- `### 🎤 SRL Lead Brief`, `### 🎤 My Lead Plan` and
+  `### 🎤 Lead's Questions` — the pre-D74 markers for these three cells.
+
+D74 retired the Student Research Lead role **in place** and deleted nothing, and
+D75 did the same with the reporter assignment: `project/srl/` (handbook, rubric,
+question bank, prep template, peer feedback form, protocols),
+`scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py` and the drawn roster
+under `_adm/roster/` all stay on disk for a future edition, exactly as D58 kept
+the quiz banks.
 
 ### 6. Content sections (`## 1.`, `## 2.`, …) — narrative pattern + undergraduate voice
 
@@ -255,7 +269,7 @@ them. Exempt: nb01 (orientation), nb14 (async), nb13 (conference week — the
 reflection path completes at the Expo and the reflection studio).
 
 The moves sit inside the day's D74 minute frame (Monday **10 / 21 / 12 / 7**,
-Wednesday **10 / 20 / 12 / 8**, both summing to 50). The first ten minutes are
+Wednesday **10 / 20 / 12 / 8**, both summing to 50; D75 changed no frame). The first ten minutes are
 the lab meeting; the puzzle folds into the front of the investigation block, and
 the seven moves plus the 📒 row run from minute 10 on. Section boundaries 3 and 4
 are unchanged (31–43 / 43–50 Monday, 30–42 / 42–50 Wednesday), so D22's and D34's
@@ -488,7 +502,7 @@ asserts, by exact marker string:
 | 3 | Inquiry block | `## 🧭 Inquiry & Claim Boundary` with `**Inquiry emphasis:**`, `**Design pathway:**`, PERMITS + does-NOT-permit rows, `*Provenance:` | all present |
 | 4 | Objectives | `By the end of this notebook, you will be able to:` | =1 |
 | 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
-| 6 | Lecture heads | `# Lecture i` per schedule; one `### 📣 Lab Meeting: Today's Reporter` (matched as a level-3 heading containing `Lab Meeting`) + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
+| 6 | Lecture heads | `# Lecture i` per schedule; one `### 📣 Lab Meeting` (matched as a level-3 heading containing `Lab Meeting`, so the D75 heading passes unchanged) + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
 | 7 | Moves | `### 🔮 Predict First`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Read the Evidence`, `### 🎯 Take It to Your Project`, `### 🛡️ Defend Your Decision` | ≥1 each, per lecture, ABOVE the ⏸ line (D33; placement exempt: nb13) |
 | 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Run It Live:` | ≥1 per lecture above ⏸ (exempt: nb11, nb12, nb13) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
@@ -542,6 +556,13 @@ belongs: the Friday studio sprint and the book's "It is your turn" chain.
 
 ## D74 amendment — the lab meeting, and the notebook becomes a collected artifact (2026-08-31)
 
+> **Read this section together with the D75 amendment below.** D75 kept the
+> ten-minute lab meeting, the minute frames and the whole Lecture Notebooks
+> contract, and withdrew three things named here: the assigned reporter, the
+> D69/D71 slot draw, and the injected `### 📣 My Report Plan` cell. Wherever
+> this section names a reporter or that cell, it is recording what D74 built,
+> not what a notebook carries today.
+
 **The opener changed hands.** The Student Research Lead role is retired as a
 graded role, and every Mon/Wed lecture from Week 2 now opens with a ten-minute
 **lab meeting**: one student is the lecture's **reporter**, spends seven minutes
@@ -581,3 +602,47 @@ inside its 50 minutes, every writing move must leave a visible place to write
 ⏸ line — or behind a 🏠 label — may ever be needed for the credit. The milestone
 studio notebooks (`msNN`) are unaffected: they are submitted with their
 milestone, not under this category.
+
+## D75 amendment — the lab meeting loses its reporter (2026-08-31)
+
+**Nobody is assigned, and nothing is prepared.** The ten-minute lab meeting stays
+exactly where D74 put it, at the front of every Mon/Wed lecture from Week 2. What
+D75 withdrew is everything that made it an assignment: no reporter is designated
+on any lecture, the D69/D71 slot draw is withdrawn for this edition, no question
+or request is assigned in advance, and nothing about the lab meeting is prepared
+before class by anyone. What it is instead: your instructor asks the room how the
+projects are going, and the room answers. What was decided since last time, what
+the evidence looks like, where somebody is stuck. From minute 10 your instructor
+leads the lesson, exactly as D74 ruled. Nothing said in the lab meeting is graded.
+
+**Two cell changes, and nothing else.**
+
+- `### 📣 Lab Meeting: Today's Reporter` → **`### 📣 Lab Meeting`**, carrying
+  one fixed stanza that states plainly that nobody is assigned and nothing is
+  prepared. `validate_notebooks.py` matches this cell by the string `Lab Meeting`
+  inside a level-3 heading (`BRIEF_RE`), so the shorter heading satisfies the
+  per-lecture check with no validator change.
+- `### 📣 My Report Plan` is **retired and no longer injected**.
+  `scripts/nbbuild.py` keeps its `REPORT_PLAN` constant verbatim behind
+  `INJECT_REPORT_PLAN = False`. Never author the cell in a source; see "Retired
+  names, kept in the record" in §5.
+
+The `### 🧩 Research Puzzle` and `### 🔎 Questions to Keep You Thinking`
+cells are untouched.
+
+**What does NOT move.** The Monday **10 / 21 / 12 / 7** and Wednesday
+**10 / 20 / 12 / 8** frames stand, both still summing to 50, with section
+boundaries 3 and 4 unchanged, so every D22 and D34 ruling survives. The Lecture
+Notebooks completion contract is unchanged in every number: `N = 16`, `d = 2`,
+`20.0 × (sum of the highest 14 credits) / 14`, the Sunday rule, the Week-1
+override to Fri Sep 4 and the Fri Dec 11 Week-16 close. **Only its content list
+changes:** what the reader fills in above the `### ⏸` line is now the seven
+in-class moves and each lecture's `### 📒 AI Research Ledger` row. It no longer
+names a report-plan cell or any other lab-meeting cell, because there no longer
+is one to fill in.
+
+**Delete nothing.** Kept on disk and unapplied: all of `project/srl/`,
+`scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py`, the drawn roster in
+`_adm/roster/`, and `nbbuild.py`'s `REPORT_PLAN`. Setting `INJECT_REPORT_PLAN`
+back to `True` and restoring the draw is the whole cost of reinstating the
+reporter model in a future edition.

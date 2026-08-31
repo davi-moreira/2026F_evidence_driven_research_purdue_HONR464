@@ -4,21 +4,26 @@
 >
 > **The Student Research Lead role does not run this semester, so nothing in this
 > document is required of you.** Every Monday and Wednesday lecture from Week 2 now
-> opens with a ten-minute **Lab Meeting** instead. One of you is that lecture's
-> **reporter**: you take **seven minutes on a decision from your own project and the
-> evidence behind it**, then **three minutes of questions from the room**. You do not
-> teach the lecture's concept, and **your report is not graded**. **The instructor
-> leads from minute 10** and owns accuracy, the AI tooling and the clock.
+> opens with a ten-minute **Lab Meeting** instead, and it is an **open round**: the
+> instructor asks the room how the projects are going, and the room answers. What you
+> decided since last time, what your evidence looks like, where somebody is stuck.
+> **Nobody is assigned to report**, on any lecture. There is **no slot draw** — the
+> assignment that once named your dates is withdrawn — **nothing is prepared** before
+> class, by anyone, and **nothing said in the lab meeting is graded**. **The
+> instructor leads the lesson from minute 10** and owns accuracy, the AI tooling and
+> the clock.
 >
 > The **25% Student Research Lead** grade category retired with the role. In its
 > place, **Lecture Notebooks (20%)** collects the notebook you work in class, once a
-> week. Everyone hands one in, not only the reporter, and it is graded on completion
-> alone.
+> week. Everyone hands one in, and it is graded on completion alone.
 >
 > **Nothing below has been removed.** This document is kept whole for a future
 > edition that reinstates the role. Where a procedure would mislead you today, it
 > carries a ⛔ **Retired procedure** note naming what happens instead.
-> *(Ruling: `_project_docs/DECISIONS.md`, D74, 2026-08-31.)*
+> *(Rulings: `_project_docs/DECISIONS.md`, D74 and D75, 2026-08-31. D75 withdrew the
+> assigned reporter and the slot draw, and removed the injected **📣 My Report Plan**
+> cell from every notebook; the lecture's own cell is now simply
+> `### 📣 Lab Meeting`.)*
 
 *Your guide to leading a class the way a researcher leads an investigation.*
 
