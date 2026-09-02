@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 11 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -66,7 +67,7 @@ Prove that someone who is not you can obtain your result from your materials.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 11 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -102,7 +103,7 @@ assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 11 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -118,7 +119,7 @@ Studio 11 · Road map
 :::::
 
 
-## Replication and Reproduction {background-color="#1a1a19" .divider}
+## Replication and Reproduction {background-color="#1a1a19" .divider data-menu-title="CHAPTER 36 — Replication and Reproduction"}
 
 ::: {.kicker}
 
@@ -134,7 +135,7 @@ most endangers the claim
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 36 · The research decision"}
 
 ::: {.kicker}
 
@@ -156,7 +157,7 @@ how easy each one is to fix.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 36 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -196,7 +197,7 @@ the book gives them.
 :::
 
 
-## Hand me your files and let me get the same number back out
+## Hand me your files and let me get the same number back out {data-menu-title="Ch 36 · Hand me your files and let me get the same number back out"}
 
 ::: {.kicker}
 
@@ -231,7 +232,7 @@ made this request, and how long it would take them to find it.
 :::
 
 
-## A poster can round, and a clean notebook can still hide one choice
+## A poster can round, and a clean notebook can still hide one choice {data-menu-title="Ch 36 · A poster can round, and a clean notebook can still hide one choice"}
 
 ::: {.kicker}
 
@@ -260,7 +261,7 @@ its three findings.
 :::
 
 
-## You test the package, not the world
+## You test the package, not the world {data-menu-title="Ch 36 · You test the package, not the world"}
 
 ::: {.kicker}
 
@@ -288,7 +289,7 @@ this slide tests the package rather than the world.
 :::
 
 
-## Restart, run every cell from the top, and see whether the headline returns
+## Restart, run every cell from the top, and see whether the headline returns {data-menu-title="Ch 36 · Restart, run every cell from the top, and see whether the headline returns"}
 
 ::: {.kicker}
 
@@ -342,7 +343,7 @@ a kernel restart.
 :::
 
 
-## A clean run proves the code executes, not that the write-up is true
+## A clean run proves the code executes, not that the write-up is true {data-menu-title="Ch 36 · A clean run proves the code executes, not that the write-up is true"}
 
 ::: {.kicker}
 
@@ -404,7 +405,7 @@ their own project, and to say what was actually assigned.
 :::
 
 
-## Six tanks, 240 larvae, and a poster that says 0.5 mm
+## Six tanks, 240 larvae, and a poster that says 0.5 mm {data-menu-title="Ch 36 · Six tanks, 240 larvae, and a poster that says 0.5 mm"}
 
 ::: {.kicker}
 
@@ -433,7 +434,7 @@ is being reported.
 :::
 
 
-## The code says 0.43. The write-up says 0.5.
+## The code says 0.43. The write-up says 0.5. {data-menu-title="Ch 36 · The code says 0.43. The write-up says 0.5."}
 
 ::: {.kicker}
 
@@ -460,7 +461,7 @@ finding.
 :::
 
 
-## Death after treatment is not an ordinary blank cell
+## Death after treatment is not an ordinary blank cell {data-menu-title="Ch 36 · Death after treatment is not an ordinary blank cell"}
 
 ::: {.kicker}
 
@@ -488,7 +489,7 @@ missingness is what makes it dangerous rather than merely annoying.
 :::
 
 
-## Carrying a dead larva's last length forward is a claim about biology
+## Carrying a dead larva's last length forward is a claim about biology {data-menu-title="Ch 36 · Carrying a dead larva's last length forward is a claim about biology"}
 
 ::: {.kicker}
 
@@ -517,7 +518,7 @@ question.
 :::
 
 
-## Report survival by tank type first, then length among the survivors
+## Report survival by tank type first, then length among the survivors {data-menu-title="Ch 36 · Report survival by tank type first, then length among the survivors"}
 
 ::: {.kicker}
 
@@ -547,7 +548,7 @@ biological question.
 :::
 
 
-## Six tanks, not 240 larvae, and the interval reaches zero
+## Six tanks, not 240 larvae, and the interval reaches zero {data-menu-title="Ch 36 · Six tanks, not 240 larvae, and the interval reaches zero"}
 
 ::: {.kicker}
 
@@ -575,7 +576,7 @@ experimental unit is the tank, and there are only six of them.
 :::
 
 
-## Rank by threat to the claim, not by ease of repair
+## Rank by threat to the claim, not by ease of repair {data-menu-title="Ch 36 · Rank by threat to the claim, not by ease of repair"}
 
 ::: {.kicker}
 
@@ -603,7 +604,7 @@ themselves before you show this slide.
 :::
 
 
-## Three defensible numbers, and none of them is 0.50
+## Three defensible numbers, and none of them is 0.50 {data-menu-title="Ch 36 · Three defensible numbers, and none of them is 0.50"}
 
 ::: {.kicker}
 
@@ -666,7 +667,7 @@ every run in the room returns the same numbers.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 36 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -692,7 +693,7 @@ six tanks. It has quietly mistaken a long list for a complete one.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 36 · How it failed"}
 
 ::: {.kicker}
 
@@ -723,7 +724,7 @@ about them.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 36 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -756,7 +757,7 @@ suspects. You decide which ones the evidence convicts.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 36 · It is your turn"}
 
 ::: {.kicker}
 
@@ -788,7 +789,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Open and Reusable Research Packages {background-color="#1a1a19" .divider}
+## Open and Reusable Research Packages {background-color="#1a1a19" .divider data-menu-title="CHAPTER 37 — Open and Reusable Research Packages"}
 
 ::: {.kicker}
 
@@ -804,7 +805,7 @@ sentence "this reproduces" is honest when you write it
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 37 · The research decision"}
 
 ::: {.kicker}
 
@@ -827,7 +828,7 @@ one.
 :::::
 
 
-## Hand me the folder and let me press run
+## Hand me the folder and let me press run {data-menu-title="Ch 37 · Hand me the folder and let me press run"}
 
 ::: {.kicker}
 
@@ -861,7 +862,7 @@ survive that on Monday.
 :::
 
 
-## A result no one can check is a rumor with a chart
+## A result no one can check is a rumor with a chart {data-menu-title="Ch 37 · A result no one can check is a rumor with a chart"}
 
 ::: {.kicker}
 
@@ -888,7 +889,7 @@ reproducible actually covers.
 :::
 
 
-## A capsule holds what a stranger needs and nothing they must guess
+## A capsule holds what a stranger needs and nothing they must guess {data-menu-title="Ch 37 · A capsule holds what a stranger needs and nothing they must guess"}
 
 ::: {.kicker}
 
@@ -934,7 +935,7 @@ of what follows.
 :::
 
 
-## The capsule has five parts, each defined once
+## The capsule has five parts, each defined once {data-menu-title="Ch 37 · The capsule has five parts, each defined once"}
 
 ::: {.kicker}
 
@@ -963,7 +964,7 @@ their own project currently has.
 :::
 
 
-## Capsules break in five predictable ways, and predictable means catchable
+## Capsules break in five predictable ways, and predictable means catchable {data-menu-title="Ch 37 · Capsules break in five predictable ways, and predictable means catchable"}
 
 ::: {.kicker}
 
@@ -992,7 +993,7 @@ will hit first.
 :::
 
 
-## Zero flags means runnable, never proven correct
+## Zero flags means runnable, never proven correct {data-menu-title="Ch 37 · Zero flags means runnable, never proven correct"}
 
 ::: {.kicker}
 
@@ -1025,7 +1026,7 @@ where it does.
 :::
 
 
-## Twelve counties of turnout, shipped two ways
+## Twelve counties of turnout, shipped two ways {data-menu-title="Ch 37 · Twelve counties of turnout, shipped two ways"}
 
 ::: {.kicker}
 
@@ -1051,7 +1052,7 @@ anyone can check the number.
 :::
 
 
-## The sinful capsule commits all five, and every one breaks the rerun
+## The sinful capsule commits all five, and every one breaks the rerun {data-menu-title="Ch 37 · The sinful capsule commits all five, and every one breaks the rerun"}
 
 ::: {.kicker}
 
@@ -1081,7 +1082,7 @@ of it.
 :::
 
 
-## The clean capsule fixes each sin where a stranger can see it
+## The clean capsule fixes each sin where a stranger can see it {data-menu-title="Ch 37 · The clean capsule fixes each sin where a stranger can see it"}
 
 ::: {.kicker}
 
@@ -1109,7 +1110,7 @@ the whole claim the capsule makes.
 :::
 
 
-## The clean capsule can still be wrong
+## The clean capsule can still be wrong {data-menu-title="Ch 37 · The clean capsule can still be wrong"}
 
 ::: {.kicker}
 
@@ -1137,7 +1138,7 @@ question, and tell them to write that sentence down.
 :::
 
 
-## Rerun the cell and the interval does not move
+## Rerun the cell and the interval does not move {data-menu-title="Ch 37 · Rerun the cell and the interval does not move"}
 
 ::: {.kicker}
 
@@ -1197,7 +1198,7 @@ rule producing it was a good one.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 37 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1224,7 +1225,7 @@ walkthrough described reading that file as if it were sitting there.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 37 · How it failed"}
 
 ::: {.kicker}
 
@@ -1252,7 +1253,7 @@ executing it.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 37 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1278,7 +1279,7 @@ trust it, are yours.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 37 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1309,7 +1310,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 11: Your reproducible package {background-color="#1a1a19" .divider}
+## Milestone 11: Your reproducible package {background-color="#1a1a19" .divider data-menu-title="MILESTONE 11 — Milestone 11: Your reproducible package"}
 
 ::: {.kicker}
 
@@ -1324,7 +1325,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M11 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -1345,7 +1346,7 @@ Milestone 11
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M11 · What you bring"}
 
 ::: {.kicker}
 
@@ -1361,7 +1362,7 @@ Milestone 11 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M11 · The practice"}
 
 ::: {.kicker}
 
@@ -1379,7 +1380,7 @@ Milestone 11 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M11 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -1428,7 +1429,7 @@ Milestone 11 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M11 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -1452,7 +1453,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

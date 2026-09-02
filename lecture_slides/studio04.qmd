@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 4 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -67,7 +68,7 @@ out how it behaves before it costs you anything.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 4 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -112,7 +113,7 @@ assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 4 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -130,7 +131,7 @@ Studio 4 · Road map
 :::::
 
 
-## Model, Inquiry, Data Strategy, and Answer Strategy {background-color="#1a1a19" .divider}
+## Model, Inquiry, Data Strategy, and Answer Strategy {background-color="#1a1a19" .divider data-menu-title="CHAPTER 10 — Model, Inquiry, Data Strategy, and Answer Strategy"}
 
 ::: {.kicker}
 
@@ -145,7 +146,7 @@ the four parts of your design, and whether all four point at the same quantity
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 10 · The research decision"}
 
 ::: {.kicker}
 
@@ -167,7 +168,7 @@ harder call: whether those four parts actually point at the same thing.
 :::::
 
 
-## An analytics lead asks for the number first, then the route to it
+## An analytics lead asks for the number first, then the route to it {data-menu-title="Ch 10 · An analytics lead asks for the number first, then the route to it"}
 
 ::: {.kicker}
 
@@ -194,7 +195,7 @@ survive that question this morning.
 :::
 
 
-## Getting the four parts to agree on paper is the cheapest check you run
+## Getting the four parts to agree on paper is the cheapest check you run {data-menu-title="Ch 10 · Getting the four parts to agree on paper is the cheapest check you run"}
 
 ::: {.kicker}
 
@@ -226,7 +227,7 @@ the months of collection rather than after.
 :::
 
 
-## Any research design can be written as four parts, and the four have names
+## Any research design can be written as four parts, and the four have names {data-menu-title="Ch 10 · Any research design can be written as four parts, and the four have names"}
 
 ::: {.kicker}
 
@@ -291,7 +292,7 @@ project. All four are written down before any data exist.
 :::
 
 
-## Written for one recommender, each part is a single plain sentence
+## Written for one recommender, each part is a single plain sentence {data-menu-title="Ch 10 · Written for one recommender, each part is a single plain sentence"}
 
 ::: {.kicker}
 
@@ -320,7 +321,7 @@ inquiries and you have to pick the one you would defend first.
 :::
 
 
-## The dashed arrow is the check that matters
+## The dashed arrow is the check that matters {data-menu-title="Ch 10 · The dashed arrow is the check that matters"}
 
 ::: {.kicker}
 
@@ -357,7 +358,7 @@ why their own answer strategy reaches their own inquiry.
 :::
 
 
-## The four are not a checklist, and they have to align
+## The four are not a checklist, and they have to align {data-menu-title="Ch 10 · The four are not a checklist, and they have to align"}
 
 ::: {.kicker}
 
@@ -384,7 +385,7 @@ before collection.
 :::
 
 
-## Your data do not get to rewrite your question
+## Your data do not get to rewrite your question {data-menu-title="Ch 10 · Your data do not get to rewrite your question"}
 
 ::: {.kicker}
 
@@ -414,7 +415,7 @@ be asserted.
 :::
 
 
-## Each listener has two accept rates; the inquiry is their average difference
+## Each listener has two accept rates; the inquiry is their average difference {data-menu-title="Ch 10 · Each listener has two accept rates; the inquiry is their average difference"}
 
 ::: {.kicker}
 
@@ -442,7 +443,7 @@ everything after it has to reach that number.
 :::
 
 
-## Random bucketing is what licenses the word "causes"
+## Random bucketing is what licenses the word "causes" {data-menu-title="Ch 10 · Random bucketing is what licenses the word “causes”"}
 
 ::: {.kicker}
 
@@ -468,7 +469,7 @@ version is no longer anything about the person.
 :::
 
 
-## The shortcut changes the claim, not the question
+## The shortcut changes the claim, not the question {data-menu-title="Ch 10 · The shortcut changes the claim, not the question"}
 
 ::: {.kicker}
 
@@ -497,7 +498,7 @@ design-declaration literature (Blair et al. 2023).
 :::
 
 
-## Same model, same inquiry: watch the second number miss the truth
+## Same model, same inquiry: watch the second number miss the truth {data-menu-title="Ch 10 · Same model, same inquiry: watch the second number miss the truth"}
 
 ::: {.kicker}
 
@@ -551,7 +552,7 @@ moved. Only the data strategy did, and that was enough to lose the answer.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 10 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -585,7 +586,7 @@ rate. That open arrow is the confounder the fluent draft never mentioned.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 10 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -614,7 +615,7 @@ claim that follows, is research judgment you cannot hand off.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 10 · It is your turn"}
 
 ::: {.kicker}
 
@@ -645,7 +646,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Uncertainty Before You Need It {background-color="#1a1a19" .divider}
+## Uncertainty Before You Need It {background-color="#1a1a19" .divider data-menu-title="CHAPTER 11 — Uncertainty Before You Need It"}
 
 ::: {.kicker}
 
@@ -654,7 +655,7 @@ Lesson 2 of this studio · Chapter 11
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 11 · The research decision"}
 
 ::: {.kicker}
 
@@ -676,7 +677,7 @@ others are allowed to mean.
 :::::
 
 
-## Your number is one draw from a procedure
+## Your number is one draw from a procedure {data-menu-title="Ch 11 · Your number is one draw from a procedure"}
 
 ::: {.kicker}
 
@@ -710,7 +711,7 @@ here is vocabulary for talking about its shape.
 :::
 
 
-## You run your study once; the pile describes the procedure
+## You run your study once; the pile describes the procedure {data-menu-title="Ch 11 · You run your study once; the pile describes the procedure"}
 
 ::: {.kicker}
 
@@ -739,7 +740,7 @@ repeated answers. Meet the pile first and those words stop being jargon.
 :::
 
 
-## The estimand does not move. The estimate does.
+## The estimand does not move. The estimate does. {data-menu-title="Ch 11 · The estimand does not move. The estimate does."}
 
 ::: {.kicker}
 
@@ -798,7 +799,7 @@ estimate are common statistical usage rather than anyone's coinage.
 :::
 
 
-## Repeat the recipe and the answers form a shape
+## Repeat the recipe and the answers form a shape {data-menu-title="Ch 11 · Repeat the recipe and the answers form a shape"}
 
 ::: {.kicker}
 
@@ -825,7 +826,7 @@ which is a number you only ever know because you built the town yourself.
 :::
 
 
-## Watch two honest surveys disagree
+## Watch two honest surveys disagree {data-menu-title="Ch 11 · Watch two honest surveys disagree"}
 
 ::: {.kicker}
 
@@ -871,7 +872,7 @@ printout. The last three prints are the ones the rest of the chapter leans on.
 :::
 
 
-## Those three numbers are what uncertainty language exists to say
+## Those three numbers are what uncertainty language exists to say {data-menu-title="Ch 11 · Those three numbers are what uncertainty language exists to say"}
 
 ::: {.kicker}
 
@@ -900,7 +901,7 @@ name.
 :::
 
 
-## Width is not aim, and a 95% recipe is not a 95% range
+## Width is not aim, and a 95% recipe is not a 95% range {data-menu-title="Ch 11 · Width is not aim, and a 95% recipe is not a 95% range"}
 
 ::: {.kicker}
 
@@ -948,7 +949,7 @@ procedure.
 :::
 
 
-## The intervals caught the truth 94.8% of the time
+## The intervals caught the truth 94.8% of the time {data-menu-title="Ch 11 · The intervals caught the truth 94.8% of the time"}
 
 ::: {.kicker}
 
@@ -989,7 +990,7 @@ does not prove the world obeys them.
 :::
 
 
-## Fixed numbers do not have chances
+## Fixed numbers do not have chances {data-menu-title="Ch 11 · Fixed numbers do not have chances"}
 
 ::: {.kicker}
 
@@ -1023,7 +1024,7 @@ the 95% property is the recipe that produced the range.
 :::
 
 
-## Same 60 households, and everything about the uncertainty changed
+## Same 60 households, and everything about the uncertainty changed {data-menu-title="Ch 11 · Same 60 households, and everything about the uncertainty changed"}
 
 ::: {.kicker}
 
@@ -1054,7 +1055,7 @@ flats is still 60 households from the same population.
 :::
 
 
-## Flats in one building already tell you about each other
+## Flats in one building already tell you about each other {data-menu-title="Ch 11 · Flats in one building already tell you about each other"}
 
 ::: {.kicker}
 
@@ -1082,7 +1083,7 @@ something you know before you see a single number.
 :::
 
 
-## The naive interval promised 95% and delivered 63.2%
+## The naive interval promised 95% and delivered 63.2% {data-menu-title="Ch 11 · The naive interval promised 95% and delivered 63.2%"}
 
 ::: {.kicker}
 
@@ -1136,7 +1137,7 @@ multiplier.
 :::
 
 
-## Sixty flats in 12 buildings carry roughly the information of 14 independent flats
+## Sixty flats in 12 buildings carry roughly the information of 14 independent flats {data-menu-title="Ch 11 · Sixty flats in 12 buildings carry roughly the information of 14 independent flats"}
 
 ::: {.kicker}
 
@@ -1165,7 +1166,7 @@ refuses to give.
 :::
 
 
-## Extra buildings buy precision; extra flats inside one buy little
+## Extra buildings buy precision; extra flats inside one buy little {data-menu-title="Ch 11 · Extra buildings buy precision; extra flats inside one buy little"}
 
 ::: {.kicker}
 
@@ -1203,7 +1204,7 @@ range.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 11 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1225,7 +1226,7 @@ fluently and confidently:
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 11 · How it failed"}
 
 ::: {.kicker}
 
@@ -1259,7 +1260,7 @@ sentence could be repeated, the sentence is about the wrong thing.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 11 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1284,7 +1285,7 @@ Chapter 11
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 11 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1315,7 +1316,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Declaring and Diagnosing a Research Design {background-color="#1a1a19" .divider}
+## Declaring and Diagnosing a Research Design {background-color="#1a1a19" .divider data-menu-title="CHAPTER 12 — Declaring and Diagnosing a Research Design"}
 
 ::: {.kicker}
 
@@ -1331,7 +1332,7 @@ collecting data
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 12 · The research decision"}
 
 ::: {.kicker}
 
@@ -1353,7 +1354,7 @@ fix it, or narrow what you promised.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 12 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -1409,7 +1410,7 @@ the book gives them.
 :::
 
 
-## A methodologist asks how often your design would work
+## A methodologist asks how often your design would work {data-menu-title="Ch 12 · A methodologist asks how often your design would work"}
 
 ::: {.kicker}
 
@@ -1436,7 +1437,7 @@ chapter fixes.
 :::
 
 
-## A design can read beautifully and still come back empty
+## A design can read beautifully and still come back empty {data-menu-title="Ch 12 · A design can read beautifully and still come back empty"}
 
 ::: {.kicker}
 
@@ -1464,7 +1465,7 @@ can actually answer your question.
 :::
 
 
-## Declaring means writing your design so a computer can run it
+## Declaring means writing your design so a computer can run it {data-menu-title="Ch 12 · Declaring means writing your design so a computer can run it"}
 
 ::: {.kicker}
 
@@ -1491,7 +1492,7 @@ run your declaration and get an estimate, it is not declared yet.
 :::
 
 
-## Diagnosing means watching the estimate behave across many runs
+## Diagnosing means watching the estimate behave across many runs {data-menu-title="Ch 12 · Diagnosing means watching the estimate behave across many runs"}
 
 ::: {.kicker}
 
@@ -1519,7 +1520,7 @@ it.
 :::
 
 
-## Bias counts direction, so misses that cancel are not bias
+## Bias counts direction, so misses that cancel are not bias {data-menu-title="Ch 12 · Bias counts direction, so misses that cancel are not bias"}
 
 ::: {.kicker}
 
@@ -1547,7 +1548,7 @@ that all lean one way tell you it is tilted.
 :::
 
 
-## Variance is the one problem size reliably helps
+## Variance is the one problem size reliably helps {data-menu-title="Ch 12 · Variance is the one problem size reliably helps"}
 
 ::: {.kicker}
 
@@ -1574,7 +1575,7 @@ fixes nothing at all.
 :::
 
 
-## Power means nothing until you say how you would decide
+## Power means nothing until you say how you would decide {data-menu-title="Ch 12 · Power means nothing until you say how you would decide"}
 
 ::: {.kicker}
 
@@ -1605,7 +1606,7 @@ world makes noise. Report the whole card beside the number.
 :::
 
 
-## One number is never the whole diagnosis
+## One number is never the whole diagnosis {data-menu-title="Ch 12 · One number is never the whole diagnosis"}
 
 ::: {.kicker}
 
@@ -1666,7 +1667,7 @@ here you only need to know that a diagnosis can ask about them.
 :::
 
 
-## Redesign changes exactly one part, then diagnoses again
+## Redesign changes exactly one part, then diagnoses again {data-menu-title="Ch 12 · Redesign changes exactly one part, then diagnoses again"}
 
 ::: {.kicker}
 
@@ -1694,7 +1695,7 @@ answer.
 :::
 
 
-## The call to run, revise, or narrow sits outside the loop
+## The call to run, revise, or narrow sits outside the loop {data-menu-title="Ch 12 · The call to run, revise, or narrow sits outside the loop"}
 
 ::: {.kicker}
 
@@ -1733,7 +1734,7 @@ the loop, because no diagnosis can make it for you.
 :::
 
 
-## You set the button's true effect yourself, at 8 seconds saved
+## You set the button's true effect yourself, at 8 seconds saved {data-menu-title="Ch 12 · You set the button's true effect yourself, at 8 seconds saved"}
 
 ::: {.kicker}
 
@@ -1761,7 +1762,7 @@ answer was.
 :::
 
 
-## The pilot is honest and useless at once
+## The pilot is honest and useless at once {data-menu-title="Ch 12 · The pilot is honest and useless at once"}
 
 ::: {.kicker}
 
@@ -1788,7 +1789,7 @@ what they would change, and hold their answer against the next slide.
 :::
 
 
-## Size cured the variance and did nothing for the opt-in design
+## Size cured the variance and did nothing for the opt-in design {data-menu-title="Ch 12 · Size cured the variance and did nothing for the opt-in design"}
 
 ::: {.kicker}
 
@@ -1817,7 +1818,7 @@ could explain it.
 :::
 
 
-## The bias column and the power column answer different questions
+## The bias column and the power column answer different questions {data-menu-title="Ch 12 · The bias column and the power column answer different questions"}
 
 ::: {.kicker}
 
@@ -1876,7 +1877,7 @@ the arm size or the opt-in rule, and watch which column moves.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 12 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1905,7 +1906,7 @@ the `plausible-but-wrong-method` failure, and your own diagnosis unmasks it.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 12 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1932,7 +1933,7 @@ worth months of your life anyway.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 12 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1963,7 +1964,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Research Ethics and Data Governance {background-color="#1a1a19" .divider}
+## Research Ethics and Data Governance {background-color="#1a1a19" .divider data-menu-title="CHAPTER 13 — Research Ethics and Data Governance"}
 
 ::: {.kicker}
 
@@ -1972,7 +1973,7 @@ Lesson 4 of this studio · Chapter 13
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 13 · The research decision"}
 
 ::: {.kicker}
 
@@ -1994,7 +1995,7 @@ analysis can repair.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 13 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -2050,7 +2051,7 @@ the book gives them.
 :::
 
 
-## This is the one mistake no later analysis can repair
+## This is the one mistake no later analysis can repair {data-menu-title="Ch 13 · This is the one mistake no later analysis can repair"}
 
 ::: {.kicker}
 
@@ -2080,7 +2081,7 @@ lighter review, not no review.
 :::
 
 
-## Someone else rules on your permission status
+## Someone else rules on your permission status {data-menu-title="Ch 13 · Someone else rules on your permission status"}
 
 ::: {.kicker}
 
@@ -2132,7 +2133,7 @@ and the job is to land on exactly one of them and write it down.
 :::
 
 
-## Your project lands on exactly one of four statuses
+## Your project lands on exactly one of four statuses {data-menu-title="Ch 13 · Your project lands on exactly one of four statuses"}
 
 ::: {.kicker}
 
@@ -2159,7 +2160,7 @@ project.
 :::
 
 
-## The determination turns on three questions, asked in order
+## The determination turns on three questions, asked in order {data-menu-title="Ch 13 · The determination turns on three questions, asked in order"}
 
 ::: {.kicker}
 
@@ -2191,7 +2192,7 @@ is an email; the cost of not asking is your project.
 :::
 
 
-## Six situations look exempt, and often are not
+## Six situations look exempt, and often are not {data-menu-title="Ch 13 · Six situations look exempt, and often are not"}
 
 ::: {.kicker}
 
@@ -2225,7 +2226,7 @@ not simplify the determination, it adds a party to the handling of the data.
 :::
 
 
-## Deleting names is not de-identification
+## Deleting names is not de-identification {data-menu-title="Ch 13 · Deleting names is not de-identification"}
 
 ::: {.kicker}
 
@@ -2252,7 +2253,7 @@ reproduce exactly. Before you run it, ask the room to predict how many of the
 :::
 
 
-## Four ordinary columns, and two in three respondents are unique
+## Four ordinary columns, and two in three respondents are unique {data-menu-title="Ch 13 · Four ordinary columns, and two in three respondents are unique"}
 
 ::: {.kicker}
 
@@ -2302,7 +2303,7 @@ year, country and age can find that person's answers.
 :::
 
 
-## The protection failed most for the least common characteristics
+## The protection failed most for the least common characteristics {data-menu-title="Ch 13 · The protection failed most for the least common characteristics"}
 
 ::: {.kicker}
 
@@ -2338,7 +2339,7 @@ of them is individually identifiable in a file described as anonymous.
 :::
 
 
-## The fix is fewer columns, decided before collection
+## The fix is fewer columns, decided before collection {data-menu-title="Ch 13 · The fix is fewer columns, decided before collection"}
 
 ::: {.kicker}
 
@@ -2366,7 +2367,7 @@ out the ones your analysis does not require.
 :::
 
 
-## A signature captures one moment. Consent is a condition you maintain.
+## A signature captures one moment. Consent is a condition you maintain. {data-menu-title="Ch 13 · A signature captures one moment. Consent is a condition you maintain."}
 
 ::: {.kicker}
 
@@ -2393,7 +2394,7 @@ which one your study needs, and tell participants the truth about it.
 :::
 
 
-## Pasting data into an AI tool can be a disclosure
+## Pasting data into an AI tool can be a disclosure {data-menu-title="Ch 13 · Pasting data into an AI tool can be a disclosure"}
 
 ::: {.kicker}
 
@@ -2423,7 +2424,7 @@ your pipeline just as well.
 :::
 
 
-## Check the tool before you paste, and report it if you slip
+## Check the tool before you paste, and report it if you slip {data-menu-title="Ch 13 · Check the tool before you paste, and report it if you slip"}
 
 ::: {.kicker}
 
@@ -2452,7 +2453,7 @@ do not assume that deleting the conversation undid it.
 :::
 
 
-## Four governance decisions you cannot retrofit
+## Four governance decisions you cannot retrofit {data-menu-title="Ch 13 · Four governance decisions you cannot retrofit"}
 
 ::: {.kicker}
 
@@ -2479,7 +2480,7 @@ are making whether or not you notice.
 :::
 
 
-## Four diagnoses, each with a tell you could have caught earlier
+## Four diagnoses, each with a tell you could have caught earlier {data-menu-title="Ch 13 · Four diagnoses, each with a tell you could have caught earlier"}
 
 ::: {.kicker}
 
@@ -2521,7 +2522,7 @@ people, so the answer is formal determination required, not cleared.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 13 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -2543,7 +2544,7 @@ will usually get a fluent, specific, reassuring answer:
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 13 · How it failed"}
 
 ::: {.kicker}
 
@@ -2577,7 +2578,7 @@ generate the questions. Take the questions to the person who decides.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 13 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -2602,7 +2603,7 @@ Chapter 13
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 13 · It is your turn"}
 
 ::: {.kicker}
 
@@ -2634,7 +2635,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 4: Your research contract, v0 {background-color="#1a1a19" .divider}
+## Milestone 4: Your research contract, v0 {background-color="#1a1a19" .divider data-menu-title="MILESTONE 4 — Milestone 4: Your research contract, v0"}
 
 ::: {.kicker}
 
@@ -2649,7 +2650,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M4 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -2670,7 +2671,7 @@ Milestone 4
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M4 · What you bring"}
 
 ::: {.kicker}
 
@@ -2688,7 +2689,7 @@ Milestone 4 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M4 · The practice"}
 
 ::: {.kicker}
 
@@ -2708,7 +2709,7 @@ Milestone 4 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M4 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -2757,7 +2758,7 @@ Milestone 4 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M4 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -2781,7 +2782,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

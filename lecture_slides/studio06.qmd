@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 6 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -67,7 +68,7 @@ they measure.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 6 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -101,7 +102,7 @@ assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 6 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -117,7 +118,7 @@ Studio 6 · Road map
 :::::
 
 
-## Data Provenance and Data Quality {background-color="#1a1a19" .divider}
+## Data Provenance and Data Quality {background-color="#1a1a19" .divider data-menu-title="CHAPTER 20 — Data Provenance and Data Quality"}
 
 ::: {.kicker}
 
@@ -133,7 +134,7 @@ project's weight
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 20 · The research decision"}
 
 ::: {.kicker}
 
@@ -156,7 +157,7 @@ specific use you have in mind, its quality.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 20 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -196,7 +197,7 @@ the book gives them.
 :::
 
 
-## Your advisor asks where the 72 percent came from
+## Your advisor asks where the 72 percent came from {data-menu-title="Ch 20 · Your advisor asks where the 72 percent came from"}
 
 ::: {.kicker}
 
@@ -229,7 +230,7 @@ which borrowed number in their own project would survive that question today.
 :::
 
 
-## Precision is not the same as trust
+## Precision is not the same as trust {data-menu-title="Ch 20 · Precision is not the same as trust"}
 
 ::: {.kicker}
 
@@ -257,7 +258,7 @@ two different tests, and a citation can pass the first and fail the second.
 :::
 
 
-## A turnout figure traces back to the office that certified the count
+## A turnout figure traces back to the office that certified the count {data-menu-title="Ch 20 · A turnout figure traces back to the office that certified the count"}
 
 ::: {.kicker}
 
@@ -285,7 +286,7 @@ rests.
 :::
 
 
-## One link produced the value. The rest copied it.
+## One link produced the value. The rest copied it. {data-menu-title="Ch 20 · One link produced the value. The rest copied it."}
 
 ::: {.kicker}
 
@@ -328,7 +329,7 @@ to be walked to its end before the number counts.
 :::
 
 
-## The same real number can be right for one question and wrong for yours
+## The same real number can be right for one question and wrong for yours {data-menu-title="Ch 20 · The same real number can be right for one question and wrong for yours"}
 
 ::: {.kicker}
 
@@ -357,7 +358,7 @@ covered the whole eligible population.
 :::
 
 
-## A file with no answers to those questions is not yet data
+## A file with no answers to those questions is not yet data {data-menu-title="Ch 20 · A file with no answers to those questions is not yet data"}
 
 ::: {.kicker}
 
@@ -385,7 +386,7 @@ collaborator handed them.
 :::
 
 
-## A citation you have not opened is a lead, not a source
+## A citation you have not opened is a lead, not a source {data-menu-title="Ch 20 · A citation you have not opened is a lead, not a source"}
 
 ::: {.kicker}
 
@@ -419,7 +420,7 @@ tool that handed it to you.
 :::
 
 
-## A source that looks entirely real is where the loop starts
+## A source that looks entirely real is where the loop starts {data-menu-title="Ch 20 · A source that looks entirely real is where the loop starts"}
 
 ::: {.kicker}
 
@@ -446,7 +447,7 @@ the lead the tool gave you into a source you can cite.
 :::
 
 
-## Provenance: search the exact title, then walk one link back
+## Provenance: search the exact title, then walk one link back {data-menu-title="Ch 20 · Provenance: search the exact title, then walk one link back"}
 
 ::: {.kicker}
 
@@ -473,7 +474,7 @@ looks like for the number their own headline claim leans on hardest.
 :::
 
 
-## Three denominators, three turnout numbers, one election
+## Three denominators, three turnout numbers, one election {data-menu-title="Ch 20 · Three denominators, three turnout numbers, one election"}
 
 ::: {.kicker}
 
@@ -501,7 +502,7 @@ comparable to another until you know which of the three you are holding.
 :::
 
 
-## When two documented sources disagree, the disagreement is the finding
+## When two documented sources disagree, the disagreement is the finding {data-menu-title="Ch 20 · When two documented sources disagree, the disagreement is the finding"}
 
 ::: {.kicker}
 
@@ -531,7 +532,7 @@ of data quality (Wang & Strong 1996).
 :::
 
 
-## One numerator, three denominators, and the spread the label decides
+## One numerator, three denominators, and the spread the label decides {data-menu-title="Ch 20 · One numerator, three denominators, and the spread the label decides"}
 
 ::: {.kicker}
 
@@ -582,7 +583,7 @@ denominator is not yet evidence.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 20 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -613,7 +614,7 @@ question stays open.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 20 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -639,7 +640,7 @@ supports.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 20 · It is your turn"}
 
 ::: {.kicker}
 
@@ -671,7 +672,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Measurement and Operationalization {background-color="#1a1a19" .divider}
+## Measurement and Operationalization {background-color="#1a1a19" .divider data-menu-title="CHAPTER 21 — Measurement and Operationalization"}
 
 ::: {.kicker}
 
@@ -687,7 +688,7 @@ about
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 21 · The research decision"}
 
 ::: {.kicker}
 
@@ -710,7 +711,7 @@ leaves out.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 21 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -758,7 +759,7 @@ the book gives them.
 :::
 
 
-## "Engaged" is a word. Which number did you record?
+## "Engaged" is a word. Which number did you record? {data-menu-title="Ch 21 · “Engaged” is a word. Which number did you record?"}
 
 ::: {.kicker}
 
@@ -792,7 +793,7 @@ quietly ignores.
 :::
 
 
-## Your finding is only as trustworthy as the swap
+## Your finding is only as trustworthy as the swap {data-menu-title="Ch 21 · Your finding is only as trustworthy as the swap"}
 
 ::: {.kicker}
 
@@ -820,7 +821,7 @@ machinery for doing that.
 :::
 
 
-## "Employee engagement" becomes the mean of one 1 to 7 item
+## "Employee engagement" becomes the mean of one 1 to 7 item {data-menu-title="Ch 21 · “Employee engagement” becomes the mean of one 1 to 7 item"}
 
 ::: {.kicker}
 
@@ -880,7 +881,7 @@ procedure to.
 :::
 
 
-## Validity belongs to a claim, not to the instrument
+## Validity belongs to a claim, not to the instrument {data-menu-title="Ch 21 · Validity belongs to a claim, not to the instrument"}
 
 ::: {.kicker}
 
@@ -910,7 +911,7 @@ this way, used for this purpose, with evidence behind it.
 :::
 
 
-## Reliability means nothing until you say what repeats
+## Reliability means nothing until you say what repeats {data-menu-title="Ch 21 · Reliability means nothing until you say what repeats"}
 
 ::: {.kicker}
 
@@ -938,7 +939,7 @@ support, and what a disagreement would mean if it appeared.
 :::
 
 
-## Split-half compares two halves of your items, on the same people
+## Split-half compares two halves of your items, on the same people {data-menu-title="Ch 21 · Split-half compares two halves of your items, on the same people"}
 
 ::: {.kicker}
 
@@ -967,7 +968,7 @@ number to the full-scale one.
 :::
 
 
-## You split items, never people
+## You split items, never people {data-menu-title="Ch 21 · You split items, never people"}
 
 ::: {.kicker}
 
@@ -995,7 +996,7 @@ section forbids the wrong one by name.
 :::
 
 
-## A bathroom scale is reliable and still a poor stand-in for fitness
+## A bathroom scale is reliable and still a poor stand-in for fitness {data-menu-title="Ch 21 · A bathroom scale is reliable and still a poor stand-in for fitness"}
 
 ::: {.kicker}
 
@@ -1022,7 +1023,7 @@ slide to point back to.
 :::
 
 
-## Sixteen sites, and one question about the flexible-scheduling pilot
+## Sixteen sites, and one question about the flexible-scheduling pilot {data-menu-title="Ch 21 · Sixteen sites, and one question about the flexible-scheduling pilot"}
 
 ::: {.kicker}
 
@@ -1050,7 +1051,7 @@ and not a neighboring one, for this reason.
 :::
 
 
-## Check reliability first, then name what the item ignores
+## Check reliability first, then name what the item ignores {data-menu-title="Ch 21 · Check reliability first, then name what the item ignores"}
 
 ::: {.kicker}
 
@@ -1079,7 +1080,7 @@ whole of engagement.
 :::
 
 
-## The number is real, and its meaning stops where the construct stops
+## The number is real, and its meaning stops where the construct stops {data-menu-title="Ch 21 · The number is real, and its meaning stops where the construct stops"}
 
 ::: {.kicker}
 
@@ -1107,7 +1108,7 @@ few words, and those words are the whole claim boundary.
 :::
 
 
-## Watch what the reliability number does not license
+## Watch what the reliability number does not license {data-menu-title="Ch 21 · Watch what the reliability number does not license"}
 
 ::: {.kicker}
 
@@ -1162,7 +1163,7 @@ quit. Ask what you would have to add to the study to move either of those.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 21 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1190,7 +1191,7 @@ answer.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 21 · How it failed"}
 
 ::: {.kicker}
 
@@ -1220,7 +1221,7 @@ You verify the construct, not the fluency of the paragraph that proposed it.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 21 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1247,7 +1248,7 @@ researcher's job, not the model's.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 21 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1279,7 +1280,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 6: Your data and measurement, governed {background-color="#1a1a19" .divider}
+## Milestone 6: Your data and measurement, governed {background-color="#1a1a19" .divider data-menu-title="MILESTONE 6 — Milestone 6: Your data and measurement, governed"}
 
 ::: {.kicker}
 
@@ -1294,7 +1295,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M6 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -1315,7 +1316,7 @@ Milestone 6
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M6 · What you bring"}
 
 ::: {.kicker}
 
@@ -1331,7 +1332,7 @@ Milestone 6 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M6 · The practice"}
 
 ::: {.kicker}
 
@@ -1350,7 +1351,7 @@ Milestone 6 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M6 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -1399,7 +1400,7 @@ Milestone 6 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M6 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -1423,7 +1424,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

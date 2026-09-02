@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 3 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -67,7 +68,7 @@ change your question.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 3 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -102,7 +103,7 @@ and how the artifact is assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 3 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -118,7 +119,7 @@ Studio 3 · Road map
 :::::
 
 
-## Research Builds on Research {background-color="#1a1a19" .divider}
+## Research Builds on Research {background-color="#1a1a19" .divider data-menu-title="CHAPTER 8 — Research Builds on Research"}
 
 ::: {.kicker}
 
@@ -133,7 +134,7 @@ which conversation your question joins, and which leads are worth your time
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 8 · The research decision"}
 
 ::: {.kicker}
 
@@ -154,7 +155,7 @@ and what gets dropped. Nothing on that list counts as evidence yet.
 :::::
 
 
-## An advisor circles one line in your first draft
+## An advisor circles one line in your first draft {data-menu-title="Ch 8 · An advisor circles one line in your first draft"}
 
 ::: {.kicker}
 
@@ -182,7 +183,7 @@ work the rest of the chapter sets up.
 :::
 
 
-## Miss the study, or build on a paper nobody wrote
+## Miss the study, or build on a paper nobody wrote {data-menu-title="Ch 8 · Miss the study, or build on a paper nobody wrote"}
 
 ::: {.kicker}
 
@@ -209,7 +210,7 @@ the gathering step, so nothing on your list counts as evidence yet.
 :::
 
 
-## You join a running argument; you do not found an island
+## You join a running argument; you do not found an island {data-menu-title="Ch 8 · You join a running argument; you do not found an island"}
 
 ::: {.kicker}
 
@@ -236,7 +237,7 @@ somewhere. Ask the room which argument their question would be joining.
 :::
 
 
-## Nothing you gathered is a source yet
+## Nothing you gathered is a source yet {data-menu-title="Ch 8 · Nothing you gathered is a source yet"}
 
 ::: {.kicker}
 
@@ -293,7 +294,7 @@ exists to prevent.
 :::
 
 
-## Two solid sources, walked both ways, quickly become ten
+## Two solid sources, walked both ways, quickly become ten {data-menu-title="Ch 8 · Two solid sources, walked both ways, quickly become ten"}
 
 ::: {.kicker}
 
@@ -321,7 +322,7 @@ found two steps back.
 :::
 
 
-## A real gap and an abandoned search look identical from your desk
+## A real gap and an abandoned search look identical from your desk {data-menu-title="Ch 8 · A real gap and an abandoned search look identical from your desk"}
 
 ::: {.kicker}
 
@@ -348,7 +349,7 @@ defend when someone asks how hard you looked.
 :::
 
 
-## The evidence map marks the spot no source reaches
+## The evidence map marks the spot no source reaches {data-menu-title="Ch 8 · The evidence map marks the spot no source reaches"}
 
 ::: {.kicker}
 
@@ -376,7 +377,7 @@ source you opened yourself.
 :::
 
 
-## One question, two parts: how much, and for whom
+## One question, two parts: how much, and for whom {data-menu-title="Ch 8 · One question, two parts: how much, and for whom"}
 
 ::: {.kicker}
 
@@ -401,7 +402,7 @@ example lives in the second part and not the first.
 :::
 
 
-## The journal in the AI's citation does not exist
+## The journal in the AI's citation does not exist {data-menu-title="Ch 8 · The journal in the AI's citation does not exist"}
 
 ::: {.kicker}
 
@@ -429,7 +430,7 @@ site, and four minutes settled it.
 :::
 
 
-## One retrieved review becomes six real sources in an hour
+## One retrieved review becomes six real sources in an hour {data-menu-title="Ch 8 · One retrieved review becomes six real sources in an hour"}
 
 ::: {.kicker}
 
@@ -456,7 +457,7 @@ person brought to class.
 :::
 
 
-## The disagreement is the live edge of the field
+## The disagreement is the live edge of the field {data-menu-title="Ch 8 · The disagreement is the live edge of the field"}
 
 ::: {.kicker}
 
@@ -483,7 +484,7 @@ as a replacement for database searching.
 :::
 
 
-## The broad question is no gap; the narrow one may be
+## The broad question is no gap; the narrow one may be {data-menu-title="Ch 8 · The broad question is no gap; the narrow one may be"}
 
 ::: {.kicker}
 
@@ -511,7 +512,7 @@ retrieval that comes up empty earns the word.
 :::
 
 
-## Six records, and the one variable behind the disagreement
+## Six records, and the one variable behind the disagreement {data-menu-title="Ch 8 · Six records, and the one variable behind the disagreement"}
 
 ::: {.kicker}
 
@@ -558,7 +559,7 @@ want to open first, and why.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 8 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -586,7 +587,7 @@ otherwise.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 8 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -610,7 +611,7 @@ follows from those two. An AI can point; it cannot certify.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 8 · It is your turn"}
 
 ::: {.kicker}
 
@@ -641,7 +642,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Finding and Verifying Prior Evidence {background-color="#1a1a19" .divider}
+## Finding and Verifying Prior Evidence {background-color="#1a1a19" .divider data-menu-title="CHAPTER 9 — Finding and Verifying Prior Evidence"}
 
 ::: {.kicker}
 
@@ -657,7 +658,7 @@ is a real gap
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 9 · The research decision"}
 
 ::: {.kicker}
 
@@ -678,7 +679,7 @@ your map is a genuine gap or a search you stopped too early.
 :::::
 
 
-## Your advisor asks for the conversation, not a pile of summaries
+## Your advisor asks for the conversation, not a pile of summaries {data-menu-title="Ch 9 · Your advisor asks for the conversation, not a pile of summaries"}
 
 ::: {.kicker}
 
@@ -704,7 +705,7 @@ asked you that today, could you answer it for your project?
 :::
 
 
-## Two ways to get it wrong, and both are expensive
+## Two ways to get it wrong, and both are expensive {data-menu-title="Ch 9 · Two ways to get it wrong, and both are expensive"}
 
 ::: {.kicker}
 
@@ -733,7 +734,7 @@ end.
 :::
 
 
-## A field is a running argument, and your job is to join it
+## A field is a running argument, and your job is to join it {data-menu-title="Ch 9 · A field is a running argument, and your job is to join it"}
 
 ::: {.kicker}
 
@@ -761,7 +762,7 @@ your own.
 :::
 
 
-## A lead stays a lead until you retrieve and read it yourself
+## A lead stays a lead until you retrieve and read it yourself {data-menu-title="Ch 9 · A lead stays a lead until you retrieve and read it yourself"}
 
 ::: {.kicker}
 
@@ -806,7 +807,7 @@ of their current references they have personally opened.
 :::
 
 
-## Real and mischaracterized are two separate checks
+## Real and mischaracterized are two separate checks {data-menu-title="Ch 9 · Real and mischaracterized are two separate checks"}
 
 ::: {.kicker}
 
@@ -851,7 +852,7 @@ retrieval catches it, only reading the results section does.
 :::
 
 
-## Two solid sources, snowballed both ways, become ten
+## Two solid sources, snowballed both ways, become ten {data-menu-title="Ch 9 · Two solid sources, snowballed both ways, become ten"}
 
 ::: {.kicker}
 
@@ -876,7 +877,7 @@ for one backward and one forward link from each verified source.
 :::
 
 
-## You earn the word gap only after real sources stay silent
+## You earn the word gap only after real sources stay silent {data-menu-title="Ch 9 · You earn the word gap only after real sources stay silent"}
 
 ::: {.kicker}
 
@@ -921,7 +922,7 @@ Writing "my search is unfinished" is an honest result, not a failure.
 :::
 
 
-## Biochar in sandy fields, and a citation that is nowhere
+## Biochar in sandy fields, and a citation that is nowhere {data-menu-title="Ch 9 · Biochar in sandy fields, and a citation that is nowhere"}
 
 ::: {.kicker}
 
@@ -948,7 +949,7 @@ detail is not evidence of existence.
 :::
 
 
-## A missing study is not proof that nobody has tested it
+## A missing study is not proof that nobody has tested it {data-menu-title="Ch 9 · A missing study is not proof that nobody has tested it"}
 
 ::: {.kicker}
 
@@ -976,7 +977,7 @@ is what keeps the verified column honest.
 :::
 
 
-## Four retrieved sources, snowballed, and a gap you can defend
+## Four retrieved sources, snowballed, and a gap you can defend {data-menu-title="Ch 9 · Four retrieved sources, snowballed, and a gap you can defend"}
 
 ::: {.kicker}
 
@@ -1003,7 +1004,7 @@ exactly what makes it defensible in front of the advisor from the first slide.
 :::
 
 
-## Twelve leads, four in the verified column
+## Twelve leads, four in the verified column {data-menu-title="Ch 9 · Twelve leads, four in the verified column"}
 
 ::: {.kicker}
 
@@ -1049,7 +1050,7 @@ room what their own twelve would look like today.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 9 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1078,7 +1079,7 @@ ledger. The fluency was the trap; the empty search result is the tell.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 9 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1104,7 +1105,7 @@ point; only you can vouch.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 9 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1136,7 +1137,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 3: Your evidence base {background-color="#1a1a19" .divider}
+## Milestone 3: Your evidence base {background-color="#1a1a19" .divider data-menu-title="MILESTONE 3 — Milestone 3: Your evidence base"}
 
 ::: {.kicker}
 
@@ -1151,7 +1152,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M3 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -1172,7 +1173,7 @@ Milestone 3
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M3 · What you bring"}
 
 ::: {.kicker}
 
@@ -1188,7 +1189,7 @@ Milestone 3 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M3 · The practice"}
 
 ::: {.kicker}
 
@@ -1206,7 +1207,7 @@ Milestone 3 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M3 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -1255,7 +1256,7 @@ Milestone 3 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M3 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -1279,7 +1280,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

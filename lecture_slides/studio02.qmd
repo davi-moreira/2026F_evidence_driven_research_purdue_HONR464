@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 2 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -68,7 +69,7 @@ will answer.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 2 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -110,7 +111,7 @@ artifact is assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 2 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -130,7 +131,7 @@ Studio 2 · Road map
 :::::
 
 
-## AI Is Your Arm, Not Your Brain {background-color="#1a1a19" .divider}
+## AI Is Your Arm, Not Your Brain {background-color="#1a1a19" .divider data-menu-title="CHAPTER 2 — AI Is Your Arm, Not Your Brain"}
 
 ::: {.kicker}
 
@@ -146,7 +147,7 @@ evidence
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 2 · The research decision"}
 
 ::: {.kicker}
 
@@ -167,7 +168,7 @@ result.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 2 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -207,7 +208,7 @@ the book gives them.
 :::
 
 
-## A CPA's signature says: I checked this, and I will answer for it
+## A CPA's signature says: I checked this, and I will answer for it {data-menu-title="Ch 2 · A CPA's signature says: I checked this, and I will answer for it"}
 
 ::: {.kicker}
 
@@ -234,7 +235,7 @@ who, in their own project, would be the person holding the pen.
 :::
 
 
-## A tool cannot sign your work. You can.
+## A tool cannot sign your work. You can. {data-menu-title="Ch 2 · A tool cannot sign your work. You can."}
 
 ::: {.kicker}
 
@@ -261,7 +262,7 @@ evidence. Speed is not the issue here. Answerability is.
 :::
 
 
-## The arm reaches. It does not decide what is true.
+## The arm reaches. It does not decide what is true. {data-menu-title="Ch 2 · The arm reaches. It does not decide what is true."}
 
 ::: {.kicker}
 
@@ -288,7 +289,7 @@ you run on every number before the summary counts for anything.
 :::
 
 
-## Verification runs by a method outside the model
+## Verification runs by a method outside the model {data-menu-title="Ch 2 · Verification runs by a method outside the model"}
 
 ::: {.kicker}
 
@@ -314,7 +315,7 @@ model, which rules out asking the same tool whether it was right.
 :::
 
 
-## A wrong answer looks exactly like a right one
+## A wrong answer looks exactly like a right one {data-menu-title="Ch 2 · A wrong answer looks exactly like a right one"}
 
 ::: {.kicker}
 
@@ -357,7 +358,7 @@ filter. Retrievability is.
 :::
 
 
-## Four calls stay yours, however good the tool gets
+## Four calls stay yours, however good the tool gets {data-menu-title="Ch 2 · Four calls stay yours, however good the tool gets"}
 
 ::: {.kicker}
 
@@ -391,7 +392,7 @@ willing to defend, and defending is not a task you can hand out.
 :::
 
 
-## Ask, then Verify, then Document
+## Ask, then Verify, then Document {data-menu-title="Ch 2 · Ask, then Verify, then Document"}
 
 ::: {.kicker}
 
@@ -417,7 +418,7 @@ reading your work later, including you.
 :::
 
 
-## The ledger opens now, and backfills what came before
+## The ledger opens now, and backfills what came before {data-menu-title="Ch 2 · The ledger opens now, and backfills what came before"}
 
 ::: {.kicker}
 
@@ -446,7 +447,7 @@ products are verified. That is why the ledger opens here rather than earlier.
 :::
 
 
-## A 2019 menu price and a 2025 price are not comparable as they stand
+## A 2019 menu price and a 2025 price are not comparable as they stand {data-menu-title="Ch 2 · A 2019 menu price and a 2025 price are not comparable as they stand"}
 
 ::: {.kicker}
 
@@ -473,7 +474,7 @@ about which price index fits a question about what households pay.
 :::
 
 
-## Sort the work before you ask
+## Sort the work before you ask {data-menu-title="Ch 2 · Sort the work before you ask"}
 
 ::: {.kicker}
 
@@ -501,7 +502,7 @@ not a result, and it arrived from the delegated column, not the kept one.
 :::
 
 
-## Recompute it yourself, or it was never evidence
+## Recompute it yourself, or it was never evidence {data-menu-title="Ch 2 · Recompute it yourself, or it was never evidence"}
 
 ::: {.kicker}
 
@@ -529,7 +530,7 @@ could not be found.
 :::
 
 
-## The code takes the index on faith, exactly as the tool did
+## The code takes the index on faith, exactly as the tool did {data-menu-title="Ch 2 · The code takes the index on faith, exactly as the tool did"}
 
 ::: {.kicker}
 
@@ -574,7 +575,7 @@ inputs still produces an invented answer.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 2 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -599,7 +600,7 @@ number is not on that page.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 2 · How it failed"}
 
 ::: {.kicker}
 
@@ -629,7 +630,7 @@ document.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 2 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -655,7 +656,7 @@ job.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 2 · It is your turn"}
 
 ::: {.kicker}
 
@@ -685,7 +686,7 @@ step carries live in the companion notebook.
 :::
 
 
-## You as a Research Director {background-color="#1a1a19" .divider}
+## You as a Research Director {background-color="#1a1a19" .divider data-menu-title="CHAPTER 3 — You as a Research Director"}
 
 ::: {.kicker}
 
@@ -701,7 +702,7 @@ check yourself, and which never leave your hands at all
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 3 · The research decision"}
 
 ::: {.kicker}
 
@@ -723,7 +724,7 @@ it, and you defend the placements one line at a time.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 3 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -763,7 +764,7 @@ the book gives them.
 :::
 
 
-## A lab head briefs a new hire on where the line sits
+## A lab head briefs a new hire on where the line sits {data-menu-title="Ch 3 · A lab head briefs a new hire on where the line sits"}
 
 ::: {.kicker}
 
@@ -800,7 +801,7 @@ would find hardest to hold onto when a tool offers to do it for them.
 :::
 
 
-## The risk is drift, not the routine work
+## The risk is drift, not the routine work {data-menu-title="Ch 3 · The risk is drift, not the routine work"}
 
 ::: {.kicker}
 
@@ -829,7 +830,7 @@ planned to hand over.
 :::
 
 
-## A director assigns the work and still answers for it
+## A director assigns the work and still answers for it {data-menu-title="Ch 3 · A director assigns the work and still answers for it"}
 
 ::: {.kicker}
 
@@ -881,7 +882,7 @@ but one.
 :::
 
 
-## Two buckets you may hand out, and they are not the same bucket
+## Two buckets you may hand out, and they are not the same bucket {data-menu-title="Ch 3 · Two buckets you may hand out, and they are not the same bucket"}
 
 ::: {.kicker}
 
@@ -910,7 +911,7 @@ each bucket, and make them say why.
 :::
 
 
-## Never delegate names the science itself
+## Never delegate names the science itself {data-menu-title="Ch 3 · Never delegate names the science itself"}
 
 ::: {.kicker}
 
@@ -939,7 +940,7 @@ capable", and why a better model next year changes nothing about this list.
 :::
 
 
-## A loop you did not watch is not a loop you verified
+## A loop you did not watch is not a loop you verified {data-menu-title="Ch 3 · A loop you did not watch is not a loop you verified"}
 
 ::: {.kicker}
 
@@ -968,7 +969,7 @@ because you now have a reason to want it to be right.
 :::
 
 
-## Does a food preservative slow E. coli growth?
+## Does a food preservative slow E. coli growth? {data-menu-title="Ch 3 · Does a food preservative slow E. coli growth?"}
 
 ::: {.kicker}
 
@@ -996,7 +997,7 @@ the end is entirely about what this particular measure licenses you to say.
 :::
 
 
-## Safe to delegate: one glance catches the mistake
+## Safe to delegate: one glance catches the mistake {data-menu-title="Ch 3 · Safe to delegate: one glance catches the mistake"}
 
 ::: {.kicker}
 
@@ -1024,7 +1025,7 @@ would look like.
 :::
 
 
-## Delegate then verify: name the check before you hand it out
+## Delegate then verify: name the check before you hand it out {data-menu-title="Ch 3 · Delegate then verify: name the check before you hand it out"}
 
 ::: {.kicker}
 
@@ -1053,7 +1054,7 @@ claims.
 :::
 
 
-## No tool decides what "inhibits" means here
+## No tool decides what "inhibits" means here {data-menu-title="Ch 3 · No tool decides what “inhibits” means here"}
 
 ::: {.kicker}
 
@@ -1082,7 +1083,7 @@ afterwards.
 :::
 
 
-## Run it, change one input, and watch a sentence stop being true
+## Run it, change one input, and watch a sentence stop being true {data-menu-title="Ch 3 · Run it, change one input, and watch a sentence stop being true"}
 
 ::: {.kicker}
 
@@ -1137,7 +1138,7 @@ asking for.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 3 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1167,7 +1168,7 @@ nothing real supports it. The row goes back where it belongs.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 3 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1193,7 +1194,7 @@ director.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 3 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1224,7 +1225,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend {background-color="#1a1a19" .divider}
+## Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend {background-color="#1a1a19" .divider data-menu-title="CHAPTER 4 — Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend"}
 
 ::: {.kicker}
 
@@ -1240,7 +1241,7 @@ checklist every single time
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 4 · The research decision"}
 
 ::: {.kicker}
 
@@ -1263,7 +1264,7 @@ seven-step checklist every time.
 :::::
 
 
-## A lift you cannot reproduce is a rumor
+## A lift you cannot reproduce is a rumor {data-menu-title="Ch 4 · A lift you cannot reproduce is a rumor"}
 
 ::: {.kicker}
 
@@ -1296,7 +1297,7 @@ AI tool handed them.
 :::
 
 
-## Paste the output and you have signed your name to a guess
+## Paste the output and you have signed your name to a guess {data-menu-title="Ch 4 · Paste the output and you have signed your name to a guess"}
 
 ::: {.kicker}
 
@@ -1323,7 +1324,7 @@ never have to reconstruct the answer from memory.
 :::
 
 
-## SDIIVDD is Ask, Verify, Document opened up
+## SDIIVDD is Ask, Verify, Document opened up {data-menu-title="Ch 4 · SDIIVDD is Ask, Verify, Document opened up"}
 
 ::: {.kicker}
 
@@ -1389,7 +1390,7 @@ but because the item you would have skipped is the one that bites.
 :::
 
 
-## The first four steps happen before you believe anything
+## The first four steps happen before you believe anything {data-menu-title="Ch 4 · The first four steps happen before you believe anything"}
 
 ::: {.kicker}
 
@@ -1419,7 +1420,7 @@ controls were excluded.
 :::
 
 
-## The last three steps are what make the result yours
+## The last three steps are what make the result yours {data-menu-title="Ch 4 · The last three steps are what make the result yours"}
 
 ::: {.kicker}
 
@@ -1448,7 +1449,7 @@ because that is what the evidence covers.
 :::
 
 
-## Specify and Defend are the human bookends
+## Specify and Defend are the human bookends {data-menu-title="Ch 4 · Specify and Defend are the human bookends"}
 
 ::: {.kicker}
 
@@ -1476,7 +1477,7 @@ had nothing holding it in place.
 :::
 
 
-## The middle four steps are a loop, not a straight line
+## The middle four steps are a loop, not a straight line {data-menu-title="Ch 4 · The middle four steps are a loop, not a straight line"}
 
 ::: {.kicker}
 
@@ -1504,7 +1505,7 @@ choosing stays yours.
 :::
 
 
-## When the tool runs the loop, your checks happen only if you insist
+## When the tool runs the loop, your checks happen only if you insist {data-menu-title="Ch 4 · When the tool runs the loop, your checks happen only if you insist"}
 
 ::: {.kicker}
 
@@ -1532,7 +1533,7 @@ check on the final number, before you say anything in your own name.
 :::
 
 
-## 126,000 conversations, and the same seven steps
+## 126,000 conversations, and the same seven steps {data-menu-title="Ch 4 · 126,000 conversations, and the same seven steps"}
 
 ::: {.kicker}
 
@@ -1563,7 +1564,7 @@ and read the raw answers back to flag the ones that broke the pattern.
 :::
 
 
-## Scale is not rigor
+## Scale is not rigor {data-menu-title="Ch 4 · Scale is not rigor"}
 
 ::: {.kicker}
 
@@ -1592,7 +1593,7 @@ still rest with the seven researchers whose names are on the paper.
 :::
 
 
-## A sale week charged version A a crowd version B never met
+## A sale week charged version A a crowd version B never met {data-menu-title="Ch 4 · A sale week charged version A a crowd version B never met"}
 
 ::: {.kicker}
 
@@ -1622,7 +1623,7 @@ spelled out: 40 purchases out of 1,000 visits is 4 percent.
 :::
 
 
-## Two rows, one log, and only one survives Verify
+## Two rows, one log, and only one survives Verify {data-menu-title="Ch 4 · Two rows, one log, and only one survives Verify"}
 
 ::: {.kicker}
 
@@ -1669,7 +1670,7 @@ then read the two printed lines against each other.
 :::
 
 
-## Defend states the result and what it does not establish
+## Defend states the result and what it does not establish {data-menu-title="Ch 4 · Defend states the result and what it does not establish"}
 
 ::: {.kicker}
 
@@ -1699,7 +1700,7 @@ tool did the typing. You did the research.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 4 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1726,7 +1727,7 @@ the other never met.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 4 · How it failed"}
 
 ::: {.kicker}
 
@@ -1754,7 +1755,7 @@ You verify the number, not the paragraph about the number.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 4 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1780,7 +1781,7 @@ yours.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 4 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1811,7 +1812,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Research Responsibility and Intellectual Ownership {background-color="#1a1a19" .divider}
+## Research Responsibility and Intellectual Ownership {background-color="#1a1a19" .divider data-menu-title="CHAPTER 5 — Research Responsibility and Intellectual Ownership"}
 
 ::: {.kicker}
 
@@ -1827,7 +1828,7 @@ what you tell your reader about how each one was made
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 5 · The research decision"}
 
 ::: {.kicker}
 
@@ -1849,7 +1850,7 @@ whatever tool helped.
 :::::
 
 
-## An editor does not ask which software wrote it
+## An editor does not ask which software wrote it {data-menu-title="Ch 5 · An editor does not ask which software wrote it"}
 
 ::: {.kicker}
 
@@ -1882,7 +1883,7 @@ name on something an AI helped write.
 :::
 
 
-## Your name goes on a poster, a note, and a defense
+## Your name goes on a poster, a note, and a defense {data-menu-title="Ch 5 · Your name goes on a poster, a note, and a defense"}
 
 ::: {.kicker}
 
@@ -1910,7 +1911,7 @@ control.
 :::
 
 
-## Ownership rests on accountability, and disclosure makes it visible
+## Ownership rests on accountability, and disclosure makes it visible {data-menu-title="Ch 5 · Ownership rests on accountability, and disclosure makes it visible"}
 
 ::: {.kicker}
 
@@ -1970,7 +1971,7 @@ all.
 :::
 
 
-## At your defense, the AI computed it is not an answer
+## At your defense, the AI computed it is not an answer {data-menu-title="Ch 5 · At your defense, the AI computed it is not an answer"}
 
 ::: {.kicker}
 
@@ -1998,7 +1999,7 @@ show. Ask what the second reply requires you to have kept while you worked.
 :::
 
 
-## Disclosure is not a confession; it protects you
+## Disclosure is not a confession; it protects you {data-menu-title="Ch 5 · Disclosure is not a confession; it protects you"}
 
 ::: {.kicker}
 
@@ -2024,7 +2025,7 @@ out which half of the example sentence is the tool's and which one is yours.
 :::
 
 
-## You rarely send one prompt anymore, so I used AI for analysis says nothing
+## You rarely send one prompt anymore, so I used AI for analysis says nothing {data-menu-title="Ch 5 · You rarely send one prompt anymore, so I used AI for analysis says nothing"}
 
 ::: {.kicker}
 
@@ -2052,7 +2053,7 @@ delegation, and whether they could write down what happened in cycle three.
 :::
 
 
-## An AI can list candidate measures; choosing the one you defend is yours
+## An AI can list candidate measures; choosing the one you defend is yours {data-menu-title="Ch 5 · An AI can list candidate measures; choosing the one you defend is yours"}
 
 ::: {.kicker}
 
@@ -2080,7 +2081,7 @@ closing rule is deliberately short, so say it as written.
 :::
 
 
-## Ten samples from the creek behind campus
+## Ten samples from the creek behind campus {data-menu-title="Ch 5 · Ten samples from the creek behind campus"}
 
 ::: {.kicker}
 
@@ -2107,7 +2108,7 @@ comes back to them.
 :::
 
 
-## The drafted paragraph reads like a finished result
+## The drafted paragraph reads like a finished result {data-menu-title="Ch 5 · The drafted paragraph reads like a finished result"}
 
 ::: {.kicker}
 
@@ -2140,7 +2141,7 @@ makes the sentence hard to question, which is exactly why it needs splitting.
 :::
 
 
-## Split it into pieces you can own
+## Split it into pieces you can own {data-menu-title="Ch 5 · Split it into pieces you can own"}
 
 ::: {.kicker}
 
@@ -2168,7 +2169,7 @@ someone asks how you know.
 :::
 
 
-## Run the one-minute check before you read the next line
+## Run the one-minute check before you read the next line {data-menu-title="Ch 5 · Run the one-minute check before you read the next line"}
 
 ::: {.kicker}
 
@@ -2209,7 +2210,7 @@ anything on this slide.
 :::
 
 
-## You own the corrected sentence; you would not have owned the original
+## You own the corrected sentence; you would not have owned the original {data-menu-title="Ch 5 · You own the corrected sentence; you would not have owned the original"}
 
 ::: {.kicker}
 
@@ -2238,7 +2239,7 @@ position, not only the book's.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 5 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -2265,7 +2266,7 @@ prevent.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 5 · How it failed"}
 
 ::: {.kicker}
 
@@ -2295,7 +2296,7 @@ your record.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 5 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -2320,7 +2321,7 @@ transfer.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 5 · It is your turn"}
 
 ::: {.kicker}
 
@@ -2351,7 +2352,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Choose Your Question's Kind and Reach {background-color="#1a1a19" .divider}
+## Choose Your Question's Kind and Reach {background-color="#1a1a19" .divider data-menu-title="CHAPTER 6 — Choose Your Question's Kind and Reach"}
 
 ::: {.kicker}
 
@@ -2367,7 +2368,7 @@ to hold
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 6 · The research decision"}
 
 ::: {.kicker}
 
@@ -2391,7 +2392,7 @@ declaration.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 6 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -2447,7 +2448,7 @@ the book gives them.
 :::
 
 
-## Two questions stand between you and any method
+## Two questions stand between you and any method {data-menu-title="Ch 6 · Two questions stand between you and any method"}
 
 ::: {.kicker}
 
@@ -2481,7 +2482,7 @@ harder to answer about your own project right now?
 :::
 
 
-## Misclassify the question and every later method aims wrong
+## Misclassify the question and every later method aims wrong {data-menu-title="Ch 6 · Misclassify the question and every later method aims wrong"}
 
 ::: {.kicker}
 
@@ -2509,7 +2510,7 @@ is why the placement comes before the design and not after it.
 :::
 
 
-## The first axis is kind: does answering need an intervention?
+## The first axis is kind: does answering need an intervention? {data-menu-title="Ch 6 · The first axis is kind: does answering need an intervention?"}
 
 ::: {.kicker}
 
@@ -2574,7 +2575,7 @@ the Social Sciences (Blair, Coppock, and Humphreys, 2023, ch. 7).
 :::
 
 
-## Prediction is descriptive, never a third kind
+## Prediction is descriptive, never a third kind {data-menu-title="Ch 6 · Prediction is descriptive, never a third kind"}
 
 ::: {.kicker}
 
@@ -2604,7 +2605,7 @@ the other three are wrong for it.
 :::
 
 
-## Causal questions have reach too, and it changes the question
+## Causal questions have reach too, and it changes the question {data-menu-title="Ch 6 · Causal questions have reach too, and it changes the question"}
 
 ::: {.kicker}
 
@@ -2632,7 +2633,7 @@ you want.
 :::
 
 
-## Your data never change what kind of question you asked
+## Your data never change what kind of question you asked {data-menu-title="Ch 6 · Your data never change what kind of question you asked"}
 
 ::: {.kicker}
 
@@ -2660,7 +2661,7 @@ design problem into a false claim.
 :::
 
 
-## Question, warrant, result: keep the three apart
+## Question, warrant, result: keep the three apart {data-menu-title="Ch 6 · Question, warrant, result: keep the three apart"}
 
 ::: {.kicker}
 
@@ -2718,7 +2719,7 @@ fixing its sign, without pinning it down.
 :::
 
 
-## The map that sorts any question by exactly two things
+## The map that sorts any question by exactly two things {data-menu-title="Ch 6 · The map that sorts any question by exactly two things"}
 
 ::: {.kicker}
 
@@ -2760,7 +2761,7 @@ design cannot isolate is written currently unidentified, never descriptive.
 :::
 
 
-## Two honest moves, and one dishonest one
+## Two honest moves, and one dishonest one {data-menu-title="Ch 6 · Two honest moves, and one dishonest one"}
 
 ::: {.kicker}
 
@@ -2789,7 +2790,7 @@ and keeping the causal wording is not.
 :::
 
 
-## One coffee line, four different questions
+## One coffee line, four different questions {data-menu-title="Ch 6 · One coffee line, four different questions"}
 
 ::: {.kicker}
 
@@ -2818,7 +2819,7 @@ slide says what.
 :::
 
 
-## Same counter, same twelve timings, four positions
+## Same counter, same twelve timings, four positions {data-menu-title="Ch 6 · Same counter, same twelve timings, four positions"}
 
 ::: {.kicker}
 
@@ -2853,7 +2854,7 @@ comparison is the signature of a causal question.
 :::
 
 
-## A partner's one question is really two
+## A partner's one question is really two {data-menu-title="Ch 6 · A partner's one question is really two"}
 
 ::: {.kicker}
 
@@ -2880,7 +2881,7 @@ the split out loud.
 :::
 
 
-## Run it, then break one sentence on purpose
+## Run it, then break one sentence on purpose {data-menu-title="Ch 6 · Run it, then break one sentence on purpose"}
 
 ::: {.kicker}
 
@@ -2921,7 +2922,7 @@ stages of one goal, is argued in detail in the statistics literature (Shmueli
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 6 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -2949,7 +2950,7 @@ the register and the wait, so the comparison carries no causal answer.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 6 · How it failed"}
 
 ::: {.kicker}
 
@@ -2984,7 +2985,7 @@ write down that you changed it, and stop using the word "effective."
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 6 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -3011,7 +3012,7 @@ progress.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 6 · It is your turn"}
 
 ::: {.kicker}
 
@@ -3042,7 +3043,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Declare Your Research Question {background-color="#1a1a19" .divider}
+## Declare Your Research Question {background-color="#1a1a19" .divider data-menu-title="CHAPTER 7 — Declare Your Research Question"}
 
 ::: {.kicker}
 
@@ -3058,7 +3059,7 @@ sentence the whole project answers to
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 7 · The research decision"}
 
 ::: {.kicker}
 
@@ -3080,7 +3081,7 @@ word that survives is one your name signs.
 :::::
 
 
-## One sentence, and the whole project answers to it
+## One sentence, and the whole project answers to it {data-menu-title="Ch 7 · One sentence, and the whole project answers to it"}
 
 ::: {.kicker}
 
@@ -3113,7 +3114,7 @@ because every downstream call is measured against the declaration.
 :::
 
 
-## Change one word and you change which rows you count
+## Change one word and you change which rows you count {data-menu-title="Ch 7 · Change one word and you change which rows you count"}
 
 ::: {.kicker}
 
@@ -3141,7 +3142,7 @@ packaging.
 :::
 
 
-## The declaration is a contract with the evidence, not prose polish
+## The declaration is a contract with the evidence, not prose polish {data-menu-title="Ch 7 · The declaration is a contract with the evidence, not prose polish"}
 
 ::: {.kicker}
 
@@ -3168,7 +3169,7 @@ Rewriting it later does.
 :::
 
 
-## A declaration has two parts, and neither covers for the other
+## A declaration has two parts, and neither covers for the other {data-menu-title="Ch 7 · A declaration has two parts, and neither covers for the other"}
 
 ::: {.kicker}
 
@@ -3194,7 +3195,7 @@ nothing to pin down.
 :::
 
 
-## Four fields pin down what the sentence is actually about
+## Four fields pin down what the sentence is actually about {data-menu-title="Ch 7 · Four fields pin down what the sentence is actually about"}
 
 ::: {.kicker}
 
@@ -3252,7 +3253,7 @@ kind and reach, which came from the compass in the last lesson.
 :::
 
 
-## A readable question plus a complete card beats a sixty-word question
+## A readable question plus a complete card beats a sixty-word question {data-menu-title="Ch 7 · A readable question plus a complete card beats a sixty-word question"}
 
 ::: {.kicker}
 
@@ -3286,7 +3287,7 @@ excuse.
 :::
 
 
-## Wording delegates well; what the project promises does not
+## Wording delegates well; what the project promises does not {data-menu-title="Ch 7 · Wording delegates well; what the project promises does not"}
 
 ::: {.kicker}
 
@@ -3313,7 +3314,7 @@ tool can do for you, because it is a promise about what you will defend.
 :::
 
 
-## A wording you cannot account for is not sharper. It is different.
+## A wording you cannot account for is not sharper. It is different. {data-menu-title="Ch 7 · A wording you cannot account for is not sharper. It is different."}
 
 ::: {.kicker}
 
@@ -3359,7 +3360,7 @@ every word, or treat the sentence as a different question.
 :::
 
 
-## The restaurant reader arrives with a classified question
+## The restaurant reader arrives with a classified question {data-menu-title="Ch 7 · The restaurant reader arrives with a classified question"}
 
 ::: {.kicker}
 
@@ -3391,7 +3392,7 @@ card does.
 :::
 
 
-## Wording A counts entree prices; wording B counts price plus fee
+## Wording A counts entree prices; wording B counts price plus fee {data-menu-title="Ch 7 · Wording A counts entree prices; wording B counts price plus fee"}
 
 ::: {.kicker}
 
@@ -3417,7 +3418,7 @@ next slide runs both against one seeded world.
 :::
 
 
-## Same world, two sentences, two answers
+## Same world, two sentences, two answers {data-menu-title="Ch 7 · Same world, two sentences, two answers"}
 
 ::: {.kicker}
 
@@ -3483,7 +3484,7 @@ stand-in for the one you would retrieve.
 :::
 
 
-## The card records why wording A won
+## The card records why wording A won {data-menu-title="Ch 7 · The card records why wording A won"}
 
 ::: {.kicker}
 
@@ -3510,7 +3511,7 @@ two wordings from blurring into one claim later.
 :::
 
 
-## The boundary pair says what this sentence will not buy
+## The boundary pair says what this sentence will not buy {data-menu-title="Ch 7 · The boundary pair says what this sentence will not buy"}
 
 ::: {.kicker}
 
@@ -3537,7 +3538,7 @@ B from blurring into one claim later.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 7 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -3563,7 +3564,7 @@ causal, all in one helpful-sounding sentence.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 7 · How it failed"}
 
 ::: {.kicker}
 
@@ -3591,7 +3592,7 @@ everything downstream.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 7 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -3614,7 +3615,7 @@ what the project promises is the researcher's job.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 7 · It is your turn"}
 
 ::: {.kicker}
 
@@ -3646,7 +3647,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 2: Your rules and your question {background-color="#1a1a19" .divider}
+## Milestone 2: Your rules and your question {background-color="#1a1a19" .divider data-menu-title="MILESTONE 2 — Milestone 2: Your rules and your question"}
 
 ::: {.kicker}
 
@@ -3661,7 +3662,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M2 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -3682,7 +3683,7 @@ Milestone 2
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M2 · What you bring"}
 
 ::: {.kicker}
 
@@ -3702,7 +3703,7 @@ Milestone 2 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M2 · The practice"}
 
 ::: {.kicker}
 
@@ -3723,7 +3724,7 @@ Milestone 2 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M2 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -3772,7 +3773,7 @@ Milestone 2 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M2 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -3796,7 +3797,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

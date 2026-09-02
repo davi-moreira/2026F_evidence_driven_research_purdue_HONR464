@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 5 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -67,7 +68,7 @@ support, and say what that pathway can and cannot establish.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 5 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -102,7 +103,7 @@ assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 5 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -122,7 +123,7 @@ Studio 5 · Road map
 :::::
 
 
-## Observational Descriptive Research {background-color="#1a1a19" .divider}
+## Observational Descriptive Research {background-color="#1a1a19" .divider data-menu-title="CHAPTER 14 — Observational Descriptive Research"}
 
 ::: {.kicker}
 
@@ -137,7 +138,7 @@ which group your data can honestly speak for
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 14 · The research decision"}
 
 ::: {.kicker}
 
@@ -159,7 +160,7 @@ down the sentence on the far side of it that you refuse to say.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 14 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -215,7 +216,7 @@ the book gives them.
 :::
 
 
-## The first question is never about your math
+## The first question is never about your math {data-menu-title="Ch 14 · The first question is never about your math"}
 
 ::: {.kicker}
 
@@ -248,7 +249,7 @@ would be deciding when they read it.
 :::
 
 
-## The most common failure is precise, well formatted, and about the wrong group
+## The most common failure is precise, well formatted, and about the wrong group {data-menu-title="Ch 14 · The most common failure is precise, well formatted, and about the wrong group"}
 
 ::: {.kicker}
 
@@ -276,7 +277,7 @@ is a sentence you write down in advance and refuse to say later.
 :::
 
 
-## You sample and measure; you never assign
+## You sample and measure; you never assign {data-menu-title="Ch 14 · You sample and measure; you never assign"}
 
 ::: {.kicker}
 
@@ -307,7 +308,7 @@ identification argument to earn its answer.
 :::
 
 
-## Four boxes stand between your question and your data
+## Four boxes stand between your question and your data {data-menu-title="Ch 14 · Four boxes stand between your question and your data"}
 
 ::: {.kicker}
 
@@ -367,7 +368,7 @@ loud, because the chapter calls it the box that misbehaves.
 :::
 
 
-## The frame crosses the edge of your target, and that is where errors live
+## The frame crosses the edge of your target, and that is where errors live {data-menu-title="Ch 14 · The frame crosses the edge of your target, and that is where errors live"}
 
 ::: {.kicker}
 
@@ -405,7 +406,7 @@ time and ask which of the three the room's own list is most likely to have.
 :::
 
 
-## A survey outside one dining hall selects for people who eat there at lunch
+## A survey outside one dining hall selects for people who eat there at lunch {data-menu-title="Ch 14 · A survey outside one dining hall selects for people who eat there at lunch"}
 
 ::: {.kicker}
 
@@ -452,7 +453,7 @@ anyway.
 :::
 
 
-## Size shrinks the wobble; it does nothing to a tilt
+## Size shrinks the wobble; it does nothing to a tilt {data-menu-title="Ch 14 · Size shrinks the wobble; it does nothing to a tilt"}
 
 ::: {.kicker}
 
@@ -480,7 +481,7 @@ it is the wrong lever.
 :::
 
 
-## A 2% billing-error rate, and the headline writes itself
+## A 2% billing-error rate, and the headline writes itself {data-menu-title="Ch 14 · A 2% billing-error rate, and the headline writes itself"}
 
 ::: {.kicker}
 
@@ -507,7 +508,7 @@ here.
 :::
 
 
-## The customers hit hardest quit before the survey went out
+## The customers hit hardest quit before the survey went out {data-menu-title="Ch 14 · The customers hit hardest quit before the survey went out"}
 
 ::: {.kicker}
 
@@ -535,7 +536,7 @@ customer base, not a fair slice of it.
 :::
 
 
-## One sentence is licensed; the other is the silent upgrade
+## One sentence is licensed; the other is the silent upgrade {data-menu-title="Ch 14 · One sentence is licensed; the other is the silent upgrade"}
 
 ::: {.kicker}
 
@@ -569,7 +570,7 @@ whether a boundary sentence hides the direction of the drift.
 :::
 
 
-## Build the whole customer base, let the worst-hit quit, then survey
+## Build the whole customer base, let the worst-hit quit, then survey {data-menu-title="Ch 14 · Build the whole customer base, let the worst-hit quit, then survey"}
 
 ::: {.kicker}
 
@@ -616,7 +617,7 @@ and no random draw from that list, closes the gap to the first.
 :::
 
 
-## Ten honest samples and one convenience sample, all of size 500
+## Ten honest samples and one convenience sample, all of size 500 {data-menu-title="Ch 14 · Ten honest samples and one convenience sample, all of size 500"}
 
 ::: {.kicker}
 
@@ -675,7 +676,7 @@ about the procedure changes.
 :::
 
 
-## Same sample size, about sixteen years off
+## Same sample size, about sixteen years off {data-menu-title="Ch 14 · Same sample size, about sixteen years off"}
 
 ::: {.kicker}
 
@@ -712,7 +713,7 @@ rerun: the tilt follows the channel, never the sample size.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 14 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -739,7 +740,7 @@ cures a tilted one.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 14 · How it failed"}
 
 ::: {.kicker}
 
@@ -770,7 +771,7 @@ precisely. It never reaches the people who left.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 14 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -796,7 +797,7 @@ AI to attack that line, never to draw it for you.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 14 · It is your turn"}
 
 ::: {.kicker}
 
@@ -827,7 +828,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Observational Causal Research {background-color="#1a1a19" .divider}
+## Observational Causal Research {background-color="#1a1a19" .divider data-menu-title="CHAPTER 15 — Observational Causal Research"}
 
 ::: {.kicker}
 
@@ -842,7 +843,7 @@ whether your comparison has earned the word *because*
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 15 · The research decision"}
 
 ::: {.kicker}
 
@@ -864,7 +865,7 @@ back door, or by admitting in writing that you have none.
 :::::
 
 
-## Your advisor's reply: after is not because
+## Your advisor's reply: after is not because {data-menu-title="Ch 15 · Your advisor's reply: after is not because"}
 
 ::: {.kicker}
 
@@ -891,7 +892,7 @@ on paper. Nothing in the data alone settles it.
 :::
 
 
-## Almost every question worth asking forbids the clean experiment
+## Almost every question worth asking forbids the clean experiment {data-menu-title="Ch 15 · Almost every question worth asking forbids the clean experiment"}
 
 ::: {.kicker}
 
@@ -919,7 +920,7 @@ one.
 :::
 
 
-## A causal claim is a claim about a world you never see
+## A causal claim is a claim about a world you never see {data-menu-title="Ch 15 · A causal claim is a claim about a world you never see"}
 
 ::: {.kicker}
 
@@ -970,7 +971,7 @@ RDSS.
 :::
 
 
-## The back door is the path that steals the credit
+## The back door is the path that steals the credit {data-menu-title="Ch 15 · The back door is the path that steals the credit"}
 
 ::: {.kicker}
 
@@ -997,7 +998,7 @@ of it.
 :::
 
 
-## Two moves close the back door without an experiment
+## Two moves close the back door without an experiment {data-menu-title="Ch 15 · Two moves close the back door without an experiment"}
 
 ::: {.kicker}
 
@@ -1040,7 +1041,7 @@ decides who makes a trip, so winners and losers differ only by luck.
 :::
 
 
-## Adjusting for the wrong variable manufactures bias
+## Adjusting for the wrong variable manufactures bias {data-menu-title="Ch 15 · Adjusting for the wrong variable manufactures bias"}
 
 ::: {.kicker}
 
@@ -1069,7 +1070,7 @@ have measured.
 :::
 
 
-## You owe a reader the argument, not the adjustment
+## You owe a reader the argument, not the adjustment {data-menu-title="Ch 15 · You owe a reader the argument, not the adjustment"}
 
 ::: {.kicker}
 
@@ -1097,7 +1098,7 @@ found the next thing to write.
 :::
 
 
-## The word is not the argument
+## The word is not the argument {data-menu-title="Ch 15 · The word is not the argument"}
 
 ::: {.kicker}
 
@@ -1125,7 +1126,7 @@ on, out loud.
 :::
 
 
-## Mice carrying the microbe are leaner. Stake a thesis on it?
+## Mice carrying the microbe are leaner. Stake a thesis on it? {data-menu-title="Ch 15 · Mice carrying the microbe are leaner. Stake a thesis on it?"}
 
 ::: {.kicker}
 
@@ -1150,7 +1151,7 @@ of the pattern but a test of the sentence.
 :::
 
 
-## Diet fills the third box, and ten thousand mice do not help
+## Diet fills the third box, and ten thousand mice do not help {data-menu-title="Ch 15 · Diet fills the third box, and ten thousand mice do not help"}
 
 ::: {.kicker}
 
@@ -1178,7 +1179,7 @@ did.
 :::
 
 
-## "We controlled for diet" is not identification
+## "We controlled for diet" is not identification {data-menu-title="Ch 15 · “We controlled for diet” is not identification"}
 
 ::: {.kicker}
 
@@ -1207,7 +1208,7 @@ and to say.
 :::
 
 
-## Build mice where the microbe does nothing, then read the gap
+## Build mice where the microbe does nothing, then read the gap {data-menu-title="Ch 15 · Build mice where the microbe does nothing, then read the gap"}
 
 ::: {.kicker}
 
@@ -1259,7 +1260,7 @@ carrier-versus-noncarrier number, including your own.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 15 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1292,7 +1293,7 @@ so there is no as-if-random assignment, the back door stays open, and
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 15 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1320,7 +1321,7 @@ model's.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 15 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1352,7 +1353,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Experimental Descriptive Research {background-color="#1a1a19" .divider}
+## Experimental Descriptive Research {background-color="#1a1a19" .divider data-menu-title="CHAPTER 16 — Experimental Descriptive Research"}
 
 ::: {.kicker}
 
@@ -1368,7 +1369,7 @@ already has, or an effect you would go out and cause
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 16 · The research decision"}
 
 ::: {.kicker}
 
@@ -1391,7 +1392,7 @@ anything.
 :::::
 
 
-## Your advisor stops at one line of your methods page
+## Your advisor stops at one line of your methods page {data-menu-title="Ch 16 · Your advisor stops at one line of your methods page"}
 
 ::: {.kicker}
 
@@ -1424,7 +1425,7 @@ already sits out there, or what would change after an intervention?
 :::
 
 
-## The question fixes the kind, not the procedure
+## The question fixes the kind, not the procedure {data-menu-title="Ch 16 · The question fixes the kind, not the procedure"}
 
 ::: {.kicker}
 
@@ -1451,7 +1452,7 @@ naming of the kind comes before anything about the randomization itself.
 :::
 
 
-## Random assignment can do the work of a measurement design
+## Random assignment can do the work of a measurement design {data-menu-title="Ch 16 · Random assignment can do the work of a measurement design"}
 
 ::: {.kicker}
 
@@ -1478,7 +1479,7 @@ make the reading trustworthy, which is what the next two slides are about.
 :::
 
 
-## An experiment can be an instrument rather than an intervention
+## An experiment can be an instrument rather than an intervention {data-menu-title="Ch 16 · An experiment can be an instrument rather than an intervention"}
 
 ::: {.kicker}
 
@@ -1539,7 +1540,7 @@ in their own project before the next slide.
 :::
 
 
-## A measurement can be confident and still wrong
+## A measurement can be confident and still wrong {data-menu-title="Ch 16 · A measurement can be confident and still wrong"}
 
 ::: {.kicker}
 
@@ -1566,7 +1567,7 @@ artifacts and the property they threaten.
 :::
 
 
-## Demand and instrument effects both threaten construct validity
+## Demand and instrument effects both threaten construct validity {data-menu-title="Ch 16 · Demand and instrument effects both threaten construct validity"}
 
 ::: {.kicker}
 
@@ -1627,7 +1628,7 @@ what they would change to rule it out.
 :::
 
 
-## A streaming team needs a number nobody publishes
+## A streaming team needs a number nobody publishes {data-menu-title="Ch 16 · A streaming team needs a number nobody publishes"}
 
 ::: {.kicker}
 
@@ -1655,7 +1656,7 @@ rank commands, described for these sessions.
 :::
 
 
-## There is a causal effect inside the study, and the question stays descriptive
+## There is a causal effect inside the study, and the question stays descriptive {data-menu-title="Ch 16 · There is a causal effect inside the study, and the question stays descriptive"}
 
 ::: {.kicker}
 
@@ -1683,7 +1684,7 @@ supports.
 :::
 
 
-## Guard the two artifacts before you trust even the descriptive number
+## Guard the two artifacts before you trust even the descriptive number {data-menu-title="Ch 16 · Guard the two artifacts before you trust even the descriptive number"}
 
 ::: {.kicker}
 
@@ -1715,7 +1716,7 @@ you design these out separately rather than correcting them afterwards.
 :::
 
 
-## Run it: the randomization is real, the claim it licenses is still descriptive
+## Run it: the randomization is real, the claim it licenses is still descriptive {data-menu-title="Ch 16 · Run it: the randomization is real, the claim it licenses is still descriptive"}
 
 ::: {.kicker}
 
@@ -1763,7 +1764,7 @@ rerun, and ask which sentence in the section stops being true.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 16 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1793,7 +1794,7 @@ to the units you observed.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 16 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1819,7 +1820,7 @@ AI partner can draft, locate, and attack. You declare and defend.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 16 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1850,7 +1851,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Prediction and Generalization {background-color="#1a1a19" .divider}
+## Prediction and Generalization {background-color="#1a1a19" .divider data-menu-title="CHAPTER 17 — Prediction and Generalization"}
 
 ::: {.kicker}
 
@@ -1866,7 +1867,7 @@ accept as honest
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 17 · The research decision"}
 
 ::: {.kicker}
 
@@ -1889,7 +1890,7 @@ working.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 17 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -1929,7 +1930,7 @@ the book gives them.
 :::
 
 
-## 94% accuracy is not yet a reason to close a beach
+## 94% accuracy is not yet a reason to close a beach {data-menu-title="Ch 17 · 94% accuracy is not yet a reason to close a beach"}
 
 ::: {.kicker}
 
@@ -1958,7 +1959,7 @@ beach on a model's say-so.
 :::
 
 
-## Beat the dumb rule, on weeks the model never saw
+## Beat the dumb rule, on weeks the model never saw {data-menu-title="Ch 17 · Beat the dumb rule, on weeks the model never saw"}
 
 ::: {.kicker}
 
@@ -1994,7 +1995,7 @@ and you cry wolf, or you miss a real hazard.
 :::
 
 
-## Prediction is descriptive: what will happen, never why
+## Prediction is descriptive: what will happen, never why {data-menu-title="Ch 17 · Prediction is descriptive: what will happen, never why"}
 
 ::: {.kicker}
 
@@ -2051,7 +2052,7 @@ and a design that licenses one does not automatically license the other.
 :::
 
 
-## The baseline is free, and it is the bar you must clear
+## The baseline is free, and it is the bar you must clear {data-menu-title="Ch 17 · The baseline is free, and it is the bar you must clear"}
 
 ::: {.kicker}
 
@@ -2082,7 +2083,7 @@ is missed.
 :::
 
 
-## Fit on one summer, choose on another, lock the third
+## Fit on one summer, choose on another, lock the third {data-menu-title="Ch 17 · Fit on one summer, choose on another, lock the third"}
 
 ::: {.kicker}
 
@@ -2110,7 +2111,7 @@ untouched when the final score is due.
 :::
 
 
-## On average, the score that crowned your winner flatters it
+## On average, the score that crowned your winner flatters it {data-menu-title="Ch 17 · On average, the score that crowned your winner flatters it"}
 
 ::: {.kicker}
 
@@ -2142,7 +2143,7 @@ not to.
 :::
 
 
-## A leak is information you could not have at forecast time
+## A leak is information you could not have at forecast time {data-menu-title="Ch 17 · A leak is information you could not have at forecast time"}
 
 ::: {.kicker}
 
@@ -2173,7 +2174,7 @@ shuffling the calendar.
 :::
 
 
-## Your baseline scores 0.85 before you fit anything
+## Your baseline scores 0.85 before you fit anything {data-menu-title="Ch 17 · Your baseline scores 0.85 before you fit anything"}
 
 ::: {.kicker}
 
@@ -2202,7 +2203,7 @@ logistic model, a standard yes-or-no classifier.
 :::
 
 
-## A three-point edge, and its smallness is the honest result
+## A three-point edge, and its smallness is the honest result {data-menu-title="Ch 17 · A three-point edge, and its smallness is the honest result"}
 
 ::: {.kicker}
 
@@ -2231,7 +2232,7 @@ hides the missed blooms.
 :::
 
 
-## 0.97 with chlorophyll, and it is the outcome in disguise
+## 0.97 with chlorophyll, and it is the outcome in disguise {data-menu-title="Ch 17 · 0.97 with chlorophyll, and it is the outcome in disguise"}
 
 ::: {.kicker}
 
@@ -2262,7 +2263,7 @@ it.
 :::
 
 
-## Three summers in code, and the last one stays locked
+## Three summers in code, and the last one stays locked {data-menu-title="Ch 17 · Three summers in code, and the last one stays locked"}
 
 ::: {.kicker}
 
@@ -2322,7 +2323,7 @@ of the whole block.
 :::
 
 
-## Twelve polynomials, chosen on selection, scored once
+## Twelve polynomials, chosen on selection, scored once {data-menu-title="Ch 17 · Twelve polynomials, chosen on selection, scored once"}
 
 ::: {.kicker}
 
@@ -2393,7 +2394,7 @@ than any real study would have.
 :::
 
 
-## Only data the fit never touched can tell you to stop at six
+## Only data the fit never touched can tell you to stop at six {data-menu-title="Ch 17 · Only data the fit never touched can tell you to stop at six"}
 
 ::: {.kicker}
 
@@ -2431,7 +2432,7 @@ curve ever tells you to stop.
 :::
 
 
-## An honest summary names the lean, the typical case, and the tail
+## An honest summary names the lean, the typical case, and the tail {data-menu-title="Ch 17 · An honest summary names the lean, the typical case, and the tail"}
 
 ::: {.kicker}
 
@@ -2463,7 +2464,7 @@ one seeded extreme need not move the same way.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 17 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -2493,7 +2494,7 @@ model.
 :::::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 17 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -2519,7 +2520,7 @@ timeline cannot make these calls for you.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 17 · It is your turn"}
 
 ::: {.kicker}
 
@@ -2550,7 +2551,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Experimental Causal Research {background-color="#1a1a19" .divider}
+## Experimental Causal Research {background-color="#1a1a19" .divider data-menu-title="CHAPTER 18 — Experimental Causal Research"}
 
 ::: {.kicker}
 
@@ -2566,7 +2567,7 @@ effect that difference actually describes
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 18 · The research decision"}
 
 ::: {.kicker}
 
@@ -2589,7 +2590,7 @@ cause.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 18 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -2637,7 +2638,7 @@ the book gives them.
 :::
 
 
-## "Better after treatment" is not "the treatment worked"
+## "Better after treatment" is not "the treatment worked" {data-menu-title="Ch 18 · “Better after treatment” is not “the treatment worked”"}
 
 ::: {.kicker}
 
@@ -2674,7 +2675,7 @@ number speaks for.
 :::
 
 
-## The speed that hands you a number is the danger
+## The speed that hands you a number is the danger {data-menu-title="Ch 18 · The speed that hands you a number is the danger"}
 
 ::: {.kicker}
 
@@ -2702,7 +2703,7 @@ applies to.
 :::
 
 
-## A causal question asks what would change if you intervened
+## A causal question asks what would change if you intervened {data-menu-title="Ch 18 · A causal question asks what would change if you intervened"}
 
 ::: {.kicker}
 
@@ -2759,7 +2760,7 @@ is the idea the next slide takes away from you.
 :::
 
 
-## You will only ever see one of Ms. R's two numbers
+## You will only ever see one of Ms. R's two numbers {data-menu-title="Ch 18 · You will only ever see one of Ms. R's two numbers"}
 
 ::: {.kicker}
 
@@ -2787,7 +2788,7 @@ you put it on the screen.
 :::
 
 
-## Give up the individual effect and chase the average
+## Give up the individual effect and chase the average {data-menu-title="Ch 18 · Give up the individual effect and chase the average"}
 
 ::: {.kicker}
 
@@ -2813,7 +2814,7 @@ Everything after this slide is about what makes that estimate honest.
 :::
 
 
-## Random assignment breaks the link between traits and treatment
+## Random assignment breaks the link between traits and treatment {data-menu-title="Ch 18 · Random assignment breaks the link between traits and treatment"}
 
 ::: {.kicker}
 
@@ -2844,7 +2845,7 @@ gets treated.
 :::
 
 
-## Eight hundred patients, a coin flip, and a 9-point gap
+## Eight hundred patients, a coin flip, and a 9-point gap {data-menu-title="Ch 18 · Eight hundred patients, a coin flip, and a 9-point gap"}
 
 ::: {.kicker}
 
@@ -2872,7 +2873,7 @@ Then warn the room that the chapter is about to take the number apart.
 :::
 
 
-## Each arm produced its own set of stayers
+## Each arm produced its own set of stayers {data-menu-title="Ch 18 · Each arm produced its own set of stayers"}
 
 ::: {.kicker}
 
@@ -2902,7 +2903,7 @@ not deliver it without assumptions you would have to state and defend.
 :::
 
 
-## Retention by arm is a warning light, not a verdict
+## Retention by arm is a warning light, not a verdict {data-menu-title="Ch 18 · Retention by arm is a warning light, not a verdict"}
 
 ::: {.kicker}
 
@@ -2934,7 +2935,7 @@ That range belongs in the write-up.
 :::
 
 
-## Run the trial twice: everyone randomized, then only those measured
+## Run the trial twice: everyone randomized, then only those measured {data-menu-title="Ch 18 · Run the trial twice: everyone randomized, then only those measured"}
 
 ::: {.kicker}
 
@@ -2996,7 +2997,7 @@ number describes. Naming that quantity is the decision this chapter equips.
 :::
 
 
-## Two thousand coin flips over the same 200 patients
+## Two thousand coin flips over the same 200 patients {data-menu-title="Ch 18 · Two thousand coin flips over the same 200 patients"}
 
 ::: {.kicker}
 
@@ -3053,7 +3054,7 @@ never change: only the coin flip does.
 :::
 
 
-## The estimates center on the truth, and they still wobble
+## The estimates center on the truth, and they still wobble {data-menu-title="Ch 18 · The estimates center on the truth, and they still wobble"}
 
 ::: {.kicker}
 
@@ -3089,7 +3090,7 @@ and it is randomization that buys truth on average.
 :::
 
 
-## Keep the coin flip honest and change only who is measurable
+## Keep the coin flip honest and change only who is measurable {data-menu-title="Ch 18 · Keep the coin flip honest and change only who is measurable"}
 
 ::: {.kicker}
 
@@ -3143,7 +3144,7 @@ could the average contrast be? Then show them.
 :::
 
 
-## Not one of 2,000 re-randomizations landed near the truth
+## Not one of 2,000 re-randomizations landed near the truth {data-menu-title="Ch 18 · Not one of 2,000 re-randomizations landed near the truth"}
 
 ::: {.kicker}
 
@@ -3183,7 +3184,7 @@ digging, which is the sensitivity work from the honesty test.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 18 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -3212,7 +3213,7 @@ it up.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 18 · How it failed"}
 
 ::: {.kicker}
 
@@ -3246,7 +3247,7 @@ missing patients' refill rates have to be before the finding flips?
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 18 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -3275,7 +3276,7 @@ uncertainty.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 18 · It is your turn"}
 
 ::: {.kicker}
 
@@ -3306,7 +3307,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Hybrid and Complex Designs {background-color="#1a1a19" .divider}
+## Hybrid and Complex Designs {background-color="#1a1a19" .divider data-menu-title="CHAPTER 19 — Hybrid and Complex Designs"}
 
 ::: {.kicker}
 
@@ -3322,7 +3323,7 @@ error you cannot account for
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 19 · The research decision"}
 
 ::: {.kicker}
 
@@ -3345,7 +3346,7 @@ characterize is as much a design decision as adding one.
 :::::
 
 
-## The economist wants the error budget, not the headline number
+## The economist wants the error budget, not the headline number {data-menu-title="Ch 19 · The economist wants the error budget, not the headline number"}
 
 ::: {.kicker}
 
@@ -3378,7 +3379,7 @@ by quantity.
 :::
 
 
-## A complex design fails quietly, because every piece looks careful
+## A complex design fails quietly, because every piece looks careful {data-menu-title="Ch 19 · A complex design fails quietly, because every piece looks careful"}
 
 ::: {.kicker}
 
@@ -3406,7 +3407,7 @@ piece you cannot characterize is as much a design decision as adding one.
 :::
 
 
-## MIDA names the four parts; a hybrid design puts more than one piece in them
+## MIDA names the four parts; a hybrid design puts more than one piece in them {data-menu-title="Ch 19 · MIDA names the four parts; a hybrid design puts more than one piece in them"}
 
 ::: {.kicker}
 
@@ -3441,7 +3442,7 @@ combine.
 :::
 
 
-## A hybrid design is one with more than one moving piece
+## A hybrid design is one with more than one moving piece {data-menu-title="Ch 19 · A hybrid design is one with more than one moving piece"}
 
 ::: {.kicker}
 
@@ -3493,7 +3494,7 @@ chapter is those two ideas applied to one number.
 :::
 
 
-## Two careful pieces can quietly target different quantities
+## Two careful pieces can quietly target different quantities {data-menu-title="Ch 19 · Two careful pieces can quietly target different quantities"}
 
 ::: {.kicker}
 
@@ -3521,7 +3522,7 @@ is aimed at that same one.
 :::
 
 
-## Square a measured share and you roughly double its error
+## Square a measured share and you roughly double its error {data-menu-title="Ch 19 · Square a measured share and you roughly double its error"}
 
 ::: {.kicker}
 
@@ -3548,7 +3549,7 @@ measured value gets squared, divided or ratioed.
 :::
 
 
-## A small systematic error can hide behind a small random one
+## A small systematic error can hide behind a small random one {data-menu-title="Ch 19 · A small systematic error can hide behind a small random one"}
 
 ::: {.kicker}
 
@@ -3594,7 +3595,7 @@ other sits exactly where it was.
 :::
 
 
-## Your city's grocery market gets one score, stitched from two measurements
+## Your city's grocery market gets one score, stitched from two measurements {data-menu-title="Ch 19 · Your city's grocery market gets one score, stitched from two measurements"}
 
 ::: {.kicker}
 
@@ -3622,7 +3623,7 @@ two they would check first.
 :::
 
 
-## Averaging twelve months buys precision, and the index stops wobbling
+## Averaging twelve months buys precision, and the index stops wobbling {data-menu-title="Ch 19 · Averaging twelve months buys precision, and the index stops wobbling"}
 
 ::: {.kicker}
 
@@ -3648,7 +3649,7 @@ that will make the result feel trustworthy in a moment when it should not.
 :::
 
 
-## Repetition does nothing for bias, and squaring amplifies it
+## Repetition does nothing for bias, and squaring amplifies it {data-menu-title="Ch 19 · Repetition does nothing for bias, and squaring amplifies it"}
 
 ::: {.kicker}
 
@@ -3677,7 +3678,7 @@ census.
 :::
 
 
-## Run the index both ways and watch the wrong number hold still
+## Run the index both ways and watch the wrong number hold still {data-menu-title="Ch 19 · Run the index both ways and watch the wrong number hold still"}
 
 ::: {.kicker}
 
@@ -3728,7 +3729,7 @@ changes the months.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 19 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -3756,7 +3757,7 @@ describes wobble it could see and stays silent about the tilt it could not.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 19 · How it failed"}
 
 ::: {.kicker}
 
@@ -3787,7 +3788,7 @@ tidy interval beside it.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 19 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -3814,7 +3815,7 @@ yours.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 19 · It is your turn"}
 
 ::: {.kicker}
 
@@ -3845,7 +3846,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 5: Your pathway, declared {background-color="#1a1a19" .divider}
+## Milestone 5: Your pathway, declared {background-color="#1a1a19" .divider data-menu-title="MILESTONE 5 — Milestone 5: Your pathway, declared"}
 
 ::: {.kicker}
 
@@ -3860,7 +3861,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M5 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -3881,7 +3882,7 @@ Milestone 5
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M5 · What you bring"}
 
 ::: {.kicker}
 
@@ -3901,7 +3902,7 @@ Milestone 5 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M5 · The practice"}
 
 ::: {.kicker}
 
@@ -3919,7 +3920,7 @@ Milestone 5 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M5 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -3968,7 +3969,7 @@ Milestone 5 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M5 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -3992,7 +3993,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

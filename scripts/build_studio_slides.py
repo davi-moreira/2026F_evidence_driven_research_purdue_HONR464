@@ -121,6 +121,32 @@ def density(body: str) -> str:
     return ""
 
 
+def menu_attr(label: str) -> str:
+    """`data-menu-title="..."`, safe inside a Pandoc heading attribute block.
+
+    The slide menu is how you cross a 122-slide deck mid-class, and by default
+    every entry is just the slide's own headline — 122 lines with nothing
+    saying which chapter you are in. Every slide therefore carries an explicit
+    menu label that names its chapter, and a chapter's divider announces
+    itself in capitals so the list reads as a table of contents.
+
+    A straight double quote would close the attribute early and swallow the
+    rest of the heading, and several chapter headlines contain one.
+    """
+    label = " ".join(label.split())
+    label = label.replace('\\"', '"')
+    # Alternate the replacements so a quoted phrase keeps a real opening and
+    # closing mark rather than two closing ones.
+    out, opening = [], True
+    for ch in label:
+        if ch == '"':
+            out.append("\u201c" if opening else "\u201d")
+            opening = not opening
+        else:
+            out.append(ch)
+    return f'data-menu-title="{"".join(out)}"'
+
+
 def div(cls: str, body: str, marks: int = 3) -> str:
     """A Pandoc fenced div, with the blank lines Pandoc requires.
 
@@ -201,6 +227,7 @@ class Deck:
         self.parts: list[str] = []
         self.figs: dict[str, str] = {}       # book-relative src -> figs/<name>
         self.from_dir = ""                   # book dir of the page being quoted
+        self.menu_prefix = ""                # names the chapter in the menu
 
     def add(self, md: str) -> None:
         self.parts.append(md.rstrip() + "\n")
@@ -235,8 +262,10 @@ class Deck:
         return md
 
     # -- structural slides ------------------------------------------------
-    def divider(self, kicker: str, heading: str, line: str = "") -> None:
-        out = [f'## {heading} {{background-color="{INK}" .divider}}', ""]
+    def divider(self, kicker: str, heading: str, line: str = "",
+                menu: str = "") -> None:
+        attrs = f'background-color="{INK}" .divider {menu_attr(menu or heading)}'
+        out = [f'## {heading} {{{attrs}}}', ""]
         if kicker:
             out += [div("kicker", kicker), ""]
         if line:
@@ -246,7 +275,9 @@ class Deck:
     def slide(self, title: str, body: str, kicker: str = "",
               note: str = "", classes: str = "") -> None:
         classes = " ".join(x for x in (classes, density(body)) if x)
-        out = [f"## {title}" + (f" {{{classes}}}" if classes else ""), ""]
+        attrs = " ".join(x for x in
+                         (classes, menu_attr(self.menu_prefix + title)) if x)
+        out = [f"## {title}" + (f" {{{attrs}}}" if attrs else ""), ""]
         if kicker.strip().lower() == title.strip().lower():
             kicker = ""          # a kicker that repeats the title is noise
         if kicker:
@@ -459,9 +490,13 @@ def chapter_slides(deck: Deck, lesson: dict, n_in_studio: int) -> str:
              "2026F_evidence_driven_research_purdue_HONR464/blob/main/"
              f"notebooks/book/{lesson['companion']}")
 
-    # 1. Section divider: the chapter, and what it puts on the table.
+    # 1. Section divider: the chapter, and what it puts on the table. It also
+    #    opens the chapter in the slide menu, and every slide until the next
+    #    divider is labelled with the chapter it belongs to.
     deck.divider(f"Lesson {n_in_studio} of this studio · Chapter {display}",
-                 page.title, sp.decision_on_table(page))
+                 page.title, sp.decision_on_table(page),
+                 menu=f"CHAPTER {display} — {page.title}")
+    deck.menu_prefix = f"Ch {display} · "
 
     # 2. The research decision, verbatim.
     if page.lead_quote:
@@ -537,6 +572,7 @@ def build_deck(studio: dict) -> tuple[str, dict[str, str]]:
     states: dict[str, str] = {}
 
     # ---------------------------------------------------------- opener
+    deck.menu_prefix = f"Studio {rank} · "
     if studio["opener"]:
         op = sp.parse(studio["opener"])
         deck.quoting(studio["opener"])
@@ -583,7 +619,9 @@ def build_deck(studio: dict) -> tuple[str, dict[str, str]]:
         deck.quoting(ms)
         deck.divider(f"Studio {rank} closes here", mp.title,
                      "What the lessons handed you becomes one artifact "
-                     "you can defend.")
+                     "you can defend.",
+                     menu=f"MILESTONE {rank} — {mp.title}")
+        deck.menu_prefix = f"M{rank} · "
         intro = mp.section("")
         if intro:
             for para in intro.paragraphs():
@@ -636,7 +674,7 @@ def build_deck(studio: dict) -> tuple[str, dict[str, str]]:
     if ms_url:
         links.append(f"[Milestone {rank}]({ms_url})")
     links.append(f"[Verification Guide]({BOOK_URL}/verification-guide.html)")
-    deck.add(f'''## The one rule {{background-color="{INK}" .divider}}
+    deck.add(f'''## The one rule {{background-color="{INK}" .divider data-menu-title="THE ONE RULE"}}
 
 ::: {{.creed}}
 {CREED}
@@ -703,7 +741,8 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center

@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 12 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -70,7 +71,7 @@ limitation into the next study.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 12 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -116,7 +117,7 @@ the versioned record, and how the artifact is assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 12 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -133,7 +134,7 @@ Studio 12 · Road map
 :::::
 
 
-## Managing Multiple AI Agents {background-color="#1a1a19" .divider}
+## Managing Multiple AI Agents {background-color="#1a1a19" .divider data-menu-title="CHAPTER 38 — Managing Multiple AI Agents"}
 
 ::: {.kicker}
 
@@ -149,7 +150,7 @@ and which step you keep out of every one of them
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 38 · The research decision"}
 
 ::: {.kicker}
 
@@ -171,7 +172,7 @@ allowed to close.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 38 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -211,7 +212,7 @@ the book gives them.
 :::
 
 
-## Your advisor wants a draft, not a pile of AI output
+## Your advisor wants a draft, not a pile of AI output {data-menu-title="Ch 38 · Your advisor wants a draft, not a pile of AI output"}
 
 ::: {.kicker}
 
@@ -254,7 +255,7 @@ three questions right now.
 :::
 
 
-## Four assistants at once is not four times safer
+## Four assistants at once is not four times safer {data-menu-title="Ch 38 · Four assistants at once is not four times safer"}
 
 ::: {.kicker}
 
@@ -283,7 +284,7 @@ management skill that turns a crowd of loops into something you can defend.
 :::
 
 
-## Every turn you did not read is a turn you did not supervise
+## Every turn you did not read is a turn you did not supervise {data-menu-title="Ch 38 · Every turn you did not read is a turn you did not supervise"}
 
 ::: {.kicker}
 
@@ -312,7 +313,7 @@ where they hand off. You orchestrate loops, not prompts.
 :::
 
 
-## Split "improve my draft" into jobs you can pass or fail
+## Split "improve my draft" into jobs you can pass or fail {data-menu-title="Ch 38 · Split “improve my draft” into jobs you can pass or fail"}
 
 ::: {.kicker}
 
@@ -355,7 +356,7 @@ can state its job in one sentence.
 :::
 
 
-## A finish line is what makes a loop safe to run
+## A finish line is what makes a loop safe to run {data-menu-title="Ch 38 · A finish line is what makes a loop safe to run"}
 
 ::: {.kicker}
 
@@ -383,7 +384,7 @@ which is exactly what your advisor is asking to do.
 :::
 
 
-## A worker alone is confident about its own quality
+## A worker alone is confident about its own quality {data-menu-title="Ch 38 · A worker alone is confident about its own quality"}
 
 ::: {.kicker}
 
@@ -411,7 +412,7 @@ workflow that produced it.
 :::
 
 
-## The chain you cannot shorten sets your minimum number of rounds
+## The chain you cannot shorten sets your minimum number of rounds {data-menu-title="Ch 38 · The chain you cannot shorten sets your minimum number of rounds"}
 
 ::: {.kicker}
 
@@ -455,7 +456,7 @@ finish its one job and still occupy one node.
 :::
 
 
-## One draft, four roles, and a dorm-floor heart-rate study
+## One draft, four roles, and a dorm-floor heart-rate study {data-menu-title="Ch 38 · One draft, four roles, and a dorm-floor heart-rate study"}
 
 ::: {.kicker}
 
@@ -491,7 +492,7 @@ minutes.
 :::
 
 
-## Three critics read the same draft at the same moment
+## Three critics read the same draft at the same moment {data-menu-title="Ch 38 · Three critics read the same draft at the same moment"}
 
 ::: {.kicker}
 
@@ -520,7 +521,7 @@ the number of turns inside a role does not change its position on the path.
 :::
 
 
-## The slowest critic sets the schedule
+## The slowest critic sets the schedule {data-menu-title="Ch 38 · The slowest critic sets the schedule"}
 
 ::: {.kicker}
 
@@ -574,7 +575,7 @@ deliberately left out of the accounting.
 :::
 
 
-## The integrate step is the one node with no loop attached
+## The integrate step is the one node with no loop attached {data-menu-title="Ch 38 · The integrate step is the one node with no loop attached"}
 
 ::: {.kicker}
 
@@ -602,7 +603,7 @@ they had only run one of them.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 38 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -631,7 +632,7 @@ empty draft and return three confident reviews of nothing.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 38 · How it failed"}
 
 ::: {.kicker}
 
@@ -661,7 +662,7 @@ the dependencies, not the confidence.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 38 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -690,7 +691,7 @@ command; it means the same command discipline, repeated.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 38 · It is your turn"}
 
 ::: {.kicker}
 
@@ -721,7 +722,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Conflicting Agents and Human Escalation {background-color="#1a1a19" .divider}
+## Conflicting Agents and Human Escalation {background-color="#1a1a19" .divider data-menu-title="CHAPTER 39 — Conflicting Agents and Human Escalation"}
 
 ::: {.kicker}
 
@@ -737,7 +738,7 @@ moment you halt the loops and decide for yourself
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 39 · The research decision"}
 
 ::: {.kicker}
 
@@ -759,7 +760,7 @@ to stop the loops and take the call into your own hands.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 39 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -815,7 +816,7 @@ the book gives them.
 :::
 
 
-## Agreement is the easiest thing in the world to manufacture
+## Agreement is the easiest thing in the world to manufacture {data-menu-title="Ch 39 · Agreement is the easiest thing in the world to manufacture"}
 
 ::: {.kicker}
 
@@ -850,7 +851,7 @@ how they would answer that question about the last AI review they ran.
 :::
 
 
-## Three loops built the same way make one mistake three times
+## Three loops built the same way make one mistake three times {data-menu-title="Ch 39 · Three loops built the same way make one mistake three times"}
 
 ::: {.kicker}
 
@@ -881,7 +882,7 @@ one.
 :::
 
 
-## When two roles clash, do not pick a winner yet
+## When two roles clash, do not pick a winner yet {data-menu-title="Ch 39 · When two roles clash, do not pick a winner yet"}
 
 ::: {.kicker}
 
@@ -909,7 +910,7 @@ empty, and one is your own doing.
 :::
 
 
-## Real disagreement is the good case
+## Real disagreement is the good case {data-menu-title="Ch 39 · Real disagreement is the good case"}
 
 ::: {.kicker}
 
@@ -937,7 +938,7 @@ of comments on their own draft.
 :::
 
 
-## Correlated error: one wrong assumption, agreed three times
+## Correlated error: one wrong assumption, agreed three times {data-menu-title="Ch 39 · Correlated error: one wrong assumption, agreed three times"}
 
 ::: {.kicker}
 
@@ -965,7 +966,7 @@ from one place, so the head-count is a fiction.
 :::
 
 
-## Ask a role to confirm your draft and you led the witness
+## Ask a role to confirm your draft and you led the witness {data-menu-title="Ch 39 · Ask a role to confirm your draft and you led the witness"}
 
 ::: {.kicker}
 
@@ -994,7 +995,7 @@ leading word in it.
 :::
 
 
-## Agreement counts only when the roles could have failed apart
+## Agreement counts only when the roles could have failed apart {data-menu-title="Ch 39 · Agreement counts only when the roles could have failed apart"}
 
 ::: {.kicker}
 
@@ -1039,7 +1040,7 @@ roles is a vote, and votes among look-alike models are meaningless.
 :::
 
 
-## Write your stopping triggers before the round starts
+## Write your stopping triggers before the round starts {data-menu-title="Ch 39 · Write your stopping triggers before the round starts"}
 
 ::: {.kicker}
 
@@ -1068,7 +1069,7 @@ their next round, in the exact words they will read under pressure.
 :::
 
 
-## 250 adults outside the library, and a tidy 4.0%
+## 250 adults outside the library, and a tidy 4.0% {data-menu-title="Ch 39 · 250 adults outside the library, and a tidy 4.0%"}
 
 ::: {.kicker}
 
@@ -1096,7 +1097,7 @@ what they would want to know before believing that sentence.
 :::
 
 
-## Three roles blessed it because all three expected a number near 4%
+## Three roles blessed it because all three expected a number near 4% {data-menu-title="Ch 39 · Three roles blessed it because all three expected a number near 4%"}
 
 ::: {.kicker}
 
@@ -1124,7 +1125,7 @@ room whether a fourth role from the same family would have helped.
 :::
 
 
-## Your sample never met anyone who was at work
+## Your sample never met anyone who was at work {data-menu-title="Ch 39 · Your sample never met anyone who was at work"}
 
 ::: {.kicker}
 
@@ -1152,7 +1153,7 @@ a verdict that only asks whether the answer looks right.
 :::
 
 
-## You take the pen back: 4.0% ± 2.4 percentage points
+## You take the pen back: 4.0% ± 2.4 percentage points {data-menu-title="Ch 39 · You take the pen back: 4.0% ± 2.4 percentage points"}
 
 ::: {.kicker}
 
@@ -1184,7 +1185,7 @@ better than its members (Hong & Page 2004).
 :::
 
 
-## Two defensible definitions, two different numbers
+## Two defensible definitions, two different numbers {data-menu-title="Ch 39 · Two defensible definitions, two different numbers"}
 
 ::: {.kicker}
 
@@ -1237,7 +1238,7 @@ none of this, and that is the point of printing both.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 39 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1265,7 +1266,7 @@ paragraphs around it.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 39 · How it failed"}
 
 ::: {.kicker}
 
@@ -1294,7 +1295,7 @@ independent ones, and piling on more correlated roles cannot close the gap.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 39 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1319,7 +1320,7 @@ of roles decides your claim boundary or your ethics. When an AI output would
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 39 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1350,7 +1351,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Final Research and AI-Management Portfolio {background-color="#1a1a19" .divider}
+## Final Research and AI-Management Portfolio {background-color="#1a1a19" .divider data-menu-title="CHAPTER 40 — Final Research and AI-Management Portfolio"}
 
 ::: {.kicker}
 
@@ -1366,7 +1367,7 @@ record you can show for how you checked them
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 40 · The research decision"}
 
 ::: {.kicker}
 
@@ -1388,7 +1389,7 @@ was checked.
 :::::
 
 
-## The examiner does not count your tools
+## The examiner does not count your tools {data-menu-title="Ch 40 · The examiner does not count your tools"}
 
 ::: {.kicker}
 
@@ -1424,7 +1425,7 @@ behind in front of that folder.
 :::
 
 
-## A pile of AI-assisted work is not defensible
+## A pile of AI-assisted work is not defensible {data-menu-title="Ch 40 · A pile of AI-assisted work is not defensible"}
 
 ::: {.kicker}
 
@@ -1451,7 +1452,7 @@ you answer them on purpose, before the room decides them for you.
 :::
 
 
-## The release audit does not change with the destination
+## The release audit does not change with the destination {data-menu-title="Ch 40 · The release audit does not change with the destination"}
 
 ::: {.kicker}
 
@@ -1478,7 +1479,7 @@ this move transfers past this course.
 :::
 
 
-## Your final submission has two halves
+## Your final submission has two halves {data-menu-title="Ch 40 · Your final submission has two halves"}
 
 ::: {.kicker}
 
@@ -1524,7 +1525,7 @@ boundary.
 :::
 
 
-## "When the roles all agree" is a trap
+## "When the roles all agree" is a trap {data-menu-title="Ch 40 · “When the roles all agree” is a trap"}
 
 ::: {.kicker}
 
@@ -1567,7 +1568,7 @@ supply for you.
 :::
 
 
-## Three reviewers who oblige tell you nothing
+## Three reviewers who oblige tell you nothing {data-menu-title="Ch 40 · Three reviewers who oblige tell you nothing"}
 
 ::: {.kicker}
 
@@ -1610,7 +1611,7 @@ run yourself, outside the tools.
 :::
 
 
-## An evidence defense names what you do not claim
+## An evidence defense names what you do not claim {data-menu-title="Ch 40 · An evidence defense names what you do not claim"}
 
 ::: {.kicker}
 
@@ -1637,7 +1638,7 @@ record has to exist before the defense rather than after it.
 :::
 
 
-## The 88% came from one packet in three trays of 50
+## The 88% came from one packet in three trays of 50 {data-menu-title="Ch 40 · The 88% came from one packet in three trays of 50"}
 
 ::: {.kicker}
 
@@ -1665,7 +1666,7 @@ how easily the answer slides.
 :::
 
 
-## The two roles disagreed, and the disagreement was a gift
+## The two roles disagreed, and the disagreement was a gift {data-menu-title="Ch 40 · The two roles disagreed, and the disagreement was a gift"}
 
 ::: {.kicker}
 
@@ -1693,7 +1694,7 @@ rewrite that follows is yours.
 :::
 
 
-## The narrower sentence is the one you will defend
+## The narrower sentence is the one you will defend {data-menu-title="Ch 40 · The narrower sentence is the one you will defend"}
 
 ::: {.kicker}
 
@@ -1726,7 +1727,7 @@ both.
 :::
 
 
-## Run the trays and watch the spread the claim is built from
+## Run the trays and watch the spread the claim is built from {data-menu-title="Ch 40 · Run the trays and watch the spread the claim is built from"}
 
 ::: {.kicker}
 
@@ -1773,7 +1774,7 @@ precisely because the average on its own is the sentence you just rejected.
 :::
 
 
-## The packet's label was never part of your AI workflow
+## The packet's label was never part of your AI workflow {data-menu-title="Ch 40 · The packet's label was never part of your AI workflow"}
 
 ::: {.kicker}
 
@@ -1800,7 +1801,7 @@ for their own project, and whether they have looked at it yet.
 :::
 
 
-## Four things go into the AI-management portfolio
+## Four things go into the AI-management portfolio {data-menu-title="Ch 40 · Four things go into the AI-management portfolio"}
 
 ::: {.kicker}
 
@@ -1827,7 +1828,7 @@ what their own fourth line would say today.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 40 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1854,7 +1855,7 @@ trusting it would send an overclaimed result into your defense.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 40 · How it failed"}
 
 ::: {.kicker}
 
@@ -1885,7 +1886,7 @@ never the roles that nodded.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 40 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1911,7 +1912,7 @@ answer you give when the room asks how you know.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 40 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1942,7 +1943,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 12: Your release and next cycle {background-color="#1a1a19" .divider}
+## Milestone 12: Your release and next cycle {background-color="#1a1a19" .divider data-menu-title="MILESTONE 12 — Milestone 12: Your release and next cycle"}
 
 ::: {.kicker}
 
@@ -1957,7 +1958,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M12 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -1978,7 +1979,7 @@ Milestone 12
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M12 · What you bring"}
 
 ::: {.kicker}
 
@@ -1995,7 +1996,7 @@ Milestone 12 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M12 · The practice"}
 
 ::: {.kicker}
 
@@ -2016,7 +2017,7 @@ Milestone 12 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M12 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -2065,7 +2066,7 @@ Milestone 12 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M12 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -2089,7 +2090,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

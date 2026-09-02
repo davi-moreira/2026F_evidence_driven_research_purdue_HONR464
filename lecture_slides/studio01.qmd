@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 1 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -68,7 +69,7 @@ your work.
 :::::
 
 
-## Start without a tool
+## Start without a tool {data-menu-title="Studio 1 · Start without a tool"}
 
 ::::: {.slide-body}
 
@@ -79,7 +80,7 @@ move is yours alone. Write four lines by hand.
 :::::
 
 
-## Start without a tool *(cont.)*
+## Start without a tool *(cont.)* {data-menu-title="Studio 1 · Start without a tool *(cont.)*"}
 
 ::: {.kicker}
 
@@ -98,7 +99,7 @@ Start without a tool
 :::::
 
 
-## Start without a tool *(cont.)*
+## Start without a tool *(cont.)* {data-menu-title="Studio 1 · Start without a tool *(cont.)*"}
 
 ::: {.kicker}
 
@@ -115,7 +116,7 @@ table, into the problem your project will chase.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 1 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -158,7 +159,7 @@ artifact is assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 1 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -173,7 +174,7 @@ Studio 1 · Road map
 :::::
 
 
-## From Curiosity to a Research Problem {background-color="#1a1a19" .divider}
+## From Curiosity to a Research Problem {background-color="#1a1a19" .divider data-menu-title="CHAPTER 1 — From Curiosity to a Research Problem"}
 
 ::: {.kicker}
 
@@ -189,7 +190,7 @@ gets months of your work
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 1 · The research decision"}
 
 ::: {.kicker}
 
@@ -211,7 +212,7 @@ research question comes later, after your working rules and ledger exist.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 1 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -267,7 +268,7 @@ the book gives them.
 :::
 
 
-## A meal that cost eleven dollars in 2019 now costs sixteen
+## A meal that cost eleven dollars in 2019 now costs sixteen {data-menu-title="Ch 1 · A meal that cost eleven dollars in 2019 now costs sixteen"}
 
 ::: {.kicker}
 
@@ -294,7 +295,7 @@ explanations for the same two numbers.
 :::
 
 
-## Research begins when the first explanation stops being the only one
+## Research begins when the first explanation stops being the only one {data-menu-title="Ch 1 · Research begins when the first explanation stops being the only one"}
 
 ::: {.kicker}
 
@@ -322,7 +323,7 @@ take months of work.
 :::
 
 
-## You need a curiosity strong enough to survive alternatives
+## You need a curiosity strong enough to survive alternatives {data-menu-title="Ch 1 · You need a curiosity strong enough to survive alternatives"}
 
 ::: {.kicker}
 
@@ -350,7 +351,7 @@ chase if every tool disappeared tomorrow.
 :::
 
 
-## The jump is yours to make; the cycle then returns to experience
+## The jump is yours to make; the cycle then returns to experience {data-menu-title="Ch 1 · The jump is yours to make; the cycle then returns to experience"}
 
 ::: {.kicker}
 
@@ -385,7 +386,7 @@ week.
 :::
 
 
-## Abduction creates a candidate, not proof
+## Abduction creates a candidate, not proof {data-menu-title="Ch 1 · Abduction creates a candidate, not proof"}
 
 ::: {.kicker}
 
@@ -414,7 +415,7 @@ third-week pattern, then ask what evidence would separate the two.
 :::
 
 
-## Einstein's jump did not begin with a loud error signal
+## Einstein's jump did not begin with a loud error signal {data-menu-title="Ch 1 · Einstein's jump did not begin with a loud error signal"}
 
 ::: {.kicker}
 
@@ -443,7 +444,7 @@ for the claim, so the jump is yours to make and to defend.
 :::
 
 
-## Once your curiosity is on the page, AI joins as a divergence partner
+## Once your curiosity is on the page, AI joins as a divergence partner {data-menu-title="Ch 1 · Once your curiosity is on the page, AI joins as a divergence partner"}
 
 ::: {.kicker}
 
@@ -472,7 +473,7 @@ to it.
 :::
 
 
-## Reason down four moves, then stop at the problem
+## Reason down four moves, then stop at the problem {data-menu-title="Ch 1 · Reason down four moves, then stop at the problem"}
 
 ::: {.kicker}
 
@@ -501,7 +502,7 @@ of the material.
 :::
 
 
-## An answer that confirms what everyone believes teaches almost nothing
+## An answer that confirms what everyone believes teaches almost nothing {data-menu-title="Ch 1 · An answer that confirms what everyone believes teaches almost nothing"}
 
 ::: {.kicker}
 
@@ -529,7 +530,7 @@ place to aim your question, never a license to inflate your answer.
 :::
 
 
-## Your expected answer is a planning proxy, not a measurement
+## Your expected answer is a planning proxy, not a measurement {data-menu-title="Ch 1 · Your expected answer is a planning proxy, not a measurement"}
 
 ::: {.kicker}
 
@@ -573,7 +574,7 @@ evidence up against it.
 :::
 
 
-## "Does moving more actually help you sleep?" cannot be studied as written
+## "Does moving more actually help you sleep?" cannot be studied as written {data-menu-title="Ch 1 · “Does moving more actually help you sleep?” cannot be studied as written"}
 
 ::: {.kicker}
 
@@ -601,7 +602,7 @@ after your rules and ledger exist.
 :::
 
 
-## The sleep problem clears all three tests, with contribution still provisional
+## The sleep problem clears all three tests, with contribution still provisional {data-menu-title="Ch 1 · The sleep problem clears all three tests, with contribution still provisional"}
 
 ::: {.kicker}
 
@@ -636,7 +637,7 @@ front of someone who wants to know why this one and not another.
 :::
 
 
-## The problem sentence names groups you can build out of the data
+## The problem sentence names groups you can build out of the data {data-menu-title="Ch 1 · The problem sentence names groups you can build out of the data"}
 
 ::: {.kicker}
 
@@ -680,7 +681,7 @@ rating and report which sentence from the previous slides breaks first.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 1 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -704,7 +705,7 @@ suppresses melatonin."* It sounds authoritative, and it is wrong for you.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 1 · How it failed"}
 
 ::: {.kicker}
 
@@ -736,7 +737,7 @@ and drop it.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 1 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -762,7 +763,7 @@ and not another.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 1 · It is your turn"}
 
 ::: {.kicker}
 
@@ -795,7 +796,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 1: Your curiosity, committed {background-color="#1a1a19" .divider}
+## Milestone 1: Your curiosity, committed {background-color="#1a1a19" .divider data-menu-title="MILESTONE 1 — Milestone 1: Your curiosity, committed"}
 
 ::: {.kicker}
 
@@ -810,7 +811,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M1 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -831,7 +832,7 @@ Milestone 1
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M1 · What you bring"}
 
 ::: {.kicker}
 
@@ -846,7 +847,7 @@ Milestone 1 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M1 · The practice"}
 
 ::: {.kicker}
 
@@ -865,7 +866,7 @@ Milestone 1 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M1 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -914,7 +915,7 @@ Milestone 1 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M1 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -938,7 +939,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.

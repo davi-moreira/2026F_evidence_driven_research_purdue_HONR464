@@ -493,14 +493,17 @@ $font-family-monospace: $font-mono;
 .reveal .slide-body figure,
 .reveal .slide-body p:has(> img) { margin: 0; min-height: 0; text-align: center; }
 .reveal .slide-body img {
-  // A ceiling in canvas pixels, not a percentage: the flex item now keeps its
+  // A ceiling in canvas pixels, not a percentage: the flex item keeps its
   // natural height, so `100%` would resolve against the image's own box and
-  // bound nothing.
-  border-radius: 3px; max-height: 500px; width: auto; max-width: 100%;
+  // bound nothing. It is SCALED BY THE FIT, because a fixed cap makes a
+  // figure slide unfittable — shrinking the type cannot recover height the
+  // picture is holding, and the caption ends up printed over the footer.
+  border-radius: 3px; width: auto; max-width: 100%;
+  max-height: calc(520px * var(--fit, 1));
   object-fit: contain; margin: 0 auto; display: block;
 }
 .reveal figure figcaption, .reveal .figure-caption {
-  font-size: .52em; color: var(--edrai-faint); font-style: italic;
+  font-size: .56em; color: var(--edrai-faint); font-style: italic;
   text-align: center; margin: .5em auto 0;
   max-width: 46em;        // a caption set across 1424px is one long thread
   p { margin: 0; max-width: none; }

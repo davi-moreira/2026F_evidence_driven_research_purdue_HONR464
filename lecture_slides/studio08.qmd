@@ -41,13 +41,14 @@ format:
       buttons: false
     menu:
       side: left
-      width: normal
+      width: wide
+      numbers: true
     code-line-numbers: false
     highlight-style: github
     fig-align: center
 ---
 
-## What you can defend when you leave
+## What you can defend when you leave {data-menu-title="Studio 8 · What you can defend when you leave"}
 
 ::: {.kicker}
 
@@ -67,7 +68,7 @@ survived.
 :::::
 
 
-## The milestone ahead
+## The milestone ahead {data-menu-title="Studio 8 · The milestone ahead"}
 
 ::: {.kicker}
 
@@ -102,7 +103,7 @@ practice steps, the versioned record, and how the artifact is assessed.
 :::
 
 
-## The lessons in this studio
+## The lessons in this studio {data-menu-title="Studio 8 · The lessons in this studio"}
 
 ::: {.kicker}
 
@@ -120,7 +121,7 @@ Studio 8 · Road map
 :::::
 
 
-## Robustness and Sensitivity {background-color="#1a1a19" .divider}
+## Robustness and Sensitivity {background-color="#1a1a19" .divider data-menu-title="CHAPTER 24 — Robustness and Sensitivity"}
 
 ::: {.kicker}
 
@@ -136,7 +137,7 @@ reporting, chosen before you see any of their answers
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 24 · The research decision"}
 
 ::: {.kicker}
 
@@ -161,7 +162,7 @@ it as one you added after seeing results and report it with the rest.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 24 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -201,7 +202,7 @@ the book gives them.
 :::
 
 
-## A reviewer's first question is about the versions you did not show
+## A reviewer's first question is about the versions you did not show {data-menu-title="Ch 24 · A reviewer's first question is about the versions you did not show"}
 
 ::: {.kicker}
 
@@ -236,7 +237,7 @@ it sit before you show anyone a method.
 :::
 
 
-## Without the list, a delicate truth and a lucky slice look identical
+## Without the list, a delicate truth and a lucky slice look identical {data-menu-title="Ch 24 · Without the list, a delicate truth and a lucky slice look identical"}
 
 ::: {.kicker}
 
@@ -263,7 +264,7 @@ added after seeing results and report it with the rest.
 :::
 
 
-## Two named attacks, and people mix them up constantly
+## Two named attacks, and people mix them up constantly {data-menu-title="Ch 24 · Two named attacks, and people mix them up constantly"}
 
 ::: {.kicker}
 
@@ -311,7 +312,7 @@ will attack your choices, you attack them first.
 :::
 
 
-## The headline estimate has four handles you can turn
+## The headline estimate has four handles you can turn {data-menu-title="Ch 24 · The headline estimate has four handles you can turn"}
 
 ::: {.kicker}
 
@@ -345,7 +346,7 @@ vocabulary does. A plan that turns none of them is not a plan.
 :::
 
 
-## Before a dot joins the curve it passes a three-part gate
+## Before a dot joins the curve it passes a three-part gate {data-menu-title="Ch 24 · Before a dot joins the curve it passes a three-part gate"}
 
 ::: {.kicker}
 
@@ -386,7 +387,7 @@ more dot.
 :::
 
 
-## A curve that agrees cannot see the flaw every version shares
+## A curve that agrees cannot see the flaw every version shares {data-menu-title="Ch 24 · A curve that agrees cannot see the flaw every version shares"}
 
 ::: {.kicker}
 
@@ -414,7 +415,7 @@ you able to do about it.
 :::
 
 
-## The spread says what your choices did, not what chance could do
+## The spread says what your choices did, not what chance could do {data-menu-title="Ch 24 · The spread says what your choices did, not what chance could do"}
 
 ::: {.kicker}
 
@@ -442,7 +443,7 @@ name.
 :::
 
 
-## Twenty turns of the AI loop is twenty specifications
+## Twenty turns of the AI loop is twenty specifications {data-menu-title="Ch 24 · Twenty turns of the AI loop is twenty specifications"}
 
 ::: {.kicker}
 
@@ -473,7 +474,7 @@ can say.
 :::
 
 
-## A discount, and a twelve percent headline you attack before defending
+## A discount, and a twelve percent headline you attack before defending {data-menu-title="Ch 24 · A discount, and a twelve percent headline you attack before defending"}
 
 ::: {.kicker}
 
@@ -502,7 +503,7 @@ handles before anyone else gets the chance.
 :::
 
 
-## Four handles turned, and one comparison kept off the curve
+## Four handles turned, and one comparison kept off the curve {data-menu-title="Ch 24 · Four handles turned, and one comparison kept off the curve"}
 
 ::: {.kicker}
 
@@ -531,7 +532,7 @@ group.
 :::
 
 
-## One span per panel, never a span across them
+## One span per panel, never a span across them {data-menu-title="Ch 24 · One span per panel, never a span across them"}
 
 ::: {.kicker}
 
@@ -563,7 +564,7 @@ precision nobody computed.
 :::
 
 
-## Three null checks get muddled, and each has its own procedure
+## Three null checks get muddled, and each has its own procedure {data-menu-title="Ch 24 · Three null checks get muddled, and each has its own procedure"}
 
 ::: {.kicker}
 
@@ -624,7 +625,7 @@ doing the work.
 :::
 
 
-## Check that every row answers the same question before reading a number
+## Check that every row answers the same question before reading a number {data-menu-title="Ch 24 · Check that every row answers the same question before reading a number"}
 
 ::: {.kicker}
 
@@ -698,7 +699,7 @@ curve.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 24 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -727,7 +728,7 @@ first.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 24 · How it failed"}
 
 ::: {.kicker}
 
@@ -756,7 +757,7 @@ sounds.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 24 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -781,7 +782,7 @@ evidence decides.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 24 · It is your turn"}
 
 ::: {.kicker}
 
@@ -814,7 +815,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Diagnostics and Negative Tests {background-color="#1a1a19" .divider}
+## Diagnostics and Negative Tests {background-color="#1a1a19" .divider data-menu-title="CHAPTER 25 — Diagnostics and Negative Tests"}
 
 ::: {.kicker}
 
@@ -829,7 +830,7 @@ which check aimed at a guaranteed zero you run, and what passing it earns you
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 25 · The research decision"}
 
 ::: {.kicker}
 
@@ -851,7 +852,7 @@ Running it is the easy part.
 :::::
 
 
-## A clear ring can mean your solvent is toxic
+## A clear ring can mean your solvent is toxic {data-menu-title="Ch 25 · A clear ring can mean your solvent is toxic"}
 
 ::: {.kicker}
 
@@ -884,7 +885,7 @@ taken out.
 :::
 
 
-## Your own pipeline can manufacture the result you are about to report
+## Your own pipeline can manufacture the result you are about to report {data-menu-title="Ch 25 · Your own pipeline can manufacture the result you are about to report"}
 
 ::: {.kicker}
 
@@ -913,7 +914,7 @@ something that was never there.
 :::
 
 
-## A negative test aims your exact analysis at a guaranteed zero
+## A negative test aims your exact analysis at a guaranteed zero {data-menu-title="Ch 25 · A negative test aims your exact analysis at a guaranteed zero"}
 
 ::: {.kicker}
 
@@ -959,7 +960,7 @@ moved anything.
 :::
 
 
-## The true answer is zero; your reading almost never will be
+## The true answer is zero; your reading almost never will be {data-menu-title="Ch 25 · The true answer is zero; your reading almost never will be"}
 
 ::: {.kicker}
 
@@ -989,7 +990,7 @@ until a readout prints 0.00 and call the tinkering a fix.
 :::
 
 
-## Three conditions, or your control is not a test
+## Three conditions, or your control is not a test {data-menu-title="Ch 25 · Three conditions, or your control is not a test"}
 
 ::: {.kicker}
 
@@ -1026,7 +1027,7 @@ is no evidence at all.
 :::
 
 
-## Three tests aim at zero, and the vehicle control matches your solvent
+## Three tests aim at zero, and the vehicle control matches your solvent {data-menu-title="Ch 25 · Three tests aim at zero, and the vehicle control matches your solvent"}
 
 ::: {.kicker}
 
@@ -1089,7 +1090,7 @@ shrinking-dish reading would mean the measurement is talking, not the drug.
 :::
 
 
-## Leave-one-out asks whether a single point carries your finding
+## Leave-one-out asks whether a single point carries your finding {data-menu-title="Ch 25 · Leave-one-out asks whether a single point carries your finding"}
 
 ::: {.kicker}
 
@@ -1117,7 +1118,7 @@ second one beside the first.
 :::
 
 
-## A clean pass lowers one worry, and never more than that
+## A clean pass lowers one worry, and never more than that {data-menu-title="Ch 25 · A clean pass lowers one worry, and never more than that"}
 
 ::: {.kicker}
 
@@ -1155,7 +1156,7 @@ their own passed check would still leave unanswered.
 :::
 
 
-## A wide ring is tempting, so read the ethanol disk first
+## A wide ring is tempting, so read the ethanol disk first {data-menu-title="Ch 25 · A wide ring is tempting, so read the ethanol disk first"}
 
 ::: {.kicker}
 
@@ -1187,7 +1188,7 @@ specific worry, and no more than that.
 :::
 
 
-## An assay that catches a strong antibiotic can still miss a small artifact
+## An assay that catches a strong antibiotic can still miss a small artifact {data-menu-title="Ch 25 · An assay that catches a strong antibiotic can still miss a small artifact"}
 
 ::: {.kicker}
 
@@ -1219,7 +1220,7 @@ works inside a living animal, or which molecule is responsible.
 :::
 
 
-## Both controls get read before the extract's ring means anything
+## Both controls get read before the extract's ring means anything {data-menu-title="Ch 25 · Both controls get read before the extract's ring means anything"}
 
 ::: {.kicker}
 
@@ -1275,7 +1276,7 @@ rather than one at a time.
 :::
 
 
-## Build a world where the vehicle does nothing, then run it 2,000 times
+## Build a world where the vehicle does nothing, then run it 2,000 times {data-menu-title="Ch 25 · Build a world where the vehicle does nothing, then run it 2,000 times"}
 
 ::: {.kicker}
 
@@ -1322,7 +1323,7 @@ from that prediction being wrong.
 :::
 
 
-## In 2,000 honest experiments, not one reading was exactly zero
+## In 2,000 honest experiments, not one reading was exactly zero {data-menu-title="Ch 25 · In 2,000 honest experiments, not one reading was exactly zero"}
 
 ::: {.kicker}
 
@@ -1360,7 +1361,7 @@ world produced, and now you have something to investigate.
 :::
 
 
-## The pile shows ordinary variation; it is never a pass line
+## The pile shows ordinary variation; it is never a pass line {data-menu-title="Ch 25 · The pile shows ordinary variation; it is never a pass line"}
 
 ::: {.kicker}
 
@@ -1391,7 +1392,7 @@ verdict.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 25 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -1418,7 +1419,7 @@ show it. The clean result told you nothing at all.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 25 · How it failed"}
 
 ::: {.kicker}
 
@@ -1447,7 +1448,7 @@ and was wrong for your case.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 25 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -1473,7 +1474,7 @@ negative test bought you, and how far its sensitivity reached, stays yours.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 25 · It is your turn"}
 
 ::: {.kicker}
 
@@ -1504,7 +1505,7 @@ step carries live in the companion notebook.
 :::
 
 
-## AI as Adversarial Reviewer {background-color="#1a1a19" .divider}
+## AI as Adversarial Reviewer {background-color="#1a1a19" .divider data-menu-title="CHAPTER 26 — AI as Adversarial Reviewer"}
 
 ::: {.kicker}
 
@@ -1520,7 +1521,7 @@ rather than by how sure the reviewer sounded
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 26 · The research decision"}
 
 ::: {.kicker}
 
@@ -1543,7 +1544,7 @@ is not three pieces of evidence.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 26 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -1583,7 +1584,7 @@ the book gives them.
 :::
 
 
-## The person who signs off is the one fielding the complaints
+## The person who signs off is the one fielding the complaints {data-menu-title="Ch 26 · The person who signs off is the one fielding the complaints"}
 
 ::: {.kicker}
 
@@ -1611,7 +1612,7 @@ their concern is blunt, and why you read it out before anyone hears the word
 :::
 
 
-## "I trust the check, not the graph"
+## "I trust the check, not the graph" {data-menu-title="Ch 26 · “I trust the check, not the graph”"}
 
 ::: {.kicker}
 
@@ -1644,7 +1645,7 @@ believed your result?
 :::
 
 
-## A confident number and a fluent critique fail the same way
+## A confident number and a fluent critique fail the same way {data-menu-title="Ch 26 · A confident number and a fluent critique fail the same way"}
 
 ::: {.kicker}
 
@@ -1673,7 +1674,7 @@ against your own data.
 :::
 
 
-## A reviewer's job is to attack your result, not to praise it
+## A reviewer's job is to attack your result, not to praise it {data-menu-title="Ch 26 · A reviewer's job is to attack your result, not to praise it"}
 
 ::: {.kicker}
 
@@ -1728,7 +1729,7 @@ machinery returns in a world where there is nothing to find.
 :::
 
 
-## You measured at one time of day, so measure at two more
+## You measured at one time of day, so measure at two more {data-menu-title="Ch 26 · You measured at one time of day, so measure at two more"}
 
 ::: {.kicker}
 
@@ -1757,7 +1758,7 @@ have a pile of such gaps to compare against.
 :::
 
 
-## Reporting only the hour where your change wins has a name
+## Reporting only the hour where your change wins has a name {data-menu-title="Ch 26 · Reporting only the hour where your change wins has a name"}
 
 ::: {.kicker}
 
@@ -1786,7 +1787,7 @@ tried.
 :::
 
 
-## Two reviewers wrong the same way is an echo, not a confirmation
+## Two reviewers wrong the same way is an echo, not a confirmation {data-menu-title="Ch 26 · Two reviewers wrong the same way is an echo, not a confirmation"}
 
 ::: {.kicker}
 
@@ -1815,7 +1816,7 @@ would tell an echo from a confirmation without running anything.
 :::
 
 
-## An agentic reviewer finds more, and still does not get a vote
+## An agentic reviewer finds more, and still does not get a vote {data-menu-title="Ch 26 · An agentic reviewer finds more, and still does not get a vote"}
 
 ::: {.kicker}
 
@@ -1844,7 +1845,7 @@ machine, tells you nothing about whether the flaw exists.
 :::
 
 
-## You attack the p95 drop from 210 to 137 before you defend it
+## You attack the p95 drop from 210 to 137 before you defend it {data-menu-title="Ch 26 · You attack the p95 drop from 210 to 137 before you defend it"}
 
 ::: {.kicker}
 
@@ -1872,7 +1873,7 @@ the attack comes from you, first, before anyone else gets the chance.
 :::
 
 
-## Three reviewers, three fatal flaws, all confident and all different
+## Three reviewers, three fatal flaws, all confident and all different {data-menu-title="Ch 26 · Three reviewers, three fatal flaws, all confident and all different"}
 
 ::: {.kicker}
 
@@ -1900,7 +1901,7 @@ enough to name a measurement, which is what makes the next slide possible.
 :::
 
 
-## Turn each flaw into a check, and two of them dissolve
+## Turn each flaw into a check, and two of them dissolve {data-menu-title="Ch 26 · Turn each flaw into a check, and two of them dissolve"}
 
 ::: {.kicker}
 
@@ -1930,7 +1931,7 @@ something you could run.
 :::
 
 
-## Watch which line decides, not which reviewer sounded surest
+## Watch which line decides, not which reviewer sounded surest {data-menu-title="Ch 26 · Watch which line decides, not which reviewer sounded surest"}
 
 ::: {.kicker}
 
@@ -1993,7 +1994,7 @@ Change one input and ask which printed line would have caught it.
 :::
 
 
-## The flaw that survives is the one no measurement can remove
+## The flaw that survives is the one no measurement can remove {data-menu-title="Ch 26 · The flaw that survives is the one no measurement can remove"}
 
 ::: {.kicker}
 
@@ -2022,7 +2023,7 @@ reason to keep adjudicating after the panel goes quiet.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 26 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -2047,7 +2048,7 @@ has seen this mistake a hundred times.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 26 · How it failed"}
 
 ::: {.kicker}
 
@@ -2077,7 +2078,7 @@ at your own numbers is the only thing that settled it.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 26 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -2106,7 +2107,7 @@ stated. A reviewer proposes; you verify, and the evidence decides.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 26 · It is your turn"}
 
 ::: {.kicker}
 
@@ -2137,7 +2138,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Recognizing False Confidence {background-color="#1a1a19" .divider}
+## Recognizing False Confidence {background-color="#1a1a19" .divider data-menu-title="CHAPTER 27 — Recognizing False Confidence"}
 
 ::: {.kicker}
 
@@ -2152,7 +2153,7 @@ what you require of a confident-sounding result before you put your name on it
 :::
 
 
-## The research decision
+## The research decision {data-menu-title="Ch 27 · The research decision"}
 
 ::: {.kicker}
 
@@ -2174,7 +2175,7 @@ Nothing about how sure the sentence sounds tells you whether it is true.
 :::::
 
 
-## The words this chapter uses
+## The words this chapter uses {data-menu-title="Ch 27 · The words this chapter uses"}
 
 ::: {.kicker}
 
@@ -2230,7 +2231,7 @@ the book gives them.
 :::
 
 
-## The reviewer acts on the number, not on the sentence
+## The reviewer acts on the number, not on the sentence {data-menu-title="Ch 27 · The reviewer acts on the number, not on the sentence"}
 
 ::: {.kicker}
 
@@ -2264,7 +2265,7 @@ which of the three their own project currently answers.
 :::
 
 
-## An AI partner writes you a sure-sounding finding in seconds
+## An AI partner writes you a sure-sounding finding in seconds {data-menu-title="Ch 27 · An AI partner writes you a sure-sounding finding in seconds"}
 
 ::: {.kicker}
 
@@ -2292,7 +2293,7 @@ survive before you repeat it as your own.
 :::
 
 
-## "Cut nitrate by roughly 40 percent" feels settled before you look
+## "Cut nitrate by roughly 40 percent" feels settled before you look {data-menu-title="Ch 27 · “Cut nitrate by roughly 40 percent” feels settled before you look"}
 
 ::: {.kicker}
 
@@ -2320,7 +2321,7 @@ carefully. It is your own sense of certainty arriving before any check did.
 :::
 
 
-## Two habits make the trap dangerous
+## Two habits make the trap dangerous {data-menu-title="Ch 27 · Two habits make the trap dangerous"}
 
 ::: {.kicker}
 
@@ -2369,7 +2370,7 @@ their own project that would fail that test today.
 :::
 
 
-## A number wrong on turn one is usually still wrong on turn six
+## A number wrong on turn one is usually still wrong on turn six {data-menu-title="Ch 27 · A number wrong on turn one is usually still wrong on turn six"}
 
 ::: {.kicker}
 
@@ -2398,7 +2399,7 @@ on some earlier turn that looked rougher.
 :::
 
 
-## Verify the number, not the paragraph
+## Verify the number, not the paragraph {data-menu-title="Ch 27 · Verify the number, not the paragraph"}
 
 ::: {.kicker}
 
@@ -2437,7 +2438,7 @@ carry it out of the door.
 :::
 
 
-## Code that runs is not code that is correct
+## Code that runs is not code that is correct {data-menu-title="Ch 27 · Code that runs is not code that is correct"}
 
 ::: {.kicker}
 
@@ -2464,7 +2465,7 @@ method, before you say the claim out loud.
 :::
 
 
-## One small stream, a buffer planted last year, two years of readings
+## One small stream, a buffer planted last year, two years of readings {data-menu-title="Ch 27 · One small stream, a buffer planted last year, two years of readings"}
 
 ::: {.kicker}
 
@@ -2492,7 +2493,7 @@ which a fluent summary slips through unchecked.
 :::
 
 
-## Reaching to quote the clean result is where false confidence would win
+## Reaching to quote the clean result is where false confidence would win {data-menu-title="Ch 27 · Reaching to quote the clean result is where false confidence would win"}
 
 ::: {.kicker}
 
@@ -2526,7 +2527,7 @@ anything.
 :::
 
 
-## The real drop is 1.2 mg/L, about 15 percent, not 40
+## The real drop is 1.2 mg/L, about 15 percent, not 40 {data-menu-title="Ch 27 · The real drop is 1.2 mg/L, about 15 percent, not 40"}
 
 ::: {.kicker}
 
@@ -2552,7 +2553,7 @@ difference, and nothing in the wording of the summary hinted at it.
 :::
 
 
-## Even the true 15 percent cannot be pinned on the buffer alone
+## Even the true 15 percent cannot be pinned on the buffer alone {data-menu-title="Ch 27 · Even the true 15 percent cannot be pinned on the buffer alone"}
 
 ::: {.kicker}
 
@@ -2581,7 +2582,7 @@ not say: it reports that nitrate fell, and it credits nobody for it.
 :::
 
 
-## Recomputing the drop takes about as long as reading the confident sentence
+## Recomputing the drop takes about as long as reading the confident sentence {data-menu-title="Ch 27 · Recomputing the drop takes about as long as reading the confident sentence"}
 
 ::: {.kicker}
 
@@ -2628,7 +2629,7 @@ it deliberately refuses to settle what the number means.
 :::
 
 
-## An AI failure case
+## An AI failure case {data-menu-title="Ch 27 · An AI failure case"}
 
 ::: {.kicker}
 
@@ -2652,7 +2653,7 @@ firm verdict, no hedging.
 :::::
 
 
-## How it failed
+## How it failed {data-menu-title="Ch 27 · How it failed"}
 
 ::: {.kicker}
 
@@ -2683,7 +2684,7 @@ until you checked outside the model.
 :::
 
 
-## Do not delegate
+## Do not delegate {data-menu-title="Ch 27 · Do not delegate"}
 
 ::: {.kicker}
 
@@ -2709,7 +2710,7 @@ true, and answering for it, is the researcher's job.
 :::::
 
 
-## It is your turn
+## It is your turn {data-menu-title="Ch 27 · It is your turn"}
 
 ::: {.kicker}
 
@@ -2740,7 +2741,7 @@ step carries live in the companion notebook.
 :::
 
 
-## Milestone 8: Your robustness audit {background-color="#1a1a19" .divider}
+## Milestone 8: Your robustness audit {background-color="#1a1a19" .divider data-menu-title="MILESTONE 8 — Milestone 8: Your robustness audit"}
 
 ::: {.kicker}
 
@@ -2755,7 +2756,7 @@ What the lessons handed you becomes one artifact you can defend.
 :::
 
 
-## What this milestone produces
+## What this milestone produces {data-menu-title="M8 · What this milestone produces"}
 
 ::: {.kicker}
 
@@ -2776,7 +2777,7 @@ Milestone 8
 :::::
 
 
-## What you bring
+## What you bring {data-menu-title="M8 · What you bring"}
 
 ::: {.kicker}
 
@@ -2794,7 +2795,7 @@ Milestone 8 · Check before you start
 :::::
 
 
-## The practice
+## The practice {data-menu-title="M8 · The practice"}
 
 ::: {.kicker}
 
@@ -2813,7 +2814,7 @@ Milestone 8 · In the studio
 :::::
 
 
-## The four rails, here
+## The four rails, here {data-menu-title="M8 · The four rails, here"}
 
 ::: {.kicker}
 
@@ -2862,7 +2863,7 @@ Milestone 8 · Every studio, these four
 :::::
 
 
-## A version, not a pass
+## A version, not a pass {data-menu-title="M8 · A version, not a pass"}
 
 ::: {.kicker}
 
@@ -2886,7 +2887,7 @@ itself part of your research record.
 :::::
 
 
-## The one rule {background-color="#1a1a19" .divider}
+## The one rule {background-color="#1a1a19" .divider data-menu-title="THE ONE RULE"}
 
 ::: {.creed}
 AI is your arm and your research assistant, not your brain.
