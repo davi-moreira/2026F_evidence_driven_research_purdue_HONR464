@@ -68,6 +68,37 @@ L = {
             "dup": "one unit, listed twice:\na duplicate",
             "foot": "The frame is not a tidy slice of the population above it. That is where a description quietly goes wrong.",
         },
+        "compass": {
+            "axis_kind": "KIND",
+            "axis_reach": "REACH — for which units the answer must hold",
+            "reach": [
+                ("DATA AT HAND", "only the units you observed"),
+                ("A POPULATION", "a larger group you sample from"),
+                ("UNSEEN CASES", "units you have not seen yet"),
+            ],
+            "kinds": [
+                ("DESCRIPTIVE", "what the world is or\nwas — you look and\nrecord"),
+                ("CAUSAL", "what would change if\nsomeone intervened"),
+            ],
+            "cells": [
+                ("DESCRIPTION", "what the units you\nactually observed show",
+                 "earned by: honest measurement"),
+                ("GENERALIZATION", "what the wider group shows,\nbeyond the units you saw",
+                 "earned by: a sampling design"),
+                ("PREDICTION", "what a case you have not seen\nwill show — a forecast, not a reason",
+                 "earned by: a held-out check"),
+            ],
+            "causal_head": "CAUSAL REASONING",
+            "causal_sub": "one kind, asked at three reaches — the only row that earns the word “because”",
+            "causal_cells": [
+                "the effect for the units\nyou actually studied",
+                "the effect for the population\nyour sample stands in for",
+                "the effect carried into a\nnew setting or a later time",
+            ],
+            "causal_earned": "earned by: a credible stand-in for the world that did not happen — the same price at all three reaches",
+            "forbidden": "a causal question your design cannot identify stays causal:\n“currently unidentified”. Weak evidence never moves it up a row.",
+            "foot": "Two questions place any question on this map: what kind of answer it wants, and for which units that answer must hold.",
+        },
     },
     "book-pt": {
         "mida": {
@@ -106,6 +137,37 @@ L = {
             "dup": "uma unidade, listada duas\nvezes: uma duplicata",
             "foot": "O cadastro não é uma fatia limpa da população acima dele. É aí que uma descrição erra em silêncio.",
         },
+        "compass": {
+            "axis_kind": "TIPO",
+            "axis_reach": "ALCANCE — para quais unidades a resposta precisa valer",
+            "reach": [
+                ("DADOS EM MÃOS", "só as unidades que você observou"),
+                ("UMA POPULAÇÃO", "um grupo maior de onde você amostra"),
+                ("CASOS NÃO VISTOS", "unidades que você ainda não viu"),
+            ],
+            "kinds": [
+                ("DESCRITIVO", "como o mundo é ou\nfoi — você olha e\nregistra"),
+                ("CAUSAL", "o que mudaria se\nalguém interviesse"),
+            ],
+            "cells": [
+                ("DESCRIÇÃO", "o que mostram as unidades\nque você de fato observou",
+                 "garantido por: medição honesta"),
+                ("GENERALIZAÇÃO", "o que mostra o grupo maior,\nalém das unidades que você viu",
+                 "garantido por: um desenho amostral"),
+                ("PREVISÃO", "o que mostrará um caso que você não viu\n— uma previsão, não uma razão",
+                 "garantido por: um teste fora da amostra"),
+            ],
+            "causal_head": "RACIOCÍNIO CAUSAL",
+            "causal_sub": "um tipo, perguntado em três alcances — a única linha que merece a palavra “porque”",
+            "causal_cells": [
+                "o efeito para as unidades\nque você de fato estudou",
+                "o efeito para a população\nque sua amostra representa",
+                "o efeito levado a um novo\ncenário ou a um tempo depois",
+            ],
+            "causal_earned": "garantido por: um substituto crível para o mundo que não aconteceu — o mesmo preço nos três alcances",
+            "forbidden": "uma pergunta causal que seu desenho não identifica continua causal:\n“atualmente não identificada”. Evidência fraca nunca a move de linha.",
+            "foot": "Duas perguntas situam qualquer pergunta neste mapa: que tipo de resposta ela quer e para quais unidades essa resposta precisa valer.",
+        },
     },
     "book-es": {
         "mida": {
@@ -143,6 +205,37 @@ L = {
             "extra": "en el marco, fuera de tu\nobjetivo: sobrecobertura",
             "dup": "una unidad, listada dos\nveces: un duplicado",
             "foot": "El marco no es una rebanada limpia de la población de arriba. Ahí es donde una descripción falla en silencio.",
+        },
+        "compass": {
+            "axis_kind": "TIPO",
+            "axis_reach": "ALCANCE — para qué unidades debe valer la respuesta",
+            "reach": [
+                ("DATOS A LA MANO", "solo las unidades que observaste"),
+                ("UNA POBLACIÓN", "un grupo mayor del que muestreas"),
+                ("CASOS NO VISTOS", "unidades que aún no has visto"),
+            ],
+            "kinds": [
+                ("DESCRIPTIVO", "cómo es o fue el\nmundo — miras y\nregistras"),
+                ("CAUSAL", "qué cambiaría si\nalguien interviniera"),
+            ],
+            "cells": [
+                ("DESCRIPCIÓN", "lo que muestran las unidades\nque de hecho observaste",
+                 "se gana con: medición honesta"),
+                ("GENERALIZACIÓN", "lo que muestra el grupo mayor,\nmás allá de las unidades que viste",
+                 "se gana con: un diseño muestral"),
+                ("PREDICCIÓN", "lo que mostrará un caso que no has visto\n— un pronóstico, no una razón",
+                 "se gana con: una prueba fuera de muestra"),
+            ],
+            "causal_head": "RAZONAMIENTO CAUSAL",
+            "causal_sub": "un tipo, preguntado en tres alcances — la única fila que merece la palabra “porque”",
+            "causal_cells": [
+                "el efecto para las unidades\nque de hecho estudiaste",
+                "el efecto para la población\nque tu muestra representa",
+                "el efecto llevado a un nuevo\nentorno o a un tiempo posterior",
+            ],
+            "causal_earned": "se gana con: un sustituto creíble del mundo que no ocurrió — el mismo precio en los tres alcances",
+            "forbidden": "una pregunta causal que tu diseño no identifica sigue siendo causal:\n“actualmente no identificada”. La evidencia débil nunca la cambia de fila.",
+            "foot": "Dos preguntas ubican cualquier pregunta en este mapa: qué tipo de respuesta quiere y para qué unidades debe valer esa respuesta.",
         },
     },
 }
@@ -317,10 +410,98 @@ def build_groups(S: dict, out: Path) -> None:
     plt.close(fig)
 
 
+def build_compass(S: dict, out: Path) -> None:
+    """The inquiry compass: kind × reach, the price of each step, and the
+    one move the compass forbids. The descriptive row splits into three
+    named positions; the causal row is drawn as ONE box across all three
+    reaches, because it is one kind asked of three unit sets, not three new
+    positions."""
+    fig, ax = plt.subplots(figsize=(10.0, 5.6))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    cxs = (.315, .580, .845)
+    cw, grid_l, grid_r = .240, .195, .965
+    desc_y, desc_h = .665, .215
+    caus_y, caus_h = .280, .270
+    desc_bot = desc_y - desc_h / 2
+    caus_top, caus_bot = caus_y + caus_h / 2, caus_y - caus_h / 2
+
+    # the two axis names, over the stub column and over the grid
+    ax.text(.038, .952, S["axis_kind"], ha="left", va="center",
+            fontsize=7.8, fontweight="bold", color=SOFT)
+    ax.text((grid_l + grid_r) / 2, .952, S["axis_reach"], ha="center",
+            va="center", fontsize=7.8, fontweight="bold", color=SOFT)
+
+    # reach across the top, closed by a rule
+    for cx, (head, sub) in zip(cxs, S["reach"]):
+        ax.text(cx, .898, head, ha="center", va="center",
+                fontsize=8.2, fontweight="bold", color=INK)
+        ax.text(cx, .866, sub, ha="center", va="center",
+                fontsize=6.6, color=MUTE)
+    ax.plot([grid_l, grid_r], [.838, .838], color=SOFT, lw=.9, zorder=1)
+
+    # kind down the left, closed by a rule
+    for cy, (head, sub) in zip((desc_y, caus_y), S["kinds"]):
+        ax.text(.038, cy + .054, head, ha="left", va="center",
+                fontsize=8.2, fontweight="bold", color=INK)
+        ax.text(.038, cy - .020, sub, ha="left", va="center",
+                fontsize=6.6, color=MUTE, linespacing=1.45)
+    ax.plot([.183, .183], [caus_bot, desc_y + desc_h / 2],
+            color=SOFT, lw=.9, zorder=1)
+
+    # the descriptive row: three named positions, each with its price
+    for cx, (head, sub, earned) in zip(cxs, S["cells"]):
+        box(ax, cx, desc_y, cw, desc_h, "white", INK, lw=1.4, r=.026)
+        ax.text(cx, desc_y + .066, head, ha="center", va="center",
+                fontsize=8.4, fontweight="bold", color=INK)
+        ax.text(cx, desc_y - .008, sub, ha="center", va="center",
+                fontsize=6.8, color=MUTE, linespacing=1.35)
+        ax.text(cx, desc_y - .078, earned, ha="center", va="center",
+                fontsize=6.4, color=INK, style="italic")
+
+    # the causal row: one kind, drawn across all three reaches
+    box(ax, (grid_l + grid_r) / 2, caus_y, grid_r - grid_l, caus_h,
+        "white", INK, lw=1.4, r=.026)
+    ax.text(grid_l + .020, caus_top - .034, S["causal_head"], ha="left",
+            va="center", fontsize=8.4, fontweight="bold", color=INK)
+    ax.text(grid_l + .020, caus_top - .068, S["causal_sub"], ha="left",
+            va="center", fontsize=6.8, color=MUTE)
+    for bx in ((cxs[0] + cxs[1]) / 2, (cxs[1] + cxs[2]) / 2):
+        ax.plot([bx, bx], [caus_bot + .050, caus_top - .088],
+                color=SOFT, lw=.9, zorder=3)
+    for cx, seg in zip(cxs, S["causal_cells"]):
+        ax.text(cx, caus_y - .018, seg, ha="center", va="center",
+                fontsize=6.9, color=INK, linespacing=1.35)
+    ax.text((grid_l + grid_r) / 2, caus_bot + .028, S["causal_earned"],
+            ha="center", va="center", fontsize=6.4, color=INK, style="italic")
+
+    # the move the compass forbids, struck out where it would be made
+    fx = cxs[0]
+    my = (caus_top + desc_bot) / 2
+    arrow(ax, fx, caus_top + .008, fx, desc_bot - .008, ls="dashed")
+    ax.add_patch(FancyBboxPatch(
+        (fx - .018, my - .020), .036, .040,
+        boxstyle="round,pad=0,rounding_size=.004",
+        facecolor="white", edgecolor="none", zorder=5))
+    for dy in (1, -1):
+        ax.plot([fx - .011, fx + .011], [my - .015 * dy, my + .015 * dy],
+                color=INK, lw=1.5, zorder=6, solid_capstyle="round")
+    ax.text(.665, my, S["forbidden"], ha="center", va="center",
+            fontsize=6.8, color=INK, linespacing=1.4)
+
+    ax.text(.5, .058, S["foot"], ha="center", va="center", fontsize=7.2,
+            color=MUTE)
+
+    fig.tight_layout(pad=0.4)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
 BUILDERS = (
     ("mida", "mida_map.png", build_mida),
     ("loop", "diagnose_loop.png", build_loop),
     ("groups", "sampling_groups.png", build_groups),
+    ("compass", "inquiry_compass.png", build_compass),
 )
 
 
