@@ -550,11 +550,23 @@ $font-family-monospace: $font-mono;
   opacity: .38; color: var(--edrai-ink);
 }
 .reveal .controls:hover { opacity: .8; }
+// The slide menu is how you jump around a 122-slide deck mid-class, so it
+// stays where the menu plugin puts it — bottom-left, on the same side as the
+// panel it opens — and stays findable rather than hidden. It was briefly
+// moved to the top-right to clear the wordmark; the wordmark now appears only
+// on the opener, so the corner is free again.
 .reveal .slide-menu-button {
-  top: 16px !important; right: 18px !important;
-  left: auto !important; bottom: auto !important;
-  opacity: .3; font-size: 15px;
-  &:hover { opacity: .75; }
+  left: 26px !important; bottom: 20px !important;
+  top: auto !important; right: auto !important;
+  opacity: .55; font-size: 19px;
+  transition: opacity .2s ease;
+  &:hover { opacity: 1; }
+  // The hamburger is not a glyph and not a font: Quarto emits it as an SVG
+  // background-image with the theme's ink BAKED INTO the markup as
+  // fill="rgb(26, 26, 25)". `color` cannot touch it, which is why the button
+  // was invisible on the ink dividers — it was there, drawn ink on ink. The
+  // colour rule stays as a fallback for builds that use the font glyph.
+  a, .fas { color: var(--edrai-ink); }
 }
 .reveal .progress { color: var(--edrai-ink); height: 3px; }
 .reveal .progress span { background: var(--edrai-ink); }
@@ -565,7 +577,12 @@ $font-family-monospace: $font-mono;
   .slide-logo { opacity: 0; }
   .footer, .slide-number { color: #6f747a !important; }
   .controls { color: #ffffff; opacity: .3; }
-  .slide-menu-button { color: #ffffff; }
+  .slide-menu-button {
+    opacity: .7;
+    &, a, .fas { color: #ffffff !important; }
+    // Invert the baked-in ink so the bars read white on the ink field.
+    .fa-bars::before { filter: invert(1); }
+  }
   .progress { color: #ffffff; span { background: #ffffff; } }
 }
 
