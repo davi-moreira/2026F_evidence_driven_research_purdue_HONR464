@@ -101,15 +101,15 @@ L = {
         },
         "declaration": {
             "title": "THE DECLARATION",
-            "title_sub": "the project's contract with the evidence, written while changing it still costs nothing",
+            "title_sub": "two parts, and neither substitutes for the other — the project's contract with the evidence",
             "parts": [
                 ("1 · THE LEAD QUESTION",
                  "the single sentence your evidence will answer — classified by kind and reach in the last lesson"),
                 ("2 · THE FIELD CARD",
                  "the short record that pins down every term the sentence carries"),
-                ("3 · THE CLAIM BOUNDARY",
-                 "a pair, written now: the sentence you hope to defend, and the stronger one you already know you will not"),
             ],
+            "boundary_head": "THE PROVISIONAL CLAIM BOUNDARY",
+            "boundary_sub": "a pair, and the card carries it too — written now, before any results exist",
             "fields": [
                 ("OBJECTIVE", "what the study intends to\ndescribe, predict, or explain"),
                 ("UNIT OF ANALYSIS", "the kind of entity the\nanswer makes a claim about"),
@@ -119,8 +119,8 @@ L = {
                 ("REACH", "for which units the\nanswer must hold"),
             ],
             "boundary": [
-                ("HOPE TO DEFEND", "the sentence you intend to earn from the evidence"),
-                ("WILL NOT DEFEND", "the stronger sentence you already know you cannot"),
+                ("HOPE TO DEFEND", "the sentence you\nhope to defend"),
+                ("WILL NOT BE ABLE TO DEFEND", "the stronger sentence you already\nknow you will not be able to"),
             ],
             "band": "Yours, never delegated: the choice among candidate wordings  ·  the kind  ·  the reach  ·  both boundary sentences",
             "foot": "A boundary written early is a promise; a boundary written late is an excuse.",
@@ -196,15 +196,15 @@ L = {
         },
         "declaration": {
             "title": "A DECLARAÇÃO",
-            "title_sub": "o contrato do projeto com a evidência, escrito enquanto mudá-lo ainda não custa nada",
+            "title_sub": "duas partes, e nenhuma substitui a outra — o contrato do projeto com a evidência",
             "parts": [
                 ("1 · A PERGUNTA PRINCIPAL",
                  "a única frase que sua evidência vai responder — classificada por tipo e alcance na lição anterior"),
                 ("2 · A FICHA DE CAMPO",
                  "o registro curto que fixa cada termo que a frase carrega"),
-                ("3 · A FRONTEIRA DA ALEGAÇÃO",
-                 "um par, escrito agora: a frase que você espera defender e a mais forte que já sabe que não poderá"),
             ],
+            "boundary_head": "A FRONTEIRA PROVISÓRIA DA ALEGAÇÃO",
+            "boundary_sub": "um par, e a ficha também o carrega — escrito agora, antes de qualquer resultado",
             "fields": [
                 ("OBJETIVO", "o que o estudo pretende\ndescrever, prever ou explicar"),
                 ("UNIDADE DE ANÁLISE", "o tipo de entidade sobre a qual\na resposta faz uma alegação"),
@@ -214,8 +214,8 @@ L = {
                 ("ALCANCE", "para quais unidades a\nresposta precisa valer"),
             ],
             "boundary": [
-                ("ESPERA DEFENDER", "a frase que você pretende conquistar com a evidência"),
-                ("NÃO VAI DEFENDER", "a frase mais forte que você já sabe que não pode"),
+                ("ESPERA DEFENDER", "a frase que você\nespera defender"),
+                ("NÃO VAI CONSEGUIR DEFENDER", "a frase mais forte que você já\nsabe que não vai conseguir"),
             ],
             "band": "Seu, nunca delegado: a escolha entre as redações candidatas  ·  o tipo  ·  o alcance  ·  as duas frases da fronteira",
             "foot": "Uma fronteira escrita cedo é uma promessa; uma fronteira escrita tarde é uma desculpa.",
@@ -291,15 +291,15 @@ L = {
         },
         "declaration": {
             "title": "LA DECLARACIÓN",
-            "title_sub": "el contrato del proyecto con la evidencia, escrito mientras cambiarlo todavía no cuesta nada",
+            "title_sub": "dos partes, y ninguna sustituye a la otra — el contrato del proyecto con la evidencia",
             "parts": [
                 ("1 · LA PREGUNTA PRINCIPAL",
                  "la única frase que tu evidencia va a responder — clasificada por tipo y alcance en la lección anterior"),
                 ("2 · LA FICHA DE CAMPO",
                  "el registro breve que fija cada término que la frase lleva"),
-                ("3 · LA FRONTERA DE LA AFIRMACIÓN",
-                 "un par, escrito ahora: la frase que esperas defender y la más fuerte que ya sabes que no podrás"),
             ],
+            "boundary_head": "LA FRONTERA PROVISIONAL DE LA AFIRMACIÓN",
+            "boundary_sub": "un par, y la ficha también lo lleva — escrito ahora, antes de cualquier resultado",
             "fields": [
                 ("OBJETIVO", "qué pretende el estudio\ndescribir, predecir o explicar"),
                 ("UNIDAD DE ANÁLISIS", "el tipo de entidad sobre la que\nla respuesta afirma algo"),
@@ -309,8 +309,8 @@ L = {
                 ("ALCANCE", "para qué unidades debe\nvaler la respuesta"),
             ],
             "boundary": [
-                ("ESPERA DEFENDER", "la frase que pretendes ganarte con la evidencia"),
-                ("NO VA A DEFENDER", "la frase más fuerte que ya sabes que no puedes"),
+                ("ESPERA DEFENDER", "la frase que\nesperas defender"),
+                ("NO VA A PODER DEFENDER", "la frase más fuerte que ya\nsabes que no vas a poder"),
             ],
             "band": "Tuyo, nunca delegado: la elección entre las redacciones candidatas  ·  el tipo  ·  el alcance  ·  las dos frases de la frontera",
             "foot": "Una frontera escrita temprano es una promesa; una frontera escrita tarde es una excusa.",
@@ -589,73 +589,71 @@ def build_compass(S: dict, out: Path) -> None:
 
 
 def build_declaration(S: dict, out: Path) -> None:
-    """The declaration's anatomy: the lead question, the field card that pins
-    every term it carries, and the claim boundary as a PAIR.
+    """The declaration's anatomy: TWO parts, and the boundary lives inside
+    the second one.
 
-    Drawn as the record it is — one card, three numbered parts, ruled — so the
-    reader sees that a declaration is a document to fill in, not a sentence to
-    polish. The band beneath is the human line: what none of it delegates.
+    The chapter is explicit that a declaration has two parts and that the
+    field card is what "names" the objective, the unit, the outcome, the
+    conditions, the kind, the reach AND the provisional claim boundary. So
+    the boundary is drawn nested inside the card, not standing beside it,
+    and it is drawn as a PAIR. The band beneath is the human line: what
+    none of this delegates.
     """
-    fig, ax = plt.subplots(figsize=(10.0, 5.9))
+    fig, ax = plt.subplots(figsize=(10.0, 6.1))
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    card_l, card_r = .045, .955
-    inset_l, inset_r = .068, .932
-
-    ax.text(.5, .958, S["title"], ha="center", va="center",
+    ax.text(.5, .965, S["title"], ha="center", va="center",
             fontsize=9.0, fontweight="bold", color=INK)
-    ax.text(.5, .926, S["title_sub"], ha="center", va="center",
+    ax.text(.5, .936, S["title_sub"], ha="center", va="center",
             fontsize=6.8, color=MUTE)
 
-    # the card itself
-    box(ax, (card_l + card_r) / 2, .530, card_r - card_l, .700,
-        "white", INK, lw=1.5, r=.020)
+    # 1 — the sentence itself
+    q_head, q_sub = S["parts"][0]
+    box(ax, .5, .872, .790, .076, "white", INK, lw=1.4, r=.020)
+    ax.text(.5, .891, q_head, ha="center", va="center",
+            fontsize=7.8, fontweight="bold", color=INK)
+    ax.text(.5, .855, q_sub, ha="center", va="center",
+            fontsize=6.6, color=MUTE)
+    arrow(ax, .5, .832, .5, .802)
 
-    def part(y, idx, gloss=True):
-        head, sub = S["parts"][idx]
-        ax.text(inset_l, y, head, ha="left", va="center",
-                fontsize=7.8, fontweight="bold", color=INK)
-        if gloss:
-            ax.text(inset_l, y - .026, sub, ha="left", va="center",
-                    fontsize=6.6, color=MUTE)
+    # 2 — the card that pins every term the sentence carries
+    c_head, c_sub = S["parts"][1]
+    box(ax, .5, .482, .910, .630, FILL, SOFT, lw=1.1, r=.020)
+    ax.text(.5, .766, c_head, ha="center", va="center",
+            fontsize=8.0, fontweight="bold", color=INK)
+    ax.text(.5, .739, c_sub, ha="center", va="center",
+            fontsize=6.6, color=MUTE)
+    ax.plot([.075, .925], [.717, .717], color=SOFT, lw=.8, zorder=3)
 
-    def rule(y):
-        ax.plot([inset_l, inset_r], [y, y], color=SOFT, lw=.8, zorder=3)
-
-    # 1 — the sentence itself, given a slot of its own
-    part(.845, 0, gloss=False)
-    box(ax, .5, .795, inset_r - inset_l, .058, FILL, SOFT, lw=1.0, r=.018)
-    ax.text(.5, .795, S["parts"][0][1], ha="center", va="center",
-            fontsize=6.8, color=MUTE)
-    rule(.748)
-
-    # 2 — the six fields that pin its terms
-    part(.722, 1)
-    fxs, fw = (.215, .500, .785), .265
+    fxs, fw = (.215, .500, .785), .255
     for i, (head, sub) in enumerate(S["fields"]):
-        cx, cy = fxs[i % 3], (.620 if i < 3 else .496)
-        box(ax, cx, cy, fw, .102, FILL, SOFT, lw=1.0, r=.020)
-        ax.text(cx, cy + .025, head, ha="center", va="center",
+        cx, cy = fxs[i % 3], (.648 if i < 3 else .528)
+        box(ax, cx, cy, fw, .100, "white", INK, lw=1.1, r=.018)
+        ax.text(cx, cy + .024, head, ha="center", va="center",
                 fontsize=7.2, fontweight="bold", color=INK)
-        ax.text(cx, cy - .023, sub, ha="center", va="center",
+        ax.text(cx, cy - .022, sub, ha="center", va="center",
                 fontsize=6.2, color=MUTE, linespacing=1.35)
-    rule(.418)
 
-    # 3 — the boundary, and it is a pair
-    part(.392, 2)
-    for cx, (head, sub) in zip((.285, .715), S["boundary"]):
-        box(ax, cx, .272, .400, .098, "white", INK, lw=1.2, r=.020)
-        ax.text(cx, .295, head, ha="center", va="center",
+    # the boundary — inside the card, and a pair
+    box(ax, .5, .312, .850, .200, "white", INK, lw=1.3, r=.020)
+    ax.text(.5, .385, S["boundary_head"], ha="center", va="center",
+            fontsize=7.8, fontweight="bold", color=INK)
+    ax.text(.5, .359, S["boundary_sub"], ha="center", va="center",
+            fontsize=6.4, color=MUTE)
+    ax.plot([.100, .900], [.338, .338], color=SOFT, lw=.8, zorder=3)
+    ax.plot([.5, .5], [.228, .331], color=SOFT, lw=.8, zorder=3)
+    for cx, (head, sub) in zip((.290, .710), S["boundary"]):
+        ax.text(cx, .305, head, ha="center", va="center",
                 fontsize=7.2, fontweight="bold", color=INK)
-        ax.text(cx, .257, sub, ha="center", va="center",
-                fontsize=6.3, color=MUTE)
+        ax.text(cx, .258, sub, ha="center", va="center",
+                fontsize=6.3, color=MUTE, linespacing=1.35)
 
     # the human line
-    box(ax, .5, .122, card_r - card_l, .070, FILL, SOFT, lw=1.0, r=.020)
-    ax.text(.5, .122, S["band"], ha="center", va="center",
+    box(ax, .5, .100, .910, .054, "white", INK, lw=1.1, r=.018)
+    ax.text(.5, .100, S["band"], ha="center", va="center",
             fontsize=7.0, color=INK)
 
-    ax.text(.5, .040, S["foot"], ha="center", va="center", fontsize=7.2,
+    ax.text(.5, .032, S["foot"], ha="center", va="center", fontsize=7.2,
             color=MUTE, style="italic")
 
     fig.tight_layout(pad=0.4)

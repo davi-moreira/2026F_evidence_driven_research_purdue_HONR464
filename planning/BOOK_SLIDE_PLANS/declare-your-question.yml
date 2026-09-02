@@ -1,5 +1,5 @@
 lesson: declare-your-question
-source_sha256: "29c5317292151e1bde37e04fc8a0d8375a84430c6801adbef05f958b587a571e"
+source_sha256: "54d527bd1c326c09b4e40f11a3546ecf27872b72816e719850d5502f195ed0d5"
 
 sections:
 
@@ -77,16 +77,17 @@ sections:
       figure: declaration_anatomy.png
       width: "80%"
       bullets:
-        - "Three parts: the sentence, the card that pins its terms, and the boundary pair."
-        - "Kind and reach come straight from the compass; the boundary is written now, not after the results."
+        - "Two parts: the sentence, and the card that pins every term it carries."
+        - "The card names the boundary too — a pair, written now rather than after the results."
       note: >
         Show the card and let the room see that a declaration is a document to
         fill in, not a sentence to polish. Two things repay pointing at. The
-        boundary is a pair, and both halves are written before any results
-        exist, which is what makes the second half a promise rather than an
-        excuse. And the band underneath is the delegation line for this whole
-        lesson: candidate wording is the part that delegates well, while the
-        choice among the wordings, the kind, the reach and both boundary
+        boundary sits inside the field card rather than beside it, because the
+        card is what names it, and it is a pair: both halves are written before
+        any results exist, which is what makes the second half a promise rather
+        than an excuse. And the band underneath is the delegation line for this
+        whole lesson: candidate wording is the part that delegates well, while
+        the choice among the wordings, the kind, the reach and both boundary
         sentences stay with the researcher.
 
     - title: "A readable question plus a complete card beats a sixty-word question"
