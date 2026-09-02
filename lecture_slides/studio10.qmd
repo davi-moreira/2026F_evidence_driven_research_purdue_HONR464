@@ -8,12 +8,14 @@
 # Lessons on this deck: research-posters poster-criticism research-pitches difficult-questions
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 10 — Prepare to publish or present"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,23 +55,27 @@ Studio 10
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Turn your bounded claims into an artifact ready for publication or
 presentation, and rehearse defending it against real questions.
 
 :::
 
+:::::
 
-## The milestone ahead {.dense}
+
+## The milestone ahead
 
 ::: {.kicker}
 
 Studio 10
 
 :::
+
+::::: {.slide-body}
 
 This studio closes with **[Milestone 10: Your artifact, ready to publish or
 present](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html)**,
@@ -79,6 +85,8 @@ that satisfies it - a paper or research note, a seminar or conference talk, a
 poster, or another venue's format - with a content map tracing every
 load-bearing claim and number, and a defense rehearsal record. This is not yet
 public release.
+
+:::::
 
 ::: {.notes}
 
@@ -100,7 +108,7 @@ assessed.
 :::
 
 
-## The lessons in this studio {.denser}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -108,10 +116,14 @@ Studio 10 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 32 — Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html): if your venue is a poster, or your format carries a quantitative figure: the draft with labeled values, uncertainty shown as the design licenses (interval or caveat), and a headline verbed to your boundary.
 - [Lesson 33 — Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html): if your venue is a poster: the gallery-walk audit of your draft, hits ranked by how far the error travels, fixed once, and the lock call.
 - [Lesson 34 — Research Pitches, Talks, and Seminars](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html): if you will speak, whether a pitch, a seminar, or a conference talk: your 30-second and 3-minute spines, built boundary-first, tested aloud on an outsider, and expanded to the venue's length.
 - [Lesson 35 — Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html): your five hardest fair questions with defend-or-concede answers, and your uncertainty-and-limitations statement in ULN form.
+
+:::::
 
 
 ## Research Posters {background-color="#1a1a19" .divider}
@@ -138,9 +150,9 @@ Chapter 32
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 If your artifact carries a quantitative visual, decide what that visual must
 let the audience see and what uncertainty must stay visible. If your venue is
@@ -150,6 +162,8 @@ than the data.
 
 :::
 
+:::::
+
 
 ## A stranger reads your tallest bar before your methods
 
@@ -158,6 +172,8 @@ than the data.
 Chapter 32 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 - A skeptical peer, walking a poster session, four feet from your board.
 - From four feet away one thing is read: does your tallest bar mean what it looks like?
@@ -169,6 +185,8 @@ If your axis starts halfway up the scale, I have caught you before I read a
 word of your methods.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -189,10 +207,14 @@ Chapter 32 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A journal reader can study a figure for minutes.
 - A seminar audience may see it for thirty seconds.
 - A poster visitor may first meet it from four feet away.
 - At a poster session a stranger gives you ninety seconds and one glance.
+
+:::::
 
 ::: {.notes}
 
@@ -213,9 +235,13 @@ Chapter 32 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - An axis that starts just below your data turns a rounding-error gap into a landslide.
 - A reader who cannot tell your red bar from your green one receives no message.
 - Every number can be correct while the picture still overclaims.
+
+:::::
 
 ::: {.notes}
 
@@ -235,6 +261,8 @@ audit rather than a proofread.
 Chapter 32 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -268,6 +296,8 @@ Chapter 32 · The concept
 - An observational comparison may say "is associated with," never "causes."
 - A descriptive question about the weeks you measured licenses no claim about why.
 
+:::::
+
 ::: {.notes}
 
 The verb is where the overclaim usually hides, and the poster convention of
@@ -287,6 +317,8 @@ say a headline from their own project aloud and have the room name the verb.
 Chapter 32 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -320,6 +352,8 @@ Chapter 32 · The concept
 - A completion-rate axis running 70 to 76 magnifies a small difference into a cliff.
 - A "±4 points" error bar drawn right on the headline figure.
 
+:::::
+
 ::: {.notes}
 
 Three points at once, and the middle one is the concrete instance of the
@@ -339,6 +373,8 @@ standing four feet away will read it has not been stated on the page (Alley
 Chapter 32 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -365,6 +401,8 @@ Chapter 32 · The concept
 - For the web version of a poster, WCAG 2.2 is the published standard (World Wide Web Consortium 2024).
 - Its normative scope is web content, so a printed board takes the same rules as good practice.
 
+:::::
+
 ::: {.notes}
 
 Keep the bound the chapter states, because it is easy to overstate here. The
@@ -386,6 +424,8 @@ Chapter 32 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - One judgment made four ways, and each way has a name.
 - Four audits to run on your own board: claim boundary, figure honesty, uncertainty, accessibility.
 - Correct arithmetic is no defense against a picture that oversells it.
@@ -396,6 +436,8 @@ A poster that fails any one of these overclaims, even when its numbers are
 exactly right.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -416,10 +458,14 @@ Chapter 32 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A business-analytics project comparing two versions of an online store checkout page.
 - **Completion rate:** the share of shoppers who start checkout and finish the purchase.
 - Across weekly samples Version A means 71 percent, Version B means 74.
 - The 95% interval on each mean is about ±4 points, so the two overlap.
+
+:::::
 
 ::: {.notes}
 
@@ -440,10 +486,14 @@ Chapter 32 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Figure honesty: on an axis floored at 70, the taller bar is drawn four times the shorter.
 - Uncertainty: the intervals overlap, and nothing on the board shows it.
 - Claim boundary: "BOOSTS" is a decisive, causal verb for a three-point, overlapping gap.
 - Accessibility: told apart by red and green alone, with no value a screen reader can read.
+
+:::::
 
 ::: {.notes}
 
@@ -465,10 +515,14 @@ Chapter 32 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Run the axis 0 to 100 and print each mean as a label on its bar.
 - Draw the ±4-point interval on top of the bar it belongs to.
 - Separate the bars with a color-blind-safe pair plus a hatch pattern.
 - Rewrite the headline: "Version B completed about 3 points higher, within overlapping intervals."
+
+:::::
 
 ::: {.notes}
 
@@ -481,13 +535,15 @@ is a documented requirement, not a courtesy (Crameri et al. 2020).
 :::
 
 
-## Read the printed gap before you look at the bars {.densest}
+## Read the printed gap before you look at the bars
 
 ::: {.kicker}
 
 Chapter 32 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the printed gap in points, then the overlap line that follows it.
 - The axis is fixed 0 to 100, so bar heights match the numbers they report.
@@ -521,6 +577,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it with SEED = 464 so everyone sees the same two means and the same
@@ -540,10 +598,14 @@ Chapter 32 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Honest axes, values on the marks, uncertainty shown where the design licenses it.
 - Distinctions carried in two channels travel with the figure to any format.
 - The scan path and the print lock belong to this format alone.
 - Borrow by naming the technique, never by claiming the whole poster transfers.
+
+:::::
 
 ::: {.notes}
 
@@ -565,6 +627,8 @@ Chapter 32
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -578,6 +642,8 @@ so it is tempting to trust it and move on.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -587,11 +653,15 @@ Chapter 32 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by mapping each returned question to an audit.
 - Claim boundary, sampling, and methods all draw questions; figure honesty draws none.
 - That empty row is the finding.
 - You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped.
 - Fluency is not completeness.
+
+:::::
 
 ::: {.notes}
 
@@ -613,6 +683,8 @@ Chapter 32
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -626,14 +698,18 @@ cannot decide the claim was earned. Those stay with you.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 32 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Choose the single figure that carries your lead claim, and draw it with the axis running the full scale of the measure.
 2. Print each value as a label on the mark it belongs to, and show the uncertainty the design licenses right on the figure so the uncertainty arrives in the same glance as the number.
@@ -644,6 +720,8 @@ Chapter 32 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_research_posters.ipynb) with [Chapter 32](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -677,9 +755,9 @@ Chapter 33
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 If your venue is a poster, run the gallery walk and the print-lock audit
 before the artifact leaves your control. Whatever your format, you decide
@@ -687,6 +765,8 @@ whether the draft is done or needs one more fix, and you defend the lock call
 out loud.
 
 :::
+
+:::::
 
 
 ## A judge stops at one number on your board
@@ -696,6 +776,8 @@ out loud.
 Chapter 33 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -708,6 +790,8 @@ first?
 - "Where did this come from?"
 - Walk them to the exact line of code and the whole poster earns trust.
 - Say "somewhere in the analysis" and they stop believing every other number.
+
+:::::
 
 ::: {.notes}
 
@@ -729,9 +813,13 @@ Chapter 33 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - The honesty has to be built in before the poster leaves your hands.
 - This is the last audit between a draft poster and a permanent one.
 - Done, or one more fix first. You make that call.
+
+:::::
 
 ::: {.notes}
 
@@ -752,9 +840,13 @@ Chapter 33 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Pass one: the **gallery-walk audit**, a fixed checklist instead of a glance.
 - Pass two: the **oral defense**, questions you cannot edit afterward.
 - Pass three: the lock, when the poster stops being changeable.
+
+:::::
 
 ::: {.notes}
 
@@ -775,6 +867,8 @@ board. The lock is the end of the line.
 Chapter 33 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -808,6 +902,8 @@ Chapter 33 · The concept
 - An axis starting just below the data draws a small gap as a canyon.
 - A value label plus a hatch pattern, so color is never the only signal.
 
+:::::
+
 ::: {.notes}
 
 Three terms, and each one has a physical place on a poster. The claim boundary
@@ -829,11 +925,15 @@ Chapter 33 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Claim boundary: does the headline stay inside its evidence?
 - Figure honesty: does the picture match the numbers?
 - Read path: does a stranger find the headline in ninety seconds (Erren & Bourne 2007)?
 - Uncertainty: does the interval sit beside the claim, not buried in a footnote?
 - Accessibility: can every reader receive the claim (Crameri et al. 2020)?
+
+:::::
 
 ::: {.notes}
 
@@ -855,11 +955,15 @@ Chapter 33 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Three lenses cover almost every hard question at your board.
 - An outsider tests whether your claim survives translation.
 - A specialist probes a design choice.
 - A skeptic offers a rival explanation for the same evidence.
 - **Defend-versus-concede:** conceding means narrowing the claim on the spot.
+
+:::::
 
 ::: {.notes}
 
@@ -882,9 +986,13 @@ Chapter 33 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Terminal lock:** the moment the poster becomes final and unchangeable.
 - **Claim-evidence traceability:** every number traces to the exact cell that produced it.
 - That is what lets you show the line when a judge points at your board.
+
+:::::
 
 ::: {.notes}
 
@@ -906,11 +1014,15 @@ Chapter 33 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A plant-biology poster, with a bar chart of mean grain yield at its center.
 - Compost-amended plots against plots that got none. A red bar and a green bar.
 - 185 and 191 bushels per acre. A gap of 6.
 - The y-axis starts at 180, and no interval is shown.
 - Nothing was randomized. The grower decided which fields got compost.
+
+:::::
 
 ::: {.notes}
 
@@ -931,11 +1043,15 @@ Chapter 33 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Claim boundary: "raises" is causal, but a richer field could bring both compost and yield.
 - Honest headline: compost is associated with about 6 more bushels per acre.
 - Figure honesty: an axis floored at 180 draws 6 bushels several times taller than it is.
 - Uncertainty: a 95% interval of roughly ±9 bushels per acre swamps a 6-bushel gap.
 - Accessibility: red-green bars fail a reviewer who is red-green color-blind.
+
+:::::
 
 ::: {.notes}
 
@@ -959,10 +1075,14 @@ Chapter 33 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The claim-boundary hit travels farthest.
 - A reviewer who catches one causal overreach distrusts the whole board.
 - So you lock the associational verb first.
 - That decision, made by you and defended out loud, is the work of this chapter.
+
+:::::
 
 ::: {.notes}
 
@@ -977,13 +1097,15 @@ fixed, in ranked order; they simply do not go first.
 :::
 
 
-## Rebuild the board's data and print the interval it left off {.densest}
+## Rebuild the board's data and print the interval it left off
 
 ::: {.kicker}
 
 Chapter 33 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the two means and then the gap the poster headlined.
 - Watch the interval the board never showed.
@@ -1020,6 +1142,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+:::::
+
 ::: {.notes}
 
 Walk the code as a rebuild of the poster, not as syntax. The assignment line
@@ -1040,9 +1164,13 @@ Chapter 33 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - `ax.set_ylim(0, 230)` puts the 6-bushel gap back at its true size.
 - Two grays plus a hatch pattern carry the distinction without color.
 - Error bars put the interval beside the bars instead of nowhere.
+
+:::::
 
 ::: {.notes}
 
@@ -1064,6 +1192,8 @@ Chapter 33
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1076,6 +1206,8 @@ treat the poster as fully audited.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1085,11 +1217,15 @@ Chapter 33 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - It is not.
 - The list never mentions the truncated axis, and never mentions the red-green bars.
 - Those are the two most concrete, most fixable flaws on the board, and the polished list quietly skipped both.
 - This is the illusion of completeness: a long, organized answer that omits the thing that matters most.
 - Here is how you catch it.
+
+:::::
 
 ::: {.notes}
 
@@ -1127,6 +1263,8 @@ Chapter 33
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1140,14 +1278,18 @@ the board, is yours.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 33 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Run the gallery-walk audit on your own draft as if you had never seen it: claim boundary, figure honesty, read path, uncertainty, accessibility.
 2. Rank the hits by how far the error travels.
@@ -1158,6 +1300,8 @@ Chapter 33 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_poster_criticism.ipynb) with [Chapter 33](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1190,9 +1334,9 @@ Chapter 34
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Build a spoken spine that survives your venue's actual length. A thirty-second
 pitch, a three-minute walk, and a twenty-minute seminar are not one artifact
@@ -1201,6 +1345,8 @@ claim must survive both compression and expansion without growing stronger in
 the shorter version.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1211,7 +1357,9 @@ Chapter 34 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -1231,6 +1379,8 @@ Chapter 34 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1247,10 +1397,14 @@ Chapter 34 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A finished poster is silent.
 - The moment a visitor stops, your voice takes over.
 - Speaking is faster than reading, so you compress on the fly.
 - That is where claims quietly grow.
+
+:::::
 
 ::: {.notes}
 
@@ -1271,6 +1425,8 @@ Chapter 34 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A skeptical peer is working the room at a research conference.
 - She stops at maybe forty posters in an afternoon.
 - The ones who oversold lost her on the second sentence.
@@ -1282,6 +1438,8 @@ presenter told me, in one clean breath, exactly what they found and exactly
 where it stops.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1302,10 +1460,14 @@ Chapter 34 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - She is not testing your data.
 - She is testing whether your spoken sentence still matches the sentence on your board.
 - So you build a pitch you can say cold, under pressure.
 - It never widens the claim your evidence earned.
+
+:::::
 
 ::: {.notes}
 
@@ -1326,6 +1488,8 @@ stand up in this term.
 Chapter 34 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1351,6 +1515,8 @@ Chapter 34 · The concept
 - The guided tour you give the one who stays is another.
 - Different lengths, one skeleton.
 
+:::::
+
 ::: {.notes}
 
 Prepared is the word to sit on. A pitch is not the paragraph you improvise
@@ -1369,11 +1535,15 @@ Chapter 34 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Hook**: one sentence a stranger outside your field cares about.
 - **Claim**: your headline, said plainly and inside its limits.
 - **Evidence**: the finding that earns the claim, one spoken sentence at a time.
 - **Boundary sentence**: one sentence naming what the claim does not show.
 - **Invitation**: a reason to look closer.
+
+:::::
 
 ::: {.notes}
 
@@ -1394,10 +1564,14 @@ Chapter 34 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **30-second hook**: hook, claim, boundary, invitation, with no evidence yet.
 - **90-second walk**: the hook plus two or three evidence beats.
 - **Full pitch**: three to five minutes.
 - Deciding what goes in each length is the choice this chapter equips.
+
+:::::
 
 ::: {.notes}
 
@@ -1417,10 +1591,14 @@ Chapter 34 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Full: "on data the model had never seen, it flagged four of every five slow tickets."
 - Compressed: "on new tickets, it caught most of the slow ones."
 - Inflated: "my model predicts which tickets will be slow."
 - The same rule governs every length you speak.
+
+:::::
 
 ::: {.notes}
 
@@ -1441,9 +1619,13 @@ Chapter 34 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You wrote "is associated with." Your mouth says "causes."
 - The boundary moves while nobody watches the words.
 - That is the failure to hunt in your own pitch.
+
+:::::
 
 ::: {.notes}
 
@@ -1463,6 +1645,8 @@ reach for.
 Chapter 34 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1488,6 +1672,8 @@ Chapter 34 · A worked example
 - On that held-out set, when it flagged a ticket "slow," it was right about 78% of the time.
 - Poster headline: "On held-out tickets, the model flagged slow ones with 78% precision."
 
+:::::
+
 ::: {.notes}
 
 Every word in that headline is carrying weight. "Held-out" says where the
@@ -1506,10 +1692,14 @@ Chapter 34 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - **Hook:** "a help desk drowns in tickets every morning and cannot tell which will drag on."
 - **Claim:** "On tickets it had never seen, my model flagged the slow ones,"
 - "and when it raised a flag it was right about three times in four."
 - **Invitation:** "The surprising part is which tickets fooled it. Want the walk?"
+
+:::::
 
 ::: {.notes}
 
@@ -1532,10 +1722,14 @@ Chapter 34 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - "That number is precision on a held-out slice, not overall accuracy,"
 - "and the model still misses some slow tickets."
 - The fix is mechanical: mark the boundary sentence in your script.
 - Say it at every length, even the 30-second one.
+
+:::::
 
 ::: {.notes}
 
@@ -1556,10 +1750,14 @@ Chapter 34 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Drop "held-out" and you have claimed the model works on any ticket.
 - Your test never showed that.
 - Swap "precision" for "accuracy" and you quote a number your poster does not report.
 - Both feel natural, because the shorter sentence sounds cleaner.
+
+:::::
 
 ::: {.notes}
 
@@ -1572,13 +1770,15 @@ the most damage if it fell out.
 :::
 
 
-## Run it: the number in the claim, and the number behind the boundary {.denser}
+## Run it: the number in the claim, and the number behind the boundary
 
 ::: {.kicker}
 
 Chapter 34 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - 1,000 held-out tickets, and about 22% of them really do drag on.
 - Precision is the headline number: right when it flags.
@@ -1605,6 +1805,8 @@ print(f"\nthe headline number is the first one. the second is what the")
 print("boundary sentence is about: the model still misses some slow tickets")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block prints both numbers the pitch depends on: the one in the claim, and
@@ -1624,6 +1826,8 @@ Chapter 34
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1638,8 +1842,10 @@ trap.
 
 :::
 
+:::::
 
-## How it failed {.dense}
+
+## How it failed
 
 ::: {.kicker}
 
@@ -1647,11 +1853,15 @@ Chapter 34 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by putting the compressed line next to your poster's boundary sentence and reading them word for word.
 - "Predicts ... 78% of the time" does not match "precision on a held-out slice." Then you say the line to a friend, who asks, "so it's right 78% of the time on any ticket?" That question is the widened claim coming back at you.
 - You keep your own boundary sentence and drop the tool's version.
 - If your talk carries slides, the slides serve the spoken spine and never replace it.
 - Build the talk first, add a slide only where a listener needs to see what they cannot hold in memory, and give every quantitative visual the figure discipline from the poster chapter: honest axes, values on the marks, and uncertainty shown where the design licenses it, as an interval or an honest caveat.
+
+:::::
 
 ::: {.notes}
 
@@ -1683,6 +1893,8 @@ Chapter 34
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1696,14 +1908,18 @@ the sentence. You own it.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 34 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your boundary sentence first, on its own line, and mark it.
 2. Build the 30-second version: hook, claim, boundary, invitation, with no evidence beats yet.
@@ -1715,6 +1931,8 @@ Chapter 34 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_research_pitches.ipynb) with [Chapter 34](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1748,9 +1966,9 @@ Chapter 35
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Prepare to answer the hardest reasonable question in the channel your venue
 actually uses: live discussion, a reviewer report, an editor query, or a
@@ -1761,6 +1979,8 @@ never improvise it.
 
 :::
 
+:::::
+
 
 ## She trusts you more when you name what your study cannot show
 
@@ -1769,6 +1989,8 @@ never improvise it.
 Chapter 35 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 - A policy stakeholder who has heard a thousand poster pitches.
 - Insist it is airtight and she starts looking for the crack herself.
@@ -1780,6 +2002,8 @@ When a presenter tells me, unprompted, exactly what their study can't show, I
 trust everything else they said more.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1800,10 +2024,14 @@ Chapter 35 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Your poster, talk, or page is finished and honest.
 - Under pressure one presenter buries a real finding under apology.
 - The other upgrades a careful 'went together' into a confident 'caused.'
 - Both misstate the evidence you actually hold.
+
+:::::
 
 ::: {.notes}
 
@@ -1823,6 +2051,8 @@ that neither move is available to you in it.
 Chapter 35 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1856,6 +2086,8 @@ Chapter 35 · The concept
 - Limitation: 'I measured that two things went together, so I cannot say one caused the other.'
 - Delivered together, ULN sounds like expertise, because you name the edge on purpose.
 
+:::::
+
 ::: {.notes}
 
 Say the three beats in order once, then say them again as one spoken answer,
@@ -1876,9 +2108,13 @@ Chapter 35 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - 'Honestly this is probably all wrong, my sample's tiny.'
 - That is self-erasure, and the finding underneath it was real.
 - ULN exists to prevent exactly this.
+
+:::::
 
 ::: {.notes}
 
@@ -1899,6 +2135,8 @@ would have been.
 Chapter 35 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1924,6 +2162,8 @@ Chapter 35 · The concept
 - 'Sort of, take it with a grain of salt' tells them nothing.
 - Precision informs the listener. Hedging only protects you.
 
+:::::
+
 ::: {.notes}
 
 The test between the two is simple: after your sentence, does the listener
@@ -1943,10 +2183,14 @@ Chapter 35 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A question bank is a written list of the hardest fair questions a visitor could ask.
 - Each one arrives with a prepared answer.
 - One per recurring type: method, alternative explanation, so-what, generalization, AI-use.
 - Write it down. Do not plan to think of it in the room.
+
+:::::
 
 ::: {.notes}
 
@@ -1968,10 +2212,14 @@ Chapter 35 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Name what you cannot say.
 - Name the thing you can stand on.
 - Name the method that would settle it.
 - Use it when a banked question has no full answer.
+
+:::::
 
 ::: {.notes}
 
@@ -1991,10 +2239,14 @@ Chapter 35 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You work with usage logs from a small software company's app.
 - Some customers chose the compact toolbar; others kept the expanded one.
 - Compact users found the target page a median of six seconds faster.
 - The visitor: 'so the compact toolbar causes faster navigation?'
+
+:::::
 
 ::: {.notes}
 
@@ -2015,10 +2267,14 @@ Chapter 35 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Users picked their own toolbar. Nobody assigned it.
 - **Confound:** a third factor that shapes both the choice and the outcome.
 - Power users may have chosen compact and been fast with any layout.
 - So your study cannot say the toolbar caused the speed.
+
+:::::
 
 ::: {.notes}
 
@@ -2039,10 +2295,14 @@ Chapter 35 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - 'I can't say it causes the speed, because compact users may already be power users.'
 - 'The study that would answer you is randomly assigning the toolbar to new users.'
 - 'That's what I'd run next.'
 - You refused one word and handed back a research question, not a wall.
+
+:::::
 
 ::: {.notes}
 
@@ -2056,13 +2316,15 @@ what the evidence on communicating uncertainty finds (van der Bles et al.
 :::
 
 
-## Build users the toolbar cannot help, and the six seconds appear anyway {.denser}
+## Build users the toolbar cannot help, and the six seconds appear anyway
 
 ::: {.kicker}
 
 Chapter 35 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The simulated seconds depend on being a power user, never on the toolbar.
 - Watch the observed median gap against a true toolbar effect of zero.
@@ -2092,6 +2354,8 @@ print("\nthe six seconds are real and the toolbar did not cause them. that is")
 print("exactly the sentence the two-beat reply has to carry")
 ```
 
+:::::
+
 ::: {.notes}
 
 Read the seconds line as the whole argument: the toolbar term is simply
@@ -2111,6 +2375,8 @@ Chapter 35
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -2125,6 +2391,8 @@ as helpful editing.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -2134,9 +2402,13 @@ Chapter 35 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by reading the AI's verb against your poster's headline, word for word.
 - Your headline says "associated with." The rewrite says "improves." The kind of claim moved while the sentence got prettier.
 - You keep your own verb, and log that the polish inflated the claim.
+
+:::::
 
 ::: {.notes}
 
@@ -2156,6 +2428,8 @@ Chapter 35
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -2168,14 +2442,18 @@ you must refuse aloud. Your honest don't-know is yours to mean, not to recite.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 35 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write the five hardest fair questions someone could ask you, one for each type: method, alternative explanation, why-it-matters, generalization, AI use.
 2. Draft a two-sentence answer to each and mark it defend or concede.
@@ -2186,6 +2464,8 @@ Chapter 35 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_difficult_questions_and_uncertainty.ipynb) with [Chapter 35](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2218,6 +2498,8 @@ Milestone 10
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -2225,6 +2507,8 @@ Milestone 10
 **What this milestone produces.** A short venue contract and one artifact ready for publication or presentation that satisfies it - a paper or research note, a seminar or conference talk, a poster, or another venue's format - with a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release.
 
 :::
+
+:::::
 
 
 ## What you bring
@@ -2235,10 +2519,14 @@ Milestone 10 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 35 — Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html): your five hardest fair questions with defend-or-concede answers, and your uncertainty-and-limitations statement in ULN form.
 
+:::::
 
-## The practice {.dense}
+
+## The practice
 
 ::: {.kicker}
 
@@ -2246,12 +2534,16 @@ Milestone 10 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Write your venue contract using the guide above, then say what your claim must lose to fit that format.
 2. Write a transformation memo from your Studio 9 note: what expands, what compresses, what moves, what becomes visual, and what becomes spoken.
 3. Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live.
 4. Build the artifact to its venue contract, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
 5. Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the manuscript to a cold reader.
 6. Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are the agenda for the studio that owns them.
+
+:::::
 
 
 ## The four rails, here
@@ -2261,6 +2553,8 @@ Milestone 10 · In the studio
 Milestone 10 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -2298,6 +2592,8 @@ Milestone 10 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -2306,6 +2602,8 @@ Milestone 10 · Every studio, these four
 Milestone 10
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -2318,14 +2616,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 10 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio10-adapt-and-defend.html) · [Milestone 10](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

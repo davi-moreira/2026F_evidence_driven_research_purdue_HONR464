@@ -8,12 +8,14 @@
 # Lessons on this deck: ai-arm-not-brain research-director sdiivdd responsibility-ownership question-kinds declare-your-question
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 2 — Set your rules, shape your question"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,15 +55,17 @@ Studio 2
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Set how you and your tools will work while the stakes are still small, verify
 your first AI assistance, and close by declaring the question your evidence
 will answer.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -72,6 +76,8 @@ Studio 2
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 2: Your rules and your
 question](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone02-govern-the-work.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
@@ -79,6 +85,8 @@ Your working agreement (an ownership statement, your working rules, your
 opened AI Research Ledger, your delegation map, and the red-flag screen of
 your chosen problem) and your question, formally declared: objective, units,
 outcomes and conditions, kind and reach, and a provisional claim boundary.
+
+:::::
 
 ::: {.notes}
 
@@ -102,7 +110,7 @@ artifact is assessed.
 :::
 
 
-## The lessons in this studio {.densest}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -110,12 +118,16 @@ Studio 2 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 2 — AI Is Your Arm, Not Your Brain](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html): your opened AI Research Ledger and one verified factual hinge from your own problem, including the retrospective Studio 1 receipt as row one.
 - [Lesson 3 — You as a Research Director](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html): your delegation map for the whole project and for the declaration ahead: candidate wording may travel, while the lead question, kind, reach, and boundary stay yours.
 - [Lesson 4 — Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html): one complete SDIIVDD run on a checkable claim your starting belief makes, with the check's outcome on record — including "nothing changed" when the check agreed.
 - [Lesson 5 — Research Responsibility and Intellectual Ownership](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html): your ownership statement, never-delegate list, and first AI-use disclosure, with the research question named as the first sentence your name signs.
 - [Lesson 6 — Choose Your Question's Kind and Reach](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html): your lead question chosen from the candidates, placed by kind and reach, with double-barrels split and a comparison world recorded when causal.
 - [Lesson 7 — Declare Your Research Question](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/declare-your-question.html): your chosen formal wording with every change accounted for, the field card, the boundary pair with its uncertainty-and-limitations line, and the stranger-test result, dated as version zero.
+
+:::::
 
 
 ## AI Is Your Arm, Not Your Brain {background-color="#1a1a19" .divider}
@@ -142,15 +154,17 @@ Chapter 2
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Decide what must happen between an AI output and evidence you are willing to
 use. Name the check, record the exchange, and keep responsibility for the
 result.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -161,7 +175,9 @@ Chapter 2 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -181,6 +197,8 @@ Chapter 2 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -197,10 +215,14 @@ Chapter 2 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A **certified public accountant (CPA)** is licensed to sign off on a company's financial statements.
 - That signature makes them personally answerable for the numbers.
 - Investors turn to the CPA if the figures prove wrong.
 - Signing is not a claim that the accounting software ran without errors.
+
+:::::
 
 ::: {.notes}
 
@@ -220,10 +242,14 @@ Chapter 2 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - An AI tool can fetch a statistic, draft a paragraph, or write working code in seconds.
 - A brainstorm can produce a possibility. It cannot make a factual statement reliable.
 - So the question is not what the tool can produce.
 - It is what you handed it, and how you checked what came back.
+
+:::::
 
 ::: {.notes}
 
@@ -243,10 +269,14 @@ Chapter 2 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The rule that names the chapter: AI as your arm, not your brain.
 - The tool can reach, fetch, draft, and compute for you.
 - It does not get to decide what is true or what you claim.
 - Let it draft a summary of a government statistics release, then confirm every number yourself.
+
+:::::
 
 ::: {.notes}
 
@@ -266,9 +296,13 @@ Chapter 2 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Delegate a well-specified task: find three published sources for last year's county unemployment rate.
 - Verify by opening the statistical agency's real data table and reading the number yourself.
 - Trusting what the tool typed is not a check.
+
+:::::
 
 ::: {.notes}
 
@@ -287,6 +321,8 @@ model, which rules out asking the same tool whether it was right.
 Chapter 2 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -308,6 +344,8 @@ Chapter 2 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Verification cannot be skipped because a wrong AI answer looks exactly like a
@@ -327,6 +365,8 @@ Chapter 2 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 A never-delegate decision is a call that stays yours no matter how good the
@@ -338,6 +378,8 @@ tool becomes.
 - What your evidence licenses.
 - The ethics of the work.
 - How you state your uncertainty.
+
+:::::
 
 ::: {.notes}
 
@@ -357,9 +399,13 @@ Chapter 2 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Use the tool ambitiously.
 - Confirm every fact and number yourself.
 - Log the tool, the task, and the check in a record that travels with your work (Autio et al. 2024).
+
+:::::
 
 ::: {.notes}
 
@@ -379,11 +425,15 @@ Chapter 2 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The curiosity studio opened with the discovery cycle Zahavy presents through Einstein (Zahavy 2026).
 - There you worked upstream, where a possible explanation begins.
 - This lesson starts downstream, once an idea exists.
 - Every line from that studio becomes a row of its own, marked retrospective.
 - The date a ledger opens does not erase an earlier delegation.
+
+:::::
 
 ::: {.notes}
 
@@ -404,10 +454,14 @@ Chapter 2 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The question: did meals near you get more expensive after a 2019 local minimum-wage increase?
 - A dollar buys less now than it did then.
 - The **Consumer Price Index (CPI)** is a published number tracking what a typical household's basket costs over time.
 - A higher value means the same basket costs more.
+
+:::::
 
 ::: {.notes}
 
@@ -427,11 +481,15 @@ Chapter 2 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Delegate: locating candidate published price series.
 - Delegate: listing the inputs an inflation adjustment needs.
 - Keep: that a consumer index, not a producer or wholesale index, fits what households pay.
 - Keep: the base year you convert every price into.
 - Keep: whether a source is authoritative.
+
+:::::
 
 ::: {.notes}
 
@@ -451,10 +509,14 @@ Chapter 2 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Open the agency's actual data table and read the two index values yourself.
 - Recompute the percentage change by hand.
 - If it confirms the number, you log a verified input.
 - If it differs, or cannot be found at all, the number was never evidence.
+
+:::::
 
 ::: {.notes}
 
@@ -467,13 +529,15 @@ could not be found.
 :::
 
 
-## The code takes the index on faith, exactly as the tool did {.denser}
+## The code takes the index on faith, exactly as the tool did
 
 ::: {.kicker}
 
 Chapter 2 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the two index values: they are placeholders standing in until you retrieve the real ones.
 - Replace them and rerun; nothing in the code can check them for you.
@@ -498,6 +562,8 @@ print(f"mean 2019 menu price      : ${prices_2019.mean():.2f}")
 print(f"same meal in 2025 dollars : ${adjusted.mean():.2f}")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it, then say what it cannot do for you. The arithmetic runs the same way
@@ -516,6 +582,8 @@ Chapter 2
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -528,6 +596,8 @@ number is not on that page.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -537,11 +607,15 @@ Chapter 2 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - Here is exactly how you catch it.
 - You do not trust the citation as delivered.
 - You search for the survey in a library catalog and, if it opens, turn to the named table and read the line.
 - If the survey does not exist, or has no such value, the confident citation collapses.
 - Fabricated sources sound just as authoritative as real ones, so the only reliable filter is opening the document.
+
+:::::
 
 ::: {.notes}
 
@@ -563,6 +637,8 @@ Chapter 2
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -576,14 +652,18 @@ job.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 2 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Open a blank spreadsheet or document and title it **AI Research Ledger**.
 2. Open your ledger's first rows backward, one for each Studio 1 activity you logged: the brainstorm, the source search, the candidate list, and the red-team.
@@ -594,6 +674,8 @@ Chapter 2 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch02_ai_is_your_arm_not_your_brain.ipynb) with [Chapter 2](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -627,9 +709,9 @@ Chapter 3
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Every task in your project belongs in one of three buckets: safe to delegate,
 delegate then verify, or never delegate. Your decision here is where each task
@@ -637,6 +719,8 @@ goes. You sort the list before you open the tool, not in the middle of using
 it, and you defend the placements one line at a time.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -647,7 +731,9 @@ Chapter 3 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -667,6 +753,8 @@ Chapter 3 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -683,6 +771,8 @@ Chapter 3 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A **principal investigator** runs a lab and owns its scientific decisions.
 - Day one, a new lab member is told where the line sits.
 - The assistant is faster. The line does not move because of that.
@@ -696,6 +786,8 @@ readings mean, or sign the claim. That part is mine. Learn where that line
 sits, because it does not move just because the assistant got faster.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -716,10 +808,14 @@ Chapter 3 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - AI is the fastest research assistant you will ever direct.
 - The risk is not that it does the routine work.
 - The risk is letting it drift into the calls that make the work yours.
 - Deciding task by task what you delegate makes you a director, not a passenger.
+
+:::::
 
 ::: {.notes}
 
@@ -740,6 +836,8 @@ planned to hand over.
 Chapter 3 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -769,6 +867,8 @@ Chapter 3 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 These three words do the work of the whole chapter, so give them a moment
@@ -789,10 +889,14 @@ Chapter 3 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Safe to delegate**: low stakes and easy to check, so a wrong answer costs little.
 - Example: rewording one survey item three ways.
 - **Delegate then verify**: fine to hand out, but you must confirm it with a real check.
 - Example: ask for a lab protocol, then open it and confirm it says what the tool claimed.
+
+:::::
 
 ::: {.notes}
 
@@ -814,11 +918,15 @@ Chapter 3 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The question you pursue, and the design and the people or samples it covers.
 - What your measures mean, and the ethics.
 - The boundary of your claim, and the uncertainty you report.
 - Example: deciding whether your evidence actually supports the claim you want to make.
 - Research-integrity guidance draws this same line (National Academies of Sciences, Engineering, and Medicine 2017).
+
+:::::
 
 ::: {.notes}
 
@@ -839,10 +947,14 @@ Chapter 3 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Handing a task to a modern tool rarely means one prompt and one answer.
 - The tool drafts, runs, reads its own error, rewrites, and runs again.
 - Increasingly it closes that loop itself and shows you only the tidy result at the end.
 - Decide right then what you will inspect when the loop stops (Autio et al. 2024).
+
+:::::
 
 ::: {.notes}
 
@@ -864,10 +976,14 @@ Chapter 3 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The question: does sodium benzoate slow growth in a harmless lab strain of *E. coli*?
 - **Optical density** is how cloudy a liquid culture gets as cells multiply.
 - It is read on a plate reader as OD600.
 - You are the director. The AI is your assistant.
+
+:::::
 
 ::: {.notes}
 
@@ -888,9 +1004,13 @@ Chapter 3 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Reformat three plates of raw OD600 numbers into one tidy table.
 - Draft a plain-language version of your methods paragraph.
 - A value in the wrong column is caught at a glance, so the stakes are low.
+
+:::::
 
 ::: {.notes}
 
@@ -912,10 +1032,14 @@ Chapter 3 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Locate a standard protocol for reading bacterial growth curves.
 - Draft the formula for **doubling time**, the hours a population takes to double.
 - The check: open the actual protocol and read it yourself.
 - The check: recompute one doubling time by hand from two printed OD values.
+
+:::::
 
 ::: {.notes}
 
@@ -937,10 +1061,14 @@ Chapter 3 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Deciding that the concentrations you test are biologically meaningful and safe.
 - Deciding whether a gap between the treated and untreated curves licenses "inhibits".
 - Stating how uncertain that conclusion is, given three plates and one strain.
 - Let a tool make those calls and you become a reader of someone else's guess.
+
+:::::
 
 ::: {.notes}
 
@@ -954,13 +1082,15 @@ afterwards.
 :::
 
 
-## Run it, change one input, and watch a sentence stop being true {.denser}
+## Run it, change one input, and watch a sentence stop being true
 
 ::: {.kicker}
 
 Chapter 3 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - SEED = 464, so the three plates and the hourly readings repeat exactly.
 - Watch the control and benzoate OD600 columns pull apart hour by hour.
@@ -993,6 +1123,8 @@ print(f"benzoate doubling time: "
       f"{doubling_time(benzoate.mean(0)[2], benzoate.mean(0)[6], 4):.2f} h")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block builds this example's data and prints the numbers the section
@@ -1005,13 +1137,15 @@ asking for.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 3
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -1030,6 +1164,8 @@ nothing real supports it. The row goes back where it belongs.
 
 :::
 
+:::::
+
 
 ## Do not delegate
 
@@ -1038,6 +1174,8 @@ nothing real supports it. The row goes back where it belongs.
 Chapter 3
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -1052,14 +1190,18 @@ director.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 3 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Take the research problem you committed to, and list every task the project around it would need: finding sources, gathering or cleaning data, choosing measures, computing, drafting, interpreting, deciding.
 2. Sort every line into safe to delegate, delegate then verify, or never delegate, with a one-line reason beside it.
@@ -1071,6 +1213,8 @@ Chapter 3 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch03_the_student_as_research_director.ipynb) with [Chapter 3](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1104,9 +1248,9 @@ Chapter 4
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Every time you hand work to an AI tool, you decide how that work gets routed:
 what you pin down before you ask, what you open and read when the answer comes
@@ -1115,6 +1259,8 @@ decision in this chapter is to stop improvising that route and run the same
 seven-step checklist every time.
 
 :::
+
+:::::
 
 
 ## A lift you cannot reproduce is a rumor
@@ -1125,6 +1271,8 @@ Chapter 4 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - An analytics lead, reading a claim that a new checkout page converts better.
 - The decision: improvise every delegation, or run one fixed checklist each time.
 
@@ -1134,6 +1282,8 @@ Show me the comparison, not the number. Who saw each version, over which days,
 and measured against what? A lift I cannot reproduce is a rumor.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1154,10 +1304,14 @@ Chapter 4 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A tool can write the code, run it, and hand back a tidy result in one breath.
 - That speed is exactly why a loose habit is dangerous.
 - The question every serious reader asks: what did you set up, what did you hand off?
 - And how did you check it before you believed it?
+
+:::::
 
 ::: {.notes}
 
@@ -1169,13 +1323,15 @@ never have to reconstruct the answer from memory.
 :::
 
 
-## SDIIVDD is Ask, Verify, Document opened up {.dense}
+## SDIIVDD is Ask, Verify, Document opened up
 
 ::: {.kicker}
 
 Chapter 4 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -1220,6 +1376,8 @@ tool.
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The name is only the first letter of each step: Specify, Delegate,
@@ -1239,10 +1397,14 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Specify.** Write the exact task and your own expected answer before you ask.
 - **Delegate.** Hand over a checkable chunk of work, never your judgment.
 - **Interrogate.** Ask the draft what it assumes.
 - **Inspect.** Read what the tool produced, not its summary of itself.
+
+:::::
 
 ::: {.notes}
 
@@ -1265,10 +1427,14 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Verify.** Confirm the result with a real, independent check before you trust it.
 - **Document.** Log the tool, the task, the prompt, and how you checked.
 - **Defend.** State the result in your own words, with the tool out of the room.
 - Defend: turnout was six points higher in these precincts, among registered voters, in this one election.
+
+:::::
 
 ::: {.notes}
 
@@ -1290,10 +1456,14 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Two of the seven stay human no matter how good the tool gets.
 - Everything you hand off sits safely between them.
 - A tool can run the comparison for you.
 - Only you decide the comparison was fair enough to report.
+
+:::::
 
 ::: {.notes}
 
@@ -1314,10 +1484,14 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You prompt, read the output, interrogate it, refine, and run it again.
 - One task can send you around that loop five times.
 - Going around is not a sign you are doing it badly.
 - Be a little suspicious of a first output that needs no second pass.
+
+:::::
 
 ::: {.notes}
 
@@ -1338,10 +1512,14 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Agentic tools plan, write code, run it, read the error, rewrite, and run again.
 - Many cycles deep, they hand you one clean result. That is a real gain in reach.
 - The interrogating and inspecting between cycles never happened, unless you insisted.
 - The cycles can be automated. The bookends cannot.
+
+:::::
 
 ::: {.notes}
 
@@ -1362,11 +1540,15 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A Wharton Generative AI Labs team asked whether human persuasion tactics move a chatbot.
 - A model does not answer the same way twice, so each prompt runs hundreds of times.
 - First study, early 2025, run through a web interface: 28,000 conversations, one model.
 - Follow-up: a coding agent drove the tool. 126,000 conversations, three models at once.
 - Compliance rose from about 35 percent to about 51 percent (Meincke et al. 2026).
+
+:::::
 
 ::: {.notes}
 
@@ -1389,10 +1571,14 @@ Chapter 4 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Delegated: configuring the runs, launching them in parallel, the first pass over transcripts.
 - Never delegated: the plain request, the persuasive one, what counts as complying.
 - The case shows the science got bigger. It does not show it got better.
 - A specification you got wrong gets more expensive the faster it runs.
+
+:::::
 
 ::: {.notes}
 
@@ -1414,10 +1600,14 @@ Chapter 4 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You are checking whether a new checkout page converts better than the old one.
 - Conversion rate is the share of visits that end in a purchase.
 - Interrogate: the tool admits it pooled every session in the file.
 - Inspect: a site-wide sale filled week 1, and the new page went live only in week 2.
+
+:::::
 
 ::: {.notes}
 
@@ -1432,13 +1622,15 @@ spelled out: 40 purchases out of 1,000 visits is 4 percent.
 :::
 
 
-## Two rows, one log, and only one survives Verify {.denser}
+## Two rows, one log, and only one survives Verify
 
 ::: {.kicker}
 
 Chapter 4 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The pooled row is what the tool's script reported.
 - The week 2 row is what survived Inspect and Verify.
@@ -1465,6 +1657,8 @@ print(f"week 2, both live      : A {week2['A']*100:.2f}%   B {week2['B']*100:.2f
       f"   -> {(week2['B']-week2['A'])/week2['A']*100:+.0f}% relative")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block builds the session log and computes the number both ways. The log is
@@ -1483,11 +1677,15 @@ Chapter 4 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Verify: restrict both versions to the second week and recompute.
 - Also confirm both versions count a purchase the same way.
 - Document: log the prompt, the fix, and the verified numbers.
 - Defend: the new page converted about 6 percent better over the five shared days.
 - Then name the bounds: no sale period tested, no separate look at mobile traffic.
+
+:::::
 
 ::: {.notes}
 
@@ -1509,6 +1707,8 @@ Chapter 4
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1523,6 +1723,8 @@ the other never met.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1532,11 +1734,15 @@ Chapter 4 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it at Inspect and Verify.
 - Reading the script shows it never filters by date.
 - Restricting both versions to the days they actually ran side by side collapses the "50 percent" to about 6.
 - A green check is not a correct result.
 - You verify the number, not the paragraph about the number.
+
+:::::
 
 ::: {.notes}
 
@@ -1556,6 +1762,8 @@ Chapter 4
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1569,14 +1777,18 @@ yours.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 4 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Pick one genuine, checkable claim — your opening move's starting belief is the natural choice, because checking it sharpens the question you will declare at this studio's close.
 2. **Specify.** Before you open any tool, write your own expected answer and what a fair way of getting it would look like.
@@ -1588,6 +1800,8 @@ Chapter 4 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch04_specify_delegate_interrogate_inspect_verify_document_defend.ipynb) with [Chapter 4](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1621,9 +1835,9 @@ Chapter 5
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 For every sentence an AI helped produce, you decide two things: whether you
 will personally stand behind it as your own, and what your disclosure will say
@@ -1631,6 +1845,8 @@ about how it came to be. Your name on the work means you answer for it,
 whatever tool helped.
 
 :::
+
+:::::
 
 
 ## An editor does not ask which software wrote it
@@ -1640,6 +1856,8 @@ whatever tool helped.
 Chapter 5 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 - A journal editor, to a first-time author, on what happens when a paper is wrong.
 - The question is never which tool. The question is whose name.
@@ -1651,6 +1869,8 @@ software wrote it. I ask whose name is on it. That person answers for every
 line."
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1670,10 +1890,14 @@ Chapter 5 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You finish this book with work that carries your name.
 - An AI may find sources, draft a paragraph, or compute a number.
 - None of that moves the responsibility off you.
 - Draw the line on purpose, before someone else draws it for you.
+
+:::::
 
 ::: {.notes}
 
@@ -1693,6 +1917,8 @@ control.
 Chapter 5 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -1730,6 +1956,8 @@ Chapter 5 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 These four words carry the whole chapter, so give them the definitions the
@@ -1750,11 +1978,15 @@ Chapter 5 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - An AI drafts your methods paragraph: creek chloride exceeded a safety threshold.
 - You own that sentence, and if it is wrong, the mistake is yours.
 - At your defense, someone asks how you know a number.
 - "The AI computed it" is not an answer.
 - "I recomputed it from my own measurements, and here is the check" is.
+
+:::::
 
 ::: {.notes}
 
@@ -1774,9 +2006,13 @@ Chapter 5 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - It shows exactly where your own judgment entered the work.
 - Example: "an AI assistant located candidate sources; I retrieved and confirmed each one in the library catalog."
 - Two halves: what the tool did, and what you did about it.
+
+:::::
 
 ::: {.notes}
 
@@ -1796,10 +2032,14 @@ Chapter 5 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You ask, you read, you push back, you ask again.
 - An agentic tool may run dozens of those cycles on its own.
 - Say what you specified, roughly what the loop did, what you checked.
 - Nobody remembers cycle eleven a month later. Your ledger does.
+
+:::::
 
 ::: {.notes}
 
@@ -1820,10 +2060,14 @@ Chapter 5 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Which question you pursue stays yours.
 - What your evidence licenses stays yours.
 - The ethics of the study, and your name on the work, stay yours.
 - Use AI freely for reach and speed. Keep ownership, accountability, and honest disclosure for yourself.
+
+:::::
 
 ::: {.notes}
 
@@ -1844,10 +2088,14 @@ Chapter 5 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You test whether winter road salt raises chloride in the creek.
 - Chloride is a dissolved salt ion that harms freshwater life above certain levels.
 - You collect ten water samples on one day, at one site.
 - Then you ask an AI tool to help write up the result.
+
+:::::
 
 ::: {.notes}
 
@@ -1867,6 +2115,8 @@ Chapter 5 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You asked the tool to help write up the result. It returned this.
 - Fluent, specific, and ready to paste into your write-up.
 - The ownership decision: which parts will you personally stand behind?
@@ -1877,6 +2127,8 @@ Chapter 5 · A worked example
 criterion of 230 mg/L, so the creek is unsafe for aquatic life."
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1896,10 +2148,14 @@ Chapter 5 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Recompute the mean of your ten samples. You get 304, not 310.
 - Open the EPA criteria document and confirm the published figure yourself.
 - The word "unsafe" claims the whole creek all winter, from ten samples on one day.
 - Narrow it: elevated chloride in these samples, at this site, on this date.
+
+:::::
 
 ::: {.notes}
 
@@ -1912,13 +2168,15 @@ someone asks how you know.
 :::
 
 
-## Run the one-minute check before you read the next line {.dense}
+## Run the one-minute check before you read the next line
 
 ::: {.kicker}
 
 Chapter 5 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The block builds the ten samples and recomputes their mean.
 - Watch the printed mean against the drafted 310 mg/L.
@@ -1937,6 +2195,8 @@ print(f"\nmean of your ten samples : {chloride.mean():.0f} mg/L")
 print("the drafted paragraph said: 310 mg/L")
 print("the criterion it quoted   : retrieve it yourself, then compare")
 ```
+
+:::::
 
 ::: {.notes}
 
@@ -1957,10 +2217,14 @@ Chapter 5 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The tool drafted the paragraph.
 - You did the checking, retrieving, and rewriting that made the claim yours.
 - Now the disclosure writes itself from what actually happened.
 - Editorial guidance takes the same position on authorship (International Committee of Medical Journal Editors 2026).
+
+:::::
 
 ::: {.notes}
 
@@ -1982,6 +2246,8 @@ Chapter 5
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1996,6 +2262,8 @@ prevent.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -2005,11 +2273,15 @@ Chapter 5 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it with a record the tool cannot see: your own AI Research Ledger.
 - Lay the one-line disclosure next to your ledger rows and the mismatch is plain.
 - The ledger says the tool drafted the analysis; the disclosure says it only edited language.
 - You rewrite the disclosure to match what happened.
 - The lesson is blunt: never let a tool describe its own role.
+
+:::::
 
 ::: {.notes}
 
@@ -2031,6 +2303,8 @@ Chapter 5
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -2043,14 +2317,18 @@ transfer.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 5 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your **ownership statement**: three or four sentences naming the work you intend to put your name on, what you will personally answer for, and what you will not claim to have done.
 2. Write your **never-delegate list** for this specific project.
@@ -2062,6 +2340,8 @@ Chapter 5 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_research_responsibility_and_intellectual_ownership.ipynb) with [Chapter 5](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2095,9 +2375,9 @@ Chapter 6
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Place your question on the inquiry compass: what KIND of answer it wants
 (descriptive or causal) and what REACH the answer may claim — with prediction
@@ -2108,6 +2388,8 @@ declaration.
 
 :::
 
+:::::
+
 
 ## The words this chapter uses
 
@@ -2116,6 +2398,8 @@ declaration.
 Chapter 6 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -2153,6 +2437,8 @@ Chapter 6 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -2169,6 +2455,8 @@ Chapter 6 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A committee member asks what, exactly, you are trying to learn.
 - Everything downstream sits inside the box those two answers draw.
 
@@ -2179,6 +2467,8 @@ question. What kind of answer does it want, and for whom must that answer
 hold?
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2199,10 +2489,14 @@ Chapter 6 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A broad topic cannot tell you which evidence belongs.
 - A promising problem cannot tell you what would count as an answer.
 - A method that describes what is there cannot tell you what an intervention would change.
 - The compass fixes what your evidence may claim before you spend months collecting it.
+
+:::::
 
 ::: {.notes}
 
@@ -2222,6 +2516,8 @@ is why the placement comes before the design and not after it.
 Chapter 6 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -2265,6 +2561,8 @@ The second axis is reach: for which units the answer must hold.
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The chapter's own examples separate the two kinds cleanly. What fraction of
@@ -2284,11 +2582,15 @@ Chapter 6 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Description** is descriptive about the data at hand.
 - **Generalization** is descriptive about a population, paid for with a sampling design.
 - **Prediction** is descriptive about unseen cases, forecasting a new case from a pattern.
 - Guessing who will drop out is not knowing what makes them drop out (Shmueli 2010).
 - **Causal reasoning** is the only position that earns the word because.
+
+:::::
 
 ::: {.notes}
 
@@ -2310,10 +2612,14 @@ Chapter 6 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The effect for the units you actually studied.
 - The effect for a wider population your sample stands in for.
 - The effect inside one named subgroup.
 - Three different questions with three different answers, so say which one you want.
+
+:::::
 
 ::: {.notes}
 
@@ -2334,10 +2640,14 @@ Chapter 6 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A question about what an intervention would change stays causal (Blair et al. 2023).
 - Managers open a second register only when the line is already long.
 - Crowding and registers move together, so the design cannot isolate the answer.
 - The honest status is **currently unidentified**, not descriptive.
+
+:::::
 
 ::: {.notes}
 
@@ -2357,6 +2667,8 @@ design problem into a false claim.
 Chapter 6 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -2392,6 +2704,8 @@ In the periods you observed, two-register counters had longer waits.
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Here the warrant is missing, because crowding decides which counters get the
@@ -2412,10 +2726,14 @@ Chapter 6 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Strengthen the design until it can carry a causal answer.
 - Or declare a new descriptive question and record the swap as a decision.
 - Sliding quietly between the two is how a project claims more than it earned.
 - Rewrite it as descriptive only if that is genuinely what you now want to ask.
+
+:::::
 
 ::: {.notes}
 
@@ -2437,10 +2755,14 @@ Chapter 6 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Curiosity: why is the campus coffee line so slow at noon?
 - Give it edges and it becomes a **topic**: waiting time at campus dining counters.
 - You time how long twelve customers wait to be served.
 - That one topic hides four questions, one at each compass position.
+
+:::::
 
 ::: {.notes}
 
@@ -2462,6 +2784,8 @@ Chapter 6 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Questions 1 to 3 stay descriptive. Only the reach moves.
 - Question 4 flips the kind: it needs a comparison to a world that did not happen.
 
@@ -2471,6 +2795,8 @@ Chapter 6 · A worked example
 | Across every customer at this counter during weekday lunch, what is the mean wait? | descriptive | Generalization |
 | A customer walks up tomorrow at noon; how long will they wait? | descriptive | Prediction |
 | Does opening a second register shorten the wait? | causal | Causal reasoning |
+
+:::::
 
 ::: {.notes}
 
@@ -2493,10 +2819,14 @@ Chapter 6 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - How long are our lines, and does a second register shorten them?
 - A **double-barreled question** secretly asks two questions of different kinds.
 - This one fuses question 1's average with question 4's causal comparison.
 - No single design answers both, so split it and let each half keep its position.
+
+:::::
 
 ::: {.notes}
 
@@ -2508,13 +2838,15 @@ the split out loud.
 :::
 
 
-## Run it, then break one sentence on purpose {.dense}
+## Run it, then break one sentence on purpose
 
 ::: {.kicker}
 
 Chapter 6 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Twelve timed waits in minutes, at one register during weekday lunch.
 - The printed average answers question 1 and nothing else.
@@ -2534,6 +2866,8 @@ print("that number answers question 1 and nothing else: it describes the")
 print("twelve you recorded, not the counter, not tomorrow, not a second register")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block builds this example's data and prints the numbers the section
@@ -2545,13 +2879,15 @@ stages of one goal, is argued in detail in the statistics literature (Shmueli
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 6
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -2568,6 +2904,8 @@ the register and the wait, so the comparison carries no causal answer.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -2577,11 +2915,15 @@ Chapter 6 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - The tool's error was not the label.
 - It was skipping the step between a causal question and a causal answer: showing why this comparison isolates the register's effect and nothing else.
 - You catch it by asking what makes one counter differ from another, and whether that same thing also moves waiting time.
 - Here it does.
 - So your honest status is causal and currently unidentified, and you now choose openly.
+
+:::::
 
 ::: {.notes}
 
@@ -2600,13 +2942,15 @@ write down that you changed it, and stop using the word "effective."
 :::
 
 
-## Do not delegate {.dense}
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 6
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -2622,14 +2966,18 @@ progress.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 6 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your research problem out as questions, three or four of them, each a sentence evidence could answer and be wrong about.
 2. Classify each question on both axes, kind and reach, and name the position.
@@ -2641,6 +2989,8 @@ Chapter 6 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch06_descriptive_predictive_and_causal_questions.ipynb) with [Chapter 6](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2674,9 +3024,9 @@ Chapter 7
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Turn your classified lead question into the formal declaration that will
 govern the project: the question sentence plus its field card, with the claim
@@ -2684,6 +3034,8 @@ boundary attached. AI may draft candidate wordings under your rules; every
 word that survives is one your name signs.
 
 :::
+
+:::::
 
 
 ## One sentence, and the whole project answers to it
@@ -2693,6 +3045,8 @@ word that survives is one your name signs.
 Chapter 7 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -2704,6 +3058,8 @@ sentence the project answers to?
 - Which evidence belongs. Which analysis runs. Which claim ships.
 - Every one of those choices checks itself against these words.
 - That makes this the highest-stakes sentence of the project so far.
+
+:::::
 
 ::: {.notes}
 
@@ -2723,10 +3079,14 @@ Chapter 7 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - "dinner entrees" becomes "what a student pays for dinner".
 - You have just changed which rows of the world your project counts.
 - "went together" becomes "raised".
 - You have just promised a comparison your design may never pay for.
+
+:::::
 
 ::: {.notes}
 
@@ -2747,10 +3107,14 @@ Chapter 7 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You built rules first: a ledger, a delegation map, a verified exchange.
 - You wrote an ownership statement. Those rules were never the point.
 - They exist so this decision can be made well.
 - Write the contract while changing it still costs nothing.
+
+:::::
 
 ::: {.notes}
 
@@ -2770,9 +3134,13 @@ Chapter 7 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The **lead question**: the one sentence your evidence will answer.
 - You classified it by kind and reach in the last lesson.
 - The **field card**: the short record pinning down every term that sentence carries (Booth et al. 2024).
+
+:::::
 
 ::: {.notes}
 
@@ -2791,6 +3159,8 @@ nothing to pin down.
 Chapter 7 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -2828,6 +3198,8 @@ Chapter 7 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each of these four is a decision you can get wrong quietly. Ask the room for
@@ -2846,6 +3218,8 @@ Chapter 7 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Do not force every field into one overloaded sentence.
 - The card carries kind and reach, from the compass.
 - It also carries the **provisional claim boundary**.
@@ -2856,6 +3230,8 @@ Chapter 7 · The concept
 A boundary written early is a promise; a boundary written late is an excuse.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2876,10 +3252,14 @@ Chapter 7 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A tool can produce five phrasings of your question in seconds.
 - Some of them will be sharper than yours.
 - The choice among them stays with you.
 - So do the kind, the reach, and the boundary: they decide what the project promises.
+
+:::::
 
 ::: {.notes}
 
@@ -2898,6 +3278,8 @@ tool can do for you, because it is a promise about what you will defend.
 Chapter 7 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -2922,6 +3304,8 @@ Chapter 7 · The concept
 - Run every candidate through this before you adopt a single one.
 - Cannot account for a change? Then the sentence is a different question.
 
+:::::
+
 ::: {.notes}
 
 Show-what-changed is the discipline that makes the delegation safe. It
@@ -2941,6 +3325,8 @@ Chapter 7 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Kind: descriptive. Reach: the data at hand.
 - The classification is done. The declaration is not.
 
@@ -2950,6 +3336,8 @@ did menu prices near campus rise faster than overall prices between 2019 and
 2025?
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2969,9 +3357,13 @@ Chapter 7 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Wording A pins the outcome to listed dinner-entree prices.
 - Wording B counts the listed price plus its delivery fee, across every item type.
 - Both run against the same overall-price benchmark.
+
+:::::
 
 ::: {.notes}
 
@@ -2983,13 +3375,15 @@ next slide runs both against one seeded world.
 :::
 
 
-## Same world, two sentences, two answers {.densest}
+## Same world, two sentences, two answers
 
 ::: {.kicker}
 
 Chapter 7 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the three printed growth figures: the index, wording A, wording B.
 - The overall index enters as an input, not as something this code computed.
@@ -3034,6 +3428,8 @@ print(f"\nA beats the index by {wording_a - overall_index_growth:.1f} points; "
 print("same world, two sentences, two answers: the sentence chooses the rows")
 ```
 
+:::::
+
 ::: {.notes}
 
 The world is seeded at 464, so everyone sees the same numbers. Delivery fees
@@ -3053,10 +3449,14 @@ Chapter 7 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Objective: describe menu-price growth against the overall index.
 - Unit: a menu item retrievable in both years. Outcome: the listed price.
 - Conditions: 2019 versus 2025. Kind: descriptive. Reach: the data at hand.
 - The comparison in the sentence is now visible in the code.
+
+:::::
 
 ::: {.notes}
 
@@ -3076,10 +3476,14 @@ Chapter 7 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Hope to defend: "on this panel, listed prices rose faster than the index".
 - Will not defend: "eating near campus became less affordable".
 - Fees, portions, and wages sit outside these words.
 - Wording B is not wrong. It is a different project.
+
+:::::
 
 ::: {.notes}
 
@@ -3099,6 +3503,8 @@ Chapter 7
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -3112,6 +3518,8 @@ causal, all in one helpful-sounding sentence.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -3121,9 +3529,13 @@ Chapter 7 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it with show-what-changed: put the tool's sentence beside yours and account for every word that differs.
 - Three of the changes have no reason you can write down, so the wording is rejected, and the rejection goes in the ledger.
 - The failure is **silent scope change** at the declaration level, and it is the most expensive version of it, because a drifted declaration drifts everything downstream.
+
+:::::
 
 ::: {.notes}
 
@@ -3145,6 +3557,8 @@ Chapter 7
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -3155,14 +3569,18 @@ what the project promises is the researcher's job.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 7 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your field card first, from your own lead question as it stands: objective, unit of analysis, outcome, conditions, kind, reach.
 2. Delegate the wording, under show-what-changed:
@@ -3175,6 +3593,8 @@ Chapter 7 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch07_declare_your_question.ipynb) with [Chapter 7](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/declare-your-question.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -3207,6 +3627,8 @@ Milestone 2
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -3215,14 +3637,18 @@ Milestone 2
 
 :::
 
+:::::
 
-## What you bring {.densest}
+
+## What you bring
 
 ::: {.kicker}
 
 Milestone 2 · Check before you start
 
 :::
+
+::::: {.slide-body}
 
 - [Lesson 2 — AI Is Your Arm, Not Your Brain](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html): your opened AI Research Ledger and one verified factual hinge from your own problem, including the retrospective Studio 1 receipt as row one.
 - [Lesson 3 — You as a Research Director](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html): your delegation map for the whole project and for the declaration ahead: candidate wording may travel, while the lead question, kind, reach, and boundary stay yours.
@@ -3231,14 +3657,18 @@ Milestone 2 · Check before you start
 - [Lesson 6 — Choose Your Question's Kind and Reach](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html): your lead question chosen from the candidates, placed by kind and reach, with double-barrels split and a comparison world recorded when causal.
 - [Lesson 7 — Declare Your Research Question](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/declare-your-question.html): your chosen formal wording with every change accounted for, the field card, the boundary pair with its uncertainty-and-limitations line, and the stranger-test result, dated as version zero.
 
+:::::
 
-## The practice {.dense}
+
+## The practice
 
 ::: {.kicker}
 
 Milestone 2 · In the studio
 
 :::
+
+::::: {.slide-body}
 
 1. Write your ownership statement: the decisions that stay yours no matter how good the tool gets — the choice of question first among them.
 2. Write your working rules: what you will delegate, what you will always verify, and how you will record both. Mark the declaration work on the map: candidate wordings are delegable; kind, reach, and the boundary never are.
@@ -3248,6 +3678,8 @@ Milestone 2 · In the studio
 6. Write your provisional claim boundary beside it: the sentence you hope to defend, the stronger sentence you will not be able to, and the uncertainty-and-limitations line any answer will have to carry.
 7. Read the two artifacts against each other: every never-delegate line in the agreement must cover a decision the declaration actually made. Where one names a rule the other ignored, fix the weaker document.
 
+:::::
+
 
 ## The four rails, here
 
@@ -3256,6 +3688,8 @@ Milestone 2 · In the studio
 Milestone 2 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -3293,6 +3727,8 @@ Milestone 2 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -3301,6 +3737,8 @@ Milestone 2 · Every studio, these four
 Milestone 2
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -3313,14 +3751,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 2 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio02-govern-the-work.html) · [Milestone 2](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone02-govern-the-work.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

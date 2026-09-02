@@ -1,16 +1,34 @@
 /*-- scss:defaults --*/
 // EDR|AI slide theme — one brand with the book and the course site (D29).
+//
 // Ink on white, hairline rules, a single accent per FUNCTION (never for
 // decoration): crimson marks what may not be delegated, amber marks an AI
 // failure. Everything else is ink, muted ink, or paper.
+//
+// TWO VOICES, and the distinction is the point. The deck's own scaffolding —
+// titles, eyebrows, lists, labels — is set in the sans. The BOOK'S OWN WORDS,
+// quoted verbatim onto a slide (the research decision, the divider promise,
+// the failure quote, the creed), are set in the serif. A deck is a generated
+// view of EDR|AI (D77); the typography says which sentences came straight off
+// the page.
 
-$presentation-font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
-$presentation-font-size-root: 32px;
-$presentation-heading-font: $presentation-font-family;
-$presentation-heading-color: #1a1a19;
+// unquote() and the embedded quotes are load-bearing, not style. Sass strips
+// the quotes off a string when it is interpolated into a custom property, and
+// an UNQUOTED family name whose token starts with a digit — the `3` of
+// "Source Sans 3", the `4` of "Source Serif 4" — is invalid CSS, so the
+// browser throws the whole font-family declaration away and falls back to
+// Times. Building each stack as one unquoted string that CONTAINS the quotes
+// survives both `font-family: $font-sans` and `--r-main-font: #{$font-sans}`.
+$font-sans: unquote('"Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif') !default;
+$font-serif: unquote('"Source Serif 4", "Source Serif Pro", Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif') !default;
+$font-mono: unquote('"JetBrains Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace') !default;
+
+$presentation-font-family: $font-sans;
+$presentation-font-size-root: 34px;
+$presentation-heading-font: $font-sans;
+$presentation-heading-color: #16161a;
 $presentation-heading-font-weight: 700;
-$presentation-line-height: 1.42;
+$presentation-line-height: 1.44;
 
 $body-bg: #ffffff;
 $body-color: #1a1a19;
@@ -18,280 +36,550 @@ $link-color: #1a1a19;
 $link-color-hover: #8a1c2b;
 $selection-bg: #e8eaec;
 
-$code-block-bg: #f4f4f3;
-$code-block-border-color: #d0d7de;
+$code-block-bg: #f7f8f8;
+$code-block-border-color: #dfe3e8;
+$font-family-monospace: $font-mono;
 
 /*-- scss:rules --*/
 
 // ---------------------------------------------------------------- tokens
 :root {
   --edrai-ink: #1a1a19;
-  --edrai-muted: #5c5f63;
+  --edrai-ink-strong: #101012;
+  --edrai-muted: #55595e;
   --edrai-faint: #8b9096;
-  --edrai-rule: #d0d7de;
-  --edrai-wash: #f4f4f3;
+  --edrai-rule: #dce0e5;
+  --edrai-rule-strong: #b9bfc6;
+  --edrai-wash: #f5f6f6;
   --edrai-paper: #ffffff;
   --edrai-crimson: #8a1c2b;   // what stays human
-  --edrai-amber: #9a6a00;     // where AI failed
+  --edrai-amber: #9a6a00;     // where AI failed (D29 fixes this value)
+
+  // ---- the grid, in canvas pixels (the deck is authored at 1600 x 900) ----
+  // Every content slide is the same rectangle, on every one of the 122
+  // slides: an eyebrow, a title, one hairline, and a body region of fixed
+  // height. Nothing below the rule ever depends on how long the title ran,
+  // so the composition never shifts as you teach through the deck.
+  --pad-x: 88px;            // the left and right margin
+  --mark-y: 44px;           // the short ink rule that opens every slide
+  --kicker-y: 72px;         // eyebrow band
+  --title-y: 104px;         // title always starts here
+  --body-y: 218px;          // body region top
+  --body-b: 82px;           // body region bottom inset
+  --measure: 1120px;        // the text column: ~62 characters at body size
+
   --r-link-color: var(--edrai-ink);
   --r-link-color-dark: var(--edrai-ink);
   --r-link-color-hover: var(--edrai-crimson);
+  --r-main-font: #{$font-sans};
+  --r-heading-font: #{$font-sans};
 }
 
-.reveal { -webkit-font-smoothing: antialiased; }
+.reveal {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: proportional-nums;
+}
 
-// Content reads left-aligned; only the title and divider slides center.
+// Content reads left-aligned; only the title slide and the dividers compose
+// around their own centre.
 .reveal .slides section,
 .reveal .slides > section > section { text-align: left; }
 
-// ------------------------------------------------------ slide layout
-// Every content slide is a column: eyebrow, then title, then the body,
-// which takes the remaining height and centres itself in it. Without this
-// the body sits jammed under the title with the lower half of a 900px
-// canvas empty, and the eyebrow (written after the heading, because a
-// Pandoc slide begins AT its heading) renders BELOW the title rule.
-// reveal sets `display: block` INLINE on the section it is showing, so the
-// flex container has to out-rank it.
+// ------------------------------------------------------ the slide frame
+// reveal already positions each section absolutely inside .slides, so the
+// section is the containing block for everything below and the frame can be
+// stated as four exact rectangles rather than a stack of margins.
 .reveal .slides > section:not(.quarto-title-block):not(.stack) {
-  display: flex !important;
-  flex-direction: column;
-  height: 100%;
-  padding: 2.2% 0 4.5%;
+  position: absolute;
+  height: 100% !important;
   box-sizing: border-box;
 }
-.reveal .slides > section > h2 { order: 2; flex: 0 0 auto; margin-top: 0; }
-.reveal .slides > section > .kicker { order: 1; flex: 0 0 auto; }
-.reveal .slides > section > *:not(h2):not(.kicker) { order: 3; }
-// The body starts directly under the title and the leftover height stays as
-// air at the foot. A title that floats to a different height on every slide
-// is restless to teach from; a fixed one is calm.
-.reveal .slides > section > *:not(h2):not(.kicker) { margin-top: .35em; }
-.reveal .slides > section > .kicker + h2 { margin-bottom: .45em; }
+// The content slide's own children carry the left margin, so the section
+// itself has none. Stated separately from the rule above because the divider
+// DOES take padding, and two !important rules of equal specificity would
+// otherwise fight over it — which is how the dividers ended up hanging 82px
+// to the left of every content slide.
+.reveal .slides > section:not(.quarto-title-block):not(.stack):not(.divider) {
+  padding: 0 !important;
+}
 
-// Density. reveal does not shrink text to fit, so a slide that carries a
-// long numbered list or a code block runs under the footer. The BUILDER
-// measures what it emitted and stamps one of these; nothing here guesses.
-.reveal .slides > section.dense { font-size: .84em; }
-.reveal .slides > section.denser { font-size: .72em; }
-.reveal .slides > section.densest { font-size: .62em; }
-.reveal .slides > section.dense h2 { font-size: 1.28em; }
-.reveal .slides > section.denser h2 { font-size: 1.2em; }
-.reveal .slides > section.densest h2 { font-size: 1.14em; }
-.reveal .slides > section.denser ul > li,
-.reveal .slides > section.denser ol > li,
-.reveal .slides > section.densest ul > li,
-.reveal .slides > section.densest ol > li { margin-bottom: .22em; }
+// The eyebrow and the title sit at fixed heights.
+.reveal .slides > section:not(.quarto-title-block):not(.stack):not(.divider) {
+  > .kicker {
+    position: absolute; top: var(--kicker-y);
+    left: var(--pad-x); right: var(--pad-x);
+    margin: 0;
+  }
+  > h2 {
+    position: absolute; top: var(--title-y);
+    left: var(--pad-x); right: var(--pad-x);
+    max-width: var(--measure);
+    margin: 0; padding: 0; border: 0;
+    font-size: calc(1.36em * var(--h2fit, 1));
+    line-height: 1.06;
+    letter-spacing: -0.018em;
+    color: var(--edrai-ink-strong);
+    text-wrap: balance;
+  }
+  // The mark that opens every slide, light and dark alike: a short ink rule
+  // above the eyebrow. It replaced a hairline that ran the full width UNDER
+  // the title, which drew a line clear across the canvas and then left the
+  // band beneath it empty — the rule kept announcing content that did not
+  // start for another 120px. A short mark carries the same structure and
+  // promises nothing about what sits below it.
+  &::before {
+    content: ""; position: absolute; top: var(--mark-y); left: var(--pad-x);
+    width: 76px; height: 3px; background: var(--edrai-ink);
+  }
+}
+
+// The body region: one fixed rectangle, 570px tall, on every slide. Content
+// centres itself inside it, so a three-line slide reads as composed rather
+// than as a page that ran out. `edrai-fit.js` scales anything that would
+// otherwise run past the bottom edge.
+.reveal .slides > section > .slide-body {
+  position: absolute;
+  top: var(--body-y); bottom: var(--body-b);
+  left: var(--pad-x); right: var(--pad-x);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  gap: .55em;
+  overflow: hidden;
+  font-size: calc(1em * var(--fit, 1));
+  // Optical placement, computed per slide by edrai-fit.js: a short body sits
+  // a little below the title rather than marooned in the middle of the
+  // region. True centring put a three-line card 200px below the title with
+  // 200px under it, which reads as a slide that lost its content.
+  padding-top: var(--lead, 0px);
+}
+// A slide that cannot fit even at the smallest step SPILLS rather than
+// clips: overflow:hidden is what keeps a fitted slide clean, but silently
+// dropping the last lines of a worked example in front of a class is the one
+// failure this theme must not have. edrai-fit.js sets .fit-top and logs it.
+.reveal .slides > section.fit-top > .slide-body { overflow: visible; }
+.reveal .slides > section > .slide-body > :first-child { margin-top: 0; }
+.reveal .slides > section > .slide-body > :last-child { margin-bottom: 0; }
+// A flex child shrinks by default. A tall code block therefore squeezed
+// itself into the region and CLIPPED its last lines, while reporting the
+// squeezed height — so edrai-fit.js measured "it fits" and never scaled the
+// type down. Children keep their natural height; the fit pass is what makes
+// them fit.
+.reveal .slides > section > .slide-body > * { flex: 0 0 auto; min-height: 0; }
 
 // ------------------------------------------------------------ eyebrow
-// Small-caps label above a headline: "Lesson 3 · The concept".
+// Small-caps label above a headline: "Chapter 2 · The concept".
 .reveal .kicker {
-  font-size: .5em; letter-spacing: .15em; text-transform: uppercase;
+  font-size: .46em; letter-spacing: .17em; text-transform: uppercase;
   color: var(--edrai-faint); font-weight: 600;
-  margin: 0 0 .55em; line-height: 1.2;
+  line-height: 1.2; margin: 0 0 .5em;
 }
 .reveal .kicker p { margin: 0; }
 
-// ------------------------------------------------------- title slide
-// Quarto builds this slide itself from `title` / `subtitle` / `author`, so
-// the deck generator writes no markup for it and it is styled here instead.
-.reveal .slides section.quarto-title-block {
-  text-align: left;
-  border-left: 12px solid var(--edrai-ink);
-  padding-left: 1.1em;
+// --------------------------------------------------------- body text
+.reveal .slide-body p {
+  max-width: var(--measure);
+  margin: 0 0 .5em;
+  line-height: 1.45;
 }
+.reveal .slide-body > p:last-child { margin-bottom: 0; }
+
+.reveal .slide-body ul,
+.reveal .slide-body ol {
+  max-width: var(--measure);
+  margin: 0; padding-left: 1.05em;
+  display: block;
+}
+.reveal .slide-body li { margin: 0 0 .5em; line-height: 1.4; }
+.reveal .slide-body li:last-child { margin-bottom: 0; }
+.reveal .slide-body li::marker { color: var(--edrai-faint); }
+.reveal .slide-body ol { padding-left: 1.5em; }
+.reveal .slide-body ol > li::marker {
+  color: var(--edrai-ink); font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.reveal .slide-body ul ul, .reveal .slide-body ol ol { margin-top: .35em; }
+.reveal .slide-body strong { color: var(--edrai-ink-strong); font-weight: 600; }
+
+// An emphasised opening line above a list.
+.reveal .lead {
+  font-size: 1.04em; color: var(--edrai-ink);
+  max-width: var(--measure); margin-bottom: .15em;
+}
+
+// Links stay ink so they never shout, but they are underlined so they can be
+// found from the back row.
+.reveal .slide-body a,
+.reveal .slide-body a:hover {
+  border-bottom: 1px solid var(--edrai-rule-strong);
+  text-decoration: none;
+}
+.reveal .slide-body a:hover { color: var(--edrai-crimson); }
+
+// ------------------------------------------------------- title slide
+// Quarto builds this slide from `title` / `subtitle` / `author`, so the deck
+// generator writes no markup for it and it is composed entirely here.
+.reveal .slides section.quarto-title-block {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 100% !important;
+  text-align: left !important;
+  padding: 0 var(--pad-x) 0 78px !important;
+  border-left: 10px solid var(--edrai-ink);
+}
+.reveal .slides section.quarto-title-block > * { text-align: left !important; }
 .reveal .slides section.quarto-title-block h1.title {
-  font-size: .95em;
-  letter-spacing: .015em;
-  color: var(--edrai-muted);
+  font-size: .44em;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  color: var(--edrai-faint);
   font-weight: 600;
-  margin: 0 0 .55em;
-  border-bottom: none;
-  padding-bottom: 0;
+  line-height: 1.2;
+  margin: 0 0 .9em;
+  border-bottom: none; padding-bottom: 0;
+  span { font-size: 100% !important; }   // the generator's old size hack
 }
 .reveal .slides section.quarto-title-block .subtitle {
-  font-size: 1.9em;
-  line-height: 1.1;
+  font-size: 2.05em;
+  line-height: 1.04;
   font-weight: 700;
-  color: var(--edrai-ink);
-  letter-spacing: -0.014em;
-  margin: 0 0 .5em;
-  max-width: 18em;
+  color: var(--edrai-ink-strong);
+  letter-spacing: -0.022em;
+  margin: 0 0 .62em;
+  max-width: 15.5em;
+  text-wrap: balance;
 }
 .reveal .slides section.quarto-title-block .quarto-title-authors {
   display: block;
   border-top: 1px solid var(--edrai-rule);
-  padding-top: .6em;
-  margin-top: .3em;
+  padding-top: .75em;
+  margin: 0;
+  max-width: 26em;
 }
 .reveal .slides section.quarto-title-block .quarto-title-author,
 .reveal .slides section.quarto-title-block .quarto-title-author-name {
   display: block;
-  font-size: .62em;
+  padding: 0; margin: 0;
+  font-size: .58em;
+  font-weight: 600;
   color: var(--edrai-muted);
   text-align: left;
+  letter-spacing: .01em;
 }
 // The book's one message, printed under the byline on every deck's opener.
 .reveal .slides section.quarto-title-block .quarto-title-authors::after {
   content: "AI is your arm and your research assistant, not your brain.";
   display: block;
-  font-size: .52em;
+  font-family: $font-serif;
+  font-size: .56em;
   font-style: italic;
   color: var(--edrai-faint);
-  margin-top: .55em;
+  margin-top: .5em;
 }
 
 // ---------------------------------------------------- section divider
-// Full-bleed ink. Reveal paints the section background via data-background.
-.reveal section[data-background-color="#1a1a19"] h1,
-.reveal section[data-background-color="#1a1a19"] h2,
-.reveal section[data-background-color="#1a1a19"] p,
-.reveal section[data-background-color="#1a1a19"] .kicker,
-.reveal section[data-background-color="#1a1a19"] li { color: #ffffff; }
-.reveal section[data-background-color="#1a1a19"] .kicker { color: #9aa0a6; }
-.reveal section[data-background-color="#1a1a19"] h1,
-.reveal section[data-background-color="#1a1a19"] h2 { border-bottom: none; }
-.reveal section[data-background-color="#1a1a19"] .divider-line {
-  font-size: .72em; color: #c6c9cc; font-style: italic;
-  max-width: 24em; margin-top: .6em; line-height: 1.45;
+// Full-bleed ink, composed around its own centre. Reveal paints the field
+// via data-background; everything here is the type on top of it.
+.reveal .slides > section.divider {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--pad-x) !important;
+  height: 100% !important;
 }
-.reveal section[data-background-color="#1a1a19"] a {
-  color: #ffffff !important; border-bottom-color: #4a4d50; }
+.reveal .slides > section.divider::before {
+  content: ""; order: 0; flex: 0 0 auto;
+  width: 76px; height: 3px; background: #ffffff;
+  margin-bottom: 30px; opacity: .85;
+}
+.reveal .slides > section.divider > .kicker { order: 1; margin-bottom: .7em; }
+.reveal .slides > section.divider > h2      { order: 2; }
+.reveal .slides > section.divider > .creed  { order: 3; }
+.reveal .slides > section.divider > .divider-line { order: 4; }
+.reveal .slides > section.divider > .deck-links   { order: 5; }
+
+.reveal section[data-background-color="#1a1a19"] {
+  h1, h2, p, li, strong { color: #ffffff; }
+  .kicker { color: #9aa0a6; }
+  h1, h2 { border-bottom: none; }
+  a { color: #ffffff !important; border-bottom-color: #4d5155; }
+}
+.reveal .slides > section.divider > h2 {
+  font-size: 1.78em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 21em;
+  margin: 0;
+  text-wrap: balance;
+}
+.reveal section.divider .divider-line {
+  font-family: $font-serif;
+  font-size: .8em; color: #c3c7cb; font-style: italic;
+  max-width: 25em; margin: .7em 0 0; line-height: 1.5;
+  p { margin: 0; max-width: none; }
+}
+// The closing slide's creed, set as the book sets it.
+.reveal section.divider .creed {
+  font-family: $font-serif;
+  font-size: 1.42em; line-height: 1.18; font-weight: 600;
+  color: #ffffff; max-width: 17em; margin: .1em 0 0;
+  letter-spacing: -0.012em;
+  p { margin: 0; max-width: none; }
+  strong { font-weight: 600; }
+}
+.reveal section.divider .deck-links {
+  margin-top: 1.5em; font-size: .5em; letter-spacing: .05em;
+  color: #9aa0a6;
+  a { border-bottom: 1px solid #4d5155; }
+}
 
 // ------------------------------------------------------------- cards
-// One shared card geometry; the variants only change the rule colour.
+// One shared geometry; the variants change only the accent and the wash.
 .reveal .card {
   background: var(--edrai-wash);
-  border-left: 10px solid var(--edrai-ink);
-  border-radius: 6px;
-  padding: .85em 1.15em;
-  margin: .35em 0;
+  border-left: 7px solid var(--edrai-ink);
+  border-radius: 0 4px 4px 0;
+  padding: .92em 1.25em;
+  margin: 0;
+  max-width: var(--measure);
   line-height: 1.45;
 }
 .reveal .card > :first-child { margin-top: 0; }
 .reveal .card > :last-child { margin-bottom: 0; }
+.reveal .card p { max-width: none; }
+.reveal .card .label {
+  display: block; font-size: .5em; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--edrai-faint);
+  font-weight: 700; margin-bottom: .5em;
+}
 
-// The chapter's own thesis, verbatim from the book.
+// The chapter's own thesis, verbatim from the book — so, the book's voice.
 .reveal .decision {
   @extend .card;
-  font-size: 1.04em;
+  font-family: $font-serif;
+  font-size: 1.06em;
+  line-height: 1.42;
   background: #f7f7f6;
   border-left-color: var(--edrai-ink);
-}
-.reveal .decision .label {
-  display: block; font-size: .58em; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--edrai-faint);
-  font-weight: 700; margin-bottom: .45em;
+  .label { font-family: $font-sans; }
 }
 
 // "Do not delegate" — the calls that stay human.
 .reveal .rule-human {
   @extend .card;
-  background: #fbf4f5;
+  background: #fbf3f4;
   border-left-color: var(--edrai-crimson);
+  .label { color: var(--edrai-crimson); }
+  strong { color: var(--edrai-crimson); }
 }
-.reveal .rule-human .label {
-  display: block; font-size: .58em; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--edrai-crimson);
-  font-weight: 700; margin-bottom: .45em;
-}
-.reveal .rule-human strong { color: var(--edrai-crimson); }
 
 // An AI failure case.
 .reveal .failure {
   @extend .card;
-  background: #fbf7ef;
+  background: #fbf7ee;
   border-left-color: var(--edrai-amber);
-}
-.reveal .failure .label {
-  display: block; font-size: .58em; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--edrai-amber);
-  font-weight: 700; margin-bottom: .45em;
-}
-.reveal .failure .said {
-  font-style: italic; color: var(--edrai-muted);
-  border-left: 3px solid var(--edrai-rule); padding-left: .8em; margin: .5em 0;
+  .label { color: var(--edrai-amber); }
+  .said {
+    font-family: $font-serif;
+    font-style: italic; color: var(--edrai-muted);
+    border-left: 2px solid var(--edrai-rule-strong);
+    padding-left: .8em; margin: .5em 0;
+  }
 }
 
 // A quiet note card (no accent).
 .reveal .note-card {
   @extend .card;
-  background: #f4f6f8; border-left-color: var(--edrai-faint);
+  background: #f4f6f8;
+  border-left-color: var(--edrai-rule-strong);
 }
 
 // ---------------------------------------------------------- key terms
-.reveal .terms { display: grid; grid-template-columns: 1fr; gap: .5em; margin-top: .3em; }
+// A spec sheet, not a stack of boxes: a rule over each entry, the term in
+// ink, the definition in muted ink underneath.
+.reveal .terms {
+  display: grid; grid-template-columns: 1fr;
+  gap: .55em 2.4em; width: 100%;
+}
 .reveal .terms.two { grid-template-columns: 1fr 1fr; }
 .reveal .term {
-  border: 1px solid var(--edrai-rule); border-radius: 6px;
-  padding: .6em .85em; background: var(--edrai-paper); font-size: .84em;
-  line-height: 1.4;
+  border-top: 2px solid var(--edrai-ink);
+  padding: .45em 0 0;
+  font-size: .82em; line-height: 1.4;
+  .t { display: block; font-weight: 700; color: var(--edrai-ink-strong);
+       margin-bottom: .2em; letter-spacing: -0.005em; }
+  .d { color: var(--edrai-muted); }
+  p { max-width: none; margin: 0; }
 }
-.reveal .term .t { display: block; font-weight: 700; color: var(--edrai-ink);
-  margin-bottom: .18em; }
-.reveal .term .d { color: var(--edrai-muted); }
 
 // --------------------------------------------------------- four rails
-.reveal .rails { display: grid; grid-template-columns: 1fr 1fr; gap: .55em; }
-.reveal .rail {
-  border-top: 3px solid var(--edrai-ink); padding-top: .45em;
-  font-size: .78em; line-height: 1.4;
+.reveal .rails {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: .7em 2.4em; width: 100%;
 }
-.reveal .rail .t { display: block; font-weight: 700; margin-bottom: .18em; }
-.reveal .rail .d { color: var(--edrai-muted); }
+.reveal .rail {
+  border-top: 2px solid var(--edrai-ink); padding-top: .45em;
+  font-size: .78em; line-height: 1.4;
+  .t { display: block; font-weight: 700; margin-bottom: .2em;
+       color: var(--edrai-ink-strong); }
+  .d { color: var(--edrai-muted); }
+  p { max-width: none; margin: 0; }
+}
 
 // --------------------------------------------------------- your turn
-.reveal .turn { border-top: 1px solid var(--edrai-rule);
-  padding-top: .6em; margin-top: .5em; font-size: .82em;
-  color: var(--edrai-muted); }
-.reveal .turn a { font-weight: 600; }
+.reveal .turn {
+  border-top: 1px solid var(--edrai-rule);
+  padding-top: .55em; margin-top: .35em;
+  font-size: .74em; line-height: 1.4;
+  color: var(--edrai-muted);
+  max-width: none;
+  p { max-width: none; margin: 0; }
+  a { font-weight: 600; color: var(--edrai-ink); }
+}
 
 // ------------------------------------------------------------- misc
 .reveal blockquote {
-  border-left: 4px solid var(--edrai-rule); background: none;
+  font-family: $font-serif;
+  border-left: 3px solid var(--edrai-rule-strong); background: none;
   box-shadow: none; font-style: italic; color: var(--edrai-muted);
-  padding: .1em 0 .1em 1em; width: 100%; margin: .4em 0;
+  padding: .1em 0 .1em 1em; max-width: var(--measure); margin: .3em 0;
+  width: auto;
 }
-.reveal table { font-size: .78em; border-collapse: collapse; }
-.reveal table th { border-bottom: 2px solid var(--edrai-ink); text-align: left;
-  font-weight: 700; }
-.reveal table td, .reveal table th { padding: .34em .6em; }
+
+.reveal table {
+  font-size: .74em; border-collapse: collapse; width: 100%; margin: 0;
+}
+.reveal table th {
+  border-bottom: 2px solid var(--edrai-ink); text-align: left;
+  font-weight: 700; color: var(--edrai-ink-strong);
+  font-size: .92em; letter-spacing: .04em; text-transform: uppercase;
+  padding: 0 .7em .38em 0;
+}
+.reveal table td { padding: .42em .7em .42em 0; vertical-align: top;
+                   color: var(--edrai-ink); }
 .reveal table tr { border-bottom: 1px solid var(--edrai-rule); }
+.reveal table tbody tr:last-child { border-bottom: none; }
 
-.reveal pre { box-shadow: none; border: 1px solid var(--edrai-rule);
-  border-radius: 6px; width: 100%; }
-.reveal pre code { padding: .7em .9em; font-size: .74em; line-height: 1.4;
-  max-height: 560px; }
-.reveal code { color: var(--edrai-ink); }
-.reveal :not(pre) > code { background: var(--edrai-wash);
-  border: 1px solid var(--edrai-rule); border-radius: 4px;
-  padding: .04em .26em; font-size: .88em; }
+.reveal pre {
+  box-shadow: none; border: 1px solid var(--edrai-rule);
+  border-radius: 5px; width: 100%; margin: 0;
+  background: #f7f8f8;
+  overflow: visible;      // grow with the code; the fit pass sizes it
+  // reveal's own default is `font-size: .55em`, which COMPOUNDED with the
+  // .63em below to .35 of the body size: code three times smaller than the
+  // prose beside it, about 12px on a 1600px canvas. The block inherits the
+  // body size and the ratio is set once, on the code.
+  font-size: 1em;
+}
+// `pre.sourceCode code` is Quarto's own selector and it caps the block at
+// 500px — higher specificity than a bare `pre code`, so the override has to
+// name it too or a long worked example silently loses its last lines. The
+// fit pass, not a scrollbar, is what makes long code fit here.
+.reveal pre code,
+.reveal pre.sourceCode code {
+  padding: .8em 1em; font-size: .6em; line-height: 1.36;
+  max-height: none; overflow: visible; background: transparent;
+  font-family: $font-mono;
+  font-variant-ligatures: none;
+}
+.reveal code { color: var(--edrai-ink); font-family: $font-mono; }
+.reveal :not(pre) > code {
+  background: var(--edrai-wash);
+  border: 1px solid var(--edrai-rule); border-radius: 3px;
+  padding: .04em .28em; font-size: .84em;
+}
 
+// Figures fit the body region rather than pushing past it.
+.reveal .slide-body figure,
+.reveal .slide-body p:has(> img) { margin: 0; min-height: 0; text-align: center; }
+.reveal .slide-body img {
+  // A ceiling in canvas pixels, not a percentage: the flex item now keeps its
+  // natural height, so `100%` would resolve against the image's own box and
+  // bound nothing.
+  border-radius: 3px; max-height: 500px; width: auto; max-width: 100%;
+  object-fit: contain; margin: 0 auto; display: block;
+}
 .reveal figure figcaption, .reveal .figure-caption {
-  font-size: .58em; color: var(--edrai-faint); font-style: italic;
-  text-align: center; margin-top: .4em;
+  font-size: .52em; color: var(--edrai-faint); font-style: italic;
+  text-align: center; margin: .5em auto 0;
+  max-width: 46em;        // a caption set across 1424px is one long thread
+  p { margin: 0; max-width: none; }
 }
-.reveal img { border-radius: 4px; }
 
-.reveal .footer, .reveal .slide-number {
-  color: var(--edrai-faint) !important; font-size: .5em;
+// ------------------------------------------------------------- chrome
+// Quiet, consistent, and out of the way of both the content and each other:
+// logo bottom-left, footer centred, slide number bottom-right, the menu
+// button parked in the top-left corner where nothing else lives.
+.reveal .footer {
+  bottom: 24px !important;
+  color: var(--edrai-faint) !important;
+  font-size: .44em; letter-spacing: .02em;
 }
-.reveal .slide-number { background: none; }
-
-.reveal .progress { color: var(--edrai-ink); height: 3px; }
-
-// Quarto parks the logo bottom-right, exactly where reveal draws the
-// next-slide arrow; the two overlapped. The logo moves to the opposite
-// corner, above the hamburger, and stays small enough to read as a mark.
+.reveal .slide-number {
+  top: auto !important; bottom: 24px !important;
+  right: 88px !important; left: auto !important;
+  background: none; color: var(--edrai-faint) !important;
+  font-size: .44em; font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
+}
+// The wordmark is a lockup with a strapline under it; at 30px in a corner it
+// is a grey smudge, and the footer already sets "EDR|AI" in type on every
+// slide. So it appears once, on the opener, at a size that can actually be
+// read. edrai-fit.js flags which slide is showing.
 .reveal .slide-logo {
-  left: 1.1em; right: auto; bottom: 3.4em;
-  max-height: 34px !important; width: auto !important; opacity: .5;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s ease;
 }
-.reveal .controls { right: 12px; bottom: 12px; }
+.reveal.on-title .slide-logo {
+  opacity: 1;
+  left: auto !important; right: 84px !important;
+  bottom: 84px !important; top: auto !important;
+  max-height: 118px !important; width: auto !important;
+  // The source file is a framed lockup on an off-white ground: multiply
+  // drops the ground into the page, and the inset trims the frame, which
+  // would otherwise read as a picture pasted onto the slide.
+  mix-blend-mode: multiply;
+  clip-path: inset(3.5%);
+}
+// The opener carries its own identification; the running chrome would only
+// repeat it.
+.reveal.on-title .footer, .reveal.on-title .slide-number { opacity: 0; }
+.reveal .controls {
+  right: 18px; bottom: 14px;
+  transform: scale(.6); transform-origin: bottom right;
+  opacity: .38; color: var(--edrai-ink);
+}
+.reveal .controls:hover { opacity: .8; }
+.reveal .slide-menu-button {
+  top: 16px !important; right: 18px !important;
+  left: auto !important; bottom: auto !important;
+  opacity: .3; font-size: 15px;
+  &:hover { opacity: .75; }
+}
+.reveal .progress { color: var(--edrai-ink); height: 3px; }
+.reveal .progress span { background: var(--edrai-ink); }
 
-// Small print for a dense slide.
-.reveal .small { font-size: .82em; }
-.reveal .smaller { font-size: .7em; }
+// On an ink field the light chrome would either vanish or box itself against
+// the dark; edrai-fit.js flags the state and the marks step aside.
+.reveal.on-dark {
+  .slide-logo { opacity: 0; }
+  .footer, .slide-number { color: #6f747a !important; }
+  .controls { color: #ffffff; opacity: .3; }
+  .slide-menu-button { color: #ffffff; }
+  .progress { color: #ffffff; span { background: #ffffff; } }
+}
+
+// Small print helpers, still used by plan-authored slides.
+.reveal .small { font-size: .84em; }
+.reveal .smaller { font-size: .72em; }
 .reveal .muted { color: var(--edrai-muted); }
+.reveal .columns { gap: 1.4em; }
 
-// Two-column helper that keeps the gutter honest.
-.reveal .columns { gap: 1.2em; }
+// ------------------------------------------------------- legacy density
+// Superseded by the runtime fit in edrai-fit.js, which measures the real
+// rendered height instead of counting characters. The classes stay so a deck
+// built before the change still renders sanely; the generator no longer
+// stamps them (build_studio_slides.py, STAMP_DENSITY).
+.reveal .slides > section.dense   > .slide-body { font-size: .9em; }
+.reveal .slides > section.denser  > .slide-body { font-size: .8em; }
+.reveal .slides > section.densest > .slide-body { font-size: .7em; }

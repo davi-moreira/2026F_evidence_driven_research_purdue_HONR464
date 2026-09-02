@@ -8,12 +8,14 @@
 # Lessons on this deck: data-provenance measurement
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 6 — Govern data and measurement"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,14 +55,16 @@ Studio 6
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Establish where your numbers came from and whether they measure what you say
 they measure.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -71,11 +75,15 @@ Studio 6
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 6: Your data and measurement,
 governed](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone06-govern-data-measurement.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
 Provenance documentation, a data-management record, your measurement
 specification, and a route-specific permission recheck.
+
+:::::
 
 ::: {.notes}
 
@@ -101,8 +109,12 @@ Studio 6 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 20 — Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html): your acquisition route, written and dated, your provenance record for every dataset and borrowed number (the primary source behind your headline claim opened and read), your data-management update, and the permission recheck against the data as they actually arrived.
 - [Lesson 21 — Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html): your measurement specification: concept, construct, indicator, the meaning sentence for each number, the reliability check's result, the indicator-to-use validity argument with its strongest rival reading, and the boundary that follows.
+
+:::::
 
 
 ## Data Provenance and Data Quality {background-color="#1a1a19" .divider}
@@ -129,9 +141,9 @@ Chapter 20
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 For every number, dataset, and source your project leans on, decide whether it
 is solid enough to build on. You make that call twice: once on where the value
@@ -140,6 +152,8 @@ whether it was produced well enough, under the right definition, for the
 specific use you have in mind, its quality.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -150,7 +164,9 @@ Chapter 20 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -170,6 +186,8 @@ Chapter 20 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -186,6 +204,8 @@ Chapter 20 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You wrote that turnout in this county was 72 percent.
 - The question is not which website you copied it off.
 - Bring the office that certified the count, or take the number out.
@@ -196,6 +216,8 @@ Who counted the ballots, and 72 percent of what? Of registered voters, of
 adults, of adults actually eligible to vote?
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -215,10 +237,14 @@ Chapter 20 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A value with no traceable origin is a rumor with a decimal point.
 - A number does not become true by arriving looking tidy.
 - Ask two questions of everything you borrow.
 - Where did it come from, and is it any good for what I need it for?
+
+:::::
 
 ::: {.notes}
 
@@ -239,10 +265,14 @@ Chapter 20 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The news story reports the figure.
 - A state summary table re-reports it.
 - The county election office certified the count that produced it.
 - A value is only as trustworthy as the primary source at the end of its chain.
+
+:::::
 
 ::: {.notes}
 
@@ -262,6 +292,8 @@ rests.
 Chapter 20 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -283,6 +315,8 @@ Chapter 20 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 These two words do the work for the rest of the chapter, so define them before
@@ -302,10 +336,14 @@ Chapter 20 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Turnout over registered voters answers whether registered people showed up.
 - It is the wrong number for how much of the adult population takes part.
 - Quality is fitness for *your* use: real, method you can name, definition your question needs.
 - A **mischaracterized value** is a real number attached to the wrong definition or method.
+
+:::::
 
 ::: {.notes}
 
@@ -327,10 +365,14 @@ Chapter 20 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Whole datasets carry the same two questions, column by column.
 - Who produced this variable, and who cleaned it?
 - What did they drop?
 - Does the definition behind the column match the one in your question?
+
+:::::
 
 ::: {.notes}
 
@@ -351,6 +393,8 @@ Chapter 20 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 One habit settles both questions: the retrieval-verification loop.
@@ -361,6 +405,8 @@ One habit settles both questions: the retrieval-verification loop.
 - **Retrieve** the primary source yourself.
 - **Verify** that it exists and reports that value under that definition.
 - **Document** where you found it.
+
+:::::
 
 ::: {.notes}
 
@@ -381,10 +427,14 @@ Chapter 20 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You are studying whether a local election reform changed participation.
 - You need one number for your background section: county turnout in a recent presidential election.
 - The assistant answers in about a second: seventy-two percent, with a source that looks entirely real.
 - You run the loop instead of copying the number.
+
+:::::
 
 ::: {.notes}
 
@@ -404,10 +454,14 @@ Chapter 20 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - If the source resolves nowhere, the value is orphaned and you drop it.
 - If the page is real, ask whether it produced the number or republished it.
 - That question usually sends you back to the state's official results summary.
 - Behind that sits the county clerk's certified canvass, where the totals were settled.
+
+:::::
 
 ::: {.notes}
 
@@ -427,10 +481,14 @@ Chapter 20 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Open the canvass and read what the percentage is *of*.
 - Registered voters, all adults, or adults eligible to vote?
 - Eligible excludes noncitizens and, in some states, people with certain felony convictions.
 - The gaps between those three are not small.
+
+:::::
 
 ::: {.notes}
 
@@ -451,10 +509,14 @@ Chapter 20 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Cross-check against an independent source that documents its own methods.
 - The United States Elections Project publishes voting-eligible-population turnout estimates and explains its denominator.
 - The Census Bureau's Current Population Survey Voting and Registration Supplement reports self-reported turnout.
 - Report both, name the definition behind each, and say which one your question needs and why.
+
+:::::
 
 ::: {.notes}
 
@@ -469,13 +531,15 @@ of data quality (Wang & Strong 1996).
 :::
 
 
-## One numerator, three denominators, and the spread the label decides {.densest}
+## One numerator, three denominators, and the spread the label decides
 
 ::: {.kicker}
 
 Chapter 20 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Nothing is randomly drawn here. Provenance is a chain, not a sample.
 - Watch the spread in percentage points across the three published figures.
@@ -505,6 +569,8 @@ print("one election, one numerator, three published turnout numbers.")
 print("a figure with no stated denominator is not yet evidence")
 ```
 
+:::::
+
 ::: {.notes}
 
 Say plainly that this block is not a simulation. It is the same numerator
@@ -516,13 +582,15 @@ denominator is not yet evidence.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 20
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -542,6 +610,8 @@ question stays open.
 
 :::
 
+:::::
+
 
 ## Do not delegate
 
@@ -550,6 +620,8 @@ question stays open.
 Chapter 20
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -564,14 +636,18 @@ supports.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 20 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. List every dataset, table, and borrowed number your project uses.
 2. For each, write four things: who produced it, when, from what original record, and every hand it passed through on the way to you.
@@ -584,6 +660,8 @@ Chapter 20 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_data_provenance_and_data_quality.ipynb) with [Chapter 20](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -617,9 +695,9 @@ Chapter 21
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Decide how to turn the abstract idea your question is about into one concrete
 number you can record, repeat, and defend. Name the concept, name the narrower
@@ -629,6 +707,8 @@ leaves out.
 
 :::
 
+:::::
+
 
 ## The words this chapter uses
 
@@ -637,6 +717,8 @@ leaves out.
 Chapter 21 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -666,6 +748,8 @@ Chapter 21 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -682,6 +766,8 @@ Chapter 21 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A people-analytics lead, reading the first draft of a workplace study.
 - The decision on the table: which specific number stands in for the big idea.
 
@@ -692,6 +778,8 @@ you put a number on. 'Engaged' is a word. I need to know which question you
 asked, on what scale, and what that number quietly ignores.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -712,10 +800,14 @@ Chapter 21 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Every result answers a question about some idea: engagement, market power, wellbeing, participation.
 - You never measure the idea. You measure a number that stands in for it.
 - That substitution is the swap, and it is where trust is won or lost.
 - So say which number you recorded and what it quietly leaves out.
+
+:::::
 
 ::: {.notes}
 
@@ -735,6 +827,8 @@ machinery for doing that.
 Chapter 21 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -771,6 +865,8 @@ mean of one item.
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Climb down the ladder one rung at a time and say the example out loud at each
@@ -792,11 +888,15 @@ Chapter 21 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Ask whether accumulated evidence supports the meaning you attach to your number (American Educational Research Association et al. 2014).
 - And for the specific use you have in mind, not for any use at all.
 - May well support: people who answered expressed more willingness to recommend this workplace.
 - Does not by itself support: employees here are more engaged.
 - Change the reading or the use, and you need evidence again.
+
+:::::
 
 ::: {.notes}
 
@@ -818,10 +918,14 @@ Chapter 21 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Repeat the occasion:** re-ask the same people two weeks later.
 - **Repeat the rater:** have two trained coders score the same speeches.
 - **Repeat the items:** split a many-question scale for one construct into comparable halves.
 - For a fast-moving mood, a different answer is news, not error.
+
+:::::
 
 ::: {.notes}
 
@@ -842,10 +946,14 @@ Chapter 21 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A twelve-item scale gives each employee an odd-item score and an even-item score.
 - Check that a person scoring high on one scores high on the other.
 - The halves have to be comparable, not odd-and-even by accident of order.
 - Each half is only half as long, so raw agreement understates the full scale.
+
+:::::
 
 ::: {.notes}
 
@@ -867,10 +975,14 @@ Chapter 21 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You could compare the average of one half of your respondents against the other.
 - That tells you how much a group average wobbles between samples of people.
 - It is a real thing to know, and an entirely different question.
 - It says nothing about whether your instrument reads consistently.
+
+:::::
 
 ::: {.notes}
 
@@ -891,10 +1003,14 @@ Chapter 21 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The scale reads your weight the same way five times in a row.
 - Weight is still a poor stand-in for "fitness" (Cronbach & Meehl 1955).
 - Reliability feeds validity without settling it.
 - An indicator can be perfectly reliable and still support the wrong claim.
+
+:::::
 
 ::: {.notes}
 
@@ -914,10 +1030,14 @@ Chapter 21 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Are the sites that ran the pilot more engaged than the sites that kept fixed shifts?
 - **Concept:** employee engagement. No instrument reads "engagement."
 - **Construct:** willingness to recommend the workplace.
 - **Indicator:** mean of one 1 to 7 agreement item, at eight pilot and eight comparison sites.
+
+:::::
 
 ::: {.notes}
 
@@ -938,11 +1058,15 @@ Chapter 21 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Re-ask a random tenth two weeks later and compare their two answers.
 - They land close, so the item is repeatable rather than a coin flip dressed as data.
 - It says nothing about burnout, about whether pay feels fair, or about work that matters.
 - It cannot hear from the people who already quit.
 - Naming omissions begins the validity argument. It does not finish it.
+
+:::::
 
 ::: {.notes}
 
@@ -963,10 +1087,14 @@ Chapter 21 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Defensible: pilot sites averaged higher willingness to recommend than comparison sites.
 - With the boundary attached: one facet of engagement, measured with a repeatable single item.
 - Not defensible: "the pilot made employees more engaged."
 - You never measured the facets your indicator skips, and never heard from the people who left.
+
+:::::
 
 ::: {.notes}
 
@@ -979,13 +1107,15 @@ few words, and those words are the whole claim boundary.
 :::
 
 
-## Watch what the reliability number does not license {.densest}
+## Watch what the reliability number does not license
 
 ::: {.kicker}
 
 Chapter 21 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The block builds the sixteen sites, reads the indicator, and runs the retest.
 - The retest re-asks the same people the same item, never a second group of people.
@@ -1019,6 +1149,8 @@ print("that number says the item is repeatable. it says NOTHING about whether")
 print("recommend-a-friend captures engagement, or about the people who quit")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it at SEED 464 so the numbers reproduce, then read the two printed lines
@@ -1030,13 +1162,15 @@ quit. Ask what you would have to add to the study to move either of those.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 21
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -1053,6 +1187,8 @@ answer.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1062,11 +1198,15 @@ Chapter 21 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by reading the answer's claim next to your question, word for word.
 - Your question was about "engagement"; the answer is about "would recommend," and those are not the same box.
 - Then you confirm it with a real source: open a published engagement framework and find the several facets the recipe never mentioned.
 - A confident recipe is not a valid operationalization.
 - You verify the construct, not the fluency of the paragraph that proposed it.
+
+:::::
 
 ::: {.notes}
 
@@ -1088,6 +1228,8 @@ Chapter 21
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1102,14 +1244,18 @@ researcher's job, not the model's.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 21 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. List every concept your question contains and circle the abstract ones, the words no instrument reads: engagement, health, participation, quality, competitiveness.
 2. Under each circled concept write the construct you will really measure, plus one line on why that facet and not a neighboring one.
@@ -1122,6 +1268,8 @@ Chapter 21 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch21_measurement_and_operationalization.ipynb) with [Chapter 21](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1154,6 +1302,8 @@ Milestone 6
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -1161,6 +1311,8 @@ Milestone 6
 **What this milestone produces.** Provenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck.
 
 :::
+
+:::::
 
 
 ## What you bring
@@ -1171,8 +1323,12 @@ Milestone 6 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 20 — Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html): your acquisition route, written and dated, your provenance record for every dataset and borrowed number (the primary source behind your headline claim opened and read), your data-management update, and the permission recheck against the data as they actually arrived.
 - [Lesson 21 — Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html): your measurement specification: concept, construct, indicator, the meaning sentence for each number, the reliability check's result, the indicator-to-use validity argument with its strongest rival reading, and the boundary that follows.
+
+:::::
 
 
 ## The practice
@@ -1183,11 +1339,15 @@ Milestone 6 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Settle your acquisition route first, using the guidance on the studio opener, and write down which route you took and why.
 2. Document provenance for every source: who produced it, how, when, and under what terms.
 3. Write your measurement specification: the construct, the operationalization, and the gap between them.
 4. Assess reliability and validity for your own instrument, on the evidence you actually have.
 5. Recheck permissions against the data as they actually arrived, not as planned.
+
+:::::
 
 
 ## The four rails, here
@@ -1197,6 +1357,8 @@ Milestone 6 · In the studio
 Milestone 6 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -1234,6 +1396,8 @@ Milestone 6 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -1242,6 +1406,8 @@ Milestone 6 · Every studio, these four
 Milestone 6
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -1254,14 +1420,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 6 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio06-govern-data-measurement.html) · [Milestone 6](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone06-govern-data-measurement.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

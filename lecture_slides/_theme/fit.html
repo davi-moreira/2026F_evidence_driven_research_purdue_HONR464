@@ -1,0 +1,174 @@
+<script>
+/* edrai-fit.js — fit each slide's body to the body region, at runtime.
+ *
+ * The builder used to guess: it counted characters and stamped .dense /
+ * .denser / .densest, which shrank the type on slides that had room to spare
+ * and still let a long code block run past the bottom edge. This measures
+ * the rendered height instead, so a slide is never smaller than it needs to
+ * be and never larger than it fits.
+ *
+ * It also drops the type of a title that would run into the hairline, and
+ * tells the chrome when the current slide is an ink field.
+ */
+(function () {
+  "use strict";
+
+  var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+  var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+  var MIN_TITLE = 0.62;
+  var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+  var LEAD_MAX = 88;
+  var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+  function child(section, cls) {
+    var kids = section.children;
+    for (var i = 0; i < kids.length; i++) {
+      if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+    }
+    return null;
+  }
+
+  function fitTitle(section) {
+    if (section.classList.contains("divider")) return;
+    var h2 = null, kids = section.children;
+    for (var i = 0; i < kids.length; i++) {
+      if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+    }
+    if (!h2) return;
+    section.style.removeProperty("--h2fit");
+    var k = 1;
+    for (var n = 0; n < 5; n++) {
+      var need = h2.scrollHeight;
+      if (need <= TITLE_BAND) break;
+      k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+      section.style.setProperty("--h2fit", k.toFixed(4));
+      if (k <= MIN_TITLE) break;
+    }
+  }
+
+  // The natural height of the body's content.
+  //
+  // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+  // under-full slide reports "exactly full" and both the growth step and the
+  // optical lead below silently become no-ops. Walking the children gives the
+  // real figure, in unscaled layout pixels, above and below the box alike.
+  function naturalHeight(body) {
+    var kids = body.children;
+    if (!kids.length) return 0;
+    var first = kids[0], last = kids[kids.length - 1];
+    return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+  }
+
+  function fitBody(section) {
+    var body = child(section, "slide-body");
+    if (!body) return;
+    section.classList.remove("fit-top");
+    section.style.setProperty("--fit", "1");
+    section.style.setProperty("--lead", "0px");
+
+    var avail = body.clientHeight;
+    if (!avail) return;
+
+    // Converge on the largest size that still fits the body region. This
+    // grows a sparse slide as readily as it shrinks a crowded one, which is
+    // the whole point: three lines of type should hold the canvas, not float
+    // in the middle of it at the same size as a slide carrying twenty.
+    // Growth moves where lines wrap, so the step is damped and the last size
+    // known to fit is kept as a floor.
+    var k = 1, fits = 0;
+    for (var n = 0; n < 12; n++) {
+      var need = naturalHeight(body);
+      if (!need) break;
+      if (need <= avail) fits = Math.max(fits, k);
+      var next = k * Math.pow((avail * 0.985) / need, 0.6);
+      next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+      if (Math.abs(next - k) < 0.005) break;
+      k = next;
+      section.style.setProperty("--fit", k.toFixed(4));
+    }
+    if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+      k = fits;
+      section.style.setProperty("--fit", k.toFixed(4));
+    }
+
+    // Optical placement. A body that fills the region starts at the top; one
+    // with room to spare drops by a fraction of what is left over, capped, so
+    // that it sits under the title instead of either jammed against it or
+    // marooned in the middle of the canvas.
+    var slack = avail - naturalHeight(body);
+    var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+    section.style.setProperty("--lead", Math.round(lead) + "px");
+
+    // Past the floor and still too tall. The slide spills instead of losing
+    // its last lines, and says so, because a deck that quietly drops the end
+    // of a worked example is worse than one that looks crowded.
+    if (naturalHeight(body) > avail + 1) {
+      section.classList.add("fit-top");
+      var h = section.querySelector("h2");
+      if (window.console && console.warn) {
+        console.warn("EDR|AI: slide does not fit at the minimum size —",
+                     h ? h.textContent.trim() : "(untitled)");
+      }
+    }
+  }
+
+  function fit(section) {
+    if (!section || !section.offsetParent && !isPrint()) return;
+    fitTitle(section);
+    fitBody(section);
+  }
+
+  function isPrint() {
+    return document.body.classList.contains("print-pdf") ||
+           /print-pdf/.test(window.location.search);
+  }
+
+  function markChrome() {
+    var reveal = document.querySelector(".reveal");
+    if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+    var cur = Reveal.getCurrentSlide();
+    reveal.classList.toggle("on-dark",
+      !!cur && cur.classList.contains("divider"));
+    reveal.classList.toggle("on-title",
+      !!cur && cur.classList.contains("quarto-title-block"));
+  }
+
+  function run() {
+    if (isPrint()) {
+      var all = document.querySelectorAll(".reveal .slides > section");
+      for (var i = 0; i < all.length; i++) fit(all[i]);
+      return;
+    }
+    if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+    // Only the current slide. reveal keeps every other section at
+    // `display: none`, where offsetHeight is 0 and nothing can be measured,
+    // so a "pre-fit the neighbours" pass would be a no-op that reads as
+    // working code. reveal makes the incoming slide visible BEFORE it fires
+    // slidechanged, so fitting here lands before the frame is painted.
+    fit(Reveal.getCurrentSlide());
+    markChrome();
+  }
+
+  function boot() {
+    if (typeof Reveal === "undefined" || !Reveal.on) {
+      return void setTimeout(boot, 60);
+    }
+    Reveal.on("ready", run);
+    Reveal.on("slidechanged", run);
+    Reveal.on("resize", run);
+    if (Reveal.isReady && Reveal.isReady()) run();
+    // Web fonts change the metrics after first paint; measure again once they
+    // have actually landed, and once more on a late layout.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { setTimeout(run, 0); });
+    }
+    setTimeout(run, 400);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>

@@ -8,12 +8,14 @@
 # Lessons on this deck: observational-descriptive observational-causal experimental-descriptive prediction-generalization experimental-causal hybrid-complex-designs
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 5 — Develop the pathway"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,14 +55,16 @@ Studio 5
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Commit to the research pathway your question and your licence actually
 support, and say what that pathway can and cannot establish.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -71,12 +75,16 @@ Studio 5
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 5: Your pathway,
 declared](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone05-develop-the-pathway.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
 Research Contract v1: objective by target and reach by data strategy by
 warrant, with the pathway declared and its limits written before any result
 exists.
+
+:::::
 
 ::: {.notes}
 
@@ -94,7 +102,7 @@ assessed.
 :::
 
 
-## The lessons in this studio {.densest}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -102,12 +110,16 @@ Studio 5 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 14 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html): either your four boxes and selection diagram, if this is your pathway, or the classification drill that rules it out.
 - [Lesson 15 — Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html): either your causal diagram with its leverage named and priced, or the drill that shows why this road is not yours.
 - [Lesson 16 — Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html): either your revealed-characteristic estimand with its demand and instrument threats named, or the drill run on your own question.
 - [Lesson 17 — Prediction and Generalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html): either your signed four-part forecasting contract with its boundary, or the contrast drill: the plain rejection line, the prediction-time leakage check run on your own features, and two sentences on why prediction answers a different question.
 - [Lesson 18 — Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html): either your treatment, outcome, and potential outcomes with the nearest threat named, or the drill plus the confounder that blocks the causal reading.
 - [Lesson 19 — Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html): if your design has stages: the stage-by-stage map, its weakest link, and the one-sentence justification for keeping or cutting it.
+
+:::::
 
 
 ## Observational Descriptive Research {background-color="#1a1a19" .divider}
@@ -133,9 +145,9 @@ Chapter 14
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Which group your observed data can honestly speak for, and where exactly the
 line falls past which a description of your sample is no longer allowed to
@@ -143,6 +155,8 @@ become a claim about a wider population. You draw that line, and you write
 down the sentence on the far side of it that you refuse to say.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -152,6 +166,8 @@ down the sentence on the far side of it that you refuse to say.
 Chapter 14 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -189,6 +205,8 @@ Chapter 14 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -205,6 +223,8 @@ Chapter 14 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 "Which group did your procedure actually reach?"
@@ -214,6 +234,8 @@ Chapter 14 · Why this decision matters
 - A policy stakeholder reads your report before deciding whether it applies to their city.
 - The decision on the table: which group your data can honestly speak for.
 - That is a question about your procedure, not about your arithmetic.
+
+:::::
 
 ::: {.notes}
 
@@ -234,10 +256,14 @@ Chapter 14 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A result quietly describes one group while claiming to speak for another.
 - Nothing in the estimate looks wrong, and the formatting is fine.
 - This chapter has you name the group your data reach.
 - Then refuse the sentence that swaps it for a group your data never touched.
+
+:::::
 
 ::: {.notes}
 
@@ -258,11 +284,15 @@ Chapter 14 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Pull every roll call record in a legislature; report how often each member crossed party lines.
 - No one was assigned a condition. You sampled, measured, and summarized.
 - Inquiry and answer strategy are both descriptive: distributions and relationships.
 - With care, those estimates generalize to a population.
 - On their own they do not identify a causal effect.
+
+:::::
 
 ::: {.notes}
 
@@ -284,6 +314,8 @@ identification argument to earn its answer.
 Chapter 14 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -321,6 +353,8 @@ Chapter 14 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Four groups keep a description honest (Groves et al. 2009). Read them downward
@@ -333,13 +367,15 @@ loud, because the chapter calls it the box that misbehaves.
 :::
 
 
-## The frame crosses the edge of your target, and that is where errors live {.dense}
+## The frame crosses the edge of your target, and that is where errors live
 
 ::: {.kicker}
 
 Chapter 14 · The concept
 
 :::
+
+::::: {.slide-body}
 
 - **Undercoverage:** people who belong in your target and never make the list.
 - **Overcoverage:** records on the list for people outside your target altogether.
@@ -355,6 +391,8 @@ people inside the target who never reach the list, records on the list that
 fall outside the target altogether, and one unit listed twice.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -374,6 +412,8 @@ time and ask which of the three the room's own list is most likely to have.
 Chapter 14 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -398,6 +438,8 @@ Chapter 14 · The concept
 - Two processes decide how the boxes differ. These are the two.
 - Of 500 people contacted, 300 reply, and the 200 silent ones are rarely random.
 
+:::::
+
 ::: {.notes}
 
 A claim is honest only when the box it describes matches the box it names, so
@@ -418,10 +460,14 @@ Chapter 14 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - When either process relates to the thing you are measuring, your summary drifts.
 - No amount of extra data pulls it back (Bethlehem 2010).
 - Size shrinks only the sample-to-sample wobble.
 - A systematic tilt in who you reached survives every extra observation (Meng 2018).
+
+:::::
 
 ::: {.notes}
 
@@ -442,10 +488,14 @@ Chapter 14 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - **Billing-error rate:** the fraction of customers whose monthly charge comes out wrong.
 - 2 wrong charges in 100 customers is a 2% billing-error rate.
 - The analytics team emails a survey to a random draw from the subscriber list.
 - The survey reports 2%. The headline: "the service has a 2% billing-error rate."
+
+:::::
 
 ::: {.notes}
 
@@ -465,10 +515,14 @@ Chapter 14 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Target population: every customer the service bills (Groves et al. 2009).
 - Sampling frame: the current subscriber list, because only those people get the survey.
 - Charged twice, or charged after canceling, and most likely to have quit in frustration.
 - **Survivorship selection:** a filter that keeps the people least likely to show the problem.
+
+:::::
 
 ::: {.notes}
 
@@ -489,6 +543,8 @@ Chapter 14 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - That is the licensed claim. It names the box the data reached.
 - The sentence to refuse: "the service's billing-error rate is 2%."
 - The true rate across everyone billed is almost certainly higher.
@@ -499,6 +555,8 @@ Chapter 14 · A worked example
 among customers still subscribed, the billing-error rate is 2%
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -511,13 +569,15 @@ whether a boundary sentence hides the direction of the drift.
 :::
 
 
-## Build the whole customer base, let the worst-hit quit, then survey {.denser}
+## Build the whole customer base, let the worst-hit quit, then survey
 
 ::: {.kicker}
 
 Chapter 14 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Two rates print: everyone billed, and the current subscribers the survey can see.
 - A third line reports how many customers left the frame.
@@ -544,6 +604,8 @@ print("\nthe survey can only ever see the second number. no sample size,")
 print("and no random draw from that list, closes the gap to the first")
 ```
 
+:::::
+
 ::: {.notes}
 
 Read the `wrong_charge` and `quit` lines as the mechanism: wrong charges
@@ -554,13 +616,15 @@ and no random draw from that list, closes the gap to the first.
 :::
 
 
-## Ten honest samples and one convenience sample, all of size 500 {.denser}
+## Ten honest samples and one convenience sample, all of size 500
 
 ::: {.kicker}
 
 Chapter 14 · A seeded simulation
 
 :::
+
+::::: {.slide-body}
 
 - **Seed:** a fixed starting point for a random-number generator.
 - The same seed reproduces the same draws, so your run matches the figure.
@@ -597,6 +661,8 @@ ax.set_ylim(-.7, 1.9)
 plt.show()
 ```
 
+:::::
+
 ::: {.notes}
 
 The worked example argued that who you reach tilts what you measure, and that
@@ -617,6 +683,8 @@ Chapter 14 · A seeded simulation
 
 :::
 
+::::: {.slide-body}
+
 - The ten random means spread between about 47 and 51, around the truth.
 - That spread is honest, quantifiable uncertainty.
 - The convenience dot looks as confident as any other, and nothing warns you.
@@ -629,6 +697,8 @@ Ten random sample means cluster around the true mean age; the single
 convenience-channel mean sits far below it.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -650,6 +720,8 @@ Chapter 14
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -664,6 +736,8 @@ cures a tilted one.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -673,11 +747,15 @@ Chapter 14 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it because you wrote your own answer first, and yours named the frame: the customers still subscribed, not everyone the service bills, so the swap is visible on sight.
 - Then you check the mechanism against the data.
 - The customers with the worst billing errors canceled before the survey went out, so missingness relates directly to the outcome you count.
 - A larger panel of current subscribers only estimates the current subscribers' error rate more precisely.
 - It never reaches the people who left.
+
+:::::
 
 ::: {.notes}
 
@@ -700,6 +778,8 @@ Chapter 14
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -713,14 +793,18 @@ AI to attack that line, never to draw it for you.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 14 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Decide which case you are in.
 2. **If this is your pathway**, write your four boxes, one line each: target population, accessible population, sampling frame, sample.
@@ -732,6 +816,8 @@ Chapter 14 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch14_observational_descriptive_research.ipynb) with [Chapter 14](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -764,9 +850,9 @@ Chapter 15
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Whether your observational comparison has earned the word *because* or must
 stop at *associated with*. You settle it by naming the one confounder the
@@ -774,6 +860,8 @@ comparison turns on and writing the identification argument that closes the
 back door, or by admitting in writing that you have none.
 
 :::
+
+:::::
 
 
 ## Your advisor's reply: after is not because
@@ -784,10 +872,14 @@ Chapter 15 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You wrote: the treated group did better, so the treatment worked.
 - Her reply is the sentence you will hear for the rest of your research life.
 - "After is not because."
 - "Show me the world where they were not treated, or admit you are guessing."
+
+:::::
 
 ::: {.notes}
 
@@ -807,11 +899,15 @@ Chapter 15 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You cannot assign a person a disease, a country a war, a wild animal a gut microbe.
 - So the craft is deciding when a comparison is trustworthy enough to carry a cause.
 - You make that decision out loud and in writing.
 - Get it wrong and a paper claims more than its data support.
 - Get it right and a modest, bounded claim becomes credible.
+
+:::::
 
 ::: {.notes}
 
@@ -830,6 +926,8 @@ one.
 Chapter 15 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -858,6 +956,8 @@ causal reading has to be argued rather than assumed (Blair et al. 2023).
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The coffee example carries both terms. You never see how long a coffee drinker
@@ -878,10 +978,14 @@ Chapter 15 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A **causal diagram** is a picture of arrows, each meaning "this directly influences that."
 - The confounder opens a **back door**: a path linking treatment and outcome through it.
 - That path runs through the confounder instead of through any real effect.
 - A raw comparison sees both paths at once, and blames the treatment for the confounder's work.
+
+:::::
 
 ::: {.notes}
 
@@ -900,6 +1004,8 @@ of it.
 Chapter 15 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -921,6 +1027,8 @@ Chapter 15 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 For the first move, compare coffee drinkers and non-drinkers within the same
@@ -940,11 +1048,15 @@ Chapter 15 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A **mediator** sits on the causal path itself.
 - Coffee may act on lifespan partly through blood pressure, so adjusting throws away part of the effect.
 - A **collider** is a variable that treatment and outcome both push on.
 - Adjusting for "healthy aging" study membership creates a link that exists nowhere in the world.
 - Adjust for common causes, and leave mediators and colliders alone (Pearl 2009).
+
+:::::
 
 ::: {.notes}
 
@@ -965,11 +1077,15 @@ Chapter 15 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - An **identification argument** is your written reason that the comparison recovers a real effect.
 - Every design here rests on **load-bearing assumptions** the data can never fully confirm (Hernán & Robins 2020).
 - Selection on observables needs a sufficient adjustment set and groups that overlap.
 - A visa-lottery design needs a random lottery that touches lifespans only through the trip.
 - Name your design's list. One sentence per assumption is enough.
+
+:::::
 
 ::: {.notes}
 
@@ -989,10 +1105,14 @@ Chapter 15 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The **causal-language boundary** is the point past which your evidence stops earning *because*.
 - Past it, the defensible phrase is *associated with*.
 - You hit it when you cannot make the identification argument honestly.
 - Typing "natural experiment" over a comparison does not argue its assumption.
+
+:::::
 
 ::: {.notes}
 
@@ -1013,9 +1133,13 @@ Chapter 15 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You study wild-derived mice in a biology lab.
 - Those whose gut carries a particular fiber-digesting bacterium are, on average, leaner.
 - The headline writes itself: the microbe causes leanness.
+
+:::::
 
 ::: {.notes}
 
@@ -1034,11 +1158,15 @@ Chapter 15 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Draw three boxes: microbe, leanness, and anything that could drive both.
 - Diet is a confounder: high-fiber foragers carry more of the bacterium.
 - They also stay leaner for reasons that have nothing to do with the microbe.
 - Diet points into both boxes, so the naive comparison mostly measures the diet gap.
 - A colony of ten thousand makes that wrong number precise, and no less wrong.
+
+:::::
 
 ::: {.notes}
 
@@ -1058,11 +1186,15 @@ Chapter 15 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - If you recorded diet, compare carriers to non-carriers within high-fiber, then within low-fiber.
 - Average the two honest within-diet differences.
 - If the gap collapses toward zero, the microbe was mostly a passenger of diet.
 - An unrecorded trait driving both foraging and metabolism keeps the back door open.
 - Then your defensible claim is that the microbe is *associated with* leanness.
+
+:::::
 
 ::: {.notes}
 
@@ -1075,13 +1207,15 @@ and to say.
 :::
 
 
-## Build mice where the microbe does nothing, then read the gap {.densest}
+## Build mice where the microbe does nothing, then read the gap
 
 ::: {.kicker}
 
 Chapter 15 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Diet drives both the microbe and leanness. The true microbe effect is planted at zero.
 - Watch the naive carrier-versus-noncarrier gap against that planted zero.
@@ -1113,6 +1247,8 @@ print("\nthe naive gap is the DIET gap wearing the microbe's name;")
 print("ten thousand mice make it precise, not true")
 ```
 
+:::::
+
 ::: {.notes}
 
 SEED = 464 and n = 10,000, so the run reproduces exactly. The printed close
@@ -1123,13 +1259,15 @@ carrier-versus-noncarrier number, including your own.
 :::
 
 
-## An AI failure case {.denser}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 15
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -1151,14 +1289,18 @@ so there is no as-if-random assignment, the back door stays open, and
 
 :::
 
+:::::
 
-## Do not delegate {.dense}
+
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 15
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -1175,14 +1317,18 @@ model's.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 15 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Decide which case you are in.
 2. **If this is your pathway**, write your causal question as exactly two things: a treatment (the thing that varies) and an outcome (the thing you measure).
@@ -1195,6 +1341,8 @@ Chapter 15 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch15_observational_causal_research.ipynb) with [Chapter 15](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1228,9 +1376,9 @@ Chapter 16
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 A coin flip does not decide what kind of question you asked. You decide
 whether your randomized study is **measuring** a property the world already
@@ -1239,6 +1387,8 @@ artifacts your measurement still has to guard against before the number means
 anything.
 
 :::
+
+:::::
 
 
 ## Your advisor stops at one line of your methods page
@@ -1249,6 +1399,8 @@ Chapter 16 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Random assignment feels causal by reflex.
 - That reflex is the trap this chapter defuses.
 
@@ -1258,6 +1410,8 @@ Chapter 16 · Why this decision matters
 first."
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1278,10 +1432,14 @@ Chapter 16 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Aim the flip at "what would change if we deployed this?" That is a causal study.
 - Aim it at "how much of this property sits in the world right now?" That is a measurement.
 - Mislabel the second as the first and you overclaim.
 - You promise a lever your evidence never tested.
+
+:::::
 
 ::: {.notes}
 
@@ -1301,9 +1459,13 @@ Chapter 16 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - RDSS calls this the experimental-descriptive pathway (Blair et al. 2023).
 - The design reveals a characteristic units do not hand over directly.
 - The inquiry stays descriptive, so randomizing alone licenses no causal claim.
+
+:::::
 
 ::: {.notes}
 
@@ -1316,13 +1478,15 @@ make the reading trustworthy, which is what the next two slides are about.
 :::
 
 
-## An experiment can be an instrument rather than an intervention {.dense}
+## An experiment can be an instrument rather than an intervention
 
 ::: {.kicker}
 
 Chapter 16 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -1363,6 +1527,8 @@ apart from how good each result is (Joachims et al. 2005).
 - Chance decides which, so any difference pins to the version and not to who received it.
 - What you report is the estimand: the exact quantity the design is built to state.
 
+:::::
+
 ::: {.notes}
 
 The definitions and the slot example are the chapter's own. The estimand here
@@ -1381,10 +1547,14 @@ Chapter 16 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The setup itself is one of the ingredients of the number.
 - Two artifacts do most of the damage.
 - Randomizing who sees what does nothing about a bias that hits every unit alike.
 - So you design those two out separately.
+
+:::::
 
 ::: {.notes}
 
@@ -1396,13 +1566,15 @@ artifacts and the property they threaten.
 :::
 
 
-## Demand and instrument effects both threaten construct validity {.dense}
+## Demand and instrument effects both threaten construct validity
 
 ::: {.kicker}
 
 Chapter 16 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -1442,6 +1614,8 @@ than they would at home (Orne 1962).
 - An instrument effect: the logger credits position with attention slot 1's larger thumbnail earned.
 - Both threaten construct validity, so your number may estimate something adjacent (Cronbach & Meehl 1955).
 
+:::::
+
 ::: {.notes}
 
 Randomizing who sees what does nothing about a bias that hits every unit
@@ -1461,10 +1635,14 @@ Chapter 16 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - How much of a track's play count comes from where it sits?
 - And how much from how well it matches the listener?
 - Nobody prints that number anywhere, so they build an instrument.
 - One fixed probe track: identical audio, identical artwork, slot assigned at random.
+
+:::::
 
 ::: {.notes}
 
@@ -1485,9 +1663,13 @@ Chapter 16 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Honest: "for these sessions, slot 1 drew about three times the plays of slot 5, at equal quality."
 - Forbidden: "promoting tracks to slot 1 will triple their plays."
 - The second sentence is causal and deployable, and the design never tested it.
+
+:::::
 
 ::: {.notes}
 
@@ -1509,6 +1691,8 @@ Chapter 16 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 The redesign renders every slot identically and logs impressions server-side.
@@ -1518,6 +1702,8 @@ The redesign renders every slot identically and logs impressions server-side.
 - A demand effect if the probe looks like an ad.
 - An instrument effect if slot 1's larger art or a slot-keyed logger inflates the count.
 - Randomizing the slot does not fix a bias that hits every unit alike.
+
+:::::
 
 ::: {.notes}
 
@@ -1529,13 +1715,15 @@ you design these out separately rather than correcting them afterwards.
 :::
 
 
-## Run it: the randomization is real, the claim it licenses is still descriptive {.denser}
+## Run it: the randomization is real, the claim it licenses is still descriptive
 
 ::: {.kicker}
 
 Chapter 16 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - 12,000 sessions, one identical probe track, slot dealt by chance.
 - Watch the play rate fall from slot 1 down to slot 6.
@@ -1563,6 +1751,8 @@ print("descriptive, for these sessions. it does not say what promoting a")
 print("DIFFERENT track to slot 1 would do")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block deals the probe track's slot at random and reports the attention
@@ -1573,13 +1763,15 @@ rerun, and ask which sentence in the section stops being true.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 16
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -1598,6 +1790,8 @@ to the units you observed.
 
 :::
 
+:::::
+
 
 ## Do not delegate
 
@@ -1606,6 +1800,8 @@ to the units you observed.
 Chapter 16
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -1620,14 +1816,18 @@ AI partner can draft, locate, and attack. You declare and defend.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 16 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Read your lead question aloud and underline the verb.
 2. If it is yours, name the latent characteristic your project has to reveal, the property nobody publishes anywhere, and the controlled stimulus you will assign by chance to reveal it.
@@ -1639,6 +1839,8 @@ Chapter 16 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_experimental_descriptive_research.ipynb) with [Chapter 16](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1672,9 +1874,9 @@ Chapter 17
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Decide whether your question is truly a *forecast* about cases nobody has seen
 yet, and if it is, sign a four-part contract before you fit anything: target,
@@ -1683,6 +1885,8 @@ defend a modest honest score and say out loud where your forecast stops
 working.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1693,7 +1897,9 @@ Chapter 17 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -1713,6 +1919,8 @@ Chapter 17 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1729,10 +1937,14 @@ Chapter 17 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A county public-health officer decides week by week whether to post a swimming advisory.
 - Blooms of cyanobacteria can turn a safe beach into a health hazard within days.
 - A vendor arrives with a model that flags harmful blooms "with 94% accuracy".
 - The officer does not act on that number.
+
+:::::
 
 ::: {.notes}
 
@@ -1754,6 +1966,8 @@ Chapter 17 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - The words are a public-health officer's, burned before by an impressive-sounding number.
 - Question one: is it better than the dumbest honest rule?
 - Question two: was it earned on cases the model never saw?
@@ -1766,6 +1980,8 @@ just say 'no bloom' every single week I am already right about eighty-five
 percent of the time.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1785,6 +2001,8 @@ and you cry wolf, or you miss a real hazard.
 Chapter 17 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1819,6 +2037,8 @@ Chapter 17 · The concept
 - Generalization's reach: from the twelve lakes you measured to every lake in the watershed.
 - Both go beyond the data in hand. Both need a named crossing that licenses them.
 
+:::::
+
 ::: {.notes}
 
 This pathway is the book's own addition. The four pathways around it adapt
@@ -1839,11 +2059,15 @@ Chapter 17 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Target:** the one column you predict, for example `bloom_next_week`.
 - **Baseline:** the dumbest honest rule, usually "always guess the most common answer".
 - If 85% of weeks have no bloom, the rule scores 85% for free. That is the bar.
 - **Metric:** matched to the target. Accuracy misleads when blooms are rare.
 - Score the baseline and every candidate on the same metric, or the comparison means nothing.
+
+:::::
 
 ::: {.notes}
 
@@ -1866,10 +2090,14 @@ Chapter 17 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Training set:** the data each candidate model learns from. Your first summer.
 - **Selection set:** separate data you use to choose among candidates. Your second summer.
 - **Final holdout:** locked away and opened exactly once. Your third summer.
 - Run them in that order: fit, then choose, then score your one choice.
+
+:::::
 
 ::: {.notes}
 
@@ -1890,11 +2118,15 @@ Chapter 17 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Try twelve models and keep the best score you saw.
 - Some model was always going to look best on that particular data.
 - Partly because its errors fell kindly there. That gap is **model-selection bias** (Varma & Simon 2006).
 - On one split the flattery can be large, small, or even reversed. Over many splits it points up.
 - Change anything after the final score and the holdout has joined development.
+
+:::::
 
 ::: {.notes}
 
@@ -1918,11 +2150,15 @@ Chapter 17 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The classic leak: the toxin concentration measured during the bloom.
 - A leaked feature inflates your score on today's data and collapses on tomorrow's.
 - Time carries its own version. Your exam weeks should come after the weeks you learned from.
 - Splitting weeks at random hands the model August while asking it to forecast July.
 - Keep the blocks in calendar order, and let the latest block be the one you lock.
+
+:::::
 
 ::: {.notes}
 
@@ -1945,11 +2181,15 @@ Chapter 17 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You want to warn swimmers a week ahead.
 - Target: `bloom_next_week`, one if the lake exceeds the advisory threshold.
 - Across three summers of weekly samples, 85% of weeks are clear.
 - "Always say no bloom" scores 0.85 with no model at all.
 - Features known a week early: water temperature, recent rainfall, upstream phosphorus load.
+
+:::::
 
 ::: {.notes}
 
@@ -1970,11 +2210,15 @@ Chapter 17 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The three summers give you your three roles without any shuffling (Hastie et al. 2009).
 - Summer one trains. Summer two chooses between a few feature lists. Summer three stays locked.
 - You open summer three once, for the winner alone.
 - On accuracy, the same metric as the baseline, the model lands around 0.88.
 - These scores are constructed for the example.
+
+:::::
 
 ::: {.notes}
 
@@ -1995,11 +2239,15 @@ Chapter 17 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A collaborator adds `chlorophyll_a`, the pigment reading. The score leaps to 0.97.
 - Ask when chlorophyll is measured: during the very bloom you are forecasting.
 - It is the outcome wearing a different label.
 - Drop it and the score falls back to 0.88. The timing test, not the accuracy, decides.
 - Trained on one shallow lake, so it does not yet generalize to a deep, cold reservoir.
+
+:::::
 
 ::: {.notes}
 
@@ -2014,13 +2262,15 @@ it.
 :::
 
 
-## Three summers in code, and the last one stays locked {.densest}
+## Three summers in code, and the last one stays locked
 
 ::: {.kicker}
 
 Chapter 17 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The calendar order is the design: it decides the three roles.
 - `temp` and `rain` are known a week early. `chl` is measured during the bloom.
@@ -2059,6 +2309,8 @@ print("\nthe third number is not skill. chlorophyll is measured during the")
 print("bloom you claim to forecast, so it cannot exist at prediction time")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it and read the three printed numbers in order. The scores are constructed
@@ -2070,13 +2322,15 @@ of the whole block.
 :::
 
 
-## Twelve polynomials, chosen on selection, scored once {.densest}
+## Twelve polynomials, chosen on selection, scored once
 
 ::: {.kicker}
 
 Chapter 17 · A seeded simulation
 
 :::
+
+::::: {.slide-body}
 
 - First half: one world, the three roles, and the winner's single final-holdout score.
 - Second half: 500 fresh worlds, comparing the winner's true error with the score that crowned it.
@@ -2125,6 +2379,8 @@ print("winner truly worse than its crowning score in",
 print("largest single gap:", round(float(gaps.max()), 2))
 ```
 
+:::::
+
 ::: {.notes}
 
 The chapter claims two things at once and this code shows both. A model can
@@ -2137,13 +2393,15 @@ than any real study would have.
 :::
 
 
-## Only data the fit never touched can tell you to stop at six {.dense}
+## Only data the fit never touched can tell you to stop at six
 
 ::: {.kicker}
 
 Chapter 17 · A seeded simulation
 
 :::
+
+::::: {.slide-body}
 
 - Blue training error only falls. Every extra degree bends the model closer to points it has seen.
 - Orange selection error bottoms out near degree six, then climbs as the model memorizes noise.
@@ -2159,6 +2417,8 @@ Right: across 500 worlds, the winner's true error exceeds its crowning score
 on average, with a long right tail.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2179,11 +2439,15 @@ Chapter 17 · A seeded simulation
 
 :::
 
+::::: {.slide-body}
+
 - Across 500 worlds the winner's true error exceeds its crowning score by 0.025 RMSE on average.
 - Median 0.015, and the winner comes out worse than its crown in 64 percent of worlds.
 - In the other third, luck ran the other way, so no single split can show you the bias.
 - In 4 worlds the gap passed +0.3, topping out at +1.86.
 - Those worlds are the procedure's real risk showing itself.
+
+:::::
 
 ::: {.notes}
 
@@ -2199,13 +2463,15 @@ one seeded extreme need not move the same way.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 17
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -2224,6 +2490,8 @@ model.
 
 :::
 
+:::::
+
 
 ## Do not delegate
 
@@ -2232,6 +2500,8 @@ model.
 Chapter 17
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -2246,14 +2516,18 @@ timeline cannot make these calls for you.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 17 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Ask the blunt version of your question: does your project need to guess an outcome for a case whose outcome does not exist yet?
 2. If yes, sign the four-part contract, in order.
@@ -2265,6 +2539,8 @@ Chapter 17 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch17_prediction_and_generalization.ipynb) with [Chapter 17](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2298,9 +2574,9 @@ Chapter 18
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Decide whether the way treatment was assigned in your study lets you read a
 plain difference in outcomes as a cause, and then name exactly which quantity
@@ -2310,6 +2586,8 @@ cause.
 
 :::
 
+:::::
+
 
 ## The words this chapter uses
 
@@ -2318,6 +2596,8 @@ cause.
 Chapter 18 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -2347,6 +2627,8 @@ Chapter 18 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -2363,6 +2645,8 @@ Chapter 18 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A clinical-trial reviewer, reading a claim that a reminder improved medication adherence.
 - The treated group did better. So did the healthier, the more organized, the younger.
 - The decision: has your difference earned the word *because*, and whose effect is it?
@@ -2374,6 +2658,8 @@ not the kind of patient, decided who got treated, and tell me exactly who your
 number speaks for.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2396,10 +2682,14 @@ Chapter 18 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A tool can clean your data, run the comparison, and hand you a number.
 - That speed is the danger.
 - Paste back "the treatment worked" and you signed a claim you have not earned.
 - The reviewer does not care how fluent the output sounded.
+
+:::::
 
 ::: {.notes}
 
@@ -2419,6 +2709,8 @@ applies to.
 Chapter 18 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -2452,6 +2744,8 @@ Chapter 18 · The concept
 - Not causal: do patients who got reminders refill more?
 - For Ms. R, Y(1) is refilling with the texts, Y(0) is refilling with nothing.
 
+:::::
+
 ::: {.notes}
 
 This chapter follows the experimental-causal pathway of the design library in
@@ -2473,10 +2767,14 @@ Chapter 18 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Her causal effect is Y(1) minus Y(0).
 - She was either texted or not, never both.
 - **Fundamental problem of causal inference:** for one unit you see one of the two (Holland 1986).
 - So her individual effect is unrecoverable.
+
+:::::
 
 ::: {.notes}
 
@@ -2497,9 +2795,13 @@ Chapter 18 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Average treatment effect (ATE):** the average of Y(1) minus Y(0) across all your units.
 - The typical effect, not any one unit's.
 - Example: on average, the reminder raised on-time refills by a few points.
+
+:::::
 
 ::: {.notes}
 
@@ -2519,11 +2821,15 @@ Chapter 18 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Random assignment:** pure chance, a coin flip, decides which units get treated.
 - Chance knows nothing about health or organization, so the groups are alike on average.
 - **Confounder:** a third trait that pushes on both who gets treated and the outcome.
 - Organized patients refill anyway and enroll easily, so a reminder looks effective even when it did nothing.
 - That broken link is the entire reason an experiment can say *because*.
+
+:::::
 
 ::: {.notes}
 
@@ -2546,10 +2852,14 @@ Chapter 18 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You want to know whether a daily text reminder raises on-time refills.
 - You enroll 800 hypertension patients: 400 to the reminder arm, 400 to control.
 - The reminder arm refills at 71 percent, the control arm at 62 percent.
 - The coin, not the patient's organization, sorted the arms.
+
+:::::
 
 ::: {.notes}
 
@@ -2570,11 +2880,15 @@ Chapter 18 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Some patients stopped answering follow-up before the final measurement.
 - The reminder arm shows who stayed with reminders; control shows who stayed without them.
 - **Complete-case contrast:** a comparison of whoever happened to be measured in each arm.
 - Those two observed groups need not be the same kind of people.
 - An effect for the stayers may exist, but only under assumptions you state and defend.
+
+:::::
 
 ::: {.notes}
 
@@ -2596,11 +2910,15 @@ Chapter 18 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The damage comes when who leaves is tied to what their outcome would have been.
 - Different shares of similar patients can cost little; identical shares of very different patients, a lot.
 - Report retention by arm first, before any effect.
 - Say a quarter of the reminder arm went unmeasured and would have refilled at 50 percent.
 - The arm then averages about 66, and the 9-point gap shrinks to about 4.
+
+:::::
 
 ::: {.notes}
 
@@ -2616,13 +2934,15 @@ That range belongs in the write-up.
 :::
 
 
-## Run the trial twice: everyone randomized, then only those measured {.densest}
+## Run the trial twice: everyone randomized, then only those measured
 
 ::: {.kicker}
 
 Chapter 18 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the retention line while you read the second gap.
 - The organized share of those still seen is the line that gives it away.
@@ -2662,6 +2982,8 @@ print("\nthe last line is the problem: the two arms no longer describe the")
 print("same kind of patient, so the second gap is not an effect on anyone")
 ```
 
+:::::
+
 ::: {.notes}
 
 The trait driving both dropout and refilling is called organized here, and the
@@ -2674,13 +2996,15 @@ number describes. Naming that quantity is the decision this chapter equips.
 :::
 
 
-## Two thousand coin flips over the same 200 patients {.densest}
+## Two thousand coin flips over the same 200 patients
 
 ::: {.kicker}
 
 Chapter 18 · A seeded simulation
 
 :::
+
+::::: {.slide-body}
 
 - Every patient gets both refill rates: without a reminder, and with one adding 5 points.
 - The random assignment is rerun 2,000 times, and each estimate is recorded.
@@ -2715,6 +3039,8 @@ ax.set_ylabel("Number of re-randomizations")
 plt.show()
 ```
 
+:::::
+
 ::: {.notes}
 
 Randomization is a promise about procedure: assign treatment by coin flip, and
@@ -2735,6 +3061,8 @@ Chapter 18 · A seeded simulation
 
 :::
 
+::::: {.slide-body}
+
 - **Randomization distribution:** every estimate this trial could have produced under a different coin flip.
 - It centers almost exactly on the truth: mean of estimates 5.0 against a true 5.0.
 - Most runs landed between about 2 and 8 points, and the extremes ran below zero and above 10.
@@ -2748,6 +3076,8 @@ effect.
 
 :::
 
+:::::
+
 ::: {.notes}
 
 Point at one bar and say that this is somebody's entire trial. Your one
@@ -2759,13 +3089,15 @@ and it is randomization that buys truth on average.
 :::
 
 
-## Keep the coin flip honest and change only who is measurable {.denser}
+## Keep the coin flip honest and change only who is measurable
 
 ::: {.kicker}
 
 Chapter 18 · What attrition does to that promise
 
 :::
+
+::::: {.slide-body}
 
 - All 2,000 patients get a true benefit of 5 points.
 - Under control, patients drop out only if their health is poor.
@@ -2798,6 +3130,8 @@ print("true effect for everyone enrolled:", np.mean(y1 - y0))
 print("average complete-case contrast:   ", contrasts.mean().round(2))
 ```
 
+:::::
+
 ::: {.notes}
 
 One thing separates this simulation from the last one: who is still measurable
@@ -2817,6 +3151,8 @@ Chapter 18 · What attrition does to that promise
 
 :::
 
+::::: {.slide-body}
+
 - The truth is 5 points. The contrasts pile up around 8.1.
 - Retention was 59 percent in the reminder arm against 80 percent in control.
 - Leaving was tied to health, and health also drives the outcome.
@@ -2829,6 +3165,8 @@ The complete-case contrasts pile up near 8 points, far from the true 5-point
 effect.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2845,13 +3183,15 @@ digging, which is the sensitivity work from the honesty test.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 18
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -2869,6 +3209,8 @@ it up.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -2878,11 +3220,15 @@ Chapter 18 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by checking retention by arm and who was lost, not by re-reading the fluent paragraph.
 - The reminder arm lost far more patients, and the ones it lost were the sickest, so who stayed was tied to what the outcome would have been.
 - That makes the 12 points a complete-case contrast: not the effect for everyone enrolled, and not automatically an effect for any shared group of stayers, since each arm produced its own.
 - A green check is not a correct result.
 - You rewrite the sentence to report retention in both arms, to say plainly that this trial as run does not deliver the effect for everyone enrolled, and to run the what-if from the honesty test: how low would the missing patients' refill rates have to be before the finding flips?
+
+:::::
 
 ::: {.notes}
 
@@ -2900,13 +3246,15 @@ missing patients' refill rates have to be before the finding flips?
 :::
 
 
-## Do not delegate {.dense}
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 18
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -2924,14 +3272,18 @@ uncertainty.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 18 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your treatment and your outcome as two short phrases.
 2. Take one real unit from your study and write Y(1) and Y(0) for it in plain words.
@@ -2943,6 +3295,8 @@ Chapter 18 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch18_experimental_causal_research.ipynb) with [Chapter 18](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2976,9 +3330,9 @@ Chapter 19
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 When your answer has to be stitched together from several measurements or
 stages, decide whether the combined design is still one aligned thing you can
@@ -2987,6 +3341,8 @@ produce a careful result, and deciding to *cut* a piece you cannot
 characterize is as much a design decision as adding one.
 
 :::
+
+:::::
 
 
 ## The economist wants the error budget, not the headline number
@@ -2997,6 +3353,8 @@ Chapter 19 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Your reviewer: an antitrust economist reviewing a report on how concentrated a market is.
 - "Hand me the error budget: every quantity you measured, how you measured it."
 - "And how each one's uncertainty flowed into the final answer."
@@ -3006,6 +3364,8 @@ Chapter 19 · Why this decision matters
 A precise result built on one uncharacterized step is a precise wrong answer.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -3026,10 +3386,14 @@ Chapter 19 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Each piece looks careful on its own, so the whole looks careful too.
 - An assembled answer is only as trustworthy as its worst-characterized piece.
 - The assembly can amplify a small mistake into a large one.
 - The decision: does the extra moving piece earn its place?
+
+:::::
 
 ::: {.notes}
 
@@ -3050,6 +3414,8 @@ Chapter 19 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 Blair, Cooper, Coppock and Humphreys named the four (Blair et al. 2019); RDSS
@@ -3061,6 +3427,8 @@ develops them (Blair et al. 2023).
 - **Inquiry:** the one exact quantity you want from it.
 - **Data strategy:** every procedure that makes the data, from sampling to measurement.
 - **Answer strategy:** what turns those data into an answer, uncertainty included.
+
+:::::
 
 ::: {.notes}
 
@@ -3080,6 +3448,8 @@ combine.
 Chapter 19 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -3109,6 +3479,8 @@ Chapter 19 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Give the chapter's example as soon as the first card is up: a market's
@@ -3129,10 +3501,14 @@ Chapter 19 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Complexity breaks alignment in a fresh way.
 - Each sub-measurement can be built well and be fine on its own.
 - They can still target slightly different quantities.
 - Those never combine into the one you named.
+
+:::::
 
 ::: {.notes}
 
@@ -3153,9 +3529,13 @@ Chapter 19 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Each measured input's uncertainty flows into the answer, sometimes amplified (Joint Committee for Guides in Metrology 2008).
 - Say your answer depends on the square of a measured share.
 - A 1% error in that share becomes roughly a 2% error in the result.
+
+:::::
 
 ::: {.notes}
 
@@ -3175,6 +3555,8 @@ measured value gets squared, divided or ratioed.
 Chapter 19 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -3199,6 +3581,8 @@ Chapter 19 · The concept
 - Keep the lab's two failure words close.
 - Complexity lets a small systematic error hide behind an impressively small random one.
 
+:::::
+
 ::: {.notes}
 
 These two words come straight from the lab, and the worked example is about to
@@ -3218,10 +3602,14 @@ Chapter 19 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Does a handful of chains dominate the market, or is it split among many sellers?
 - A **concentration index** rises as a market's sales pile up in fewer hands (U.S. Department of Justice & Federal Trade Commission 2023).
 - Square each seller's market share, add the squares.
 - `share = its revenue / total market revenue`.
+
+:::::
 
 ::: {.notes}
 
@@ -3242,10 +3630,14 @@ Chapter 19 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A single month of reported revenue is noisy.
 - A holiday week or a late filing pushes any one chain's figure up or down.
 - So average twelve months for each chain before you compute shares.
 - That crushes the variance: swap the months and the index moves a point or two at most.
+
+:::::
 
 ::: {.notes}
 
@@ -3264,10 +3656,14 @@ Chapter 19 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The survey covers the chains, not the independent corner stores or online deliveries.
 - So the total market revenue you divide by is systematically too small.
 - Every share is therefore systematically too large, and shares get squared.
 - Your data strategy and your model have drifted apart.
+
+:::::
 
 ::: {.notes}
 
@@ -3281,13 +3677,15 @@ census.
 :::
 
 
-## Run the index both ways and watch the wrong number hold still {.denser}
+## Run the index both ways and watch the wrong number hold still
 
 ::: {.kicker}
 
 Chapter 19 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The block computes the index with the survey's total and with the true one.
 - `uncovered = 22.0` is real sales the survey never reaches.
@@ -3317,6 +3715,8 @@ print("\naveraging twelve months bought precision, not correctness. the")
 print("denominator is missing sales, so every share, and the index, tilts up")
 ```
 
+:::::
+
 ::: {.notes}
 
 SEED is 464, so the printed lines come out the same for you as for everyone
@@ -3336,6 +3736,8 @@ Chapter 19
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -3351,6 +3753,8 @@ describes wobble it could see and stays silent about the tilt it could not.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -3360,11 +3764,15 @@ Chapter 19 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it in two moves.
 - First, check the assumption the number rests on: does the total your shares divide by actually cover the whole market?
 - Second, run a falsification move: recompute the index from a deliberately narrower survey, dropping the smallest chains too, and watch the "precise" index drift systematically upward.
 - A quantity that shifts well outside its own stated interval had an uncertainty that was never honest.
 - Verify the number, not the tidy interval beside it.
+
+:::::
 
 ::: {.notes}
 
@@ -3387,6 +3795,8 @@ Chapter 19
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -3401,14 +3811,18 @@ yours.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 19 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your design as an ordered list of the measurements and stages it takes to get from raw data to your answer.
 2. For each line, name which MIDA part it lives in and the single quantity it targets.
@@ -3420,6 +3834,8 @@ Chapter 19 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch19_hybrid_and_complex_designs.ipynb) with [Chapter 19](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -3452,6 +3868,8 @@ Milestone 5
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -3460,8 +3878,10 @@ Milestone 5
 
 :::
 
+:::::
 
-## What you bring {.densest}
+
+## What you bring
 
 ::: {.kicker}
 
@@ -3469,12 +3889,16 @@ Milestone 5 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 14 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html): either your four boxes and selection diagram, if this is your pathway, or the classification drill that rules it out.
 - [Lesson 15 — Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html): either your causal diagram with its leverage named and priced, or the drill that shows why this road is not yours.
 - [Lesson 16 — Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html): either your revealed-characteristic estimand with its demand and instrument threats named, or the drill run on your own question.
 - [Lesson 17 — Prediction and Generalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html): either your signed four-part forecasting contract with its boundary, or the contrast drill: the plain rejection line, the prediction-time leakage check run on your own features, and two sentences on why prediction answers a different question.
 - [Lesson 18 — Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html): either your treatment, outcome, and potential outcomes with the nearest threat named, or the drill plus the confounder that blocks the causal reading.
 - [Lesson 19 — Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html): if your design has stages: the stage-by-stage map, its weakest link, and the one-sentence justification for keeping or cutting it.
+
+:::::
 
 
 ## The practice
@@ -3485,10 +3909,14 @@ Milestone 5 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Use the route guide on the studio opener to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
 2. Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim.
 3. Write the limits: what this pathway cannot establish no matter how clean the execution.
 4. Update your claim boundary to match the pathway, and mark the change as a new Contract version.
+
+:::::
 
 
 ## The four rails, here
@@ -3498,6 +3926,8 @@ Milestone 5 · In the studio
 Milestone 5 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -3535,6 +3965,8 @@ Milestone 5 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -3543,6 +3975,8 @@ Milestone 5 · Every studio, these four
 Milestone 5
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -3555,14 +3989,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 5 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio05-develop-the-pathway.html) · [Milestone 5](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone05-develop-the-pathway.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

@@ -8,12 +8,14 @@
 # Lessons on this deck: replication-reproduction research-packages
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 11 — Reproduce and package"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,13 +55,15 @@ Studio 11
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Prove that someone who is not you can obtain your result from your materials.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -70,12 +74,16 @@ Studio 11
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 11: Your reproducible
 package](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
 An independent cold-run record and a reusable research package. Working alone,
 the record is a clean-environment rerun labeled "solo proxy; external cold run
 pending" — the label, and the honesty it enforces, are part of the artifact.
+
+:::::
 
 ::: {.notes}
 
@@ -102,8 +110,12 @@ Studio 11 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 36 — Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html): your cold reproduction record: every number re-run from the top, one undisclosed choice varied, and missingness classified before any filling.
 - [Lesson 37 — Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html): your research capsule: the runnable notebook, the data-provenance note with its terms of use, the fixed seed, the decision log, your AI-use ledger, the environment record, the README, and a cold rerun in a second environment.
+
+:::::
 
 
 ## Replication and Reproduction {background-color="#1a1a19" .divider}
@@ -130,9 +142,9 @@ Chapter 36
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Handed nothing but the files a study shipped, yours or someone else's, you
 decide whether the reported number actually comes back out. Then you rank the
@@ -140,6 +152,8 @@ weaknesses you found by how much each one threatens the headline claim, not by
 how easy each one is to fix.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -150,7 +164,9 @@ Chapter 36 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -170,6 +186,8 @@ Chapter 36 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -186,6 +204,8 @@ Chapter 36 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - The decision: whether a result regenerates from the files alone.
 - Then: which of its weaknesses most endangers the headline claim.
 
@@ -197,6 +217,8 @@ do not have a result yet. You have a story. — a **principal investigator**
 reading a first-year researcher's lab report
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -217,10 +239,14 @@ Chapter 36 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A poster can round. A caption can overstate.
 - The one choice holding the whole claim up rarely announces itself.
 - You review someone else's package first, before anyone reviews yours.
 - Rank what you find by threat to the claim, not by ease of repair.
+
+:::::
 
 ::: {.notes}
 
@@ -242,11 +268,15 @@ Chapter 36 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Reproduction:** the same number from the *same* data and code a study shipped (National Academies of Sciences, Engineering, and Medicine 2019).
 - You open another researcher's notebook, run it top to bottom, check the figure comes back.
 - **Replication:** a similar result from a *new* study or new data.
 - A second lab runs its own experiment and sees the same effect.
 - This chapter is about reproduction.
+
+:::::
 
 ::: {.notes}
 
@@ -265,6 +295,8 @@ this slide tests the package rather than the world.
 Chapter 36 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -297,6 +329,8 @@ Chapter 36 · The concept
 - A headline number sounds like this: "the supplement raised larval growth by 0.5 mm."
 - If a number only appears when cells run out of order, it is not reproducible (Wilson et al. 2017).
 
+:::::
+
 ::: {.notes}
 
 Rebuild the headline number first, because it is the one figure the rest of
@@ -308,13 +342,15 @@ a kernel restart.
 :::
 
 
-## A clean run proves the code executes, not that the write-up is true {.dense}
+## A clean run proves the code executes, not that the write-up is true
 
 ::: {.kicker}
 
 Chapter 36 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -355,6 +391,8 @@ Chapter 36 · The concept
 - Three audits run on top of the clean run.
 - The most dangerous hidden assumption in biology has a name.
 
+:::::
+
 ::: {.notes}
 
 Take the three audits in order, because each one asks something the run itself
@@ -374,11 +412,15 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A package from another lab tests a probiotic added to zebrafish tank water.
 - Three tanks get the probiotic, three get plain water.
 - Each tank holds about 40 larvae, and body length is recorded for every larva.
 - The poster reads: "The probiotic increased larval body length by 0.5 mm."
 - The figures in this worked example are constructed.
+
+:::::
 
 ::: {.notes}
 
@@ -399,10 +441,14 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You restart-and-run-all. The code splits larvae by tank type and differences the means.
 - The package reproduces, which is a real success.
 - Rounding does not explain the gap: 0.43 rounds to 0.4.
 - That mismatch is your first finding, and it earns you the right to push harder.
+
+:::::
 
 ::: {.notes}
 
@@ -422,10 +468,14 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The package dropped larvae that died before the final measurement and never said so.
 - **Post-treatment event:** something that happens after treatment and that treatment may cause.
 - If the probiotic changes which larvae survive, the survivors differ between tanks.
 - Their length difference is then a comparison between different populations.
+
+:::::
 
 ::: {.notes}
 
@@ -446,10 +496,14 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - That patch produces 0.31 mm. Resist calling it an equally defensible alternative.
 - It assumes a last measurement stands in for a final length the larva never had.
 - 0.43 and 0.31 answer different questions with different assumptions.
 - The gap between them is not a range, and reporting it as one is a third error.
+
+:::::
 
 ::: {.notes}
 
@@ -471,10 +525,14 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Label that pair as exactly what it is.
 - It is an honest description of what happened in the tanks.
 - It does not deliver an overall causal effect of the probiotic on day-30 length.
 - Matching survival percentages do not rescue the comparison.
+
+:::::
 
 ::: {.notes}
 
@@ -497,10 +555,14 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The package reports its gap as if all 240 larvae were independent.
 - The probiotic was assigned by tank, so tankmates share water, food, and crowding.
 - Average each tank first, then compare three treated tanks against three controls.
 - The point estimate barely moved. The honest uncertainty around it exploded.
+
+:::::
 
 ::: {.notes}
 
@@ -521,10 +583,14 @@ Chapter 36 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - First: pseudoreplication, because it can dissolve the "clear effect" claim.
 - Second: the undisclosed handling of dead larvae, which decides which larvae the number describes.
 - Third: 0.43 reported as 0.5, real and a genuine reporting failure.
 - It is also the smallest threat to whether an effect exists.
+
+:::::
 
 ::: {.notes}
 
@@ -537,13 +603,15 @@ themselves before you show this slide.
 :::
 
 
-## Three defensible numbers, and none of them is 0.50 {.densest}
+## Three defensible numbers, and none of them is 0.50
 
 ::: {.kicker}
 
 Chapter 36 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the death counts: the probiotic changes who dies.
 - Compare survivors, everyone, and tank means against the poster's 0.50 mm.
@@ -585,6 +653,8 @@ print("three defensible numbers, none of them 0.50, and the unit of")
 print("randomization was the TANK, not the larva")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run this before you accept any single number, including the one printed on the
@@ -604,6 +674,8 @@ Chapter 36
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -617,6 +689,8 @@ six tanks. It has quietly mistaken a long list for a complete one.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -626,11 +700,15 @@ Chapter 36 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by refusing to judge the paragraph and judging the design instead.
 - You ask what the experimental unit actually was, then recompute the interval at the tank level.
 - When the lower bound drops to zero, the "clear effect" the tool endorsed turns out to rest on a certainty the data never earned.
 - A green check and a polished paragraph are not a reproduced result.
 - You verify the number and its match to the claim, never the confident story about them.
+
+:::::
 
 ::: {.notes}
 
@@ -645,13 +723,15 @@ about them.
 :::
 
 
-## Do not delegate {.denser}
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 36
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -673,14 +753,18 @@ suspects. You decide which ones the evidence convicts.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 36 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Gather everything into one folder: the data, the code, the run order, the random seed, and a short write-up that states your headline number in words.
 2. Reproduce yourself cold.
@@ -693,6 +777,8 @@ Chapter 36 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch36_replication_and_reproduction.ipynb) with [Chapter 36](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -726,9 +812,9 @@ Chapter 37
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Decide what goes into the reproducibility capsule that ships with your
 research note, and defend the claim that a stranger can rerun your work and
@@ -738,6 +824,8 @@ one.
 
 :::
 
+:::::
+
 
 ## Hand me the folder and let me press run
 
@@ -746,6 +834,8 @@ one.
 Chapter 37 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 - A replication editor, opening the folder attached to your submission.
 - The test is not whether it ran once. It is whether it runs without you.
@@ -757,6 +847,8 @@ clear everything, and let me press run. If your headline number does not come
 back on my machine, you do not have a result yet. You have a memory of one.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -777,9 +869,13 @@ Chapter 37 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Your research note argues the claim in prose.
 - The capsule proves the claim survives without you in the room.
 - If it only runs on your laptop, in the click-order you remember, no one can check you.
+
+:::::
 
 ::: {.notes}
 
@@ -799,6 +895,8 @@ reproducible actually covers.
 Chapter 37 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -823,6 +921,8 @@ Chapter 37 · The concept
 - Example: a folder with your notebook, your data, and a record of every by-hand choice.
 - Runtime, Restart and run all, and your headline number reappears.
 
+:::::
+
 ::: {.notes}
 
 Both definitions are the chapter's own. Press on the second half of the
@@ -842,11 +942,15 @@ Chapter 37 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A runnable notebook that passes restart-and-run-all.
 - A data-provenance note: each dataset's source, its version, and how it may be used (Wilkinson et al. 2016).
 - A fixed seed, so every random step returns the same values on every run (Sandve et al. 2013).
 - A decision log: the by-hand choices that shaped the result, each with its reason.
 - An AI-use ledger: every tool, its task, and how you verified its output.
+
+:::::
 
 ::: {.notes}
 
@@ -867,11 +971,15 @@ Chapter 37 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A hard-coded path that exists only on your machine.
 - A missing seed that moves every run.
 - A by-hand edit no clean run reproduces.
 - An undocumented exclusion with no logged reason.
 - Stale data a reader cannot reobtain.
+
+:::::
 
 ::: {.notes}
 
@@ -892,6 +1000,8 @@ Chapter 37 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 The scan gets you to the starting line. A person who reruns you cold is the
@@ -901,6 +1011,8 @@ race.
 
 - A clean audit says the code executes. It says nothing about whether the numbers are right.
 - The honesty check is the one the auditor cannot do for you.
+
+:::::
 
 ::: {.notes}
 
@@ -921,9 +1033,13 @@ Chapter 37 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You collected precinct-level turnout for twelve counties in one state's midterm election.
 - Your headline: the share of precincts where turnout fell below 40%.
 - Same analysis, same headline, two very different folders.
+
+:::::
 
 ::: {.notes}
 
@@ -943,11 +1059,15 @@ Chapter 37 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Loads `turnout_clean.csv` from your own Desktop, a file only your laptop has.
 - Bootstraps the interval with no seed, so the interval shifts on every run.
 - Patches one duplicated precinct name by hand, in a cell no clean run repeats.
 - Silently drops every precinct with a missing registered-voter count, with no note on why.
 - Data downloaded "sometime last spring," before the count was certified, no version recorded.
+
+:::::
 
 ::: {.notes}
 
@@ -969,11 +1089,15 @@ Chapter 37 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Loads the certified file through its public URL, with source, download date and terms of use.
 - Fixes `SEED = 464` before the bootstrap.
 - Records the one relabel in the decision log, with its reason.
 - Keeps the missing-registration precincts, or drops them by a logged, pre-declared rule.
 - A stranger clears the kernel, runs top to bottom, and your share comes back.
+
+:::::
 
 ::: {.notes}
 
@@ -993,10 +1117,14 @@ Chapter 37 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Your seed might be fixed on the wrong subset.
 - Dropping the missing-registration precincts might be a bad rule, cleanly logged.
 - Runnable is not correct.
 - That gap is why a person exercises your capsule, not only a script.
+
+:::::
 
 ::: {.notes}
 
@@ -1009,13 +1137,15 @@ question, and tell them to write that sentence down.
 :::
 
 
-## Rerun the cell and the interval does not move {.densest}
+## Rerun the cell and the interval does not move
 
 ::: {.kicker}
 
 Chapter 37 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Every repair the sinful version did by hand happens here in code.
 - Watch the duplicate-name count: removed by a line, not by an edit.
@@ -1053,6 +1183,8 @@ print("\nrerun this cell: the interval does not move, because the seed is")
 print("pinned and every repair above happens in code a clean run repeats")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it twice in front of the room and read the share-and-interval line both
@@ -1073,6 +1205,8 @@ Chapter 37
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1087,6 +1221,8 @@ walkthrough described reading that file as if it were sitting there.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1096,10 +1232,14 @@ Chapter 37 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it the only way that counts: you actually run restart-and-run-all on a fresh kernel, ideally in Colab on a machine that is not yours.
 - The `FileNotFoundError` appears on cell 3 in seconds.
 - A narrated run is not a run.
 - You verify the notebook by executing it, not by reading a paragraph about executing it.
+
+:::::
 
 ::: {.notes}
 
@@ -1120,6 +1260,8 @@ Chapter 37
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1133,14 +1275,18 @@ trust it, are yours.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 37 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Assemble the five parts for your own project: the runnable notebook, the data-provenance note, the fixed seed, the decision log, and your AI-use ledger.
 2. Run the chapter's audit on your own key lines and fix what it flags, starting with the sin you were most tempted to leave alone.
@@ -1152,6 +1298,8 @@ Chapter 37 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch37_open_and_reusable_research_packages.ipynb) with [Chapter 37](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1184,6 +1332,8 @@ Milestone 11
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -1191,6 +1341,8 @@ Milestone 11
 **What this milestone produces.** An independent cold-run record and a reusable research package. Working alone, the record is a clean-environment rerun labeled "solo proxy; external cold run pending" — the label, and the honesty it enforces, are part of the artifact.
 
 :::
+
+:::::
 
 
 ## What you bring
@@ -1201,8 +1353,12 @@ Milestone 11 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 36 — Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html): your cold reproduction record: every number re-run from the top, one undisclosed choice varied, and missingness classified before any filling.
 - [Lesson 37 — Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html): your research capsule: the runnable notebook, the data-provenance note with its terms of use, the fixed seed, the decision log, your AI-use ledger, the environment record, the README, and a cold rerun in a second environment.
+
+:::::
 
 
 ## The practice
@@ -1213,10 +1369,14 @@ Milestone 11 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Assemble the draft package first: data or its access route, code, environment, documentation, and licence.
 2. Run your own package cold, from a clean environment, following only your written instructions.
 3. Then the external test: have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction.
 4. Fix what the runs exposed — every question asked is a missing line in your documentation — and freeze the final manifest with its date.
+
+:::::
 
 
 ## The four rails, here
@@ -1226,6 +1386,8 @@ Milestone 11 · In the studio
 Milestone 11 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -1263,6 +1425,8 @@ Milestone 11 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -1271,6 +1435,8 @@ Milestone 11 · Every studio, these four
 Milestone 11
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -1283,14 +1449,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 11 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio11-reproduce-and-package.html) · [Milestone 11](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

@@ -8,12 +8,14 @@
 # Lessons on this deck: managing-ai-agents conflicting-agents final-portfolio
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 12 — Special topic: agentic AI, release, and the next cycle"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,9 +55,9 @@ Studio 12
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 The book's special topic, turned onto your finished project: direct an
 advanced multi-role AI review — agentic where your tools truly plan and act,
@@ -64,6 +66,8 @@ decide whether the work leaves your hands, and turn the largest unresolved
 limitation into the next study.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -74,12 +78,16 @@ Studio 12
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 12: Your release and next
 cycle](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
 A review-management record for your directed AI team, a release audit
 recording release or withhold-pending-a-named-repair, your final dossier with
 a complete manifest, an explicit stopping rule, and your next-study agenda.
+
+:::::
 
 ::: {.notes}
 
@@ -108,7 +116,7 @@ the versioned record, and how the artifact is assessed.
 :::
 
 
-## The lessons in this studio {.dense}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -116,9 +124,13 @@ Studio 12 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 38 — Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html): your closing-review team: the loops' scoped jobs, the dependency wiring and turn counts, and the one node you kept human.
 - [Lesson 39 — Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html): your escalation rules, and one load-bearing pair of outputs (agreeing or not) diagnosed and settled by your own check, with any override on record.
 - [Lesson 40 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html): your finished research artifact with every claim bounded, your AI-management portfolio with the team record inside, and the rehearsed three-movement defense.
+
+:::::
 
 
 ## Managing Multiple AI Agents {background-color="#1a1a19" .divider}
@@ -145,9 +157,9 @@ Chapter 38
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Running several AI agents means running several loops at once. You decide how
 to split the work into scoped jobs, in what order those loops run so that no
@@ -155,6 +167,8 @@ early mistake slips downstream, and which step in the chain no loop is ever
 allowed to close.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -165,7 +179,9 @@ Chapter 38 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -185,6 +201,8 @@ Chapter 38 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -200,6 +218,8 @@ the book gives them.
 Chapter 38 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -218,6 +238,8 @@ touched, what you told it to do, and how you checked it. If you cannot tell me
 that, you did not write it.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -240,11 +262,15 @@ Chapter 38 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - One assistant can now draft, cite, critique, and polish in a single breath.
 - So the temptation is to open four of them and feel four times as safe.
 - Four roles with the same instructions tend to miss the same thing, then agree loudly.
 - Each role is not one prompt. It is a loop, running until you or it stops.
 - Unmanaged, four loops is four times the unsupervised work.
+
+:::::
 
 ::: {.notes}
 
@@ -265,10 +291,14 @@ Chapter 38 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You ask for the citations to be checked.
 - An agentic tool searches, reads, rechecks, and revises across several turns (Yao et al. 2023).
 - It comes back to you only at the end.
 - Faster, and every one of those turns went unwatched.
+
+:::::
 
 ::: {.notes}
 
@@ -290,6 +320,8 @@ Chapter 38 · The concept
 
 :::
 
+::::: {.slide-body}
+
 :::: {.terms}
 
 ::: {.term}
@@ -310,6 +342,8 @@ Chapter 38 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Instead of asking a tool to improve your draft, split the work into check the
@@ -329,10 +363,14 @@ Chapter 38 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A scoped role: flag every sentence in my results section that claims more than my sample can support.
 - That role has a clear finish line. "Make it better" does not.
 - The loop stops when the job is done.
 - And you can tell from the outside whether it is.
+
+:::::
 
 ::: {.notes}
 
@@ -353,10 +391,14 @@ Chapter 38 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The **worker-critic pair**: one role produces something, a second, separate role attacks it.
 - A worker drafts your limitations paragraph.
 - A critic hunts for the limitation the worker left out.
 - That confidence is exactly the blind spot the worker cannot see from the inside.
+
+:::::
 
 ::: {.notes}
 
@@ -376,6 +418,8 @@ workflow that produced it.
 Chapter 38 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -397,6 +441,8 @@ Chapter 38 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 A critic cannot attack a draft the worker has not written yet: that is a
@@ -417,6 +463,8 @@ Chapter 38 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 Is a ten-minute post-lunch walk associated with a lower afternoon resting
@@ -429,6 +477,8 @@ heart rate on your dorm floor?
 - Methodologist: is "associated with" the honest word for what your data can show?
 - Citation-checker: are the two heart-rate studies real, and do they say what you claim?
 - Editor: tighten the prose.
+
+:::::
 
 ::: {.notes}
 
@@ -449,11 +499,15 @@ Chapter 38 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The worker drafts your limitations paragraph first.
 - No critic needs another's output, so all three read it in parallel.
 - The citation-checker may run four or five turns, and report a study it cannot find.
 - Then you integrate their notes, and the editor tightens what survives.
 - Worker to critic, critic to you, you to editor: three arrows deep.
+
+:::::
 
 ::: {.notes}
 
@@ -466,13 +520,15 @@ the number of turns inside a role does not change its position on the path.
 :::
 
 
-## The slowest critic sets the schedule {.densest}
+## The slowest critic sets the schedule
 
 ::: {.kicker}
 
 Chapter 38 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Compare all five roles in sequence against the three critics in parallel.
 - The critical path prints as worker, then the slowest critic, then editor.
@@ -505,6 +561,8 @@ print("\nthe slowest critic sets the schedule, so speeding up the other two")
 print("buys nothing. and the integration node is yours, not the editor's")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block counts turns per role under SEED = 464 and reads the critical path
@@ -524,10 +582,14 @@ Chapter 38 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The methodologist says your walk-and-heart-rate result is only an association.
 - The clarity reviewer loved the sentence that called it an effect.
 - No role settles that clash. You do.
 - The decision about what the write-up claims never enters the workflow as a delegated task.
+
+:::::
 
 ::: {.notes}
 
@@ -548,6 +610,8 @@ Chapter 38
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -564,6 +628,8 @@ empty draft and return three confident reviews of nothing.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -573,11 +639,15 @@ Chapter 38 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by drawing the arrows and asking one question at each role: does this role's input exist at the moment it starts?
 - The editor's input is the integrated draft, which does not exist until the end, so "editor in parallel with worker" is impossible.
 - Redrawn honestly, the plan is a critical path three arrows deep, not one.
 - A green, tidy plan is not a valid one.
 - You check the dependencies, not the confidence.
+
+:::::
 
 ::: {.notes}
 
@@ -591,13 +661,15 @@ the dependencies, not the confidence.
 :::
 
 
-## Do not delegate {.dense}
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 38
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -615,14 +687,18 @@ command; it means the same command discipline, repeated.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 38 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Pick one real section of your project to revise: your methods, your results, or your limitations.
 2. Set up three loops, each with a one-sentence job you could grade.
@@ -634,6 +710,8 @@ Chapter 38 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch38_managing_multiple_ai_agents.ipynb) with [Chapter 38](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -667,9 +745,9 @@ Chapter 39
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Your loops have come back and they do not match, or they match a little too
 well. You decide which of three things you are looking at (real disagreement,
@@ -677,6 +755,8 @@ correlated error, or manufactured consensus), and you decide the exact moment
 to stop the loops and take the call into your own hands.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -686,6 +766,8 @@ to stop the loops and take the call into your own hands.
 Chapter 39 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -723,6 +805,8 @@ Chapter 39 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -739,6 +823,8 @@ Chapter 39 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A **skeptical peer** at your practice defense puts it to you like this.
 - The question is not whether they agreed.
 - It is whether they could have agreed for the same wrong reason.
@@ -750,6 +836,8 @@ for the same wrong reason. Agreement is the easiest thing in the world to
 manufacture, and the most dangerous to trust.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -770,10 +858,14 @@ Chapter 39 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You can run a small team of AI roles, so you can run several loops at once.
 - The seductive thought: three roles blessing your draft means three confirmations.
 - Same build, same draft, same instructions, so they tend to make the same mistake.
 - A loop that keeps running polishes the last answer instead of testing it.
+
+:::::
 
 ::: {.notes}
 
@@ -797,9 +889,13 @@ Chapter 39 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Reconciling conflicting outputs**: decide what to believe by first diagnosing why the roles differ.
 - Before you side with the reviewer over the methodologist, ask what would make each of them right.
 - There are three cases, and they call for opposite responses.
+
+:::::
 
 ::: {.notes}
 
@@ -821,10 +917,14 @@ Chapter 39 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Your reviewer calls a sentence clear and strong.
 - Your methodologist flags that same sentence as reaching past your data.
 - The roles genuinely read the evidence differently.
 - The clash points straight at the claim you need to check.
+
+:::::
 
 ::: {.notes}
 
@@ -845,10 +945,14 @@ Chapter 39 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Three reviewers built from the same base model all miss the same flaw.
 - They share the blind spot, so their agreement proves nothing.
 - Ask the simple question: could they be wrong the *same* way?
 - If yes, their consensus is one signal, not three (Peker 2023).
+
+:::::
 
 ::: {.notes}
 
@@ -869,10 +973,14 @@ Chapter 39 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You ask "confirm my draft is ready," and every role obliges.
 - The roles agreed only because your prompt framed the task so they had to.
 - You led all the witnesses.
 - Reframe the ask neutrally and run it again.
+
+:::::
 
 ::: {.notes}
 
@@ -894,6 +1002,8 @@ Chapter 39 · The concept
 
 :::
 
+::::: {.slide-body}
+
 :::: {.terms}
 
 ::: {.term}
@@ -913,6 +1023,8 @@ Chapter 39 · The concept
 :::
 
 ::::
+
+:::::
 
 ::: {.notes}
 
@@ -935,10 +1047,14 @@ Chapter 39 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - An agentic tool left running keeps looking for a next step.
 - If nobody halts it, it takes the decision by default.
 - Escalate when an AI output would *settle* a decision that is yours (Bansal et al. 2021).
 - A trigger you decide with three tidy reviews in front of you is a mood.
+
+:::::
 
 ::: {.notes}
 
@@ -960,10 +1076,14 @@ Chapter 39 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The **unemployment rate** is the share of people who want paid work and cannot find it.
 - You asked 250 adults outside the public library, over three weekday afternoons.
 - Working, or looking for work? You divided one count by the other.
 - Your draft: "unemployment here is 4.0%, in excellent agreement with the official rate."
+
+:::::
 
 ::: {.notes}
 
@@ -984,10 +1104,14 @@ Chapter 39 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - All three reviewer roles returned the same verdict: "Looks solid. Matches the published figure."
 - Each one already expects a number near 4%, the range familiar headline rates sit in.
 - So each pattern-matches your estimate and blesses it without checking how you got there.
 - That is correlated error wearing the mask of confirmation.
+
+:::::
 
 ::: {.notes}
 
@@ -1008,10 +1132,14 @@ Chapter 39 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You asked 250 people, so the luck of who walked by is worth a couple of percentage points.
 - Weekday afternoons outside a library exclude almost anyone at work all day.
 - The tidy "4.0%" was luck riding on an honest-looking method.
 - The shared anchor to the familiar figure hid that mistake from all three roles.
+
+:::::
 
 ::: {.notes}
 
@@ -1032,11 +1160,15 @@ Chapter 39 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The agreement would *settle* your headline claim, and that claim is yours.
 - You recompute from your raw responses, carrying the uncertainty of 250 people through.
 - Consistent with the official rate, far less precise, and from a group missing most workers.
 - You override three "looks great" verdicts and rewrite the claim with its real uncertainty.
 - The roles counted the answer as correct. You checked whether it was earned.
+
+:::::
 
 ::: {.notes}
 
@@ -1052,13 +1184,15 @@ better than its members (Hong & Page 2004).
 :::
 
 
-## Two defensible definitions, two different numbers {.densest}
+## Two defensible definitions, two different numbers
 
 ::: {.kicker}
 
 Chapter 39 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - SEED = 464, so the same 250 respondents come back on every run.
 - Watch the two printed rates: yours, then the one counting everyone who wants work.
@@ -1090,6 +1224,8 @@ print("that never met anyone at work on a weekday afternoon. three reviewers")
 print("who only checked whether the answer LOOKED right caught none of it")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block builds the survey and computes the rate two defensible ways, and
@@ -1101,13 +1237,15 @@ none of this, and that is the point of printing both.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 39
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -1124,6 +1262,8 @@ paragraphs around it.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1133,10 +1273,14 @@ Chapter 39 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by refusing to treat agreement as evidence.
 - You run an independence check: re-read the flagged claim against your own inquiry declaration, or hand the draft to a role with a different framing and different context.
 - In the lab you will see the size of this trap measured.
 - Four correlated reviewers miss a real flaw about seven times as often as four independent ones, and piling on more correlated roles cannot close the gap.
+
+:::::
 
 ::: {.notes}
 
@@ -1158,6 +1302,8 @@ Chapter 39
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1170,14 +1316,18 @@ of roles decides your claim boundary or your ethics. When an AI output would
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 39 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your escalation rules before the next round starts.
 2. Add the stopping conditions that are not about content.
@@ -1189,6 +1339,8 @@ Chapter 39 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch39_conflicting_agents_and_human_escalation.ipynb) with [Chapter 39](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1222,9 +1374,9 @@ Chapter 40
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Out of everything your project produced, you decide which claims you will
 stand behind in public, and you assemble the record that shows how you ran
@@ -1232,6 +1384,8 @@ your AI team, what you kept in your own hands, and how each surviving claim
 was checked.
 
 :::
+
+:::::
 
 
 ## The examiner does not count your tools
@@ -1241,6 +1395,8 @@ was checked.
 Chapter 40 · Why this decision matters
 
 :::
+
+::::: {.slide-body}
 
 - The decision on the table has two parts.
 - Which of your claims you are willing to be wrong about in public.
@@ -1254,6 +1410,8 @@ me you checked them yourself." — a defense examiner, opening the folder you
 handed over
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1274,10 +1432,14 @@ Chapter 40 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Months of AI-assisted work leave drafts, role outputs, half-finished checks.
 - Left in a pile, none of it is defensible.
 - The examiner will not read the pile.
 - She asks which claims you own, where each stops, and how you know.
+
+:::::
 
 ::: {.notes}
 
@@ -1297,10 +1459,14 @@ Chapter 40 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - It is the last check you run before work leaves your hands.
 - Does every promise the work makes still hold up?
 - Held up by the evidence, the permissions, and the record.
 - What you assemble for that audit is your dossier.
+
+:::::
 
 ::: {.notes}
 
@@ -1319,6 +1485,8 @@ this move transfers past this course.
 Chapter 40 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1339,6 +1507,8 @@ Chapter 40 · The concept
 :::
 
 ::::
+
+:::::
 
 ::: {.notes}
 
@@ -1362,6 +1532,8 @@ Chapter 40 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 A stopping rule is a written statement of what "done" means, phrased around
@@ -1382,6 +1554,8 @@ check I ran myself (National Academies of Sciences, Engineering, and Medicine
 
 :::
 
+:::::
+
 ::: {.notes}
 
 Put the two candidate rules side by side and ask which one a hostile reviewer
@@ -1400,6 +1574,8 @@ supply for you.
 Chapter 40 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1421,6 +1597,8 @@ Chapter 40 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The chapter's example is worth acting out: you ask three reviewers to confirm
@@ -1440,10 +1618,14 @@ Chapter 40 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A short public defense of your claims at their boundaries.
 - Then questions you cannot rehearse for.
 - You state what you found, and name exactly what you do not claim.
 - You answer each question from your own record.
+
+:::::
 
 ::: {.notes}
 
@@ -1463,10 +1645,14 @@ Chapter 40 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A germination test lays a counted number of seeds on damp paper.
 - Steady warmth and light; count the sprouts after a fixed number of days.
 - One packet of lettuce seed, three trays of 50 seeds each, 88% on average.
 - Now you choose the claim you will defend.
+
+:::::
 
 ::: {.notes}
 
@@ -1487,11 +1673,15 @@ Chapter 40 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You run three AI reviewer roles on your draft.
 - One praises your headline: "Lettuce seed germinates at 88%."
 - A diagnostician role flags the same sentence for reaching past your evidence.
 - You tested one packet in three trays, not lettuce seed in general.
 - You take the pen back.
+
+:::::
 
 ::: {.notes}
 
@@ -1511,6 +1701,8 @@ Chapter 40 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The sentence now carries the packet, the design, and the spread.
 - Reporting what your evidence holds, with the spread that produced it, is the reproducibility standard (National Academies of Sciences, Engineering, and Medicine 2019).
 
@@ -1520,6 +1712,8 @@ Chapter 40 · A worked example
 trays spanning 84% to 92%."
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1532,13 +1726,15 @@ both.
 :::
 
 
-## Run the trays and watch the spread the claim is built from {.denser}
+## Run the trays and watch the spread the claim is built from
 
 ::: {.kicker}
 
 Chapter 40 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The block runs the germination test tray by tray, with SEED = 464.
 - Watch the three tray rates first, then the printed spread.
@@ -1565,6 +1761,8 @@ print("\nthe defensible sentence carries all three numbers: this packet,")
 print("three trays of 50, and the spread — not 'lettuce seed germinates at 88%'")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it live so the tray-to-tray spread appears on screen instead of being
@@ -1583,10 +1781,14 @@ Chapter 40 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The label states a germination rate of 85%.
 - You compare your 88% against it by hand.
 - The two numbers land close, and that is real reassurance.
 - Your stopping rule is now satisfied, so you stop.
+
+:::::
 
 ::: {.notes}
 
@@ -1606,10 +1808,14 @@ Chapter 40 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The roles you ran.
 - The reviewer-versus-diagnostician conflict, and your override.
 - This stopping rule.
 - The label comparison that made agreement worth more than a head count.
+
+:::::
 
 ::: {.notes}
 
@@ -1629,6 +1835,8 @@ Chapter 40
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1643,6 +1851,8 @@ trusting it would send an overclaimed result into your defense.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1652,11 +1862,15 @@ Chapter 40 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it with a reframe and a check the tools cannot see.
 - First you drop the leading ask and run a neutral one: "List the three weakest claims in this draft and why." Now a role names the missing range.
 - Then you leave the tools entirely and recompute the spread of your trays yourself, which hands you the 84% to 92% boundary the reviewers all skipped.
 - The lesson is blunt: agreement is worth only the independence behind it.
 - Count the checks you ran yourself, never the roles that nodded.
+
+:::::
 
 ::: {.notes}
 
@@ -1679,6 +1893,8 @@ Chapter 40
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1692,14 +1908,18 @@ answer you give when the room asks how you know.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 40 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Finish the research artifact itself: your paper, note, or poster, with each claim stated at its boundary and your uncertainty in the same sentence as your headline number.
 2. Assemble your AI-management portfolio around the team you directed in this studio: the decomposition of loops with their wiring, one conflict or suspicious agreement settled by your own non-AI check, your stopping rule and never-delegate list, and one independence check that made an agreement worth more than a head count.
@@ -1711,6 +1931,8 @@ Chapter 40 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch40_final_research_and_ai_management_portfolio.ipynb) with [Chapter 40](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1743,6 +1965,8 @@ Milestone 12
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -1751,8 +1975,10 @@ Milestone 12
 
 :::
 
+:::::
 
-## What you bring {.dense}
+
+## What you bring
 
 ::: {.kicker}
 
@@ -1760,18 +1986,24 @@ Milestone 12 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 38 — Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html): your closing-review team: the loops' scoped jobs, the dependency wiring and turn counts, and the one node you kept human.
 - [Lesson 39 — Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html): your escalation rules, and one load-bearing pair of outputs (agreeing or not) diagnosed and settled by your own check, with any override on record.
 - [Lesson 40 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html): your finished research artifact with every claim bounded, your AI-management portfolio with the team record inside, and the rehearsed three-movement defense.
 
+:::::
 
-## The practice {.denser}
+
+## The practice
 
 ::: {.kicker}
 
 Milestone 12 · In the studio
 
 :::
+
+::::: {.slide-body}
 
 1. Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release.
 2. Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role's input exists before it starts, escalation rules written first, one node kept human. Declare who chooses each next step — you, a fixed script, or an agent that plans and calls tools — and never call a manually sequenced chat autonomous. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity.
@@ -1781,6 +2013,8 @@ Milestone 12 · In the studio
 6. Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
 7. Write the next-study agenda: tie the next question to an unresolved limitation, a warrant gap, or something this cycle's evidence opened.
 
+:::::
+
 
 ## The four rails, here
 
@@ -1789,6 +2023,8 @@ Milestone 12 · In the studio
 Milestone 12 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -1826,6 +2062,8 @@ Milestone 12 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -1834,6 +2072,8 @@ Milestone 12 · Every studio, these four
 Milestone 12
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -1846,14 +2086,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 12 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio12-release-next-cycle.html) · [Milestone 12](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

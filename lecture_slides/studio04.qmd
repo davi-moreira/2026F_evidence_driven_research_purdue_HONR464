@@ -8,12 +8,14 @@
 # Lessons on this deck: mida uncertainty-foundations declare-diagnose ethics-data-governance
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 4 — Declare and diagnose provisionally"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,23 +55,27 @@ Studio 4
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Write your design down as something specific enough to be diagnosed, then find
 out how it behaves before it costs you anything.
 
 :::
 
+:::::
 
-## The milestone ahead {.dense}
+
+## The milestone ahead
 
 ::: {.kicker}
 
 Studio 4
 
 :::
+
+::::: {.slide-body}
 
 This studio closes with **[Milestone 4: Your research contract,
 v0](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html)**,
@@ -81,6 +87,8 @@ properties you diagnosed (its bias, its wobble, and how often it would detect
 what you are looking for), your permission status, and a redesign record.
 Measurement proper is taught and assessed in Studio 6; here you only commit to
 a starting choice and say why it is defensible for now.
+
+:::::
 
 ::: {.notes}
 
@@ -104,7 +112,7 @@ assessed.
 :::
 
 
-## The lessons in this studio {.denser}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -112,10 +120,14 @@ Studio 4 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 10 — Model, Inquiry, Data Strategy, and Answer Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html): your MIDA declaration: model, inquiry, data strategy, and answer strategy, with the alignment sentence that ties them together — carrying population, setting and time, the provisional operationalization, and the warrant into Contract v0.
 - [Lesson 11 — Uncertainty Before You Need It](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html): your estimand and estimator, the repeat-run story behind them, your dependence structure, and your uncertainty sentence next to its wrong twin.
 - [Lesson 12 — Declaring and Diagnosing a Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html): your design diagnosis: bias, wobble, and power read from simulation, one redesign, and the honest call that followed.
 - [Lesson 13 — Research Ethics and Data Governance](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html): your declared permission status, your minimised column list, your AI boundary, and your four governance decisions.
+
+:::::
 
 
 ## Model, Inquiry, Data Strategy, and Answer Strategy {background-color="#1a1a19" .divider}
@@ -141,9 +153,9 @@ Chapter 10
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 The four parts of your own design, written down before any data exist: a model
 of the world, the one named quantity you want out of it, a plan for how the
@@ -151,6 +163,8 @@ data arrive, and a plan for turning that data into your quantity. Then the
 harder call: whether those four parts actually point at the same thing.
 
 :::
+
+:::::
 
 
 ## An analytics lead asks for the number first, then the route to it
@@ -161,10 +175,14 @@ Chapter 10 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - She reads your one-page design before you spend months on it.
 - "Show me the exact number you are after."
 - "Then show me that the way you collect and crunch the data can actually reach that number."
 - "If those two drift apart, every result you bring me answers a question I never asked."
+
+:::::
 
 ::: {.notes}
 
@@ -184,6 +202,8 @@ Chapter 10 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Do the check before you inspect any outcome-bearing field.
 - Do it before you compute the answer.
 
@@ -193,6 +213,8 @@ A design that skips this step is not rigorous. It is a hope with good
 formatting.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -204,13 +226,15 @@ the months of collection rather than after.
 :::
 
 
-## Any research design can be written as four parts, and the four have names {.dense}
+## Any research design can be written as four parts, and the four have names
 
 ::: {.kicker}
 
 Chapter 10 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -255,6 +279,8 @@ each (Blair et al. 2019).
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Blair, Coppock and Humphreys developed the framework at book length in
@@ -273,11 +299,15 @@ Chapter 10 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Model: a listener's chance of accepting a recommended song runs from 0 to 1.
 - A new recommender could nudge that chance up.
 - Inquiry: the average lift in accept rate the new recommender causes across listeners.
 - Data strategy: randomly send each session to the old or new recommender, then log every accept.
 - Answer strategy: accept rate in the new group minus the old, reported with an interval.
+
+:::::
 
 ::: {.notes}
 
@@ -290,13 +320,15 @@ inquiries and you have to pick the one you would defend first.
 :::
 
 
-## The dashed arrow is the check that matters {.dense}
+## The dashed arrow is the check that matters
 
 ::: {.kicker}
 
 Chapter 10 · The concept
 
 :::
+
+::::: {.slide-body}
 
 - Top row is what you want to learn. Bottom row is how you plan to learn it.
 - All four are written down before you collect anything.
@@ -312,6 +344,8 @@ anything, and the dashed arrow is the check that matters: your answer strategy
 has to reach the inquiry you named.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -331,10 +365,14 @@ Chapter 10 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You do not fill them in any order (Blair et al. 2023).
 - Align means your data and answer strategies reach the inquiry your model makes askable.
 - Misaligned: a causal inquiry, but the people who see the new version differ systematically.
 - That comparison delivers an **association**: two things move together, with no proof one caused the other.
+
+:::::
 
 ::: {.notes}
 
@@ -354,11 +392,15 @@ Chapter 10 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The inquiry is still causal. This design simply does not reach it.
 - The absence of randomizing does not settle the matter either.
 - Observational designs can carry causal answers with a defended identification argument suited to the design.
 - Honest diagnosis: causal inquiry, currently unidentified under this data and answer strategy (Hernán & Robins 2020).
 - Naming that on paper is the whole job here.
+
+:::::
 
 ::: {.notes}
 
@@ -380,11 +422,15 @@ Chapter 10 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A music-streaming company tests whether a new autoplay recommender raises how often listeners keep the track.
 - Model: one accept rate under the old recommender, one under the new.
 - The new one could be higher, lower, or the same.
 - Inquiry: the average difference across all listeners. One number, causal in kind.
 - Data strategy buckets each session at random; the answer strategy subtracts the two rates.
+
+:::::
 
 ::: {.notes}
 
@@ -404,9 +450,13 @@ Chapter 10 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The inquiry asks for a caused difference.
 - Random bucketing breaks the link between who the listener is and which version they see.
 - Nothing about the listener decides which version they get, so the four parts agree.
+
+:::::
 
 ::: {.notes}
 
@@ -426,11 +476,15 @@ Chapter 10 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Ship the new recommender to new users, compare them against existing users on the old one.
 - New and existing users differ in ways that also move accept rate.
 - The inquiry stays exactly what it was: the caused lift.
 - What the evidence supports drops from "causes" to "is associated with".
 - Same question, broken alignment.
+
+:::::
 
 ::: {.notes}
 
@@ -443,13 +497,15 @@ design-declaration literature (Blair et al. 2023).
 :::
 
 
-## Same model, same inquiry: watch the second number miss the truth {.densest}
+## Same model, same inquiry: watch the second number miss the truth
 
 ::: {.kicker}
 
 Chapter 10 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The simulation builds a true caused lift of 4 points into every listener.
 - Data strategy 1 buckets at random. Data strategy 2 ships the new version to new users.
@@ -483,6 +539,8 @@ print("\nsame inquiry both times. the second design does not answer it —")
 print("the inquiry stays causal and is now unidentified")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it, then read the three printed lines together. The randomized estimate
@@ -493,13 +551,15 @@ moved. Only the data strategy did, and that was enough to lose the answer.
 :::
 
 
-## An AI failure case {.denser}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 10
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -522,14 +582,18 @@ rate. That open arrow is the confounder the fluent draft never mentioned.
 
 :::
 
+:::::
 
-## Do not delegate {.dense}
+
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 10
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -547,14 +611,18 @@ claim that follows, is research judgment you cannot hand off.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 10 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your **model** in three or four sentences of plain language.
 2. Write your **inquiry** as one sentence naming one quantity: an average, a difference, a rate, a share.
@@ -566,6 +634,8 @@ Chapter 10 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch10_model_inquiry_data_strategy_and_answer_strategy.ipynb) with [Chapter 10](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -592,9 +662,9 @@ Chapter 11
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 What quantity you are actually after, what recipe you will use to guess it,
 and what you will say about how much that guess could have moved. You decide
@@ -602,6 +672,8 @@ all three before you inspect the outcomes, because each one changes what the
 others are allowed to mean.
 
 :::
+
+:::::
 
 
 ## Your number is one draw from a procedure
@@ -612,6 +684,8 @@ Chapter 11 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 The honest question is not 'is my number right?'
@@ -621,6 +695,8 @@ The honest question is not 'is my number right?'
 - Different households answered. Different weeks got sampled.
 - A coin came up heads for this village and tails for that one.
 - Ask instead: how much does a number from this procedure move around?
+
+:::::
 
 ::: {.notes}
 
@@ -642,10 +718,14 @@ Chapter 11 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - 'I only get to run my study once. What good is imagining a thousand runs?'
 - A procedure can be studied by repetition even when your study cannot.
 - That is why you can report uncertainty from a single sample.
 - Bias, power and coverage in the next chapter all describe this pile.
+
+:::::
 
 ::: {.notes}
 
@@ -666,6 +746,8 @@ repeated answers. Meet the pile first and those words stop being jargon.
 Chapter 11 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -699,6 +781,8 @@ Chapter 11 · The concept
 - Estimator: draw 60 households at random and take their average rent.
 - Estimate: 1,621. One number, from one run, on one day.
 
+:::::
+
 ::: {.notes}
 
 Three words get confused constantly, and separating them fixes most of the
@@ -722,10 +806,14 @@ Chapter 11 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Run the survey again on the same town and you get a different estimate.
 - Run it 2,000 times and the 2,000 estimates pile up into a shape.
 - **Sampling distribution:** the pile you would get from repeating your whole procedure many times in the same world.
 - It is a property of the procedure, not of any one run.
+
+:::::
 
 ::: {.notes}
 
@@ -737,13 +825,15 @@ which is a number you only ever know because you built the town yourself.
 :::
 
 
-## Watch two honest surveys disagree {.denser}
+## Watch two honest surveys disagree
 
 ::: {.kicker}
 
 Chapter 11 · The concept
 
 :::
+
+::::: {.slide-body}
 
 - The estimand is computed from all 4,000 households, before any survey runs.
 - The first survey said 1,621. The second said 1,655.
@@ -769,6 +859,8 @@ print(f"middle 95% of the pile: {np.percentile(means, 2.5):,.0f}"
       f" to {np.percentile(means, 97.5):,.0f}")
 ```
 
+:::::
+
 ::: {.notes}
 
 Walk the code as a recipe, not as syntax: build the town, take the quantity
@@ -787,10 +879,14 @@ Chapter 11 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Centre 1,569 against a truth of 1,568: the recipe aims true.
 - Spread about 72: how far one survey typically lands from the centre.
 - Middle 95% runs from 1,431 to 1,713.
 - Where the pile sits. How wide it is. What range covers nearly all of it.
+
+:::::
 
 ::: {.notes}
 
@@ -811,6 +907,8 @@ name.
 Chapter 11 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -837,6 +935,8 @@ Chapter 11 · The concept
 - A tightly packed pile can still sit centred on the wrong quantity.
 - The next chapter gives aim its own name.
 
+:::::
+
 ::: {.notes}
 
 Read the interval definition slowly, because the obvious paraphrase of it is
@@ -848,13 +948,15 @@ procedure.
 :::
 
 
-## The intervals caught the truth 94.8% of the time {.dense}
+## The intervals caught the truth 94.8% of the time
 
 ::: {.kicker}
 
 Chapter 11 · The concept
 
 :::
+
+::::: {.slide-body}
 
 - The width here is estimated from ONE survey, not from the pile.
 - Count how often the range brackets 1,568 across 2,000 runs.
@@ -872,6 +974,8 @@ for _ in range(runs):
 
 print(f"share of intervals that caught the truth: {hits / runs:.1%}")
 ```
+
+:::::
 
 ::: {.notes}
 
@@ -893,6 +997,8 @@ Chapter 11 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The honest sentence about your own study is quoted below.
 - The dishonest one: 'a 95% chance the true average is between 1,470 and 1,771.'
 - The honest sentence describes a procedure. The dishonest one claims a chance for a fixed number.
@@ -904,6 +1010,8 @@ my estimate is 1,621, from a procedure whose 95% intervals catch the true
 average about 95 times in 100
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -923,10 +1031,14 @@ Chapter 11 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A business-school team wants this month's average rent, to price a housing product.
 - Plan: survey 60 households drawn at random, report a 95% interval.
 - Cheaper plan: draw 12 buildings at random, survey 5 rented flats in each.
 - Nothing about the estimand changed. Nothing about the arithmetic changed.
+
+:::::
 
 ::: {.notes}
 
@@ -950,10 +1062,14 @@ Chapter 11 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - **Dependence:** learning one observation changes what you should expect about another.
 - One landlord, one neighbourhood, one heating system, one rent schedule.
 - Another flat in the same building adds less than a fresh independent flat would.
 - The arithmetic does not notice. The procedure's honesty does.
+
+:::::
 
 ::: {.notes}
 
@@ -966,13 +1082,15 @@ something you know before you see a single number.
 :::
 
 
-## The naive interval promised 95% and delivered 63.2% {.denser}
+## The naive interval promised 95% and delivered 63.2%
 
 ::: {.kicker}
 
 Chapter 11 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Two intervals, same data: 60 flats, or the 12 building means.
 - Watch the two catching rates, not the estimates.
@@ -1002,6 +1120,8 @@ print(f"treating 60 flats as independent: {naive_hits / runs:.1%} caught the tru
 print(f"treating 12 buildings as the unit: {cluster_hits / runs:.1%} caught the truth")
 ```
 
+:::::
+
 ::: {.notes}
 
 Treating 60 flats as 60 independent observations catches the truth 63.2% of
@@ -1024,10 +1144,14 @@ Chapter 11 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - That number comes from these data, not from a rule about group size.
 - 'My observations are dependent' does not tell you which way to correct.
 - Direction depends on the design, the estimator, and how your units relate.
 - A design that balances within each group can narrow the pile instead.
+
+:::::
 
 ::: {.notes}
 
@@ -1049,6 +1173,8 @@ Chapter 11 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 With the variability this example assumes, and not as a general rule.
@@ -1059,6 +1185,8 @@ With the variability this example assumes, and not as a general rule.
 - Doubling the buildings instead moves it to about 54.
 - The wobble from which buildings you picked is untouched by measuring more flats.
 - Extra flats are not worthless. They run into sharply diminishing returns.
+
+:::::
 
 ::: {.notes}
 
@@ -1083,6 +1211,8 @@ Chapter 11
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1091,6 +1221,8 @@ Ask an assistant to interpret an interval and you will very often get this,
 fluently and confidently:
 
 :::
+
+:::::
 
 
 ## How it failed
@@ -1101,11 +1233,15 @@ Chapter 11 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - The number is fine.
 - The sentence is not.
 - The true average is a fixed quantity, and your computed range is now fixed too, so no probability is left to assign between them.
 - What is 95% is the long-run catching rate of the recipe that produced the range.
 - This one matters more than it looks.
+
+:::::
 
 ::: {.notes}
 
@@ -1131,6 +1267,8 @@ Chapter 11
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1143,14 +1281,18 @@ Chapter 11
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 11 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. **State your estimand** in one sentence, as a quantity in the world with a population, a setting, and a time.
 2. **State your estimator** as a recipe: what you will collect, and exactly what you will compute from it.
@@ -1162,6 +1304,8 @@ Chapter 11 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch11_uncertainty_foundations.ipynb) with [Chapter 11](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1195,9 +1339,9 @@ Chapter 12
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Whether the design you wrote down is strong enough to run, decided before you
 collect a single data point: you simulate it, read how often it lands on the
@@ -1205,6 +1349,8 @@ truth, and name the one change that most improves it. Then you either run it,
 fix it, or narrow what you promised.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1214,6 +1360,8 @@ fix it, or narrow what you promised.
 Chapter 12 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -1251,6 +1399,8 @@ Chapter 12 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1267,9 +1417,13 @@ Chapter 12 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A methodologist on your committee reads your plan and asks one question.
 - "How often would this exact design catch the real effect if you ran it a thousand times?"
 - If your answer is "I never checked," she stops there.
+
+:::::
 
 ::: {.notes}
 
@@ -1290,10 +1444,14 @@ Chapter 12 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A sharp question and a clean comparison are not proof of strength.
 - The same design can return "nothing here" nine times out of ten.
 - Or it can land confidently on the wrong number every time.
 - Simulation finds that out cheaply, before you collect a single data point.
+
+:::::
 
 ::: {.notes}
 
@@ -1314,10 +1472,14 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You already built the four parts of a design.
 - A model that generates fake data, and an inquiry it can compute on that data.
 - A plan for sampling and assigning conditions, and a rule that turns data into an estimate.
 - Example: 40 shoppers, a coin flip for the new checkout screen, two group averages subtracted.
+
+:::::
 
 ::: {.notes}
 
@@ -1337,10 +1499,14 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Run the declared design many times on fresh simulated worlds.
 - Example: run the coin-flip study 2,000 times and collect all 2,000 estimates.
 - Watch how the estimate behaves across those runs, not in any one of them.
 - Three numbers start the story, and each answers a different worry.
+
+:::::
 
 ::: {.notes}
 
@@ -1361,10 +1527,14 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The truth is 2. Five runs return 0, 1, 2, 3, and 4.
 - The errors are -2, -1, 0, +1, +2, which average to zero.
 - Bias is zero even though only one run landed on 2.
 - Misses that all lean one way tell you the design is tilted.
+
+:::::
 
 ::: {.notes}
 
@@ -1385,9 +1555,13 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Variance is how much the estimate wobbles from one run to the next.
 - Example: estimates swinging between -5 and +9 around a true value of 2.
 - More of the same kind of data, from the same design, usually shrinks that wobble.
+
+:::::
 
 ::: {.notes}
 
@@ -1408,11 +1582,15 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Power is how often the design detects a real effect.
 - Example rule for checkout: call it an effect when the gap exceeds about twice its typical wobble.
 - At the usual 5 percent setting, a zero-effect design still cries effect in about 5 runs of 100.
 - That threshold is never the chance your one finding is false.
 - Clearing the rule in 8 of 100 runs, when the truth is 2, is 8% power: almost useless.
+
+:::::
 
 ::: {.notes}
 
@@ -1434,6 +1612,8 @@ world makes noise. Report the whole card beside the number.
 Chapter 12 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -1470,6 +1650,8 @@ never off a single study.
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Blair, Cooper, Coppock, and Humphreys introduced the term diagnosand, and
@@ -1492,10 +1674,14 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Change one part in response to the diagnosis, then run the diagnosis again.
 - Low power that comes from high variance calls for more data.
 - A tilt built into the design calls for a different design.
 - More data makes a tilted estimate steadier, not truer.
+
+:::::
 
 ::: {.notes}
 
@@ -1516,6 +1702,8 @@ Chapter 12 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 You can go around as many times as the diagnosis asks, changing one thing each
@@ -1532,6 +1720,8 @@ diagnosis asks, changing one thing each time, but the decision to run, revise,
 or narrow the claim is never inside the loop.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1551,10 +1741,14 @@ Chapter 12 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - An online grocer asks whether a one-tap reorder button speeds up checkout.
 - The button rebuilds a shopper's last cart in a single press.
 - Your outcome is seconds-to-complete.
 - In the world you simulate, the button shaves 8 seconds off.
+
+:::::
 
 ::: {.notes}
 
@@ -1575,10 +1769,14 @@ Chapter 12 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You diagnose a pilot of 12 shoppers per version.
 - Bias is near zero, so the design aims true.
 - The spread is huge, because per-person times vary so much.
 - Power comes back under 10%.
+
+:::::
 
 ::: {.notes}
 
@@ -1598,11 +1796,15 @@ Chapter 12 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Raise the sample to 400 per version: power jumps past 90%.
 - Now drop the coin flip and let shoppers opt into the button themselves.
 - The ones who opt in are the frequent, practiced shoppers who check out faster anyway.
 - That design is just as tight at 400 per version, yet it centers on 14 seconds.
 - No amount of extra data moves it.
+
+:::::
 
 ::: {.notes}
 
@@ -1615,13 +1817,15 @@ could explain it.
 :::
 
 
-## The bias column and the power column answer different questions {.densest}
+## The bias column and the power column answer different questions
 
 ::: {.kicker}
 
 Chapter 12 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The block declares all three designs and diagnoses each one.
 - That is the whole loop this chapter teaches.
@@ -1659,6 +1863,8 @@ print(pd.DataFrame(designs).T.round(2).to_string())
 print("\nsize cured the variance. it did nothing for the opt-in design's bias")
 ```
 
+:::::
+
 ::: {.notes}
 
 The true effect is planted at -8.0 seconds and SEED = 464, so every run here
@@ -1670,13 +1876,15 @@ the arm size or the opt-in rule, and watch which column moves.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 12
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -1694,6 +1902,8 @@ the `plausible-but-wrong-method` failure, and your own diagnosis unmasks it.
 
 :::
 
+:::::
+
 
 ## Do not delegate
 
@@ -1702,6 +1912,8 @@ the `plausible-but-wrong-method` failure, and your own diagnosis unmasks it.
 Chapter 12
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -1717,14 +1929,18 @@ worth months of your life anyway.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 12 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Declare your design as something that can be run.
 2. Diagnose it.
@@ -1736,6 +1952,8 @@ Chapter 12 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch12_declaring_and_diagnosing_a_research_design.ipynb) with [Chapter 12](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1762,9 +1980,9 @@ Chapter 13
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Whether you are permitted to collect the data your design calls for, who
 decides that, and how you will hold the data once you have them. You settle
@@ -1772,6 +1990,8 @@ this before collection starts, because it is the one design flaw no later
 analysis can repair.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1781,6 +2001,8 @@ analysis can repair.
 Chapter 13 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -1818,6 +2040,8 @@ Chapter 13 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1834,10 +2058,14 @@ Chapter 13 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A bad estimator can be swapped. A weak design can be redesigned.
 - Data collected without permission cannot be fixed by any amount of later care.
 - The thing that went wrong already happened to someone.
 - Work collected without the right permissions often cannot be published or presented.
+
+:::::
 
 ::: {.notes}
 
@@ -1859,6 +2087,8 @@ lighter review, not no review.
 Chapter 13 · The concept
 
 :::
+
+::::: {.slide-body}
 
 ::: {.lead}
 
@@ -1887,6 +2117,8 @@ and data source.
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The authority's name differs by country and campus: an ethics committee, a
@@ -1908,10 +2140,14 @@ Chapter 13 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Cleared:** a published national statistics table, with no individual records in it.
 - **Formal determination required:** you plan to interview people about their experience of unemployment.
 - **Pending:** protocol submitted, and you refine the interview guide while you wait.
 - **Not authorized — stop:** a licence that forbids the use you have in mind.
+
+:::::
 
 ::: {.notes}
 
@@ -1931,10 +2167,14 @@ Chapter 13 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Is this meant to produce knowledge that generalizes? Not 'will I publish it' (U.S. Department of Health and Human Services 2026).
 - Do living people, or data about identifiable living people, enter your study?
 - How do the data reach you, and are they sensitive?
 - If the first two are yes: assume formal determination required until your competent authority rules otherwise.
+
+:::::
 
 ::: {.notes}
 
@@ -1959,11 +2199,15 @@ Chapter 13 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Public posts: availability and permission are separate questions (Franzke et al. 2020).
 - Your classmates are human subjects, and classroom power makes consent harder.
 - Interviewing a professional about their organization is sometimes outside the scope. Their own experience flips it.
 - A public dataset with individual records: access is not identifiability.
 - "I am not going to publish it" is the most common escape hatch, and the weakest.
+
+:::::
 
 ::: {.notes}
 
@@ -1989,10 +2233,14 @@ Chapter 13 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The question: do first-generation students use campus advising differently from continuing-generation students?
 - The plan: a short survey of 800, names removed before anything is analyzed.
 - De-identification means a person cannot reasonably be picked out of the data.
 - Deleting names is not that. The remaining columns can still single someone out (Sweeney 2000).
+
+:::::
 
 ::: {.notes}
 
@@ -2004,13 +2252,15 @@ reproduce exactly. Before you run it, ask the room to predict how many of the
 :::
 
 
-## Four ordinary columns, and two in three respondents are unique {.denser}
+## Four ordinary columns, and two in three respondents are unique
 
 ::: {.kicker}
 
 Chapter 13 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - `share_unique` is the share of rows whose combination of columns occurs exactly once.
 - Department alone singles out nobody. Department and year together, still nobody.
@@ -2040,6 +2290,8 @@ print(f"unique on department + year + country: {share_unique(dept, year, country
 print(f"and adding age:                        {share_unique(dept, year, country, age):.1%}")
 ```
 
+:::::
+
 ::: {.notes}
 
 Nothing here is a rare or secret variable; these are four columns a survey
@@ -2050,13 +2302,15 @@ year, country and age can find that person's answers.
 :::
 
 
-## The protection failed most for the least common characteristics {.dense}
+## The protection failed most for the least common characteristics
 
 ::: {.kicker}
 
 Chapter 13 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Among respondents from the most common country, 40.3% are unique.
 - Among those from less common countries, 97.2% are.
@@ -2071,6 +2325,8 @@ print(f"unique among less-common-country students: "
 print(f"unique among most-common-country students: "
       f"{share_unique(dept[common], year[common], country[common], age[common]):.1%}")
 ```
+
+:::::
 
 ::: {.notes}
 
@@ -2090,10 +2346,14 @@ Chapter 13 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Not more deleting. Decide which columns your declared analysis actually requires.
 - Comparing first-generation and continuing-generation groups may not need country at all.
 - Age may be needed only as a range.
 - Then the risky combination never exists (European Parliament and Council of the European Union 2016).
+
+:::::
 
 ::: {.notes}
 
@@ -2114,10 +2374,14 @@ Chapter 13 · Consent is a process
 
 :::
 
+::::: {.slide-body}
+
 - Informed consent is the ongoing condition that a participant understands and agrees (National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research 1979).
 - They understand what you will do with their words, in language they actually use.
 - They can decline without cost, which is hardest where you hold any power.
 - They can withdraw later, so you must know which data are theirs.
+
+:::::
 
 ::: {.notes}
 
@@ -2137,10 +2401,14 @@ Chapter 13 · AI and the exposure question
 
 :::
 
+::::: {.slide-body}
+
 - A disclosure passes data to a third party your permission did not cover.
 - Your participants agreed to share with you and your project.
 - They did not agree to share with whatever service you found convenient.
 - That does not make AI unusable here. It makes the boundary matter.
+
+:::::
 
 ::: {.notes}
 
@@ -2163,10 +2431,14 @@ Chapter 13 · AI and the exposure question
 
 :::
 
+::::: {.slide-body}
+
 - Check retention, whether inputs train the model, human review, and storage location.
 - Some agreements prohibit third-party processing outright, and no setting inside the tool changes that.
 - An institution-provided tool is not automatically approved for every dataset.
 - When a transfer is authorized, send the smallest fragment that does the job.
+
+:::::
 
 ::: {.notes}
 
@@ -2188,10 +2460,14 @@ Chapter 13 · Data governance for a small project
 
 :::
 
+::::: {.slide-body}
+
 - Where the data live: one named location, backed up, not scattered.
 - Who can open it: name the people. "The group chat" is not access control.
 - How long you keep it: set an actual date now.
 - What happens at the end: deletion, transfer, or deposit under the licence you promised.
+
+:::::
 
 ::: {.notes}
 
@@ -2211,6 +2487,8 @@ Chapter 13 · Four situations that must stop or wait
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 When the answer is stop, you are one design decision away from a different
@@ -2222,6 +2500,8 @@ project.
 - Surveying your own study group: you can name every respondent.
 - Pasting 200 agreement-bound rows: you accepted terms you had not read.
 - The interview that turned: you asked about the organization, the answer was about a person.
+
+:::::
 
 ::: {.notes}
 
@@ -2249,6 +2529,8 @@ Chapter 13
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -2257,6 +2539,8 @@ Describe a study to an assistant and ask whether you need approval, and you
 will usually get a fluent, specific, reassuring answer:
 
 :::
+
+:::::
 
 
 ## How it failed
@@ -2267,11 +2551,15 @@ Chapter 13 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - Three things are wrong at once.
 - The tool does not know your jurisdiction or your institution's rules for student projects.
 - It does not know your data source's licence.
 - And it has stated a conclusion, which is the one thing in this chapter that is not yours or its to state.
 - The failure is worse than an ordinary wrong answer, because it is exactly the answer you were hoping for, delivered in the register of someone who knows.
+
+:::::
 
 ::: {.notes}
 
@@ -2297,6 +2585,8 @@ Chapter 13
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -2309,14 +2599,18 @@ Chapter 13
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 13 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. **Run the determination.** Answer the three questions in writing: is your knowledge meant to travel, do identifiable living people enter your study, and how do the data reach you.
 2. **Declare one permission status** — cleared, formal determination required, pending, or not authorized — and name the competent authority at your institution who covers student projects.
@@ -2329,6 +2623,8 @@ Chapter 13 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch13_research_ethics_and_data_governance.ipynb) with [Chapter 13](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2361,6 +2657,8 @@ Milestone 4
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -2369,8 +2667,10 @@ Milestone 4
 
 :::
 
+:::::
 
-## What you bring {.denser}
+
+## What you bring
 
 ::: {.kicker}
 
@@ -2378,10 +2678,14 @@ Milestone 4 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 10 — Model, Inquiry, Data Strategy, and Answer Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html): your MIDA declaration: model, inquiry, data strategy, and answer strategy, with the alignment sentence that ties them together — carrying population, setting and time, the provisional operationalization, and the warrant into Contract v0.
 - [Lesson 11 — Uncertainty Before You Need It](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html): your estimand and estimator, the repeat-run story behind them, your dependence structure, and your uncertainty sentence next to its wrong twin.
 - [Lesson 12 — Declaring and Diagnosing a Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html): your design diagnosis: bias, wobble, and power read from simulation, one redesign, and the honest call that followed.
 - [Lesson 13 — Research Ethics and Data Governance](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html): your declared permission status, your minimised column list, your AI boundary, and your four governance decisions.
+
+:::::
 
 
 ## The practice
@@ -2392,12 +2696,16 @@ Milestone 4 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Write the four MIDA parts of your design so a stranger could run them. (MIDA is Blair, Cooper, Coppock, and Humphreys' framework, developed at book length in RDSS.)
 2. State your estimand and estimator, and describe in words what would differ if the procedure ran again.
 3. Diagnose the design: what is its bias, how much does it wobble, and how often would it detect what you are looking for.
 4. Run the permission determination and declare one status; if it is anything but cleared, name the authority and the date you asked.
 5. Minimise your columns against the declared analysis, and check what a re-identification test would find.
 6. Write the redesign record - what you changed after diagnosing, and why. A diagnosis that changed nothing is a diagnosis you should distrust.
+
+:::::
 
 
 ## The four rails, here
@@ -2407,6 +2715,8 @@ Milestone 4 · In the studio
 Milestone 4 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -2444,6 +2754,8 @@ Milestone 4 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -2452,6 +2764,8 @@ Milestone 4 · Every studio, these four
 Milestone 4
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -2464,14 +2778,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 4 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio04-declare-and-diagnose.html) · [Milestone 4](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

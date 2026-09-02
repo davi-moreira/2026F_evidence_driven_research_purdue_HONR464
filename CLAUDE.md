@@ -590,7 +590,16 @@ of the book at build time.
 ```bash
 .venv/bin/python scripts/build_studio_slides.py     # all 12 (a PostToolUse hook also runs it)
 .venv/bin/python scripts/validate_slide_sync.py     # CI gate: decks == the book
+# render, then LOOK at it — the validator checks the words, never the layout:
+/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render lecture_slides/studioNN.qmd
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
+  --hide-scrollbars --screenshot=/tmp/s.png --window-size=1600,900 \
+  --virtual-time-budget=6000 "file://$PWD/docs/lecture_slides/studioNN.html#/7"   # 0-indexed
 ```
+
+After ANY theme change, screenshot the archetypes before shipping: title,
+divider, decision card, key terms, prose+bullets, worked-example code, table,
+four rails, "It is your turn", and the closing slide.
 
 Book prose does not fit a slide, so each chapter carries an editorial overlay at
 `planning/BOOK_SLIDE_PLANS/<lesson-id>.yml` — keyed by the lesson's IMMUTABLE id,
@@ -605,10 +614,36 @@ a chapter is edited the plan goes **STALE** and the validator says so: reread th
 chapter, revise the plan, restamp the digest. That staleness is the mechanism
 working — never fake a digest to silence it.
 
-Theme: `lecture_slides/_theme/edrai-slides.scss` — the EDR|AI brand (D29), ink on
-white with exactly two functional accents (crimson = stays human, amber = AI
-failed). The decks are graded on nothing; the **Lecture Notebooks 20%** contract
-(D74) is untouched.
+**The theme is a system, not a stylesheet (D78).** Three files, and no deck
+carries styling of its own:
+
+| file | what it owns |
+|---|---|
+| `_theme/edrai-slides.scss` | the frame, the type, the components |
+| `_theme/head.html` | the two web fonts |
+| `_theme/fit.html` | the runtime fit |
+
+Every content slide is the same four rectangles in canvas pixels — 88px margins,
+a 76×3 ink mark at y=44, eyebrow at y=72, title at y=104 whatever its length,
+and a 600px body region from y=218 — so the composition never shifts across a
+122-slide deck. Text sets in a 1120px column (~62 characters); tables, code,
+grids, and figures take the full width. **Two voices carry D77's promise:** the
+deck's own scaffolding is sans, the book's verbatim words (research decision,
+divider promise, failure quote, creed) are serif.
+
+**Never re-add a character-counting density heuristic.** `fit.html` measures the
+real rendered height in the browser and scales the body to the region, growing a
+sparse slide as readily as it shrinks a crowded one. The builder's
+`.dense/.denser/.densest` stamping is retired IN PLACE behind
+`STAMP_DENSITY = False` in `scripts/build_studio_slides.py`; the function, its
+thresholds, and the three theme classes all stay. A slide past the floor SPILLS
+and warns on the console — it must never silently clip.
+
+Brand (D29), binding: ink on white, hairline rules, crimson `#8a1c2b` = stays
+human, amber `#9a6a00` = AI failed, no third colour. **Those two hex values are
+fixed by a ruling, not design variables** — do not retune them for contrast.
+The decks are graded on nothing; the **Lecture Notebooks 20%** contract (D74) is
+untouched.
 
 ---
 
@@ -736,7 +771,30 @@ material.
 
 ---
 
-**Version:** 7.2 — D75, the lab meeting loses its reporter: an open round, nothing
+**Version:** 7.3 — D78, the studio decks get a real visual system (2026-09-02,
+DECISIONS.md D78): the twelve decks keep every word D77 generates and gain the layout
+they never had. A **fixed frame in canvas pixels** — 88px margins, a 76×3 ink mark at
+y=44, eyebrow at y=72, title at y=104 whatever its length, and a **600px body region**
+(67% of the canvas, against roughly a third before) — so the composition never shifts
+across 122 slides; a **1120px text column** (~62 characters, against ~110); and **two
+voices**, sans for the deck's own scaffolding and **serif for the book's verbatim
+words**, so typography says which sentences came straight off the page. The builder's
+character-counting density heuristic — which shrank type on slides with room to spare
+while long code still ran off the bottom — is **retired IN PLACE** behind
+`STAMP_DENSITY = False` (function, thresholds and theme classes all kept) and replaced
+by a **runtime fit** (`_theme/fit.html`) that measures the real rendered height and
+**grows a sparse slide as readily as it shrinks a crowded one**, places it with a capped
+optical lead, and **spills-and-warns rather than ever clipping**. Seven verified defects
+fixed, including a Sass-interpolation quoting bug that had silently dropped the entire
+font stack to Times, dividers hanging 88px left of every content slide, `scrollHeight`
+clamping that made growth and lead no-ops, flex-shrink clipping code blocks while
+reporting they fit, and reveal's `pre { font-size: .55em }` compounding code down to
+0.35 of the prose beside it. **No deck content changed and `validate_slide_sync.py`
+passes unchanged**; D29's two accent values (crimson `#8a1c2b`, amber `#9a6a00`) are
+restated as fixed by ruling, not design variables. ⚠ For Davi: Studio 2's 38-line worked
+example now fits only at the theme's smallest size — splitting it in the CHAPTER is the
+fix, and the deck would follow.
+(7.2 — D75, the lab meeting loses its reporter: an open round, nothing
 assigned (2026-08-31, DECISIONS.md D75): the ten-minute lab meeting that opens every
 Mon/Wed lecture from Week 2 **stays exactly where D74 put it**, and everything about how
 it is populated is **withdrawn** — **no reporter is designated, on any lecture, ever; no
@@ -1020,5 +1078,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

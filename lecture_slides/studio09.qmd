@@ -8,12 +8,14 @@
 # Lessons on this deck: results-to-claims claim-evidence-tables ai-disclosure poster-to-note
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 9 — Write, bound, and disclose"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,14 +55,16 @@ Studio 9
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Write the claim you can defend, bounded by what your evidence supports, with
 your AI use disclosed.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -71,11 +75,15 @@ Studio 9
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 9: Your bounded
 claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
 A stand-alone research note or report draft, a claim-to-evidence table, and
 your AI disclosure statement.
+
+:::::
 
 ::: {.notes}
 
@@ -93,7 +101,7 @@ steps, the versioned record, and how the artifact is assessed.
 :::
 
 
-## The lessons in this studio {.dense}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -101,10 +109,14 @@ Studio 9 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 28 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html): your claims with verbs downgraded to what the design established, each carrying its boundary line.
 - [Lesson 29 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html): your claim-evidence table, one row per claim with claim, evidence, trace, and boundary, every number traced to its output.
 - [Lesson 30 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html): your AI-use disclosure, written from the ledger and naming what you did not verify.
 - [Lesson 31 — From Dossier to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html): your stand-alone note draft: the problem-gap-question spine, methods, results with uncertainty, discussion, ordered findings with the headline claim's boundary inside, references, your disclosure placed, and the pointer to the package Studio 11 will freeze.
+
+:::::
 
 
 ## From Results to Claims {background-color="#1a1a19" .divider}
@@ -130,9 +142,9 @@ Chapter 28
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Your analysis printed a number. Now you decide the sentence that number lets
 you assert: the headline you will show in public and defend out loud, worded
@@ -141,6 +153,8 @@ rides in the same eye-span. You choose the words. You lock them. You never let
 a tool talk your claim past its boundary.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -151,7 +165,9 @@ Chapter 28 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -171,6 +187,8 @@ Chapter 28 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -187,6 +205,8 @@ Chapter 28 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - That is a research-integrity judge, working a poster session.
 - She is not testing your statistics.
 - She is testing whether your words match the evidence underneath them.
@@ -197,6 +217,8 @@ If the headline reads 'lowers blood pressure' but the study only watched who
 chose to walk, I stop reading.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -216,10 +238,14 @@ Chapter 28 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A result is not yet a claim.
 - The gap between the two is where most projects break.
 - The sentence almost always wants to say more than the number earned.
 - Close that gap yourself, before a stranger finds it open.
+
+:::::
 
 ::: {.notes}
 
@@ -239,6 +265,8 @@ does.
 Chapter 28 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -263,6 +291,8 @@ Chapter 28 · The concept
 - Turning the first into the second is a decision, not a formatting step.
 - You choose how much the sentence is allowed to say.
 
+:::::
+
 ::: {.notes}
 
 Both words get used loosely, so pin them down before anything else. The result
@@ -280,6 +310,8 @@ reaches, this is a research decision that belongs to you.
 Chapter 28 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -306,6 +338,8 @@ Chapter 28 · The concept
 - Watched who already chose to walk: not identified by this design, under the assumptions you can defend.
 - Your result is then a descriptive association, real and worth reporting.
 
+:::::
+
 ::: {.notes}
 
 Four ideas govern the choice, and keeping the first three apart is what stops
@@ -327,9 +361,13 @@ Chapter 28 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The status never repeats the word "causal".
 - Written as one status, it fuses the two fields you just separated.
 - Keep two lines: what the question asks, and what the design delivers.
+
+:::::
 
 ::: {.notes}
 
@@ -350,10 +388,14 @@ Chapter 28 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Question kind:** causal.
 - **Identification status:** not identified by this design under stated assumptions.
 - **Result:** observed association.
 - **Claim boundary:** association only.
+
+:::::
 
 ::: {.notes}
 
@@ -373,6 +415,8 @@ Chapter 28 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 Your claim boundary lives in the headline verb.
@@ -384,6 +428,8 @@ Your claim boundary lives in the headline verb.
 - Randomizing is the cleanest way to get one.
 - Observational designs can carry causal answers when their assumptions are argued and defended.
 - What you may never do is use the verb without the argument.
+
+:::::
 
 ::: {.notes}
 
@@ -404,10 +450,14 @@ Chapter 28 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Print "about 6 points lower (95% interval: 1 to 11)" under the headline.
 - The reader meets the doubt at the same moment as the number.
 - The 6-point gap points back to the one line of code that computed it.
 - A number you cannot trace cannot go up.
+
+:::::
 
 ::: {.notes}
 
@@ -429,11 +479,15 @@ Chapter 28 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A small human-physiology pilot: forty volunteers wear a step tracker for a month.
 - Twenty walk at least 8,000 steps a day; twenty do not.
 - Average resting systolic: 128 active, 134 less-active.
 - The draft headline reads "Walking LOWERS blood pressure."
 - Two bars on an axis starting at 125, told apart by red and green alone.
+
+:::::
 
 ::: {.notes}
 
@@ -453,10 +507,14 @@ Chapter 28 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The question behind this study is causal, and it stays causal.
 - Nobody was assigned to walk.
 - The active group may differ in age, diet, or baseline health.
 - Fill the card, and the honest verb is "was associated with lower."
+
+:::::
 
 ::: {.notes}
 
@@ -476,11 +534,15 @@ Chapter 28 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Bars encode magnitude, so starting them at 125 makes 6 points look like a cliff.
 - Start the bars at a meaningful zero.
 - Better: plot the two group averages as points with their intervals.
 - Use a blood-pressure scale a clinician would recognize.
 - Label each bar with its value, so color is never the only channel.
+
+:::::
 
 ::: {.notes}
 
@@ -501,6 +563,8 @@ Chapter 28 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Nothing about the result changed.
 - The verb was downgraded, and the interval rides in the same eye-span.
 - A boundary line names what the design does not establish.
@@ -514,6 +578,8 @@ drop.
 
 :::
 
+:::::
+
 ::: {.notes}
 
 Read the locked claim out loud, slowly. It is longer than the draft headline
@@ -525,13 +591,15 @@ as the chapter states.
 :::
 
 
-## The printout shows the difference the poster never did {.denser}
+## The printout shows the difference the poster never did
 
 ::: {.kicker}
 
 Chapter 28 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The volunteers chose how much to walk, and age drives both.
 - Watch the two group ages printed beside the 6-point gap.
@@ -560,6 +628,8 @@ print("see; the design leaves every unseen one untouched, so the verb stays")
 print("'is associated with'")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run the block and stop on the last two prints rather than the gap. Age is
@@ -579,6 +649,8 @@ Chapter 28
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -591,6 +663,8 @@ change dressed up as a copy edit.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -600,10 +674,14 @@ Chapter 28 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by comparing the new verb to what your design earned.
 - Your question was causal and stays causal, but nobody was assigned to walk, so nothing identifies that answer and "reduces" claims a warrant you never held.
 - You also notice the "6 points" now stands alone with no interval beside it.
 - You revert to "was associated with about 6 points lower (95% interval: 1 to 11)." The fluent rewrite reviewed your style; only you can review your claim.
+
+:::::
 
 ::: {.notes}
 
@@ -625,6 +703,8 @@ Chapter 28
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -638,14 +718,18 @@ it cannot decide what your evidence licenses or when your claim is earned.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 28 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. List every result you might put in front of a reader, then write the claim sentence each one licenses.
 2. Check every verb against what your design established, and downgrade the ones that reach too far. "Caused" becomes "was associated with"; "predicts" becomes "flagged."
@@ -656,6 +740,8 @@ Chapter 28 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_from_results_to_claims.ipynb) with [Chapter 28](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -689,9 +775,9 @@ Chapter 29
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 For every claim your work makes in public, decide which exact piece of
 evidence backs it, where that evidence lives, and what it does not establish.
@@ -699,6 +785,8 @@ Then write all three in one row of a claim–evidence table, before the claim
 reaches anywhere a stranger can point at it.
 
 :::
+
+:::::
 
 
 ## One vague answer costs you every other number
@@ -709,6 +797,8 @@ Chapter 29 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A research-integrity judge, working a poster hall, on what one answer decides.
 - The doubt does not stay on that number. It reaches every other number up there.
 
@@ -718,6 +808,8 @@ Walk me to the line that made it and I trust the whole poster. Say 'it's in
 the analysis somewhere' and I stop believing every other number up there.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -739,10 +831,14 @@ Chapter 29 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A poster is a set of promises made in public.
 - Each headline number, each figure, each cited fact: a stranger can test it in ninety seconds.
 - A claim-evidence table closes that gap on purpose, before anyone points a finger.
 - The honesty is built into the work, not patched under pressure.
+
+:::::
 
 ::: {.notes}
 
@@ -763,9 +859,13 @@ Chapter 29 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Claim-evidence table:** a table with one row per claim, pairing each claim with the evidence behind it.
 - Claim column: "Store B sold about 1.4 times as many units per week as Store A."
 - Evidence column: the two weekly sales averages.
+
+:::::
 
 ::: {.notes}
 
@@ -778,13 +878,15 @@ and the rest of the chapter is about them.
 :::
 
 
-## Four columns carry each row, and Evidence is not Trace {.dense}
+## Four columns carry each row, and Evidence is not Trace
 
 ::: {.kicker}
 
 Chapter 29 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -826,6 +928,8 @@ Chapter 29 · The concept
 - Trace: "cell 16, where `turnout = ballots.sum() / registered.sum()` runs."
 - Boundary: "one county, one midterm election, registered voters only, so this is not the statewide rate."
 
+:::::
+
 ::: {.notes}
 
 Take Evidence and Trace as two different jobs, since the room will want to
@@ -849,10 +953,14 @@ Chapter 29 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Traceable number:** one you can walk back to the notebook cell that computed it.
 - **Untraceable number:** one you cannot walk back, typed from memory or rounded by hand.
 - Building the table is the skill, and a blank cell is a visible hole.
 - With every claim in a filled row, an unbacked claim has nowhere to hide (Munafò et al. 2017).
+
+:::::
 
 ::: {.notes}
 
@@ -874,10 +982,14 @@ Chapter 29 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Your political-science poster reports turnout in one county's midterm election.
 - Headline: "turnout in these precincts was 61.3 percent."
 - Row 1 claim: "turnout was 61.3 ± 1.8 percent."
 - Row 1 evidence: 30 sampled precincts, 47,871 ballots against 78,117 registered voters.
+
+:::::
 
 ::: {.notes}
 
@@ -900,10 +1012,14 @@ Chapter 29 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You reach for the trace and the draft board reads 63.0, not 61.3.
 - You had quietly written the officially reported statewide figure instead.
 - Your own cell never produced 63.0.
 - Filling Row 1 is what forced the catch.
+
+:::::
 
 ::: {.notes}
 
@@ -924,10 +1040,14 @@ Chapter 29 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Claim: "the estimate barely moves when I change how a registration counts as active."
 - Evidence: under two reasonable definitions the estimates differ by less than your sampling spread.
 - Trace: cell 18, the definition comparison.
 - Boundary: nothing is claimed about looser rolls that keep long-inactive registrations.
+
+:::::
 
 ::: {.notes}
 
@@ -949,9 +1069,13 @@ Chapter 29 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Every boundary written down, before the file goes to the printer.
 - That table is what lets your work survive a pointed finger.
 - Tracing every reported claim to the line that produced it is the reproducibility reforms' practical core (Munafò et al. 2017).
+
+:::::
 
 ::: {.notes}
 
@@ -966,13 +1090,15 @@ the count come out higher than they expected.
 :::
 
 
-## Run the traced line; that print is the only number Row 1 may carry {.denser}
+## Run the traced line; that print is the only number Row 1 may carry
 
 ::: {.kicker}
 
 Chapter 29 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the line marked `# the traced line`. That is the address Trace points at.
 - The printed turnout and spread are what Row 1 copies, digit for digit.
@@ -999,6 +1125,8 @@ print("\nthat is the number your Trace cell must point at. any figure on the")
 print("board that this line does not produce is untraceable, whoever published it")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it live if you can, with SEED set to 464 so the printout is the same for
@@ -1019,6 +1147,8 @@ Chapter 29
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1034,6 +1164,8 @@ look.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1043,9 +1175,13 @@ Chapter 29 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by refusing to trust a trace you have not opened.
 - Reading the actual cell, number in hand, is the whole discipline.
 - A filled table is not a verified table.
+
+:::::
 
 ::: {.notes}
 
@@ -1064,6 +1200,8 @@ Chapter 29
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1077,14 +1215,18 @@ to declare and defend.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 29 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write one row per claim with four columns: claim, evidence, trace, boundary.
 2. Fill the evidence column with the actual result and its uncertainty, not a description of the result.
@@ -1095,6 +1237,8 @@ Chapter 29 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_claim_evidence_tables.ipynb) with [Chapter 29](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1127,9 +1271,9 @@ Chapter 30
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Decide exactly what you will say about every AI tool you used: which tool, on
 which task, and how you checked what came back. Then record it, so when
@@ -1137,6 +1281,8 @@ someone asks *"did you use AI, and how did you verify it?"* you answer from a
 checkable record instead of from memory.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1147,7 +1293,9 @@ Chapter 30 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -1167,6 +1315,8 @@ Chapter 30 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1183,6 +1333,8 @@ Chapter 30 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Said by a conference reviewer, standing at your poster.
 - The penalty is not for using the tool.
 - The penalty is for not being able to say where, and how you checked.
@@ -1195,6 +1347,8 @@ result I cannot trace back to a source and a verification is a result I cannot
 trust."
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1215,10 +1369,14 @@ Chapter 30 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - At your research conference, a stranger can ask you the AI-use question.
 - Many journals and conferences now ask authors where and how AI tools were used.
 - So it is not a formality you can wave off.
 - Disclosure is what keeps an honest use of AI honest under questioning.
+
+:::::
 
 ::: {.notes}
 
@@ -1239,6 +1397,8 @@ Chapter 30 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Which tool: the AI assistant you asked.
 - For which task: drafting the code behind the coverage ratio.
 - How you verified: recomputed by hand before reporting.
@@ -1249,6 +1409,8 @@ Chapter 30 · The concept
 recomputed that number by hand before reporting it."
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1269,6 +1431,8 @@ Chapter 30 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 Three parts make a disclosure complete by this book's standard.
@@ -1278,6 +1442,8 @@ Three parts make a disclosure complete by this book's standard.
 - Each part maps to a column in your ledger.
 - "I used AI," with no task named, is meaningless.
 - A task with no verification is the gap a reviewer is trained to find.
+
+:::::
 
 ::: {.notes}
 
@@ -1298,10 +1464,14 @@ Chapter 30 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Your **AI Research Ledger** is a running table with one row per AI use.
 - Each row records the task, the tool, your decision, and the verification method.
 - You have kept it since you opened it at the start of your project.
 - So the disclosure is already written by the time you need it (Munafò et al. 2017).
+
+:::::
 
 ::: {.notes}
 
@@ -1322,10 +1492,14 @@ Chapter 30 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You are presenting a business-analytics poster on a public company's debt.
 - The question: can it comfortably pay the interest it owes?
 - Your headline number is the **interest coverage ratio**.
 - That is operating income divided by the interest owed in a year.
+
+:::::
 
 ::: {.notes}
 
@@ -1346,10 +1520,14 @@ Chapter 30 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - First use: finding the company's reported operating income.
 - Second use: writing the short calculation that turns income and interest into a ratio.
 - Both are honest uses.
 - Honest is not the same as checked.
+
+:::::
 
 ::: {.notes}
 
@@ -1370,10 +1548,14 @@ Chapter 30 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Current guidance: name which tool you used, and for what purpose (International Committee of Medical Journal Editors 2026).
 - Responsibility for accuracy and attribution stays with you.
 - A tool can never be an author.
 - How you verified is this book's own requirement on top of that guidance.
+
+:::::
 
 ::: {.notes}
 
@@ -1393,6 +1575,8 @@ that cannot say how something was checked leaves a reader nothing to trust.
 Chapter 30 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1414,6 +1598,8 @@ Chapter 30 · A worked example
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The verification method depends on what kind of thing you are checking. A
@@ -1433,6 +1619,8 @@ Chapter 30 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The two inputs are 276 and 131, in USD millions, from the annual report.
 - Watch the printed value against the number the AI-generated cell reported.
 - The recomputation is the check, and the ledger row records that you ran it.
@@ -1444,6 +1632,8 @@ interest_expense = 131    # USD millions, from the same annual report
 coverage_ratio   = operating_income / interest_expense
 print(round(coverage_ratio, 2))   # 2.11 — matches the AI-generated cell
 ```
+
+:::::
 
 ::: {.notes}
 
@@ -1464,10 +1654,14 @@ Chapter 30 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The coverage ratio is about 2.1 for this fiscal year.
 - Income confirmed against the annual report; the arithmetic reproduced by hand.
 - You read a single year of reported results.
 - Not a downturn scenario, and not the debt coming due next year.
+
+:::::
 
 ::: {.notes}
 
@@ -1487,6 +1681,8 @@ Chapter 30
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1500,6 +1696,8 @@ sentence upgraded one real check into a blanket claim of "all."
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1509,11 +1707,15 @@ Chapter 30 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by reading the disclosure line by line against your ledger.
 - Every sentence claiming a verification must point to a row that names that check.
 - The word "all" has no such row, so it is fabricated and comes out.
 - Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm.
 - A confident paragraph is not a truthful one.
+
+:::::
 
 ::: {.notes}
 
@@ -1536,6 +1738,8 @@ Chapter 30
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1550,14 +1754,18 @@ prevent.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 30 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Read your AI Research Ledger end to end and list every use, including the one you would rather not mention.
 2. For each use, write the three parts a disclosure needs: which tool, for which task, and how you verified the output.
@@ -1568,6 +1776,8 @@ Chapter 30 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_ai_disclosure_and_research_integrity.ipynb) with [Chapter 30](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1601,9 +1811,9 @@ Chapter 31
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 When you turn your research dossier into a written note, decide which finding
 has earned the headline and exactly how big each claim is allowed to be given
@@ -1612,6 +1822,8 @@ number without you in the room. Whatever you present along the way — a poster,
 a talk, a brief — is one input to that note, never its source.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1622,7 +1834,9 @@ Chapter 31 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -1642,6 +1856,8 @@ Chapter 31 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1658,6 +1874,8 @@ Chapter 31 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - The decision: which finding leads, and how big its claim is allowed to be.
 - She is asking which finding you would still defend after the room empties.
 - And whether she could rerun your work and watch the same number return.
@@ -1670,6 +1888,8 @@ review ends. I do not want your most surprising result first. I want your most
 defensible one." — a conference reviewer
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1691,6 +1911,8 @@ Chapter 31 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 When you present, your voice fills the silences. The page has no voice.
@@ -1700,6 +1922,8 @@ When you present, your voice fills the silences. The page has no voice.
 - Every leap a presentation lets you imply, the prose has to earn.
 - In order, for a reader who will never hear you explain it.
 - Whatever you present is one input to the note, never its source.
+
+:::::
 
 ::: {.notes}
 
@@ -1722,11 +1946,15 @@ Chapter 31 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Working logic: compressed records, plus your live voice filling the silences.
 - A Gap box reading only 'few studies of wait times at peak hours'.
 - Paper logic: every claim argued in prose, because you are not there to answer.
 - The same gap, written out: what prior work covered, what it skipped, why that matters.
 - Turning one into the other is not adding words. It is making the reasoning visible.
+
+:::::
 
 ::: {.notes}
 
@@ -1748,6 +1976,8 @@ never carried.
 Chapter 31 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1774,6 +2004,8 @@ Chapter 31 · The concept
 - Question: how much does mobile pre-order cut the wait during the rush here?
 - 'As everyone knows' carries no density. A published figure a reader can recompute carries some.
 
+:::::
+
 ::: {.notes}
 
 A note carries its reasoning on this backbone (Mensh & Kording 2017), and the
@@ -1795,6 +2027,8 @@ Chapter 31 · The concept
 
 :::
 
+::::: {.slide-body}
+
 :::: {.terms}
 
 ::: {.term}
@@ -1812,6 +2046,8 @@ Chapter 31 · The concept
 - Limitations follow the same discipline, sized to what actually threatens the claim.
 - 'Measured on a simulated arrival pattern, not a real Saturday rush.'
 - Not a generic 'more research is needed.'
+
+:::::
 
 ::: {.notes}
 
@@ -1832,6 +2068,8 @@ and put that sentence in the limitations rather than the filler one.
 Chapter 31 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1858,6 +2096,8 @@ Chapter 31 · The concept
 - A decision log.
 - Your AI-use ledger.
 
+:::::
+
 ::: {.notes}
 
 The chapter is blunt here: readable is only half of the job, and the other
@@ -1879,9 +2119,13 @@ Chapter 31 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You tested a mobile pre-order option for a campus coffee shop.
 - Your claim–evidence table holds the headline row: '38% faster.'
 - The note has to turn that row into a claim you can defend.
+
+:::::
 
 ::: {.notes}
 
@@ -1902,10 +2146,14 @@ Chapter 31 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Across a thousand simulated arrivals, median wait dropped about 38%.
 - With a tight interval around it.
 - One pre-ordering customer was served almost instantly: a 99% drop.
 - The median leads. The lone customer goes to the back, as one observation.
+
+:::::
 
 ::: {.notes}
 
@@ -1927,11 +2175,15 @@ Chapter 31 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Honest: 'on this simulated arrival pattern, mobile pre-order cut median wait by about 38%.'
 - Interval attached, and the boundary in the same sentence.
 - 'This is a measurement on simulated demand, not a guarantee for a real Saturday rush.'
 - Refused: 'mobile pre-order makes the shop 38% faster.'
 - That drops the demand pattern, drops median, and promises every customer a shorter wait.
+
+:::::
 
 ::: {.notes}
 
@@ -1954,11 +2206,15 @@ Chapter 31 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Pin the simulation's seed.
 - Record the machine and library versions.
 - Log that you excluded the first order of the morning, and why.
 - Pass restart-and-run-all so the 38% comes back.
 - The note is now readable and runnable.
+
+:::::
 
 ::: {.notes}
 
@@ -1971,13 +2227,15 @@ thing someone else can operate.
 :::
 
 
-## The printout is already the note's order of trust {.denser}
+## The printout is already the note's order of trust
 
 ::: {.kicker}
 
 Chapter 31 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The median drop prints with its interval, never on its own.
 - The luckiest customer prints at the bottom, where the note puts it.
@@ -2007,6 +2265,8 @@ print("\nthe headline is the first number with its interval. the last one is")
 print("one observation, and it goes at the back of the note labelled as such")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block runs the arrivals and prints the ranked findings in the order the
@@ -2018,13 +2278,15 @@ to be true before that number could move up the page.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 31
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -2041,6 +2303,8 @@ reads better and claims more.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -2050,11 +2314,15 @@ Chapter 31 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it by diffing the rewrite against your original sentence and against your printed result.
 - The number came from a median over a seeded simulation, not a mean, and not a real Saturday rush, so the general claim is not licensed.
 - You keep the edits that clarify and reject the one that inflated.
 - Fluent prose is not evidence.
 - You verify the claim, not the polish.
+
+:::::
 
 ::: {.notes}
 
@@ -2075,6 +2343,8 @@ Chapter 31
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -2088,14 +2358,18 @@ uncertainty.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 31 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your problem–gap–question spine as three short paragraphs.
 2. Order your findings, best-supported first.
@@ -2108,6 +2382,8 @@ Chapter 31 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_from_poster_to_research_note.ipynb) with [Chapter 31](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2140,6 +2416,8 @@ Milestone 9
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -2148,8 +2426,10 @@ Milestone 9
 
 :::
 
+:::::
 
-## What you bring {.dense}
+
+## What you bring
 
 ::: {.kicker}
 
@@ -2157,10 +2437,14 @@ Milestone 9 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 28 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html): your claims with verbs downgraded to what the design established, each carrying its boundary line.
 - [Lesson 29 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html): your claim-evidence table, one row per claim with claim, evidence, trace, and boundary, every number traced to its output.
 - [Lesson 30 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html): your AI-use disclosure, written from the ledger and naming what you did not verify.
 - [Lesson 31 — From Dossier to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html): your stand-alone note draft: the problem-gap-question spine, methods, results with uncertainty, discussion, ordered findings with the headline claim's boundary inside, references, your disclosure placed, and the pointer to the package Studio 11 will freeze.
+
+:::::
 
 
 ## The practice
@@ -2171,10 +2455,14 @@ Milestone 9 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Write your claim as one sentence, with its boundary attached in the same sentence.
 2. Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it.
 3. State your uncertainty and your limitations in the words a reader outside your field would use.
 4. Write your AI disclosure from your ledger, not from memory.
+
+:::::
 
 
 ## The four rails, here
@@ -2184,6 +2472,8 @@ Milestone 9 · In the studio
 Milestone 9 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -2221,6 +2511,8 @@ Milestone 9 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -2229,6 +2521,8 @@ Milestone 9 · Every studio, these four
 Milestone 9
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -2241,14 +2535,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 9 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio09-write-bound-disclose.html) · [Milestone 9](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

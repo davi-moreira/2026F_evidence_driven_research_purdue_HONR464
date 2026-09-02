@@ -8,12 +8,14 @@
 # Lessons on this deck: curiosity-to-problem
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 1 — Begin with your curiosity"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,9 +55,9 @@ Studio 1
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Start from the one thing AI cannot supply: a curiosity you own. Commit it,
 stretch it with your tools, and choose the research problem worth months of
@@ -63,12 +65,18 @@ your work.
 
 :::
 
+:::::
+
 
 ## Start without a tool
+
+::::: {.slide-body}
 
 Research starts with something that will not leave you alone: a pattern you
 keep noticing, a contradiction, a decision you want to understand. This first
 move is yours alone. Write four lines by hand.
+
+:::::
 
 
 ## Start without a tool *(cont.)*
@@ -78,6 +86,8 @@ move is yours alone. Write four lines by hand.
 Start without a tool
 
 :::
+
+::::: {.slide-body}
 
 1. One thing you genuinely want to understand, in one sentence.
 2. Why an answer would matter, and to whom.
@@ -85,6 +95,8 @@ Start without a tool
    not a claim.
 4. One kind of evidence that could make you revise that belief.
 
+:::::
+
 
 ## Start without a tool *(cont.)*
 
@@ -94,9 +106,13 @@ Start without a tool
 
 :::
 
+::::: {.slide-body}
+
 Keep what you wrote. Lesson 1 shows why this page is where research starts and
 why the jump on it is yours, then helps you stretch it, with AI welcome at the
 table, into the problem your project will chase.
+
+:::::
 
 
 ## The milestone ahead
@@ -107,6 +123,8 @@ Studio 1
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 1: Your curiosity,
 committed](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-frame-the-inquiry.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
@@ -114,6 +132,8 @@ Your committed curiosity with its starting belief and the evidence that would
 revise it, the brainstormed candidates with what you kept and rejected and
 why, and one chosen research problem, scored and red-teamed, with your
 expected answer on record.
+
+:::::
 
 ::: {.notes}
 
@@ -146,7 +166,11 @@ Studio 1 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 1 — From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html): your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer.
+
+:::::
 
 
 ## From Curiosity to a Research Problem {background-color="#1a1a19" .divider}
@@ -173,9 +197,9 @@ Chapter 1
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 Begin with an experience that will not leave you alone. Decide which curiosity
 you are willing to own, let AI widen the possibilities without choosing for
@@ -183,6 +207,8 @@ you, and commit to one research problem with your reasons attached. The formal
 research question comes later, after your working rules and ledger exist.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -192,6 +218,8 @@ research question comes later, after your working rules and ledger exist.
 Chapter 1 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -229,6 +257,8 @@ Chapter 1 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -245,10 +275,14 @@ Chapter 1 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You find a restaurant menu from 2019.
 - Your first reaction may be immediate: prices near campus have exploded.
 - That reaction is useful.
 - It is also not yet a finding.
+
+:::::
 
 ::: {.notes}
 
@@ -268,11 +302,15 @@ Chapter 1 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Perhaps restaurant prices rose faster than prices generally.
 - Perhaps the old menu was unusually cheap.
 - Perhaps portions changed.
 - Perhaps fees moved out of the listed price.
 - Perhaps the example is memorable precisely because it is unusual.
+
+:::::
 
 ::: {.notes}
 
@@ -292,10 +330,14 @@ Chapter 1 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You do not need a polished question yet.
 - AI can propose explanations, comparisons, affected groups, or implications you missed.
 - Use that help, mark what the tool introduced, and preserve the exchange.
 - The final commitment stays yours.
+
+:::::
 
 ::: {.notes}
 
@@ -308,13 +350,15 @@ chase if every tool disappeared tomorrow.
 :::
 
 
-## The jump is yours to make; the cycle then returns to experience {.dense}
+## The jump is yours to make; the cycle then returns to experience
 
 ::: {.kicker}
 
 Chapter 1 · The concept
 
 :::
+
+::::: {.slide-body}
 
 - Experience: something in the world catches your attention.
 - The jump to a possible explanation is abduction, and it is yours to make.
@@ -327,6 +371,8 @@ flowchart LR
   J -- "derivation<br/>(delegable, then checked)" --> P["Predictions<br/>what else should be true"]
   P -- "verification against evidence<br/>(delegable, then checked)" --> E
 ```
+
+:::::
 
 ::: {.notes}
 
@@ -347,10 +393,14 @@ Chapter 1 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Restaurant prices seem to change every third week.
 - "Payday timing moves menu updates" is an abductive possibility.
 - It gives you something to check.
 - It does not become evidence by sounding plausible.
+
+:::::
 
 ::: {.notes}
 
@@ -372,11 +422,15 @@ Chapter 1 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Newtonian physics already fit the data well.
 - The reorganizing idea came from thought experiments about falling observers.
 - The paper calls models strong at recombining patterns, and increasingly useful for derivation.
 - Zahavy argues they lack the grounding in experience the jump begins from (Zahavy 2026).
 - Treat that as an argued position, not a settled boundary.
+
+:::::
 
 ::: {.notes}
 
@@ -397,11 +451,15 @@ Chapter 1 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Ask for alternative explanations, overlooked comparisons, or questions challenging your belief.
 - Mark every person, population, outcome, mechanism, or comparison it introduces as NEW.
 - Accept no novelty claim and no citation without checking.
 - Keep or reject each direction with a reason.
 - What the tool cannot do is care.
+
+:::::
 
 ::: {.notes}
 
@@ -422,11 +480,15 @@ Chapter 1 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Experience.** What happened, or what did you notice?
 - **Curiosity.** What do you want to understand about it?
 - **Topic.** What area of inquiry contains that curiosity?
 - **Research problem.** What is not yet understood well enough for the decision, explanation, or audience you care about?
 - The four moves follow the standard treatment of research problems (Booth et al. 2024).
+
+:::::
 
 ::: {.notes}
 
@@ -447,11 +509,15 @@ Chapter 1 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A 2026 essay in *Science*, "Advancing science by designing for surprise" (Evans et al. 2026).
 - Elicit informed predictions first, then compare them with what the evidence shows.
 - Before you look at evidence, write the answer you currently expect.
 - Name one person for whom a different answer would be genuinely surprising.
 - The more surprising the claim, the more evidence it takes.
+
+:::::
 
 ::: {.notes}
 
@@ -470,6 +536,8 @@ place to aim your question, never a license to inflate your answer.
 Chapter 1 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -491,6 +559,8 @@ Chapter 1 · The concept
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 The gap the essay names sits at the level of an audience, not at the level of
@@ -511,10 +581,14 @@ Chapter 1 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - It is a real feeling. It names no one and measures nothing.
 - Give it edges: physical activity and sleep quality in undergraduates. That is a topic.
 - **Research problem:** we do not know whether more daily walking goes with better-rated sleep among residence-hall first-years.
 - That points at one missing piece, not a whole subject.
+
+:::::
 
 ::: {.notes}
 
@@ -535,6 +609,8 @@ Chapter 1 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 Then test the problem three ways (Hulley et al. 2013).
@@ -547,6 +623,8 @@ Then test the problem three ways (Hulley et al. 2013).
 - Contribution stays provisional until Studio 3 maps the existing evidence.
 - The funnel and its tests follow the standard treatment of research problems (Booth et al. 2024).
 
+:::::
+
 ::: {.notes}
 
 Contribution stays provisional, because you cannot know a gap is real until
@@ -558,13 +636,15 @@ front of someone who wants to know why this one and not another.
 :::
 
 
-## The problem sentence names groups you can build out of the data {.denser}
+## The problem sentence names groups you can build out of the data
 
 ::: {.kicker}
 
 Chapter 1 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - The block builds this example's data and prints the numbers the section quotes.
 - Watch the two edge groups: more than 8,000 steps, fewer than 4,000.
@@ -587,6 +667,8 @@ print(pd.DataFrame({"group": group, "sleep rating": sleep})
 print("\nthe question asks about the two edge groups; the middle is neither")
 ```
 
+:::::
+
 ::: {.notes}
 
 Sixty residence-hall first-years, average daily steps and a one-to-ten sleep
@@ -606,6 +688,8 @@ Chapter 1
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -617,6 +701,8 @@ suppresses melatonin."* It sounds authoritative, and it is wrong for you.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -626,11 +712,15 @@ Chapter 1 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - It fails in two ways.
 - First, it silently changed your scope.
 - You never chose blue light or REM sleep, yet the question now hangs on both.
 - That is a **silent scope change**, and you catch it by reading the tool's units, outcome, and population against the ones you committed.
 - Yours were steps and a sleep rating, not screens and REM.
+
+:::::
 
 ::: {.notes}
 
@@ -654,6 +744,8 @@ Chapter 1
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -667,14 +759,18 @@ and not another.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 1 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Copy your opening move's four lines here, date them, and label them version zero: the first entry of your project's record.
 2. Take the strongest curiosity you now hold and walk it down the funnel in writing: experience, curiosity, topic, research problem.
@@ -688,6 +784,8 @@ Chapter 1 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_from_curiosity_to_a_research_problem.ipynb) with [Chapter 1](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -720,6 +818,8 @@ Milestone 1
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -727,6 +827,8 @@ Milestone 1
 **What this milestone produces.** Your committed curiosity with its starting belief and the evidence that would revise it, the brainstormed candidates with what you kept and rejected and why, and one chosen research problem, scored and red-teamed, with your expected answer on record.
 
 :::
+
+:::::
 
 
 ## What you bring
@@ -737,7 +839,11 @@ Milestone 1 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 1 — From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html): your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer.
+
+:::::
 
 
 ## The practice
@@ -748,11 +854,15 @@ Milestone 1 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Copy your opening move's four lines as the artifact's version zero, dated.
 2. Widen the curiosity: write two candidate directions yourself, then run the structured brainstorm and mark everything it introduced as NEW.
 3. Choose the research problem and score it honestly on importance, feasibility, and contribution, one sentence each.
 4. Write your expected answer and name one real person or role for whom a different answer would be genuinely surprising.
 5. Keep the trail: candidates kept and rejected, each with its reason, and the NEW elements you adopted as your own.
+
+:::::
 
 
 ## The four rails, here
@@ -762,6 +872,8 @@ Milestone 1 · In the studio
 Milestone 1 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -799,6 +911,8 @@ Milestone 1 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -807,6 +921,8 @@ Milestone 1 · Every studio, these four
 Milestone 1
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -819,14 +935,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 1 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio01-frame-the-inquiry.html) · [Milestone 1](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-frame-the-inquiry.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::

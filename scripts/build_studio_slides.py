@@ -92,16 +92,23 @@ def esc_yaml(text: str) -> str:
 
 
 #: How much a slide can carry at full size before it runs under the footer.
-#: reveal does not shrink text to fit, so the builder measures what it emits
-#: and stamps a density class the theme sizes down. Thresholds are in
-#: rendered lines, counting a wrapped bullet as the lines it will actually
-#: take at roughly 74 characters per line.
+#: Superseded, kept in place. The builder used to COUNT CHARACTERS and stamp
+#: a density class the theme sized down — which shrank the type on slides
+#: that had room to spare and still let a long code block run past the bottom
+#: edge, because a character count cannot know how tall a rendered slide is.
+#: `lecture_slides/_theme/fit.html` now measures the real rendered height in
+#: the browser and scales only what actually overflows. The function and its
+#: thresholds stay so a deck built before the change still renders sanely,
+#: and so the mechanism can be reinstated by flipping one constant.
+STAMP_DENSITY = False
 DENSITY = ((30, ".densest"), (21, ".denser"), (14, ".dense"))
 CHARS_PER_LINE = 74
 
 
 def density(body: str) -> str:
     """The density class a slide's body needs, or '' when it fits."""
+    if not STAMP_DENSITY:
+        return ""
     lines = 0
     for raw in body.split("\n"):
         line = raw.rstrip()
@@ -244,14 +251,25 @@ class Deck:
             kicker = ""          # a kicker that repeats the title is noise
         if kicker:
             out += [div("kicker", kicker), ""]
-        out.append(body.rstrip())
+        # The body travels as ONE block. The theme places that block in a
+        # fixed rectangle below the title rule and centres it there, and
+        # fit.html measures the block to decide whether it has to shrink.
+        # Five colons: the widest fence a body can already contain is the
+        # four-colon card grid.
+        out.append(div("slide-body", body.rstrip(), marks=5))
         if note:
             out += ["", div("notes", wrap(self.clean(note)))]
         self.add("\n".join(out))
 
     def card(self, title: str, label: str, body: str, cls: str,
              kicker: str = "", note: str = "") -> None:
-        inner = div(cls, f'[{label}]{{.label}}\n\n{wrap(self.clean(body))}')
+        text = wrap(self.clean(body))
+        # A label that only restates the slide's own title is read twice and
+        # says nothing the second time; the card keeps its accent without it.
+        if label.strip().lower().strip(".") == title.strip().lower().strip("."):
+            inner = div(cls, text)
+        else:
+            inner = div(cls, f'[{label}]{{.label}}\n\n{text}')
         self.slide(title, inner, kicker=kicker, note=note)
 
     def grid(self, cls: str, cell_cls: str,
@@ -456,7 +474,7 @@ def chapter_slides(deck: Deck, lesson: dict, n_in_studio: int) -> str:
     if len(terms) >= 2:
         cells = [(t, deck.clean(d)) for t, d in terms]
         deck.slide("The words this chapter uses",
-                   deck.grid("terms two" if len(cells) > 2 else "terms",
+                   deck.grid("terms two" if len(cells) >= 2 else "terms",
                              "term", cells),
                    kicker=f"Chapter {display} · Key terms",
                    note="Each term is defined in the chapter on first use; "
@@ -620,14 +638,18 @@ def build_deck(studio: dict) -> tuple[str, dict[str, str]]:
     links.append(f"[Verification Guide]({BOOK_URL}/verification-guide.html)")
     deck.add(f'''## The one rule {{background-color="{INK}" .divider}}
 
-::: {{.divider-line}}
-**{CREED}**
+::: {{.creed}}
+{CREED}
+:::
 
+::: {{.divider-line}}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {{.deck-links}}
 {" · ".join(links)}
+:::
 ''')
 
     header = deck_header(studio)
@@ -648,12 +670,14 @@ def deck_header(studio: dict) -> str:
 # Lessons on this deck: {lesson_ids}
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>{COURSE}</span>"
+title: "{COURSE}"
 subtitle: "Studio {rank} — {esc_yaml(title)}"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07

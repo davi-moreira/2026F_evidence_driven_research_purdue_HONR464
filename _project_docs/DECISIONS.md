@@ -4372,3 +4372,107 @@ another, prose that disagrees with its own code, a citation inside quotation
 marks, and a chapter still naming Gemini after D30. They are tabled at the foot
 of `planning/BOOK_SLIDE_PLANS/README.md`. Correcting a chapter stales its plan
 by design; that is the mechanism working.
+
+---
+
+## D78
+
+**The studio decks get a real visual system: a fixed frame, two voices, and a
+runtime fit (2026-09-02).**
+
+**Why.** Teaching from `studio02` on the morning of Wed Sep 2 exposed the deck's
+first build as structurally, not cosmetically, wrong. Content sat in the top
+third of a 1600×900 canvas with the lower two-thirds empty on nearly every
+slide; body text ran the full 1424px measure at ~110 characters a line; and the
+builder's character-counting density heuristic shrank the type on slides that
+had room to spare while a long worked example still ran off the bottom. D78
+replaces the layout, not the content. **Nothing a deck says changed** — D77's
+rule that a deck is a generated view of EDR|AI is untouched, and
+`validate_slide_sync.py` passes unchanged.
+
+**The frame.** Every content slide is now the same four rectangles, stated in
+canvas pixels, so the composition never shifts across 122 slides:
+
+| | |
+|---|---|
+| left/right margin | 88px |
+| brand mark | a 76×3 ink rule at y = 44 |
+| eyebrow | y = 72 |
+| title | y = 104, always, whatever its length |
+| body region | y = 218 to y = 818 — 600px, 67% of the canvas |
+| text column | 1120px, about 62 characters |
+
+The full-width hairline UNDER the title is **withdrawn**: it drew a line clear
+across the canvas and then left the band beneath it empty. The short ink mark
+above the eyebrow replaces it and is shared with the dividers, which carry the
+same mark in white.
+
+**Two voices, and the distinction is the point.** The deck's own scaffolding —
+titles, eyebrows, lists, labels — is set in **Source Sans 3**. The book's
+verbatim words — the research decision, the divider promise, the failure quote,
+the creed — are set in **Source Serif 4**. Typography says which sentences came
+straight off the page. Both fall back to faces that are already installed or
+already bundled with Quarto, so a room with no network renders a correct deck.
+
+**The fit is measured, not guessed.** `lecture_slides/_theme/fit.html` measures
+each slide's real rendered height in the browser and scales the body to the
+region — **growing a sparse slide as readily as it shrinks a crowded one**, then
+placing it with a capped optical lead so three lines sit under the title rather
+than marooned mid-canvas. The builder's `.dense/.denser/.densest` stamping is
+retired IN PLACE: `density()` and its thresholds stay in
+`scripts/build_studio_slides.py` behind `STAMP_DENSITY = False`, and the theme
+keeps the three classes, so an older deck still renders and one constant
+reinstates the mechanism. **A slide never silently loses content**: past the
+floor it spills and warns on the console rather than clipping.
+
+**Generator changes** (`scripts/build_studio_slides.py`): each slide's body is
+emitted as one `::: {.slide-body}` block so the theme can place it; a card label
+that only restates the slide's own title is dropped; key terms go to two columns
+from two terms up; the closing slide's creed, line, and links become their own
+blocks; the title-slide `<span style='font-size:66%'>` hack is gone, replaced by
+real hierarchy in the theme; and the deck header now includes `_theme/head.html`
+and `_theme/fit.html`.
+
+**Brand.** D29 and D77 are unchanged and binding: ink on white, hairline rules,
+crimson `#8a1c2b` for what stays human, amber `#9a6a00` for an AI failure, and
+no third decorative colour. The AI-failure amber was briefly darkened during
+this work for contrast on its own wash and has been **restored to the specified
+value**; a token fixed by a ruling is not a design variable.
+
+**Defects this pass found and fixed, each verified in a real render:**
+
+1. `Source Sans 3` and `Source Serif 4` lose their quotes through Sass
+   interpolation, and an unquoted family name whose token starts with a digit is
+   invalid CSS — Chrome discarded the whole declaration and the entire deck fell
+   back to Times. The stacks are built with `unquote()` around embedded quotes.
+2. The dividers hung 88px to the left of every content slide: two `!important`
+   padding rules of different specificity were fighting, and the wrong one won.
+3. `scrollHeight` is clamped to at least `clientHeight`, so an under-full slide
+   reported "exactly full" and both the growth step and the optical lead were
+   silently no-ops. Content height is now measured across the body's children.
+4. Flex children shrink by default, so a tall code block squeezed itself into the
+   region, CLIPPED its last lines, and reported the squeezed height — the fit
+   pass then concluded it fit. Children keep their natural height.
+5. Quarto's own `.reveal pre.sourceCode code { max-height: 500px }` outranks a
+   bare `pre code` override and cut long worked examples off mid-block.
+6. reveal's `.reveal pre { font-size: .55em }` COMPOUNDED with the code's own
+   size to 0.35 of the body: code three times smaller than the prose beside it,
+   about 12px on the canvas. The block now inherits the body size and the ratio
+   is set once, on the code.
+7. The "pre-fit the neighbours" pass could never run — reveal keeps every other
+   section at `display: none`, where nothing is measurable. Removed rather than
+   left as code that reads as working.
+
+⚠ **For Davi.** Studio 2's slide 109 (*Same world, two sentences, two answers*)
+carries a 38-line worked example. It now fits, at the smallest size the theme
+allows; every other code slide in the deck sits at a comfortable size. If that
+example were split in the CHAPTER, the slide would follow. That is a book edit,
+not a theme one.
+
+**Codex's part.** Run as an independent design specialist in parallel
+(`~/.claude/codex-collab/2026F_HONR464/`). It independently identified defects 6
+and 7 above, and caught the amber token drift. Findings 1 to 5 and the layout
+system are Claude's. Codex's reading that `_theme/head.html` and
+`_theme/fit.html` are "outside the authorized locations" was a constraint from
+the brief it was given, not a repository rule: `_theme/` is the deck theme, and
+the generated `studioNN.qmd` files were never hand-edited.

@@ -8,12 +8,14 @@
 # Lessons on this deck: robustness-sensitivity negative-tests ai-adversarial-reviewer false-confidence
 # Edit the CHAPTER (or its plan) and rerun the script. Edits made here are
 # silently reverted on the next build and fail `--check` in CI.
-title: "<span style='font-size:66%'>HONR 46400 · Evidence-Driven Research</span>"
+title: "HONR 46400 · Evidence-Driven Research"
 subtitle: "Studio 8 — Stress-test and adjudicate"
 author: "Davi Moreira"
 format:
   revealjs:
     theme: [default, _theme/edrai-slides.scss]
+    include-in-header: _theme/head.html
+    include-after-body: _theme/fit.html
     width: 1600
     height: 900
     margin: 0.07
@@ -53,14 +55,16 @@ Studio 8
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[What you can defend when you leave]{.label}
+::: {.decision}
 
 Attack your own result the way a hostile reviewer would, and record what
 survived.
 
 :::
+
+:::::
 
 
 ## The milestone ahead
@@ -71,12 +75,16 @@ Studio 8
 
 :::
 
+::::: {.slide-body}
+
 This studio closes with **[Milestone 8: Your robustness
 audit](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone08-stress-test.html)**,
 a short chapter of its own after the lessons. **What it asks you to produce.**
 A pre-listed robustness grid, negative tests with their assumptions stated,
 diagnostics, an adversarial-review record, and your adjudication of what
 survived.
+
+:::::
 
 ::: {.notes}
 
@@ -94,7 +102,7 @@ practice steps, the versioned record, and how the artifact is assessed.
 :::
 
 
-## The lessons in this studio {.dense}
+## The lessons in this studio
 
 ::: {.kicker}
 
@@ -102,10 +110,14 @@ Studio 8 · Road map
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 24 — Robustness and Sensitivity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html): your pre-listed robustness grid with its full results, direction and size, plus the named null check.
 - [Lesson 25 — Diagnostics and Negative Tests](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html): your negative test and diagnostic, each with the prediction you wrote before running it.
 - [Lesson 26 — AI as Adversarial Reviewer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html): your commissioned adversarial review with every flag adjudicated against the data, confirmed or refuted.
 - [Lesson 27 — Recognizing False Confidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html): your confidence audit: the not-yet-recomputed list, where belief in the headline number comes from, and your boundary sentence.
+
+:::::
 
 
 ## Robustness and Sensitivity {background-color="#1a1a19" .divider}
@@ -132,9 +144,9 @@ Chapter 24
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 You decide **the full list of robustness and sensitivity checks you will run,
 and you decide it before you look at a single result**, then report every one
@@ -146,6 +158,8 @@ it as one you added after seeing results and report it with the rest.
 
 :::
 
+:::::
+
 
 ## The words this chapter uses
 
@@ -155,7 +169,9 @@ Chapter 24 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -175,6 +191,8 @@ Chapter 24 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -191,6 +209,8 @@ Chapter 24 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - The decision on the table: which alternative versions you commit to running and reporting.
 - You choose them before you see any of their answers.
 - Then you report every one of them.
@@ -203,6 +223,8 @@ could have run instead, and whether you looked at them before or after you saw
 this answer.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -222,9 +244,13 @@ Chapter 24 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - Almost every real estimate depends on choices you could have made differently.
 - Any single choice can flatter the result.
 - Report only the version that worked and nobody can separate a delicate truth from luck (Simmons et al. 2011).
+
+:::::
 
 ::: {.notes}
 
@@ -244,6 +270,8 @@ added after seeing results and report it with the rest.
 Chapter 24 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -269,6 +297,8 @@ Chapter 24 · The concept
 - You assumed checkout logged every purchase, so ask what a missed two percent does.
 - An estimate is one number that depends on several choices, and a critic attacks them.
 
+:::::
+
 ::: {.notes}
 
 Some fields call the second one a sensitivity analysis, and the two names
@@ -289,6 +319,8 @@ Chapter 24 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 **Headline estimate:** the single number that stands in for your whole finding.
@@ -300,6 +332,8 @@ Chapter 24 · The concept
 - **Specification:** the bundle of modeling choices behind the estimate.
 - **Metric:** the yardstick you report.
 - Any honest plan turns one or more of them.
+
+:::::
 
 ::: {.notes}
 
@@ -319,6 +353,8 @@ Chapter 24 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 A **specification curve** plots one estimate under many defensible choices,
@@ -330,6 +366,8 @@ side by side (Simonsohn et al. 2020) (Steegen et al. 2016).
 - Commensurable inside a panel: same units, same group, same kind of quantity.
 - Changing who is counted, what the outcome means, or its scale opens another panel.
 - No version may define its group by something the treatment could have changed.
+
+:::::
 
 ::: {.notes}
 
@@ -356,10 +394,14 @@ Chapter 24 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A curve entirely on one side of zero shows stability across the choices you listed.
 - Choose the comparison group wrong and all sixteen versions inherit that error.
 - They lean the same way together, and the picture looks reassuring.
 - **Shared bias:** the common error running underneath an entire curve.
+
+:::::
 
 ::: {.notes}
 
@@ -380,10 +422,14 @@ Chapter 24 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Specification spread:** the span your answer covered across the versions you ran.
 - It runs from lowest dot to highest, and says only how far your choices moved it.
 - Every dot still carries sampling wobble of its own.
 - Keep the lead estimate's uncertainty a separate, labeled thing.
+
+:::::
 
 ::: {.notes}
 
@@ -404,11 +450,15 @@ Chapter 24 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Specification searching:** running many analyses, reporting only the one you wanted, without disclosing the search.
 - Its opposite is **pre-listed checks**: written down and all reported, before any result.
 - Each prompt-and-refine cycle can change a filter, a variable, or a model.
 - Re-prompt because the number disappointed you and you have run a search.
 - Keep your own log of the cycles; the tool kept none for you.
+
+:::::
 
 ::: {.notes}
 
@@ -431,10 +481,14 @@ Chapter 24 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Your team randomly assigns a loyalty discount and asks whether the offer raises spending.
 - Target fixed before anything ran: 30-day spending per shopper you assigned.
 - Shoppers who spent nothing are counted in.
 - Headline: about twelve percent more than those not offered; these numbers are constructed.
+
+:::::
 
 ::: {.notes}
 
@@ -456,11 +510,15 @@ Chapter 24 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Sample: all shoppers, or all except the wholesale account placing bulk orders.
 - Measurement: the total amount charged, or shipping and taxes stripped out.
 - Specification: no adjustment, or adjusted for spending in the weeks before.
 - Metric: the gain in dollars, or the gain as a percent.
 - Averaging only over shoppers who ordered goes in its own labeled section.
+
+:::::
 
 ::: {.notes}
 
@@ -481,11 +539,15 @@ Chapter 24 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Adjustment keeps the same people, outcome and units, so its versions share a panel.
 - Dropping the wholesale account changes who is counted, so it opens a second.
 - Stripping shipping and taxes changes what spending means, so it opens a third.
 - Primary panel: positive in every pre-listed version, about eight to twelve percent.
 - Excluding the wholesale account, the same versions ran ten to fifteen percent.
+
+:::::
 
 ::: {.notes}
 
@@ -508,6 +570,8 @@ precision nobody computed.
 Chapter 24 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -541,6 +605,8 @@ Chapter 24 · A worked example
 - That pile is what your machinery produces when the offer does nothing at all.
 - This trial randomized, so use the first to build the pile.
 
+:::::
+
 ::: {.notes}
 
 Statisticians call the first one randomization inference: keep every enrolled
@@ -558,13 +624,15 @@ doing the work.
 :::
 
 
-## Check that every row answers the same question before reading a number {.densest}
+## Check that every row answers the same question before reading a number
 
 ::: {.kicker}
 
 Chapter 24 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - All eight rows share one **estimand**, the quantity estimated: spending per shopper assigned.
 - The printed range is a spread of defensible answers, not a confidence interval.
@@ -616,6 +684,8 @@ print(f"\naveraging over ORDERERS only: {bad:.1f}% — a different estimand, on 
 print("group the offer itself selected. it does not belong on the curve")
 ```
 
+:::::
+
 ::: {.notes}
 
 The block turns all four handles and prints the whole grid, plus the one
@@ -628,13 +698,15 @@ curve.
 :::
 
 
-## An AI failure case {.dense}
+## An AI failure case
 
 ::: {.kicker}
 
 Chapter 24
 
 :::
+
+::::: {.slide-body}
 
 ::: {.failure}
 
@@ -652,6 +724,8 @@ first.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -661,10 +735,14 @@ Chapter 24 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it because you pre-listed all four handles yourself before opening the tool.
 - Reading its section against your own list, you notice measurement is missing, run that comparison, and watch the estimate slide toward the low end of your range.
 - A passage that looks complete is not the same as one that is complete.
 - You check its list against yours, not against how finished it sounds.
+
+:::::
 
 ::: {.notes}
 
@@ -686,6 +764,8 @@ Chapter 24
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -698,14 +778,18 @@ evidence decides.
 
 :::
 
+:::::
 
-## It is your turn {.dense}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 24 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write your headline estimate in one sentence.
 2. Pre-list the checks you will run, at least two, aimed at the handles a hostile reader would attack first.
@@ -719,6 +803,8 @@ Chapter 24 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch24_robustness_and_sensitivity.ipynb) with [Chapter 24](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -751,9 +837,9 @@ Chapter 25
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 You decide **which negative test your design actually needs**, a check aimed
 at a place where the answer must be zero, and you decide what a clean pass
@@ -761,6 +847,8 @@ does and does not license you to say. Picking the test is the research.
 Running it is the easy part.
 
 :::
+
+:::::
 
 
 ## A clear ring can mean your solvent is toxic
@@ -771,6 +859,8 @@ Chapter 25 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A microbiology lab advisor, on the first plate they ask to see.
 
 ::: {.note-card}
@@ -780,6 +870,8 @@ If the blank disk also cleared the bacteria, you have not discovered a drug.
 You have discovered that your solvent is toxic.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -800,10 +892,14 @@ Chapter 25 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - How you handled the samples. How you measured. How you coded the groups.
 - Any one of them can produce a signal unrelated to what you set out to study.
 - A negative test tells you whether the world made your result or your pipeline did.
 - Skip it and you can spend months defending an artifact.
+
+:::::
 
 ::: {.notes}
 
@@ -824,6 +920,8 @@ something that was never there.
 Chapter 25 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -848,6 +946,8 @@ Chapter 25 · The concept
 - Example: measure your "effect" in a group that received no treatment at all.
 - Example of an artifact: a clear ring caused by the solvent, not the extract.
 
+:::::
+
 ::: {.notes}
 
 Take the two terms together, because the first one hunts for the second. Hold
@@ -867,11 +967,15 @@ Chapter 25 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The true answer is zero. The number your sample returns will almost never be.
 - Different samples wobble, so a clean pass is a small reading, not a blank one.
 - Clean means it sits among the readings your procedure gives when nothing is happening.
 - Worrying means far out from that pile, where ordinary wobble is a strained explanation.
 - Chance does occasionally produce a large reading, so no cutoff turns this into a verdict.
+
+:::::
 
 ::: {.notes}
 
@@ -893,6 +997,8 @@ Chapter 25 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 A good negative control has to satisfy three conditions, and all three matter
@@ -906,6 +1012,8 @@ A good negative control has to satisfy three conditions, and all three matter
 - The check must be sensitive enough to show an artifact that would actually matter.
 - A quiet control from an insensitive check is no evidence of a clean pipeline.
 
+:::::
+
 ::: {.notes}
 
 The first two conditions are both about reach, in opposite directions: a
@@ -918,13 +1026,15 @@ is no evidence at all.
 :::
 
 
-## Three tests aim at zero, and the vehicle control matches your solvent {.dense}
+## Three tests aim at zero, and the vehicle control matches your solvent
 
 ::: {.kicker}
 
 Chapter 25 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -965,6 +1075,8 @@ Chapter 25 · The concept
 - Swap the real labels for a coin flip; the estimate should collapse toward zero.
 - Dissolved your extract in ethanol? The vehicle control is a disk soaked in ethanol alone.
 
+:::::
+
 ::: {.notes}
 
 Three members of this family show up in almost every audit, and the vehicle
@@ -985,10 +1097,14 @@ Chapter 25 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - The cheapest diagnostic in research: drop each case in turn and recompute.
 - See whether one observation is quietly carrying your whole finding.
 - A negative test asks whether your procedure invents signal.
 - Leave-one-out asks whether your result rests on a single point.
+
+:::::
 
 ::: {.notes}
 
@@ -1009,6 +1125,8 @@ Chapter 25 · The concept
 
 :::
 
+::::: {.slide-body}
+
 ::: {.lead}
 
 The negative tests all share one move: aim the machinery where the answer must
@@ -1022,6 +1140,8 @@ be zero, and check that what comes back is ordinary for a world where it is
 - It does not prove your effect is real.
 - It never turns a correlation into a cause.
 - Report what the check could and could not have caught, not just that it passed.
+
+:::::
 
 ::: {.notes}
 
@@ -1043,11 +1163,15 @@ Chapter 25 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You soak a paper disk in plant extract, lay it on a bacterial lawn, incubate overnight.
 - Next morning you measure the zone of inhibition, the clear ring where bacteria failed to grow.
 - The extract was dissolved in 70% ethanol, so the vehicle control is an ethanol-only disk.
 - A bare, uninhibited lawn around it: the ring is not a solvent artifact.
 - Its own clear ring: the finding is an artifact until you redo it at lower concentration.
+
+:::::
 
 ::: {.notes}
 
@@ -1071,11 +1195,15 @@ Chapter 25 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - A positive control is a condition you know produces a signal, run through the same machinery.
 - A disk soaked in a standard antibiotic should clear a wide ring.
 - If even that disk reads flat, your assay is broken today and the quiet vehicle told you nothing.
 - Clearing a ring shows the system answers a strong inhibitor, not that it notices a small one.
 - Decide how big a solvent effect would change your conclusion, then show the assay sees it.
+
+:::::
 
 ::: {.notes}
 
@@ -1091,13 +1219,15 @@ works inside a living animal, or which molecule is responsible.
 :::
 
 
-## Both controls get read before the extract's ring means anything {.densest}
+## Both controls get read before the extract's ring means anything
 
 ::: {.kicker}
 
 Chapter 25 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Four conditions, ten plates each: extract, vehicle only, standard antibiotic, extract at 20% ethanol.
 - Watch the vehicle mean: under 1 mm passes, above it the solvent is doing work.
@@ -1132,6 +1262,8 @@ print("\nboth controls must be read before the extract's ring means anything.")
 print("a negative control that passes on a broken assay proves nothing")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run the block and read the two verdict lines aloud. The fourth condition is
@@ -1143,13 +1275,15 @@ rather than one at a time.
 :::
 
 
-## Build a world where the vehicle does nothing, then run it 2,000 times {.denser}
+## Build a world where the vehicle does nothing, then run it 2,000 times
 
 ::: {.kicker}
 
 Chapter 25 · A seeded simulation
 
 :::
+
+::::: {.slide-body}
 
 - Each run measures twelve matched vehicle and blank disks.
 - A shared plate-to-plate wobble, plus ordinary measurement noise.
@@ -1176,6 +1310,8 @@ print("typical spread (middle 95%):", np.percentile(nulls, [2.5, 97.5]).round(2)
 print("this run's reading:", round(float(nulls[0]), 3), "mm")
 ```
 
+:::::
+
 ::: {.notes}
 
 Ask the room to predict the first number before you run it. The world is built
@@ -1194,6 +1330,8 @@ Chapter 25 · A seeded simulation
 
 :::
 
+::::: {.slide-body}
+
 - Sixty-two round to 0.00 at two decimals, so a printed "0.00" is rounding, not nothing.
 - The central 95 percent runs from about -0.29 to +0.27 mm.
 - Rarer runs reach roughly -0.48 and +0.47. The first run returned -0.03.
@@ -1207,6 +1345,8 @@ The null readings pile up around zero and spread from about -0.29 to +0.27 mm;
 none is exactly zero.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1228,11 +1368,15 @@ Chapter 25 · A seeded simulation
 
 :::
 
+::::: {.slide-body}
+
 - Simulate your null world at your own sample size, then ask where your control sits.
 - The pile is only as trustworthy as the assumptions that built it.
 - The middle 95 percent excludes one honest experiment in twenty by construction.
 - Drawing a cutoff there is a statistical decision, and no single cutoff settles it.
 - Ask the three questions first, then report the evidence with its assumptions.
+
+:::::
 
 ::: {.notes}
 
@@ -1255,6 +1399,8 @@ Chapter 25
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1269,6 +1415,8 @@ show it. The clean result told you nothing at all.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1278,10 +1426,14 @@ Chapter 25 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - You catch it with one question the tool never asked itself: which artifact could this control actually have detected?
 - A valid vehicle control matches how you delivered the cause, solvent for solvent.
 - The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail.
 - This is a *plausible-but-wrong-method*: the advice sounded like textbook practice and was wrong for your case.
+
+:::::
 
 ::: {.notes}
 
@@ -1303,6 +1455,8 @@ Chapter 25
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -1316,14 +1470,18 @@ negative test bought you, and how far its sensitivity reached, stays yours.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 25 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Name the artifact you are most afraid of: the one way your procedure, rather than your subject, could have manufactured your result.
 2. Choose the negative test that could catch it, whether that is a placebo label, a falsification outcome measured where the effect cannot yet exist, or a negative control your cause could not possibly touch.
@@ -1335,6 +1493,8 @@ Chapter 25 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_diagnostics_and_negative_tests.ipynb) with [Chapter 25](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1368,9 +1528,9 @@ Chapter 26
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 When a reviewer hands you a list of flaws in your own analysis, you decide
 **which flaws are real, and you decide it by running the one data check that
@@ -1379,6 +1539,8 @@ most certain. Confidence is not evidence, and a panel of confident reviewers
 is not three pieces of evidence.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1389,7 +1551,9 @@ Chapter 26 · Key terms
 
 :::
 
-:::: {.terms}
+::::: {.slide-body}
+
+:::: {.terms .two}
 
 ::: {.term}
 
@@ -1409,6 +1573,8 @@ Chapter 26 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1425,10 +1591,14 @@ Chapter 26 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - You propose rolling a store change out to every store in the chain.
 - The operations manager's sign-off is what lets it get there.
 - That manager also answers for it when the checkout lines say otherwise.
 - Example: complaints about backed-up queues on the first busy Saturday.
+
+:::::
 
 ::: {.notes}
 
@@ -1449,6 +1619,8 @@ Chapter 26 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - The decision on the table: which of the flaws a reviewer names are real.
 - Settled by a check you run, not by how sure the reviewer sounded.
 
@@ -1458,6 +1630,8 @@ Do not tell me the numbers got better. Tell me which check you ran that would
 have caught it if they hadn't. I trust the check, not the graph.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1478,11 +1652,15 @@ Chapter 26 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A confident measurement can be wrong.
 - So can a fluent AI critique, and so can a clean-looking table.
 - All three can be wrong in the same convincing way.
 - What the manager wants sounds least impressive and matters most.
 - The check you committed to before you looked, and the flag you verified.
+
+:::::
 
 ::: {.notes}
 
@@ -1502,6 +1680,8 @@ against your own data.
 Chapter 26 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -1535,6 +1715,8 @@ Chapter 26 · The concept
 - Each of the three fails in its own way.
 - You defend a result by trying to break it first.
 
+:::::
+
 ::: {.notes}
 
 The chapter's example of an adversarial reviewer is a peer who tries to show
@@ -1554,11 +1736,15 @@ Chapter 26 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Robustness: you measured the improvement during one time of day.
 - So measure it in two other realistic time blocks as well.
 - Placebo: compare two stretches of the old layout against each other.
 - Repeat over many pairs, since any two stretches differ a little by chance.
 - An "improvement" far larger than the rest of that pile is your measurement lying.
+
+:::::
 
 ::: {.notes}
 
@@ -1579,11 +1765,15 @@ Chapter 26 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Specification searching:** many versions run, only the flattering one reported, the search undisclosed (Simmons et al. 2011).
 - Its everyday name is p-hacking.
 - Example: you measure ten different hours and show only the hour that wins.
 - The cure is **pre-listed checks**, committed to before you see any result (Nosek et al. 2018).
 - Example: write down three time blocks and one placebo, run all four, report every number.
+
+:::::
 
 ::: {.notes}
 
@@ -1604,11 +1794,15 @@ Chapter 26 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - **Correlated error:** two reviewers wrong in the same way (Peker 2023).
 - Their agreement is an echo, not a confirmation.
 - Example: two AI models share a blind spot and flag the same non-issue.
 - Both sound equally certain while doing it.
 - A panel of confident reviewers is not three pieces of evidence.
+
+:::::
 
 ::: {.notes}
 
@@ -1629,11 +1823,15 @@ Chapter 26 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - Point a tool at your whole analysis: it reads your code, reruns it, tries variants.
 - It returns a ranked list of problems, and it will find real errors you missed.
 - Every item on that list is still a proposal.
 - Each still needs the same treatment: name the check, run it, read your own output.
 - A longer, better organized list is more tempting to accept wholesale.
+
+:::::
 
 ::: {.notes}
 
@@ -1654,11 +1852,15 @@ Chapter 26 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Your store installed a new self-checkout layout, and your data say lines moved faster.
 - **p95 wait time:** the wait 95 out of 100 customers come in under.
 - Fairer than the average, because it catches the long waits people complain about.
 - A p95 of 210 seconds means only the slowest 5 percent waited longer.
 - Your headline is a p95 drop from 210 seconds to 137.
+
+:::::
 
 ::: {.notes}
 
@@ -1678,11 +1880,15 @@ Chapter 26 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The first says the win is driven by a single unusually quiet morning.
 - The second says you cherry-picked the one customer mix where the layout helps.
 - The third says you compared a fully staffed week against a short-handed one.
 - On the third reading, you measured staffing rather than the layout.
 - All three are confident, and all three disagree.
+
+:::::
 
 ::: {.notes}
 
@@ -1702,11 +1908,15 @@ Chapter 26 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Leave-one-out drops the quiet morning and recomputes the p95: it barely moves.
 - So the first flaw is refuted.
 - Your pre-listed grid reruns the drop across three customer mixes: it holds in all three.
 - The placebo compares two stretches of the old layout, and comes back near zero.
 - The two loudest flags dissolved the moment a check touched them.
+
+:::::
 
 ::: {.notes}
 
@@ -1720,13 +1930,15 @@ something you could run.
 :::
 
 
-## Watch which line decides, not which reviewer sounded surest {.densest}
+## Watch which line decides, not which reviewer sounded surest
 
 ::: {.kicker}
 
 Chapter 26 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the leave-one-out range: the drop survives dropping any single morning.
 - Watch the three mixes side by side, old p95 against new.
@@ -1769,6 +1981,8 @@ print(f"\nplacebo, old layout vs itself : {placebo:+.0f} s "
 print("three confident reviewers, three checks, and only the checks decide")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it as three answers to three named objections, in the order the reviewers
@@ -1787,11 +2001,15 @@ Chapter 26 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - None of the three reviewers raised it.
 - This ran at one store, on weekdays, not across the chain.
 - No further measurement removes that, so the honest claim is bounded.
 - You measured a p95 improvement for these three customer mixes, at this store.
 - Not a guarantee for every location your company runs.
+
+:::::
 
 ::: {.notes}
 
@@ -1812,6 +2030,8 @@ Chapter 26
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -1824,6 +2044,8 @@ has seen this mistake a hundred times.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -1833,11 +2055,15 @@ Chapter 26 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - Here is how you catch it.
 - You do not act on the verdict.
 - You run the leave-one-out yourself, dropping the quiet morning and recomputing the p95.
 - The improvement barely moves.
 - The confident flaw was fabricated, a real-sounding mechanism bolted onto a problem your data do not have.
+
+:::::
 
 ::: {.notes}
 
@@ -1851,13 +2077,15 @@ at your own numbers is the only thing that settled it.
 :::
 
 
-## Do not delegate {.dense}
+## Do not delegate
 
 ::: {.kicker}
 
 Chapter 26
 
 :::
+
+::::: {.slide-body}
 
 ::: {.rule-human}
 
@@ -1875,14 +2103,18 @@ stated. A reviewer proposes; you verify, and the evidence decides.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 26 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. Write a one-paragraph summary of your design, your headline claim, and the checks you have already run.
 2. Commission the review: ask for the single most serious flaw and the exact measurement that would confirm or refute it.
@@ -1894,6 +2126,8 @@ Chapter 26 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch26_ai_as_adversarial_reviewer.ipynb) with [Chapter 26](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -1926,9 +2160,9 @@ Chapter 27
 
 :::
 
-::: {.decision}
+::::: {.slide-body}
 
-[The research decision]{.label}
+::: {.decision}
 
 When a tool hands you a fluent, confident finding, you decide **whether its
 confidence counts as evidence** (it never does) and **which independent check
@@ -1936,6 +2170,8 @@ you run on the number underneath it** before you repeat the claim as your own.
 Nothing about how sure the sentence sounds tells you whether it is true.
 
 :::
+
+:::::
 
 
 ## The words this chapter uses
@@ -1945,6 +2181,8 @@ Nothing about how sure the sentence sounds tells you whether it is true.
 Chapter 27 · Key terms
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms .two}
 
@@ -1982,6 +2220,8 @@ Chapter 27 · Key terms
 
 ::::
 
+:::::
+
 ::: {.notes}
 
 Each term is defined in the chapter on first use; these are the definitions as
@@ -1998,6 +2238,8 @@ Chapter 27 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A fisheries biologist reviews stream-restoration reports for a state agency.
 - Every year the summaries announce success in polished, sure prose.
 - Their ask: the measurement, how you computed the change, why the project gets the credit.
@@ -2007,6 +2249,8 @@ Chapter 27 · Why this decision matters
 I don't act on the sentence. I act on the number behind it.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2028,10 +2272,14 @@ Chapter 27 · Why this decision matters
 
 :::
 
+::::: {.slide-body}
+
 - A confident paragraph moves nobody who has read a hundred confident paragraphs.
 - What moves them is a number you recomputed and can defend.
 - Treat the confidence as worth nothing until you check what sits under it.
 - The decision: what you require of a confident result before your name goes on it.
+
+:::::
 
 ::: {.notes}
 
@@ -2052,10 +2300,14 @@ Chapter 27 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - An AI summary reports that a stream cleanup cut nitrate by roughly 40 percent.
 - The crisp figure and the smooth wording make the claim feel settled.
 - You have not looked at a single measurement yet.
 - **False confidence:** fluent, detailed output makes you feel sure of what you never verified (Ji et al. 2023).
+
+:::::
 
 ::: {.notes}
 
@@ -2075,6 +2327,8 @@ carefully. It is your own sense of certainty arriving before any check did.
 Chapter 27 · The concept
 
 :::
+
+::::: {.slide-body}
 
 :::: {.terms}
 
@@ -2100,6 +2354,8 @@ Chapter 27 · The concept
 - You paste the AI's percentage straight into your report because the tool computed it (Goddard et al. 2012).
 - You nod along line by line, then could not defend the number without rerunning it (Rozenblit & Keil 2002).
 
+:::::
+
 ::: {.notes}
 
 Both habits are ordinary, which is what makes them hard to see in yourself.
@@ -2121,10 +2377,14 @@ Chapter 27 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - You prompt, read, refine, and run again, and agentic tools spin those cycles on their own.
 - Each pass comes back cleaner and surer than the last.
 - That polish feels like convergence on the truth. It is nothing of the kind.
 - Confidence grows across the loop whether or not accuracy does.
+
+:::::
 
 ::: {.notes}
 
@@ -2146,6 +2406,8 @@ Chapter 27 · The concept
 
 :::
 
+::::: {.slide-body}
+
 :::: {.terms}
 
 ::: {.term}
@@ -2161,6 +2423,8 @@ Chapter 27 · The concept
 - Do not trust the AI's "40 percent."
 - Recompute the average nitrate before and after the cleanup from the raw readings.
 - Then see what the data really show.
+
+:::::
 
 ::: {.notes}
 
@@ -2181,9 +2445,13 @@ Chapter 27 · The concept
 
 :::
 
+::::: {.slide-body}
+
 - A summary that reads beautifully is not a summary that is right.
 - Nothing about how sure a sentence sounds tells you whether it is true.
 - Decide which independent check you run before you repeat the claim as your own.
+
+:::::
 
 ::: {.notes}
 
@@ -2204,10 +2472,14 @@ Chapter 27 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - **Riparian buffer:** a strip of trees and grasses planted along a bank to filter runoff.
 - **Nitrate:** a fertilizer nutrient that in excess fuels algal blooms and starves water of oxygen.
 - You have weekly nitrate readings in milligrams per liter, the year before and the year after.
 - The agency cares because low oxygen kills the trout the restoration was meant to bring back.
+
+:::::
 
 ::: {.notes}
 
@@ -2228,6 +2500,8 @@ Chapter 27 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - You asked an AI to summarize the dataset, and this came back.
 - The sentence is fluent and sure.
 - You feel the relief of a clean result and reach to quote it.
@@ -2238,6 +2512,8 @@ The riparian buffer reduced average nitrate by about 40 percent, a clear
 environmental success.
 
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2258,9 +2534,13 @@ Chapter 27 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - Before-mean 8.1 mg/L. After-mean 6.9 mg/L. Subtract.
 - The confident summary overstated the change by more than double.
 - Two means and a subtraction from the raw readings settle the number.
+
+:::::
 
 ::: {.notes}
 
@@ -2280,11 +2560,15 @@ Chapter 27 · A worked example
 
 :::
 
+::::: {.slide-body}
+
 - The readings come from one site with no comparison stream.
 - A wet spring could move nitrate just as much.
 - So could a change in fertilizer practice upstream.
 - Keep this: nitrate fell about 15 percent at this site over one year.
 - Drop the inflated figure, and drop the word "success."
+
+:::::
 
 ::: {.notes}
 
@@ -2297,13 +2581,15 @@ not say: it reports that nitrate fell, and it credits nobody for it.
 :::
 
 
-## Recomputing the drop takes about as long as reading the confident sentence {.denser}
+## Recomputing the drop takes about as long as reading the confident sentence
 
 ::: {.kicker}
 
 Chapter 27 · A worked example
 
 :::
+
+::::: {.slide-body}
 
 - Watch the two printed means, then the drop in mg/L and in percent.
 - Compare that percent against the 40 the summary claimed.
@@ -2329,6 +2615,8 @@ print("\nand the number you just computed still cannot be pinned on the buffer:"
 print("one site, no comparison stream, and a wet spring would look the same")
 ```
 
+:::::
+
 ::: {.notes}
 
 Run it in front of the room and read the printout in order. The block builds
@@ -2348,6 +2636,8 @@ Chapter 27
 
 :::
 
+::::: {.slide-body}
+
 ::: {.failure}
 
 [Where the tool failed]{.label}
@@ -2359,6 +2649,8 @@ firm verdict, no hedging.
 
 :::
 
+:::::
+
 
 ## How it failed
 
@@ -2368,11 +2660,15 @@ Chapter 27 · An AI failure case
 
 :::
 
+::::: {.slide-body}
+
 - Here is exactly how you catch it.
 - You do not repeat the paragraph.
 - You compute the two group means from the raw readings and subtract, and the real change is about 15 percent, not 40.
 - Then you ask what the design licenses: one site, no control stream, a single year, so even the honest 15 percent could come from the weather rather than the buffer.
 - The confident summary failed twice, once on the number and once on the causal reach, and both failures were invisible until you checked outside the model.
+
+:::::
 
 ::: {.notes}
 
@@ -2395,6 +2691,8 @@ Chapter 27
 
 :::
 
+::::: {.slide-body}
+
 ::: {.rule-human}
 
 [This stays yours]{.label}
@@ -2408,14 +2706,18 @@ true, and answering for it, is the researcher's job.
 
 :::
 
+:::::
 
-## It is your turn {.denser}
+
+## It is your turn
 
 ::: {.kicker}
 
 Chapter 27 · Your move
 
 :::
+
+::::: {.slide-body}
 
 1. List every number currently in your project that you have not personally recomputed.
 2. For your headline number, write down where your confidence in it actually comes from: your own recomputation, a tool's fluent summary, or the fact that it matched what you were hoping for.
@@ -2427,6 +2729,8 @@ Chapter 27 · Your move
 ::: {.turn}
 Work it in the [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_recognizing_false_confidence.ipynb) with [Chapter 27](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html) open beside it. Log every delegation in your AI Research Ledger.
 :::
+
+:::::
 
 ::: {.notes}
 
@@ -2459,6 +2763,8 @@ Milestone 8
 
 :::
 
+::::: {.slide-body}
+
 ::: {.decision}
 
 [The artifact]{.label}
@@ -2467,8 +2773,10 @@ Milestone 8
 
 :::
 
+:::::
 
-## What you bring {.dense}
+
+## What you bring
 
 ::: {.kicker}
 
@@ -2476,10 +2784,14 @@ Milestone 8 · Check before you start
 
 :::
 
+::::: {.slide-body}
+
 - [Lesson 24 — Robustness and Sensitivity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html): your pre-listed robustness grid with its full results, direction and size, plus the named null check.
 - [Lesson 25 — Diagnostics and Negative Tests](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html): your negative test and diagnostic, each with the prediction you wrote before running it.
 - [Lesson 26 — AI as Adversarial Reviewer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html): your commissioned adversarial review with every flag adjudicated against the data, confirmed or refuted.
 - [Lesson 27 — Recognizing False Confidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html): your confidence audit: the not-yet-recomputed list, where belief in the headline number comes from, and your boundary sentence.
+
+:::::
 
 
 ## The practice
@@ -2490,11 +2802,15 @@ Milestone 8 · In the studio
 
 :::
 
+::::: {.slide-body}
+
 1. Pre-list your checks before you run any of them, and commit to reporting all of them.
 2. Run the robustness grid and report a span within each commensurable panel, never across panels.
 3. Run the null check that your design licenses, and name it correctly.
 4. Commission at least one adversarial review, and add a human reviewer when one is available. Neither review is independent verification: confirm or refute every flag with a data check.
 5. Write the adjudication: what survived, what did not, and what you still cannot rule out.
+
+:::::
 
 
 ## The four rails, here
@@ -2504,6 +2820,8 @@ Milestone 8 · In the studio
 Milestone 8 · Every studio, these four
 
 :::
+
+::::: {.slide-body}
 
 :::: {.rails}
 
@@ -2541,6 +2859,8 @@ Milestone 8 · Every studio, these four
 
 ::::
 
+:::::
+
 
 ## A version, not a pass
 
@@ -2549,6 +2869,8 @@ Milestone 8 · Every studio, these four
 Milestone 8
 
 :::
+
+::::: {.slide-body}
 
 ::: {.note-card}
 
@@ -2561,14 +2883,20 @@ itself part of your research record.
 
 :::
 
+:::::
+
 
 ## The one rule {background-color="#1a1a19" .divider}
 
-::: {.divider-line}
-**AI is your arm and your research assistant, not your brain.**
+::: {.creed}
+AI is your arm and your research assistant, not your brain.
+:::
 
+::: {.divider-line}
 AI can review AI, and a second model is a real auditor of the first. The
 last decision is always human.
 :::
 
+::: {.deck-links}
 [Studio 8 in EDR|AI](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio08-stress-test.html) · [Milestone 8](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone08-stress-test.html) · [Verification Guide](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html)
+:::
