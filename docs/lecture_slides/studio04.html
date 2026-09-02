@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa6bf9334f07eb3fc1071a031a011523.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,13 +192,21 @@
       margin-right: 0; 
     }
   </style>
+  <!-- EDR|AI deck fonts. Two voices: Source Sans 3 for the deck's own
+       scaffolding, Source Serif 4 for the book's verbatim words, JetBrains Mono
+       for code. Every one degrades to a metric-compatible or long-installed
+       fallback in edrai-slides.scss, so a room with no network still renders a
+       correct deck. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <h1 class="title">HONR 46400 · Evidence-Driven Research</h1>
   <p class="subtitle">Studio 4 — Declare and diagnose provisionally</p>
 
 <div class="quarto-title-authors">
@@ -215,17 +223,20 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 4</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">What you can defend when you leave</span></p>
 <p>Write your design down as something specific enough to be diagnosed, then find out how it behaves before it costs you anything.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>The milestone ahead</h2>
 <div class="kicker">
 <p>Studio 4</p>
 </div>
+<div class="slide-body">
 <p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html">Milestone 4: Your research contract, v0</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization you mark for revision, warrant, answer strategy and uncertainty statement — plus the design properties you diagnosed (its bias, its wobble, and how often it would detect what you are looking for), your permission status, and a redesign record. Measurement proper is taught and assessed in Studio 6; here you only commit to a starting choice and say why it is defensible for now.</p>
+</div>
 <aside class="notes">
 <p>This is the hinge of the book. Everything before it shaped a question; everything after it executes a design. The contract you write here (objective, estimand, population, data strategy, a provisional operationalization, warrant, answer strategy, uncertainty) is declared before any result exists, so that later changes are visibly design or visibly drift. Diagnosing it on simulated data now, while changing your mind is still free, is what makes the declaration honest rather than decorative. The four MIDA parts you declare here, and the declare-and-diagnose loop you run on them, were introduced by Blair, Cooper, Coppock, and Humphreys (Blair et al.&nbsp;2019) and developed in RDSS (Blair et al.&nbsp;2023); this book puts them in plain language and joins them to a governed AI workflow.</p>
 <p>Milestone 5 commits the contract to one research pathway and writes what that pathway can and cannot establish. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
@@ -241,17 +252,19 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>The lessons in this studio</h2>
 <div class="kicker">
 <p>Studio 4 · Road map</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html">Lesson 10 — Model, Inquiry, Data Strategy, and Answer Strategy</a>: your MIDA declaration: model, inquiry, data strategy, and answer strategy, with the alignment sentence that ties them together — carrying population, setting and time, the provisional operationalization, and the warrant into Contract v0.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html">Lesson 11 — Uncertainty Before You Need It</a>: your estimand and estimator, the repeat-run story behind them, your dependence structure, and your uncertainty sentence next to its wrong twin.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html">Lesson 12 — Declaring and Diagnosing a Research Design</a>: your design diagnosis: bias, wobble, and power read from simulation, one redesign, and the honest call that followed.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html">Lesson 13 — Research Ethics and Data Governance</a>: your declared permission status, your minimised column list, your AI boundary, and your four governance decisions.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>Model, Inquiry, Data Strategy, and Answer Strategy</h2>
@@ -267,9 +280,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>The four parts of your own design, written down before any data exist: a model of the world, the one named quantity you want out of it, a plan for how the data arrive, and a plan for turning that data into your quantity. Then the harder call: whether those four parts actually point at the same thing.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -277,12 +291,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>She reads your one-page design before you spend months on it.</li>
 <li>“Show me the exact number you are after.”</li>
 <li>“Then show me that the way you collect and crunch the data can actually reach that number.”</li>
 <li>“If those two drift apart, every result you bring me answers a question I never asked.”</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the reader you are writing the design for. Her worry is not about your effort or your tools. It is about whether the number you can actually produce is the number you promised her. Ask the room whose one-page design would survive that question this morning.</p>
 <style type="text/css">
@@ -302,12 +318,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Do the check before you inspect any outcome-bearing field.</li>
 <li>Do it before you compute the answer.</li>
 </ul>
 <div class="note-card">
 <p>A design that skips this step is not rigorous. It is a hope with good formatting.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The order is deliberate. The four parts agree first, and only then does anything with an outcome in it get opened. That is why this is the cheapest quality check available: it runs on one page, and it catches the drift before the months of collection rather than after.</p>
@@ -323,11 +341,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>Any research design can be written as four parts, and the four have names</h2>
 <div class="kicker">
 <p>Chapter 10 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>Blair, Cooper, Coppock and Humphreys named that framework MIDA, one letter each (Blair et al.&nbsp;2019).</p>
 </div>
@@ -349,6 +368,7 @@ Davi Moreira
 <p><span class="d">the whole procedure that turns those data into an answer, uncertainty included</span></p>
 </div>
 </div>
+</div>
 <aside class="notes">
 <p>Blair, Coppock and Humphreys developed the framework at book length in Research Design in the Social Sciences. The four labels are theirs; the plain language here is this book putting them to work on a first quantitative project. All four are written down before any data exist.</p>
 <style type="text/css">
@@ -368,6 +388,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Model: a listener’s chance of accepting a recommended song runs from 0 to 1.</li>
 <li>A new recommender could nudge that chance up.</li>
@@ -375,6 +396,7 @@ Davi Moreira
 <li>Data strategy: randomly send each session to the old or new recommender, then log every accept.</li>
 <li>Answer strategy: accept rate in the new group minus the old, reported with an interval.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Read the four in order and you can hear them connect. The model makes a quantity askable, the data strategy produces the raw material, the answer strategy does the arithmetic and says how sure it is. The inquiry is the one that forces a choice: if you need the word “and” to state it, you have two inquiries and you have to pick the one you would defend first.</p>
 <style type="text/css">
@@ -389,19 +411,25 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>The dashed arrow is the check that matters</h2>
 <div class="kicker">
 <p>Chapter 10 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Top row is what you want to learn. Bottom row is how you plan to learn it.</li>
 <li>All four are written down before you collect anything.</li>
 <li>The dashed arrow asks whether your answer strategy reaches the inquiry you named.</li>
 </ul>
-
-<img data-src="figs/mida_map.png" class="quarto-figure quarto-figure-center r-stretch" style="width:58.0%" alt="The four parts of a design. The top row is what you want to learn; the bottom row is how you plan to learn it. All four are written down before you co"><div class="figure-caption">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/mida_map.png" class="quarto-figure quarto-figure-center" style="width:58.0%" alt="The four parts of a design. The top row is what you want to learn; the bottom row is how you plan to learn it. All four are written down before you co"></p>
+</figure>
+</div>
+<div class="figure-caption">
 <p>The four parts of a design. The top row is what you want to learn; the bottom row is how you plan to learn it. All four are written down before you collect anything, and the dashed arrow is the check that matters: your answer strategy has to reach the inquiry you named.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Model makes the inquiry askable, and the data strategy feeds the answer strategy. Only one arrow in the picture is dashed, and it runs upward, from the answer strategy back to the inquiry. Ask two people to say in one sentence why their own answer strategy reaches their own inquiry.</p>
@@ -422,12 +450,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You do not fill them in any order (Blair et al.&nbsp;2023).</li>
 <li>Align means your data and answer strategies reach the inquiry your model makes askable.</li>
 <li>Misaligned: a causal inquiry, but the people who see the new version differ systematically.</li>
 <li>That comparison delivers an <strong>association</strong>: two things move together, with no proof one caused the other.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Nothing in the arithmetic will tell you the alignment broke. The subtraction still runs and still returns a number. What changes is what that number is allowed to be called, and the only place to catch it is the design page, before collection.</p>
 <style type="text/css">
@@ -447,6 +477,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The inquiry is still causal. This design simply does not reach it.</li>
 <li>The absence of randomizing does not settle the matter either.</li>
@@ -454,6 +485,7 @@ Davi Moreira
 <li>Honest diagnosis: causal inquiry, currently unidentified under this data and answer strategy (Hernán &amp; Robins 2020).</li>
 <li>Naming that on paper is the whole job here.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the easy lesson to get wrong. Alignment never licenses relabeling a causal question as descriptive because the data are weak. It licenses one sentence: the question stays, and this design does not answer it. Whether an observational design can be defended for a causal claim is a later chapter’s whole subject, so the identification argument has to suit the design, not just be asserted.</p>
 <style type="text/css">
@@ -473,6 +505,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A music-streaming company tests whether a new autoplay recommender raises how often listeners keep the track.</li>
 <li>Model: one accept rate under the old recommender, one under the new.</li>
@@ -480,6 +513,7 @@ Davi Moreira
 <li>Inquiry: the average difference across all listeners. One number, causal in kind.</li>
 <li>Data strategy buckets each session at random; the answer strategy subtracts the two rates.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Notice what the model does not claim. It does not say the new recommender is better, only that each listener has two possible rates and the difference could go either way. The inquiry then picks one number out of that world, and everything after it has to reach that number.</p>
 <style type="text/css">
@@ -499,11 +533,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The inquiry asks for a caused difference.</li>
 <li>Random bucketing breaks the link between who the listener is and which version they see.</li>
 <li>Nothing about the listener decides which version they get, so the four parts agree.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The alignment audit for the good version takes one sentence, and this is it. Ask the room to say why randomizing earns the word causes here. The answer is not that randomizing sounds rigorous. It is that the thing deciding the version is no longer anything about the person.</p>
 <style type="text/css">
@@ -523,6 +559,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 10 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Ship the new recommender to new users, compare them against existing users on the old one.</li>
 <li>New and existing users differ in ways that also move accept rate.</li>
@@ -530,6 +567,7 @@ Davi Moreira
 <li>What the evidence supports drops from “causes” to “is associated with”.</li>
 <li>Same question, broken alignment.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Keep the chapter’s precision here. The inquiry does not change; the claim the evidence supports does, which leaves a causal inquiry that is currently unidentified. Declaring a design as four linked parts, so that misalignment becomes visible before data collection, is the approach set out in the design-declaration literature (Blair et al.&nbsp;2023).</p>
 <style type="text/css">
@@ -544,11 +582,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Same model, same inquiry: watch the second number miss the truth</h2>
 <div class="kicker">
 <p>Chapter 10 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The simulation builds a true caused lift of 4 points into every listener.</li>
 <li>Data strategy 1 buckets at random. Data strategy 2 ships the new version to new users.</li>
@@ -579,6 +618,7 @@ Davi Moreira
 <span id="cb1-23"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"new-vs-existing users        : </span><span class="sc">{</span>shortcut<span class="sc">:+.3f}</span><span class="ss">"</span>)</span>
 <span id="cb1-24"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">same inquiry both times. the second design does not answer it —"</span>)</span>
 <span id="cb1-25"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"the inquiry stays causal and is now unidentified"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run it, then read the three printed lines together. The randomized estimate lands near the lift that was built in; the new-versus-existing comparison does not, because here the new users are the lighter listeners. The inquiry never moved. Only the data strategy did, and that was enough to lose the answer.</p>
 <style type="text/css">
@@ -593,31 +633,36 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>An AI failure case</h2>
 <div class="kicker">
 <p>Chapter 10</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You paste your streaming question and ask for MIDA. The tool returns four confident, well-formatted parts and calls the design “rigorous.” Read closely: it wrote the <strong>data strategy</strong> as “compare new users on the new recommender to existing users on the old one,” and it kept the <strong>inquiry</strong> worded as a caused lift. That is two failures at once. The data strategy is <strong>plausible-but-wrong</strong>, because user tenure moves accept rate on its own. And the draft presents that comparison as if it answers the caused-lift inquiry, a <strong>silent scope change</strong> from what the evidence supports (an association) to what the write-up claims (a cause). The inquiry may keep its causal wording; what it may not do is borrow this comparison as its answer. You catch it two ways: set the inquiry’s words beside the data strategy and ask whether randomization actually happened, then sketch the model as a diagram and look for an arrow from “user tenure” into both the version seen and the accept rate. That open arrow is the confounder the fluent draft never mentioned.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>Do not delegate</h2>
 <div class="kicker">
 <p>Chapter 10</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Three choices stay yours. <strong>Which world your question assumes</strong> (the model, and so what could confound it). <strong>Which single quantity you want</strong> (the inquiry, named in your words, not the AI’s paraphrase). <strong>Whether your four parts align</strong>, and therefore whether your claim boundary is <em>causes</em>, only <em>is associated with</em>, or <em>causal but not yet identified by this design</em>. That third state is a real answer, and keeping your question while admitting the design cannot reach it is more honest than shrinking the question to fit the data. An AI can draft candidate parts. Deciding they agree, and owning the claim that follows, is research judgment you cannot hand off.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 10 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write your <strong>model</strong> in three or four sentences of plain language.</li>
 <li>Write your <strong>inquiry</strong> as one sentence naming one quantity: an average, a difference, a rate, a share.</li>
@@ -628,6 +673,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch10_model_inquiry_data_strategy_and_answer_strategy.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html">Chapter 10</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -654,9 +700,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>What quantity you are actually after, what recipe you will use to guess it, and what you will say about how much that guess could have moved. You decide all three before you inspect the outcomes, because each one changes what the others are allowed to mean.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -664,6 +711,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>The honest question is not ‘is my number right?’</p>
 </div>
@@ -672,6 +720,7 @@ Davi Moreira
 <li>A coin came up heads for this village and tails for that one.</li>
 <li>Ask instead: how much does a number from this procedure move around?</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Every result you will ever produce comes from a procedure that could have come out differently, so the number you hold is one draw from that process. The chapter’s claim is that this has an answer you can see rather than guess: run the same procedure again and again and look at the pile of answers it produces. That pile is the whole subject of the chapter, and every other word here is vocabulary for talking about its shape.</p>
 <style type="text/css">
@@ -691,12 +740,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>‘I only get to run my study once. What good is imagining a thousand runs?’</li>
 <li>A procedure can be studied by repetition even when your study cannot.</li>
 <li>That is why you can report uncertainty from a single sample.</li>
 <li>Bias, power and coverage in the next chapter all describe this pile.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Put the question to the room before you answer it, because it is the objection most people arrive with. The uncertainty statement is not about your run, it is about your procedure. Say plainly why this comes before the next chapter rather than after: the next chapter diagnoses a design by its bias, its power and its coverage, and each of those words is a statement about a pile of repeated answers. Meet the pile first and those words stop being jargon.</p>
 <style type="text/css">
@@ -716,6 +767,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Estimand</span></p>
@@ -735,6 +787,7 @@ Davi Moreira
 <li>Estimator: draw 60 households at random and take their average rent.</li>
 <li>Estimate: 1,621. One number, from one run, on one day.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Three words get confused constantly, and separating them fixes most of the confusion in this area. The estimand is a number about the world, not about your data (Morris et al.&nbsp;2019): it would have a value even if you never ran a survey. The estimator is a procedure, which is what makes it the thing that can be repeated. The distance between those two facts, one fixed and one moving, is where uncertainty lives. One bridge back to the design vocabulary: in RDSS the inquiry is the question your design asks and the estimand is the value that question has in the world (Blair et al.&nbsp;2023), while estimator and estimate are common statistical usage rather than anyone’s coinage.</p>
 <style type="text/css">
@@ -754,12 +807,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Run the survey again on the same town and you get a different estimate.</li>
 <li>Run it 2,000 times and the 2,000 estimates pile up into a shape.</li>
 <li><strong>Sampling distribution:</strong> the pile you would get from repeating your whole procedure many times in the same world.</li>
 <li>It is a property of the procedure, not of any one run.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Hold on to the phrase “in the same world”, because it is what makes the pile a statement about the procedure rather than about luck. The simulation on the next slide builds this pile from a town whose true average rent is 1,568, which is a number you only ever know because you built the town yourself.</p>
 <style type="text/css">
@@ -774,11 +829,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>Watch two honest surveys disagree</h2>
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The estimand is computed from all 4,000 households, before any survey runs.</li>
 <li>The first survey said 1,621. The second said 1,655.</li>
@@ -801,6 +857,7 @@ Davi Moreira
 <span id="cb2-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"spread of the pile: </span><span class="sc">{</span>means<span class="sc">.</span>std(ddof<span class="op">=</span><span class="dv">1</span>)<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
 <span id="cb2-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"middle 95% of the pile: </span><span class="sc">{</span>np<span class="sc">.</span>percentile(means, <span class="fl">2.5</span>)<span class="sc">:,.0f}</span><span class="ss">"</span></span>
 <span id="cb2-17"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f" to </span><span class="sc">{</span>np<span class="sc">.</span>percentile(means, <span class="fl">97.5</span>)<span class="sc">:,.0f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Walk the code as a recipe, not as syntax: build the town, take the quantity you want from it, then run the 60-household survey 2,000 times. Ask the room which line is the estimand and which is the estimator before you reveal the printout. The last three prints are the ones the rest of the chapter leans on.</p>
 <style type="text/css">
@@ -820,12 +877,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Centre 1,569 against a truth of 1,568: the recipe aims true.</li>
 <li>Spread about 72: how far one survey typically lands from the centre.</li>
 <li>Middle 95% runs from 1,431 to 1,713.</li>
 <li>Where the pile sits. How wide it is. What range covers nearly all of it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Read the three numbers out slowly and name what each one answers. The centre answers where the procedure aims, the spread answers how far a single survey typically lands from that centre, and the middle 95% answers what range the procedure produces almost all of the time. The two terms coming next, standard error and confidence interval, are two of these three facts under a formal name.</p>
 <style type="text/css">
@@ -845,6 +904,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Standard error</span></p>
@@ -861,6 +921,7 @@ Davi Moreira
 <li>A tightly packed pile can still sit centred on the wrong quantity.</li>
 <li>The next chapter gives aim its own name.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Read the interval definition slowly, because the obvious paraphrase of it is false. You cannot see the pile from one survey, but you can estimate its width from one survey and then build a range around your single estimate. Keep width and aim apart in the room’s heads: they are two different facts about the same procedure.</p>
 <style type="text/css">
@@ -875,11 +936,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>The intervals caught the truth 94.8% of the time</h2>
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The width here is estimated from ONE survey, not from the pile.</li>
 <li>Count how often the range brackets 1,568 across 2,000 runs.</li>
@@ -895,6 +957,7 @@ Davi Moreira
 <span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>    hits <span class="op">+=</span> lo <span class="op">&lt;=</span> estimand <span class="op">&lt;=</span> hi</span>
 <span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"share of intervals that caught the truth: </span><span class="sc">{</span>hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The recipe does what it promises, and the 95% property belongs to the recipe, only while its assumptions hold. You can check that here only because this town is one we built. In a real study you never see the pile: it is implied by your sampling plan and your stated assumptions. Say the bound out loud, since it is the one people drop: simulation checks what those assumptions imply, it does not prove the world obeys them.</p>
 <style type="text/css">
@@ -914,6 +977,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The honest sentence about your own study is quoted below.</li>
 <li>The dishonest one: ‘a 95% chance the true average is between 1,470 and 1,771.’</li>
@@ -922,6 +986,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>my estimate is 1,621, from a procedure whose 95% intervals catch the true average about 95 times in 100</p>
+</div>
 </div>
 <aside class="notes">
 <p>The dishonest version is the one you will hear constantly, so make the room say the honest one aloud once. There is no chance left inside a finished interval, because both the true average and your range are now fixed. What has the 95% property is the recipe that produced the range.</p>
@@ -942,12 +1007,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A business-school team wants this month’s average rent, to price a housing product.</li>
 <li>Plan: survey 60 households drawn at random, report a 95% interval.</li>
 <li>Cheaper plan: draw 12 buildings at random, survey 5 rented flats in each.</li>
 <li>Nothing about the estimand changed. Nothing about the arithmetic changed.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>State their three commitments in the chapter’s order, because they are the three this whole lesson has been building: the estimand is average monthly rent across all renting households in the town this month, the estimator is the mean of 60 households drawn at random from the list of rented dwellings, and the uncertainty statement is a 95% interval built from the spread inside their own sample. Then note that the field team’s change sounds entirely reasonable. Knocking on 60 scattered doors is expensive, and 12 buildings of 5 flats is still 60 households from the same population.</p>
 <style type="text/css">
@@ -967,12 +1034,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Dependence:</strong> learning one observation changes what you should expect about another.</li>
 <li>One landlord, one neighbourhood, one heating system, one rent schedule.</li>
 <li>Another flat in the same building adds less than a fresh independent flat would.</li>
 <li>The arithmetic does not notice. The procedure’s honesty does.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The question the room will ask is how anyone would know their data have this problem. The chapter’s answer is to ask how the data were collected, not what they look like. If units were selected in groups, measured repeatedly, or connected to each other, the dependence is in the design, and the design is something you know before you see a single number.</p>
 <style type="text/css">
@@ -987,11 +1056,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>The naive interval promised 95% and delivered 63.2%</h2>
 <div class="kicker">
 <p>Chapter 11 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Two intervals, same data: 60 flats, or the 12 building means.</li>
 <li>Watch the two catching rates, not the estimates.</li>
@@ -1018,6 +1088,7 @@ Davi Moreira
 <span id="cb4-19"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-20"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"treating 60 flats as independent: </span><span class="sc">{</span>naive_hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss"> caught the truth"</span>)</span>
 <span id="cb4-21"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"treating 12 buildings as the unit: </span><span class="sc">{</span>cluster_hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss"> caught the truth"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Treating 60 flats as 60 independent observations catches the truth 63.2% of the time (Donner &amp; Klar 2000). It is not a little optimistic, it is wrong about one case in three. Switching to buildings as the unit brings it to 91.7%, better by a lot and still shy of 95, which is worth being honest about rather than rounding away. With only 12 buildings the usual multiplier of 1.96 is too narrow; widening it to the value appropriate for 12 groups gets 94.5%, and surveying 40 buildings at 5 flats each gets 94.2% with the ordinary multiplier.</p>
 <style type="text/css">
@@ -1037,12 +1108,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>That number comes from these data, not from a rule about group size.</li>
 <li>‘My observations are dependent’ does not tell you which way to correct.</li>
 <li>Direction depends on the design, the estimator, and how your units relate.</li>
 <li>A design that balances within each group can narrow the pile instead.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the practical lesson, and it is not about arithmetic. Say plainly that 14 is not “divide by the group size”: a different dependence structure gives a different answer. Here the flats in a building resemble each other, which widens the pile, so the honest fix is a wider interval. Do not let the room walk out with “dependence means widen”, because that is a rule the chapter refuses to give.</p>
 <style type="text/css">
@@ -1062,6 +1135,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · A worked example</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>With the variability this example assumes, and not as a general rule.</p>
 </div>
@@ -1071,6 +1145,7 @@ Davi Moreira
 <li>The wobble from which buildings you picked is untouched by measuring more flats.</li>
 <li>Extra flats are not worthless. They run into sharply diminishing returns.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Bound this the way the chapter does: it holds with the variability this example assumes, not everywhere. Close with the chapter’s four-option check, read aloud, on a reported interval of 1,470 to 1,771. The warranted reading is that under its assumptions the procedure catches the true average in about 95 of every 100 repeated surveys. The other three fail in ways worth naming: one hands the procedure’s repetition rate to a finished interval, one confuses uncertainty about a town-wide average with the far wider spread among households, and one swaps a moving sequence of intervals for this one fixed range.</p>
 <style type="text/css">
@@ -1090,9 +1165,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>Ask an assistant to interpret an interval and you will very often get this, fluently and confidently:</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1100,6 +1177,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The number is fine.</li>
 <li>The sentence is not.</li>
@@ -1107,6 +1185,7 @@ Davi Moreira
 <li>What is 95% is the long-run catching rate of the recipe that produced the range.</li>
 <li>This one matters more than it looks.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The number is fine. The sentence is not. The true average is a fixed quantity, and your computed range is now fixed too, so no probability is left to assign between them. What is 95% is the long-run catching rate of the recipe that produced the range.</p>
 <p>This one matters more than it looks. A researcher who believes the wrong version will also believe that a range which “just misses” a value is weak evidence against it, and will start reading single intervals as verdicts. The verification move is small: ask what would be repeated, and if nothing in the sentence could be repeated, the sentence is about the wrong thing.</p>
@@ -1127,6 +1206,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 11</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <ul>
@@ -1135,12 +1215,14 @@ Davi Moreira
 <li><strong>The independent unit.</strong> Only you know how your data were really collected.</li>
 </ul>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 11 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li><strong>State your estimand</strong> in one sentence, as a quantity in the world with a population, a setting, and a time.</li>
 <li><strong>State your estimator</strong> as a recipe: what you will collect, and exactly what you will compute from it.</li>
@@ -1151,6 +1233,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch11_uncertainty_foundations.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html">Chapter 11</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1180,9 +1263,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Whether the design you wrote down is strong enough to run, decided before you collect a single data point: you simulate it, read how often it lands on the truth, and name the one change that most improves it. Then you either run it, fix it, or narrow what you promised.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1190,6 +1274,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · Key terms</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">Diagnose</span></p>
@@ -1206,6 +1291,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Power</span></p>
 <p><span class="d">how often the design detects a real effect, and it means nothing until you say how you would decide (Greenland et al.&nbsp;2016).</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1227,11 +1313,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A methodologist on your committee reads your plan and asks one question.</li>
 <li>“How often would this exact design catch the real effect if you ran it a thousand times?”</li>
 <li>If your answer is “I never checked,” she stops there.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The decision on the table is whether this design is strong enough to run, judged before you spend anything collecting data. Ask the room what they would say to her today, with the design they currently have on paper. The honest answer for most first drafts is that nobody has checked, and that is what this chapter fixes.</p>
 <style type="text/css">
@@ -1251,12 +1339,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A sharp question and a clean comparison are not proof of strength.</li>
 <li>The same design can return “nothing here” nine times out of ten.</li>
 <li>Or it can land confidently on the wrong number every time.</li>
 <li>Simulation finds that out cheaply, before you collect a single data point.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The two failures are different and the chapter keeps them apart all the way through: a design that almost never detects a real effect, and a design that detects the wrong one reliably. Finding either in simulation is cheap. The months you would have spent collecting doomed data go instead to a design that can actually answer your question.</p>
 <style type="text/css">
@@ -1276,12 +1366,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You already built the four parts of a design.</li>
 <li>A model that generates fake data, and an inquiry it can compute on that data.</li>
 <li>A plan for sampling and assigning conditions, and a rule that turns data into an estimate.</li>
 <li>Example: 40 shoppers, a coin flip for the new checkout screen, two group averages subtracted.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The three-step loop of declare, diagnose, and redesign is borrowed from RDSS (Blair et al.&nbsp;2023). Declaring adds nothing to the design you already have; it only writes it down in a form that can be executed. If someone else could not run your declaration and get an estimate, it is not declared yet.</p>
 <style type="text/css">
@@ -1301,12 +1393,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Run the declared design many times on fresh simulated worlds.</li>
 <li>Example: run the coin-flip study 2,000 times and collect all 2,000 estimates.</li>
 <li>Watch how the estimate behaves across those runs, not in any one of them.</li>
 <li>Three numbers start the story, and each answers a different worry.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The three worries are: does the design aim at the truth, how much does it wobble, and how often does it detect the effect. Ask the room which of the three they would guess is their own design’s weakest, before anyone computes anything. The guess is worth recording, because the diagnosis can contradict it.</p>
 <style type="text/css">
@@ -1326,12 +1420,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The truth is 2. Five runs return 0, 1, 2, 3, and 4.</li>
 <li>The errors are -2, -1, 0, +1, +2, which average to zero.</li>
 <li>Bias is zero even though only one run landed on 2.</li>
 <li>Misses that all lean one way tell you the design is tilted.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Bias is the average of your errors across the runs, counting direction: each estimate minus the truth, averaged. A design is unbiased when its estimates center on the true answer. Direction is what makes bias different from plain distance. Misses that cancel tell you the design is aimed correctly; misses that all lean one way tell you it is tilted.</p>
 <style type="text/css">
@@ -1351,11 +1447,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Variance is how much the estimate wobbles from one run to the next.</li>
 <li>Example: estimates swinging between -5 and +9 around a true value of 2.</li>
 <li>More of the same kind of data, from the same design, usually shrinks that wobble.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Hold this one next to bias, because the difference decides what a redesign should change. Collecting more of the same kind of data usually shrinks the wobble, and it is the one problem size reliably helps. Nothing here says size fixes anything else, and the worked example is about to show a case where it fixes nothing at all.</p>
 <style type="text/css">
@@ -1375,6 +1473,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Power is how often the design detects a real effect.</li>
 <li>Example rule for checkout: call it an effect when the gap exceeds about twice its typical wobble.</li>
@@ -1382,6 +1481,7 @@ Davi Moreira
 <li>That threshold is never the chance your one finding is false.</li>
 <li>Clearing the rule in 8 of 100 runs, when the truth is 2, is 8% power: almost useless.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>A statistical test is the rule you use to decide whether your data conflict enough with “no effect” to call the result real, and the threshold is how demanding that rule is. The threshold is a property of the rule read across imagined repetitions, never the chance that your one finding is false (Greenland et al.&nbsp;2016). Power moves with everything in the declaration: the test, the threshold, the effect you planted, the sample size, and how the world makes noise. Report the whole card beside the number.</p>
 <style type="text/css">
@@ -1401,6 +1501,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>Bias, variance, and power are properties of the design read across many runs, never off a single study.</p>
 </div>
@@ -1416,6 +1517,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Coverage</span></p>
 <p><span class="d">how often the range you report around your estimate actually contains the truth</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1437,12 +1539,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Change one part in response to the diagnosis, then run the diagnosis again.</li>
 <li>Low power that comes from high variance calls for more data.</li>
 <li>A tilt built into the design calls for a different design.</li>
 <li>More data makes a tilted estimate steadier, not truer.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>One change at a time is what makes the second diagnosis readable: if you change three things, you cannot say which one moved the numbers. The tilt case is the one people get wrong, and it is worth saying plainly. When the problem is who ends up in which group, a bigger sample buys precision around the wrong answer.</p>
 <style type="text/css">
@@ -1462,12 +1566,18 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>You can go around as many times as the diagnosis asks, changing one thing each time.</p>
 </div>
-
-<img data-src="figs/diagnose_loop.png" class="quarto-figure quarto-figure-center r-stretch" style="width:62.0%" alt="The loop, and the call that ends it. You can go around as many times as the diagnosis asks, changing one thing each time, but the decision to run, rev"><div class="figure-caption">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/diagnose_loop.png" class="quarto-figure quarto-figure-center" style="width:62.0%" alt="The loop, and the call that ends it. You can go around as many times as the diagnosis asks, changing one thing each time, but the decision to run, rev"></p>
+</figure>
+</div>
+<div class="figure-caption">
 <p>The loop, and the call that ends it. You can go around as many times as the diagnosis asks, changing one thing each time, but the decision to run, revise, or narrow the claim is never inside the loop.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The loop is declare, diagnose, redesign, and back to declare. What the figure marks off is the honest call at the end: run it as declared, redesign again, or narrow the claim to what this design can deliver. That call is never inside the loop, because no diagnosis can make it for you.</p>
@@ -1488,12 +1598,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An online grocer asks whether a one-tap reorder button speeds up checkout.</li>
 <li>The button rebuilds a shopper’s last cart in a single press.</li>
 <li>Your outcome is seconds-to-complete.</li>
 <li>In the world you simulate, the button shaves 8 seconds off.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You declare it: build shoppers whose baseline checkout times vary a lot, because some browse and some race; flip a coin to assign the button; subtract the two group averages. Notice that you set the true effect yourself. That is what makes the diagnosis readable, because you always know what the right answer was.</p>
 <style type="text/css">
@@ -1513,12 +1625,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You diagnose a pilot of 12 shoppers per version.</li>
 <li>Bias is near zero, so the design aims true.</li>
 <li>The spread is huge, because per-person times vary so much.</li>
 <li>Power comes back under 10%.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the pairing the chapter wants on the table: a design can be aimed correctly and still be worthless. It points at the 8-second gain on average, and almost never gets close enough on any single run to prove it. Ask the room what they would change, and hold their answer against the next slide.</p>
 <style type="text/css">
@@ -1538,6 +1652,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Raise the sample to 400 per version: power jumps past 90%.</li>
 <li>Now drop the coin flip and let shoppers opt into the button themselves.</li>
@@ -1545,6 +1660,7 @@ Davi Moreira
 <li>That design is just as tight at 400 per version, yet it centers on 14 seconds.</li>
 <li>No amount of extra data moves it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The button gets credit for speed that habit delivered. That gap names the last idea. A randomized design can identify the button’s effect, meaning pin the time gap on the button and rule out other causes, while the confounded one shows only an association, where the two move together but a common cause could explain it.</p>
 <style type="text/css">
@@ -1559,11 +1675,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>The bias column and the power column answer different questions</h2>
 <div class="kicker">
 <p>Chapter 12 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The block declares all three designs and diagnoses each one.</li>
 <li>That is the whole loop this chapter teaches.</li>
@@ -1598,6 +1715,7 @@ Davi Moreira
 <span id="cb5-26"><a aria-hidden="true" tabindex="-1"></a>           <span class="st">"opt-in, 400/arm"</span>: run(<span class="dv">400</span>, <span class="va">False</span>)}</span>
 <span id="cb5-27"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame(designs).T.<span class="bu">round</span>(<span class="dv">2</span>).to_string())</span>
 <span id="cb5-28"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">size cured the variance. it did nothing for the opt-in design's bias"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The true effect is planted at -8.0 seconds and SEED = 464, so every run here is reproducible. Each design is diagnosed over 2,000 runs. Diagnosing a design by simulating it many times before running it once is standard practice for evaluating statistical methods (Morris et al.&nbsp;2019). Change one input live, the arm size or the opt-in rule, and watch which column moves.</p>
 <style type="text/css">
@@ -1612,14 +1730,16 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>An AI failure case</h2>
 <div class="kicker">
 <p>Chapter 12</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You paste your confounded observational design and ask, “My estimate is noisy. What should I do?” The tool answers with confidence: “Collect more observations to tighten your estimate.” That sounds obviously right and is exactly wrong for your case. Your problem is <strong>bias</strong> from self-selection, not variance, and more data only makes a biased estimate a more <em>precise</em> wrong number. You catch it the way this chapter teaches: run the confounded design in simulation at a large sample and watch the estimates cluster tightly around 14 seconds when the truth is 8. The spread shrank; the error did not. That is the <code>plausible-but-wrong-method</code> failure, and your own diagnosis unmasks it.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1627,16 +1747,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 12</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Three calls stay yours. <strong>Which world your question assumes</strong>, the model you declare, is a claim about reality no tool can make for you. <strong>Which single quantity you name as your inquiry</strong> decides what “success” even means. And <strong>the honest call of whether to run a design your own diagnosis says is too weak</strong> is a judgment you sign your name to. An AI can propose threats and draft simulation code, but it cannot decide that your under-powered study is worth months of your life anyway.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 12 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Declare your design as something that can be run.</li>
 <li>Diagnose it.</li>
@@ -1647,6 +1770,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch12_declaring_and_diagnosing_a_research_design.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html">Chapter 12</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1673,9 +1797,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Whether you are permitted to collect the data your design calls for, who decides that, and how you will hold the data once you have them. You settle this before collection starts, because it is the one design flaw no later analysis can repair.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1683,6 +1808,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · Key terms</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">Cleared</span></p>
@@ -1699,6 +1825,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Not authorized — stop</span></p>
 <p><span class="d">you may not proceed as planned.</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1720,12 +1847,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A bad estimator can be swapped. A weak design can be redesigned.</li>
 <li>Data collected without permission cannot be fixed by any amount of later care.</li>
 <li>The thing that went wrong already happened to someone.</li>
 <li>Work collected without the right permissions often cannot be published or presented.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>That is why the decision sits exactly here, right after your design becomes executable and right before you execute it. There is a second reason, less noble and just as real: you can find yourself holding data you are not allowed to use, at the worst possible moment. Put the usual objection to the room, that this is overkill for a project this small. The size of the project does not change what happens to the person you interviewed, and small projects get lighter review, not no review.</p>
 <style type="text/css">
@@ -1745,6 +1874,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>This chapter is not legal advice, and rules differ by country, institution, and data source.</p>
 </div>
@@ -1756,6 +1886,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Competent authority</span></p>
 <p><span class="d">whoever, at your institution, is empowered to make this ruling</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1777,12 +1908,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Cleared:</strong> a published national statistics table, with no individual records in it.</li>
 <li><strong>Formal determination required:</strong> you plan to interview people about their experience of unemployment.</li>
 <li><strong>Pending:</strong> protocol submitted, and you refine the interview guide while you wait.</li>
 <li><strong>Not authorized — stop:</strong> a licence that forbids the use you have in mind.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Pending is not a freeze. Work that does not touch people or their data may continue while you wait. And stopping is a design decision, not a failure: the chapter ends with what to do instead, so the fourth card is not the end of a project.</p>
 <style type="text/css">
@@ -1802,12 +1935,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Is this meant to produce knowledge that generalizes? Not ‘will I publish it’ (U.S. Department of Health and Human Services 2026).</li>
 <li>Do living people, or data about identifiable living people, enter your study?</li>
 <li>How do the data reach you, and are they sensitive?</li>
 <li>If the first two are yes: assume formal determination required until your competent authority rules otherwise.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Whether you intend to publish is not the test in every framework, and some national policies place course-based research expressly inside their scope. The second question covers records, logs, and existing datasets in which individuals can be picked out; it does not stop being about people because the file arrived as a spreadsheet. The third separates collecting directly from people, using data someone else already collected, and sensitive data: health, finances, immigration status, political views, anything that could harm someone if it escaped. Do not talk yourself out of asking. The cost of asking is an email; the cost of not asking is your project.</p>
 <style type="text/css">
@@ -1827,6 +1962,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Public posts: availability and permission are separate questions (Franzke et al.&nbsp;2020).</li>
 <li>Your classmates are human subjects, and classroom power makes consent harder.</li>
@@ -1834,6 +1970,7 @@ Davi Moreira
 <li>A public dataset with individual records: access is not identifiability.</li>
 <li>“I am not going to publish it” is the most common escape hatch, and the weakest.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Some frameworks require both public availability and the absence of any reasonable expectation of privacy before a public-information exemption applies, and platform terms often restrict collection regardless of what any review board says. People posted to an audience, not to a researcher. Interviewing a professional can genuinely be outside the scope while you are collecting facts about an organization rather than about a person. Frameworks generally turn on the kind of activity you are running, not on where the output lands, so a study you never publish can still need a determination. The sixth case is any of the five above plus an AI tool: adding an assistant does not simplify the determination, it adds a party to the handling of the data.</p>
 <style type="text/css">
@@ -1853,12 +1990,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The question: do first-generation students use campus advising differently from continuing-generation students?</li>
 <li>The plan: a short survey of 800, names removed before anything is analyzed.</li>
 <li>De-identification means a person cannot reasonably be picked out of the data.</li>
 <li>Deleting names is not that. The remaining columns can still single someone out (Sweeney 2000).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>That promise sounds sufficient, and it is the promise most first projects make. The simulation on the next slide runs at SEED 464, so the numbers reproduce exactly. Before you run it, ask the room to predict how many of the 800 will be unique on four ordinary columns.</p>
 <style type="text/css">
@@ -1873,11 +2012,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>Four ordinary columns, and two in three respondents are unique</h2>
 <div class="kicker">
 <p>Chapter 13 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><code>share_unique</code> is the share of rows whose combination of columns occurs exactly once.</li>
 <li>Department alone singles out nobody. Department and year together, still nobody.</li>
@@ -1904,6 +2044,7 @@ Davi Moreira
 <span id="cb6-19"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"unique on department + year:           </span><span class="sc">{</span>share_unique(dept, year)<span class="sc">:.1%}</span><span class="ss">"</span>)</span>
 <span id="cb6-20"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"unique on department + year + country: </span><span class="sc">{</span>share_unique(dept, year, country)<span class="sc">:.1%}</span><span class="ss">"</span>)</span>
 <span id="cb6-21"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"and adding age:                        </span><span class="sc">{</span>share_unique(dept, year, country, age)<span class="sc">:.1%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Nothing here is a rare or secret variable; these are four columns a survey collects without thinking. Two in three respondents are uniquely described in a file with no names in it. Anyone who knows one respondent’s department, year, country and age can find that person’s answers.</p>
 <style type="text/css">
@@ -1918,11 +2059,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>The protection failed most for the least common characteristics</h2>
 <div class="kicker">
 <p>Chapter 13 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Among respondents from the most common country, 40.3% are unique.</li>
 <li>Among those from less common countries, 97.2% are.</li>
@@ -1935,6 +2077,7 @@ Davi Moreira
 <span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>share_unique(dept[rare], year[rare], country[rare], age[rare])<span class="sc">:.1%}</span><span class="ss">"</span>)</span>
 <span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"unique among most-common-country students: "</span></span>
 <span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>share_unique(dept[common], year[common], country[common], age[common])<span class="sc">:.1%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>This is the part worth sitting with. The failure is uneven, and it lands hardest on the people with the least common characteristics, who are often exactly the people a study about belonging is asking about. Nearly every one of them is individually identifiable in a file described as anonymous.</p>
 <style type="text/css">
@@ -1954,12 +2097,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Not more deleting. Decide which columns your declared analysis actually requires.</li>
 <li>Comparing first-generation and continuing-generation groups may not need country at all.</li>
 <li>Age may be needed only as a range.</li>
 <li>Then the risky combination never exists (European Parliament and Council of the European Union 2016).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Data minimisation is the name for this: collecting only what your declared analysis requires. It is available only before collection, because you cannot un-collect a column once it is in the file. Step 3 of the It is your turn section is where you write out every variable you plan to collect and cross out the ones your analysis does not require.</p>
 <style type="text/css">
@@ -1979,12 +2124,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · Consent is a process</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Informed consent is the ongoing condition that a participant understands and agrees (National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research 1979).</li>
 <li>They understand what you will do with their words, in language they actually use.</li>
 <li>They can decline without cost, which is hardest where you hold any power.</li>
 <li>They can withdraw later, so you must know which data are theirs.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>That last requirement sits in tension with anonymity, and the chapter asks you to notice the tension rather than paper over it. If you truly cannot link a response to a person, you cannot honour a withdrawal request either. Decide which one your study needs, and tell participants the truth about it.</p>
 <style type="text/css">
@@ -2004,12 +2151,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · AI and the exposure question</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A disclosure passes data to a third party your permission did not cover.</li>
 <li>Your participants agreed to share with you and your project.</li>
 <li>They did not agree to share with whatever service you found convenient.</li>
 <li>That does not make AI unusable here. It makes the boundary matter.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Name the boundary out loud: work with the tool on the shape of your data, not its contents. Column names, types, ranges and the analysis you intend are usually safe to describe, and individual records usually are not. Ask it to write the code and run the code yourself, which is the pattern this book teaches everywhere else anyway. If you need to show real values, generate a synthetic sample that shares the structure and none of the people; it debugs your pipeline just as well.</p>
 <style type="text/css">
@@ -2029,12 +2178,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · AI and the exposure question</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Check retention, whether inputs train the model, human review, and storage location.</li>
 <li>Some agreements prohibit third-party processing outright, and no setting inside the tool changes that.</li>
 <li>An institution-provided tool is not automatically approved for every dataset.</li>
 <li>When a transfer is authorized, send the smallest fragment that does the job.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Your AI Research Ledger should record what you sent, not only what came back, so the exposure question has an answer you can produce on request. If you paste something you should not have, the recovery is procedural, not private: stop sharing further, write down exactly what went where and when, and tell your supervisor and your competent authority promptly. Do not conceal it, and do not assume that deleting the conversation undid it.</p>
 <style type="text/css">
@@ -2054,12 +2205,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · Data governance for a small project</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Where the data live: one named location, backed up, not scattered.</li>
 <li>Who can open it: name the people. “The group chat” is not access control.</li>
 <li>How long you keep it: set an actual date now.</li>
 <li>What happens at the end: deletion, transfer, or deposit under the licence you promised.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>All four take about ten minutes, and none of them can be added afterwards. On a project this size, who can open it is usually you and your supervisor. Data you no longer need is pure risk, and “forever, just in case” is a decision you are making whether or not you notice.</p>
 <style type="text/css">
@@ -2079,6 +2232,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · Four situations that must stop or wait</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>When the answer is stop, you are one design decision away from a different project.</p>
 </div>
@@ -2088,6 +2242,7 @@ Davi Moreira
 <li>Pasting 200 agreement-bound rows: you accepted terms you had not read.</li>
 <li>The interview that turned: you asked about the organization, the answer was about a person.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Read the tell first, then the ruling. The forum and the study group both land on formal determination required, and sensitive data plus a personal relationship plus no determination is the combination that ends projects; the pasted spreadsheet is not authorized and has to be reported; the interview that turned is a pause and ask, before transcribing. If you have no institution to consult, the route is data that carry no permission question: published aggregate statistics, licensed open datasets with no individual records, or simulated data you generate yourself. What you may not do is decide for yourself that collecting from people is fine because there was nobody to ask. Close on the chapter’s own check: 5,000 hospital discharge records with names and addresses removed still describe identifiable living people, so the answer is formal determination required, not cleared.</p>
 <style type="text/css">
@@ -2107,9 +2262,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>Describe a study to an assistant and ask whether you need approval, and you will usually get a fluent, specific, reassuring answer:</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -2117,6 +2274,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Three things are wrong at once.</li>
 <li>The tool does not know your jurisdiction or your institution’s rules for student projects.</li>
@@ -2124,6 +2282,7 @@ Davi Moreira
 <li>And it has stated a conclusion, which is the one thing in this chapter that is not yours or its to state.</li>
 <li>The failure is worse than an ordinary wrong answer, because it is exactly the answer you were hoping for, delivered in the register of someone who knows.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Three things are wrong at once. The tool does not know your jurisdiction or your institution’s rules for student projects. It does not know your data source’s licence. And it has stated a conclusion, which is the one thing in this chapter that is not yours or its to state.</p>
 <p>The failure is worse than an ordinary wrong answer, because it is exactly the answer you were hoping for, delivered in the register of someone who knows. The verification move is structural, not factual: an answer to “do I need approval” is only worth anything from the body that grants it. Use the tool to generate the questions. Take the questions to the person who decides.</p>
@@ -2144,6 +2303,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 13</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <ul>
@@ -2152,12 +2312,14 @@ Davi Moreira
 <li><strong>What leaves your machine.</strong> Every paste is a decision about somebody else’s data.</li>
 </ul>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 13 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li><strong>Run the determination.</strong> Answer the three questions in writing: is your knowledge meant to travel, do identifiable living people enter your study, and how do the data reach you.</li>
 <li><strong>Declare one permission status</strong> — cleared, formal determination required, pending, or not authorized — and name the competent authority at your institution who covers student projects.</li>
@@ -2169,6 +2331,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch13_research_ethics_and_data_governance.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html">Chapter 13</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -2198,28 +2361,33 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 4</p>
 </div>
+<div class="slide-body">
 <div class="decision">
 <p><span class="label">The artifact</span></p>
 <p><strong>What this milestone produces.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization you mark for revision, warrant, answer strategy and uncertainty statement — plus the design properties you diagnosed (its bias, its wobble, and how often it would detect what you are looking for), your permission status, and a redesign record. Measurement proper is taught and assessed in Studio 6; here you only commit to a starting choice and say why it is defensible for now.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>What you bring</h2>
 <div class="kicker">
 <p>Milestone 4 · Check before you start</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html">Lesson 10 — Model, Inquiry, Data Strategy, and Answer Strategy</a>: your MIDA declaration: model, inquiry, data strategy, and answer strategy, with the alignment sentence that ties them together — carrying population, setting and time, the provisional operationalization, and the warrant into Contract v0.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html">Lesson 11 — Uncertainty Before You Need It</a>: your estimand and estimator, the repeat-run story behind them, your dependence structure, and your uncertainty sentence next to its wrong twin.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html">Lesson 12 — Declaring and Diagnosing a Research Design</a>: your design diagnosis: bias, wobble, and power read from simulation, one redesign, and the honest call that followed.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html">Lesson 13 — Research Ethics and Data Governance</a>: your declared permission status, your minimised column list, your AI boundary, and your four governance decisions.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 <h2>The practice</h2>
 <div class="kicker">
 <p>Milestone 4 · In the studio</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write the four MIDA parts of your design so a stranger could run them. (MIDA is Blair, Cooper, Coppock, and Humphreys’ framework, developed at book length in RDSS.)</li>
 <li>State your estimand and estimator, and describe in words what would differ if the procedure ran again.</li>
@@ -2228,12 +2396,14 @@ Davi Moreira
 <li>Minimise your columns against the declared analysis, and check what a re-identification test would find.</li>
 <li>Write the redesign record - what you changed after diagnosing, and why. A diagnosis that changed nothing is a diagnosis you should distrust.</li>
 </ol>
+</div>
 </section>
 <section class="slide level2">
 <h2>The four rails, here</h2>
 <div class="kicker">
 <p>Milestone 4 · Every studio, these four</p>
 </div>
+<div class="slide-body">
 <div class="rails">
 <div class="rail">
 <p><span class="t">Ethics, permissions, and data exposure</span></p>
@@ -2252,24 +2422,31 @@ Davi Moreira
 <p><span class="d">This is where your uncertainty statement is first written down and first tested.</span></p>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 <h2>A version, not a pass</h2>
 <div class="kicker">
 <p>Milestone 4</p>
 </div>
+<div class="slide-body">
 <div class="note-card">
 <p><span class="label">How the record works</span></p>
 <p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
 </div>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>The one rule</h2>
+<div class="creed">
+<p>AI is your arm and your research assistant, not your brain.</p>
+</div>
 <div class="divider-line">
-<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
 <p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
 </div>
+<div class="deck-links">
 <p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio04-declare-and-diagnose.html">Studio 4 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html">Milestone 4</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+</div>
 
 
 </section>
@@ -2490,6 +2667,180 @@ Davi Moreira
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /* edrai-fit.js — fit each slide's body to the body region, at runtime.
+     *
+     * The builder used to guess: it counted characters and stamped .dense /
+     * .denser / .densest, which shrank the type on slides that had room to spare
+     * and still let a long code block run past the bottom edge. This measures
+     * the rendered height instead, so a slide is never smaller than it needs to
+     * be and never larger than it fits.
+     *
+     * It also drops the type of a title that would run into the hairline, and
+     * tells the chrome when the current slide is an ink field.
+     */
+    (function () {
+      "use strict";
+
+      var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+      var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+      var MIN_TITLE = 0.62;
+      var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+      var LEAD_MAX = 88;
+      var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+      function child(section, cls) {
+        var kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+        }
+        return null;
+      }
+
+      function fitTitle(section) {
+        if (section.classList.contains("divider")) return;
+        var h2 = null, kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+        }
+        if (!h2) return;
+        section.style.removeProperty("--h2fit");
+        var k = 1;
+        for (var n = 0; n < 5; n++) {
+          var need = h2.scrollHeight;
+          if (need <= TITLE_BAND) break;
+          k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+          section.style.setProperty("--h2fit", k.toFixed(4));
+          if (k <= MIN_TITLE) break;
+        }
+      }
+
+      // The natural height of the body's content.
+      //
+      // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+      // under-full slide reports "exactly full" and both the growth step and the
+      // optical lead below silently become no-ops. Walking the children gives the
+      // real figure, in unscaled layout pixels, above and below the box alike.
+      function naturalHeight(body) {
+        var kids = body.children;
+        if (!kids.length) return 0;
+        var first = kids[0], last = kids[kids.length - 1];
+        return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+      }
+
+      function fitBody(section) {
+        var body = child(section, "slide-body");
+        if (!body) return;
+        section.classList.remove("fit-top");
+        section.style.setProperty("--fit", "1");
+        section.style.setProperty("--lead", "0px");
+
+        var avail = body.clientHeight;
+        if (!avail) return;
+
+        // Converge on the largest size that still fits the body region. This
+        // grows a sparse slide as readily as it shrinks a crowded one, which is
+        // the whole point: three lines of type should hold the canvas, not float
+        // in the middle of it at the same size as a slide carrying twenty.
+        // Growth moves where lines wrap, so the step is damped and the last size
+        // known to fit is kept as a floor.
+        var k = 1, fits = 0;
+        for (var n = 0; n < 12; n++) {
+          var need = naturalHeight(body);
+          if (!need) break;
+          if (need <= avail) fits = Math.max(fits, k);
+          var next = k * Math.pow((avail * 0.985) / need, 0.6);
+          next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+          if (Math.abs(next - k) < 0.005) break;
+          k = next;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+        if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+          k = fits;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+
+        // Optical placement. A body that fills the region starts at the top; one
+        // with room to spare drops by a fraction of what is left over, capped, so
+        // that it sits under the title instead of either jammed against it or
+        // marooned in the middle of the canvas.
+        var slack = avail - naturalHeight(body);
+        var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+        section.style.setProperty("--lead", Math.round(lead) + "px");
+
+        // Past the floor and still too tall. The slide spills instead of losing
+        // its last lines, and says so, because a deck that quietly drops the end
+        // of a worked example is worse than one that looks crowded.
+        if (naturalHeight(body) > avail + 1) {
+          section.classList.add("fit-top");
+          var h = section.querySelector("h2");
+          if (window.console && console.warn) {
+            console.warn("EDR|AI: slide does not fit at the minimum size —",
+                         h ? h.textContent.trim() : "(untitled)");
+          }
+        }
+      }
+
+      function fit(section) {
+        if (!section || !section.offsetParent && !isPrint()) return;
+        fitTitle(section);
+        fitBody(section);
+      }
+
+      function isPrint() {
+        return document.body.classList.contains("print-pdf") ||
+               /print-pdf/.test(window.location.search);
+      }
+
+      function markChrome() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        var cur = Reveal.getCurrentSlide();
+        reveal.classList.toggle("on-dark",
+          !!cur && cur.classList.contains("divider"));
+        reveal.classList.toggle("on-title",
+          !!cur && cur.classList.contains("quarto-title-block"));
+      }
+
+      function run() {
+        if (isPrint()) {
+          var all = document.querySelectorAll(".reveal .slides > section");
+          for (var i = 0; i < all.length; i++) fit(all[i]);
+          return;
+        }
+        if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        // Only the current slide. reveal keeps every other section at
+        // `display: none`, where offsetHeight is 0 and nothing can be measured,
+        // so a "pre-fit the neighbours" pass would be a no-op that reads as
+        // working code. reveal makes the incoming slide visible BEFORE it fires
+        // slidechanged, so fitting here lands before the frame is painted.
+        fit(Reveal.getCurrentSlide());
+        markChrome();
+      }
+
+      function boot() {
+        if (typeof Reveal === "undefined" || !Reveal.on) {
+          return void setTimeout(boot, 60);
+        }
+        Reveal.on("ready", run);
+        Reveal.on("slidechanged", run);
+        Reveal.on("resize", run);
+        if (Reveal.isReady && Reveal.isReady()) run();
+        // Web fonts change the metrics after first paint; measure again once they
+        // have actually landed, and once more on a late layout.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(run, 0); });
+        }
+        setTimeout(run, 400);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

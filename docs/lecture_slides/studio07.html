@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa6bf9334f07eb3fc1071a031a011523.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,13 +192,21 @@
       margin-right: 0; 
     }
   </style>
+  <!-- EDR|AI deck fonts. Two voices: Source Sans 3 for the deck's own
+       scaffolding, Source Serif 4 for the book's verbatim words, JetBrains Mono
+       for code. Every one degrades to a metric-compatible or long-installed
+       fallback in edrai-slides.scss, so a room with no network still renders a
+       correct deck. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <h1 class="title">HONR 46400 · Evidence-Driven Research</h1>
   <p class="subtitle">Studio 7 — Produce a reproducible first analysis</p>
 
 <div class="quarto-title-authors">
@@ -215,9 +223,10 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 7</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">What you can defend when you leave</span></p>
 <p>Produce one honest result you can reproduce from a clean start, with its uncertainty attached.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -225,7 +234,9 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 7</p>
 </div>
+<div class="slide-body">
 <p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html">Milestone 7: Your first reproducible analysis</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.</p>
+</div>
 <aside class="notes">
 <p>This is where your project produces its first real number. The milestone asks for less than you might expect: one honest result, with its uncertainty attached, reproducible from a clean start. The point is not volume. It is a result you can trace from claim to output to data cell, because every number you will ever defend in this project passes through the discipline you set here.</p>
 <p>Milestone 8 exists to attack this result; the cleaner your record here, the more the attack can teach you. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
@@ -246,10 +257,12 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 7 · Road map</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html">Lesson 22 — AI as Programmer</a>: your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html">Lesson 23 — AI as Analytical Assistant</a>: your headline estimate with its uncertainty statement and cycle log, two independently re-derived numbers, a placebo run where licensed, the clean-restart record, the environment record, and the claim-to-output trace.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>AI as Programmer</h2>
@@ -265,9 +278,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>You decide <strong>which quantity your code must compute and over which set of cases</strong>, and you keep deciding it at every turn of the loop, because the tool rewrites the code each time you press enter. A cell that runs without an error is not a result you have earned. It is a draft you have not read.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -275,12 +289,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The decision on the table: which quantity your code computes, and which cases it counts.</li>
 <li>He does not care that the code was clean, only what it counted and about whom.</li>
 </ul>
 <div class="note-card">
 <p><em>“Do not read me the percentage. Tell me which cities it was computed over. If your code only saw the towns with an open-data portal, you have not described the state. You have described the portals.”</em> — a <strong>state open-records officer</strong>, asked to act on a transparency report</p>
+</div>
 </div>
 <aside class="notes">
 <p>Start with the person who has to act on the number, because he is the one who will ask the question the code cannot answer for you. Notice what he does not ask about: syntax, style, whether the notebook ran. He asks which cases the percentage covers. Ask the room whether they could answer that question, right now, for a number already sitting in their own project.</p>
@@ -301,12 +317,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An AI writes your analysis code in seconds, and it runs.</li>
 <li>That is exactly where the danger sits.</li>
 <li>It writes fluent code for the quantity it <em>thinks</em> you asked for.</li>
 <li>Paste the printed number into your report and you have signed for a quantity you never checked.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The speed is what makes this hard. Nothing about a fast, clean result signals that the question changed on the way. The tool works over whatever rows sit in the dataframe you handed it, and it will not tell you which set that was. The chapter’s line is worth reading aloud: a cell that runs without an error is not a result you have earned.</p>
 <style type="text/css">
@@ -326,6 +344,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Descriptive summary</span></p>
@@ -340,6 +359,7 @@ Davi Moreira
 <li>The tool is the programmer. You are the researcher.</li>
 <li>Example: “the share of municipalities in the state that post council minutes within seven days of the meeting.”</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The quantity of interest is written in words, not in code, and it is written first. That ordering is the whole defense. If the sentence exists before the prompt does, you have something to compare the returned code against. If it does not, whatever the tool computes becomes your question by default.</p>
 <style type="text/css">
@@ -359,6 +379,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Frame</span></p>
@@ -373,6 +394,7 @@ Davi Moreira
 <li>Example: only the cities that publish through an open-data portal.</li>
 <li>Those tend to be the largest and best-staffed in the state.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Frame and quantity are the pair you keep deciding. The portal example matters because the gap between the frame and the question is not random: the cities that are easiest to reach are also the ones most likely to be complying. Ask the room what their own frame is, in a sentence a stranger could check.</p>
 <style type="text/css">
@@ -392,11 +414,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A tool can compute a flawless share over the wrong frame.</li>
 <li>The code still finishes with a green check.</li>
 <li>A cell can execute with no error and compute a different number than your question needs (Vaithilingam et al.&nbsp;2022).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the trap the chapter closes, so slow down here. The arithmetic is not in dispute. The share is real over the rows the tool saw. What the green check certifies is that the code ran, and nothing more than that. There is no error message for computing the wrong quantity.</p>
 <style type="text/css">
@@ -416,12 +440,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Nobody gets working analysis code from one prompt, and you should not try to.</li>
 <li>You prompt, read the output, interrogate it, refine, and run it again.</li>
 <li>Agentic tools now run that loop themselves and hand you a tidy end state.</li>
 <li>The loop is a real gain in speed. It is also where your frame goes missing.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Set the expectation honestly: the first prompt is turn one, not an answer. When the tool runs the turns for itself, it writes, executes, reads the error, patches, reruns, and reports back with a paragraph about how well it went. You gain the speed and you lose sight of the turns, which is the trade this chapter asks you to manage rather than refuse.</p>
 <style type="text/css">
@@ -441,12 +467,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Any turn can add a filter, drop a join, or reach for a different column.</li>
 <li>Nothing announces the change. The number just gets prettier.</li>
 <li>Every time the code changes, ask again: what quantity, over which cases?</li>
 <li>Read the code, not the tool’s summary of the code (Sandve et al.&nbsp;2013).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The code you finally read may not be the code you specified three turns ago. That is why checking once at the end does not work. You own two things the programmer cannot: you define the quantity and the frame in plain words before you delegate (Blair et al.&nbsp;2023), and you confirm that the code in front of you right now computes that quantity over that frame, and not a plausible neighbor. When a tool ran the cycles for you, make it surrender the choices it made along the way.</p>
 <style type="text/css">
@@ -466,12 +494,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your question: what share of city councils post their meeting minutes within seven days?</li>
 <li>You have a spreadsheet scraped from municipal websites.</li>
 <li>You ask an AI for the Python that returns the share posting on time.</li>
 <li>The printout says 95%, and the temptation is to write “compliance is strong.”</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Everything here looks like success. The question is plain, the data exist, the code runs, the number is high. Instead of writing the sentence, read what the code did. That single change of habit is what the rest of the example is built on.</p>
 <style type="text/css">
@@ -491,12 +521,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The dataframe holds only the 40 municipalities that publish through an open-data portal.</li>
 <li>There are 240 on the state roster. That is a convenience sample standing in silently.</li>
 <li>The code also calls <code>.dropna()</code>, and the dropped rows are the towns the scraper came back empty on.</li>
 <li>The 95% describes the best-resourced cities with their worst records deleted.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two separate narrowings, and neither one announced itself. The first was in the data you were handed; the second was written by the tool. Both push the number the same way, because the towns with the thinnest clerical staff are exactly the ones the scraper failed on. Ask the room which of the two would have been harder to catch.</p>
 <style type="text/css">
@@ -516,12 +548,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You re-anchor to your quantity: the share over every municipality on the state roster.</li>
 <li>Unretrievable records get flagged, not dropped.</li>
 <li>At most one in six municipalities is confirmed to post on time.</li>
 <li>For most of the state you simply do not know.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The refined prompt says precisely what the earlier one left open, and the picture changes. Keep the chapter’s bound on the new number: one in six is the confirmed share, and the rest of the roster is unknown rather than non-compliant. That unknown is a finding you report, not a gap to paper over.</p>
 <style type="text/css">
@@ -541,12 +575,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An agentic run would have handed you the polished 95% with a confident paragraph.</li>
 <li>The decision that shrank your state to 40 cities would sit inside a step you never saw.</li>
 <li>Code that runs cleanly while answering the wrong question is the documented risk of accepting output alone (Vaithilingam et al.&nbsp;2022).</li>
 <li>You did the research by deciding what the code was allowed to count.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the sentence to leave the room with. Nothing was wrong with the code as code, and an agent running all three turns would have shown you only the tidy end state. The research happened at the point where a human decided which cases the number was allowed to cover. That decision has no automated substitute.</p>
 <style type="text/css">
@@ -561,11 +597,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>The 95% is real. Read what it is 95% of.</h2>
 <div class="kicker">
 <p>Chapter 22 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Watch three shares in order: portal cities only, the same after <code>.dropna()</code>, then the whole roster.</li>
 <li>The roster line is a range, because unretrievable records are flagged instead of deleted.</li>
@@ -595,6 +632,7 @@ Davi Moreira
 <span id="cb1-22"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"records the scraper never returned  : </span><span class="sc">{</span>(<span class="op">~</span>scraped)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> of </span><span class="sc">{</span>roster<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb1-23"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the clean run was never wrong about its own rows. it was answering"</span>)</span>
 <span id="cb1-24"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a different question than the one you asked"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The block reproduces all three turns on the same 240-municipality roster, including the rows the scraper never returned. Run it and read the three numbers in order, because the movement between them is the lesson. Ask the room which of the printed figures they would put in a report, and what sentence would have to travel with it.</p>
 <style type="text/css">
@@ -614,9 +652,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You ask for the on-time share and the tool returns tidy code that prints, with full confidence, “<strong>95% of councils post minutes on time. Compliance is strong.</strong>” The code has no error and reads beautifully. The trap is buried in two lines: the input dataframe was already limited to cities with an open-data portal, and a <code>.dropna()</code> silently removed the towns where no posting date came back. The share is real arithmetic over the wrong set.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -624,6 +664,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it by reading the code, not its summary.</li>
 <li>Printing the dataframe’s shape shows 40 municipalities, not 240.</li>
@@ -631,6 +672,7 @@ Davi Moreira
 <li>Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses.</li>
 <li>A green check certified that the code ran, never that it answered your question.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it by reading the code, not its summary. Printing the dataframe’s shape shows 40 municipalities, not 240. Printing the row count before and after <code>.dropna()</code> shows how many towns vanished, and looking at which ones reveals the smallest governments in the state. Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses. A green check certified that the code ran, never that it answered your question.</p>
 <style type="text/css">
@@ -650,16 +692,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 22</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>You define <strong>what quantity the code computes</strong> and <strong>which set of cases it runs over</strong>, and you decide <strong>what the number is allowed to claim</strong>. The tool can write the filter, the aggregation, and the plot, and it can run its own loop until everything is clean. It cannot decide that 40 portal cities speak for a state of 240, or that a compliance rate with the unreachable towns deleted is honest. You own the final sentence, its frame, and its boundary.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 22 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write your quantity of interest in one sentence, and the frame it runs over in a second.</li>
 <li>Prompt an AI tool for the code that computes that quantity over that frame.</li>
@@ -670,6 +715,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch22_ai_as_programmer.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html">Chapter 22</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -699,9 +745,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>You decide <strong>which analytical tasks the assistant runs and which numbers you re-derive yourself</strong> before any of them reach a claim. The assistant supplies labor by the bucket. Which checks count, which flags are real, and what the surviving number means: those stay on your side of the desk.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -709,6 +756,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A discussant at a labor economics seminar, reading your results section.</li>
 <li>The decision on the table: which analytical work you hand off.</li>
@@ -716,6 +764,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>I do not care that a model ran your robustness checks. I care which ones you chose, which numbers you re-derived yourself, and which flags you confirmed against the data. Show me that trail and I trust your judgment. Show me the model’s transcript and I trust neither.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read the quote as the discussant would say it, then stop on its last line: the transcript buys you nothing. What is being asked for is a short trail of choices that stayed yours, and it is asked for out loud, in front of a room. Ask your own room whether they could produce that trail today for the last number an AI tool handed them.</p>
@@ -736,12 +785,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An AI tool can write your analysis code and run a dozen checks in seconds.</li>
 <li>It hands back a clean table.</li>
 <li>That speed is exactly why a loose habit is dangerous.</li>
 <li>This chapter gives you the habit that survives the discussant’s question.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Nothing here is an argument against the speed. The chapter’s worry is the habit, not the tool. The problem is that a clean table arrives looking finished, so there is no moment that forces you to check it, and the signature goes on anyway. The habit in this chapter puts that moment back in on purpose.</p>
 <style type="text/css">
@@ -761,11 +812,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An AI analytical assistant takes a well-specified analytical task, never your judgment (Vaithilingam et al.&nbsp;2022).</li>
 <li>“Recompute this gap after dropping the three people who enrolled with an offer already in hand.”</li>
 <li>It writes and runs that one check.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Say the delegated sentence out loud, because the shape of it is the lesson. It names the number wanted, the exact columns, and the filter behind it, and it asks for none of the interpretation. A request for a verdict on what the result means has no checkable answer, so nothing comes back that you could verify.</p>
 <style type="text/css">
@@ -785,12 +838,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your headline estimate is the single number that stands in for your whole finding.</li>
 <li>“People who went through the program received a first offer about 0.7 standard deviations sooner.”</li>
 <li>Before you defend that number, you try to break it.</li>
 <li>Breaking it is the labor you delegate.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the sentence that decides the order of the work. You do not delegate the finding, you delegate the attempts to destroy it, and what survives is what you take to the seminar. Ask the room to name their own project’s headline estimate in one sentence right now. Anyone who cannot has just found the first thing to fix.</p>
 <style type="text/css">
@@ -805,11 +860,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>Two attacks do most of the work</h2>
 <div class="kicker">
 <p>Chapter 23 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Robustness check</span></p>
@@ -826,6 +882,7 @@ Davi Moreira
 <li>Random labels always differ a little, so that pile of fake gaps is not zeros.</li>
 <li>What matters is whether your real gap looks ordinary in that pile, or sits far outside.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Keep the bound the chapter puts on the placebo. Random labels always differ a little, so the pile of fake gaps is not a pile of zeros, and finding something there is not a finding. What the test asks is narrower: does your real gap look ordinary in that pile, or does it sit far outside it? The robustness check asks a different question, whether the story survives a choice you could equally have made.</p>
 <style type="text/css">
@@ -845,12 +902,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You will not get your analysis from one prompt.</li>
 <li>You prompt, read the output, interrogate it, refine, and run it again.</li>
 <li>Agentic tools now run those cycles on their own, writing and patching until something looks finished.</li>
 <li>Verification attaches to each cycle, not to the last one.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The failure here is quiet. You check a number carefully on an early turn, the loop keeps going, and the code that produced the final table is not the code you checked. Nothing announces that switch. Ask the room how many cycles their last AI-assisted analysis actually took, and how many of those cycles they could describe now.</p>
 <style type="text/css">
@@ -870,6 +929,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Every re-prompt is a fork in your analysis.</li>
 <li>Keep re-asking until the number improves and you have searched, without telling anyone, including yourself.</li>
@@ -877,6 +937,7 @@ Davi Moreira
 <li>Say what you asked, what came back, and what you changed and why.</li>
 <li>An assistant that ran ten silent variants and reported the nicest one is an unlogged search.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the part of the chapter that bites, because the search does not feel like a search. It feels like refining a prompt. The phrase to keep is “without telling anyone, including yourself”: the log is what makes the forks visible to you, not only to a reader. It costs one line per turn.</p>
 <style type="text/css">
@@ -896,12 +957,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The assistant proposes checks, writes code, and prints numbers, cycle after cycle.</li>
 <li>You decide which checks count, and you log the cycles.</li>
 <li>You verify every number before it reaches your claim.</li>
 <li>Verify the number, not the paragraph about the number.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Close the section on the division of labor, and make the last line land. Models write confident prose about their own output, and that prose is not evidence. What you verify is the figure itself, recomputed some other way. A green run means the code executed, which is a much smaller claim than the one you are about to make.</p>
 <style type="text/css">
@@ -921,12 +984,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The program helps people target applications and rehearse interviews.</li>
 <li>Outcome: weeks from enrollment to first offer.</li>
 <li>Headline: participants reached an offer about 0.7 standard deviations sooner.</li>
 <li>You delegate a grid with three handles: the sample, the measurement, the specification.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Name the three handles concretely, because the grid is built from them. Sample: all enrollees, or drop the three who already had an offer in hand when they signed up. Measurement: mean or median weeks to offer. Specification: the raw gap, or one adjusted for each person’s prior work experience. That is eight cells, and every one of them is a choice you could defend.</p>
 <style type="text/css">
@@ -946,6 +1011,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The assistant returns eight numbers. You do not trust them yet.</li>
 <li>You recompute two rows by hand with a second, simpler expression, and they match.</li>
@@ -953,6 +1019,7 @@ Davi Moreira
 <li>Your honest headline is a direction plus a range, not one flattering number.</li>
 <li>Three cycles went into getting the grid to run, and all three are in your log.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>A direction plus a range is a weaker-sounding claim than a single number, and it is the one you can defend. Point out that two hand re-derivations, not eight, were enough to make the table believable, so the cost of this habit is small. The three logged cycles matter for the same reason as the last section: they are what says the grid was run once, not searched.</p>
 <style type="text/css">
@@ -972,6 +1039,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Shuffle the program labels and re-run many times. Your real gap sits far out in the tail.</li>
 <li>That lowers your worry that the machinery alone is manufacturing the effect, as far as this check sees.</li>
@@ -979,6 +1047,7 @@ Davi Moreira
 <li>You already dropped the already-employed group and the gap held, so the data refute that flag.</li>
 <li>The flaw it missed: weeks to an offer is not the quality of the offer.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Hold the bound on the placebo result. It lowers a worry, as far as this one check can see; it does not clear the analysis. Then take the red-team output apart: the confident flag was already refuted by a check you had run, and the real limit went unmentioned. That limit sets the claim’s boundary, so your claim stays about speed of placement and says nothing about wages or fit. The assistant did the arithmetic. You decided which checks counted and which flags the data confirmed.</p>
 <style type="text/css">
@@ -993,11 +1062,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Build the grid, then run the shuffle yourself</h2>
 <div class="kicker">
 <p>Chapter 23 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Watch the eight rows point the same way, then read the printed range.</li>
 <li>Recompute two rows by hand before you believe any of them.</li>
@@ -1043,6 +1113,7 @@ Davi Moreira
 <span id="cb2-38"><a aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>)]</span>
 <span id="cb2-39"><a aria-hidden="true" tabindex="-1"></a>beat <span class="op">=</span> <span class="bu">int</span>((np.array(fake) <span class="op">&gt;=</span> gap(df, <span class="st">"mean"</span>)).<span class="bu">sum</span>())</span>
 <span id="cb2-40"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"placebo: of 2000 label shuffles, </span><span class="sc">{</span>beat<span class="sc">}</span><span class="ss"> produced a gap this large"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The block builds the grid an assistant would return and then runs the placebo, all under SEED = 464, so everyone in the room sees the same numbers. Have them predict the sign and rough size before you run it. Reporting the whole grid of defensible choices rather than one flattering cell is the discipline specification-curve analysis was built to enforce (Simonsohn et al.&nbsp;2020).</p>
 <style type="text/css">
@@ -1062,9 +1133,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You hand an assistant your grid and it returns a polished eight-row table, every row near 0.7, and declares the result “fully robust.” The run threw no error. Here is the trap: its “median” rows silently call the same mean function as the “mean” rows, so four of the eight numbers are duplicates wearing different labels. The table agrees with itself because it never varied the handle it claims to vary. This is the <strong>illusion of completeness</strong>, a thorough-looking output missing the one thing that matters, shading into <strong>confident fabrication</strong>, a number stated with certainty that never came from the code path it names.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1072,12 +1145,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it by recomputing one “median” row by hand.</li>
 <li>The true median gap is 0.55, not 0.70.</li>
 <li>The grid overstated how much your choices agreed.</li>
 <li>A green check is not a correct result.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it by recomputing one “median” row by hand. The true median gap is 0.55, not 0.70. The grid overstated how much your choices agreed. A green check is not a correct result.</p>
 <style type="text/css">
@@ -1097,16 +1172,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 23</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Three calls never leave your hands. You decide <strong>which checks count</strong> for the claim you want to make, <strong>which flagged problems the data actually confirm</strong>, and <strong>the final claim you defend</strong>, with its boundary and its range. The assistant proposes and computes. The evidence decides, and you are the one who reads the evidence.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 23 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Before the assistant touches anything, write your headline estimate in one sentence and the answer you expect.</li>
 <li>Hand over one well-specified task at a time.</li>
@@ -1118,6 +1196,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch23_ai_as_analytical_assistant.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html">Chapter 23</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1147,9 +1226,11 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 7</p>
 </div>
+<div class="slide-body">
 <div class="decision">
 <p><span class="label">The artifact</span></p>
 <p><strong>What this milestone produces.</strong> A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1157,28 +1238,33 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 7 · Check before you start</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html">Lesson 22 — AI as Programmer</a>: your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html">Lesson 23 — AI as Analytical Assistant</a>: your headline estimate with its uncertainty statement and cycle log, two independently re-derived numbers, a placebo run where licensed, the clean-restart record, the environment record, and the claim-to-output trace.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 <h2>The practice</h2>
 <div class="kicker">
 <p>Milestone 7 · In the studio</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write the analysis you declared, and only that analysis, before looking at anything else.</li>
 <li>Produce the result with its uncertainty statement, in the form your Contract specified.</li>
 <li>Restart and run everything from a clean state; if the numbers move, the pipeline is the finding.</li>
 <li>Record your environment, and check that every claim you plan to make traces to a specific output.</li>
 </ol>
+</div>
 </section>
 <section class="slide level2">
 <h2>The four rails, here</h2>
 <div class="kicker">
 <p>Milestone 7 · Every studio, these four</p>
 </div>
+<div class="slide-body">
 <div class="rails">
 <div class="rail">
 <p><span class="t">Ethics, permissions, and data exposure</span></p>
@@ -1197,24 +1283,31 @@ Davi Moreira
 <p><span class="d">A result reported without uncertainty is not yet a result.</span></p>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 <h2>A version, not a pass</h2>
 <div class="kicker">
 <p>Milestone 7</p>
 </div>
+<div class="slide-body">
 <div class="note-card">
 <p><span class="label">How the record works</span></p>
 <p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
 </div>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>The one rule</h2>
+<div class="creed">
+<p>AI is your arm and your research assistant, not your brain.</p>
+</div>
 <div class="divider-line">
-<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
 <p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
 </div>
+<div class="deck-links">
 <p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio07-first-analysis.html">Studio 7 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html">Milestone 7</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+</div>
 
 
 </section>
@@ -1435,6 +1528,180 @@ Davi Moreira
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /* edrai-fit.js — fit each slide's body to the body region, at runtime.
+     *
+     * The builder used to guess: it counted characters and stamped .dense /
+     * .denser / .densest, which shrank the type on slides that had room to spare
+     * and still let a long code block run past the bottom edge. This measures
+     * the rendered height instead, so a slide is never smaller than it needs to
+     * be and never larger than it fits.
+     *
+     * It also drops the type of a title that would run into the hairline, and
+     * tells the chrome when the current slide is an ink field.
+     */
+    (function () {
+      "use strict";
+
+      var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+      var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+      var MIN_TITLE = 0.62;
+      var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+      var LEAD_MAX = 88;
+      var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+      function child(section, cls) {
+        var kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+        }
+        return null;
+      }
+
+      function fitTitle(section) {
+        if (section.classList.contains("divider")) return;
+        var h2 = null, kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+        }
+        if (!h2) return;
+        section.style.removeProperty("--h2fit");
+        var k = 1;
+        for (var n = 0; n < 5; n++) {
+          var need = h2.scrollHeight;
+          if (need <= TITLE_BAND) break;
+          k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+          section.style.setProperty("--h2fit", k.toFixed(4));
+          if (k <= MIN_TITLE) break;
+        }
+      }
+
+      // The natural height of the body's content.
+      //
+      // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+      // under-full slide reports "exactly full" and both the growth step and the
+      // optical lead below silently become no-ops. Walking the children gives the
+      // real figure, in unscaled layout pixels, above and below the box alike.
+      function naturalHeight(body) {
+        var kids = body.children;
+        if (!kids.length) return 0;
+        var first = kids[0], last = kids[kids.length - 1];
+        return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+      }
+
+      function fitBody(section) {
+        var body = child(section, "slide-body");
+        if (!body) return;
+        section.classList.remove("fit-top");
+        section.style.setProperty("--fit", "1");
+        section.style.setProperty("--lead", "0px");
+
+        var avail = body.clientHeight;
+        if (!avail) return;
+
+        // Converge on the largest size that still fits the body region. This
+        // grows a sparse slide as readily as it shrinks a crowded one, which is
+        // the whole point: three lines of type should hold the canvas, not float
+        // in the middle of it at the same size as a slide carrying twenty.
+        // Growth moves where lines wrap, so the step is damped and the last size
+        // known to fit is kept as a floor.
+        var k = 1, fits = 0;
+        for (var n = 0; n < 12; n++) {
+          var need = naturalHeight(body);
+          if (!need) break;
+          if (need <= avail) fits = Math.max(fits, k);
+          var next = k * Math.pow((avail * 0.985) / need, 0.6);
+          next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+          if (Math.abs(next - k) < 0.005) break;
+          k = next;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+        if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+          k = fits;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+
+        // Optical placement. A body that fills the region starts at the top; one
+        // with room to spare drops by a fraction of what is left over, capped, so
+        // that it sits under the title instead of either jammed against it or
+        // marooned in the middle of the canvas.
+        var slack = avail - naturalHeight(body);
+        var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+        section.style.setProperty("--lead", Math.round(lead) + "px");
+
+        // Past the floor and still too tall. The slide spills instead of losing
+        // its last lines, and says so, because a deck that quietly drops the end
+        // of a worked example is worse than one that looks crowded.
+        if (naturalHeight(body) > avail + 1) {
+          section.classList.add("fit-top");
+          var h = section.querySelector("h2");
+          if (window.console && console.warn) {
+            console.warn("EDR|AI: slide does not fit at the minimum size —",
+                         h ? h.textContent.trim() : "(untitled)");
+          }
+        }
+      }
+
+      function fit(section) {
+        if (!section || !section.offsetParent && !isPrint()) return;
+        fitTitle(section);
+        fitBody(section);
+      }
+
+      function isPrint() {
+        return document.body.classList.contains("print-pdf") ||
+               /print-pdf/.test(window.location.search);
+      }
+
+      function markChrome() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        var cur = Reveal.getCurrentSlide();
+        reveal.classList.toggle("on-dark",
+          !!cur && cur.classList.contains("divider"));
+        reveal.classList.toggle("on-title",
+          !!cur && cur.classList.contains("quarto-title-block"));
+      }
+
+      function run() {
+        if (isPrint()) {
+          var all = document.querySelectorAll(".reveal .slides > section");
+          for (var i = 0; i < all.length; i++) fit(all[i]);
+          return;
+        }
+        if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        // Only the current slide. reveal keeps every other section at
+        // `display: none`, where offsetHeight is 0 and nothing can be measured,
+        // so a "pre-fit the neighbours" pass would be a no-op that reads as
+        // working code. reveal makes the incoming slide visible BEFORE it fires
+        // slidechanged, so fitting here lands before the frame is painted.
+        fit(Reveal.getCurrentSlide());
+        markChrome();
+      }
+
+      function boot() {
+        if (typeof Reveal === "undefined" || !Reveal.on) {
+          return void setTimeout(boot, 60);
+        }
+        Reveal.on("ready", run);
+        Reveal.on("slidechanged", run);
+        Reveal.on("resize", run);
+        if (Reveal.isReady && Reveal.isReady()) run();
+        // Web fonts change the metrics after first paint; measure again once they
+        // have actually landed, and once more on a late layout.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(run, 0); });
+        }
+        setTimeout(run, 400);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

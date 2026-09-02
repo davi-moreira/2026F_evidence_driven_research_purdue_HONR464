@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa6bf9334f07eb3fc1071a031a011523.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,13 +192,21 @@
       margin-right: 0; 
     }
   </style>
+  <!-- EDR|AI deck fonts. Two voices: Source Sans 3 for the deck's own
+       scaffolding, Source Serif 4 for the book's verbatim words, JetBrains Mono
+       for code. Every one degrades to a metric-compatible or long-installed
+       fallback in edrai-slides.scss, so a room with no network still renders a
+       correct deck. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <h1 class="title">HONR 46400 · Evidence-Driven Research</h1>
   <p class="subtitle">Studio 12 — Special topic: agentic AI, release, and the next cycle</p>
 
 <div class="quarto-title-authors">
@@ -215,9 +223,10 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 12</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">What you can defend when you leave</span></p>
 <p>The book’s special topic, turned onto your finished project: direct an advanced multi-role AI review — agentic where your tools truly plan and act, human-sequenced otherwise — under your own rules, adjudicate what it returns, decide whether the work leaves your hands, and turn the largest unresolved limitation into the next study.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -225,7 +234,9 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 12</p>
 </div>
+<div class="slide-body">
 <p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html">Milestone 12: Your release and next cycle</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> A review-management record for your directed AI team, a release audit recording release or withhold-pending-a-named-repair, your final dossier with a complete manifest, an explicit stopping rule, and your next-study agenda.</p>
+</div>
 <aside class="notes">
 <p>The book opened with one rule: AI is your arm, not your brain. This last studio is its special topic, and the rule’s graduation: advanced practice in directing AI for research — several scoped agents at once, wired so each role’s input exists before it starts, adversarial by design, escalated to you when they conflict or agree too easily — turned onto your own finished project as its closing review. The two agent lessons teach the wiring and the escalation; a single well-run assistant playing the roles in turn runs the same discipline. The release standard does not change with the tool count: every public claim must sit inside its evidence and permissions, the package must still match the cold run that tested it, and the team’s records land in the audit, never in place of it. What no agent can do is make the two decisions this milestone exists for: whether this work is ready to leave your hands, and what should be asked next. The book closes where it began: tools extend your reach, and the decision about what leaves your hands remains yours.</p>
 <p>This is where the chain closes, on a decision. If the audit clears, the artifact leaves your hands; if it does not, this version names the repair that still blocks release. Either way the next-study agenda opens the cycle that follows. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
@@ -241,16 +252,18 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>The lessons in this studio</h2>
 <div class="kicker">
 <p>Studio 12 · Road map</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html">Lesson 38 — Managing Multiple AI Agents</a>: your closing-review team: the loops’ scoped jobs, the dependency wiring and turn counts, and the one node you kept human.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html">Lesson 39 — Conflicting Agents and Human Escalation</a>: your escalation rules, and one load-bearing pair of outputs (agreeing or not) diagnosed and settled by your own check, with any override on record.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html">Lesson 40 — Final Research and AI-Management Portfolio</a>: your finished research artifact with every claim bounded, your AI-management portfolio with the team record inside, and the rehearsed three-movement defense.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>Managing Multiple AI Agents</h2>
@@ -266,9 +279,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Running several AI agents means running several loops at once. You decide how to split the work into scoped jobs, in what order those loops run so that no early mistake slips downstream, and which step in the chain no loop is ever allowed to close.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -276,7 +290,8 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · Key terms</p>
 </div>
-<div class="terms">
+<div class="slide-body">
+<div class="terms two">
 <div class="term">
 <p><span class="t">The AI loop</span></p>
 <p><span class="d">the cycle you have been running since the beginning of this book: you prompt, you read the output, you interrogate it, you refine the ask, you run it again.</span></p>
@@ -284,6 +299,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Agentic tools</span></p>
 <p><span class="d">aI systems that run that loop on their own, deciding their own next step and calling their own tools between your turns (Yao et al.&nbsp;2023).</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -305,6 +321,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>Your <strong>thesis advisor</strong>, reading the draft you are about to defend.</p>
 </div>
@@ -315,6 +332,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>Bring me a draft, not a pile of AI output. I want to know which part each tool touched, what you told it to do, and how you checked it. If you cannot tell me that, you did not write it.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read the quote aloud and let it sit. She asks for three things: which part each tool touched, what you told it to do, and how you checked it. What she wants to see is that you broke the job into pieces, put those pieces in a sane order, and stayed the one person who decided what the draft claims. Her closing line sets the stakes plainly: an account you cannot give is a draft you did not write. Ask the room who, in their own project, could answer her three questions right now.</p>
@@ -335,6 +353,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>One assistant can now draft, cite, critique, and polish in a single breath.</li>
 <li>So the temptation is to open four of them and feel four times as safe.</li>
@@ -342,6 +361,7 @@ Davi Moreira
 <li>Each role is not one prompt. It is a loop, running until you or it stops.</li>
 <li>Unmanaged, four loops is four times the unsupervised work.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The word to press on is “unsupervised”. More output is easy to buy and easy to mistake for more rigor. Agreement among four roles reading the same draft under the same instructions is not the independent confirmation it looks like, because they tend to share the blind spot. This chapter is about the management skill that turns a crowd of loops into something you can defend.</p>
 <style type="text/css">
@@ -361,12 +381,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You ask for the citations to be checked.</li>
 <li>An agentic tool searches, reads, rechecks, and revises across several turns (Yao et al.&nbsp;2023).</li>
 <li>It comes back to you only at the end.</li>
 <li>Faster, and every one of those turns went unwatched.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The unit you are managing is the loop, not the prompt: you prompt, you read, you interrogate, you refine, you run again. An agentic tool runs that same loop on its own, choosing its next step and calling its own tools between your turns. So the real management question is not how many prompts you write. It is how many loops you have running, what each one is allowed to touch, and where they hand off. You orchestrate loops, not prompts.</p>
 <style type="text/css">
@@ -386,6 +408,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Task decomposition</span></p>
@@ -394,6 +417,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Scoped role</span></p>
 <p><span class="d">an AI job narrow enough to state in one sentence and check in one pass</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -415,12 +439,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A scoped role: flag every sentence in my results section that claims more than my sample can support.</li>
 <li>That role has a clear finish line. “Make it better” does not.</li>
 <li>The loop stops when the job is done.</li>
 <li>And you can tell from the outside whether it is.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Notice why the finish line matters operationally, not just aesthetically. A loop with no stated finish line stops only when you or it decides to stop, which leaves you as the stopping condition instead of the job. A loop with a stated finish line can be judged from outside by someone who did not run it, which is exactly what your advisor is asking to do.</p>
 <style type="text/css">
@@ -440,12 +466,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The <strong>worker-critic pair</strong>: one role produces something, a second, separate role attacks it.</li>
 <li>A worker drafts your limitations paragraph.</li>
 <li>A critic hunts for the limitation the worker left out.</li>
 <li>That confidence is exactly the blind spot the worker cannot see from the inside.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The pair is the backbone that keeps roles honest, and the word carrying the weight is “separate”. Asking the same role whether its own draft was any good gets you the same blind spot with a second coat of polish. Ask the room what the critic in their own project would be pointed at: the draft, or the workflow that produced it.</p>
 <style type="text/css">
@@ -465,6 +493,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Dependency</span></p>
@@ -473,6 +502,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Critical path</span></p>
 <p><span class="d">the longest run of must-follow-must steps in your workflow (Kelley 1961)</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -494,6 +524,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · A worked example</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>Is a ten-minute post-lunch walk associated with a lower afternoon resting heart rate on your dorm floor?</p>
 </div>
@@ -504,6 +535,7 @@ Davi Moreira
 <li>Citation-checker: are the two heart-rate studies real, and do they say what you claim?</li>
 <li>Editor: tighten the prose.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the split step, done on a real write-up rather than in the abstract. Each role owns one sentence-long job, and each of those jobs has a pass or fail you could grade. Point out that the methodologist’s job is the one that touches the claim, which is why it will collide with another role in a few minutes.</p>
 <style type="text/css">
@@ -523,6 +555,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The worker drafts your limitations paragraph first.</li>
 <li>No critic needs another’s output, so all three read it in parallel.</li>
@@ -530,6 +563,7 @@ Davi Moreira
 <li>Then you integrate their notes, and the editor tightens what survives.</li>
 <li>Worker to critic, critic to you, you to editor: three arrows deep.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Trace the arrows on the board while you say this. The workflow is three arrows deep and three loops wide at its widest point, and those two numbers answer different questions: depth is how many rounds you must wait through, width is how much is happening at once. Each loop takes as many turns as it needs, and the number of turns inside a role does not change its position on the path.</p>
 <style type="text/css">
@@ -544,11 +578,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>The slowest critic sets the schedule</h2>
 <div class="kicker">
 <p>Chapter 38 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Compare all five roles in sequence against the three critics in parallel.</li>
 <li>The critical path prints as worker, then the slowest critic, then editor.</li>
@@ -578,6 +613,7 @@ Davi Moreira
 <span id="cb1-21"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f" -&gt; editor"</span>)</span>
 <span id="cb1-22"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the slowest critic sets the schedule, so speeding up the other two"</span>)</span>
 <span id="cb1-23"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"buys nothing. and the integration node is yours, not the editor's"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The block counts turns per role under SEED = 464 and reads the critical path off them. Have the room predict which critic will be slowest before you run it. The point of the printout is not the exact turn counts, which are drawn: it is that only the path is worth optimizing, and that the human node was deliberately left out of the accounting.</p>
 <style type="text/css">
@@ -597,12 +633,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The methodologist says your walk-and-heart-rate result is only an association.</li>
 <li>The clarity reviewer loved the sentence that called it an effect.</li>
 <li>No role settles that clash. You do.</li>
 <li>The decision about what the write-up claims never enters the workflow as a delegated task.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>End the example on the clash, because a clash is what makes the human node visible. The tools drafted, flagged, and polished. You split the job, set the order, decided when each loop had run long enough, and owned the claim that carries your name. Ask which of the two roles the room would have believed if they had only run one of them.</p>
 <style type="text/css">
@@ -622,9 +660,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You ask a tool to design your multi-agent workflow, and it returns a confident, well-formatted plan: run the worker, the methodologist, the skeptic, and the editor all in parallel to “save rounds.” The plan runs in your head without a hitch. Here is the trap. The editor and the skeptic have nothing to read yet, because the worker has not drafted anything. The tool scheduled three roles to start before the input they depend on exists, and dressed it up as efficiency. Hand that plan to an agentic tool that executes it for you and the failure gets quieter, not louder: three loops run on an empty draft and return three confident reviews of nothing.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -632,6 +672,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 38 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it by drawing the arrows and asking one question at each role: does this role’s input exist at the moment it starts?</li>
 <li>The editor’s input is the integrated draft, which does not exist until the end, so “editor in parallel with worker” is impossible.</li>
@@ -639,6 +680,7 @@ Davi Moreira
 <li>A green, tidy plan is not a valid one.</li>
 <li>You check the dependencies, not the confidence.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it by drawing the arrows and asking one question at each role: does this role’s input exist at the moment it starts? The editor’s input is the integrated draft, which does not exist until the end, so “editor in parallel with worker” is impossible. Redrawn honestly, the plan is a critical path three arrows deep, not one. A green, tidy plan is not a valid one. You check the dependencies, not the confidence.</p>
 <style type="text/css">
@@ -653,21 +695,24 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>Do not delegate</h2>
 <div class="kicker">
 <p>Chapter 38</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>The split and the order can be informed by a tool, but three calls stay yours alone. You decide <strong>which jobs are worth their own loop</strong> and which just multiply output you cannot supervise. You decide <strong>the order</strong>, so that no role settles a question a role upstream of it should have answered first. And you keep <strong>the integrate step</strong> human: when two roles disagree about what your draft claims, you make that call in your own words. A workflow that hands the claim to a tool is not a workflow you can defend. The rule scales with the number of loops rather than bending to it. More agents does not mean looser command; it means the same command discipline, repeated.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 38 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Pick one real section of your project to revise: your methods, your results, or your limitations.</li>
 <li>Set up three loops, each with a one-sentence job you could grade.</li>
@@ -678,6 +723,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch38_managing_multiple_ai_agents.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html">Chapter 38</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -707,9 +753,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Your loops have come back and they do not match, or they match a little too well. You decide which of three things you are looking at (real disagreement, correlated error, or manufactured consensus), and you decide the exact moment to stop the loops and take the call into your own hands.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -717,6 +764,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · Key terms</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">Real disagreement</span></p>
@@ -733,6 +781,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Escalation to human judgment</span></p>
 <p><span class="d">the moment an AI output would <em>settle</em> rather than <em>inform</em> a decision that is yours, so you stop and decide it yourself (Bansal et al.&nbsp;2021).</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -754,6 +803,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A <strong>skeptical peer</strong> at your practice defense puts it to you like this.</li>
 <li>The question is not whether they agreed.</li>
@@ -761,6 +811,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>Don’t tell me your reviewers agreed. Tell me whether they could have agreed for the same wrong reason. Agreement is the easiest thing in the world to manufacture, and the most dangerous to trust.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read the peer’s line out loud and stop on the second sentence, because that is the whole chapter in one question. Notice the peer does not dispute that the reviewers agreed. The challenge is about the reason behind the agreement, which is a different thing entirely and much harder to answer. Ask the room how they would answer that question about the last AI review they ran.</p>
@@ -781,12 +832,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You can run a small team of AI roles, so you can run several loops at once.</li>
 <li>The seductive thought: three roles blessing your draft means three confirmations.</li>
 <li>Same build, same draft, same instructions, so they tend to make the same mistake.</li>
 <li>A loop that keeps running polishes the last answer instead of testing it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Take the seductive thought seriously before you take it apart, because it is the reasonable-sounding version of the mistake. Three loops built the same way and pointed at the same draft with the same instructions are not three witnesses; their agreement is one error repeated three times. The second failure is about duration rather than number: a long loop returns a well-defended version of the first mistake, with better paragraphs around it. Ask who has already read a second AI reply that mostly agreed with the first one.</p>
 <style type="text/css">
@@ -806,11 +859,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Reconciling conflicting outputs</strong>: decide what to believe by first diagnosing why the roles differ.</li>
 <li>Before you side with the reviewer over the methodologist, ask what would make each of them right.</li>
 <li>There are three cases, and they call for opposite responses.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The instinct when two roles disagree is to score the argument and declare a winner, and that instinct skips the only step that tells you anything. Asking what would make each of them right forces you to name the assumption each one is running on. The three cases that follow look similar from the outside, which is why the diagnosis has to come first: one of them is useful, one is empty, and one is your own doing.</p>
 <style type="text/css">
@@ -830,12 +885,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your reviewer calls a sentence clear and strong.</li>
 <li>Your methodologist flags that same sentence as reaching past your data.</li>
 <li>The roles genuinely read the evidence differently.</li>
 <li>The clash points straight at the claim you need to check.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two roles reading one sentence in opposite ways has done you a favour, and the chapter says so plainly: this is the good case. The disagreement is a pointer, and what it points at is a specific claim, not a general worry about quality. Ask the room what they would go and check first if they got exactly this pair of comments on their own draft.</p>
 <style type="text/css">
@@ -855,12 +912,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Three reviewers built from the same base model all miss the same flaw.</li>
 <li>They share the blind spot, so their agreement proves nothing.</li>
 <li>Ask the simple question: could they be wrong the <em>same</em> way?</li>
 <li>If yes, their consensus is one signal, not three (Peker 2023).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the case that costs you most, because it arrives dressed as confirmation and feels like reassurance. The test the chapter gives is one question you can ask on the spot, and it is about the shared assumption rather than the shared answer. Counting to three here is the error: the roles came from one place, so the head-count is a fiction.</p>
 <style type="text/css">
@@ -880,12 +939,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You ask “confirm my draft is ready,” and every role obliges.</li>
 <li>The roles agreed only because your prompt framed the task so they had to.</li>
 <li>You led all the witnesses.</li>
 <li>Reframe the ask neutrally and run it again.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This case is the one you built yourself, which makes it the cheapest to fix and the easiest to miss. The wording of the ask decided the answer before any role read a word of the draft. The repair is not a better model or another reviewer; it is a neutral question and a second run. Ask the room to say out loud the last thing they typed into a reviewer role, and hunt together for the leading word in it.</p>
 <style type="text/css">
@@ -905,6 +966,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Independence check</span></p>
@@ -913,6 +975,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Human override</span></p>
 <p><span class="d">you take the pen back and make the call in your own words, backed by your own check, even when the roles agreed on something else</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -934,12 +997,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An agentic tool left running keeps looking for a next step.</li>
 <li>If nobody halts it, it takes the decision by default.</li>
 <li>Escalate when an AI output would <em>settle</em> a decision that is yours (Bansal et al.&nbsp;2021).</li>
 <li>A trigger you decide with three tidy reviews in front of you is a mood.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Escalation is the one moment where the loops have to stop, and a loop with nowhere else to go does not wait politely. The decision gets taken by default, which is not delegation because you never chose it. So the triggers get written before the round: the specific decisions where the loops pause and wait for you. Ask each person for one trigger they will write down before their next round, in the exact words they will read under pressure.</p>
 <style type="text/css">
@@ -959,12 +1024,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The <strong>unemployment rate</strong> is the share of people who want paid work and cannot find it.</li>
 <li>You asked 250 adults outside the public library, over three weekday afternoons.</li>
 <li>Working, or looking for work? You divided one count by the other.</li>
 <li>Your draft: “unemployment here is 4.0%, in excellent agreement with the official rate.”</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Everything in this example rests on one small survey, so keep the method visible: one place, three weekday afternoons, one question. The draft sentence is the one under review, and note how much it claims, because the phrase “excellent agreement” is a precision claim as much as a match. Ask the room what they would want to know before believing that sentence.</p>
 <style type="text/css">
@@ -984,12 +1051,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>All three reviewer roles returned the same verdict: “Looks solid. Matches the published figure.”</li>
 <li>Each one already expects a number near 4%, the range familiar headline rates sit in.</li>
 <li>So each pattern-matches your estimate and blesses it without checking how you got there.</li>
 <li>That is correlated error wearing the mask of confirmation.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Put the diagnosis question from the concept section to this case: could these three be wrong the same way? They can, and the shared blind spot is named exactly, the anchor to the familiar figure. What none of them did is look at how the estimate was produced, which is where the real problem lives. Ask the room whether a fourth role from the same family would have helped.</p>
 <style type="text/css">
@@ -1009,12 +1078,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You asked 250 people, so the luck of who walked by is worth a couple of percentage points.</li>
 <li>Weekday afternoons outside a library exclude almost anyone at work all day.</li>
 <li>The tidy “4.0%” was luck riding on an honest-looking method.</li>
 <li>The shared anchor to the familiar figure hid that mistake from all three roles.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two separate problems sit under the same number, and it is worth naming them apart. One is sampling luck at n equals 250, which the chapter prices at a couple of percentage points on its own. The other is who could not appear at all, and no sample size fixes that. Neither is exotic, and neither shows up in a verdict that only asks whether the answer looks right.</p>
 <style type="text/css">
@@ -1034,6 +1105,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The agreement would <em>settle</em> your headline claim, and that claim is yours.</li>
 <li>You recompute from your raw responses, carrying the uncertainty of 250 people through.</li>
@@ -1041,6 +1113,7 @@ Davi Moreira
 <li>You override three “looks great” verdicts and rewrite the claim with its real uncertainty.</li>
 <li>The roles counted the answer as correct. You checked whether it was earned.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is escalation and override in one move, and notice what triggers it: the agreement would settle the headline claim rather than inform it. The corrected result keeps both bounds the chapter states, the interval and the group that could not be reached, and it stays consistent with the official rate. The closing pair of sentences is the standard to leave the room with. Agreement is worth something only when the agreeing parties can fail independently, which is why diversity of approach rather than head-count is what makes a group better than its members (Hong &amp; Page 2004).</p>
 <style type="text/css">
@@ -1055,11 +1128,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Two defensible definitions, two different numbers</h2>
 <div class="kicker">
 <p>Chapter 39 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>SEED = 464, so the same 250 respondents come back on every run.</li>
 <li>Watch the two printed rates: yours, then the one counting everyone who wants work.</li>
@@ -1088,6 +1162,7 @@ Davi Moreira
 <span id="cb2-21"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">two defensible definitions, two different numbers, from one sample"</span>)</span>
 <span id="cb2-22"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"that never met anyone at work on a weekday afternoon. three reviewers"</span>)</span>
 <span id="cb2-23"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"who only checked whether the answer LOOKED right caught none of it"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The block builds the survey and computes the rate two defensible ways, and both numbers come from the same afternoon outside the library. Run it, then ask which of the two you would report and what you would have to say about the other. Three reviewers who only checked whether the answer looked right caught none of this, and that is the point of printing both.</p>
 <style type="text/css">
@@ -1102,14 +1177,16 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>An AI failure case</h2>
 <div class="kicker">
 <p>Chapter 39</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You send your draft to four AI roles and all four reply “no major problems.” It feels like overwhelming confirmation, and it is confidently wrong. The four share a base model and read the same draft with the same instructions, so they share a blind spot. Whenever your one real flaw falls inside that blind spot, all four miss it together. Their unanimous “fine” is close to a single voice, not four. Running each loop longer does not rescue you either. Four loops with the same blind spot, given more turns, return the same verdict with better paragraphs around it.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1117,12 +1194,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it by refusing to treat agreement as evidence.</li>
 <li>You run an independence check: re-read the flagged claim against your own inquiry declaration, or hand the draft to a role with a different framing and different context.</li>
 <li>In the lab you will see the size of this trap measured.</li>
 <li>Four correlated reviewers miss a real flaw about seven times as often as four independent ones, and piling on more correlated roles cannot close the gap.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it by refusing to treat agreement as evidence. You run an independence check: re-read the flagged claim against your own inquiry declaration, or hand the draft to a role with a different framing and different context. In the lab you will see the size of this trap measured. Four correlated reviewers miss a real flaw about seven times as often as four independent ones, and piling on more correlated roles cannot close the gap.</p>
 <style type="text/css">
@@ -1142,16 +1221,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 39</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Which claims your draft can defend, where each claim must stop, whether an agreement among your roles was ever independent, and the moment to escalate: those stay yours. No role decides its own trustworthiness, and no head-count of roles decides your claim boundary or your ethics. When an AI output would <em>settle</em> one of those rather than inform it, you stop and you decide.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 39 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write your escalation rules before the next round starts.</li>
 <li>Add the stopping conditions that are not about content.</li>
@@ -1162,6 +1244,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch39_conflicting_agents_and_human_escalation.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html">Chapter 39</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1191,9 +1274,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Out of everything your project produced, you decide which claims you will stand behind in public, and you assemble the record that shows how you ran your AI team, what you kept in your own hands, and how each surviving claim was checked.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1201,6 +1285,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The decision on the table has two parts.</li>
 <li>Which of your claims you are willing to be wrong about in public.</li>
@@ -1208,6 +1293,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>“By the time you stand up to defend, I do not count your tools. I ask which claims you are willing to be wrong about in public, and whether you can show me you checked them yourself.” — a defense examiner, opening the folder you handed over</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read the quote aloud and stop on the last clause, because that is the whole chapter compressed: checked them yourself. Notice what the examiner does not do. She does not count tools, so a list of tools is not an answer to what she asks. Ask the room which of their current claims they would actually stand behind in front of that folder.</p>
@@ -1228,12 +1314,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Months of AI-assisted work leave drafts, role outputs, half-finished checks.</li>
 <li>Left in a pile, none of it is defensible.</li>
 <li>The examiner will not read the pile.</li>
 <li>She asks which claims you own, where each stops, and how you know.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The problem at the end of a project is not a shortage of material; it is that nobody will sort it for you. Three questions decide what survives: which claims you own, where each one stops, and how you know. This chapter is where you answer them on purpose, before the room decides them for you.</p>
 <style type="text/css">
@@ -1253,12 +1341,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>It is the last check you run before work leaves your hands.</li>
 <li>Does every promise the work makes still hold up?</li>
 <li>Held up by the evidence, the permissions, and the record.</li>
 <li>What you assemble for that audit is your dossier.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Name the audit as the chapter’s real subject, not the folder. How you package the dossier depends on where the work is going: a repository, a supervisor, a journal, a course. The packaging changes and the audit does not, which is why this move transfers past this course.</p>
 <style type="text/css">
@@ -1278,6 +1368,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">A research portfolio</span></p>
@@ -1286,6 +1377,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">An AI-management portfolio</span></p>
 <p><span class="d">the honest record of how you ran your AI work from the first curiosity to the last check: which tasks you delegated, where you took the decision back, and which calls you never handed to a tool</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1307,6 +1399,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>A stopping rule is a written statement of what “done” means, phrased around your own verified confidence rather than the tools’ agreement (Nosek et al. 2018).</p>
 </div>
@@ -1317,6 +1410,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>“I stop when I can defend each surviving claim to a hostile reviewer with a check I ran myself (National Academies of Sciences, Engineering, and Medicine 2019).”</p>
+</div>
 </div>
 <aside class="notes">
 <p>Put the two candidate rules side by side and ask which one a hostile reviewer could break. Look-alike tools can agree loudly and be wrong together, so a rule resting on their agreement can be satisfied with nothing checked. The working version names a person doing a check, which is the part a tool cannot supply for you.</p>
@@ -1337,6 +1431,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">False consensus</span></p>
@@ -1345,6 +1440,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">An independence check</span></p>
 <p><span class="d">a step that makes agreement worth more than a head count: a check you run yourself, outside the tools</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1366,12 +1462,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A short public defense of your claims at their boundaries.</li>
 <li>Then questions you cannot rehearse for.</li>
 <li>You state what you found, and name exactly what you do not claim.</li>
 <li>You answer each question from your own record.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Stress that the boundary is stated out loud by you, not extracted from you under questioning. Naming what you do not claim is part of the defense, not a concession made afterwards. The unrehearsable questions are the reason the record has to exist before the defense rather than after it.</p>
 <style type="text/css">
@@ -1391,12 +1489,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A germination test lays a counted number of seeds on damp paper.</li>
 <li>Steady warmth and light; count the sprouts after a fixed number of days.</li>
 <li>One packet of lettuce seed, three trays of 50 seeds each, 88% on average.</li>
 <li>Now you choose the claim you will defend.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Keep three facts on the board, because every later decision comes back to them: one packet, three trays, 50 seeds per tray. Define the germination test before anyone reasons about the number, since the method is what fixes the reach of the claim. Ask what the 88% is a number about, and let the room hear how easily the answer slides.</p>
 <style type="text/css">
@@ -1416,6 +1516,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You run three AI reviewer roles on your draft.</li>
 <li>One praises your headline: “Lettuce seed germinates at 88%.”</li>
@@ -1423,6 +1524,7 @@ Davi Moreira
 <li>You tested one packet in three trays, not lettuce seed in general.</li>
 <li>You take the pen back.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two roles reading the same sentence and splitting is more useful than two roles agreeing, because the split points straight at the boundary decision. Note that neither role settles it. Taking the pen back is the move, and the rewrite that follows is yours.</p>
 <style type="text/css">
@@ -1442,12 +1544,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The sentence now carries the packet, the design, and the spread.</li>
 <li>Reporting what your evidence holds, with the spread that produced it, is the reproducibility standard (National Academies of Sciences, Engineering, and Medicine 2019).</li>
 </ul>
 <div class="note-card">
 <p>“This packet, tested in three trays of 50, averaged 88% germination, with the trays spanning 84% to 92%.”</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read both sentences aloud, the rejected one and this one, and ask which is easier to attack. The narrow sentence is still a finding; it is a finding that survives the question of how you know. The chapter calls this the standard the whole book has been building toward, and cites the report behind it, so name both.</p>
@@ -1463,11 +1567,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>Run the trays and watch the spread the claim is built from</h2>
 <div class="kicker">
 <p>Chapter 40 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The block runs the germination test tray by tray, with SEED = 464.</li>
 <li>Watch the three tray rates first, then the printed spread.</li>
@@ -1491,6 +1596,7 @@ Davi Moreira
 <span id="cb3-16"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>df[<span class="st">'rate %'</span>]<span class="sc">.</span><span class="bu">max</span>()<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
 <span id="cb3-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the defensible sentence carries all three numbers: this packet,"</span>)</span>
 <span id="cb3-18"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"three trays of 50, and the spread — not 'lettuce seed germinates at 88%'"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run it live so the tray-to-tray spread appears on screen instead of being described. Read the code’s own comment aloud: the trays differ, and seeds within a tray share their tray’s conditions. The script prints the spread precisely because the average on its own is the sentence you just rejected.</p>
 <style type="text/css">
@@ -1510,12 +1616,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The label states a germination rate of 85%.</li>
 <li>You compare your 88% against it by hand.</li>
 <li>The two numbers land close, and that is real reassurance.</li>
 <li>Your stopping rule is now satisfied, so you stop.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The reassurance is real for one reason only: the label sat outside everything the tools touched. That is what an independence check buys you, and it is what a head count never buys. Ask the room what the equivalent outside number is for their own project, and whether they have looked at it yet.</p>
 <style type="text/css">
@@ -1535,12 +1643,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The roles you ran.</li>
 <li>The reviewer-versus-diagnostician conflict, and your override.</li>
 <li>This stopping rule.</li>
 <li>The label comparison that made agreement worth more than a head count.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Each of the four exists because something actually happened, so this list is a record and never a reconstruction. The conflict entry is the one that shows where you took the decision back, which is why it belongs in the record. Ask what their own fourth line would say today.</p>
 <style type="text/css">
@@ -1560,9 +1670,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You send your finished draft to three reviewer roles and ask each to “confirm it is ready to submit.” All three return the same verdict: “Looks solid, no major problems.” It feels like three confirmations. It is one. The three roles run on the same base model, you gave them the same leading prompt, and they share a blind spot: none flags that your headline number carries no uncertainty, no range across your three trays. That is false consensus, and trusting it would send an overclaimed result into your defense.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1570,6 +1682,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it with a reframe and a check the tools cannot see.</li>
 <li>First you drop the leading ask and run a neutral one: “List the three weakest claims in this draft and why.” Now a role names the missing range.</li>
@@ -1577,6 +1690,7 @@ Davi Moreira
 <li>The lesson is blunt: agreement is worth only the independence behind it.</li>
 <li>Count the checks you ran yourself, never the roles that nodded.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it with a reframe and a check the tools cannot see. First you drop the leading ask and run a neutral one: “List the three weakest claims in this draft and why.” Now a role names the missing range. Then you leave the tools entirely and recompute the spread of your trays yourself, which hands you the 84% to 92% boundary the reviewers all skipped. The lesson is blunt: agreement is worth only the independence behind it. Count the checks you ran yourself, never the roles that nodded.</p>
 <style type="text/css">
@@ -1596,16 +1710,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 40</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>The tools may draft, review, and surface hard questions. They may never decide which claims you put your name on, where a claim like “88% germination” must stop, whether your reviewers were ever independent, what your stopping rule is, or a single word of the public defense. When agreeing roles bless a claim, deciding whether that agreement is real or just correlated is yours. So is the answer you give when the room asks how you know.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 40 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Finish the research artifact itself: your paper, note, or poster, with each claim stated at its boundary and your uncertainty in the same sentence as your headline number.</li>
 <li>Assemble your AI-management portfolio around the team you directed in this studio: the decomposition of loops with their wiring, one conflict or suspicious agreement settled by your own non-AI check, your stopping rule and never-delegate list, and one independence check that made an agreement worth more than a head count.</li>
@@ -1616,6 +1733,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch40_final_research_and_ai_management_portfolio.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html">Chapter 40</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1645,27 +1763,32 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 12</p>
 </div>
+<div class="slide-body">
 <div class="decision">
 <p><span class="label">The artifact</span></p>
 <p><strong>What this milestone produces.</strong> A review-management record for your directed AI team, a release audit recording release or withhold-pending-a-named-repair, your final dossier with a complete manifest, an explicit stopping rule, and your next-study agenda.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>What you bring</h2>
 <div class="kicker">
 <p>Milestone 12 · Check before you start</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html">Lesson 38 — Managing Multiple AI Agents</a>: your closing-review team: the loops’ scoped jobs, the dependency wiring and turn counts, and the one node you kept human.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html">Lesson 39 — Conflicting Agents and Human Escalation</a>: your escalation rules, and one load-bearing pair of outputs (agreeing or not) diagnosed and settled by your own check, with any override on record.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html">Lesson 40 — Final Research and AI-Management Portfolio</a>: your finished research artifact with every claim bounded, your AI-management portfolio with the team record inside, and the rehearsed three-movement defense.</li>
 </ul>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>The practice</h2>
 <div class="kicker">
 <p>Milestone 12 · In the studio</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release.</li>
 <li>Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role’s input exists before it starts, escalation rules written first, one node kept human. Declare who chooses each next step — you, a fixed script, or an agent that plans and calls tools — and never call a manually sequenced chat autonomous. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity.</li>
@@ -1675,12 +1798,14 @@ Davi Moreira
 <li>Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.</li>
 <li>Write the next-study agenda: tie the next question to an unresolved limitation, a warrant gap, or something this cycle’s evidence opened.</li>
 </ol>
+</div>
 </section>
 <section class="slide level2">
 <h2>The four rails, here</h2>
 <div class="kicker">
 <p>Milestone 12 · Every studio, these four</p>
 </div>
+<div class="slide-body">
 <div class="rails">
 <div class="rail">
 <p><span class="t">Ethics, permissions, and data exposure</span></p>
@@ -1699,24 +1824,31 @@ Davi Moreira
 <p><span class="d">State what you still do not know as clearly as what you found.</span></p>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 <h2>A version, not a pass</h2>
 <div class="kicker">
 <p>Milestone 12</p>
 </div>
+<div class="slide-body">
 <div class="note-card">
 <p><span class="label">How the record works</span></p>
 <p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
 </div>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>The one rule</h2>
+<div class="creed">
+<p>AI is your arm and your research assistant, not your brain.</p>
+</div>
 <div class="divider-line">
-<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
 <p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
 </div>
+<div class="deck-links">
 <p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio12-release-next-cycle.html">Studio 12 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html">Milestone 12</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+</div>
 
 
 </section>
@@ -1937,6 +2069,180 @@ Davi Moreira
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /* edrai-fit.js — fit each slide's body to the body region, at runtime.
+     *
+     * The builder used to guess: it counted characters and stamped .dense /
+     * .denser / .densest, which shrank the type on slides that had room to spare
+     * and still let a long code block run past the bottom edge. This measures
+     * the rendered height instead, so a slide is never smaller than it needs to
+     * be and never larger than it fits.
+     *
+     * It also drops the type of a title that would run into the hairline, and
+     * tells the chrome when the current slide is an ink field.
+     */
+    (function () {
+      "use strict";
+
+      var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+      var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+      var MIN_TITLE = 0.62;
+      var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+      var LEAD_MAX = 88;
+      var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+      function child(section, cls) {
+        var kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+        }
+        return null;
+      }
+
+      function fitTitle(section) {
+        if (section.classList.contains("divider")) return;
+        var h2 = null, kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+        }
+        if (!h2) return;
+        section.style.removeProperty("--h2fit");
+        var k = 1;
+        for (var n = 0; n < 5; n++) {
+          var need = h2.scrollHeight;
+          if (need <= TITLE_BAND) break;
+          k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+          section.style.setProperty("--h2fit", k.toFixed(4));
+          if (k <= MIN_TITLE) break;
+        }
+      }
+
+      // The natural height of the body's content.
+      //
+      // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+      // under-full slide reports "exactly full" and both the growth step and the
+      // optical lead below silently become no-ops. Walking the children gives the
+      // real figure, in unscaled layout pixels, above and below the box alike.
+      function naturalHeight(body) {
+        var kids = body.children;
+        if (!kids.length) return 0;
+        var first = kids[0], last = kids[kids.length - 1];
+        return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+      }
+
+      function fitBody(section) {
+        var body = child(section, "slide-body");
+        if (!body) return;
+        section.classList.remove("fit-top");
+        section.style.setProperty("--fit", "1");
+        section.style.setProperty("--lead", "0px");
+
+        var avail = body.clientHeight;
+        if (!avail) return;
+
+        // Converge on the largest size that still fits the body region. This
+        // grows a sparse slide as readily as it shrinks a crowded one, which is
+        // the whole point: three lines of type should hold the canvas, not float
+        // in the middle of it at the same size as a slide carrying twenty.
+        // Growth moves where lines wrap, so the step is damped and the last size
+        // known to fit is kept as a floor.
+        var k = 1, fits = 0;
+        for (var n = 0; n < 12; n++) {
+          var need = naturalHeight(body);
+          if (!need) break;
+          if (need <= avail) fits = Math.max(fits, k);
+          var next = k * Math.pow((avail * 0.985) / need, 0.6);
+          next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+          if (Math.abs(next - k) < 0.005) break;
+          k = next;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+        if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+          k = fits;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+
+        // Optical placement. A body that fills the region starts at the top; one
+        // with room to spare drops by a fraction of what is left over, capped, so
+        // that it sits under the title instead of either jammed against it or
+        // marooned in the middle of the canvas.
+        var slack = avail - naturalHeight(body);
+        var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+        section.style.setProperty("--lead", Math.round(lead) + "px");
+
+        // Past the floor and still too tall. The slide spills instead of losing
+        // its last lines, and says so, because a deck that quietly drops the end
+        // of a worked example is worse than one that looks crowded.
+        if (naturalHeight(body) > avail + 1) {
+          section.classList.add("fit-top");
+          var h = section.querySelector("h2");
+          if (window.console && console.warn) {
+            console.warn("EDR|AI: slide does not fit at the minimum size —",
+                         h ? h.textContent.trim() : "(untitled)");
+          }
+        }
+      }
+
+      function fit(section) {
+        if (!section || !section.offsetParent && !isPrint()) return;
+        fitTitle(section);
+        fitBody(section);
+      }
+
+      function isPrint() {
+        return document.body.classList.contains("print-pdf") ||
+               /print-pdf/.test(window.location.search);
+      }
+
+      function markChrome() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        var cur = Reveal.getCurrentSlide();
+        reveal.classList.toggle("on-dark",
+          !!cur && cur.classList.contains("divider"));
+        reveal.classList.toggle("on-title",
+          !!cur && cur.classList.contains("quarto-title-block"));
+      }
+
+      function run() {
+        if (isPrint()) {
+          var all = document.querySelectorAll(".reveal .slides > section");
+          for (var i = 0; i < all.length; i++) fit(all[i]);
+          return;
+        }
+        if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        // Only the current slide. reveal keeps every other section at
+        // `display: none`, where offsetHeight is 0 and nothing can be measured,
+        // so a "pre-fit the neighbours" pass would be a no-op that reads as
+        // working code. reveal makes the incoming slide visible BEFORE it fires
+        // slidechanged, so fitting here lands before the frame is painted.
+        fit(Reveal.getCurrentSlide());
+        markChrome();
+      }
+
+      function boot() {
+        if (typeof Reveal === "undefined" || !Reveal.on) {
+          return void setTimeout(boot, 60);
+        }
+        Reveal.on("ready", run);
+        Reveal.on("slidechanged", run);
+        Reveal.on("resize", run);
+        if (Reveal.isReady && Reveal.isReady()) run();
+        // Web fonts change the metrics after first paint; measure again once they
+        // have actually landed, and once more on a late layout.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(run, 0); });
+        }
+        setTimeout(run, 400);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

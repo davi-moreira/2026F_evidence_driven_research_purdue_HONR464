@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa6bf9334f07eb3fc1071a031a011523.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,13 +192,21 @@
       margin-right: 0; 
     }
   </style>
+  <!-- EDR|AI deck fonts. Two voices: Source Sans 3 for the deck's own
+       scaffolding, Source Serif 4 for the book's verbatim words, JetBrains Mono
+       for code. Every one degrades to a metric-compatible or long-installed
+       fallback in edrai-slides.scss, so a room with no network still renders a
+       correct deck. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <h1 class="title">HONR 46400 · Evidence-Driven Research</h1>
   <p class="subtitle">Studio 6 — Govern data and measurement</p>
 
 <div class="quarto-title-authors">
@@ -215,9 +223,10 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 6</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">What you can defend when you leave</span></p>
 <p>Establish where your numbers came from and whether they measure what you say they measure.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -225,7 +234,9 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 6</p>
 </div>
+<div class="slide-body">
 <p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone06-govern-data-measurement.html">Milestone 6: Your data and measurement, governed</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Provenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck.</p>
+</div>
 <aside class="notes">
 <p>Results inherit the quality of the data and the measures beneath them, and no later check can repair what goes wrong here. This milestone settles how data reach you, where every number came from, and whether your instruments measure what your contract says they measure. The work is deliberately unglamorous. It is also where more projects quietly fail than anywhere else in the book.</p>
 <p>Milestone 7 runs the declared analysis on these governed data and produces your first reproducible result. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
@@ -246,10 +257,12 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 6 · Road map</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html">Lesson 20 — Data Provenance and Data Quality</a>: your acquisition route, written and dated, your provenance record for every dataset and borrowed number (the primary source behind your headline claim opened and read), your data-management update, and the permission recheck against the data as they actually arrived.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html">Lesson 21 — Measurement and Operationalization</a>: your measurement specification: concept, construct, indicator, the meaning sentence for each number, the reliability check’s result, the indicator-to-use validity argument with its strongest rival reading, and the boundary that follows.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>Data Provenance and Data Quality</h2>
@@ -265,9 +278,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>For every number, dataset, and source your project leans on, decide whether it is solid enough to build on. You make that call twice: once on where the value came from and whose hands it passed through, its provenance, and once on whether it was produced well enough, under the right definition, for the specific use you have in mind, its quality.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -275,7 +289,8 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · Key terms</p>
 </div>
-<div class="terms">
+<div class="slide-body">
+<div class="terms two">
 <div class="term">
 <p><span class="t">Data provenance</span></p>
 <p><span class="d">the documented origin of a value and every hand it passed through before it reached you (Lebo et al.&nbsp;2013) (Wilkinson et al.&nbsp;2016).</span></p>
@@ -283,6 +298,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Data quality</span></p>
 <p><span class="d">whether a value is fit for <em>your</em> specific use: real, produced by a method you can name, and defined the way your question needs (Wang &amp; Strong 1996).</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -304,6 +320,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You wrote that turnout in this county was 72 percent.</li>
 <li>The question is not which website you copied it off.</li>
@@ -311,6 +328,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>Who counted the ballots, and 72 percent of what? Of registered voters, of adults, of adults actually eligible to vote?</p>
+</div>
 </div>
 <aside class="notes">
 <p>The scene is the first draft of a background section, read by the researcher who will eventually sign off on your project. Two things are being asked at once: who produced the count, and 72 percent of which population. Ask the room which borrowed number in their own project would survive that question today.</p>
@@ -331,12 +349,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A value with no traceable origin is a rumor with a decimal point.</li>
 <li>A number does not become true by arriving looking tidy.</li>
 <li>Ask two questions of everything you borrow.</li>
 <li>Where did it come from, and is it any good for what I need it for?</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The decision on the table is whether a number you did not produce yourself is solid enough to carry your project’s weight. You make that call twice, once on where the value came from and whose hands it passed through, and once on whether it was produced well enough for the use you have in mind. Those are two different tests, and a citation can pass the first and fail the second.</p>
 <style type="text/css">
@@ -356,12 +376,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The news story reports the figure.</li>
 <li>A state summary table re-reports it.</li>
 <li>The county election office certified the count that produced it.</li>
 <li>A value is only as trustworthy as the primary source at the end of its chain.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Provenance is a chain, and the chain has a direction and an end. Walk it backwards with the room, one link at a time. Each link either produced the value or copied it, and only one of them did the producing. Stop at the link that produced the value, because that is where the number’s trustworthiness rests.</p>
 <style type="text/css">
@@ -381,6 +403,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Primary source</span></p>
@@ -389,6 +412,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Secondary source</span></p>
 <p><span class="d">a source that re-reports a value it did not produce, such as a newspaper table, an encyclopedia entry, or a data aggregator</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -410,12 +434,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Turnout over registered voters answers whether registered people showed up.</li>
 <li>It is the wrong number for how much of the adult population takes part.</li>
 <li>Quality is fitness for <em>your</em> use: real, method you can name, definition your question needs.</li>
 <li>A <strong>mischaracterized value</strong> is a real number attached to the wrong definition or method.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Nothing is wrong with the registered-voter rate itself. It was produced correctly and it reports exactly what it says it reports. The defect appears only when it is carried into a question about everyone eligible. The chapter’s two examples of mischaracterization are a survey’s self-reported turnout presented as an official count, and a registered-voter rate cited as though it covered the whole eligible population.</p>
 <style type="text/css">
@@ -435,12 +461,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Whole datasets carry the same two questions, column by column.</li>
 <li>Who produced this variable, and who cleaned it?</li>
 <li>What did they drop?</li>
 <li>Does the definition behind the column match the one in your question?</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The chapter’s line is blunt: a file that lands in your folder with no answers to those questions is a rumor in a spreadsheet. Nothing about the file format tells you any of this, which is why a clean download feels finished when it is not. Have the room run these four questions against one column of a dataset a collaborator handed them.</p>
 <style type="text/css">
@@ -460,6 +488,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>One habit settles both questions: the retrieval-verification loop.</p>
 </div>
@@ -469,6 +498,7 @@ Davi Moreira
 <li><strong>Verify</strong> that it exists and reports that value under that definition.</li>
 <li><strong>Document</strong> where you found it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The loop settles both questions with one habit. The step that gets skipped is the second, because the first already produced something that looks finished, and the chapter says plainly that opening a source is still your job. Finish the rule as the chapter writes it: a lead, not a source, however confident the tool that handed it to you.</p>
 <style type="text/css">
@@ -488,12 +518,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You are studying whether a local election reform changed participation.</li>
 <li>You need one number for your background section: county turnout in a recent presidential election.</li>
 <li>The assistant answers in about a second: seventy-two percent, with a source that looks entirely real.</li>
 <li>You run the loop instead of copying the number.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Set the scene as a small, ordinary task, because that is when the check gets skipped. Nothing about the answer looks suspicious, and that is the point of choosing it. The loop is not a way of distrusting the tool. It is what turns the lead the tool gave you into a source you can cite.</p>
 <style type="text/css">
@@ -513,12 +545,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>If the source resolves nowhere, the value is orphaned and you drop it.</li>
 <li>If the page is real, ask whether it produced the number or republished it.</li>
 <li>That question usually sends you back to the state’s official results summary.</li>
 <li>Behind that sits the county clerk’s certified canvass, where the totals were settled.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two tests, in this order. The first is existence, and it is fast. The second is production, and it is the one that moves you down the chain. Name the end of this particular chain out loud, then ask the room what the end of the chain looks like for the number their own headline claim leans on hardest.</p>
 <style type="text/css">
@@ -538,12 +572,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Open the canvass and read what the percentage is <em>of</em>.</li>
 <li>Registered voters, all adults, or adults eligible to vote?</li>
 <li>Eligible excludes noncitizens and, in some states, people with certain felony convictions.</li>
 <li>The gaps between those three are not small.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Then ask a second question of the same figure: was it counted or estimated? Ballots cast are counted. Eligible-population denominators are estimated from census data. Survey turnout is self-reported, and people reliably overstate whether they voted, so that is a third kind of number again. A figure is not comparable to another until you know which of the three you are holding.</p>
 <style type="text/css">
@@ -563,12 +599,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Cross-check against an independent source that documents its own methods.</li>
 <li>The United States Elections Project publishes voting-eligible-population turnout estimates and explains its denominator.</li>
 <li>The Census Bureau’s Current Population Survey Voting and Registration Supplement reports self-reported turnout.</li>
 <li>Report both, name the definition behind each, and say which one your question needs and why.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Agreement is the easy case: when the certified canvass and an independent reference agree on both the count and the definition, the number has earned a place in your project. Disagreement is not a failure of the check, and it is not a reason to pick the friendlier figure. You report both and defend the choice. That a value’s usefulness depends on its documented origin and on fitness for the specific use, not on precision alone, is the standard framing of data quality (Wang &amp; Strong 1996).</p>
 <style type="text/css">
@@ -583,11 +621,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>One numerator, three denominators, and the spread the label decides</h2>
 <div class="kicker">
 <p>Chapter 20 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Nothing is randomly drawn here. Provenance is a chain, not a sample.</li>
 <li>Watch the spread in percentage points across the three published figures.</li>
@@ -614,6 +653,7 @@ Davi Moreira
 <span id="cb1-19"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"percentage points"</span>)</span>
 <span id="cb1-20"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"one election, one numerator, three published turnout numbers."</span>)</span>
 <span id="cb1-21"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a figure with no stated denominator is not yet evidence"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Say plainly that this block is not a simulation. It is the same numerator divided by the three denominators a real turnout figure might be resting on, so the size of the labelling decision is visible rather than argued. Run it, then read the last printed line to the room: a figure with no stated denominator is not yet evidence.</p>
 <style type="text/css">
@@ -628,14 +668,16 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>An AI failure case</h2>
 <div class="kicker">
 <p>Chapter 20</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You ask for county turnout and the tool returns “72 percent,” with a citation to a real state elections page. Seven details look right, so it is tempting to paste it straight in. You open the page instead, and the table header reads <em>percent of registered voters</em>, not percent of everyone eligible. The number is real. The denominator is the wrong one for your question, and the tool swapped it silently. You catch it two ways. You had written your own expectation first, so a figure that sits well above what you knew about participation in that county already looked suspect. Then you read the actual column header rather than the tool’s summary of it, and the mismatch is plain. The value goes into your notes as a registered-voter rate, and your original question stays open.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -643,16 +685,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 20</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Three calls stay yours. <strong>Whether a value counts as verified</strong> is settled by a source you opened, not by the tool’s confidence. <strong>Whether its definition fits your use</strong> is a judgment about your specific question, and no lookup makes it for you. And <strong>how much uncertainty you report</strong> when your sources disagree is yours to state and defend, because your name goes on the claim the number supports.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 20 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>List every dataset, table, and borrowed number your project uses.</li>
 <li>For each, write four things: who produced it, when, from what original record, and every hand it passed through on the way to you.</li>
@@ -664,6 +709,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_data_provenance_and_data_quality.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html">Chapter 20</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -693,9 +739,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Decide how to turn the abstract idea your question is about into one concrete number you can record, repeat, and defend. Name the concept, name the narrower construct that will stand in for it, name the indicator you will actually measure, and then say plainly what that indicator captures and what it quietly leaves out.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -703,6 +750,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · Key terms</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">Operationalization</span></p>
@@ -715,6 +763,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Measurement reliability</span></p>
 <p><span class="d">asks whether your number holds still when you repeat the measurement, and it means nothing until you say <em>what</em> repeats.</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -736,12 +785,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A people-analytics lead, reading the first draft of a workplace study.</li>
 <li>The decision on the table: which specific number stands in for the big idea.</li>
 </ul>
 <div class="note-card">
 <p>Before you tell me the pilot made people more engaged, tell me exactly what you put a number on. ‘Engaged’ is a word. I need to know which question you asked, on what scale, and what that number quietly ignores.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read the quote aloud and let it sit. The analyst is not attacking the finding, but asking a question the draft cannot answer. Ask the room what the analyst would have to hear before believing the headline. That is the whole chapter: the question that was asked, the scale it was asked on, and what the number quietly ignores.</p>
@@ -762,12 +813,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Every result answers a question about some idea: engagement, market power, wellbeing, participation.</li>
 <li>You never measure the idea. You measure a number that stands in for it.</li>
 <li>That substitution is the swap, and it is where trust is won or lost.</li>
 <li>So say which number you recorded and what it quietly leaves out.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is worth slowing down on, because it is easy to nod at and easy to skip in practice. Nobody has ever measured engagement. People have measured answers to questions about engagement. The chapter’s move is to make the swap explicit and defensible rather than silent, and everything after this slide is machinery for doing that.</p>
 <style type="text/css">
@@ -787,6 +840,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>Employee engagement, then willingness to recommend the workplace, then the mean of one item.</p>
 </div>
@@ -802,6 +856,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Indicator</span></p>
 <p><span class="d">the exact number a procedure produces</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -823,6 +878,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Ask whether accumulated evidence supports the meaning you attach to your number (American Educational Research Association et al.&nbsp;2014).</li>
 <li>And for the specific use you have in mind, not for any use at all.</li>
@@ -830,6 +886,7 @@ Davi Moreira
 <li>Does not by itself support: employees here are more engaged.</li>
 <li>Change the reading or the use, and you need evidence again.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Engagement includes burnout and whether people feel their work matters, so one recommend-a-friend rating cannot carry the word by itself. Keep the chapter’s bound in place when you say it: a broader argument, with more evidence behind it, might eventually reach further. What is ruled out is treating validity as a stamp the rating carries around. It belongs to a claim: this number, read this way, used for this purpose, with evidence behind it.</p>
 <style type="text/css">
@@ -849,12 +906,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Repeat the occasion:</strong> re-ask the same people two weeks later.</li>
 <li><strong>Repeat the rater:</strong> have two trained coders score the same speeches.</li>
 <li><strong>Repeat the items:</strong> split a many-question scale for one construct into comparable halves.</li>
 <li>For a fast-moving mood, a different answer is news, not error.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Push on the occasion check, because it is the one people run without thinking. It only means something if the thing you measure should have held still over those two weeks, and if the first asking did not change the second answer. Ask the room which of the three repeats their own instrument could actually support, and what a disagreement would mean if it appeared.</p>
 <style type="text/css">
@@ -874,12 +933,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A twelve-item scale gives each employee an odd-item score and an even-item score.</li>
 <li>Check that a person scoring high on one scores high on the other.</li>
 <li>The halves have to be comparable, not odd-and-even by accident of order.</li>
 <li>Each half is only half as long, so raw agreement understates the full scale.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Split-half reliability is agreement between two halves of the items on the same people. The two cautions are not footnotes. If the items happen to be ordered by topic, an odd-even split may compare two different things. And because shorter scales are noisier, the raw agreement between halves runs low; statisticians apply a standard length correction to get from the half-scale number to the full-scale one.</p>
 <style type="text/css">
@@ -899,12 +960,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You could compare the average of one half of your respondents against the other.</li>
 <li>That tells you how much a group average wobbles between samples of people.</li>
 <li>It is a real thing to know, and an entirely different question.</li>
 <li>It says nothing about whether your instrument reads consistently.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the warning that saves a common wasted afternoon, so say it plainly and then ask the room to repeat it back. The error is easy to make because both procedures involve splitting something in two and correlating the halves. Only one of them is about the instrument. Step 6 of the It is your turn section forbids the wrong one by name.</p>
 <style type="text/css">
@@ -924,12 +987,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The scale reads your weight the same way five times in a row.</li>
 <li>Weight is still a poor stand-in for “fitness” (Cronbach &amp; Meehl 1955).</li>
 <li>Reliability feeds validity without settling it.</li>
 <li>An indicator can be perfectly reliable and still support the wrong claim.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Keep this example on the board for the rest of the lesson. A repeatable number earns you the right to ask the validity question; it does not answer it. When the retest correlation comes back high in the worked example, this is the slide to point back to.</p>
 <style type="text/css">
@@ -949,12 +1014,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Are the sites that ran the pilot more engaged than the sites that kept fixed shifts?</li>
 <li><strong>Concept:</strong> employee engagement. No instrument reads “engagement.”</li>
 <li><strong>Construct:</strong> willingness to recommend the workplace.</li>
 <li><strong>Indicator:</strong> mean of one 1 to 7 agreement item, at eight pilot and eight comparison sites.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Several facets of engagement would have been honest choices here. This one is chosen because someone who would tell a friend to work here is telling you something real about their attachment to the job. Say why out loud, because step 2 of the It is your turn section asks for exactly that line: this facet, and not a neighboring one, for this reason.</p>
 <style type="text/css">
@@ -974,6 +1041,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Re-ask a random tenth two weeks later and compare their two answers.</li>
 <li>They land close, so the item is repeatable rather than a coin flip dressed as data.</li>
@@ -981,6 +1049,7 @@ Davi Moreira
 <li>It cannot hear from the people who already quit.</li>
 <li>Naming omissions begins the validity argument. It does not finish it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The group who already left is the sharpest omission, because it is exactly the group an engagement question most wants to reach, and it is structurally absent from a survey of current employees. Ask the room which omission on their own project has that shape. The indicator is one true facet, not the whole of engagement.</p>
 <style type="text/css">
@@ -1000,12 +1069,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Defensible: pilot sites averaged higher willingness to recommend than comparison sites.</li>
 <li>With the boundary attached: one facet of engagement, measured with a repeatable single item.</li>
 <li>Not defensible: “the pilot made employees more engaged.”</li>
 <li>You never measured the facets your indicator skips, and never heard from the people who left.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>That validity is an argument about a particular interpretation and use, and never a property the instrument owns, is the position of the testing standards (American Educational Research Association et al.&nbsp;2014). Have someone read the defensible sentence and the indefensible one back to back. The difference is a few words, and those words are the whole claim boundary.</p>
 <style type="text/css">
@@ -1020,11 +1091,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Watch what the reliability number does not license</h2>
 <div class="kicker">
 <p>Chapter 21 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The block builds the sixteen sites, reads the indicator, and runs the retest.</li>
 <li>The retest re-asks the same people the same item, never a second group of people.</li>
@@ -1055,6 +1127,7 @@ Davi Moreira
 <span id="cb2-23"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">test-retest correlation on the re-asked tenth : </span><span class="sc">{</span>r<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
 <span id="cb2-24"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"that number says the item is repeatable. it says NOTHING about whether"</span>)</span>
 <span id="cb2-25"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"recommend-a-friend captures engagement, or about the people who quit"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run it at SEED 464 so the numbers reproduce, then read the two printed lines against each other. The site means answer the comparison question; the correlation answers the repeatability question. Neither says whether recommend-a-friend captures engagement, and neither reaches the people who quit. Ask what you would have to add to the study to move either of those.</p>
 <style type="text/css">
@@ -1069,14 +1142,16 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>An AI failure case</h2>
 <div class="kicker">
 <p>Chapter 21</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You ask, “operationalize employee engagement for my pilot study,” and the tool answers with total confidence: “Ask whether people would recommend the company on a 0 to 10 scale and take the share who answer 9 or 10. That is engagement.” The recipe is clean, correct-sounding, and easy to field. Here is the trap. Engagement is a broad concept with several independent facets, and the tool silently narrowed it to one construct, then handed you the indicator as if it were the whole idea. This is a scope change wearing the costume of a complete answer.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1084,6 +1159,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it by reading the answer’s claim next to your question, word for word.</li>
 <li>Your question was about “engagement”; the answer is about “would recommend,” and those are not the same box.</li>
@@ -1091,6 +1167,7 @@ Davi Moreira
 <li>A confident recipe is not a valid operationalization.</li>
 <li>You verify the construct, not the fluency of the paragraph that proposed it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it by reading the answer’s claim next to your question, word for word. Your question was about “engagement”; the answer is about “would recommend,” and those are not the same box. Then you confirm it with a real source: open a published engagement framework and find the several facets the recipe never mentioned. A confident recipe is not a valid operationalization. You verify the construct, not the fluency of the paragraph that proposed it.</p>
 <style type="text/css">
@@ -1110,16 +1187,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 21</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Which <strong>concept</strong> your question is about, which <strong>construct</strong> honestly stands for it, and where your <strong>indicator’s</strong> meaning must stop are yours alone. The tool can list instruments and name limitations, but only you decide that a recommend-a-friend rating is a fair stand-in for the facet of engagement you actually care about, and only you write the sentence that refuses to call one facet the whole concept. Naming what your number leaves out is the researcher’s job, not the model’s.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 21 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>List every concept your question contains and circle the abstract ones, the words no instrument reads: engagement, health, participation, quality, competitiveness.</li>
 <li>Under each circled concept write the construct you will really measure, plus one line on why that facet and not a neighboring one.</li>
@@ -1131,6 +1211,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch21_measurement_and_operationalization.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html">Chapter 21</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1160,9 +1241,11 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 6</p>
 </div>
+<div class="slide-body">
 <div class="decision">
 <p><span class="label">The artifact</span></p>
 <p><strong>What this milestone produces.</strong> Provenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1170,16 +1253,19 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 6 · Check before you start</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html">Lesson 20 — Data Provenance and Data Quality</a>: your acquisition route, written and dated, your provenance record for every dataset and borrowed number (the primary source behind your headline claim opened and read), your data-management update, and the permission recheck against the data as they actually arrived.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html">Lesson 21 — Measurement and Operationalization</a>: your measurement specification: concept, construct, indicator, the meaning sentence for each number, the reliability check’s result, the indicator-to-use validity argument with its strongest rival reading, and the boundary that follows.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 <h2>The practice</h2>
 <div class="kicker">
 <p>Milestone 6 · In the studio</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Settle your acquisition route first, using the guidance on the studio opener, and write down which route you took and why.</li>
 <li>Document provenance for every source: who produced it, how, when, and under what terms.</li>
@@ -1187,12 +1273,14 @@ Davi Moreira
 <li>Assess reliability and validity for your own instrument, on the evidence you actually have.</li>
 <li>Recheck permissions against the data as they actually arrived, not as planned.</li>
 </ol>
+</div>
 </section>
 <section class="slide level2">
 <h2>The four rails, here</h2>
 <div class="kicker">
 <p>Milestone 6 · Every studio, these four</p>
 </div>
+<div class="slide-body">
 <div class="rails">
 <div class="rail">
 <p><span class="t">Ethics, permissions, and data exposure</span></p>
@@ -1211,24 +1299,31 @@ Davi Moreira
 <p><span class="d">Measurement error is uncertainty; state it alongside sampling uncertainty, not instead of it.</span></p>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 <h2>A version, not a pass</h2>
 <div class="kicker">
 <p>Milestone 6</p>
 </div>
+<div class="slide-body">
 <div class="note-card">
 <p><span class="label">How the record works</span></p>
 <p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
 </div>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>The one rule</h2>
+<div class="creed">
+<p>AI is your arm and your research assistant, not your brain.</p>
+</div>
 <div class="divider-line">
-<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
 <p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
 </div>
+<div class="deck-links">
 <p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio06-govern-data-measurement.html">Studio 6 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone06-govern-data-measurement.html">Milestone 6</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+</div>
 
 
 </section>
@@ -1449,6 +1544,180 @@ Davi Moreira
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /* edrai-fit.js — fit each slide's body to the body region, at runtime.
+     *
+     * The builder used to guess: it counted characters and stamped .dense /
+     * .denser / .densest, which shrank the type on slides that had room to spare
+     * and still let a long code block run past the bottom edge. This measures
+     * the rendered height instead, so a slide is never smaller than it needs to
+     * be and never larger than it fits.
+     *
+     * It also drops the type of a title that would run into the hairline, and
+     * tells the chrome when the current slide is an ink field.
+     */
+    (function () {
+      "use strict";
+
+      var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+      var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+      var MIN_TITLE = 0.62;
+      var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+      var LEAD_MAX = 88;
+      var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+      function child(section, cls) {
+        var kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+        }
+        return null;
+      }
+
+      function fitTitle(section) {
+        if (section.classList.contains("divider")) return;
+        var h2 = null, kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+        }
+        if (!h2) return;
+        section.style.removeProperty("--h2fit");
+        var k = 1;
+        for (var n = 0; n < 5; n++) {
+          var need = h2.scrollHeight;
+          if (need <= TITLE_BAND) break;
+          k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+          section.style.setProperty("--h2fit", k.toFixed(4));
+          if (k <= MIN_TITLE) break;
+        }
+      }
+
+      // The natural height of the body's content.
+      //
+      // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+      // under-full slide reports "exactly full" and both the growth step and the
+      // optical lead below silently become no-ops. Walking the children gives the
+      // real figure, in unscaled layout pixels, above and below the box alike.
+      function naturalHeight(body) {
+        var kids = body.children;
+        if (!kids.length) return 0;
+        var first = kids[0], last = kids[kids.length - 1];
+        return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+      }
+
+      function fitBody(section) {
+        var body = child(section, "slide-body");
+        if (!body) return;
+        section.classList.remove("fit-top");
+        section.style.setProperty("--fit", "1");
+        section.style.setProperty("--lead", "0px");
+
+        var avail = body.clientHeight;
+        if (!avail) return;
+
+        // Converge on the largest size that still fits the body region. This
+        // grows a sparse slide as readily as it shrinks a crowded one, which is
+        // the whole point: three lines of type should hold the canvas, not float
+        // in the middle of it at the same size as a slide carrying twenty.
+        // Growth moves where lines wrap, so the step is damped and the last size
+        // known to fit is kept as a floor.
+        var k = 1, fits = 0;
+        for (var n = 0; n < 12; n++) {
+          var need = naturalHeight(body);
+          if (!need) break;
+          if (need <= avail) fits = Math.max(fits, k);
+          var next = k * Math.pow((avail * 0.985) / need, 0.6);
+          next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+          if (Math.abs(next - k) < 0.005) break;
+          k = next;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+        if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+          k = fits;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+
+        // Optical placement. A body that fills the region starts at the top; one
+        // with room to spare drops by a fraction of what is left over, capped, so
+        // that it sits under the title instead of either jammed against it or
+        // marooned in the middle of the canvas.
+        var slack = avail - naturalHeight(body);
+        var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+        section.style.setProperty("--lead", Math.round(lead) + "px");
+
+        // Past the floor and still too tall. The slide spills instead of losing
+        // its last lines, and says so, because a deck that quietly drops the end
+        // of a worked example is worse than one that looks crowded.
+        if (naturalHeight(body) > avail + 1) {
+          section.classList.add("fit-top");
+          var h = section.querySelector("h2");
+          if (window.console && console.warn) {
+            console.warn("EDR|AI: slide does not fit at the minimum size —",
+                         h ? h.textContent.trim() : "(untitled)");
+          }
+        }
+      }
+
+      function fit(section) {
+        if (!section || !section.offsetParent && !isPrint()) return;
+        fitTitle(section);
+        fitBody(section);
+      }
+
+      function isPrint() {
+        return document.body.classList.contains("print-pdf") ||
+               /print-pdf/.test(window.location.search);
+      }
+
+      function markChrome() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        var cur = Reveal.getCurrentSlide();
+        reveal.classList.toggle("on-dark",
+          !!cur && cur.classList.contains("divider"));
+        reveal.classList.toggle("on-title",
+          !!cur && cur.classList.contains("quarto-title-block"));
+      }
+
+      function run() {
+        if (isPrint()) {
+          var all = document.querySelectorAll(".reveal .slides > section");
+          for (var i = 0; i < all.length; i++) fit(all[i]);
+          return;
+        }
+        if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        // Only the current slide. reveal keeps every other section at
+        // `display: none`, where offsetHeight is 0 and nothing can be measured,
+        // so a "pre-fit the neighbours" pass would be a no-op that reads as
+        // working code. reveal makes the incoming slide visible BEFORE it fires
+        // slidechanged, so fitting here lands before the frame is painted.
+        fit(Reveal.getCurrentSlide());
+        markChrome();
+      }
+
+      function boot() {
+        if (typeof Reveal === "undefined" || !Reveal.on) {
+          return void setTimeout(boot, 60);
+        }
+        Reveal.on("ready", run);
+        Reveal.on("slidechanged", run);
+        Reveal.on("resize", run);
+        if (Reveal.isReady && Reveal.isReady()) run();
+        // Web fonts change the metrics after first paint; measure again once they
+        // have actually landed, and once more on a late layout.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(run, 0); });
+        }
+        setTimeout(run, 400);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

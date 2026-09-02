@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa6bf9334f07eb3fc1071a031a011523.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,13 +192,21 @@
       margin-right: 0; 
     }
   </style>
+  <!-- EDR|AI deck fonts. Two voices: Source Sans 3 for the deck's own
+       scaffolding, Source Serif 4 for the book's verbatim words, JetBrains Mono
+       for code. Every one degrades to a metric-compatible or long-installed
+       fallback in edrai-slides.scss, so a room with no network still renders a
+       correct deck. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <h1 class="title">HONR 46400 · Evidence-Driven Research</h1>
   <p class="subtitle">Studio 8 — Stress-test and adjudicate</p>
 
 <div class="quarto-title-authors">
@@ -215,9 +223,10 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 8</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">What you can defend when you leave</span></p>
 <p>Attack your own result the way a hostile reviewer would, and record what survived.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -225,7 +234,9 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 8</p>
 </div>
+<div class="slide-body">
 <p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone08-stress-test.html">Milestone 8: Your robustness audit</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> A pre-listed robustness grid, negative tests with their assumptions stated, diagnostics, an adversarial-review record, and your adjudication of what survived.</p>
+</div>
 <aside class="notes">
 <p>A result you have not tried to break is a result you do not yet know. This milestone attacks your own finding the way a hostile reviewer would: pre-listed robustness checks, negative tests with predictions written before the run, an adversarial review, and an audit of where your confidence actually comes from. What survives, you can defend. What does not, you now know before a reader finds it for you.</p>
 <p>Milestone 9 writes down only the claims this audit licenses, at the strength it licenses them. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
@@ -241,17 +252,19 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>The lessons in this studio</h2>
 <div class="kicker">
 <p>Studio 8 · Road map</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html">Lesson 24 — Robustness and Sensitivity</a>: your pre-listed robustness grid with its full results, direction and size, plus the named null check.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html">Lesson 25 — Diagnostics and Negative Tests</a>: your negative test and diagnostic, each with the prediction you wrote before running it.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html">Lesson 26 — AI as Adversarial Reviewer</a>: your commissioned adversarial review with every flag adjudicated against the data, confirmed or refuted.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html">Lesson 27 — Recognizing False Confidence</a>: your confidence audit: the not-yet-recomputed list, where belief in the headline number comes from, and your boundary sentence.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>Robustness and Sensitivity</h2>
@@ -267,9 +280,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>You decide <strong>the full list of robustness and sensitivity checks you will run, and you decide it before you look at a single result</strong>, then report every one of them. Two things separate a defensible finding from a lucky slice: each version has to be a valid analysis on its own, and the looking has to come after the deciding. Pre-listing protects the second; nothing rescues the first. A check you think of later is still worth running, as long as you label it as one you added after seeing results and report it with the rest.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -277,7 +291,8 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · Key terms</p>
 </div>
-<div class="terms">
+<div class="slide-body">
+<div class="terms two">
 <div class="term">
 <p><span class="t">Shared bias</span></p>
 <p><span class="d">that common error running underneath an entire curve.</span></p>
@@ -285,6 +300,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Specification searching</span></p>
 <p><span class="d">running many analyses and reporting only the one that gave the result you wanted, without disclosing the search.</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -306,6 +322,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The decision on the table: which alternative versions you commit to running and reporting.</li>
 <li>You choose them before you see any of their answers.</li>
@@ -313,6 +330,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>Everyone shows me the version of the analysis that worked. I assume that one exists. My real question is what happened to all the reasonable versions you could have run instead, and whether you looked at them before or after you saw this answer.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The line belongs to a journal reviewer, opening the first serious read your work will get. That reviewer is not accusing you of cheating. The question that matters is the last sentence of the card, so read it out slowly and let it sit before you show anyone a method.</p>
@@ -333,11 +351,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Almost every real estimate depends on choices you could have made differently.</li>
 <li>Any single choice can flatter the result.</li>
 <li>Report only the version that worked and nobody can separate a delicate truth from luck (Simmons et al.&nbsp;2011).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is a plain fact about analysis, not a claim about anyone’s honesty. The chapter’s answer is a habit that answers the reviewer’s question before it is asked. Keep the decision card’s bound in view while you say it: a check you think of later is still worth running, as long as you label it as one you added after seeing results and report it with the rest.</p>
 <style type="text/css">
@@ -357,6 +377,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Robustness check</span></p>
@@ -372,6 +393,7 @@ Davi Moreira
 <li>You assumed checkout logged every purchase, so ask what a missed two percent does.</li>
 <li>An estimate is one number that depends on several choices, and a critic attacks them.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Some fields call the second one a sensitivity analysis, and the two names travel together for a reason: both attacks aim at the same target. Say the difference in one line and make the room repeat it. A robustness check swaps a choice you could have made either way. A sensitivity check moves an assumption you cannot check at all and asks how far the answer travels. Since a critic will attack your choices, you attack them first.</p>
 <style type="text/css">
@@ -391,6 +413,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p><strong>Headline estimate:</strong> the single number that stands in for your whole finding.</p>
 </div>
@@ -401,6 +424,7 @@ Davi Moreira
 <li><strong>Metric:</strong> the yardstick you report.</li>
 <li>Any honest plan turns one or more of them.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>These four words carry the rest of the chapter, so spend a minute here. Ask each person to name the four handles on their own project out loud before the worked example arrives, because the example will move much faster than the vocabulary does. A plan that turns none of them is not a plan.</p>
 <style type="text/css">
@@ -420,6 +444,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>A <strong>specification curve</strong> plots one estimate under many defensible choices, side by side (Simonsohn et al.&nbsp;2020) (Steegen et al.&nbsp;2016).</p>
 </div>
@@ -429,6 +454,7 @@ Davi Moreira
 <li>Changing who is counted, what the outcome means, or its scale opens another panel.</li>
 <li>No version may define its group by something the treatment could have changed.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The chapter’s example question is whether the offer raises shoppers’ spending, and every dot has to be an answer to that. A choice that changes who is counted does not disqualify the analysis; it belongs in its own labeled panel rather than mixed silently into this one. The strict third rule rules out “average order value among the shoppers who actually bought something”, because whether someone bought is downstream of the offer. Keep the chapter’s bound: that comparison may be worth reporting, in its own place, clearly labeled for what it is, and specialists do define careful causal quantities for post-treatment subgroups with different assumptions and different machinery. What is ruled out is treating a raw survivor-style contrast as one more dot.</p>
 <style type="text/css">
@@ -448,12 +474,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A curve entirely on one side of zero shows stability across the choices you listed.</li>
 <li>Choose the comparison group wrong and all sixteen versions inherit that error.</li>
 <li>They lean the same way together, and the picture looks reassuring.</li>
 <li><strong>Shared bias:</strong> the common error running underneath an entire curve.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The picture looks most reassuring exactly when it should not, which is why this slide follows the gate rather than closing the chapter. Ask the room what every version of their own analysis has in common, since the curve cannot test that thing. Naming the shared threat in one sentence is all the curve leaves you able to do about it.</p>
 <style type="text/css">
@@ -473,12 +501,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Specification spread:</strong> the span your answer covered across the versions you ran.</li>
 <li>It runs from lowest dot to highest, and says only how far your choices moved it.</li>
 <li>Every dot still carries sampling wobble of its own.</li>
 <li>Keep the lead estimate’s uncertainty a separate, labeled thing.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The wobble on each dot is the uncertainty you already learned to state with a standard error and an interval, and the spread is not a substitute for it. Two facts, two sentences, never merged. Report the spread as what your choices did, and report the uncertainty of your lead estimate beside it under its own name.</p>
 <style type="text/css">
@@ -498,6 +528,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Specification searching:</strong> running many analyses, reporting only the one you wanted, without disclosing the search.</li>
 <li>Its opposite is <strong>pre-listed checks</strong>: written down and all reported, before any result.</li>
@@ -505,6 +536,7 @@ Davi Moreira
 <li>Re-prompt because the number disappointed you and you have run a search.</li>
 <li>Keep your own log of the cycles; the tool kept none for you.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The most notorious version of specification searching is hunting for a statistically significant result, which researchers call p-hacking, and it is not the only version. Working with an assistant means working in a loop of prompt, read, interrogate, refine, run again, with agentic tools now spinning those cycles on their own. That is why the log is yours to keep. Ask the room how many analyses their last assistant session actually ran, and watch how few can say.</p>
 <style type="text/css">
@@ -524,12 +556,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your team randomly assigns a loyalty discount and asks whether the offer raises spending.</li>
 <li>Target fixed before anything ran: 30-day spending per shopper you assigned.</li>
 <li>Shoppers who spent nothing are counted in.</li>
 <li>Headline: about twelve percent more than those not offered; these numbers are constructed.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Say the target in the chapter’s exact words, because the whole example depends on it staying the same across every version that follows. Counting the shoppers who spent nothing is part of the definition, not a detail. The constructed-numbers bound sits on the slide because the chapter states it in the same breath as the headline. Then attack the number across the four handles before anyone else gets the chance.</p>
 <style type="text/css">
@@ -549,6 +583,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Sample: all shoppers, or all except the wholesale account placing bulk orders.</li>
 <li>Measurement: the total amount charged, or shipping and taxes stripped out.</li>
@@ -556,6 +591,7 @@ Davi Moreira
 <li>Metric: the gain in dollars, or the gain as a percent.</li>
 <li>Averaging only over shoppers who ordered goes in its own labeled section.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The wholesale exclusion is legitimate on your definition of a customer, not a convenient one, and saying which it is out loud is the whole difference. The last line is the gate doing its work: the discount can change who places an order, so that comparison answers a different question about a different group.</p>
 <style type="text/css">
@@ -575,6 +611,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Adjustment keeps the same people, outcome and units, so its versions share a panel.</li>
 <li>Dropping the wholesale account changes who is counted, so it opens a second.</li>
@@ -582,6 +619,7 @@ Davi Moreira
 <li>Primary panel: positive in every pre-listed version, about eight to twelve percent.</li>
 <li>Excluding the wholesale account, the same versions ran ten to fifteen percent.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Dollars versus percent is one comparison shown on two scales, not two pieces of evidence, so it never adds a dot at all. A single eight-to-fifteen range stretched across all three panels would compare a net-of-tax number to a gross one, over different sets of shoppers, and mean nothing. Read the chapter’s reporting sentence aloud and then name what sits beside it: the lead estimate is twelve percent, with its own sampling uncertainty stated with it. Collapsing the two into “the honest range is eight to fifteen” claims a precision nobody computed.</p>
 <style type="text/css">
@@ -601,6 +639,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · A worked example</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Assignment-based null check</span></p>
@@ -620,6 +659,7 @@ Davi Moreira
 <li>That pile is what your machinery produces when the offer does nothing at all.</li>
 <li>This trial randomized, so use the first to build the pile.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Statisticians call the first one randomization inference: keep every enrolled shopper and their observed outcomes, re-draw who is offered using the exact procedure the real study used, and recompute the gap many times. In most observational data you cannot argue the groups were exchangeable, and shuffling anyway builds a pile describing a world you never had. A negative control runs through the same measurement and bias pathways, such as checking for an effect of the offer in the weeks before it launched, and it works whether or not anything was randomized. Here the comparison is a smell test that the uncertainty chapter later finishes: a real gap the no-effect pile produces routinely warns you that your machinery, not the discount, may be doing the work.</p>
 <style type="text/css">
@@ -634,11 +674,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Check that every row answers the same question before reading a number</h2>
 <div class="kicker">
 <p>Chapter 24 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>All eight rows share one <strong>estimand</strong>, the quantity estimated: spending per shopper assigned.</li>
 <li>The printed range is a spread of defensible answers, not a confidence interval.</li>
@@ -687,6 +728,7 @@ Davi Moreira
 <span id="cb1-41"><a aria-hidden="true" tabindex="-1"></a>bad <span class="op">=</span> pct_gain(df[df.ordered], <span class="st">"gross"</span>)</span>
 <span id="cb1-42"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">averaging over ORDERERS only: </span><span class="sc">{</span>bad<span class="sc">:.1f}</span><span class="ss">% — a different estimand, on a"</span>)</span>
 <span id="cb1-43"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"group the offer itself selected. it does not belong on the curve"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>The block turns all four handles and prints the whole grid, plus the one comparison that must stay off it. Walk the three nested loops as sample, then measurement, then specification, which is where the eight rows come from, rather than reading the syntax line by line. Then stop on the final print and ask the room to say, using the gate, why that number does not belong on the curve.</p>
 <style type="text/css">
@@ -701,14 +743,16 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>An AI failure case</h2>
 <div class="kicker">
 <p>Chapter 24</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You paste your four-handle grid and ask an AI to write your robustness section. Back comes a long, well-organized passage that runs the sample handle, the specification handle, and the metric handle, and closes with “the twelve percent result is robust across all standard specifications.” It reads as thorough and complete. The trap is that it never listed the <strong>measurement</strong> handle, the total amount charged versus shipping and taxes stripped out, and that is precisely the choice that moves your estimate the most. The section looks exhaustive while omitting the one check a reviewer would reach for first.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -716,12 +760,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it because you pre-listed all four handles yourself before opening the tool.</li>
 <li>Reading its section against your own list, you notice measurement is missing, run that comparison, and watch the estimate slide toward the low end of your range.</li>
 <li>A passage that looks complete is not the same as one that is complete.</li>
 <li>You check its list against yours, not against how finished it sounds.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it because you pre-listed all four handles yourself before opening the tool. Reading its section against your own list, you notice measurement is missing, run that comparison, and watch the estimate slide toward the low end of your range. A passage that looks complete is not the same as one that is complete. You check its list against yours, not against how finished it sounds.</p>
 <style type="text/css">
@@ -741,16 +787,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 24</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>Three calls stay yours. You decide <strong>which checks you commit to before you look</strong>, <strong>which flagged issues the data actually confirms</strong>, and <strong>the final claim, with its per-panel span and its boundary, that you defend</strong>. A reviewer, human or AI, proposes. You verify against your own data, and the evidence decides.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 24 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write your headline estimate in one sentence.</li>
 <li>Pre-list the checks you will run, at least two, aimed at the handles a hostile reader would attack first.</li>
@@ -763,6 +812,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch24_robustness_and_sensitivity.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html">Chapter 24</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -792,9 +842,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>You decide <strong>which negative test your design actually needs</strong>, a check aimed at a place where the answer must be zero, and you decide what a clean pass does and does not license you to say. Picking the test is the research. Running it is the easy part.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -802,11 +853,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A microbiology lab advisor, on the first plate they ask to see.</li>
 </ul>
 <div class="note-card">
 <p>Before you tell me the extract works, show me the plate with no extract on it. If the blank disk also cleared the bacteria, you have not discovered a drug. You have discovered that your solvent is toxic.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The advisor asks for the control plate before the result plate, and the reason sits in the second sentence. A clear ring around a disk that never held the extract says nothing about the plant. Ask the room what their own blank disk would be: the version of their procedure with the thing they are studying taken out.</p>
@@ -827,12 +880,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>How you handled the samples. How you measured. How you coded the groups.</li>
 <li>Any one of them can produce a signal unrelated to what you set out to study.</li>
 <li>A negative test tells you whether the world made your result or your pipeline did.</li>
 <li>Skip it and you can spend months defending an artifact.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>A result that looks real is the easiest thing in the world to produce by accident, because a procedure has many moving parts. The chapter names three of them, and each can manufacture a signal on its own. The negative test is how you find out which of the two explanations you are living with. The cost of skipping it is not embarrassment at the end; it is months of work built on something that was never there.</p>
 <style type="text/css">
@@ -852,6 +907,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Negative test</span></p>
@@ -866,6 +922,7 @@ Davi Moreira
 <li>Example: measure your “effect” in a group that received no treatment at all.</li>
 <li>Example of an artifact: a clear ring caused by the solvent, not the extract.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Take the two terms together, because the first one hunts for the second. Hold on to the word “exact” in the definition: a check that runs a different analysis from your real one tests nothing you care about. The no-treatment group is the plainest case, since a treatment nobody received cannot have moved anything.</p>
 <style type="text/css">
@@ -885,6 +942,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The true answer is zero. The number your sample returns will almost never be.</li>
 <li>Different samples wobble, so a clean pass is a small reading, not a blank one.</li>
@@ -892,6 +950,7 @@ Davi Moreira
 <li>Worrying means far out from that pile, where ordinary wobble is a strained explanation.</li>
 <li>Chance does occasionally produce a large reading, so no cutoff turns this into a verdict.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is where the test is most often misread, so slow down here. A clean pass is a reading small enough to sit comfortably among the readings your own procedure produces when nothing is happening, and what should worry you is a reading far out from that pile. Notice the hedge in both sentences. Demand exact zeros and you will fail perfectly healthy machinery, or worse, tinker until a readout prints 0.00 and call the tinkering a fix.</p>
 <style type="text/css">
@@ -911,6 +970,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>A good negative control has to satisfy three conditions, and all three matter (Lipsitch et al.&nbsp;2010).</p>
 </div>
@@ -921,6 +981,7 @@ Davi Moreira
 <li>The check must be sensitive enough to show an artifact that would actually matter.</li>
 <li>A quiet control from an insensitive check is no evidence of a clean pipeline.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The first two conditions are both about reach, in opposite directions: a control your cause can touch is not null, and a control your pipeline never touches cannot catch your pipeline. The third is the one people skip. Run too few plates, or measure too coarsely, and a control sits near zero no matter what is going on. That quiet reading is not evidence of a clean pipeline; it is no evidence at all.</p>
 <style type="text/css">
@@ -935,11 +996,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>Three tests aim at zero, and the vehicle control matches your solvent</h2>
 <div class="kicker">
 <p>Chapter 25 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">Placebo test</span></p>
@@ -962,6 +1024,7 @@ Davi Moreira
 <li>Swap the real labels for a coin flip; the estimate should collapse toward zero.</li>
 <li>Dissolved your extract in ethanol? The vehicle control is a disk soaked in ethanol alone.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Three members of this family show up in almost every audit, and the vehicle control is the one matched to delivery. The falsification example is worth saying aloud: your compound can only act after you add it, so a reading taken before you added it should show nothing. The negative-control example runs the other way: an antibiotic cannot change the diameter of the agar dish, so a shrinking-dish reading would mean the measurement is talking, not the drug.</p>
 <style type="text/css">
@@ -981,12 +1044,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The cheapest diagnostic in research: drop each case in turn and recompute.</li>
 <li>See whether one observation is quietly carrying your whole finding.</li>
 <li>A negative test asks whether your procedure invents signal.</li>
 <li>Leave-one-out asks whether your result rests on a single point.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Keep these two questions apart, because a project can pass one and fail the other. The negative test is about a procedure that manufactures signal out of nothing. Leave-one-out is about a real number that only one observation is holding up. Both are cheap, and step four of the practice section asks for the second one beside the first.</p>
 <style type="text/css">
@@ -1006,6 +1071,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>The negative tests all share one move: aim the machinery where the answer must be zero, and check that what comes back is ordinary for a world where it is (Rosenbaum 2002).</p>
 </div>
@@ -1016,6 +1082,7 @@ Davi Moreira
 <li>It never turns a correlation into a cause.</li>
 <li>Report what the check could and could not have caught, not just that it passed.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the boundary the chapter says you must never blur, so read the five lines slowly. All the negative tests share one move, aiming the machinery where the answer must be zero and checking that what comes back is ordinary for a world where it is. What that buys is one specific worry made smaller, bounded by what the check was able to see. Ask the room to say out loud what their own passed check would still leave unanswered.</p>
 <style type="text/css">
@@ -1035,6 +1102,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You soak a paper disk in plant extract, lay it on a bacterial lawn, incubate overnight.</li>
 <li>Next morning you measure the zone of inhibition, the clear ring where bacteria failed to grow.</li>
@@ -1042,6 +1110,7 @@ Davi Moreira
 <li>A bare, uninhibited lawn around it: the ring is not a solvent artifact.</li>
 <li>Its own clear ring: the finding is an artifact until you redo it at lower concentration.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Walk the plate through in order, because the temptation is to write the wide ring down before anything else happens. The vehicle disk sits on an identical plate and is treated exactly the same way, which is what makes its reading comparable. If the ethanol disk clears its own ring you can no longer tell how much of the extract’s ring is the extract and how much is the solvent, and that is a failure with a fix rather than a finding. Say what the pass buys, too, because the chapter stops the claim right there: the effect survives one specific worry, and no more than that.</p>
 <style type="text/css">
@@ -1061,6 +1130,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A positive control is a condition you know produces a signal, run through the same machinery.</li>
 <li>A disk soaked in a standard antibiotic should clear a wide ring.</li>
@@ -1068,6 +1138,7 @@ Davi Moreira
 <li>Clearing a ring shows the system answers a strong inhibitor, not that it notices a small one.</li>
 <li>Decide how big a solvent effect would change your conclusion, then show the assay sees it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The gap between those last two bullets matters, because the artifact you fear is usually small. The chapter’s move is to fix the size that would change your conclusion first, then run a dilution series down toward that magnitude and check that the rings still track the dose and that repeat plates agree closely enough to tell that difference from noise. An assay that detects a strong antibiotic and loses a one-millimetre shift has not cleared your vehicle; it has only failed to notice. And even a clean pass does not tell you the extract works inside a living animal, or which molecule is responsible.</p>
 <style type="text/css">
@@ -1082,11 +1153,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Both controls get read before the extract’s ring means anything</h2>
 <div class="kicker">
 <p>Chapter 25 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Four conditions, ten plates each: extract, vehicle only, standard antibiotic, extract at 20% ethanol.</li>
 <li>Watch the vehicle mean: under 1 mm passes, above it the solvent is doing work.</li>
@@ -1118,6 +1190,7 @@ Davi Moreira
 <span id="cb2-23"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span><span class="st">'PASS'</span> <span class="cf">if</span> positive<span class="sc">.</span>mean() <span class="op">&gt;</span> <span class="dv">5</span> <span class="cf">else</span> <span class="st">'FAIL, the assay cannot detect anything'</span><span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb2-24"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">both controls must be read before the extract's ring means anything."</span>)</span>
 <span id="cb2-25"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a negative control that passes on a broken assay proves nothing"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run the block and read the two verdict lines aloud. The fourth condition is the redo at lower solvent, which is what a failed vehicle control sends you back to. A negative control means nothing until you have also seen that the assay can detect something, which is why all four plates are read at once here rather than one at a time.</p>
 <style type="text/css">
@@ -1132,11 +1205,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>Build a world where the vehicle does nothing, then run it 2,000 times</h2>
 <div class="kicker">
 <p>Chapter 25 · A seeded simulation</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Each run measures twelve matched vehicle and blank disks.</li>
 <li>A shared plate-to-plate wobble, plus ordinary measurement noise.</li>
@@ -1160,6 +1234,7 @@ Davi Moreira
 <span id="cb3-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"rounds to 0.00 at two decimals:"</span>, <span class="bu">int</span>((nulls.<span class="bu">round</span>(<span class="dv">2</span>) <span class="op">==</span> <span class="dv">0</span>).<span class="bu">sum</span>()))</span>
 <span id="cb3-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"typical spread (middle 95%):"</span>, np.percentile(nulls, [<span class="fl">2.5</span>, <span class="fl">97.5</span>]).<span class="bu">round</span>(<span class="dv">2</span>))</span>
 <span id="cb3-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"this run's reading:"</span>, <span class="bu">round</span>(<span class="bu">float</span>(nulls[<span class="dv">0</span>]), <span class="dv">3</span>), <span class="st">"mm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Ask the room to predict the first number before you run it. The world is built so the vehicle truly has no effect at all, so the intuition many people carry is that the readings should be zeros. Everything the section teaches follows from that prediction being wrong.</p>
 <style type="text/css">
@@ -1179,15 +1254,21 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · A seeded simulation</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Sixty-two round to 0.00 at two decimals, so a printed “0.00” is rounding, not nothing.</li>
 <li>The central 95 percent runs from about -0.29 to +0.27 mm.</li>
 <li>Rarer runs reach roughly -0.48 and +0.47. The first run returned -0.03.</li>
 <li>A researcher demanding a true zero would have failed all two thousand of them.</li>
 </ul>
-
-<img data-src="figs/ch22_null_spread.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%" alt="The null readings pile up around zero and spread from about -0.29 to +0.27 mm; none is exactly zero."><div class="figure-caption">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/ch22_null_spread.png" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="The null readings pile up around zero and spread from about -0.29 to +0.27 mm; none is exactly zero."></p>
+</figure>
+</div>
+<div class="figure-caption">
 <p>The null readings pile up around zero and spread from about -0.29 to +0.27 mm; none is exactly zero.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Count them out loud. In a world built so the vehicle does nothing whatsoever, not one of two thousand readings came back exactly zero, and the sixty-two that print as 0.00 are rounded numbers rather than measurements of nothing. That pile is what you compare a real control against. A reading of -0.03 is unremarkable there; a reading of +1.2 mm sits far outside anything this null world produced, and now you have something to investigate.</p>
@@ -1208,6 +1289,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · A seeded simulation</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Simulate your null world at your own sample size, then ask where your control sits.</li>
 <li>The pile is only as trustworthy as the assumptions that built it.</li>
@@ -1215,6 +1297,7 @@ Davi Moreira
 <li>Drawing a cutoff there is a statistical decision, and no single cutoff settles it.</li>
 <li>Ask the three questions first, then report the evidence with its assumptions.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Building your own null pile is the habit worth keeping, and turning it into a rule is the mistake worth naming. The three questions come first: could my cause have reached this control, could the artifact I fear have reached it, and could this check have detected an artifact big enough to matter. Only then use the standard error and the interval you already met to say how unusual this control is. Report that evidence with its assumptions rather than a verdict.</p>
 <style type="text/css">
@@ -1234,9 +1317,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You ask an AI to design a negative control for your ethanol-based assay. It answers, with complete confidence, “use a disk soaked in sterile water.” You run it, the water disk comes back perfectly clean, and the tidy conclusion writes itself: control passed, effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered the extract in ethanol, so the artifact you needed to catch is ethanol toxicity, and a water disk can never show it. The clean result told you nothing at all.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1244,12 +1329,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it with one question the tool never asked itself: which artifact could this control actually have detected?</li>
 <li>A valid vehicle control matches how you delivered the cause, solvent for solvent.</li>
 <li>The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail.</li>
 <li>This is a <em>plausible-but-wrong-method</em>: the advice sounded like textbook practice and was wrong for your case.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it with one question the tool never asked itself: which artifact could this control actually have detected? A valid vehicle control matches how you delivered the cause, solvent for solvent. The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail. This is a <em>plausible-but-wrong-method</em>: the advice sounded like textbook practice and was wrong for your case.</p>
 <style type="text/css">
@@ -1269,16 +1356,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 25</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>You decide <strong>which negative test your design actually needs</strong>, <strong>whether the control is genuinely null</strong> (a place your cause truly cannot reach), and <strong>what a clean pass licenses you to claim</strong>. A tool can list candidate controls, but only you know the mechanism well enough to certify that your cause cannot touch the one you chose. The judgment about what a passed negative test bought you, and how far its sensitivity reached, stays yours.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 25 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Name the artifact you are most afraid of: the one way your procedure, rather than your subject, could have manufactured your result.</li>
 <li>Choose the negative test that could catch it, whether that is a placebo label, a falsification outcome measured where the effect cannot yet exist, or a negative control your cause could not possibly touch.</li>
@@ -1289,6 +1379,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_diagnostics_and_negative_tests.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html">Chapter 25</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1318,9 +1409,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>When a reviewer hands you a list of flaws in your own analysis, you decide <strong>which flaws are real, and you decide it by running the one data check that confirms or refutes each</strong>, never by going with whichever reviewer sounded most certain. Confidence is not evidence, and a panel of confident reviewers is not three pieces of evidence.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1328,7 +1420,8 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · Key terms</p>
 </div>
-<div class="terms">
+<div class="slide-body">
+<div class="terms two">
 <div class="term">
 <p><span class="t">Specification searching</span></p>
 <p><span class="d">trying many versions of an analysis and reporting only the one that gave the answer you wanted, without disclosing the search (Simmons et al.&nbsp;2011).</span></p>
@@ -1336,6 +1429,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Correlated error</span></p>
 <p><span class="d">two reviewers wrong in the same way, so their agreement is an echo, not a confirmation (Peker 2023).</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1357,12 +1451,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You propose rolling a store change out to every store in the chain.</li>
 <li>The operations manager’s sign-off is what lets it get there.</li>
 <li>That manager also answers for it when the checkout lines say otherwise.</li>
 <li>Example: complaints about backed-up queues on the first busy Saturday.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Open on the person, not on the method. The operations manager is the one whose sign-off carries your change to every store, and the one fielding the complaints when the new self-checkout layout backs the queues up. That is why their concern is blunt, and why you read it out before anyone hears the word “reviewer”.</p>
 <style type="text/css">
@@ -1382,12 +1478,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The decision on the table: which of the flaws a reviewer names are real.</li>
 <li>Settled by a check you run, not by how sure the reviewer sounded.</li>
 </ul>
 <div class="note-card">
 <p>Do not tell me the numbers got better. Tell me which check you ran that would have caught it if they hadn’t. I trust the check, not the graph.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Read the manager’s line aloud, then say what it is asking for. It is not asking whether the numbers improved. It is asking which check you ran that would have caught the failure had there been one. Put that to the room as a question: what would your own check have to look like before this manager believed your result?</p>
@@ -1408,6 +1506,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A confident measurement can be wrong.</li>
 <li>So can a fluent AI critique, and so can a clean-looking table.</li>
@@ -1415,6 +1514,7 @@ Davi Moreira
 <li>What the manager wants sounds least impressive and matters most.</li>
 <li>The check you committed to before you looked, and the flag you verified.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The three things that can fail here look nothing alike on the page, and they fail identically: convincingly. That is the reason the chapter puts the committed check ahead of the result. Confidence is not evidence, so the only thing that separates a real flaw from an invented one is a measurement you ran against your own data.</p>
 <style type="text/css">
@@ -1434,6 +1534,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Adversarial reviewer</span></p>
@@ -1453,6 +1554,7 @@ Davi Moreira
 <li>Each of the three fails in its own way.</li>
 <li>You defend a result by trying to break it first.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The chapter’s example of an adversarial reviewer is a peer who tries to show your measured improvement was luck rather than a real change. Keep the two checks apart in the room’s heads. A robustness check asks whether the answer holds under a different defensible choice; a placebo test asks what your machinery returns in a world where there is nothing to find.</p>
 <style type="text/css">
@@ -1472,6 +1574,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Robustness: you measured the improvement during one time of day.</li>
 <li>So measure it in two other realistic time blocks as well.</li>
@@ -1479,6 +1582,7 @@ Davi Moreira
 <li>Repeat over many pairs, since any two stretches differ a little by chance.</li>
 <li>An “improvement” far larger than the rest of that pile is your measurement lying.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The placebo needs the repetition to mean anything, so do not skip the last line. Two stretches of an unchanged layout will never come back exactly equal, and the question is not whether the gap is zero. It is whether your gap is ordinary for a world with nothing in it, which you can only answer once you have a pile of such gaps to compare against.</p>
 <style type="text/css">
@@ -1498,6 +1602,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Specification searching:</strong> many versions run, only the flattering one reported, the search undisclosed (Simmons et al.&nbsp;2011).</li>
 <li>Its everyday name is p-hacking.</li>
@@ -1505,6 +1610,7 @@ Davi Moreira
 <li>The cure is <strong>pre-listed checks</strong>, committed to before you see any result (Nosek et al.&nbsp;2018).</li>
 <li>Example: write down three time blocks and one placebo, run all four, report every number.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The habit that keeps an attack honest is order, not effort. Running ten analyses is not the problem; running ten and disclosing one is. Say plainly what the pre-listed set buys you: every number in it gets reported, including the ones that did not help, so nobody has to take your word for what else you tried.</p>
 <style type="text/css">
@@ -1524,6 +1630,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Correlated error:</strong> two reviewers wrong in the same way (Peker 2023).</li>
 <li>Their agreement is an echo, not a confirmation.</li>
@@ -1531,6 +1638,7 @@ Davi Moreira
 <li>Both sound equally certain while doing it.</li>
 <li>A panel of confident reviewers is not three pieces of evidence.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This failure earns its own name because AI reviewers make it constantly. Two models can share a blind spot and flag the same non-issue with equal confidence, so what looks like a second opinion is the first one repeated. Treat matching answers as one candidate to check, and ask the room how they would tell an echo from a confirmation without running anything.</p>
 <style type="text/css">
@@ -1550,6 +1658,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Point a tool at your whole analysis: it reads your code, reruns it, tries variants.</li>
 <li>It returns a ranked list of problems, and it will find real errors you missed.</li>
@@ -1557,6 +1666,7 @@ Davi Moreira
 <li>Each still needs the same treatment: name the check, run it, read your own output.</li>
 <li>A longer, better organized list is more tempting to accept wholesale.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Give the tool its due first, because the chapter does: this is a genuine upgrade over a single prompt. What it does not change is who adjudicates. The better the list looks, the harder you hold the line, because a reviewer proposes a flaw and the data decide whether it is real. Confidence, human or machine, tells you nothing about whether the flaw exists.</p>
 <style type="text/css">
@@ -1576,6 +1686,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your store installed a new self-checkout layout, and your data say lines moved faster.</li>
 <li><strong>p95 wait time:</strong> the wait 95 out of 100 customers come in under.</li>
@@ -1583,6 +1694,7 @@ Davi Moreira
 <li>A p95 of 210 seconds means only the slowest 5 percent waited longer.</li>
 <li>Your headline is a p95 drop from 210 seconds to 137.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Define p95 before the headline lands, because the whole example is about the tail rather than the typical customer. The average hides exactly the waits the operations manager hears about. Then state the move the chapter is teaching: the attack comes from you, first, before anyone else gets the chance.</p>
 <style type="text/css">
@@ -1602,6 +1714,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The first says the win is driven by a single unusually quiet morning.</li>
 <li>The second says you cherry-picked the one customer mix where the layout helps.</li>
@@ -1609,6 +1722,7 @@ Davi Moreira
 <li>On the third reading, you measured staffing rather than the layout.</li>
 <li>All three are confident, and all three disagree.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Stop here and ask the room which reviewer they would believe. The point of the disagreement is that certainty cannot be the tiebreaker, because all three have it and all three point somewhere different. Each objection is specific enough to name a measurement, which is what makes the next slide possible.</p>
 <style type="text/css">
@@ -1628,6 +1742,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Leave-one-out drops the quiet morning and recomputes the p95: it barely moves.</li>
 <li>So the first flaw is refuted.</li>
@@ -1635,6 +1750,7 @@ Davi Moreira
 <li>The placebo compares two stretches of the old layout, and comes back near zero.</li>
 <li>The two loudest flags dissolved the moment a check touched them.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Walk the placebo logic slowly, since it is the least obvious of the three. An improvement between two stretches of the unchanged old layout would have proved the third reviewer right, because it would show the machinery manufacturing gaps out of nothing. It came back near zero, so the machinery is clean. You did not trust the loudest voice; you turned each flaw into something you could run.</p>
 <style type="text/css">
@@ -1649,11 +1765,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Watch which line decides, not which reviewer sounded surest</h2>
 <div class="kicker">
 <p>Chapter 26 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Watch the leave-one-out range: the drop survives dropping any single morning.</li>
 <li>Watch the three mixes side by side, old p95 against new.</li>
@@ -1693,6 +1810,7 @@ Davi Moreira
 <span id="cb4-32"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">placebo, old layout vs itself : </span><span class="sc">{</span>placebo<span class="sc">:+.0f}</span><span class="ss"> s "</span></span>
 <span id="cb4-33"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"(</span><span class="sc">{</span><span class="st">'clean'</span> <span class="cf">if</span> <span class="bu">abs</span>(placebo) <span class="op">&lt;</span> <span class="dv">25</span> <span class="cf">else</span> <span class="st">'the machinery manufactures gaps'</span><span class="sc">}</span><span class="ss">)"</span>)</span>
 <span id="cb4-34"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"three confident reviewers, three checks, and only the checks decide"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run it as three answers to three named objections, in the order the reviewers raised them. Committing to the checks before seeing the results is what keeps this from becoming a search for the version you liked (Nosek et al.&nbsp;2018). Change one input and ask which printed line would have caught it.</p>
 <style type="text/css">
@@ -1712,6 +1830,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>None of the three reviewers raised it.</li>
 <li>This ran at one store, on weekdays, not across the chain.</li>
@@ -1719,6 +1838,7 @@ Davi Moreira
 <li>You measured a p95 improvement for these three customer mixes, at this store.</li>
 <li>Not a guarantee for every location your company runs.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Separate the two kinds of flaw out loud, because the difference decides what you do next. A measurement problem is answered by running something; a boundary problem is answered only by narrowing the claim until the claim is true. Notice that the surviving flaw is the one no reviewer named, which is a reason to keep adjudicating after the panel goes quiet.</p>
 <style type="text/css">
@@ -1738,9 +1858,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You paste your wait-time summary into an AI reviewer, and it answers with total certainty: your improvement is an artifact of one unusually quiet morning, drop that morning and it vanishes. The claim is specific, mechanistic, and stated without a hedge. It reads exactly like a reviewer who has seen this mistake a hundred times.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1748,6 +1870,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 26 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Here is how you catch it.</li>
 <li>You do not act on the verdict.</li>
@@ -1755,6 +1878,7 @@ Davi Moreira
 <li>The improvement barely moves.</li>
 <li>The confident flaw was fabricated, a real-sounding mechanism bolted onto a problem your data do not have.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Here is how you catch it. You do not act on the verdict. You run the leave-one-out yourself, dropping the quiet morning and recomputing the p95. The improvement barely moves. The confident flaw was fabricated, a real-sounding mechanism bolted onto a problem your data do not have. Trust the certainty and you throw away a genuine result on a hunch. Pointing the check at your own numbers is the only thing that settled it.</p>
 <style type="text/css">
@@ -1769,21 +1893,24 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>Do not delegate</h2>
 <div class="kicker">
 <p>Chapter 26</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>These stay yours, no matter how fluent the reviewer sounds. Which robustness checks you commit to before you look, because only those carry confirmatory weight. A check you think of after seeing the result is still worth running; it is exploratory, and it counts only if you label it that way and report it with the rest. Which flagged flaws your data actually confirm, decided by the measurement and not by the confidence. Whether a flaw is a claim-boundary problem that no further measurement can fix and only a narrower claim can answer. And the one bounded result you will defend, with its uncertainty stated. A reviewer proposes; you verify, and the evidence decides.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 26 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Write a one-paragraph summary of your design, your headline claim, and the checks you have already run.</li>
 <li>Commission the review: ask for the single most serious flaw and the exact measurement that would confirm or refute it.</li>
@@ -1794,6 +1921,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch26_ai_as_adversarial_reviewer.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html">Chapter 26</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1823,9 +1951,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>When a tool hands you a fluent, confident finding, you decide <strong>whether its confidence counts as evidence</strong> (it never does) and <strong>which independent check you run on the number underneath it</strong> before you repeat the claim as your own. Nothing about how sure the sentence sounds tells you whether it is true.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1833,6 +1962,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · Key terms</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">False confidence</span></p>
@@ -1849,6 +1979,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Verification</span></p>
 <p><span class="d">an independent check, run by a method outside the model, that a result is actually true.</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -1870,6 +2001,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A fisheries biologist reviews stream-restoration reports for a state agency.</li>
 <li>Every year the summaries announce success in polished, sure prose.</li>
@@ -1877,6 +2009,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>I don’t act on the sentence. I act on the number behind it.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Open with the person, not the concept. This reviewer has read a hundred confident paragraphs, so polish has stopped carrying any information for them. Read their standard aloud and notice that it is three separate demands: the measurement itself, the computation that turned it into a change, and the reason the project rather than something else gets the credit. Ask the room which of the three their own project currently answers.</p>
@@ -1897,12 +2030,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A confident paragraph moves nobody who has read a hundred confident paragraphs.</li>
 <li>What moves them is a number you recomputed and can defend.</li>
 <li>Treat the confidence as worth nothing until you check what sits under it.</li>
 <li>The decision: what you require of a confident result before your name goes on it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The speed is the new part. An AI partner writes a beautiful, sure-sounding finding in seconds, so polish now tells you nothing about the care behind it. Put the decision on the table plainly, because it is the one the whole lesson turns on: you are setting your own standard for what a confident result has to survive before you repeat it as your own.</p>
 <style type="text/css">
@@ -1922,12 +2057,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>An AI summary reports that a stream cleanup cut nitrate by roughly 40 percent.</li>
 <li>The crisp figure and the smooth wording make the claim feel settled.</li>
 <li>You have not looked at a single measurement yet.</li>
 <li><strong>False confidence:</strong> fluent, detailed output makes you feel sure of what you never verified (Ji et al.&nbsp;2023).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Give the example before the name, because the feeling is the thing being taught. A round number and clean prose do work on a reader that neither one has earned. Say what the trap is not: it is not the tool lying to you on purpose, and it is not a failure you can spot by rereading the sentence more carefully. It is your own sense of certainty arriving before any check did.</p>
 <style type="text/css">
@@ -1947,6 +2084,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Automation bias</span></p>
@@ -1962,6 +2100,7 @@ Davi Moreira
 <li>You paste the AI’s percentage straight into your report because the tool computed it (Goddard et al.&nbsp;2012).</li>
 <li>You nod along line by line, then could not defend the number without rerunning it (Rozenblit &amp; Keil 2002).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Both habits are ordinary, which is what makes them hard to see in yourself. Automation bias is a double standard: the same arithmetic gets checked from a person and waved through from a machine. The illusion of understanding is subtler, because following an explanation feels almost exactly like being able to reproduce it. The test that separates them is whether you could rerun the calculation alone and get the same answer. Ask the room to name a number in their own project that would fail that test today.</p>
 <style type="text/css">
@@ -1981,12 +2120,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You prompt, read, refine, and run again, and agentic tools spin those cycles on their own.</li>
 <li>Each pass comes back cleaner and surer than the last.</li>
 <li>That polish feels like convergence on the truth. It is nothing of the kind.</li>
 <li>Confidence grows across the loop whether or not accuracy does.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the part the loop era adds, so spend a minute on it. Nobody stops at a first answer any more, and every extra turn improves the writing whether or not it touches the number. A wrong figure on turn one usually survives to turn six, only better dressed. The practical instruction is narrow and worth stating exactly: check the number on the turn you actually intend to use, not on some earlier turn that looked rougher.</p>
 <style type="text/css">
@@ -2006,6 +2147,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Verification</span></p>
@@ -2017,6 +2159,7 @@ Davi Moreira
 <li>Recompute the average nitrate before and after the cleanup from the raw readings.</li>
 <li>Then see what the data really show.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The word doing the work in that definition is independent: the check has to come from outside the model, or it is the same source agreeing with itself. Asking the tool whether it is sure is not verification. Recomputing the mean from the readings yourself is. Keep this rule short enough that the room can carry it out of the door.</p>
 <style type="text/css">
@@ -2036,11 +2179,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A summary that reads beautifully is not a summary that is right.</li>
 <li>Nothing about how sure a sentence sounds tells you whether it is true.</li>
 <li>Decide which independent check you run before you repeat the claim as your own.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two different mistakes get made here and both are common. Code that executes cleanly has proved only that it ran, and prose that reads well has proved only that it was written well. Neither is evidence about the number. Close the concept by naming the choice that remains yours: which check, run by what method, before you say the claim out loud.</p>
 <style type="text/css">
@@ -2060,12 +2205,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Riparian buffer:</strong> a strip of trees and grasses planted along a bank to filter runoff.</li>
 <li><strong>Nitrate:</strong> a fertilizer nutrient that in excess fuels algal blooms and starves water of oxygen.</li>
 <li>You have weekly nitrate readings in milligrams per liter, the year before and the year after.</li>
 <li>The agency cares because low oxygen kills the trout the restoration was meant to bring back.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Set the stakes before the numbers, because they explain why anyone would want the confident answer to be true. The restoration was meant to bring the trout back, and low oxygen is what kills them, so a clean 40 percent is the result everyone involved is hoping for. That hope is exactly the condition under which a fluent summary slips through unchecked.</p>
 <style type="text/css">
@@ -2085,6 +2232,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You asked an AI to summarize the dataset, and this came back.</li>
 <li>The sentence is fluent and sure.</li>
@@ -2092,6 +2240,7 @@ Davi Moreira
 </ul>
 <div class="note-card">
 <p>The riparian buffer reduced average nitrate by about 40 percent, a clear environmental success.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Name the moment rather than the error. The failure is not that the tool produced this sentence; it is the reach for the quote, which happens before any check and feels like efficiency. Ask the room to say what they would have done next with this sentence in hand, and whether that step would have caught anything.</p>
@@ -2112,11 +2261,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Before-mean 8.1 mg/L. After-mean 6.9 mg/L. Subtract.</li>
 <li>The confident summary overstated the change by more than double.</li>
 <li>Two means and a subtraction from the raw readings settle the number.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Do the arithmetic on the board, slowly, because its smallness is the point. Two means and a subtraction is all that stood between the inflated figure and a report carrying your name. Overstating by more than double is not a rounding difference, and nothing in the wording of the summary hinted at it.</p>
 <style type="text/css">
@@ -2136,6 +2287,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The readings come from one site with no comparison stream.</li>
 <li>A wet spring could move nitrate just as much.</li>
@@ -2143,6 +2295,7 @@ Davi Moreira
 <li>Keep this: nitrate fell about 15 percent at this site over one year.</li>
 <li>Drop the inflated figure, and drop the word “success.”</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The second problem hid behind the same polish and is the harder one, because fixing the number does not fix it. With one site and no comparison stream, even an honest 15 percent could come from the weather rather than the planting. Read the kept sentence aloud and have the room notice what it does not say: it reports that nitrate fell, and it credits nobody for it.</p>
 <style type="text/css">
@@ -2157,11 +2310,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>Recomputing the drop takes about as long as reading the confident sentence</h2>
 <div class="kicker">
 <p>Chapter 27 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Watch the two printed means, then the drop in mg/L and in percent.</li>
 <li>Compare that percent against the 40 the summary claimed.</li>
@@ -2184,6 +2338,7 @@ Davi Moreira
 <span id="cb5-15"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"the confident summary said: 40%"</span>)</span>
 <span id="cb5-16"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">and the number you just computed still cannot be pinned on the buffer:"</span>)</span>
 <span id="cb5-17"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"one site, no comparison stream, and a wet spring would look the same"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run it in front of the room and read the printout in order. The block builds the two years of readings and recomputes the drop, which is the whole verification. Then point at the closing lines: one site, no comparison stream, and a wet spring would look the same. The code settles what the number is, and it deliberately refuses to settle what the number means.</p>
 <style type="text/css">
@@ -2203,9 +2358,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You ask the AI to “summarize what this water-quality dataset shows,” and it hands back a confident paragraph ending in “a 40 percent reduction, a clear success.” Every part reads like a finding you could quote: a round figure, a firm verdict, no hedging.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -2213,6 +2370,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Here is exactly how you catch it.</li>
 <li>You do not repeat the paragraph.</li>
@@ -2220,6 +2378,7 @@ Davi Moreira
 <li>Then you ask what the design licenses: one site, no control stream, a single year, so even the honest 15 percent could come from the weather rather than the buffer.</li>
 <li>The confident summary failed twice, once on the number and once on the causal reach, and both failures were invisible until you checked outside the model.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Here is exactly how you catch it. You do not repeat the paragraph. You compute the two group means from the raw readings and subtract, and the real change is about 15 percent, not 40. Then you ask what the design licenses: one site, no control stream, a single year, so even the honest 15 percent could come from the weather rather than the buffer. The confident summary failed twice, once on the number and once on the causal reach, and both failures were invisible until you checked outside the model.</p>
 <style type="text/css">
@@ -2239,16 +2398,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 27</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>These stay yours, no matter how sure the tool sounds. Deciding what claim the verified number actually supports, and how far that claim reaches. Judging whether your design lets you credit the buffer for the change, or only lets you report that nitrate fell. Stating the uncertainty and the limits in your own words. The tool can draft a summary; deciding whether that summary is true, and answering for it, is the researcher’s job.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 27 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>List every number currently in your project that you have not personally recomputed.</li>
 <li>For your headline number, write down where your confidence in it actually comes from: your own recomputation, a tool’s fluent summary, or the fact that it matched what you were hoping for.</li>
@@ -2259,6 +2421,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_recognizing_false_confidence.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html">Chapter 27</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -2288,28 +2451,33 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 8</p>
 </div>
+<div class="slide-body">
 <div class="decision">
 <p><span class="label">The artifact</span></p>
 <p><strong>What this milestone produces.</strong> A pre-listed robustness grid, negative tests with their assumptions stated, diagnostics, an adversarial-review record, and your adjudication of what survived.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>What you bring</h2>
 <div class="kicker">
 <p>Milestone 8 · Check before you start</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html">Lesson 24 — Robustness and Sensitivity</a>: your pre-listed robustness grid with its full results, direction and size, plus the named null check.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html">Lesson 25 — Diagnostics and Negative Tests</a>: your negative test and diagnostic, each with the prediction you wrote before running it.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html">Lesson 26 — AI as Adversarial Reviewer</a>: your commissioned adversarial review with every flag adjudicated against the data, confirmed or refuted.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html">Lesson 27 — Recognizing False Confidence</a>: your confidence audit: the not-yet-recomputed list, where belief in the headline number comes from, and your boundary sentence.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 <h2>The practice</h2>
 <div class="kicker">
 <p>Milestone 8 · In the studio</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Pre-list your checks before you run any of them, and commit to reporting all of them.</li>
 <li>Run the robustness grid and report a span within each commensurable panel, never across panels.</li>
@@ -2317,12 +2485,14 @@ Davi Moreira
 <li>Commission at least one adversarial review, and add a human reviewer when one is available. Neither review is independent verification: confirm or refute every flag with a data check.</li>
 <li>Write the adjudication: what survived, what did not, and what you still cannot rule out.</li>
 </ol>
+</div>
 </section>
 <section class="slide level2">
 <h2>The four rails, here</h2>
 <div class="kicker">
 <p>Milestone 8 · Every studio, these four</p>
 </div>
+<div class="slide-body">
 <div class="rails">
 <div class="rail">
 <p><span class="t">Ethics, permissions, and data exposure</span></p>
@@ -2341,24 +2511,31 @@ Davi Moreira
 <p><span class="d">Specification spread measures your choices; it is not an uncertainty interval.</span></p>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 <h2>A version, not a pass</h2>
 <div class="kicker">
 <p>Milestone 8</p>
 </div>
+<div class="slide-body">
 <div class="note-card">
 <p><span class="label">How the record works</span></p>
 <p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
 </div>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>The one rule</h2>
+<div class="creed">
+<p>AI is your arm and your research assistant, not your brain.</p>
+</div>
 <div class="divider-line">
-<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
 <p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
 </div>
+<div class="deck-links">
 <p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio08-stress-test.html">Studio 8 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone08-stress-test.html">Milestone 8</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+</div>
 
 
 </section>
@@ -2579,6 +2756,180 @@ Davi Moreira
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /* edrai-fit.js — fit each slide's body to the body region, at runtime.
+     *
+     * The builder used to guess: it counted characters and stamped .dense /
+     * .denser / .densest, which shrank the type on slides that had room to spare
+     * and still let a long code block run past the bottom edge. This measures
+     * the rendered height instead, so a slide is never smaller than it needs to
+     * be and never larger than it fits.
+     *
+     * It also drops the type of a title that would run into the hairline, and
+     * tells the chrome when the current slide is an ink field.
+     */
+    (function () {
+      "use strict";
+
+      var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+      var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+      var MIN_TITLE = 0.62;
+      var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+      var LEAD_MAX = 88;
+      var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+      function child(section, cls) {
+        var kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+        }
+        return null;
+      }
+
+      function fitTitle(section) {
+        if (section.classList.contains("divider")) return;
+        var h2 = null, kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+        }
+        if (!h2) return;
+        section.style.removeProperty("--h2fit");
+        var k = 1;
+        for (var n = 0; n < 5; n++) {
+          var need = h2.scrollHeight;
+          if (need <= TITLE_BAND) break;
+          k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+          section.style.setProperty("--h2fit", k.toFixed(4));
+          if (k <= MIN_TITLE) break;
+        }
+      }
+
+      // The natural height of the body's content.
+      //
+      // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+      // under-full slide reports "exactly full" and both the growth step and the
+      // optical lead below silently become no-ops. Walking the children gives the
+      // real figure, in unscaled layout pixels, above and below the box alike.
+      function naturalHeight(body) {
+        var kids = body.children;
+        if (!kids.length) return 0;
+        var first = kids[0], last = kids[kids.length - 1];
+        return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+      }
+
+      function fitBody(section) {
+        var body = child(section, "slide-body");
+        if (!body) return;
+        section.classList.remove("fit-top");
+        section.style.setProperty("--fit", "1");
+        section.style.setProperty("--lead", "0px");
+
+        var avail = body.clientHeight;
+        if (!avail) return;
+
+        // Converge on the largest size that still fits the body region. This
+        // grows a sparse slide as readily as it shrinks a crowded one, which is
+        // the whole point: three lines of type should hold the canvas, not float
+        // in the middle of it at the same size as a slide carrying twenty.
+        // Growth moves where lines wrap, so the step is damped and the last size
+        // known to fit is kept as a floor.
+        var k = 1, fits = 0;
+        for (var n = 0; n < 12; n++) {
+          var need = naturalHeight(body);
+          if (!need) break;
+          if (need <= avail) fits = Math.max(fits, k);
+          var next = k * Math.pow((avail * 0.985) / need, 0.6);
+          next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+          if (Math.abs(next - k) < 0.005) break;
+          k = next;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+        if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+          k = fits;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+
+        // Optical placement. A body that fills the region starts at the top; one
+        // with room to spare drops by a fraction of what is left over, capped, so
+        // that it sits under the title instead of either jammed against it or
+        // marooned in the middle of the canvas.
+        var slack = avail - naturalHeight(body);
+        var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+        section.style.setProperty("--lead", Math.round(lead) + "px");
+
+        // Past the floor and still too tall. The slide spills instead of losing
+        // its last lines, and says so, because a deck that quietly drops the end
+        // of a worked example is worse than one that looks crowded.
+        if (naturalHeight(body) > avail + 1) {
+          section.classList.add("fit-top");
+          var h = section.querySelector("h2");
+          if (window.console && console.warn) {
+            console.warn("EDR|AI: slide does not fit at the minimum size —",
+                         h ? h.textContent.trim() : "(untitled)");
+          }
+        }
+      }
+
+      function fit(section) {
+        if (!section || !section.offsetParent && !isPrint()) return;
+        fitTitle(section);
+        fitBody(section);
+      }
+
+      function isPrint() {
+        return document.body.classList.contains("print-pdf") ||
+               /print-pdf/.test(window.location.search);
+      }
+
+      function markChrome() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        var cur = Reveal.getCurrentSlide();
+        reveal.classList.toggle("on-dark",
+          !!cur && cur.classList.contains("divider"));
+        reveal.classList.toggle("on-title",
+          !!cur && cur.classList.contains("quarto-title-block"));
+      }
+
+      function run() {
+        if (isPrint()) {
+          var all = document.querySelectorAll(".reveal .slides > section");
+          for (var i = 0; i < all.length; i++) fit(all[i]);
+          return;
+        }
+        if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        // Only the current slide. reveal keeps every other section at
+        // `display: none`, where offsetHeight is 0 and nothing can be measured,
+        // so a "pre-fit the neighbours" pass would be a no-op that reads as
+        // working code. reveal makes the incoming slide visible BEFORE it fires
+        // slidechanged, so fitting here lands before the frame is painted.
+        fit(Reveal.getCurrentSlide());
+        markChrome();
+      }
+
+      function boot() {
+        if (typeof Reveal === "undefined" || !Reveal.on) {
+          return void setTimeout(boot, 60);
+        }
+        Reveal.on("ready", run);
+        Reveal.on("slidechanged", run);
+        Reveal.on("resize", run);
+        if (Reveal.isReady && Reveal.isReady()) run();
+        // Web fonts change the metrics after first paint; measure again once they
+        // have actually landed, and once more on a late layout.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(run, 0); });
+        }
+        setTimeout(run, 400);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-88e721e0e63b20a00daa73883880cdea.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fa6bf9334f07eb3fc1071a031a011523.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -192,13 +192,21 @@
       margin-right: 0; 
     }
   </style>
+  <!-- EDR|AI deck fonts. Two voices: Source Sans 3 for the deck's own
+       scaffolding, Source Serif 4 for the book's verbatim words, JetBrains Mono
+       for code. Every one degrades to a metric-compatible or long-installed
+       fallback in edrai-slides.scss, so a room with no network still renders a
+       correct deck. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title"><span style="font-size:66%">HONR 46400 · Evidence-Driven Research</span></h1>
+  <h1 class="title">HONR 46400 · Evidence-Driven Research</h1>
   <p class="subtitle">Studio 11 — Reproduce and package</p>
 
 <div class="quarto-title-authors">
@@ -215,9 +223,10 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 11</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">What you can defend when you leave</span></p>
 <p>Prove that someone who is not you can obtain your result from your materials.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -225,7 +234,9 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 11</p>
 </div>
+<div class="slide-body">
 <p>This studio closes with <strong><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html">Milestone 11: Your reproducible package</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> An independent cold-run record and a reusable research package. Working alone, the record is a clean-environment rerun labeled “solo proxy; external cold run pending” — the label, and the honesty it enforces, are part of the artifact.</p>
+</div>
 <aside class="notes">
 <p>Research that only runs on your machine, with you present, is testimony rather than evidence. This milestone proves that someone who is not you can obtain your result from your materials alone: a cold run, a stranger’s run (or, working alone, its honestly labeled solo proxy), and a package that carries data access, code, environment, documentation, and licence. It is the boundary between work you finished and work others can build on.</p>
 <p>Milestone 12 decides whether the packaged work is ready to leave your hands, and what the next cycle should ask. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
@@ -246,10 +257,12 @@ Davi Moreira
 <div class="kicker">
 <p>Studio 11 · Road map</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html">Lesson 36 — Replication and Reproduction</a>: your cold reproduction record: every number re-run from the top, one undisclosed choice varied, and missingness classified before any filling.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html">Lesson 37 — Open and Reusable Research Packages</a>: your research capsule: the runnable notebook, the data-provenance note with its terms of use, the fixed seed, the decision log, your AI-use ledger, the environment record, the README, and a cold rerun in a second environment.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>Replication and Reproduction</h2>
@@ -265,9 +278,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Handed nothing but the files a study shipped, yours or someone else’s, you decide whether the reported number actually comes back out. Then you rank the weaknesses you found by how much each one threatens the headline claim, not by how easy each one is to fix.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -275,7 +289,8 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · Key terms</p>
 </div>
-<div class="terms">
+<div class="slide-body">
+<div class="terms two">
 <div class="term">
 <p><span class="t">Reproduction</span></p>
 <p><span class="d">getting the same number from the <em>same</em> data and code a study shipped (National Academies of Sciences, Engineering, and Medicine 2019).</span></p>
@@ -283,6 +298,7 @@ Davi Moreira
 <div class="term">
 <p><span class="t">Replication</span></p>
 <p><span class="d">getting a similar result from a <em>new</em> study or new data.</span></p>
+</div>
 </div>
 </div>
 <aside class="notes">
@@ -304,12 +320,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The decision: whether a result regenerates from the files alone.</li>
 <li>Then: which of its weaknesses most endangers the headline claim.</li>
 </ul>
 <div class="note-card">
 <p>I do not care that your figure is pretty or that the code ran on your laptop. Hand me your files and let me get the same number back out. If I cannot, you do not have a result yet. You have a story. — a <strong>principal investigator</strong> reading a first-year researcher’s lab report</p>
+</div>
 </div>
 <aside class="notes">
 <p>In a working lab, a number nobody else can regenerate is a liability, not a finding. The reviewer here is applying the standard every result eventually meets, and applying it to a first-year researcher’s lab report rather than to a published paper. Ask the room what they would hand over today if someone made this request, and how long it would take them to find it.</p>
@@ -330,12 +348,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A poster can round. A caption can overstate.</li>
 <li>The one choice holding the whole claim up rarely announces itself.</li>
 <li>You review someone else’s package first, before anyone reviews yours.</li>
 <li>Rank what you find by threat to the claim, not by ease of repair.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The chapter puts you on the reviewing side of that standard first, so you learn to see the cracks before someone finds them in your own work. The ranking rule is the second half of the decision and the harder half, because the defect that is easiest to fix is not the one that decides whether the result stands. Keep that pairing in view: the worked example ends by ranking its three findings.</p>
 <style type="text/css">
@@ -355,6 +375,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><strong>Reproduction:</strong> the same number from the <em>same</em> data and code a study shipped (National Academies of Sciences, Engineering, and Medicine 2019).</li>
 <li>You open another researcher’s notebook, run it top to bottom, check the figure comes back.</li>
@@ -362,6 +383,7 @@ Davi Moreira
 <li>A second lab runs its own experiment and sees the same effect.</li>
 <li>This chapter is about reproduction.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Two words sound alike and mean different things. Reproduction reruns the same data and code the study shipped; replication is a new study or new data asking the same question. This chapter stays with reproduction, so everything after this slide tests the package rather than the world.</p>
 <style type="text/css">
@@ -381,6 +403,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Reproducibility package</span></p>
@@ -399,6 +422,7 @@ Davi Moreira
 <li>A headline number sounds like this: “the supplement raised larval growth by 0.5 mm.”</li>
 <li>If a number only appears when cells run out of order, it is not reproducible (Wilson et al.&nbsp;2017).</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Rebuild the headline number first, because it is the one figure the rest of the audit is about. The restart matters more than it sounds: a notebook keeps values in memory, so a number can survive on the screen only because the cells were run out of order. Ask who in the room has ever had a result vanish after a kernel restart.</p>
 <style type="text/css">
@@ -413,11 +437,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 dense">
+<section class="slide level2">
 <h2>A clean run proves the code executes, not that the write-up is true</h2>
 <div class="kicker">
 <p>Chapter 36 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms two">
 <div class="term">
 <p><span class="t">Claims-vs-computation agreement</span></p>
@@ -440,6 +465,7 @@ Davi Moreira
 <li>Three audits run on top of the clean run.</li>
 <li>The most dangerous hidden assumption in biology has a name.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Take the three audits in order, because each one asks something the run itself cannot answer. Pseudoreplication is the named one, credited to Hurlbert, 1984 (Hurlbert 1984), and it is the one the worked example is built to catch. Before the zebrafish appear, ask the room to name the experimental unit in their own project, and to say what was actually assigned.</p>
 <style type="text/css">
@@ -459,6 +485,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A package from another lab tests a probiotic added to zebrafish tank water.</li>
 <li>Three tanks get the probiotic, three get plain water.</li>
@@ -466,6 +493,7 @@ Davi Moreira
 <li>The poster reads: “The probiotic increased larval body length by 0.5 mm.”</li>
 <li>The figures in this worked example are constructed.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Read the setup slowly, because every finding later in this example comes out of these two sentences. Six tanks and 240 larvae is the number pair to hold on to. The treatment went into the water of a tank. The ruler went to a larva. Say the last line out loud, so nobody leaves thinking a real probiotic study is being reported.</p>
 <style type="text/css">
@@ -485,12 +513,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You restart-and-run-all. The code splits larvae by tank type and differences the means.</li>
 <li>The package reproduces, which is a real success.</li>
 <li>Rounding does not explain the gap: 0.43 rounds to 0.4.</li>
 <li>That mismatch is your first finding, and it earns you the right to push harder.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Give the success its due before the criticism, because a package that runs top to bottom from a clean start is already a real result. Then hold the two numbers side by side, since the rounding check is what turns a shrug into a finding.</p>
 <style type="text/css">
@@ -510,12 +540,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The package dropped larvae that died before the final measurement and never said so.</li>
 <li><strong>Post-treatment event:</strong> something that happens after treatment and that treatment may cause.</li>
 <li>If the probiotic changes which larvae survive, the survivors differ between tanks.</li>
 <li>Their length difference is then a comparison between different populations.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the choice nobody declared, and it does not show up anywhere in the output. Put the question to the room: why is this blank different from an ordinary missing value? A larva that died has no day-30 length to be missing, because that measurement never existed. Treatment being able to cause the missingness is what makes it dangerous rather than merely annoying.</p>
 <style type="text/css">
@@ -535,12 +567,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>That patch produces 0.31 mm. Resist calling it an equally defensible alternative.</li>
 <li>It assumes a last measurement stands in for a final length the larva never had.</li>
 <li>0.43 and 0.31 answer different questions with different assumptions.</li>
 <li>The gap between them is not a range, and reporting it as one is a third error.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The temptation is strong, because filling the blanks makes the analysis run and hands you a second number that looks like a sensitivity check. It is not one. A neutral default is a choice you could defend without knowing any biology, and this one smuggles in a statement about what a dead larva would have measured. Two numbers only bound an answer when both answer the same question.</p>
 <style type="text/css">
@@ -560,12 +594,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Label that pair as exactly what it is.</li>
 <li>It is an honest description of what happened in the tanks.</li>
 <li>It does not deliver an overall causal effect of the probiotic on day-30 length.</li>
 <li>Matching survival percentages do not rescue the comparison.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>No rearrangement of these numbers will produce the causal effect, because day-30 length does not exist for a larva that died. Two tanks can lose the same fraction and still lose different kinds of larvae, so equal survival is not the reassurance it looks like. If the study needs one headline outcome, the fix is upstream: predefine a combined outcome before analysis, such as survived-and-reached-a-given-length, and defend why that ordering answers the biological question.</p>
 <style type="text/css">
@@ -585,12 +621,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>The package reports its gap as if all 240 larvae were independent.</li>
 <li>The probiotic was assigned by tank, so tankmates share water, food, and crowding.</li>
 <li>Average each tank first, then compare three treated tanks against three controls.</li>
 <li>The point estimate barely moved. The honest uncertainty around it exploded.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The original interval was tight and well above zero. Recomputed at the tank level, it widens until its lower edge touches zero. That is pseudoreplication (Hurlbert 1984), and it is the weakness with teeth, because the estimate barely moved while the certainty around it did not survive. The real experimental unit is the tank, and there are only six of them.</p>
 <style type="text/css">
@@ -610,12 +648,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>First: pseudoreplication, because it can dissolve the “clear effect” claim.</li>
 <li>Second: the undisclosed handling of dead larvae, which decides which larvae the number describes.</li>
 <li>Third: 0.43 reported as 0.5, real and a genuine reporting failure.</li>
 <li>It is also the smallest threat to whether an effect exists.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Notice that this ranking runs close to the reverse of the order in which the findings turned up, and close to the reverse of how easy each one is to fix. Correcting the 0.5 repairs a sentence in the write-up. The tank-level analysis can dissolve the “clear effect” claim. Ask the room to rank the three themselves before you show this slide.</p>
 <style type="text/css">
@@ -630,11 +670,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Three defensible numbers, and none of them is 0.50</h2>
 <div class="kicker">
 <p>Chapter 36 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Watch the death counts: the probiotic changes who dies.</li>
 <li>Compare survivors, everyone, and tank means against the poster’s 0.50 mm.</li>
@@ -673,6 +714,7 @@ Davi Moreira
 <span id="cb1-31"><a aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>larvae[<span class="op">~</span>larvae.probiotic]<span class="sc">.</span>died<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> control"</span>)</span>
 <span id="cb1-32"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"three defensible numbers, none of them 0.50, and the unit of"</span>)</span>
 <span id="cb1-33"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"randomization was the TANK, not the larva"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run this before you accept any single number, including the one printed on the poster. The block builds the package’s data and computes the difference three defensible ways, with death depending on both the treatment and the larva’s length, which is what makes it a post-treatment event here. SEED is 464, so every run in the room returns the same numbers.</p>
 <style type="text/css">
@@ -692,9 +734,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You paste the whole package into a general AI tool and ask, “Does this study reproduce, and are its limitations complete?” It answers with total confidence: yes, the code runs, and the limitations paragraph looks thorough, covering sample size, measurement noise, and a call for future work. Every sentence is fluent. The tool never once flags that 240 larvae came from only six tanks. It has quietly mistaken a long list for a complete one.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -702,6 +746,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 36 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it by refusing to judge the paragraph and judging the design instead.</li>
 <li>You ask what the experimental unit actually was, then recompute the interval at the tank level.</li>
@@ -709,6 +754,7 @@ Davi Moreira
 <li>A green check and a polished paragraph are not a reproduced result.</li>
 <li>You verify the number and its match to the claim, never the confident story about them.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it by refusing to judge the paragraph and judging the design instead. You ask what the experimental unit actually was, then recompute the interval at the tank level. When the lower bound drops to zero, the “clear effect” the tool endorsed turns out to rest on a certainty the data never earned. A green check and a polished paragraph are not a reproduced result. You verify the number and its match to the claim, never the confident story about them.</p>
 <style type="text/css">
@@ -723,21 +769,24 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>Do not delegate</h2>
 <div class="kicker">
 <p>Chapter 36</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>An AI tool connected to an execution environment <em>can</em> run the code, and asking it to is reasonable. What it cannot do is stand behind the result. So demand the evidence of the run rather than the summary of it: the commands, the environment and package versions, the exact version of the code and data it ran (a commit hash, if the package has one), whether each command exited cleanly or errored, the raw output, and which files it actually touched. A confident “it reproduces” with no execution record tells you nothing about whether the released package ran, a modified copy ran, or nothing ran at all. Then reproduce the headline yourself from a clean start, because the verdict carries your name. You also keep three judgments: <strong>which weakness most threatens the claim</strong>, <strong>how you rank the recommendations</strong>, and <strong>the final verdict</strong> on what the package can and cannot support. A tool proposes suspects. You decide which ones the evidence convicts.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 36 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Gather everything into one folder: the data, the code, the run order, the random seed, and a short write-up that states your headline number in words.</li>
 <li>Reproduce yourself cold.</li>
@@ -749,6 +798,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch36_replication_and_reproduction.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html">Chapter 36</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -778,9 +828,10 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37</p>
 </div>
+<div class="slide-body">
 <div class="decision">
-<p><span class="label">The research decision</span></p>
 <p>Decide what goes into the reproducibility capsule that ships with your research note, and defend the claim that a stranger can rerun your work and get your numbers. You own what the package includes and whether “it reproduces” is honest, and you never let a clean run stand in for a correct one.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -788,12 +839,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A replication editor, opening the folder attached to your submission.</li>
 <li>The test is not whether it ran once. It is whether it runs without you.</li>
 </ul>
 <div class="note-card">
 <p>I don’t want to hear that it runs on your laptop. Hand me the folder, let me clear everything, and let me press run. If your headline number does not come back on my machine, you do not have a result yet. You have a memory of one.</p>
+</div>
 </div>
 <aside class="notes">
 <p>Open with the editor, because she is the reader your capsule has to satisfy. Notice what she refuses to accept: your report that it works. She wants the folder, a cleared environment, and the same headline number on hardware you have never touched. Ask the room whether their current project folder would survive that on Monday.</p>
@@ -814,11 +867,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · Why this decision matters</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your research note argues the claim in prose.</li>
 <li>The capsule proves the claim survives without you in the room.</li>
 <li>If it only runs on your laptop, in the click-order you remember, no one can check you.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Say the decision on the table plainly: what goes inside the capsule that ships with your work, and whether the sentence “this reproduces” is honest when you write it. Both halves are yours to sign. The chapter is about packaging the work so the checking is easy, and about staying honest about what the word reproducible actually covers.</p>
 <style type="text/css">
@@ -838,6 +893,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="terms">
 <div class="term">
 <p><span class="t">Reproducibility capsule</span></p>
@@ -852,6 +908,7 @@ Davi Moreira
 <li>Example: a folder with your notebook, your data, and a record of every by-hand choice.</li>
 <li>Runtime, Restart and run all, and your headline number reappears.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Both definitions are the chapter’s own. Press on the second half of the capsule definition, because that is the working test: anything a reader would otherwise guess at is missing from the package. Then make restart-and-run-all concrete by doing it live once, since it is the single check that catches most of what follows.</p>
 <style type="text/css">
@@ -871,6 +928,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A runnable notebook that passes restart-and-run-all.</li>
 <li>A data-provenance note: each dataset’s source, its version, and how it may be used (Wilkinson et al.&nbsp;2016).</li>
@@ -878,6 +936,7 @@ Davi Moreira
 <li>A decision log: the by-hand choices that shaped the result, each with its reason.</li>
 <li>An AI-use ledger: every tool, its task, and how you verified its output.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Walk the five in order and give each one its example from the chapter: the download URL, the date and the licence for provenance; SEED equals 464 feeding each resample; every row you dropped, and why. The list is short on purpose, so nobody can claim they did not know what to assemble. Ask which of the five their own project currently has.</p>
 <style type="text/css">
@@ -897,6 +956,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · The concept</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>A hard-coded path that exists only on your machine.</li>
 <li>A missing seed that moves every run.</li>
@@ -904,6 +964,7 @@ Davi Moreira
 <li>An undocumented exclusion with no logged reason.</li>
 <li>Stale data a reader cannot reobtain.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>The chapter names these the five package sins, and it treats their predictability as good news: a failure you can name in advance is one you can scan for. The lab’s auditor scans for all five. Have the room say aloud which one they are most tempted to leave alone, because that is the one their reader will hit first.</p>
 <style type="text/css">
@@ -923,6 +984,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · The concept</p>
 </div>
+<div class="slide-body">
 <div class="lead">
 <p>The scan gets you to the starting line. A person who reruns you cold is the race.</p>
 </div>
@@ -930,6 +992,7 @@ Davi Moreira
 <li>A clean audit says the code executes. It says nothing about whether the numbers are right.</li>
 <li>The honesty check is the one the auditor cannot do for you.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the sentence the chapter asks you to hold onto, so do not let it pass as a caveat. An auditor checks the shape of the package; it cannot certify that the analysis inside is correct rather than merely runnable. That is why the last word belongs to a human replicator, and why the worked example ends where it does.</p>
 <style type="text/css">
@@ -949,11 +1012,13 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You collected precinct-level turnout for twelve counties in one state’s midterm election.</li>
 <li>Your headline: the share of precincts where turnout fell below 40%.</li>
 <li>Same analysis, same headline, two very different folders.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Set the scene before either version appears. The claim is a simple share, which is deliberate: nothing here fails because the statistics are hard. What is about to differ is only the packaging, and that is enough to decide whether anyone can check the number.</p>
 <style type="text/css">
@@ -973,6 +1038,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Loads <code>turnout_clean.csv</code> from your own Desktop, a file only your laptop has.</li>
 <li>Bootstraps the interval with no seed, so the interval shifts on every run.</li>
@@ -980,6 +1046,7 @@ Davi Moreira
 <li>Silently drops every precinct with a missing registered-voter count, with no note on why.</li>
 <li>Data downloaded “sometime last spring,” before the count was certified, no version recorded.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Go slowly here, because none of these look like misconduct from the inside. Each one is a shortcut that worked on the day. The path was real when the file was there, the by-hand patch fixed a real duplicate, and the exclusion may even have been reasonable. Every one of the five breaks the rerun, and the rerun is the test the packaging has to pass before anything else can be asked of it.</p>
 <style type="text/css">
@@ -999,6 +1066,7 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Loads the certified file through its public URL, with source, download date and terms of use.</li>
 <li>Fixes <code>SEED = 464</code> before the bootstrap.</li>
@@ -1006,6 +1074,7 @@ Davi Moreira
 <li>Keeps the missing-registration precincts, or drops them by a logged, pre-declared rule.</li>
 <li>A stranger clears the kernel, runs top to bottom, and your share comes back.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>Match each repair to the sin it answers, so the pairing is visible. The point is not that the clean version is more careful in spirit; it is that every choice moved out of your head and into a file. Same number, no guessing, is the whole claim the capsule makes.</p>
 <style type="text/css">
@@ -1025,12 +1094,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Your seed might be fixed on the wrong subset.</li>
 <li>Dropping the missing-registration precincts might be a bad rule, cleanly logged.</li>
 <li>Runnable is not correct.</li>
 <li>That gap is why a person exercises your capsule, not only a script.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>This is the honesty check the auditor cannot do for you, and it is the chapter’s real ending. A logged reason is not automatically a good reason, and a pinned seed on the wrong subset reproduces your mistake perfectly. Ask the room which choice inside their own analysis they would most want a reviewer to question, and tell them to write that sentence down.</p>
 <style type="text/css">
@@ -1045,11 +1116,12 @@ Davi Moreira
           display:block!important;
       }</style></aside>
 </section>
-<section class="slide level2 densest">
+<section class="slide level2">
 <h2>Rerun the cell and the interval does not move</h2>
 <div class="kicker">
 <p>Chapter 37 · A worked example</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>Every repair the sinful version did by hand happens here in code.</li>
 <li>Watch the duplicate-name count: removed by a line, not by an edit.</li>
@@ -1084,6 +1156,7 @@ Davi Moreira
 <span id="cb2-26"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"share below 40% turnout  : </span><span class="sc">{</span>below<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">% [</span><span class="sc">{</span>lo<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%, </span><span class="sc">{</span>hi<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%]"</span>)</span>
 <span id="cb2-27"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">rerun this cell: the interval does not move, because the seed is"</span>)</span>
 <span id="cb2-28"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"pinned and every repair above happens in code a clean run repeats"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <aside class="notes">
 <p>Run it twice in front of the room and read the share-and-interval line both times. The interval does not move, and the reason is on screen rather than in anyone’s memory. Every repair the clean capsule made is on the published list of rules for reproducible computational work (Sandve et al.&nbsp;2013). Then say the bound one last time: this cell proves the number is stable, not that the rule producing it was a good one.</p>
 <style type="text/css">
@@ -1103,9 +1176,11 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37</p>
 </div>
+<div class="slide-body">
 <div class="failure">
 <p><span class="label">Where the tool failed</span></p>
 <p>You paste your notebook into your AI and ask, “will this run cold and produce my low-turnout share?” It walks through every cell and answers, with total confidence, “Yes, this runs top to bottom cleanly and returns your headline number.” It sounds like a green check. It is not. The AI never executed anything. It read the code and narrated it. Cell 3 loads <code>~/Desktop/turnout_clean.csv</code>, a path only your laptop has, and the fluent walkthrough described reading that file as if it were sitting there.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1113,12 +1188,14 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37 · An AI failure case</p>
 </div>
+<div class="slide-body">
 <ul>
 <li>You catch it the only way that counts: you actually run restart-and-run-all on a fresh kernel, ideally in Colab on a machine that is not yours.</li>
 <li>The <code>FileNotFoundError</code> appears on cell 3 in seconds.</li>
 <li>A narrated run is not a run.</li>
 <li>You verify the notebook by executing it, not by reading a paragraph about executing it.</li>
 </ul>
+</div>
 <aside class="notes">
 <p>You catch it the only way that counts: you actually run restart-and-run-all on a fresh kernel, ideally in Colab on a machine that is not yours. The <code>FileNotFoundError</code> appears on cell 3 in seconds. A narrated run is not a run. You verify the notebook by executing it, not by reading a paragraph about executing it.</p>
 <style type="text/css">
@@ -1138,16 +1215,19 @@ Davi Moreira
 <div class="kicker">
 <p>Chapter 37</p>
 </div>
+<div class="slide-body">
 <div class="rule-human">
 <p><span class="label">This stays yours</span></p>
 <p>You decide <strong>what goes in the capsule</strong> and whether the sentence “this reproduces” is honest. The tool can list gaps and pin versions, but it cannot record your true data provenance, judge whether an exclusion’s logged reason is a <em>good</em> reason, or certify that your analysis is correct rather than merely runnable. The name on the folder, and the claim that a stranger can trust it, are yours.</p>
 </div>
+</div>
 </section>
-<section class="slide level2 denser">
+<section class="slide level2">
 <h2>It is your turn</h2>
 <div class="kicker">
 <p>Chapter 37 · Your move</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Assemble the five parts for your own project: the runnable notebook, the data-provenance note, the fixed seed, the decision log, and your AI-use ledger.</li>
 <li>Run the chapter’s audit on your own key lines and fix what it flags, starting with the sin you were most tempted to leave alone.</li>
@@ -1158,6 +1238,7 @@ Davi Moreira
 </ol>
 <div class="turn">
 <p>Work it in the <a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch37_open_and_reusable_research_packages.ipynb">companion notebook</a> with <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html">Chapter 37</a> open beside it. Log every delegation in your AI Research Ledger.</p>
+</div>
 </div>
 <aside class="notes">
 <p>The chapter’s numbered steps, in the book’s own order. The AI prompts each step carries live in the companion notebook.</p>
@@ -1187,9 +1268,11 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 11</p>
 </div>
+<div class="slide-body">
 <div class="decision">
 <p><span class="label">The artifact</span></p>
 <p><strong>What this milestone produces.</strong> An independent cold-run record and a reusable research package. Working alone, the record is a clean-environment rerun labeled “solo proxy; external cold run pending” — the label, and the honesty it enforces, are part of the artifact.</p>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1197,28 +1280,33 @@ Davi Moreira
 <div class="kicker">
 <p>Milestone 11 · Check before you start</p>
 </div>
+<div class="slide-body">
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html">Lesson 36 — Replication and Reproduction</a>: your cold reproduction record: every number re-run from the top, one undisclosed choice varied, and missingness classified before any filling.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html">Lesson 37 — Open and Reusable Research Packages</a>: your research capsule: the runnable notebook, the data-provenance note with its terms of use, the fixed seed, the decision log, your AI-use ledger, the environment record, the README, and a cold rerun in a second environment.</li>
 </ul>
+</div>
 </section>
 <section class="slide level2">
 <h2>The practice</h2>
 <div class="kicker">
 <p>Milestone 11 · In the studio</p>
 </div>
+<div class="slide-body">
 <ol type="1">
 <li>Assemble the draft package first: data or its access route, code, environment, documentation, and licence.</li>
 <li>Run your own package cold, from a clean environment, following only your written instructions.</li>
 <li>Then the external test: have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record ‘solo proxy; external cold run pending’ — a proxy never becomes a claim of independent reproduction.</li>
 <li>Fix what the runs exposed — every question asked is a missing line in your documentation — and freeze the final manifest with its date.</li>
 </ol>
+</div>
 </section>
 <section class="slide level2">
 <h2>The four rails, here</h2>
 <div class="kicker">
 <p>Milestone 11 · Every studio, these four</p>
 </div>
+<div class="slide-body">
 <div class="rails">
 <div class="rail">
 <p><span class="t">Ethics, permissions, and data exposure</span></p>
@@ -1237,24 +1325,31 @@ Davi Moreira
 <p><span class="d">Reproduce the uncertainty statement, not only the point estimate.</span></p>
 </div>
 </div>
+</div>
 </section>
 <section class="slide level2">
 <h2>A version, not a pass</h2>
 <div class="kicker">
 <p>Milestone 11</p>
 </div>
+<div class="slide-body">
 <div class="note-card">
 <p><span class="label">How the record works</span></p>
 <p>Your milestone artifact is a dated, numbered <strong>version</strong> with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.</p>
 </div>
+</div>
 </section>
 <section class="slide level2 divider" data-background-color="#1a1a19">
 <h2>The one rule</h2>
+<div class="creed">
+<p>AI is your arm and your research assistant, not your brain.</p>
+</div>
 <div class="divider-line">
-<p><strong>AI is your arm and your research assistant, not your brain.</strong></p>
 <p>AI can review AI, and a second model is a real auditor of the first. The last decision is always human.</p>
 </div>
+<div class="deck-links">
 <p><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio11-reproduce-and-package.html">Studio 11 in EDR|AI</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html">Milestone 11</a> · <a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/verification-guide.html">Verification Guide</a></p>
+</div>
 
 
 </section>
@@ -1475,6 +1570,180 @@ Davi Moreira
           RevealZoom
         ]
       });
+    </script>
+    <script>
+    /* edrai-fit.js — fit each slide's body to the body region, at runtime.
+     *
+     * The builder used to guess: it counted characters and stamped .dense /
+     * .denser / .densest, which shrank the type on slides that had room to spare
+     * and still let a long code block run past the bottom edge. This measures
+     * the rendered height instead, so a slide is never smaller than it needs to
+     * be and never larger than it fits.
+     *
+     * It also drops the type of a title that would run into the hairline, and
+     * tells the chrome when the current slide is an ink field.
+     */
+    (function () {
+      "use strict";
+
+      var MIN_BODY = 0.45;     // the floor; below this a slide is over-stuffed
+      var MAX_BODY = 1.22;     // and never inflate it past a comfortable reading size
+      var MIN_TITLE = 0.62;
+      var LEAD_SHARE = 0.22;   // how much of the spare height falls above the body
+      var LEAD_MAX = 88;
+      var TITLE_BAND = 102;    // --body-y (218) - --title-y (104) - breathing room
+
+      function child(section, cls) {
+        var kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].classList && kids[i].classList.contains(cls)) return kids[i];
+        }
+        return null;
+      }
+
+      function fitTitle(section) {
+        if (section.classList.contains("divider")) return;
+        var h2 = null, kids = section.children;
+        for (var i = 0; i < kids.length; i++) {
+          if (kids[i].tagName === "H2") { h2 = kids[i]; break; }
+        }
+        if (!h2) return;
+        section.style.removeProperty("--h2fit");
+        var k = 1;
+        for (var n = 0; n < 5; n++) {
+          var need = h2.scrollHeight;
+          if (need <= TITLE_BAND) break;
+          k = Math.max(MIN_TITLE, k * (TITLE_BAND / need) * 0.99);
+          section.style.setProperty("--h2fit", k.toFixed(4));
+          if (k <= MIN_TITLE) break;
+        }
+      }
+
+      // The natural height of the body's content.
+      //
+      // NOT scrollHeight: scrollHeight is clamped to at least clientHeight, so an
+      // under-full slide reports "exactly full" and both the growth step and the
+      // optical lead below silently become no-ops. Walking the children gives the
+      // real figure, in unscaled layout pixels, above and below the box alike.
+      function naturalHeight(body) {
+        var kids = body.children;
+        if (!kids.length) return 0;
+        var first = kids[0], last = kids[kids.length - 1];
+        return (last.offsetTop + last.offsetHeight) - first.offsetTop;
+      }
+
+      function fitBody(section) {
+        var body = child(section, "slide-body");
+        if (!body) return;
+        section.classList.remove("fit-top");
+        section.style.setProperty("--fit", "1");
+        section.style.setProperty("--lead", "0px");
+
+        var avail = body.clientHeight;
+        if (!avail) return;
+
+        // Converge on the largest size that still fits the body region. This
+        // grows a sparse slide as readily as it shrinks a crowded one, which is
+        // the whole point: three lines of type should hold the canvas, not float
+        // in the middle of it at the same size as a slide carrying twenty.
+        // Growth moves where lines wrap, so the step is damped and the last size
+        // known to fit is kept as a floor.
+        var k = 1, fits = 0;
+        for (var n = 0; n < 12; n++) {
+          var need = naturalHeight(body);
+          if (!need) break;
+          if (need <= avail) fits = Math.max(fits, k);
+          var next = k * Math.pow((avail * 0.985) / need, 0.6);
+          next = Math.min(MAX_BODY, Math.max(MIN_BODY, next));
+          if (Math.abs(next - k) < 0.005) break;
+          k = next;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+        if (naturalHeight(body) > avail && fits > 0 && fits < k) {
+          k = fits;
+          section.style.setProperty("--fit", k.toFixed(4));
+        }
+
+        // Optical placement. A body that fills the region starts at the top; one
+        // with room to spare drops by a fraction of what is left over, capped, so
+        // that it sits under the title instead of either jammed against it or
+        // marooned in the middle of the canvas.
+        var slack = avail - naturalHeight(body);
+        var lead = slack > 0 ? Math.min(LEAD_MAX, slack * LEAD_SHARE) : 0;
+        section.style.setProperty("--lead", Math.round(lead) + "px");
+
+        // Past the floor and still too tall. The slide spills instead of losing
+        // its last lines, and says so, because a deck that quietly drops the end
+        // of a worked example is worse than one that looks crowded.
+        if (naturalHeight(body) > avail + 1) {
+          section.classList.add("fit-top");
+          var h = section.querySelector("h2");
+          if (window.console && console.warn) {
+            console.warn("EDR|AI: slide does not fit at the minimum size —",
+                         h ? h.textContent.trim() : "(untitled)");
+          }
+        }
+      }
+
+      function fit(section) {
+        if (!section || !section.offsetParent && !isPrint()) return;
+        fitTitle(section);
+        fitBody(section);
+      }
+
+      function isPrint() {
+        return document.body.classList.contains("print-pdf") ||
+               /print-pdf/.test(window.location.search);
+      }
+
+      function markChrome() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal || typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        var cur = Reveal.getCurrentSlide();
+        reveal.classList.toggle("on-dark",
+          !!cur && cur.classList.contains("divider"));
+        reveal.classList.toggle("on-title",
+          !!cur && cur.classList.contains("quarto-title-block"));
+      }
+
+      function run() {
+        if (isPrint()) {
+          var all = document.querySelectorAll(".reveal .slides > section");
+          for (var i = 0; i < all.length; i++) fit(all[i]);
+          return;
+        }
+        if (typeof Reveal === "undefined" || !Reveal.getCurrentSlide) return;
+        // Only the current slide. reveal keeps every other section at
+        // `display: none`, where offsetHeight is 0 and nothing can be measured,
+        // so a "pre-fit the neighbours" pass would be a no-op that reads as
+        // working code. reveal makes the incoming slide visible BEFORE it fires
+        // slidechanged, so fitting here lands before the frame is painted.
+        fit(Reveal.getCurrentSlide());
+        markChrome();
+      }
+
+      function boot() {
+        if (typeof Reveal === "undefined" || !Reveal.on) {
+          return void setTimeout(boot, 60);
+        }
+        Reveal.on("ready", run);
+        Reveal.on("slidechanged", run);
+        Reveal.on("resize", run);
+        if (Reveal.isReady && Reveal.isReady()) run();
+        // Web fonts change the metrics after first paint; measure again once they
+        // have actually landed, and once more on a late layout.
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(run, 0); });
+        }
+        setTimeout(run, 400);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
