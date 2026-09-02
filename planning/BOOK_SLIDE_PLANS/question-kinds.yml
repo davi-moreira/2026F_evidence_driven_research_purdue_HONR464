@@ -1,5 +1,5 @@
 lesson: question-kinds
-source_sha256: "bd4c7ab7f9d04b449ebd9fd7b5590323fe8c42625ca4c6bc6ba48beed8cdc5a6"
+source_sha256: "fbf554f9ab89e3c937f6f43af1768f757537da7e5650838c3e9f99fe27d2a037"
 
 sections:
 
@@ -115,6 +115,24 @@ sections:
         the bound the chapter puts on this: in some designs the missing warrant
         is partial rather than absent, and the evidence can still narrow the
         answer, bounding it or fixing its sign, without pinning it down.
+
+    - title: "The map that sorts any question by exactly two things"
+      figure: inquiry_compass.png
+      width: "85%"
+      bullets:
+        - "Filled boxes are what you classify on; white boxes are where the question lands."
+        - "Generalization pays for its reach with a sampling design; prediction needs a pattern that travels."
+        - "The causal row is one kind asked at three reaches, not three new positions."
+      note: >
+        Put the map up and have the room place their own question on it out
+        loud, one axis at a time: kind first, then reach. Two things are worth
+        pointing at. The causal row is drawn as one band because causal reach
+        is real without being three new names: the effect for the units you
+        studied, the effect for the population your sample stands in for, and
+        the effect carried into a new setting are three different quantities of
+        the same kind. And the crossed-out arrow is the rule you just made,
+        drawn as geometry: a causal question your design cannot isolate is
+        written currently unidentified, never descriptive.
 
     - title: "Two honest moves, and one dishonest one"
       bullets:

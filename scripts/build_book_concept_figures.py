@@ -69,8 +69,8 @@ L = {
             "foot": "The frame is not a tidy slice of the population above it. That is where a description quietly goes wrong.",
         },
         "compass": {
-            "axis_kind": "KIND",
-            "axis_reach": "REACH — for which units the answer must hold",
+            "axis_kind": ("KIND", "what kind of answer the question wants"),
+            "axis_reach": ("REACH", "for which units the answer must hold"),
             "reach": [
                 ("DATA AT HAND", "only the units you observed"),
                 ("A POPULATION", "a larger group you sample from"),
@@ -96,7 +96,7 @@ L = {
                 "the effect carried into a\nnew setting or a later time",
             ],
             "causal_earned": "earned by: a credible stand-in for the world that did not happen — the same price at all three reaches",
-            "forbidden": "a causal question your design cannot identify stays causal:\n“currently unidentified”. Weak evidence never moves it up a row.",
+            "forbidden": "if your design cannot isolate the answer, write\n“causal, currently unidentified” — never descriptive.\nWeak evidence never moves a question up a row.",
             "foot": "Two questions place any question on this map: what kind of answer it wants, and for which units that answer must hold.",
         },
     },
@@ -138,8 +138,8 @@ L = {
             "foot": "O cadastro não é uma fatia limpa da população acima dele. É aí que uma descrição erra em silêncio.",
         },
         "compass": {
-            "axis_kind": "TIPO",
-            "axis_reach": "ALCANCE — para quais unidades a resposta precisa valer",
+            "axis_kind": ("TIPO", "que tipo de resposta a pergunta quer"),
+            "axis_reach": ("ALCANCE", "para quais unidades a resposta precisa valer"),
             "reach": [
                 ("DADOS EM MÃOS", "só as unidades que você observou"),
                 ("UMA POPULAÇÃO", "um grupo maior de onde você amostra"),
@@ -165,7 +165,7 @@ L = {
                 "o efeito levado a um novo\ncenário ou a um tempo depois",
             ],
             "causal_earned": "garantido por: um substituto crível para o mundo que não aconteceu — o mesmo preço nos três alcances",
-            "forbidden": "uma pergunta causal que seu desenho não identifica continua causal:\n“atualmente não identificada”. Evidência fraca nunca a move de linha.",
+            "forbidden": "se seu desenho não consegue isolar a resposta, escreva\n“causal, atualmente não identificada” — nunca descritiva.\nEvidência fraca nunca move uma pergunta de linha.",
             "foot": "Duas perguntas situam qualquer pergunta neste mapa: que tipo de resposta ela quer e para quais unidades essa resposta precisa valer.",
         },
     },
@@ -207,8 +207,8 @@ L = {
             "foot": "El marco no es una rebanada limpia de la población de arriba. Ahí es donde una descripción falla en silencio.",
         },
         "compass": {
-            "axis_kind": "TIPO",
-            "axis_reach": "ALCANCE — para qué unidades debe valer la respuesta",
+            "axis_kind": ("TIPO", "qué tipo de respuesta quiere la pregunta"),
+            "axis_reach": ("ALCANCE", "para qué unidades debe valer la respuesta"),
             "reach": [
                 ("DATOS A LA MANO", "solo las unidades que observaste"),
                 ("UNA POBLACIÓN", "un grupo mayor del que muestreas"),
@@ -234,7 +234,7 @@ L = {
                 "el efecto llevado a un nuevo\nentorno o a un tiempo posterior",
             ],
             "causal_earned": "se gana con: un sustituto creíble del mundo que no ocurrió — el mismo precio en los tres alcances",
-            "forbidden": "una pregunta causal que tu diseño no identifica sigue siendo causal:\n“actualmente no identificada”. La evidencia débil nunca la cambia de fila.",
+            "forbidden": "si tu diseño no puede aislar la respuesta, escribe\n“causal, actualmente no identificada” — nunca descriptiva.\nLa evidencia débil nunca cambia una pregunta de fila.",
             "foot": "Dos preguntas ubican cualquier pregunta en este mapa: qué tipo de respuesta quiere y para qué unidades debe valer esa respuesta.",
         },
     },
@@ -412,67 +412,80 @@ def build_groups(S: dict, out: Path) -> None:
 
 def build_compass(S: dict, out: Path) -> None:
     """The inquiry compass: kind × reach, the price of each step, and the
-    one move the compass forbids. The descriptive row splits into three
-    named positions; the causal row is drawn as ONE box across all three
-    reaches, because it is one kind asked of three unit sets, not three new
-    positions."""
-    fig, ax = plt.subplots(figsize=(10.0, 5.6))
+    one move the compass forbids.
+
+    Two conventions carry the meaning. Filled boxes are what you classify
+    ON — the two kinds and the three reaches. White boxes are the position
+    you LAND IN. And the causal row is drawn as ONE band across all three
+    reaches, because it is one question kind asked of three unit sets, not
+    three new positions.
+    """
+    fig, ax = plt.subplots(figsize=(10.0, 5.85))
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
     cxs = (.315, .580, .845)
     cw, grid_l, grid_r = .240, .195, .965
-    desc_y, desc_h = .665, .215
-    caus_y, caus_h = .280, .270
+    stub_x, stub_w = .105, .140
+    head_y, head_h = .855, .100
+    desc_y, desc_h = .660, .205
+    caus_y, caus_h = .290, .250
     desc_bot = desc_y - desc_h / 2
     caus_top, caus_bot = caus_y + caus_h / 2, caus_y - caus_h / 2
 
-    # the two axis names, over the stub column and over the grid
-    ax.text(.038, .952, S["axis_kind"], ha="left", va="center",
-            fontsize=7.8, fontweight="bold", color=SOFT)
-    ax.text((grid_l + grid_r) / 2, .952, S["axis_reach"], ha="center",
-            va="center", fontsize=7.8, fontweight="bold", color=SOFT)
-
-    # reach across the top, closed by a rule
-    for cx, (head, sub) in zip(cxs, S["reach"]):
-        ax.text(cx, .898, head, ha="center", va="center",
-                fontsize=8.2, fontweight="bold", color=INK)
-        ax.text(cx, .866, sub, ha="center", va="center",
+    def axis_title(cx, pair):
+        name, gloss = pair
+        ax.text(cx, .966, name, ha="center", va="center",
+                fontsize=8.0, fontweight="bold", color=INK)
+        ax.text(cx, .936, gloss, ha="center", va="center",
                 fontsize=6.6, color=MUTE)
-    ax.plot([grid_l, grid_r], [.838, .838], color=SOFT, lw=.9, zorder=1)
 
-    # kind down the left, closed by a rule
-    for cy, (head, sub) in zip((desc_y, caus_y), S["kinds"]):
-        ax.text(.038, cy + .054, head, ha="left", va="center",
+    axis_title(stub_x, S["axis_kind"])
+    axis_title((grid_l + grid_r) / 2, S["axis_reach"])
+
+    # reach across the top — filled, because it is an input you classify on
+    for cx, (head, sub) in zip(cxs, S["reach"]):
+        box(ax, cx, head_y, cw, head_h, FILL, SOFT, lw=1.0, r=.024)
+        ax.text(cx, head_y + .020, head, ha="center", va="center",
                 fontsize=8.2, fontweight="bold", color=INK)
-        ax.text(.038, cy - .020, sub, ha="left", va="center",
-                fontsize=6.6, color=MUTE, linespacing=1.45)
-    ax.plot([.183, .183], [caus_bot, desc_y + desc_h / 2],
-            color=SOFT, lw=.9, zorder=1)
+        ax.text(cx, head_y - .022, sub, ha="center", va="center",
+                fontsize=6.6, color=MUTE)
 
-    # the descriptive row: three named positions, each with its price
+    # kind down the left — filled for the same reason
+    for cy, ch, (head, sub) in zip((desc_y, caus_y), (desc_h, caus_h),
+                                   S["kinds"]):
+        box(ax, stub_x, cy, stub_w, ch, FILL, SOFT, lw=1.0, r=.024)
+        ax.text(stub_x, cy + .048, head, ha="center", va="center",
+                fontsize=8.2, fontweight="bold", color=INK)
+        ax.text(stub_x, cy - .022, sub, ha="center", va="center",
+                fontsize=6.5, color=MUTE, linespacing=1.45)
+
+    # the descriptive row: three named positions, each naming what buys it
     for cx, (head, sub, earned) in zip(cxs, S["cells"]):
         box(ax, cx, desc_y, cw, desc_h, "white", INK, lw=1.4, r=.026)
-        ax.text(cx, desc_y + .066, head, ha="center", va="center",
+        ax.text(cx, desc_y + .062, head, ha="center", va="center",
                 fontsize=8.4, fontweight="bold", color=INK)
         ax.text(cx, desc_y - .008, sub, ha="center", va="center",
                 fontsize=6.8, color=MUTE, linespacing=1.35)
-        ax.text(cx, desc_y - .078, earned, ha="center", va="center",
+        ax.text(cx, desc_y - .074, earned, ha="center", va="center",
                 fontsize=6.4, color=INK, style="italic")
 
     # the causal row: one kind, drawn across all three reaches
     box(ax, (grid_l + grid_r) / 2, caus_y, grid_r - grid_l, caus_h,
         "white", INK, lw=1.4, r=.026)
-    ax.text(grid_l + .020, caus_top - .034, S["causal_head"], ha="left",
-            va="center", fontsize=8.4, fontweight="bold", color=INK)
-    ax.text(grid_l + .020, caus_top - .068, S["causal_sub"], ha="left",
-            va="center", fontsize=6.8, color=MUTE)
+    ax.text((grid_l + grid_r) / 2, caus_top - .034, S["causal_head"],
+            ha="center", va="center", fontsize=8.4, fontweight="bold",
+            color=INK)
+    ax.text((grid_l + grid_r) / 2, caus_top - .066, S["causal_sub"],
+            ha="center", va="center", fontsize=6.8, color=MUTE)
+    ax.plot([grid_l + .016, grid_r - .016], [caus_top - .089, caus_top - .089],
+            color=SOFT, lw=.8, zorder=3)
     for bx in ((cxs[0] + cxs[1]) / 2, (cxs[1] + cxs[2]) / 2):
-        ax.plot([bx, bx], [caus_bot + .050, caus_top - .088],
-                color=SOFT, lw=.9, zorder=3)
+        ax.plot([bx, bx], [caus_bot + .038, caus_top - .095],
+                color=SOFT, lw=.8, zorder=3)
     for cx, seg in zip(cxs, S["causal_cells"]):
         ax.text(cx, caus_y - .018, seg, ha="center", va="center",
                 fontsize=6.9, color=INK, linespacing=1.35)
-    ax.text((grid_l + grid_r) / 2, caus_bot + .028, S["causal_earned"],
+    ax.text((grid_l + grid_r) / 2, caus_bot + .026, S["causal_earned"],
             ha="center", va="center", fontsize=6.4, color=INK, style="italic")
 
     # the move the compass forbids, struck out where it would be made
@@ -486,10 +499,10 @@ def build_compass(S: dict, out: Path) -> None:
     for dy in (1, -1):
         ax.plot([fx - .011, fx + .011], [my - .015 * dy, my + .015 * dy],
                 color=INK, lw=1.5, zorder=6, solid_capstyle="round")
-    ax.text(.665, my, S["forbidden"], ha="center", va="center",
-            fontsize=6.8, color=INK, linespacing=1.4)
+    ax.text(.680, my, S["forbidden"], ha="center", va="center",
+            fontsize=6.8, color=INK, linespacing=1.45)
 
-    ax.text(.5, .058, S["foot"], ha="center", va="center", fontsize=7.2,
+    ax.text(.5, .088, S["foot"], ha="center", va="center", fontsize=7.2,
             color=MUTE)
 
     fig.tight_layout(pad=0.4)
