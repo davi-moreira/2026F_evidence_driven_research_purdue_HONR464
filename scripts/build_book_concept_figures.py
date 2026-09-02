@@ -99,6 +99,32 @@ L = {
             "forbidden": "if your design cannot isolate the answer, write\n“causal, currently unidentified” — never descriptive.\nWeak evidence never moves a question up a row.",
             "foot": "Two questions place any question on this map: what kind of answer it wants, and for which units that answer must hold.",
         },
+        "declaration": {
+            "title": "THE DECLARATION",
+            "title_sub": "the project's contract with the evidence, written while changing it still costs nothing",
+            "parts": [
+                ("1 · THE LEAD QUESTION",
+                 "the single sentence your evidence will answer — classified by kind and reach in the last lesson"),
+                ("2 · THE FIELD CARD",
+                 "the short record that pins down every term the sentence carries"),
+                ("3 · THE CLAIM BOUNDARY",
+                 "a pair, written now: the sentence you hope to defend, and the stronger one you already know you will not"),
+            ],
+            "fields": [
+                ("OBJECTIVE", "what the study intends to\ndescribe, predict, or explain"),
+                ("UNIT OF ANALYSIS", "the kind of entity the\nanswer makes a claim about"),
+                ("OUTCOME", "what you will\nactually record"),
+                ("CONDITIONS", "the comparison, setting, or time\nthat gives the outcome meaning"),
+                ("KIND", "descriptive or causal,\nstraight from the compass"),
+                ("REACH", "for which units the\nanswer must hold"),
+            ],
+            "boundary": [
+                ("HOPE TO DEFEND", "the sentence you intend to earn from the evidence"),
+                ("WILL NOT DEFEND", "the stronger sentence you already know you cannot"),
+            ],
+            "band": "Yours, never delegated: the choice among candidate wordings  ·  the kind  ·  the reach  ·  both boundary sentences",
+            "foot": "A boundary written early is a promise; a boundary written late is an excuse.",
+        },
     },
     "book-pt": {
         "mida": {
@@ -168,6 +194,32 @@ L = {
             "forbidden": "se seu desenho não consegue isolar a resposta, escreva\n“causal, atualmente não identificada” — nunca descritiva.\nEvidência fraca nunca move uma pergunta de linha.",
             "foot": "Duas perguntas situam qualquer pergunta neste mapa: que tipo de resposta ela quer e para quais unidades essa resposta precisa valer.",
         },
+        "declaration": {
+            "title": "A DECLARAÇÃO",
+            "title_sub": "o contrato do projeto com a evidência, escrito enquanto mudá-lo ainda não custa nada",
+            "parts": [
+                ("1 · A PERGUNTA PRINCIPAL",
+                 "a única frase que sua evidência vai responder — classificada por tipo e alcance na lição anterior"),
+                ("2 · A FICHA DE CAMPO",
+                 "o registro curto que fixa cada termo que a frase carrega"),
+                ("3 · A FRONTEIRA DA ALEGAÇÃO",
+                 "um par, escrito agora: a frase que você espera defender e a mais forte que já sabe que não poderá"),
+            ],
+            "fields": [
+                ("OBJETIVO", "o que o estudo pretende\ndescrever, prever ou explicar"),
+                ("UNIDADE DE ANÁLISE", "o tipo de entidade sobre a qual\na resposta faz uma alegação"),
+                ("DESFECHO", "o que você vai\nde fato registrar"),
+                ("CONDIÇÕES", "a comparação, o cenário ou o tempo\nque dá sentido ao desfecho"),
+                ("TIPO", "descritiva ou causal,\ndireto da bússola"),
+                ("ALCANCE", "para quais unidades a\nresposta precisa valer"),
+            ],
+            "boundary": [
+                ("ESPERA DEFENDER", "a frase que você pretende conquistar com a evidência"),
+                ("NÃO VAI DEFENDER", "a frase mais forte que você já sabe que não pode"),
+            ],
+            "band": "Seu, nunca delegado: a escolha entre as redações candidatas  ·  o tipo  ·  o alcance  ·  as duas frases da fronteira",
+            "foot": "Uma fronteira escrita cedo é uma promessa; uma fronteira escrita tarde é uma desculpa.",
+        },
     },
     "book-es": {
         "mida": {
@@ -236,6 +288,32 @@ L = {
             "causal_earned": "se gana con: un sustituto creíble del mundo que no ocurrió — el mismo precio en los tres alcances",
             "forbidden": "si tu diseño no puede aislar la respuesta, escribe\n“causal, actualmente no identificada” — nunca descriptiva.\nLa evidencia débil nunca cambia una pregunta de fila.",
             "foot": "Dos preguntas ubican cualquier pregunta en este mapa: qué tipo de respuesta quiere y para qué unidades debe valer esa respuesta.",
+        },
+        "declaration": {
+            "title": "LA DECLARACIÓN",
+            "title_sub": "el contrato del proyecto con la evidencia, escrito mientras cambiarlo todavía no cuesta nada",
+            "parts": [
+                ("1 · LA PREGUNTA PRINCIPAL",
+                 "la única frase que tu evidencia va a responder — clasificada por tipo y alcance en la lección anterior"),
+                ("2 · LA FICHA DE CAMPO",
+                 "el registro breve que fija cada término que la frase lleva"),
+                ("3 · LA FRONTERA DE LA AFIRMACIÓN",
+                 "un par, escrito ahora: la frase que esperas defender y la más fuerte que ya sabes que no podrás"),
+            ],
+            "fields": [
+                ("OBJETIVO", "qué pretende el estudio\ndescribir, predecir o explicar"),
+                ("UNIDAD DE ANÁLISIS", "el tipo de entidad sobre la que\nla respuesta afirma algo"),
+                ("RESULTADO", "lo que vas a\nregistrar de hecho"),
+                ("CONDICIONES", "la comparación, el entorno o el tiempo\nque da sentido al resultado"),
+                ("TIPO", "descriptiva o causal,\ndirecto de la brújula"),
+                ("ALCANCE", "para qué unidades debe\nvaler la respuesta"),
+            ],
+            "boundary": [
+                ("ESPERA DEFENDER", "la frase que pretendes ganarte con la evidencia"),
+                ("NO VA A DEFENDER", "la frase más fuerte que ya sabes que no puedes"),
+            ],
+            "band": "Tuyo, nunca delegado: la elección entre las redacciones candidatas  ·  el tipo  ·  el alcance  ·  las dos frases de la frontera",
+            "foot": "Una frontera escrita temprano es una promesa; una frontera escrita tarde es una excusa.",
         },
     },
 }
@@ -510,11 +588,87 @@ def build_compass(S: dict, out: Path) -> None:
     plt.close(fig)
 
 
+def build_declaration(S: dict, out: Path) -> None:
+    """The declaration's anatomy: the lead question, the field card that pins
+    every term it carries, and the claim boundary as a PAIR.
+
+    Drawn as the record it is — one card, three numbered parts, ruled — so the
+    reader sees that a declaration is a document to fill in, not a sentence to
+    polish. The band beneath is the human line: what none of it delegates.
+    """
+    fig, ax = plt.subplots(figsize=(10.0, 5.9))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    card_l, card_r = .045, .955
+    inset_l, inset_r = .068, .932
+
+    ax.text(.5, .958, S["title"], ha="center", va="center",
+            fontsize=9.0, fontweight="bold", color=INK)
+    ax.text(.5, .926, S["title_sub"], ha="center", va="center",
+            fontsize=6.8, color=MUTE)
+
+    # the card itself
+    box(ax, (card_l + card_r) / 2, .530, card_r - card_l, .700,
+        "white", INK, lw=1.5, r=.020)
+
+    def part(y, idx, gloss=True):
+        head, sub = S["parts"][idx]
+        ax.text(inset_l, y, head, ha="left", va="center",
+                fontsize=7.8, fontweight="bold", color=INK)
+        if gloss:
+            ax.text(inset_l, y - .026, sub, ha="left", va="center",
+                    fontsize=6.6, color=MUTE)
+
+    def rule(y):
+        ax.plot([inset_l, inset_r], [y, y], color=SOFT, lw=.8, zorder=3)
+
+    # 1 — the sentence itself, given a slot of its own
+    part(.845, 0, gloss=False)
+    box(ax, .5, .795, inset_r - inset_l, .058, FILL, SOFT, lw=1.0, r=.018)
+    ax.text(.5, .795, S["parts"][0][1], ha="center", va="center",
+            fontsize=6.8, color=MUTE)
+    rule(.748)
+
+    # 2 — the six fields that pin its terms
+    part(.722, 1)
+    fxs, fw = (.215, .500, .785), .265
+    for i, (head, sub) in enumerate(S["fields"]):
+        cx, cy = fxs[i % 3], (.620 if i < 3 else .496)
+        box(ax, cx, cy, fw, .102, FILL, SOFT, lw=1.0, r=.020)
+        ax.text(cx, cy + .025, head, ha="center", va="center",
+                fontsize=7.2, fontweight="bold", color=INK)
+        ax.text(cx, cy - .023, sub, ha="center", va="center",
+                fontsize=6.2, color=MUTE, linespacing=1.35)
+    rule(.418)
+
+    # 3 — the boundary, and it is a pair
+    part(.392, 2)
+    for cx, (head, sub) in zip((.285, .715), S["boundary"]):
+        box(ax, cx, .272, .400, .098, "white", INK, lw=1.2, r=.020)
+        ax.text(cx, .295, head, ha="center", va="center",
+                fontsize=7.2, fontweight="bold", color=INK)
+        ax.text(cx, .257, sub, ha="center", va="center",
+                fontsize=6.3, color=MUTE)
+
+    # the human line
+    box(ax, .5, .122, card_r - card_l, .070, FILL, SOFT, lw=1.0, r=.020)
+    ax.text(.5, .122, S["band"], ha="center", va="center",
+            fontsize=7.0, color=INK)
+
+    ax.text(.5, .040, S["foot"], ha="center", va="center", fontsize=7.2,
+            color=MUTE, style="italic")
+
+    fig.tight_layout(pad=0.4)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
 BUILDERS = (
     ("mida", "mida_map.png", build_mida),
     ("loop", "diagnose_loop.png", build_loop),
     ("groups", "sampling_groups.png", build_groups),
     ("compass", "inquiry_compass.png", build_compass),
+    ("declaration", "declaration_anatomy.png", build_declaration),
 )
 
 
