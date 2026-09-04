@@ -3,7 +3,7 @@
 # the auto key-terms card (Data provenance, Data quality), the AI failure
 # case, the "Do not delegate" rule, and the "It is your turn" steps.
 lesson: data-provenance
-source_sha256: "99f1b5db92c89da5ac33a06ca9df964627e0b2700df3d561191f17a037c2d577"
+source_sha256: "facf2936b239b7f642d477ecbc594b1766c863701e24b1e0148a0af515811d80"
 
 sections:
 
@@ -64,6 +64,19 @@ sections:
         where the totals were settled. The newspaper table, the encyclopedia
         entry and the aggregator all sit in the same category: they copy. That
         is why the chain has to be walked to its end before the number counts.
+
+    - title: "Every value arrives at the end of a chain someone else wrote"
+      figure: provenance_chain.png
+      width: "100%"
+      bullets:
+        - "Only the primary source produced the value. Every later link copied it."
+        - "Tracing back to it is your job, not the tool's."
+        - "Provenance asks where it came from; quality asks whether it fits your question."
+      note: >
+        The heavy rule is on the primary source for a reason: a value is
+        only as trustworthy as the record at the end of its chain. Have the
+        room name a number they used last week and say out loud which link
+        they actually opened.
 
     - title: "The same real number can be right for one question and wrong for yours"
       bullets:

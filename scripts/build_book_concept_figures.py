@@ -68,6 +68,104 @@ L = {
             "dup": "one unit, listed twice:\na duplicate",
             "foot": "The frame is not a tidy slice of the population above it. That is where a description quietly goes wrong.",
         },
+        "leadloop": {
+            "span_lead": ("STILL A LEAD", "a candidate source you have not confirmed yet"),
+            "span_source": ("NOW A SOURCE", "promoted by retrieval and verification"),
+            "steps": [
+                ("ASK", "any tool, to surface leads"),
+                ("RETRIEVE", "the actual source, yourself"),
+                ("VERIFY", "run both checks below"),
+                ("DOCUMENT", "where you found it"),
+            ],
+            "checks_head": "TWO SEPARATE CHECKS",
+            "checks": [
+                ("does it exist?", "CITATION HALLUCINATION",
+                 "an AI inventing a source\nthat does not exist"),
+                ("does it say this?", "MISCHARACTERIZED SOURCE",
+                 "a real paper cited for a\nclaim it never makes"),
+            ],
+            "fail": "no",
+            "foot": "A lead stays a lead until retrieval and verification promote it to a source.",
+        },
+        "provenance": {
+            "chain_head": "EVERY HAND IT PASSED THROUGH BEFORE IT REACHED YOU",
+            "chain": [
+                ("PRIMARY SOURCE", "the original record where\nthe value was first produced"),
+                ("SECONDARY SOURCE", "re-reports a value\nit did not produce"),
+                ("SECONDARY SOURCE", "and so does this one"),
+                ("THE VALUE, IN YOUR FILE", "where you met it"),
+            ],
+            "back": "trace it back yourself, to the primary source",
+            "asks_head": "TWO THINGS YOU MUST BE ABLE TO ANSWER",
+            "asks": [
+                ("PROVENANCE", "where did this value come from,\nand through whose hands?"),
+                ("DATA QUALITY", "is it fit for MY question: real, by a method\nI can name, defined the way my question needs?"),
+            ],
+            "foot": "A value is only as trustworthy as the primary source at the end of its chain.",
+        },
+        "codeloop": {
+            "own_before": "YOURS, BEFORE YOU DELEGATE — the quantity of interest and the frame, in plain words",
+            "steps": ["PROMPT", "READ THE\nOUTPUT", "INTERROGATE IT", "REFINE", "RUN IT AGAIN"],
+            "gate_head": "YOURS, EVERY CYCLE — NOT EVERY SESSION",
+            "gate": "what quantity?    over which cases?",
+            "drift": "Any turn can add a filter, drop a join, or reach for a different column.\nNothing announces the change.",
+            "foot": "A clean run is not a correct result: a cell can execute with no error and still compute a different number than your question needs.",
+        },
+        "verbgate": {
+            "head": "KEEP THESE THREE APART",
+            "fields": [
+                ("QUESTION KIND", "what you set out to learn.\nIts kind comes from its own words", "causal"),
+                ("IDENTIFICATION STATUS", "whether THIS DESIGN can actually\ndeliver that answer", "not identified by this design\nunder stated assumptions"),
+                ("RESULT", "the quantity this evidence\ndid produce", "observed association"),
+            ],
+            "boundary": ("CLAIM BOUNDARY", "what those three together license you to write"),
+            "verb_head": "AND IT LIVES IN THE HEADLINE VERB",
+            "verbs": [("you write", "\u201cwas associated with lower\u201d"),
+                      ("never", "\u201clowered\u201d")],
+            "foot": "What earns a causal verb is a defended identification argument.",
+        },
+        "capsule": {
+            "head": "REPRODUCIBILITY CAPSULE",
+            "sub": "everything a stranger needs to rebuild your numbers, and nothing they would have to guess",
+            "parts": [
+                ("RUNNABLE NOTEBOOK", "passes restart-\nand-run-all"),
+                ("DATA-PROVENANCE NOTE", "where each dataset came\nfrom, its version, its use"),
+                ("FIXED SEED", "every random step returns\nthe same values"),
+                ("DECISION LOG", "the by-hand choices,\neach with its reason"),
+                ("AI-USE LEDGER", "every tool, its task, and\nhow you verified it"),
+            ],
+            "sins_head": "THE FIVE PACKAGE SINS — HOW CAPSULES PREDICTABLY BREAK",
+            "sins": "a hard-coded path that exists only on your machine   ·   a missing seed that moves every run   ·   a by-hand edit no clean run reproduces\nan undocumented exclusion with no logged reason   ·   stale data a reader cannot reobtain",
+            "foot": "A capsule with zero flags is runnable, never proven correct.",
+        },
+        "uln": {
+            "head": "THE ULN MOVE — THREE BEATS, IN THIS ORDER",
+            "beats": [
+                ("UNCERTAINTY", "how much your number\ncould wobble, and why",
+                 "\u201cwith 812 people, my estimate could\nsit a few points higher or lower\u201d"),
+                ("LIMITATION", "a true sentence about what\nyour design cannot show",
+                 "\u201cI measured that two things went together,\nso I cannot say one caused the other\u201d"),
+                ("NEXT STEP", "the study that would\nresolve that limitation",
+                 "the design that would settle it"),
+            ],
+            "prevents_head": "AND THE FAILURE IT PREVENTS",
+            "prevents": ("THE APOLOGY SPIRAL",
+                         "burying a real, defensible finding under self-erasure"),
+            "choose": [("PRECISION — naming the exact boundary", "\u201cthis is one campus sample\u201d"),
+                       ("HEDGING — vague self-protection", "\u201csort of, take it with a grain of salt\u201d")],
+            "choose_note": "Precision informs the listener; hedging only protects you.",
+            "foot": "Delivered together, ULN sounds like expertise, because you are naming the edge of your evidence on purpose.",
+        },
+        "criticalpath": {
+            "head_par": "NO DEPENDENCY BETWEEN THEM",
+            "sub_par": "they run at the same time",
+            "par": ["check the design", "check the citations", "tighten the prose"],
+            "head_seq": "JOINED BY ONE DEPENDENCY EACH",
+            "sub_seq": "they run in order — and this chain is THE CRITICAL PATH",
+            "seq": [("WORKER", "drafts"), ("CRITIC", "attacks what\nthe worker produced"), ("YOU", "integrate")],
+            "seq_note": "three steps that cannot collapse into fewer",
+            "foot": "You orchestrate loops, not prompts.",
+        },
         "compass": {
             "axis_kind": ("KIND", "what kind of answer the question wants"),
             "axis_reach": ("REACH", "for which units the answer must hold"),
@@ -661,12 +759,384 @@ def build_declaration(S: dict, out: Path) -> None:
     plt.close(fig)
 
 
+def build_leadloop(S: dict, out: Path) -> None:
+    """The four steps, and the point on them where a lead becomes a source.
+
+    The promotion happens at VERIFICATION, not at the end of the chain: "a
+    lead stays a lead until retrieval and verification promote it to a
+    source", and documenting comes after. So lead and source are drawn as two
+    SPANS over the row, divided between VERIFY and DOCUMENT, rather than as a
+    start box and an end box — which would have said, wrongly, that a source
+    is what you have only once you have written down where you found it.
+    """
+    fig, ax = plt.subplots(figsize=(9.6, 4.9))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    y, w, gap, x0 = 0.700, 0.210, 0.020, 0.050
+    cxs = [x0 + w / 2 + i * (w + gap) for i in range(4)]
+    split = (cxs[2] + w / 2 + cxs[3] - w / 2) / 2
+
+    def span(xa, xb, head, sub):
+        yb = 0.855
+        ax.plot([xa, xb], [yb, yb], color=SOFT, lw=1.0)
+        for x in (xa, xb):
+            ax.plot([x, x], [yb, yb - 0.028], color=SOFT, lw=1.0)
+        ax.text((xa + xb) / 2, yb + 0.075, head, ha="center", va="center",
+                fontsize=7.4, color=INK, fontweight="bold")
+        ax.text((xa + xb) / 2, yb + 0.028, sub, ha="center", va="center",
+                fontsize=6.4, color=MUTE)
+
+    span(x0, split - 0.008, *S["span_lead"])
+    span(split + 0.008, x0 + 4 * w + 3 * gap, *S["span_source"])
+
+    for i, (cx, (head, sub)) in enumerate(zip(cxs, S["steps"])):
+        box(ax, cx, y, w, 0.155, "white", INK)
+        ax.text(cx, y + 0.030, head, ha="center", va="center",
+                fontsize=8.0, color=INK, fontweight="bold")
+        ax.text(cx, y - 0.036, sub, ha="center", va="center",
+                fontsize=6.4, color=MUTE, linespacing=1.5)
+        if i:
+            arrow(ax, cx - w / 2 - gap, y, cx - w / 2, y)
+
+    vx = cxs[2]
+    ax.plot([vx, vx], [y - 0.078, 0.545], color=INK, lw=1.1,
+            solid_capstyle="butt", zorder=3)
+    ax.text(vx, 0.478, S["checks_head"], ha="center", va="center",
+            fontsize=6.4, color=SOFT, fontweight="bold")
+    for cx, (q, name, sub) in zip((vx - 0.20, vx + 0.20), S["checks"]):
+        arrow(ax, vx, 0.545, cx, 0.415)
+        box(ax, cx, 0.368, 0.235, 0.090, "white", SOFT, ls="dashed")
+        ax.text(cx, 0.368, q, ha="center", va="center",
+                fontsize=7.4, color=INK, style="italic")
+        arrow(ax, cx, 0.322, cx, 0.243, color=SOFT)
+        ax.text(cx + 0.016, 0.283, S["fail"], ha="left", va="center",
+                fontsize=6.2, color=SOFT, style="italic")
+        box(ax, cx, 0.160, 0.265, 0.148, FILL, SOFT)
+        ax.text(cx, 0.195, name, ha="center", va="center",
+                fontsize=7.2, color=INK, fontweight="bold")
+        ax.text(cx, 0.128, sub, ha="center", va="center",
+                fontsize=6.3, color=MUTE, linespacing=1.5)
+
+    ax.text(0.5, 0.040, S["foot"], ha="center", va="center",
+            fontsize=6.6, color=MUTE, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
+def build_provenance(S: dict, out: Path) -> None:
+    """The chain a value travelled, and the two questions you owe it.
+
+    The chapter defines provenance as the origin "and every hand it passed
+    through before it reached you", so the chain runs origin-to-you and the
+    trace runs back the other way. Only the primary source carries the heavy
+    rule: "a value is only as trustworthy as the primary source at the end of
+    its chain."
+    """
+    fig, ax = plt.subplots(figsize=(9.6, 4.8))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    y, w, gap = 0.775, 0.200, 0.045
+    x0 = 0.032
+    cxs = [x0 + w / 2 + i * (w + gap) for i in range(4)]
+
+    ax.text(0.5, 0.955, S["chain_head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+
+    for i, (cx, (head, sub)) in enumerate(zip(cxs, S["chain"])):
+        primary = i == 0
+        box(ax, cx, y, w, 0.165, "white" if primary else FILL,
+            INK if primary else SOFT, lw=2.0 if primary else 1.1)
+        ax.text(cx, y + 0.033, head, ha="center", va="center",
+                fontsize=7.6 if primary else 7.2, color=INK, fontweight="bold")
+        ax.text(cx, y - 0.038, sub, ha="center", va="center",
+                fontsize=6.3, color=MUTE, linespacing=1.5)
+        if i:
+            arrow(ax, cx - w / 2 - gap, y, cx - w / 2, y, color=SOFT)
+
+    # the trace back, under the chain
+    ax.annotate("", xy=(cxs[0], 0.632), xytext=(cxs[-1], 0.632), zorder=4,
+                arrowprops=dict(arrowstyle="-|>", color=INK, lw=1.2,
+                                shrinkA=0, shrinkB=0, mutation_scale=12,
+                                connectionstyle="arc3,rad=-0.14"))
+    ax.text(0.5, 0.487, S["back"], ha="center", va="center",
+            fontsize=7.2, color=INK, style="italic")
+
+    ax.text(0.5, 0.385, S["asks_head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    for cx, (head, sub) in zip((0.275, 0.725), S["asks"]):
+        box(ax, cx, 0.235, 0.43, 0.185, "white", INK)
+        ax.text(cx, 0.283, head, ha="center", va="center",
+                fontsize=7.6, color=INK, fontweight="bold")
+        ax.text(cx, 0.205, sub, ha="center", va="center",
+                fontsize=6.4, color=MUTE, linespacing=1.55)
+
+    ax.text(0.5, 0.055, S["foot"], ha="center", va="center",
+            fontsize=6.6, color=MUTE, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
+def build_codeloop(S: dict, out: Path) -> None:
+    """The AI coding loop, and the check that has to close it every time.
+
+    The chapter's loop is "you prompt, you read the output, you interrogate
+    it, you refine, and you run it again", so running again returns to
+    reading, not to prompting: the feedback arc lands on READ THE OUTPUT.
+    The two boxes in ink are the two things the chapter says you own — the
+    definition before you delegate, and the per-cycle confirmation.
+    """
+    fig, ax = plt.subplots(figsize=(9.6, 4.6))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    # what you own before any of it runs
+    box(ax, 0.5, 0.925, 0.96, 0.10, "white", INK)
+    ax.text(0.5, 0.925, S["own_before"], ha="center", va="center",
+            fontsize=7.2, color=INK)
+
+    y, w, gap = 0.735, 0.163, 0.030
+    x0 = 0.032
+    cxs = [x0 + w / 2 + i * (w + gap) for i in range(5)]
+    for i, (cx, label) in enumerate(zip(cxs, S["steps"])):
+        box(ax, cx, y, w, 0.115, FILL, SOFT)
+        ax.text(cx, y, label, ha="center", va="center",
+                fontsize=7.4, color=INK, fontweight="bold", linespacing=1.5)
+        if i:
+            arrow(ax, cx - w / 2 - gap, y, cx - w / 2, y, color=SOFT)
+    arrow(ax, cxs[0], 0.875, cxs[0], y + 0.058, color=SOFT)
+
+    # "and you run it again" returns to reading the output — and the return
+    # path runs THROUGH the check, because that is the chapter's point: the
+    # cycle does not close until you have asked both questions again.
+    gx, gy, gw = (cxs[1] + cxs[4]) / 2, 0.495, 0.44
+    ax.plot([cxs[4], cxs[4]], [y - 0.058, gy], color=INK, lw=1.2, zorder=3)
+    arrow(ax, cxs[4], gy, gx + gw / 2, gy)
+    ax.plot([gx - gw / 2, cxs[1]], [gy, gy], color=INK, lw=1.2, zorder=3)
+    arrow(ax, cxs[1], gy, cxs[1], y - 0.058)
+
+    ax.text(gx, 0.612, S["gate_head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    box(ax, gx, gy, gw, 0.105, "white", INK, lw=2.0)
+    ax.text(gx, gy, S["gate"], ha="center", va="center",
+            fontsize=8.2, color=INK, fontweight="bold")
+
+    ax.text(0.5, 0.265, S["drift"], ha="center", va="center",
+            fontsize=6.9, color=MUTE, linespacing=1.6)
+    ax.text(0.5, 0.075, S["foot"], ha="center", va="center",
+            fontsize=6.6, color=MUTE, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
+def build_verbgate(S: dict, out: Path) -> None:
+    """Three fields kept apart, and the verb they license between them.
+
+    The chapter is emphatic that the kind belongs to the QUESTION and the
+    status belongs to the DESIGN, and that fusing them "quietly fuses the two
+    fields you just separated" — so the three sit as three separate boxes and
+    only the boundary below them is joint. The two verbs are the chapter's
+    own example, in its own words: you write one, never the other.
+    """
+    fig, ax = plt.subplots(figsize=(9.6, 5.0))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    ax.text(0.5, 0.955, S["head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+
+    y, w, gap = 0.775, 0.30, 0.035
+    x0 = 0.025
+    cxs = [x0 + w / 2 + i * (w + gap) for i in range(3)]
+    for cx, (head, sub, value) in zip(cxs, S["fields"]):
+        box(ax, cx, y, w, 0.235, "white", INK)
+        ax.text(cx, y + 0.078, head, ha="center", va="center",
+                fontsize=7.6, color=INK, fontweight="bold")
+        ax.text(cx, y + 0.016, sub, ha="center", va="center",
+                fontsize=6.3, color=MUTE, linespacing=1.5)
+        ax.plot([cx - w / 2 + 0.03, cx + w / 2 - 0.03], [y - 0.038, y - 0.038],
+                color=SOFT, lw=0.8)
+        ax.text(cx, y - 0.078, value, ha="center", va="center",
+                fontsize=6.8, color=INK, style="italic", linespacing=1.5)
+        arrow(ax, cx, y - 0.1175, 0.5, 0.545, color=SOFT)
+
+    box(ax, 0.5, 0.475, 0.62, 0.125, FILL, INK, lw=2.0)
+    ax.text(0.5, 0.505, S["boundary"][0], ha="center", va="center",
+            fontsize=8.0, color=INK, fontweight="bold")
+    ax.text(0.5, 0.448, S["boundary"][1], ha="center", va="center",
+            fontsize=6.5, color=MUTE)
+
+    ax.text(0.5, 0.355, S["verb_head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    for cx, (lead, verb) in zip((0.275, 0.725), S["verbs"]):
+        ax.text(cx, 0.268, lead, ha="center", va="center",
+                fontsize=6.8, color=SOFT, style="italic")
+        ax.text(cx, 0.205, verb, ha="center", va="center",
+                fontsize=9.4, color=INK, fontweight="bold")
+    ax.plot([0.663, 0.787], [0.203, 0.203], color=INK, lw=1.0)
+
+    ax.text(0.5, 0.065, S["foot"], ha="center", va="center",
+            fontsize=6.6, color=MUTE, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
+def build_capsule(S: dict, out: Path) -> None:
+    """The capsule's five parts, and the five ways capsules break.
+
+    The chapter names five parts and, separately, five sins. It does NOT pair
+    them one to one, so the sins run as a single band rather than as five
+    boxes under five boxes, which would assert a mapping the prose does not
+    make.
+    """
+    fig, ax = plt.subplots(figsize=(9.6, 4.8))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    box(ax, 0.5, 0.715, 0.955, 0.50, FILL, INK, lw=1.6)
+    ax.text(0.5, 0.918, S["head"], ha="center", va="center",
+            fontsize=8.6, color=INK, fontweight="bold")
+    ax.text(0.5, 0.862, S["sub"], ha="center", va="center",
+            fontsize=6.6, color=MUTE, style="italic")
+
+    w, gap = 0.174, 0.016
+    x0 = 0.038
+    for i, (head, sub) in enumerate(S["parts"]):
+        cx = x0 + w / 2 + i * (w + gap)
+        box(ax, cx, 0.665, w, 0.215, "white", SOFT)
+        ax.text(cx, 0.715, head, ha="center", va="center",
+                fontsize=6.6, color=INK, fontweight="bold")
+        ax.text(cx, 0.645, sub, ha="center", va="center",
+                fontsize=6.1, color=MUTE, linespacing=1.5)
+
+    ax.text(0.5, 0.375, S["sins_head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    ax.plot([0.19, 0.81], [0.335, 0.335], color=SOFT, lw=0.8)
+    ax.text(0.5, 0.245, S["sins"], ha="center", va="center",
+            fontsize=6.5, color=MUTE, linespacing=1.9)
+
+    ax.text(0.5, 0.075, S["foot"], ha="center", va="center",
+            fontsize=7.0, color=INK, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
+def build_uln(S: dict, out: Path) -> None:
+    """The three beats of the ULN move, and the spiral it replaces."""
+    fig, ax = plt.subplots(figsize=(9.6, 5.0))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    ax.text(0.5, 0.955, S["head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+
+    y, w, gap = 0.755, 0.295, 0.035
+    x0 = 0.028
+    for i, (head, sub, ex) in enumerate(S["beats"]):
+        cx = x0 + w / 2 + i * (w + gap)
+        box(ax, cx, y, w, 0.255, "white", INK)
+        ax.text(cx, y + 0.088, head, ha="center", va="center",
+                fontsize=8.2, color=INK, fontweight="bold")
+        ax.text(cx, y + 0.022, sub, ha="center", va="center",
+                fontsize=6.4, color=MUTE, linespacing=1.5)
+        ax.plot([cx - w / 2 + 0.03, cx + w / 2 - 0.03], [y - 0.032, y - 0.032],
+                color=SOFT, lw=0.8)
+        ax.text(cx, y - 0.083, ex, ha="center", va="center",
+                fontsize=6.2, color=INK, style="italic", linespacing=1.5)
+        if i:
+            arrow(ax, cx - w / 2 - gap, y, cx - w / 2, y)
+
+    ax.text(0.5, 0.545, S["prevents_head"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    box(ax, 0.5, 0.455, 0.70, 0.115, FILL, SOFT)
+    ax.text(0.5, 0.483, S["prevents"][0], ha="center", va="center",
+            fontsize=7.6, color=INK, fontweight="bold")
+    ax.text(0.5, 0.428, S["prevents"][1], ha="center", va="center",
+            fontsize=6.4, color=MUTE)
+
+    for cx, (label, ex) in zip((0.275, 0.725), S["choose"]):
+        ax.text(cx, 0.318, label, ha="center", va="center",
+                fontsize=7.0, color=INK, fontweight="bold")
+        ax.text(cx, 0.258, ex, ha="center", va="center",
+                fontsize=6.5, color=MUTE, style="italic")
+    ax.text(0.5, 0.175, S["choose_note"], ha="center", va="center",
+            fontsize=6.8, color=MUTE)
+
+    ax.text(0.5, 0.062, S["foot"], ha="center", va="center",
+            fontsize=6.6, color=MUTE, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
+def build_criticalpath(S: dict, out: Path) -> None:
+    """What runs together, what runs in order, and the chain you cannot shorten.
+
+    Both halves are the chapter's own examples: its three subtasks with no
+    dependency between them, and its worker-critic-you chain of "three steps
+    that cannot collapse into fewer". They are drawn as two separate panels
+    because the chapter never joins them into one workflow.
+    """
+    fig, ax = plt.subplots(figsize=(9.6, 4.15))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    # left panel: roles with no dependency
+    ax.text(0.245, 0.925, S["head_par"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    ax.text(0.245, 0.868, S["sub_par"], ha="center", va="center",
+            fontsize=6.8, color=MUTE, style="italic")
+    for i, label in enumerate(S["par"]):
+        cy = 0.735 - i * 0.155
+        box(ax, 0.245, cy, 0.40, 0.115, FILL, SOFT)
+        ax.text(0.245, cy, label, ha="center", va="center",
+                fontsize=7.6, color=INK)
+
+    ax.plot([0.495, 0.495], [0.235, 0.955], color=SOFT, lw=0.8, ls=(0, (4, 4)))
+
+    # right panel: the critical path
+    ax.text(0.748, 0.925, S["head_seq"], ha="center", va="center",
+            fontsize=6.6, color=SOFT, fontweight="bold")
+    ax.text(0.748, 0.868, S["sub_seq"], ha="center", va="center",
+            fontsize=6.8, color=MUTE, style="italic")
+    for i, (head, sub) in enumerate(S["seq"]):
+        cy = 0.735 - i * 0.155
+        box(ax, 0.748, cy, 0.40, 0.115, "white", INK, lw=1.8)
+        ax.text(0.748, cy + 0.022, head, ha="center", va="center",
+                fontsize=7.8, color=INK, fontweight="bold")
+        ax.text(0.748, cy - 0.028, sub, ha="center", va="center",
+                fontsize=6.3, color=MUTE, linespacing=1.45)
+        if i:
+            arrow(ax, 0.748, cy + 0.0575 + 0.0395, 0.748, cy + 0.0575)
+    ax.text(0.748, 0.345, S["seq_note"], ha="center", va="center",
+            fontsize=6.8, color=INK, style="italic")
+
+    ax.text(0.5, 0.105, S["foot"], ha="center", va="center",
+            fontsize=7.6, color=INK, style="italic")
+
+    fig.subplots_adjust(left=0.012, right=0.988, top=0.985, bottom=0.015)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
 BUILDERS = (
     ("mida", "mida_map.png", build_mida),
     ("loop", "diagnose_loop.png", build_loop),
     ("groups", "sampling_groups.png", build_groups),
     ("compass", "inquiry_compass.png", build_compass),
     ("declaration", "declaration_anatomy.png", build_declaration),
+    ("leadloop", "retrieval_verification_loop.png", build_leadloop),
+    ("provenance", "provenance_chain.png", build_provenance),
+    ("codeloop", "ai_coding_loop.png", build_codeloop),
+    ("verbgate", "claim_boundary_verb.png", build_verbgate),
+    ("capsule", "reproducibility_capsule.png", build_capsule),
+    ("uln", "uln_move.png", build_uln),
+    ("criticalpath", "critical_path.png", build_criticalpath),
 )
 
 

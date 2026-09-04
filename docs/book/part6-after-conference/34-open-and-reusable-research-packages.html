@@ -771,6 +771,12 @@ div.csl-indent {
 <li>An <strong>AI-use ledger</strong>: every tool, its task, and how you verified its output.</li>
 </ul>
 <p>Capsules break in boringly predictable ways, which is good news, because a predictable failure is a catchable one. Named, they are <strong>the five package sins</strong>: a <strong>hard-coded path</strong> that exists only on your machine, a <strong>missing seed</strong> that moves every run, a <strong>by-hand edit</strong> no clean run reproduces, an <strong>undocumented exclusion</strong> with no logged reason, and <strong>stale data</strong> a reader cannot reobtain. The lab’s auditor scans for all five. But hold onto the one line that carries the whole chapter: a capsule with zero flags is <strong>runnable</strong>, never proven <strong>correct</strong>. The scan gets you to the starting line. A person who reruns you cold is the race.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/concepts/reproducibility_capsule.png" class="img-fluid figure-img" alt="A large container labelled reproducibility capsule, everything a stranger needs to rebuild your numbers and nothing they would have to guess. Inside it, five boxes: a runnable notebook that passes restart and run all; a data-provenance note recording where each dataset came from, its version and its use; a fixed seed so every random step returns the same values; a decision log of the by-hand choices, each with its reason; and an AI-use ledger of every tool, its task, and how you verified it. Below the container, a band lists the five package sins."></p>
+<figcaption>The capsule’s five parts, and the five ways capsules predictably break. A scan that finds no sins tells you the capsule runs, not that the result is right.</figcaption>
+</figure>
+</div>
 </section>
 <section id="a-worked-example" class="level2" data-number="37.3">
 <h2 data-number="37.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">37.3</span> A worked example</h2>

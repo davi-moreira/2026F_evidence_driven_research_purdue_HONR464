@@ -1,5 +1,5 @@
 lesson: ai-as-programmer
-source_sha256: "b097dd8886aae6bc86ea5783b7f6b2f4b37baae21d48c70113de53fddc8bfd67"
+source_sha256: "a75fd101bcbf2126294c6dfcf25ab06788c0231abbef2c5d93ecea1a33261c25"
 
 sections:
 
@@ -111,6 +111,19 @@ sections:
         the code in front of you right now computes that quantity over that
         frame, and not a plausible neighbor. When a tool ran the cycles for
         you, make it surrender the choices it made along the way.
+
+    - title: "The cycle does not close until you ask both questions again"
+      figure: ai_coding_loop.png
+      width: "100%"
+      bullets:
+        - "Running it again returns you to reading the output, not to prompting."
+        - "Any turn can add a filter, drop a join, or reach for a different column."
+        - "You define the quantity and the frame before; you confirm them every cycle."
+      note: >
+        The point of drawing the return path through the check is that the
+        loop is not closed without it. Agentic tools run these cycles faster
+        than you can read them, which is exactly why the check is per cycle
+        and not per session.
 
   "A worked example":
 

@@ -1,7 +1,7 @@
 # Slide plan — Chapter 35, "Difficult Questions and Uncertainty"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: difficult-questions
-source_sha256: "1f6c9ecc9da3debc1ee79c57087cb05a88ef5eac1a0d96be61826f16b107b0a5"
+source_sha256: "9c16ed54104ff716159ebf6ba34f3d689631d7e1e4256c8d1868d349a814f981"
 
 sections:
 
@@ -88,6 +88,19 @@ sections:
         [@vanderbles2019uncertainty]. Hedging feels safer to say and leaves the
         audience unable to judge anything. Have the room convert one hedge from
         their own draft into the exact boundary it was hiding.
+
+    - title: "Three beats turn a limit into expertise"
+      figure: uln_move.png
+      width: "100%"
+      bullets:
+        - "Uncertainty, then limitation, then next step, in that order."
+        - "Delivered together, ULN sounds like expertise, because you are naming the edge on purpose."
+        - "Precision names the exact boundary; hedging only blurs where the claim stops."
+      note: >
+        Run the three beats in order out loud, then show the spiral
+        underneath and let the contrast land. The two quoted lines at the
+        bottom are the test: one of them tells a listener something, and the
+        other only protects the speaker.
 
     - title: "Five prepared questions cover the space"
       bullets:

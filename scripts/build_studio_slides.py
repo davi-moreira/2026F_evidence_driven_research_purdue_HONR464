@@ -456,8 +456,14 @@ def _planned_slide(deck: Deck, kicker: str, section: sp.Section,
         # only the block knows how the chapter actually writes it.
         block = next((b for b in section.all("figure")
                       if Path(b.src).name == Path(fig).name), None)
-        body_parts.append(deck.figure(block.src if block else fig,
-                                      block.caption if block else "",
+        # On a slide, the plan's own lines ARE the caption. Printing the
+        # chapter's caption underneath as well says the same thing twice and
+        # costs the figure the height it needs to stay legible from the back
+        # of a room; the book page keeps its caption either way.
+        caption = block.caption if block else ""
+        if item.get("bullets") or item.get("lead"):
+            caption = ""
+        body_parts.append(deck.figure(block.src if block else fig, caption,
                                       item.get("width", "70%")))
 
     if item.get("mermaid") is not None:

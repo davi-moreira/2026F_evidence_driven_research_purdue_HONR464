@@ -1,7 +1,7 @@
 # Slide plan — Chapter 28, "From Results to Claims"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: results-to-claims
-source_sha256: "22c2702ed4d86bf230a14d657a65e75391485ff58d8da186576e93a6e6f8c640"
+source_sha256: "2dc3bcd9768df955fc9f137a4a2b35b87a815edb18643f44d9e09b0af151345d"
 
 sections:
 
@@ -110,6 +110,19 @@ sections:
         shows designs that do reach causal answers, so this is not a ban on
         observational work. It is a requirement that the argument exist and be
         defended before the verb changes.
+
+    - title: "Three fields kept apart decide one verb"
+      figure: claim_boundary_verb.png
+      width: "100%"
+      bullets:
+        - "Question kind, identification status, and result stay three separate fields."
+        - "Together they license the claim boundary, and it lives in the headline verb."
+        - "With no identification argument you write “was associated with”, never “lowered”."
+      note: >
+        Point at the three boxes before the verb: the separation is the
+        whole lesson, and fusing kind into status is the move that quietly
+        loses it. Then read both verbs aloud and ask which one their own
+        evidence has actually paid for.
 
     - title: "A bound a reader has to hunt for is a bound doing hidden work"
       bullets:

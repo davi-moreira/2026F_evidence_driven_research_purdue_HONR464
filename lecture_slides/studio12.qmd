@@ -456,6 +456,33 @@ finish its one job and still occupy one node.
 :::
 
 
+## What runs together, and what cannot {data-menu-title="Ch 38 · What runs together, and what cannot"}
+
+::: {.kicker}
+
+Chapter 38 · The concept
+
+:::
+
+::::: {.slide-body}
+
+- Roles with no dependency between them run at the same time.
+- Roles joined by one dependency run in order.
+- Worker, critic, you: three steps that cannot collapse into fewer.
+
+![](figs/critical_path.png){fig-align="center" width="100%" fig-alt="critical_path.png"}
+
+:::::
+
+::: {.notes}
+
+Two panels, deliberately not joined into one workflow. Have the room read the
+critical path off their own milestone rather than guess it, and notice that
+the last step in the chain is a person.
+
+:::
+
+
 ## One draft, four roles, and a dorm-floor heart-rate study {data-menu-title="Ch 38 · One draft, four roles, and a dorm-floor heart-rate study"}
 
 ::: {.kicker}

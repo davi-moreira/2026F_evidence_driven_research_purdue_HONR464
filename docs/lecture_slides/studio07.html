@@ -98,7 +98,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-655db300053cfe6db013a09619c2d534.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8160009532232ea8f6bf1c2498bd32be.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -477,6 +477,37 @@ Davi Moreira
 </div>
 <aside class="notes">
 <p>The code you finally read may not be the code you specified three turns ago. That is why checking once at the end does not work. You own two things the programmer cannot: you define the quantity and the frame in plain words before you delegate (Blair et al.&nbsp;2023), and you confirm that the code in front of you right now computes that quantity over that frame, and not a plausible neighbor. When a tool ran the cycles for you, make it surrender the choices it made along the way.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2" data-menu-title="Ch 22 · The cycle does not close until you ask both questions again">
+<h2>The cycle does not close until you ask both questions again</h2>
+<div class="kicker">
+<p>Chapter 22 · The concept</p>
+</div>
+<div class="slide-body">
+<ul>
+<li>Running it again returns you to reading the output, not to prompting.</li>
+<li>Any turn can add a filter, drop a join, or reach for a different column.</li>
+<li>You define the quantity and the frame before; you confirm them every cycle.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/ai_coding_loop.png" class="quarto-figure quarto-figure-center" style="width:100.0%" alt="ai_coding_loop.png"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<p>The point of drawing the return path through the check is that the loop is not closed without it. Agentic tools run these cycles faster than you can read them, which is exactly why the check is per cycle and not per session.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;

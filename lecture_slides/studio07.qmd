@@ -390,6 +390,33 @@ made along the way.
 :::
 
 
+## The cycle does not close until you ask both questions again {data-menu-title="Ch 22 · The cycle does not close until you ask both questions again"}
+
+::: {.kicker}
+
+Chapter 22 · The concept
+
+:::
+
+::::: {.slide-body}
+
+- Running it again returns you to reading the output, not to prompting.
+- Any turn can add a filter, drop a join, or reach for a different column.
+- You define the quantity and the frame before; you confirm them every cycle.
+
+![](figs/ai_coding_loop.png){fig-align="center" width="100%" fig-alt="ai_coding_loop.png"}
+
+:::::
+
+::: {.notes}
+
+The point of drawing the return path through the check is that the loop is not
+closed without it. Agentic tools run these cycles faster than you can read
+them, which is exactly why the check is per cycle and not per session.
+
+:::
+
+
 ## Turn one: six clean lines and a reassuring 95% {data-menu-title="Ch 22 · Turn one: six clean lines and a reassuring 95%"}
 
 ::: {.kicker}

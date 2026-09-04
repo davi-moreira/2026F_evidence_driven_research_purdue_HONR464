@@ -1,5 +1,5 @@
 lesson: verifying-prior-evidence
-source_sha256: "75fd2b58356855c4b257fd6e67e1dd6819b6a6acf679f9f4f90c3e786289c5d3"
+source_sha256: "cc807e6d5a5b5a2148118e256626ee10c06b983ef32a39035083fa8972a6e6ec"
 
 sections:
 
@@ -78,6 +78,19 @@ sections:
         as the whole test, so a real paper feels safe once it resolves. The
         correlation-cited-as-cause example is the one to press: nothing about
         retrieval catches it, only reading the results section does.
+
+    - title: "A lead becomes a source only by passing both checks"
+      figure: retrieval_verification_loop.png
+      width: "100%"
+      bullets:
+        - "Ask, retrieve, verify, document. The tool does the first step; the other three are yours."
+        - "Verify is two questions, not one: does it exist, and does it say this?"
+        - "Each question catches its own named failure."
+      note: >
+        Walk the chain left to right once, then stop at Verify and make the
+        fork do the work: two questions, two failures, and a source that
+        passes one can still fail the other. Ask the room which of the two
+        they actually run on a reference they already trust.
 
     - title: "Two solid sources, snowballed both ways, become ten"
       bullets:

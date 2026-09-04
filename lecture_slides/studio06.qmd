@@ -329,6 +329,33 @@ to be walked to its end before the number counts.
 :::
 
 
+## Every value arrives at the end of a chain someone else wrote {data-menu-title="Ch 20 · Every value arrives at the end of a chain someone else wrote"}
+
+::: {.kicker}
+
+Chapter 20 · The concept
+
+:::
+
+::::: {.slide-body}
+
+- Only the primary source produced the value. Every later link copied it.
+- Tracing back to it is your job, not the tool's.
+- Provenance asks where it came from; quality asks whether it fits your question.
+
+![](figs/provenance_chain.png){fig-align="center" width="100%" fig-alt="provenance_chain.png"}
+
+:::::
+
+::: {.notes}
+
+The heavy rule is on the primary source for a reason: a value is only as
+trustworthy as the record at the end of its chain. Have the room name a number
+they used last week and say out loud which link they actually opened.
+
+:::
+
+
 ## The same real number can be right for one question and wrong for yours {data-menu-title="Ch 20 · The same real number can be right for one question and wrong for yours"}
 
 ::: {.kicker}

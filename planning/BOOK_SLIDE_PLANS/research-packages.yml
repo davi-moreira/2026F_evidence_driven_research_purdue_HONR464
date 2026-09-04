@@ -1,7 +1,7 @@
 # Slide plan — Chapter 37, "Open and Reusable Research Packages"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: research-packages
-source_sha256: "92257fad4d769579c0501512131d13ce2c8e457d133787c5981913688cfd6763"
+source_sha256: "9060361c4c947f22ca0c3c07b07f976a090028d6fe06ae03b2b34154b845980b"
 
 sections:
 
@@ -81,6 +81,19 @@ sections:
         you can scan for. The lab's auditor scans for all five. Have the room
         say aloud which one they are most tempted to leave alone, because that
         is the one their reader will hit first.
+
+    - title: "Five parts in, five ways it breaks"
+      figure: reproducibility_capsule.png
+      width: "100%"
+      bullets:
+        - "The capsule holds five parts, each defined once."
+        - "The five sins are how capsules predictably break, and predictable means catchable."
+        - "Zero flags means runnable, never proven correct."
+      note: >
+        The sins run as a band rather than as five boxes under five boxes,
+        because the chapter does not pair them one to one. Close on the last
+        line: the scan gets you to the starting line, and a person who
+        reruns you cold is the race.
 
     - title: "Zero flags means runnable, never proven correct"
       lead: "The scan gets you to the starting line. A person who reruns you cold is the race."

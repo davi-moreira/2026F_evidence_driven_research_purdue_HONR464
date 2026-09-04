@@ -499,7 +499,7 @@ $font-family-monospace: $font-mono;
   // figure slide unfittable — shrinking the type cannot recover height the
   // picture is holding, and the caption ends up printed over the footer.
   border-radius: 3px; width: auto; max-width: 100%;
-  max-height: calc(520px * var(--fit, 1));
+  max-height: calc(640px * var(--fit, 1));
   object-fit: contain; margin: 0 auto; display: block;
 }
 .reveal figure figcaption, .reveal .figure-caption {

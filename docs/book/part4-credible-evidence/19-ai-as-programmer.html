@@ -778,6 +778,12 @@ div.csl-indent {
 <p>Nobody gets working analysis code from one prompt, and you should not try to. Real AI-assisted coding is a <strong>loop</strong>: you prompt, you read the output, you interrogate it, you refine, and you run it again. Agentic tools now run that loop by themselves. They write, execute, read the error, patch the code, rerun, and hand you a tidy end state with a paragraph about how well it went.</p>
 <p>The loop is a real gain in speed. It is also where your frame goes missing. Any turn can add a filter, drop a join, or reach for a different column, and the code you finally read may not be the code you specified three turns ago. Nothing announces the change. The number just gets prettier.</p>
 <p>So verification runs per cycle, not per session. Every time the code changes, you ask the same two questions again: what quantity, over which cases? When a tool runs the cycles for you, make it surrender the choices it made along the way, and read the code rather than its summary of the code <span class="citation" data-cites="sandve2013ten">(<a href="#ref-sandve2013ten" role="doc-biblioref">Sandve et al. 2013</a>)</span>. You own two things the programmer cannot. First, you define the quantity of interest and the frame in plain words, before you delegate <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>. Second, you confirm that the code sitting in front of you <em>right now</em> computes that quantity over that frame, and not a plausible neighbor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/concepts/ai_coding_loop.png" class="img-fluid figure-img" alt="Across the top, a box: yours, before you delegate, the quantity of interest and the frame in plain words. Below it a row of five steps: prompt, read the output, interrogate it, refine, run it again. From run it again a path returns leftward through a heavily ruled box asking what quantity, over which cases, and then back up into read the output. A note reads that any turn can add a filter, drop a join, or reach for a different column, and nothing announces the change."></p>
+<figcaption>The loop, and the check that has to close it. Running it again returns you to reading the output, and the cycle is not finished until you have asked both questions of the code in front of you now.</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="a-worked-example" class="level2" data-number="22.3">

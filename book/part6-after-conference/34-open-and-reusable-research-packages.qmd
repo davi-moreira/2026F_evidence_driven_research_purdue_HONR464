@@ -59,6 +59,13 @@ scans for all five. But hold onto the one line that carries the whole chapter: a
 capsule with zero flags is **runnable**, never proven **correct**. The scan gets you
 to the starting line. A person who reruns you cold is the race.
 
+![The capsule's five parts, and the five ways capsules predictably break. A scan that finds no sins tells you the capsule runs, not that the result is
+right.](../images/concepts/reproducibility_capsule.png){fig-alt="A large container labelled reproducibility capsule, everything a stranger needs to
+rebuild your numbers and nothing they would have to guess. Inside it, five boxes: a runnable notebook that passes restart and run all; a
+data-provenance note recording where each dataset came from, its version and its use; a fixed seed so every random step returns the same values; a
+decision log of the by-hand choices, each with its reason; and an AI-use ledger of every tool, its task, and how you verified it. Below the container,
+a band lists the five package sins."}
+
 ## A worked example
 
 You collected precinct-level turnout for twelve counties in one state's midterm

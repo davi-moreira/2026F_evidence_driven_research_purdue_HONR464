@@ -852,6 +852,34 @@ retrieval catches it, only reading the results section does.
 :::
 
 
+## A lead becomes a source only by passing both checks {data-menu-title="Ch 9 · A lead becomes a source only by passing both checks"}
+
+::: {.kicker}
+
+Chapter 9 · The concept
+
+:::
+
+::::: {.slide-body}
+
+- Ask, retrieve, verify, document. The tool does the first step; the other three are yours.
+- Verify is two questions, not one: does it exist, and does it say this?
+- Each question catches its own named failure.
+
+![](figs/retrieval_verification_loop.png){fig-align="center" width="100%" fig-alt="retrieval_verification_loop.png"}
+
+:::::
+
+::: {.notes}
+
+Walk the chain left to right once, then stop at Verify and make the fork do
+the work: two questions, two failures, and a source that passes one can still
+fail the other. Ask the room which of the two they actually run on a reference
+they already trust.
+
+:::
+
+
 ## Two solid sources, snowballed both ways, become ten {data-menu-title="Ch 9 · Two solid sources, snowballed both ways, become ten"}
 
 ::: {.kicker}

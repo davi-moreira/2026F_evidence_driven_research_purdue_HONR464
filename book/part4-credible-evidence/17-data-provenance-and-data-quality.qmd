@@ -48,6 +48,12 @@ re-reports a value it did not produce. Example: a newspaper table, an encycloped
 entry, or a data aggregator that copies the county's number. A value is only as
 trustworthy as the primary source at the end of its chain.
 
+![Provenance is the origin of a value and every hand it passed through before it reached you. Tracing back to the primary source is your job, not the
+tool's.](../images/concepts/provenance_chain.png){fig-alt="Four boxes in a chain. The primary source, the original record where the value was first
+produced, drawn with a heavy rule. Then two secondary sources, each re-reporting a value it did not produce. Then the value as it appears in your
+file. An arrow curves back from your file to the primary source, labelled trace it back yourself. Below, two boxes name what you must be able to
+answer: provenance, where did this value come from and through whose hands; and data quality, whether it is fit for your own question."}
+
 **Data quality** is whether a value is fit for *your* specific use: real, produced
 by a method you can name, and defined the way your question needs [@wang1996beyond]. Example: a
 turnout rate computed over registered voters is high quality for a question about

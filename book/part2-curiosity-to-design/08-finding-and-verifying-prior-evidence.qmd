@@ -49,6 +49,13 @@ cited for a claim it never makes, such as a study that reports a correlation bei
 cited as proof of a cause. A source can be real and still be mischaracterized, so
 "does it exist" and "does it say this" are two separate checks [@ji2023hallucination]. Run both.
 
+![The four steps, and the point on them where a lead becomes a source: verification, not documentation. Verify runs two separate checks, because a
+source can be real and still be mischaracterized.](../images/concepts/retrieval_verification_loop.png){fig-alt="Four boxes in a row: ask any tool to
+surface leads; retrieve the actual source yourself; verify, running both checks below; and document where you found it. A span above the first three
+reads still a lead, a candidate source you have not confirmed yet; a span above the last reads now a source, promoted by retrieval and verification.
+Below verify, a fork leads to two questions: does it exist, and does it say this. A no to the first is a citation hallucination, an AI inventing a
+source that does not exist. A no to the second is a mischaracterized source, a real paper cited for a claim it never makes."}
+
 Once you hold one verified source, you grow the rest by **snowballing**: walking its
 links in two directions. A **backward citation search** reads the source's own
 reference list to find the older work it built on. A **forward citation search** finds

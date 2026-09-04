@@ -382,16 +382,7 @@ Chapter 14 · The concept
 - **Overcoverage:** records on the list for people outside your target altogether.
 - **Duplicate:** one person listed twice, quietly given two chances of being picked.
 
-![](figs/sampling_groups.png){fig-align="center" width="52%" fig-alt="The four groups a description has to keep straight. The frame crosses the edge of your target population, which is where the three coverage errors liv"}
-
-::: {.figure-caption}
-
-The four groups a description has to keep straight. The frame crosses the edge
-of your target population, which is where the three coverage errors live:
-people inside the target who never reach the list, records on the list that
-fall outside the target altogether, and one unit listed twice.
-
-:::
+![](figs/sampling_groups.png){fig-align="center" width="52%" fig-alt="sampling_groups.png"}
 
 :::::
 
@@ -690,14 +681,7 @@ Chapter 14 · A seeded simulation
 - That spread is honest, quantifiable uncertainty.
 - The convenience dot looks as confident as any other, and nothing warns you.
 
-![](figs/ch11_sampling_channels.png){fig-align="center" width="58%" fig-alt="Ten random sample means cluster around the true mean age; the single convenience-channel mean sits far below it."}
-
-::: {.figure-caption}
-
-Ten random sample means cluster around the true mean age; the single
-convenience-channel mean sits far below it.
-
-:::
+![](figs/ch11_sampling_channels.png){fig-align="center" width="58%" fig-alt="ch11_sampling_channels.png"}
 
 :::::
 
@@ -2408,16 +2392,7 @@ Chapter 17 · A seeded simulation
 - Orange selection error bottoms out near degree six, then climbs as the model memorizes noise.
 - Nothing in the blue line alone would ever tell you to stop.
 
-![](figs/ch14_overfitting.png){fig-align="center" width="72%" fig-alt="Left: training error keeps falling while selection error turns up after degree six, where the model is chosen; a diamond marks its one final-holdout s"}
-
-::: {.figure-caption}
-
-Left: training error keeps falling while selection error turns up after degree
-six, where the model is chosen; a diamond marks its one final-holdout score.
-Right: across 500 worlds, the winner's true error exceeds its crowning score
-on average, with a long right tail.
-
-:::
+![](figs/ch14_overfitting.png){fig-align="center" width="72%" fig-alt="ch14_overfitting.png"}
 
 :::::
 
@@ -3068,14 +3043,7 @@ Chapter 18 · A seeded simulation
 - It centers almost exactly on the truth: mean of estimates 5.0 against a true 5.0.
 - Most runs landed between about 2 and 8 points, and the extremes ran below zero and above 10.
 
-![](figs/ch15_randomization.png){fig-align="center" width="70%" fig-alt="The histogram of 2,000 re-randomized estimates centers on the true 5-point effect."}
-
-::: {.figure-caption}
-
-The histogram of 2,000 re-randomized estimates centers on the true 5-point
-effect.
-
-:::
+![](figs/ch15_randomization.png){fig-align="center" width="70%" fig-alt="ch15_randomization.png"}
 
 :::::
 
@@ -3158,14 +3126,7 @@ Chapter 18 · What attrition does to that promise
 - Retention was 59 percent in the reminder arm against 80 percent in control.
 - Leaving was tied to health, and health also drives the outcome.
 
-![](figs/ch15_attrition.png){fig-align="center" width="70%" fig-alt="The complete-case contrasts pile up near 8 points, far from the true 5-point effect."}
-
-::: {.figure-caption}
-
-The complete-case contrasts pile up near 8 points, far from the true 5-point
-effect.
-
-:::
+![](figs/ch15_attrition.png){fig-align="center" width="70%" fig-alt="ch15_attrition.png"}
 
 :::::
 

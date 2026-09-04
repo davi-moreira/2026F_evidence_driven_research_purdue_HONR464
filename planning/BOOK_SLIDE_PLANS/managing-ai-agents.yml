@@ -3,7 +3,7 @@
 # the auto key-terms card (The AI loop, Agentic tools), the AI failure case,
 # the "Do not delegate" rule, and the "It is your turn" steps.
 lesson: managing-ai-agents
-source_sha256: "3ccd704b374d1ddfa00229041be1f7043e13b1eee14ad68b2f2f2b81194ca0fe"
+source_sha256: "915d004a1dca8a2cbe853856636ca8a4b7fb4e162d6404b7c393aad5c36a45b6"
 
 sections:
 
@@ -116,6 +116,18 @@ sections:
         attacks, then you integrate is three steps that cannot collapse into
         fewer. Count the path in loops, not in messages: a single role may take
         four turns of prompting to finish its one job and still occupy one node.
+
+    - title: "What runs together, and what cannot"
+      figure: critical_path.png
+      width: "100%"
+      bullets:
+        - "Roles with no dependency between them run at the same time."
+        - "Roles joined by one dependency run in order."
+        - "Worker, critic, you: three steps that cannot collapse into fewer."
+      note: >
+        Two panels, deliberately not joined into one workflow. Have the room
+        read the critical path off their own milestone rather than guess it,
+        and notice that the last step in the chain is a person.
 
   "A worked example":
 

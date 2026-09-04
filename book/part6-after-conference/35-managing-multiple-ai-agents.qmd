@@ -81,6 +81,12 @@ your own design, instead of guessing it, is the skill this chapter drills. Count
 loops, not in messages. A single role may take four turns of prompting to finish its
 one job, and it still occupies one node on the path.
 
+![What runs together, what runs in order, and the chain you cannot shorten. Roles with no dependency between them run at the same time; roles joined
+by one run in order.](../images/concepts/critical_path.png){fig-alt="Two panels. On the left, three subtasks with no dependency between them, so they
+run at the same time: check the design, check the citations, tighten the prose. On the right, three steps joined by one dependency each, so they run
+in order: a worker drafts, a critic attacks what the worker produced, and you integrate. The right-hand chain is labelled the critical path, three
+steps that cannot collapse into fewer."}
+
 ## A worked example
 
 You are finishing the write-up of a small health study: whether a ten-minute post-lunch
