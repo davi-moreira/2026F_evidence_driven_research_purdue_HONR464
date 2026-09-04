@@ -164,7 +164,9 @@ BLANK_ABOVE = [
     ("Attendance:", 1),
     ("Participation:", 1),
     ("IYT Practice:", 1),
-    ("Lecture Notebooks:", 1),
+    # D79 (2026-09-04) retired the Lecture Notebooks contract; the paragraph it
+    # numbered is gone with it. Kept here, commented, for a future edition:
+    #   ("Lecture Notebooks:", 1),
     ("EXTRA CREDIT OPPORTUNITIES:", 1),
     ("Course Evaluations:", 1),
     ("Issues in the Course Materials:", 1),
@@ -598,10 +600,13 @@ def main():
     para(doc, "Final letter grades follow the fixed scale below.",
          bold_prefix="Grading: ")
 
+    # D79 (2026-09-04): the Lecture Notebooks row is retired and its weight,
+    # together with the 5 points D74 had already moved, sits in the Final
+    # Project. Kept for a future edition: ("Lecture Notebooks", "20%") with the
+    # Final Project back at "55%".
     weights = [("Assessment", "Weight"), ("Attendance", "1%"),
                ("Participation", "9%"), ("IYT Practice", "15%"),
-               ("Lecture Notebooks", "20%"),
-               ("Final Project", "55%"), ("Total", "100%")]
+               ("Final Project", "75%"), ("Total", "100%")]
     tw = doc.add_table(rows=len(weights), cols=2)
     tw.style = doc.styles["Grid Table 1 Light"]
     clone_table_format(fmt.tables[0], tw)
@@ -642,15 +647,20 @@ def main():
               "on the course schedule page, where each meeting row marks the "
               "sections due that night, and on Brightspace, where you submit them.",
          bold_prefix="IYT Practice:")
-    para(doc, " Each week you work in that week's lecture notebook during "
-              "class, and you hand that same notebook in at the end of the week. "
-              "This work is graded for completion, not for whether your answers "
-              "came out right and not for anything you say in the lab meeting "
-              "that opens class: full credit when it arrives on time, half "
-              "credit when it arrives within seven days of the deadline. The "
-              "lowest few credits are dropped automatically. The due dates and "
-              "the submission instructions are posted on the course page.",
-         bold_prefix="Lecture Notebooks:")
+    # RETIRED FOR THIS EDITION, KEPT FOR A FUTURE ONE (D79, 2026-09-04). The
+    # weekly notebook is still worked in class and is still the lesson; it is
+    # simply not collected and not graded. Restore this paragraph, its numbering
+    # entry above and its weights row to bring the contract back.
+    #
+    # para(doc, " Each week you work in that week's lecture notebook during "
+    #           "class, and you hand that same notebook in at the end of the week. "
+    #           "This work is graded for completion, not for whether your answers "
+    #           "came out right and not for anything you say in the lab meeting "
+    #           "that opens class: full credit when it arrives on time, half "
+    #           "credit when it arrives within seven days of the deadline. The "
+    #           "lowest few credits are dropped automatically. The due dates and "
+    #           "the submission instructions are posted on the course page.",
+    #      bold_prefix="Lecture Notebooks:")
 
     # the Final Project section — QM474's text, the D53 wording, verbatim
     para(doc, " Students will complete a practical evidence-driven research "
@@ -661,26 +671,26 @@ def main():
               "comprehensive set of project guidelines will be provided, and "
               "the assessment structure will adhere to the following criteria, "
               "whose percentages are shares of your final course grade and "
-              "together make up the Final Project's 55%:",
+              "together make up the Final Project's 75%:",
          style="Normal (Web)", bold_prefix="Final Project:")
     for label, body in [
-        ("Milestone Deliverables (20%): ",
+        ("Milestone Deliverables (33%): ",
          "Students will submit incremental project components on specific due "
          "dates. These deliverables allow for early feedback and ensure steady "
          "progress throughout the semester. Grades will reflect each "
          "milestone's clarity, completeness, and timely submission."),
-        ("Peer Evaluation (10%): ",
+        ("Peer Evaluation (12%): ",
          "To encourage accountability and productive research work, students "
          "will evaluate their peers' contributions. These assessments help "
          "ensure balanced participation and measure collaborative "
          "effectiveness."),
-        ("Peer Review (5%): ",
+        ("Peer Review (6%): ",
          "Each student will review and provide constructive feedback on the "
          "other projects' posters. This process encourages engagement, "
          "enhances critical analysis skills, and promotes a culture of "
          "constructive critique."),
         ("Poster Presentation at the Purdue Undergraduate Research Conference "
-         "(10%): ",
+         "(12%): ",
          "A poster template and assessment rubric will be shared, and you are "
          "encouraged to review previous award-winning student posters on my "
          f"personal website {POSTERS_URL} for "
@@ -695,7 +705,7 @@ def main():
          "know. We will not hold our usual class immediately following the "
          "Poster Presentation, allowing you time to rest and catch up on other "
          "coursework. Consult the course schedule for further details."),
-        ("Instructor/TA Evaluation (10%): ",
+        ("Instructor/TA Evaluation (12%): ",
          "After the Undergraduate Research Conference your instructor will "
          "evaluate your final submission based on a rubric that will be "
          "shared."),

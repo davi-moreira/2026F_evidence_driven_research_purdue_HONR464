@@ -4476,3 +4476,132 @@ system are Claude's. Codex's reading that `_theme/head.html` and
 `_theme/fit.html` are "outside the authorized locations" was a constraint from
 the brief it was given, not a repository rule: `_theme/` is the deck theme, and
 the generated `studioNN.qmd` files were never hand-edited.
+
+---
+
+## D79 — The Lecture Notebooks category is retired, and the whole SRL weight moves into the Final Project (2026-09-04)
+
+**Ruling.** The **Lecture Notebooks grade category is retired for this edition**,
+five days after D74 created it. Nothing from a Monday or Wednesday lecture is
+collected or graded any more:
+
+- **No Lecture Notebooks category**, no notebook dropbox, no notebook due on any
+  date. `assessment.lecture_notebooks` is removed.
+- **The weekly notebook is still worked in class and is still the lesson.** It is
+  simply not a submission. Students open it, work it, and keep it.
+- **Nothing said in the lab meeting is graded either**, exactly as D75 ruled. The
+  ten-minute open round is untouched — it stays, nobody is assigned to it, and
+  nothing is prepared for it.
+
+**The weight.** All **25 points** freed by retiring the Student Research Lead now
+sit inside the **Final Project, which rises 55% → 75%**. The four-category table:
+
+| Category | Weight |
+|---|---:|
+| Attendance | 1 |
+| Participation | 9 |
+| IYT Practice | 15 |
+| Final Project | 75 |
+| **Total** | **100** |
+
+**The split inside the project.** The weight goes **mostly to Milestone
+Deliverables, which rises from 20 to 33 course points**, and the other four rise
+proportionally: Peer Evaluation 10 → 12, Peer Review 5 → 6, Poster Presentation
+10 → 12, Instructor/TA Evaluation 10 → 12.
+
+| Component | Project share | Course share |
+|---|---:|---:|
+| Milestone Deliverables | 44% | 33% |
+| Peer Evaluation | 16% | 12% |
+| Peer Review | 8% | 6% |
+| Poster Presentation at the Purdue Undergraduate Research Conference | 16% | 12% |
+| Instructor/TA Evaluation | 16% | 12% |
+| **Total** | **100.00%** | **75%** |
+
+**Why that split and not another.** The 20 points came off **weekly collected
+work**. M1–M16 is the weekly deliverable chain that survives the retirement, so
+that is where the weight belongs. Loading the November one-shots instead — the
+poster, the Expo presentation, the instructor's terminal evaluation — would have
+changed what the course rewards, moving weight from steady work toward a single
+week. Two alternatives were considered and rejected: restoring QM 47400's
+verbatim 30/20/10/20/20 (it pushes Peer Evaluation to 15 course points, heavy for
+peer ratings in a four-student individual-project seminar), and scaling D74's
+shares up proportionally (it splits the difference without a reason of its own).
+
+**Both columns now terminate.** `75 × 0.44 = 33`, `75 × 0.16 = 12`,
+`75 × 0.08 = 6`. No component carries a rounding remainder, which is why
+Milestone Deliverables no longer reads 36.37 rather than 36.36. Student-facing
+surfaces still print **course percentages** (33 / 12 / 6 / 12 / 12), the practice
+D74 adopted, kept here for continuity with what students were already told to
+read.
+
+**This AMENDS the seventh deviation; it does not open an eighth.** D53 adopted
+QM 47400's Final Project section verbatim with a documented list of deviations.
+D74's seventh was "the five numbered items no longer print QM 47400's shares."
+That is still the deviation. Only the numbers move.
+
+**No component was renamed and no scoring rule inside a component changed.**
+Milestone Deliverables is still the equally weighted mean of the M1–M16 milestone
+scores; Poster Presentation is still `0.70 ×` M13 + `0.30 ×` M15; Peer Evaluation
+is still 80 received-rating points plus 20 submission points; Instructor/TA
+Evaluation is still the M13 locked poster (D54). Peer Evaluation and Peer Review
+remain two different items.
+
+**Participation and IYT Practice are untouched in every number.** 9% and 15%;
+`N = 14` and `N = 35`; `d = 2` and `d = 4`; the same credit rule
+(`1.0` / `0.5` / `0`) and the same two formulas. The ±0.9 contribution adjustment
+still belongs to the 9% block alone. **D57's ban survives in the form D74 left
+it**: lecture-notebook completion may never return **as a participation item** —
+and since D79 it is not any kind of graded item.
+
+**Ruling — delete nothing, a fourth time.** As under D58 (the quiz banks), D74
+and D75 (the SRL suite), retirement never means deletion. Kept on disk,
+unapplied:
+
+- `course_config.yaml`'s whole `lecture_notebooks:` block, now carrying
+  `retired_this_edition: true`, `retired_by:` and `retired_weight: 20`;
+- `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, still generated, now behind a
+  retirement banner that names it a record rather than a rule;
+- the generator in `scripts/build_participation_schedules.py`, still callable and
+  still producing the instruction block and the dated table;
+- every string `scripts/build_brightspace_kit.py` used to emit for the category —
+  the label, the gradebook bullet, the dated due-date table and both checklist
+  to-dos — all preserved verbatim behind the new
+  `LECTURE_NOTEBOOK_CATEGORY_ENABLED = False`;
+- the retired sections of `surveys/participation_grading.md`,
+  `planning/ASSESSMENT_ARCHITECTURE.md`, `planning/COURSE_MASTER_PLAN.md`,
+  `_project_docs/ACTIVITY_TEMPLATE.md`,
+  `_project_docs/COURSE_MATERIAL_WORKFLOW.md`,
+  `_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md` and the commented-out
+  paragraph, weights row and numbering entry in `scripts/build_syllabus_docx.py`.
+
+Reinstating the contract in a future edition costs: restore
+`lecture_notebooks: 20` under `assessment:`, put `final_project:` back to 55,
+clear `retired_this_edition`, set `LECTURE_NOTEBOOK_CATEGORY_ENABLED = True`, and
+rerun the two generators.
+
+**What the authoring rules keep.** D74's notebook-design constraints stand as
+**pedagogy**, not as a grading obligation: every writing move still leaves a
+visible, fillable place; each lecture's required path still fits its 50 minutes;
+material below a lecture's `### ⏸` line or behind a 🏠 label is still optional
+depth. What is gone is the sentence that made those things a credit.
+
+**⚠ Action for Davi, outside the repository.** The announcement
+`_announcements/2026-08-31_srl_retired.md` tells students, in a table, that
+**lecture notebooks are 20%** of their grade and are collected weekly. **If it was
+posted, they need to hear that it changed** — and this is the second grade-contract
+change in five days, so the correction should say so plainly rather than quietly
+replacing the table. `_announcements/2026-09-04_lecture_notebooks_retired.md` is
+written for that. The Brightspace gradebook also needs the four categories built
+from the regenerated `brightspace/gradebook_spec.md`: the Final Project block is
+still at QM 47400's original 35%-total shares (10.5 / 3.5 / 7 / 7) and is missing
+**Peer Evaluation** entirely, which is why the platform reports the gradebook
+summing to 53 rather than 100.
+
+**Open, unchanged.** The three questions D74a and D75 carried forward still
+stand: moving deadlines off Sunday, splitting the Instructor/TA Evaluation
+between the M13 poster and the Evidence Defense, and finishing the D54
+propagation. D79 touches none of them. It does sharpen one of D74's open items:
+with both the SRL role and the notebook contract retired, **the only graded live
+performance left is the M15 Expo presentation** — 30% of a 12-point component, so
+3.6 course points.

@@ -151,15 +151,19 @@ dossier components and appear nowhere in student-facing material.
   their shares, and how each works in either project mode:
   `_research_project/2026Fall/final_project_grading_and_project_modes.md`
   (student-facing) and `planning/ASSESSMENT_ARCHITECTURE.md` (design).
-  **D74 raised the stakes of this chain.** Retiring the 25% Student Research
-  Lead category freed five points that are forced inside the Final Project, so
-  **Milestone Deliverables rises from 15 to 20 course points** and the **Final
-  Project rises from 50% to 55%**. Milestone Deliverables is still the equally
+  **D74 raised the stakes of this chain, and D79 raised them again.** Retiring
+  the 25% Student Research Lead category freed 25 points. D74 put 20 in a new
+  Lecture Notebooks contract and forced 5 inside the Final Project; **D79
+  (2026-09-04) retired that contract too**, so all 25 sit inside the project and
+  **Milestone Deliverables rises from 15 to 33 course points** while the **Final
+  Project rises from 50% to 75%**. The weight went mostly here because it came
+  off weekly collected work, and M1–M16 is the weekly deliverable chain that
+  remains. Milestone Deliverables is still the equally
   weighted mean of the M1–M16 milestone scores, no component was renamed, and no
-  scoring rule inside a component changed. Because `20 / 55` does not terminate,
-  student-facing surfaces now print **course** percentages of the final grade
-  rather than project shares: Milestone Deliverables 20% · Peer Evaluation 10% ·
-  Peer Review 5% · Poster Presentation at the Purdue Undergraduate Research
-  Conference 10% · Instructor/TA Evaluation 10%. The exact project shares
-  (36.37 / 18.18 / 9.09 / 18.18 / 18.18) survive only as the machine record in
+  scoring rule inside a component changed.
+  Student-facing surfaces print **course** percentages of the final grade
+  rather than project shares: Milestone Deliverables 33% · Peer Evaluation 12% ·
+  Peer Review 6% · Poster Presentation at the Purdue Undergraduate Research
+  Conference 12% · Instructor/TA Evaluation 12%. The project shares
+  (44 / 16 / 8 / 16 / 16) survive only as the machine record in
   `course_config.yaml final_project_breakdown:`.

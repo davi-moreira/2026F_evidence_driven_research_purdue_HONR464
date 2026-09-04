@@ -174,8 +174,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#attendance-1" id="toc-attendance-1" class="nav-link" data-scroll-target="#attendance-1">Attendance (1%)</a></li>
   <li><a href="#participation-9" id="toc-participation-9" class="nav-link" data-scroll-target="#participation-9">Participation (9%)</a></li>
   <li><a href="#iyt-practice-15" id="toc-iyt-practice-15" class="nav-link" data-scroll-target="#iyt-practice-15">IYT Practice (15%)</a></li>
-  <li><a href="#lecture-notebooks-20" id="toc-lecture-notebooks-20" class="nav-link" data-scroll-target="#lecture-notebooks-20">Lecture Notebooks (20%)</a></li>
-  <li><a href="#final-project-55" id="toc-final-project-55" class="nav-link" data-scroll-target="#final-project-55">Final Project (55%)</a></li>
+  <li><a href="#final-project-75" id="toc-final-project-75" class="nav-link" data-scroll-target="#final-project-75">Final Project (75%)</a></li>
   <li><a href="#grade-challenges" id="toc-grade-challenges" class="nav-link" data-scroll-target="#grade-challenges">Grade Challenges</a></li>
   </ul></li>
   <li><a href="#course-policies-and-additional-details" id="toc-course-policies-and-additional-details" class="nav-link" data-scroll-target="#course-policies-and-additional-details">Course Policies and Additional Details</a>
@@ -279,10 +278,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="assessments" class="level2">
 <h2 class="anchored" data-anchor-id="assessments">Assessments</h2>
-<!-- Weights come from course_config.yaml assessment: (D58, amended by D61 and D74; sums to 100). Keep
-     the two in sync on every edit. D74 retired the graded Student Research Lead role, replaced it with
-     the Lecture Notebooks completion contract at 20%, and moved the freed 5 points into the Final
-     Project (50% to 55%). -->
+<!-- Weights come from course_config.yaml assessment: (D58, amended by D61, D74 and D79; sums to 100).
+     Keep the two in sync on every edit. D74 retired the graded Student Research Lead role and split its
+     25 points 20/5 between a new Lecture Notebooks contract and the Final Project. D79 (2026-09-04)
+     withdrew that split: the Lecture Notebooks category is retired too, no lecture work is collected,
+     and the whole 25 points sit inside the Final Project, which rises from 55% to 75%. -->
 <p>The course assesses the research chain itself: a semester-long research project carried through milestones, presented publicly at the Purdue Undergraduate Research Conference, and closed with a reproducible package, a bounded research note, and a written reflection on the semester’s work.</p>
 <table class="caption-top table">
 <thead>
@@ -305,14 +305,10 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: right;">15%</td>
 </tr>
 <tr class="even">
-<td>Lecture Notebooks (weekly, completion)</td>
-<td style="text-align: right;">20%</td>
+<td>Final Project</td>
+<td style="text-align: right;">75%</td>
 </tr>
 <tr class="odd">
-<td>Final Project</td>
-<td style="text-align: right;">55%</td>
-</tr>
-<tr class="even">
 <td><strong>Total</strong></td>
 <td style="text-align: right;"><strong>100%</strong></td>
 </tr>
@@ -330,11 +326,27 @@ ul.task-list li input[type="checkbox"] {
 <section id="iyt-practice-15" class="level3">
 <h3 class="anchored" data-anchor-id="iyt-practice-15">IYT Practice (15%)</h3>
 <p>Each required EDR|AI chapter closes with an <strong>“It is your turn”</strong> section that you complete in that chapter’s companion Colab notebook. Each section is due at 11:59 PM on the date that chapter’s reading was due. This work is graded for completion, not for the conclusions you reach: full credit when it arrives on time, half credit when it arrives within seven days of the deadline. The lowest few credits are dropped automatically. The dated list lives on the course schedule page, where each meeting row marks the sections due that night, and on Brightspace, where you submit them.</p>
-</section>
-<section id="lecture-notebooks-20" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-notebooks-20">Lecture Notebooks (20%)</h3>
-<p>Each week you work in that week’s lecture notebook during class, and you hand that notebook in once a week. This work is graded on completion alone: the notebook was worked through and submitted on time. It is never graded on whether your answers came out right, and nothing you say in the lab meeting is graded at all. Work that arrives a little late still earns partial credit, and the lowest few weeks are dropped automatically. The due dates and the submission instructions are posted on the course page.</p>
-<!-- RETIRED FOR THIS EDITION, KEPT FOR A FUTURE ONE (D74). The graded Student Research
+<!-- RETIRED FOR THIS EDITION, KEPT FOR A FUTURE ONE (D79, 2026-09-04). D74 had replaced
+     the graded Student Research Lead role with a collected Lecture Notebooks contract at
+     20%. D79 withdrew that contract as well: the weekly notebook is still worked in class
+     and is still the lesson, but it is not collected and not graded, and all 25 of the
+     retired SRL points now sit inside the Final Project (55% to 75%). The section as it
+     stood is preserved verbatim here, and the machinery behind it — the
+     `lecture_notebooks:` block in course_config.yaml, the generator in
+     scripts/build_participation_schedules.py and planning/LECTURE_NOTEBOOK_SCHEDULE.md —
+     stays on disk, unapplied:
+
+     ### Lecture Notebooks (20%)
+
+     Each week you work in that week's lecture notebook during class, and you hand that
+     notebook in once a week. This work is graded on completion alone: the notebook was
+     worked through and submitted on time. It is never graded on whether your answers came
+     out right, and nothing you say in the lab meeting is graded at all. Work that arrives a
+     little late still earns partial credit, and the lowest few weeks are dropped
+     automatically. The due dates and the submission instructions are posted on the course
+     page.
+
+     RETIRED FOR THIS EDITION, KEPT FOR A FUTURE ONE (D74). The graded Student Research
      Lead role was retired and replaced by two things: the ungraded ten-minute lab meeting
      that now opens each Monday and Wednesday lecture, and the Lecture Notebooks completion
      contract above. Nothing was thrown away — the SRL handbook, templates, rubric and
@@ -356,22 +368,23 @@ ul.task-list li input[type="checkbox"] {
      session's research decision.
 -->
 </section>
-<section id="final-project-55" class="level3">
-<h3 class="anchored" data-anchor-id="final-project-55">Final Project (55%)</h3>
+<section id="final-project-75" class="level3">
+<h3 class="anchored" data-anchor-id="final-project-75">Final Project (75%)</h3>
 <p>Students will complete a practical evidence-driven research project culminating in a poster presentation at the Undergraduate Research Conference. Individual work is the default; you may instead complete the project in a group with the instructor’s approval before shared work begins. A comprehensive set of project guidelines will be provided, and the assessment structure will adhere to the following criteria:</p>
-<!-- D74: seventh documented deviation from D53's verbatim QM 47400 adoption. The list below prints
-     COURSE percentages (20 / 10 / 5 / 10 / 10, summing to the Final Project's 55%) instead of the
-     adopted project shares (30 / 20 / 10 / 20 / 20), because Milestone Deliverables rose to 20 course
-     points and 20/55 does not terminate. No component was renamed and no scoring rule inside a
-     component changed. The exact project shares (36.37 / 18.18 / 9.09 / 18.18 / 18.18) are kept as a
-     machine record in course_config.yaml. -->
-<p>The percentages below are shares of <strong>your final course grade</strong>, not shares of the project; together they make up the Final Project’s 55%.</p>
+<!-- D74 opened the seventh documented deviation from D53's verbatim QM 47400 adoption; D79
+     (2026-09-04) AMENDS that same deviation rather than adding an eighth — the deviation is still
+     "the shares are not QM 47400's", only the numbers move. The list below prints COURSE percentages
+     (33 / 12 / 6 / 12 / 12, summing to the Final Project's 75%), kept for continuity with what
+     students were already told to read. No component was renamed and no scoring rule inside a
+     component changed. The project shares (44 / 16 / 8 / 16 / 16) are the machine record in
+     course_config.yaml; unlike D74's they terminate exactly. -->
+<p>The percentages below are shares of <strong>your final course grade</strong>, not shares of the project; together they make up the Final Project’s 75%.</p>
 <ol type="1">
-<li><strong>Milestone Deliverables (20%):</strong> Students will submit incremental project components on specific due dates. These deliverables allow for early feedback and ensure steady progress throughout the semester. Grades will reflect each milestone’s clarity, completeness, and timely submission.</li>
-<li><strong>Peer Evaluation (10%):</strong> To encourage accountability and productive research work, students will evaluate their peers’ contributions. These assessments help ensure balanced participation and measure collaborative effectiveness.</li>
-<li><strong>Peer Review (5%):</strong> Each student will review and provide constructive feedback on the other projects’ posters. This process encourages engagement, enhances critical analysis skills, and promotes a culture of constructive critique.</li>
-<li><strong>Poster Presentation at the Purdue Undergraduate Research Conference (10%):</strong> A poster template and assessment rubric will be shared, and you are encouraged to review previous award-winning student posters for inspiration. Your final posters must be submitted by the due date indicated in the course schedule, after which they will be printed and distributed during a dedicated Poster Presentation Preparation class. Additional details on the conference can be found at <a href="https://www.purdue.edu/undergrad-research/conferences/index.php" target="_blank">https://www.purdue.edu/undergrad-research/conferences/index.php</a>. As the event may not coincide with our regular class time, please communicate with your other course instructors in advance regarding potential scheduling conflicts. If any issues arise, please let me know. We will not hold our usual class immediately following the Poster Presentation, allowing you time to rest and catch up on other coursework. Consult the course schedule for further details.</li>
-<li><strong>Instructor/TA Evaluation (10%):</strong> After the Undergraduate Research Conference your instructor will evaluate your final submission based on a rubric that will be shared.</li>
+<li><strong>Milestone Deliverables (33%):</strong> Students will submit incremental project components on specific due dates. These deliverables allow for early feedback and ensure steady progress throughout the semester. Grades will reflect each milestone’s clarity, completeness, and timely submission.</li>
+<li><strong>Peer Evaluation (12%):</strong> To encourage accountability and productive research work, students will evaluate their peers’ contributions. These assessments help ensure balanced participation and measure collaborative effectiveness.</li>
+<li><strong>Peer Review (6%):</strong> Each student will review and provide constructive feedback on the other projects’ posters. This process encourages engagement, enhances critical analysis skills, and promotes a culture of constructive critique.</li>
+<li><strong>Poster Presentation at the Purdue Undergraduate Research Conference (12%):</strong> A poster template and assessment rubric will be shared, and you are encouraged to review previous award-winning student posters for inspiration. Your final posters must be submitted by the due date indicated in the course schedule, after which they will be printed and distributed during a dedicated Poster Presentation Preparation class. Additional details on the conference can be found at <a href="https://www.purdue.edu/undergrad-research/conferences/index.php" target="_blank">https://www.purdue.edu/undergrad-research/conferences/index.php</a>. As the event may not coincide with our regular class time, please communicate with your other course instructors in advance regarding potential scheduling conflicts. If any issues arise, please let me know. We will not hold our usual class immediately following the Poster Presentation, allowing you time to rest and catch up on other coursework. Consult the course schedule for further details.</li>
+<li><strong>Instructor/TA Evaluation (12%):</strong> After the Undergraduate Research Conference your instructor will evaluate your final submission based on a rubric that will be shared.</li>
 </ol>
 </section>
 <section id="grade-challenges" class="level3">

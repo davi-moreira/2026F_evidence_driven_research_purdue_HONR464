@@ -7,7 +7,7 @@
 > this document governs how each component is scored, and the syllabus governs
 > the weights.
 
-The course grade contains **one top-level Final Project worth 55%**. Individual
+The course grade contains **one top-level Final Project worth 75%**. Individual
 work is the default. You may complete one shared project with a group only with
 the instructor's approval. With four students, at most one group of two
 may be approved. Approval is available only when the class will still
@@ -19,40 +19,45 @@ components, names, and shares apply in either mode.
 
 | Final Project component | Share of your course grade |
 |---|---:|
-| **Milestone Deliverables** | 20% |
-| **Peer Evaluation** | 10% |
-| **Peer Review** | 5% |
-| **Poster Presentation at the Purdue Undergraduate Research Conference** | 10% |
-| **Instructor/TA Evaluation** | 10% |
-| **Total** | **55%** |
+| **Milestone Deliverables** | 33% |
+| **Peer Evaluation** | 12% |
+| **Peer Review** | 6% |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 12% |
+| **Instructor/TA Evaluation** | 12% |
+| **Total** | **75%** |
 
 Those five figures are shares of **the whole course grade**, and they are the
 ones to work from. Inside the Final Project alone the components stand in the
-ratio 20 : 10 : 5 : 10 : 10, which as shares of the project comes to
-36.37% / 18.18% / 9.09% / 18.18% / 18.18%. Those do not divide evenly, so they
-are kept in `course_config.yaml` as the machine record and every page you read
-prints the course percentages instead.
+ratio 33 : 12 : 6 : 12 : 12, which as shares of the project comes to
+44% / 16% / 8% / 16% / 16%. Those are kept in `course_config.yaml` as the machine
+record; every page you read prints the course percentages instead, which is the
+number you can check against the syllabus's Assessments table.
 
 If the five component scores are (M), (E), (R), (P), and (I), each on
 a 0–100 scale, your Final Project score is
 
 \[
-\frac{20M + 10E + 5R + 10P + 10I}{55}.
+\frac{33M + 12E + 6R + 12P + 12I}{75}.
 \]
 
 Applied to the course grade, the five components contribute
-**20 + 10 + 5 + 10 + 10 = 55 course points**. There is no separate top-level
+**33 + 12 + 6 + 12 + 12 = 75 course points**. There is no separate top-level
 milestone category and no sixth Final Project component.
 
-> **Where the extra five points came from.** The syllabus's Final Project
+> **Where the extra twenty-five points came from.** The syllabus's Final Project
 > section is adopted from QM 47400's, with a short list of documented
 > deviations, and this is the **seventh**. The Student Research Lead category
-> was retired; its replacement, Lecture Notebooks, took 20 of the 25 points it
-> held, and the 5 points left over went to **Milestone Deliverables**, which
-> rose from 15 to 20 course points and carried the Final Project from 50% to
-> 55%. Because the project-share column no longer reads 30 / 20 / 10 / 20 / 20,
-> the table above is written in course percentages. Nothing else moved: no
-> component was renamed, and no scoring rule inside a component changed.
+> was retired. Its first replacement, Lecture Notebooks, took 20 of the 25 points
+> it held, and the 5 left over went to **Milestone Deliverables**, carrying the
+> Final Project from 50% to 55%. Five days later that replacement was retired
+> too: nothing from a Monday or Wednesday lecture is collected or graded, so
+> **all 25 points now sit here** and the Final Project is **75%**. Most of them
+> went to **Milestone Deliverables**, which rose from 15 to 33 course points,
+> because that weight came off weekly collected work and the M1–M16 chain is the
+> weekly deliverable that remains. Because the project-share column no longer
+> reads 30 / 20 / 10 / 20 / 20, the table above is written in course percentages.
+> Nothing else moved: no component was renamed, and no scoring rule inside a
+> component changed.
 > Milestone Deliverables is still the equally weighted mean of your M1–M16
 > scores, the Poster Presentation is still 70% locked poster plus 30% live
 > presentation, and Peer Evaluation is still 80 received-rating points plus 20

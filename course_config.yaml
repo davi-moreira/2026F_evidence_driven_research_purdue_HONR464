@@ -134,9 +134,11 @@ ai_policy:
 # about it is graded. It is a standing check-in, not a performance, and it may
 # never acquire an assignment mechanic without a new ruling.
 #
-# What IS graded is the lecture notebook, collected weekly from EVERY student
-# on completion; see lecture_notebooks: below. That contract names no
-# lab-meeting cell.
+# D79 (2026-09-04) then RETIRED the Lecture Notebooks contract itself. Nothing
+# in a Mon/Wed lecture is collected or graded any more: not the lab meeting, not
+# the notebook. The notebook is still the lesson and students still work in it;
+# the graded work of the course is the Final Project (75%) plus the IYT Practice
+# and participation contracts. See lecture_notebooks: below, kept and unapplied.
 #
 # D74/D75 RETIRE the SRL grade category, the live 9-row rubric, the slot draw
 # and the 📣 My Report Plan cell, and DELETE nothing: project/srl/ (handbook,
@@ -155,7 +157,7 @@ lab_meeting:
   minutes: 10                      # one open round, not a timed report
   prepared_in_advance: false       # D75: nothing is prepared, by anyone
   graded: false                    # nothing said in the lab meeting carries a score
-  prep_cadence: "none — come able to say where your project actually is; the notebook is submitted weekly under lecture_notebooks:"
+  prep_cadence: "none — come able to say where your project actually is; D79 retired the weekly notebook submission, so nothing is handed in for a lecture"
   first_meeting: 4                 # Mon Aug 31 (first lab meeting)
   model: "the instructor asks the room how the projects are going, and the room answers"
   retired_instruments:             # KEPT on disk, not applied this edition
@@ -360,15 +362,19 @@ assessment:
                                    # the profile survey + the course reflection).
   iyt_practice: 15                 # EDR|AI "It is your turn" sections; see iyt_practice: below
                                    # (D58 created it at 10; D61 raised it to 15)
-  lecture_notebooks: 20            # D74: the SRL performance category (25) is RETIRED and
-                                   # replaced by collected lecture notebooks graded on
-                                   # COMPLETION at 20; the freed 5 points go to Milestone
-                                   # Deliverables inside the Final Project, which rises
-                                   # 50 -> 55. Was srl_performance: 25 (D58 raised it from
-                                   # 20 to 30; D61 lowered it to 25).
-  final_project: 55                # D52/D53 set 50; D74 adds the 5 freed points to
-                                   # Milestone Deliverables (15 -> 20 course points).
-# Total: 1 + 9 + 15 + 20 + 55 = 100.
+  final_project: 75                # D52/D53 set 50; D74 raised it to 55; D79 (2026-09-04)
+                                   # sends the WHOLE retired SRL weight here, so it rises
+                                   # 55 -> 75. See final_project_breakdown: below.
+# D79 (2026-09-04) RETIRES the lecture_notebooks: 20 category for this edition.
+# D74 had split the retired Student Research Lead's 25 points 20/5 between a new
+# Lecture Notebooks completion contract and Milestone Deliverables. D79 withdraws
+# that split: the weekly notebook is still worked in class and is still the spine
+# of the lesson, but it is NOT collected and NOT graded, and all 25 points sit
+# inside the Final Project. The `lecture_notebooks:` block below is KEPT ON DISK,
+# retired IN PLACE, exactly as D58 kept the quiz banks and D74/D75 kept the SRL
+# material: reinstating the contract costs one line here plus a rerun of
+# scripts/build_participation_schedules.py. NEVER delete it.
+# Total: 1 + 9 + 15 + 75 = 100.
 # THE QUIZ CATEGORY IS RETIRED for this edition (D58), which is why `quizzes: 20`
 # no longer appears above: no quiz is administered and nothing is scored on one.
 # The banks in _quizzes/ (gitignored), every quiz builder, and
@@ -422,7 +428,7 @@ participation:
       graded: "completion"
       instrument: "surveys/course_reflection.md"        # content pending
   retired:
-    - "lecture-notebook completion AS A PARTICIPATION ITEM (D74 collects the notebooks weekly under their own lecture_notebooks: category, on completion; they are NOT participation and never carry the +/-0.9 contribution adjustment)"
+    - "lecture-notebook completion AS A PARTICIPATION ITEM (D57's original ban, kept in force by D74 and D79; the notebooks were briefly collected under their own lecture_notebooks: category and are now not collected at all, but either way they are NEVER a participation item and never carry the +/-0.9 contribution adjustment)"
     - "per-chapter reading feedback (replaced by 12 per-studio responses)"
     - "the proposed 5/2/2 internal split of the 9%"
     - "the 'It is your turn' submissions (moved OUT to the iyt_practice category, D58; 15% since D61; participation no longer carries them)"
@@ -461,7 +467,22 @@ iyt_practice:
 # Same mechanics as participation: and iyt_practice: — one credit per item,
 # automatic drops, no content grade. This is NOT participation and never carries
 # participation's +/-0.9 contribution adjustment.
+# ===========================================================================
+# RETIRED FOR THIS EDITION, KEPT FOR A FUTURE ONE (D79, 2026-09-04).
+# Nothing below is applied: there is no Lecture Notebooks grade category, no
+# weekly notebook dropbox and no notebook credit. The weekly notebook is still
+# worked in class — it is the lesson — but it is not collected and not graded.
+# The whole block is preserved verbatim so a future edition can turn it back on
+# by restoring `lecture_notebooks: 20` under assessment: (and lowering
+# final_project: to 55), then rerunning
+# scripts/build_participation_schedules.py. DELETE NOTHING HERE.
+# ===========================================================================
 lecture_notebooks:
+  retired_this_edition: true       # D79 — kept on disk, unapplied
+  retired_by: "D79 (2026-09-04)"
+  retired_weight: 20               # the weight it carried under D74, kept so the
+                                   # generators can still print the contract as it
+                                   # stood without reading a retired assessment: key
   undivided: true                  # never split the 20% into sub-weights
   credit_rule: "1.0 on time; 0.5 within seven days; 0 otherwise"
   drop_rule: "ceil(0.10 * N) lowest credits dropped automatically"   # N = 16 -> d = 2
@@ -490,18 +511,24 @@ lecture_notebooks:
 # D52 supersedes D51. It adopts QM474's exact five Final Project component names
 # and operative 30/20/10/20/20 shares without replacing any component; the names
 # are never renamed. Project shares sum to 100; course shares sum to
-# assessment.final_project, which D74 raised from 50 to 55.
-# D74 (2026-08-31) is the SEVENTH documented deviation from D53's verbatim QM474
-# adoption: Milestone Deliverables takes the 5 course points freed by retiring the
-# SRL category, so the project_share column no longer reads 30/20/10/20/20. Because
-# the resulting shares are non-terminating (20/55 = 36.36...), the student-facing
-# syllabus now prints COURSE percentages (20/10/5/10/10 of the final grade) instead
-# of project shares. project_share values below are two-decimal OPERATIONAL
-# shares (20/55 does not terminate) and are the machine record only; the
-# student-facing surfaces print course percentages instead.
+# assessment.final_project, which D74 raised from 50 to 55 and D79 to 75.
+# D74 (2026-08-31) was the SEVENTH documented deviation from D53's verbatim QM474
+# adoption: the project_share column stopped reading 30/20/10/20/20. D79
+# (2026-09-04) AMENDS that same seventh deviation rather than adding an eighth —
+# the deviation is still "the shares are not QM474's", only the numbers move.
+# D79 sends the whole retired SRL weight into the Final Project (55 -> 75) and
+# puts the bulk of it on Milestone Deliverables, because the 20 points came off
+# WEEKLY COLLECTED WORK and M1-M16 is the weekly deliverable chain that remains;
+# loading the November one-shots instead would have changed what the course
+# rewards. The shares are 44 / 16 / 8 / 16 / 16, and unlike D74's they terminate
+# exactly: 75 x 0.44 = 33, 75 x 0.16 = 12, 75 x 0.08 = 6. Both columns are exact,
+# so no component carries a rounding remainder any more.
 # D53 (2026-08-23) moved the operational detail OUT of syllabus.qmd, which
 # printed these five names with their project_share values, as QM474 does. D74
-# switched that printing to COURSE percentages, because 20/55 does not terminate.
+# switched that printing to COURSE percentages; D79 KEEPS course percentages
+# (33 / 12 / 6 / 12 / 12) on the student-facing surfaces, for continuity with what
+# students were already told to read, even though the project shares now divide
+# evenly.
 # The student-facing authority for the course_share split, the scoring_rule
 # formulas, and the project-mode rules is
 # _research_project/2026Fall/final_project_grading_and_project_modes.md, with the
@@ -510,32 +537,32 @@ lecture_notebooks:
 final_project_breakdown:
   milestone_deliverables:
     label: "Milestone Deliverables"
-    project_share: 36.37       # D74; was 30. Carries the rounding remainder so the column sums to exactly 100.00
-    course_share: 20
+    project_share: 44.00       # D79; was 36.37 under D74 and 30 under D52. Exact — no rounding remainder
+    course_share: 33
     includes: "M1-M16 incremental project submissions, each scored on its 100-point milestone rubric"
     scoring_rule: "equally weighted mean of the M1-M16 milestone scores"
   peer_evaluation:
     label: "Peer Evaluation"
-    project_share: 18.18       # D74; was 20
-    course_share: 10
+    project_share: 16.00       # D79; was 18.18 under D74 and 20 under D52
+    course_share: 12
     includes: "confidential ratings from every teammate for group projects or two assigned project peers for individual projects; no self-rating"
     scoring_rule: "80% received-rating score plus 20% required-evaluation submission; see project/final_dossier/peer_evaluation_instrument.md"
   peer_review:
     label: "Peer Review"
-    project_share: 9.09       # D74; was 10
-    course_share: 5
+    project_share: 8.00       # D79; was 9.09 under D74 and 10 under D52
+    course_share: 6
     includes: "structured reviews of classmates' posters and documented use of criticism"
     scoring_rule: "M12 Final Project Peer Review rubric (100 points)"
   poster_presentation_at_the_conference:
     label: "Poster Presentation at the Purdue Undergraduate Research Conference"
-    project_share: 18.18       # D74; was 20
-    course_share: 10
+    project_share: 16.00       # D79; was 18.18 under D74 and 20 under D52
+    course_share: 12
     includes: "the locked poster and each student's required public presentation at the Expo"
     scoring_rule: "70% M13 poster-quality rubric + 30% M15 live Expo presentation rubric"
   instructor_ta_evaluation:
     label: "Instructor/TA Evaluation"
-    project_share: 18.18       # D74; was 20
-    course_share: 10
+    project_share: 16.00       # D79; was 18.18 under D74 and 20 under D52
+    course_share: 12
     includes: "the instructor's evaluation of the final poster submission locked at M13"
     scoring_rule: "100% instructor evaluation of the M13 final poster submission (D54)"
 

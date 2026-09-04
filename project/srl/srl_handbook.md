@@ -57,15 +57,22 @@ submit in advance, no slot with your name on it, and no penalty attached to how 
 ten minutes go. It is unpressured rehearsal for the poster presentation and the Expo
 in November, which are graded.
 
-### What is graded instead: Lecture Notebooks (20%)
+### What is graded instead
+
+> **⚠️ Updated 2026-09-04 (D79).** D74 replaced this role's 25% with a **Lecture
+> Notebooks (20%)** completion contract; **D79 retired that contract too**. Nothing
+> from a Monday or Wednesday lecture is collected or graded now — not the notebook,
+> not the lab-meeting round. The weekly notebook is still worked in class and is
+> still the lesson; it is simply not handed in. All 25 points sit inside the Final
+> Project. The paragraphs after the table describe the withdrawn notebook contract
+> and are kept as a record, not as a rule.
 
 | Category | Weight |
 |---|---:|
 | Attendance | 1% |
 | Participation | 9% |
 | IYT Practice | 15% |
-| **Lecture Notebooks** | **20%** |
-| Final Project | 55% |
+| Final Project | 75% |
 | **Total** | **100%** |
 
 **Lecture Notebooks (20%)** is a completion contract, the same shape as

@@ -16,12 +16,13 @@ and no CV-first / test-set machinery. The unit of production is the **week**, an
 its downstream artifacts are the **session guide** (how the instructor runs the
 room) and the **milestone brief** (what the students build).
 
-**Since D74 the week's notebook is itself collected** (D75 changed none of its
-numbers). Every student submits the `nbNN` they worked in class, once a week,
-graded on completion under the 20% **Lecture Notebooks** category. Nothing changes in how a notebook is produced, but
-it is no longer only a teaching surface: what the reader writes in it is what gets
-handed in, so authoring must leave visible room to write and must fit the 50
-minutes. See "The weekly notebook is collected" below.
+**D74 collected the week's notebook; D79 (2026-09-04) stopped collecting it.**
+The notebook is once again only a teaching surface: nothing from a Monday or
+Wednesday lecture is handed in or graded. **The authoring rules D74 introduced
+still stand**, because they were right on their own terms — every writing move
+leaves a visible, fillable place, and the required path fits the 50 minutes — but
+they are now pedagogy rather than a grading obligation. See "The weekly notebook
+is collected" below, kept as the record of the withdrawn contract.
 
 **The printed weekly quiz is retired for this edition (D58), not deleted.** No
 quiz is produced, printed, administered, or scored this term, so quiz production
@@ -205,7 +206,13 @@ private instructor repo + GitHub auth is the protection. Always publish through
 
 ---
 
-## The weekly notebook is collected (D74, content list amended D75)
+## The weekly notebook is collected (D74, content list amended D75) — **RETIRED D79**
+
+> **⚠️ Nothing in this section is in force.** D79 (2026-09-04) retired the Lecture
+> Notebooks category. The notebook is not collected and not graded, and there is
+> no dropbox for it. What survives is the **authoring discipline**: leave a
+> visible, fillable place for every writing move, and keep the required path
+> inside the 50 minutes. The section is kept in full for a future edition.
 
 The lecture notebook is a graded artifact, so the production pipeline now has a
 consumer it did not have before: the student's own submission.
@@ -231,7 +238,8 @@ consumer it did not have before: the student's own submission.
   category.
 
 The lecture notebook is **not** a participation item and never carries
-participation's ±0.9 contribution adjustment.
+participation's ±0.9 contribution adjustment. Since D79 it is not any kind of
+graded item; the participation ban stands regardless.
 
 ---
 
@@ -314,4 +322,7 @@ collected 20% completion contract. Updated again the same day for D75: the lab
 meeting keeps its ten minutes and loses its reporter — no assignment, no draw, no
 preparation, and no injected 📣 My Report Plan cell — with the frames, the
 weights and the Lecture Notebooks contract untouched, and every retired
-instrument kept on disk.*
+instrument kept on disk. Updated 2026-09-04 for D79: the **Lecture Notebooks
+contract is retired too** — nothing from a lecture is collected or graded, the
+weight table becomes 1 · 9 · 15 · 75, and the notebook's authoring discipline is
+kept as pedagogy while its grading section is kept as a record.*

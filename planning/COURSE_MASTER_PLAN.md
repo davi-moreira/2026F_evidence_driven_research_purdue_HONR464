@@ -111,9 +111,10 @@ lab meeting is graded. **The instructor leads from minute 10** and owns
 accuracy, the AI tooling, and the clock. Each lecture's **📣 Lab Meeting**
 section is a student-visible cell that opens that lecture in its notebook and
 states plainly that nobody is assigned and nothing is prepared. The notebook
-itself is submitted weekly, under the Lecture Notebooks contract in §7 — the
-lead's day-before notebook submission (D66) went with the role, and
-`lab_meeting.prep_cadence`, now `none`, is the rule.
+itself is **no longer submitted at all** (D79 retired the Lecture Notebooks
+contract in §7) — the lead's day-before notebook submission (D66) went with the
+role, and `lab_meeting.prep_cadence`, now `none`, is the rule. Nothing from a
+Monday or Wednesday lecture is collected or graded.
 Each meeting type has a **fixed 50-minute architecture** (`lab_meeting:` in
 `course_config.yaml`; Mon/Wed 4 sections, Friday 3):
 
@@ -270,44 +271,51 @@ alignment, and responsible interpretation — never coding elegance.
 | Attendance (iClicker) | 1 |
 | Participation (studio feedback surveys + profile survey + course reflection + other constructive contributions; one undivided block, D57, amended D58) | 9 |
 | IYT Practice (the book's "It is your turn" sections, due on each chapter's reading date; completion, D58, amended D61) | 15 |
-| Lecture Notebooks (the weekly `nbNN` worked in class, submitted; completion, D74) | 20 |
-| Final Project | 55 |
+| Final Project | 75 |
 | **Total** | **100** |
 
-**Lecture Notebooks (20%) is the course's third undivided completion
-contract**, with the same mechanics as participation and IYT Practice: one
-submission per week per student — the notebook `nbNN` worked in class — due
-**11:59 PM on the Sunday that ends the studio week** (Week 16 closes Fri Dec 11,
-the last class day); graded on **completion only**, never on whether the answers
-came out right and never on anything said in the lab meeting; credit `1.0`
-on time, `0.5` within seven days, `0` otherwise; `N = 16` and
-`d = ⌈0.10 × 16⌉ = 2`, so `points = 20.0 × (sum of the highest 14 credits) / 14`.
-It is **not** participation, and it never carries participation's ±0.9
-contribution adjustment — D57's ban stands in its amended form: lecture-notebook
-completion may never return **as a participation item**. What the submission
-covers is the seven in-class moves and the 📒 AI Research Ledger row for each
-lecture; **D75 removed the 📣 My Report Plan cell it used to name as well**, so
-the contract names no lab-meeting cell at all. Every number above is D74's,
-unchanged. Machine spine:
-`course_config.yaml lecture_notebooks:`; dated list: the generated
-`planning/LECTURE_NOTEBOOK_SCHEDULE.md`.
+**Lecture Notebooks (20%) was the course's third undivided completion contract
+from D74 until D79 (2026-09-04) retired it.** Nothing in the paragraph that
+follows is in force: there is no Lecture Notebooks category, no notebook dropbox
+and no notebook due on any date. The weekly notebook is still worked in class and
+is still the lesson; it is simply not collected and not graded, and its 20 points
+went into the Final Project with the 5 D74 had already moved. The contract is
+recorded here, and kept in full on disk, for a future edition:
+
+> Lecture Notebooks (20%) is the course's third undivided completion contract, with the same mechanics as participation and IYT Practice: one
+> submission per week per student — the notebook `nbNN` worked in class — due
+> **11:59 PM on the Sunday that ends the studio week** (Week 16 closes Fri Dec 11,
+> the last class day); graded on **completion only**, never on whether the answers
+> came out right and never on anything said in the lab meeting; credit `1.0`
+> on time, `0.5` within seven days, `0` otherwise; `N = 16` and
+> `d = ⌈0.10 × 16⌉ = 2`, so `points = 20.0 × (sum of the highest 14 credits) / 14`.
+> It is **not** participation, and it never carries participation's ±0.9
+> contribution adjustment — D57's ban stands in its amended form: lecture-notebook
+> completion may never return **as a participation item**. What the submission
+> covers is the seven in-class moves and the 📒 AI Research Ledger row for each
+> lecture; **D75 removed the 📣 My Report Plan cell it used to name as well**, so
+> the contract names no lab-meeting cell at all. Every number above is D74's,
+> unchanged. Machine spine:
+> `course_config.yaml lecture_notebooks:`; dated list: the generated
+> `planning/LECTURE_NOTEBOOK_SCHEDULE.md`.
 
 **The 25% Student Research Lead category is retired for this edition**, and its
-nine-row live rubric is not applied (the rubric file stays on disk — §3). The
-20 points above replace it, and the remaining 5 are forced inside the Final
-Project, which rises from 50% to 55%.
+nine-row live rubric is not applied (the rubric file stays on disk — §3). D74 put
+20 of its points into Lecture Notebooks and forced the remaining 5 inside the
+Final Project, which rose from 50% to 55%. **D79 then retired Lecture Notebooks
+as well, so all 25 points sit inside the Final Project, which is 75%.**
 
 Final Project is the course's single project-grading category. It uses QM474's
-five operative component items without renaming or replacing them, but **D74 is
-the seventh documented deviation** from D53's verbatim adoption: Milestone
-Deliverables takes the five freed points, so the project-share column no longer
-reads 30/20/10/20/20. Because `20 / 55` does not terminate, student-facing
-surfaces now print **course** percentages of the final grade: **Milestone
-Deliverables 20%**, **Peer Evaluation 10%**, **Peer Review 5%**, **Poster
-Presentation at the Purdue Undergraduate Research Conference 10%**, and
-**Instructor/TA Evaluation 10%** — 55% in total. `course_config.yaml
-final_project_breakdown:` keeps the exact project shares
-(36.37 / 18.18 / 9.09 / 18.18 / 18.18, summing to 100.00) as the machine record
+five operative component items without renaming or replacing them, but **D74
+opened the seventh documented deviation** from D53's verbatim adoption and **D79
+amended it**: Milestone Deliverables takes the freed points, so the project-share
+column no longer reads 30/20/10/20/20. Student-facing
+surfaces print **course** percentages of the final grade: **Milestone
+Deliverables 33%**, **Peer Evaluation 12%**, **Peer Review 6%**, **Poster
+Presentation at the Purdue Undergraduate Research Conference 12%**, and
+**Instructor/TA Evaluation 12%** — 75% in total. `course_config.yaml
+final_project_breakdown:` keeps the project shares
+(44 / 16 / 8 / 16 / 16, summing to 100.00) as the machine record
 only. No component was renamed and no scoring rule inside a component changed.
 
 Individual work is the default; a group project requires instructor approval
@@ -363,6 +371,24 @@ claims trace to a real, retrievable source; results are verified before reported
 decisions are documented, not just outcomes (`scripts/audit_sources.py`,
 `scripts/voice_lint_notebooks.py` enforce this).
 
+- **v7 (2026-09-04, D79)** — The **Lecture Notebooks category is retired**, five
+  days after D74 created it, and the **whole** 25% freed by retiring the Student
+  Research Lead moves into the **Final Project, which rises 55% → 75%**. Nothing
+  from a Monday or Wednesday lecture is collected or graded any more: not the
+  notebook, not the ungraded lab-meeting round. The notebook is still worked in
+  class and is still the lesson — it is simply not a submission. Inside the
+  project the weight goes mostly to **Milestone Deliverables (20 → 33 course
+  points)**, because the 20 points came off weekly collected work and M1–M16 is
+  the weekly deliverable chain that remains; the other four rise 10 → 12, 5 → 6,
+  10 → 12 and 10 → 12, so the project shares become **44 / 16 / 8 / 16 / 16** and
+  the course percentages **33 / 12 / 6 / 12 / 12**. Unlike D74's, both columns
+  terminate exactly. Weights: attendance 1 · participation 9 · IYT Practice 15 ·
+  Final Project 75 (= 100). **No component was renamed and no scoring rule inside
+  a component changed**, and Participation and IYT Practice are untouched in every
+  number. Nothing was deleted: the `lecture_notebooks:` contract block,
+  `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, the schedule generator and every
+  Brightspace-kit string are kept on disk, retired in place behind
+  `LECTURE_NOTEBOOK_CATEGORY_ENABLED = False`.
 - **v6 (2026-08-31, D75)** — The lab meeting **loses its reporter**. The
   ten-minute opener stays exactly where D74 put it, but nothing inside it is
   assigned: **no reporter on any lecture, no slot draw** (the D69/D71 assignment

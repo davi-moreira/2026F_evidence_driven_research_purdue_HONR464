@@ -123,6 +123,22 @@ def n_quizzes() -> int:
 # permission to delete an SRL file, an SRL script or an SRL section.
 SRL_CATEGORY_ENABLED = False
 
+# D79 (2026-09-04) retired the LECTURE NOTEBOOKS GRADE CATEGORY that D74 had put
+# in the Student Research Lead's place. The weekly notebook is still worked in
+# class and is still the lesson; it is simply not collected and not graded. The
+# whole 25 points D74 had split 20/5 now sit inside the Final Project, which
+# rises from 55% to 75%.
+#
+# Same discipline as SRL_CATEGORY_ENABLED above and D58's quiz banks before it:
+# NOTHING IS DELETED. The `lecture_notebooks:` block stays in course_config.yaml,
+# planning/LECTURE_NOTEBOOK_SCHEDULE.md stays on disk, the generator in
+# scripts/build_participation_schedules.py stays callable, and every string this
+# file used to emit for the category is preserved verbatim below — simply not
+# emitted. Set the flag True, restore `lecture_notebooks: 20` under assessment:
+# and put final_project: back to 55, and the category, its 16 dropboxes, its
+# dated table and its checklist entries all come back exactly as they were.
+LECTURE_NOTEBOOK_CATEGORY_ENABLED = False
+
 # Registered under BOTH spellings of the key on purpose, so that a rename in
 # course_config.yaml can never print a raw config key as a category name.
 SRL_GRADEBOOK_LABELS = {
@@ -482,6 +498,10 @@ def gradebook_spec(config: dict) -> str:
             "EDR\\|AI 'It is your turn' submissions, completion-graded; "
             "lowest ceil(0.10 * N) credits dropped",
         ),
+        # RETIRED BY D79, KEPT VERBATIM: `lecture_notebooks` is no longer a
+        # key of assessment:, so this entry is simply never looked up. It is
+        # here so that flipping LECTURE_NOTEBOOK_CATEGORY_ENABLED back on
+        # restores the category label unchanged.
         "lecture_notebooks": (
             "Lecture Notebooks",
             # D74's third undivided completion contract, in the slot the
@@ -493,7 +513,7 @@ def gradebook_spec(config: dict) -> str:
         "final_project": (
             "Final Project",
             "One category with the same five QM474 component items, re-shared "
-            "by D74 so Milestone Deliverables carries 20 course points; "
+            "by D79 so Milestone Deliverables carries 33 course points; "
             "Milestone Deliverables contains M1-M16",
         ),
     }
@@ -501,21 +521,24 @@ def gradebook_spec(config: dict) -> str:
     # flag brings it back (D74 Ruling 5: retire in place, delete nothing).
     if SRL_CATEGORY_ENABLED:
         labels.update(SRL_GRADEBOOK_LABELS)
-    # D74 re-shared the five components: the 5 course points freed by retiring
-    # Student Research Lead went to Milestone Deliverables, so the project-share
-    # column no longer reads QM474's 30/20/10/20/20. The project shares are
-    # exact to two decimals and sum to 100.00; the course shares sum to 55.
+    # D79 re-shared the five components again. D74 had moved 5 course points to
+    # Milestone Deliverables; D79 moves the other 20 as well, and puts the bulk
+    # of them on Milestone Deliverables because the weight came off WEEKLY
+    # COLLECTED WORK and M1-M16 is the weekly deliverable chain that remains.
+    # Unlike D74's, these shares terminate exactly: 75 x 0.44 = 33,
+    # 75 x 0.16 = 12, 75 x 0.08 = 6. Project shares sum to 100.00; course shares
+    # sum to 75. (D74's were 36.37/18.18/9.09/18.18/18.18 -> 20/10/5/10/10.)
     expected_fp = [
-        ("milestone_deliverables", "Milestone Deliverables", 36.37, 20),
-        ("peer_evaluation", "Peer Evaluation", 18.18, 10),
-        ("peer_review", "Peer Review", 9.09, 5),
+        ("milestone_deliverables", "Milestone Deliverables", 44.00, 33),
+        ("peer_evaluation", "Peer Evaluation", 16.00, 12),
+        ("peer_review", "Peer Review", 8.00, 6),
         (
             "poster_presentation_at_the_conference",
             "Poster Presentation at the Purdue Undergraduate Research Conference",
-            18.18,
-            10,
+            16.00,
+            12,
         ),
-        ("instructor_ta_evaluation", "Instructor/TA Evaluation", 18.18, 10),
+        ("instructor_ta_evaluation", "Instructor/TA Evaluation", 16.00, 12),
     ]
     # D76: the group cap is DERIVED from the roster, not frozen at 3. A group of
     # size g leaves 1 group + (n - g) solo projects, so the peer-review floor
@@ -548,11 +571,12 @@ def gradebook_spec(config: dict) -> str:
             "D52 permits one top-level Final Project category; remove "
             "assessment.final_project_milestones"
         )
-    if a.get("final_project") != 55:
+    if a.get("final_project") != 75:
         raise ValueError(
-            "D74 requires assessment.final_project to equal 55 (D52 set it at "
-            "50; the 5 points freed by retiring the Student Research Lead "
-            "category are forced inside the project, on Milestone Deliverables)"
+            "D79 requires assessment.final_project to equal 75 (D52 set it at "
+            "50 and D74 at 55; D79 forces ALL 25 points freed by retiring the "
+            "Student Research Lead category inside the project, most of them "
+            "on Milestone Deliverables)"
         )
     if "quizzes" in a:
         raise ValueError(
@@ -579,16 +603,26 @@ def gradebook_spec(config: dict) -> str:
             "never the material). To bring the category back in a future "
             "edition, set SRL_CATEGORY_ENABLED = True"
         )
-    if a.get("lecture_notebooks") != 20:
+    if LECTURE_NOTEBOOK_CATEGORY_ENABLED:
+        if a.get("lecture_notebooks") != 20:
+            raise ValueError(
+                "D74 requires assessment.lecture_notebooks to equal 20 — the "
+                "completion contract that took the Student Research Lead's slot"
+            )
+        if ln_n != len(config["weeks"]):
+            raise ValueError(
+                "D74 collects one lecture notebook per week: "
+                f"lecture_notebooks.baseline_credits is {ln_n} but the course "
+                f"has {len(config['weeks'])} weeks"
+            )
+    elif a.get("lecture_notebooks") is not None:
         raise ValueError(
-            "D74 requires assessment.lecture_notebooks to equal 20 — the "
-            "completion contract that took the Student Research Lead's slot"
-        )
-    if ln_n != len(config["weeks"]):
-        raise ValueError(
-            "D74 collects one lecture notebook per week: "
-            f"lecture_notebooks.baseline_credits is {ln_n} but the course has "
-            f"{len(config['weeks'])} weeks"
+            "D79 retired the Lecture Notebooks GRADE CATEGORY; remove it from "
+            "assessment: (the lecture_notebooks: contract block, "
+            "planning/LECTURE_NOTEBOOK_SCHEDULE.md and the generator in "
+            "scripts/build_participation_schedules.py are KEPT — the category "
+            "is retired, never the material). To bring the contract back in a "
+            "future edition, set LECTURE_NOTEBOOK_CATEGORY_ENABLED = True"
         )
     if list(fp) != [key for key, _, _, _ in expected_fp]:
         raise ValueError("Final Project must use D52's five components in order")
@@ -645,11 +679,12 @@ def gradebook_spec(config: dict) -> str:
         "",
         "Create these as five grade items inside the **Final Project** "
         "category. No component was renamed and no scoring rule inside a "
-        "component changed, but D74 re-shared them: the 5 course points freed "
-        "by retiring Student Research Lead went to Milestone Deliverables, so "
-        "the project shares no longer read QM474's 30/20/10/20/20. Type them "
-        "in to two decimals exactly as printed — they sum to 100.00% of the "
-        "category. The **share of course** column is the one students see, and "
+        "component changed, but D79 re-shared them: ALL 25 course points freed "
+        "by retiring Student Research Lead now sit here, most of them on "
+        "Milestone Deliverables, so the project shares no longer read QM474's "
+        "30/20/10/20/20. Type them in exactly as printed — they sum to 100.00% "
+        "of the category, and unlike D74's they divide evenly into the course "
+        "column. The **share of course** column is the one students see, and "
         f"it totals {a['final_project']}%.",
         "",
         "| Item | Share of Final Project | Share of course | Contains | Scoring rule |",
@@ -657,7 +692,7 @@ def gradebook_spec(config: dict) -> str:
     ]
     for item in fp.values():
         lines.append(
-            f"| {item['label']} | {item['project_share']}% | "
+            f"| {item['label']} | {item['project_share']:.2f}% | "
             f"{item['course_share']}% | {item['includes']} | "
             f"{item['scoring_rule']} |"
         )
@@ -759,6 +794,11 @@ def gradebook_spec(config: dict) -> str:
         "submission locked at M13 (D54). The final research chapter, the "
         "AI-management portfolio and the oral Evidence Defense no longer "
         "carry grade weight and get no gradebook item.",
+        # D79 Ruling: the Lecture Notebooks bullet is KEPT VERBATIM and simply
+        # not emitted, exactly as D74 kept the SRL bullet below it. A
+        # conditional expression evaluates only the branch it selects, so the
+        # f-string never touches the retired a['lecture_notebooks'] key.
+        *([
         f"- **Lecture Notebooks** — ONE undivided {a['lecture_notebooks']}% "
         "category (D74), the third completion contract and the one that took "
         "the Student Research Lead category's place. Create "
@@ -782,6 +822,7 @@ def gradebook_spec(config: dict) -> str:
         f"credits) / {ln_n - ln_d}. This is NOT participation: it never draws "
         "participation's +/- 0.9 contribution adjustment, and it may never be "
         "reintroduced as a participation item.",
+        ] if LECTURE_NOTEBOOK_CATEGORY_ENABLED else []),
         # D74 Ruling 5: the SRL bullet is kept, not deleted — one flag away.
         *([SRL_GRADEBOOK_ITEM_BULLET] if SRL_CATEGORY_ENABLED else []),
         "- **Participation** — ONE undivided 9% category (D57, re-partitioned "
@@ -791,9 +832,10 @@ def gradebook_spec(config: dict) -> str:
         "studio), so enter its running credit total rather than a single "
         "pass/fail. N = 14 baseline credits and the lowest "
         "ceil(0.10 x 14) = 2 are dropped; every credit is equal and graded for "
-        "completion. Lecture notebooks ARE collected since D74, but in their "
-        "own Lecture Notebooks category above: D57's ban stands in its amended "
-        "form, so notebook completion may never come back HERE, as a "
+        "completion. Lecture notebooks are NOT collected at all since D79, "
+        "which retired the Lecture Notebooks category D74 had created for "
+        "them: D57's ban stands either way, so notebook completion may never "
+        "come back HERE, as a "
         "participation item. surveys/participation_grading.md is the authority "
         "for the item list and the counts; Brightspace is where the running "
         "total is posted.",
@@ -815,21 +857,44 @@ def gradebook_spec(config: dict) -> str:
     ]
     for key, m in config["milestones"].items():
         lines.append(f"| {key} | {m.get('title','')} | {m.get('due','TBD')} |")
-    lines += [
-        "",
-        "## Lecture notebook due dates",
-        "",
-        f"One dropbox per weekly notebook, {ln_n} in all, every one of them at "
-        "11:59 PM. The date is the Sunday that ends that week, except for the "
-        "last, which lands on the last class day because the term ends before "
-        "its Sunday arrives. Put all of these on the Brightspace calendar too.",
-        "",
-        "| Week | Notebook | Due (11:59 PM) |",
-        "|---|---|---|",
-    ]
-    for week, notebook, due in lecture_notebook_dues(config):
-        weekday = pretty(due, weekday=True).split(",")[0]
-        lines.append(f"| {week} | {notebook} | {due} ({weekday}) |")
+    # RETIRED BY D79, KEPT IN PLACE: the dated dropbox table is generated only
+    # when the category is switched back on. lecture_notebook_dues() itself is
+    # untouched and still callable.
+    if LECTURE_NOTEBOOK_CATEGORY_ENABLED:
+        lines += [
+            "",
+            "## Lecture notebook due dates",
+            "",
+            f"One dropbox per weekly notebook, {ln_n} in all, every one of them "
+            "at 11:59 PM. The date is the Sunday that ends that week, except "
+            "for the last, which lands on the last class day because the term "
+            "ends before its Sunday arrives. Put all of these on the "
+            "Brightspace calendar too.",
+            "",
+            "| Week | Notebook | Due (11:59 PM) |",
+            "|---|---|---|",
+        ]
+        for week, notebook, due in lecture_notebook_dues(config):
+            weekday = pretty(due, weekday=True).split(",")[0]
+            lines.append(f"| {week} | {notebook} | {due} ({weekday}) |")
+    else:
+        lines += [
+            "",
+            "## The weekly lecture notebook is not collected",
+            "",
+            "D79 (2026-09-04) retired the Lecture Notebooks grade category "
+            "that D74 had created. **Create no notebook dropboxes.** The "
+            "weekly notebook is still worked in class and is still the lesson "
+            "— it is simply not handed in and not graded, and nothing said in "
+            "the ten-minute lab meeting that opens each Monday and Wednesday "
+            "is graded either (D75). The 25 course points freed by retiring "
+            "Student Research Lead all sit inside the Final Project, which is "
+            f"{a['final_project']}% of the grade. The contract, its dated "
+            "table and its generator are kept on disk for a future edition: "
+            "`course_config.yaml lecture_notebooks:`, "
+            "`planning/LECTURE_NOTEBOOK_SCHEDULE.md` and "
+            "`scripts/build_participation_schedules.py`.",
+        ]
     lines.append("")
     return "\n".join(lines)
 
@@ -840,6 +905,64 @@ def checklist(config: dict) -> str:
     ln_dues = lecture_notebook_dues(config)
     ln_n = config["lecture_notebooks"]["baseline_credits"]
     ln_last = pretty(ln_dues[-1][2], weekday=True) if ln_dues else "the last class day"
+    # D79: both wordings of each lecture-notebook to-do are kept, and one flag
+    # chooses — the same discipline D74 used for the SRL entries below.
+    ln_create_todo = (
+        f"""- [ ] **Create the {ln_n} lecture-notebook dropboxes** — one per weekly notebook,
+      inside the **Lecture Notebooks** category, with the due dates in
+      `gradebook_spec.md` and `planning/LECTURE_NOTEBOOK_SCHEDULE.md`. Every
+      student submits to every one of them; the last closes on {ln_last},
+      because the term ends before its Sunday arrives. Completion only, and the
+      lowest two credits drop automatically, so set them up as pass/fail rather
+      than as something you have to mark. These replace the 25 SRL slot
+      dropboxes, which are **not** created this edition (D74)."""
+        if LECTURE_NOTEBOOK_CATEGORY_ENABLED
+        else """- [ ] **Create no lecture-notebook dropboxes.** D79 retired the Lecture
+      Notebooks category D74 had created, so nothing from a Monday or Wednesday
+      lecture is collected: not the notebook, not the lab meeting. If you
+      already created the 16 dropboxes, remove them, and remove the category
+      with them. The 25 SRL slot dropboxes are not created either (D74)."""
+    )
+    ln_publish_todo = (
+        f"""- [ ] **Publish the lecture-notebook dropboxes.** The notebook worked in class is
+      handed in every week (D74): {ln_n} dropboxes, each due 11:59 PM on the
+      Sunday that ends its week, the last on {ln_last}. Completion only — worked
+      through and handed in, never whether the answers came out right. Say that
+      in the dropbox instructions, because it is the sentence that keeps the
+      contract from reading like a quality grade, and point students at the
+      Colab-to-PDF routine every milestone already uses."""
+        if LECTURE_NOTEBOOK_CATEGORY_ENABLED
+        else """- [ ] **Say out loud that the notebook is no longer collected.** D79
+      retired the Lecture Notebooks category five days after D74 created it, so
+      students were told in writing that their notebooks were worth 20%. Tell
+      them plainly that nothing from a lecture is handed in or graded, that they
+      should still work the notebook because it is the lesson, and that the
+      weight moved to the Final Project."""
+    )
+    contracts_heading = (
+        "The three completion contracts the syllabus points at"
+        if LECTURE_NOTEBOOK_CATEGORY_ENABLED
+        else "The two completion contracts the syllabus points at"
+    )
+    contracts_intro = (
+        """The syllabus tells students that the full list of Participation items, their due
+dates and their submission instructions "are posted on the course page", that
+the IYT Practice dated list lives on the schedule page and on Brightspace, and
+since D74 that the weekly lecture notebook is collected on a dated schedule of
+its own. All three promises need something published."""
+        if LECTURE_NOTEBOOK_CATEGORY_ENABLED
+        else """The syllabus tells students that the full list of Participation items, their due
+dates and their submission instructions "are posted on the course page", and that
+the IYT Practice dated list lives on the schedule page and on Brightspace. Both
+promises need something published. D79 retired the third contract, Lecture
+Notebooks, so the weekly notebook is no longer collected and promises nothing."""
+    )
+    drop_pools = (
+        f"They are three pools, not one, and D74's notebook pool drops two of "
+        f"{ln_n}."
+        if LECTURE_NOTEBOOK_CATEGORY_ENABLED
+        else "They are two pools, not one, since D79 retired the notebook pool."
+    )
     # D74 Ruling 5 again: both wordings are kept, and one flag chooses.
     srl_announcement = (
         SRL_CHECKLIST_ANNOUNCEMENT
@@ -959,14 +1082,7 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
 - [ ] **Create all {len(config['milestones'])} milestone items** with the due dates in that file, and put
       every date on the Brightspace **calendar** (Purdue's 2026-08-21 guidance
       asks for dates on all assignments).
-- [ ] **Create the {ln_n} lecture-notebook dropboxes** — one per weekly notebook,
-      inside the **Lecture Notebooks** category, with the due dates in
-      `gradebook_spec.md` and `planning/LECTURE_NOTEBOOK_SCHEDULE.md`. Every
-      student submits to every one of them; the last closes on {ln_last},
-      because the term ends before its Sunday arrives. Completion only, and the
-      lowest two credits drop automatically, so set them up as pass/fail rather
-      than as something you have to mark. These replace the 25 SRL slot
-      dropboxes, which are **not** created this edition (D74).
+{ln_create_todo}
 - [ ] **Publish units 2-16** with sequential release, or publish weekly by hand.
       With four students, weekly by hand is defensible and less brittle.
       D58 rewrote the reading section of *every* unit and removed the Friday
@@ -988,13 +1104,9 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
 {poster_section}
 ---
 
-## 5. The three completion contracts the syllabus points at
+## 5. {contracts_heading}
 
-The syllabus tells students that the full list of Participation items, their due
-dates and their submission instructions "are posted on the course page", that
-the IYT Practice dated list lives on the schedule page and on Brightspace, and
-since D74 that the weekly lecture notebook is collected on a dated schedule of
-its own. All three promises need something published.
+{contracts_intro}
 
 - [ ] **Publish the IYT Practice assignments.** `planning/IYT_SUBMISSION_SCHEDULE.md`
       lists every due date, the chapters that share it, and the ONE instruction
@@ -1008,18 +1120,11 @@ its own. All three promises need something published.
 - [ ] **Publish the student profile survey** (due Sun Aug 30) and the
       **course reflection** (collected in the last class, Fri Dec 11). Both are
       single Participation credits; the instruments live in `surveys/`.
-- [ ] **Publish the lecture-notebook dropboxes.** The notebook worked in class is
-      handed in every week (D74): {ln_n} dropboxes, each due 11:59 PM on the
-      Sunday that ends its week, the last on {ln_last}. Completion only — worked
-      through and handed in, never whether the answers came out right. Say that
-      in the dropbox instructions, because it is the sentence that keeps the
-      contract from reading like a quality grade, and point students at the
-      Colab-to-PDF routine every milestone already uses.
+{ln_publish_todo}
 - [ ] **State the drop rule once, where students read it.** The lowest
       `ceil(0.10 x N)` credits are dropped automatically in EACH contract
-      separately — they are three pools, not one, and D74's notebook pool drops
-      two of {ln_n}. `surveys/participation_grading.md` is the student-facing
-      contract for participation and IYT Practice.
+      separately. {drop_pools} `surveys/participation_grading.md` is the
+      student-facing contract for participation and IYT Practice.
 
 ---
 

@@ -558,12 +558,14 @@ belongs: the Friday studio sprint and the book's "It is your turn" chain.
 
 ## D74 amendment — the lab meeting, and the notebook becomes a collected artifact (2026-08-31)
 
-> **Read this section together with the D75 amendment below.** D75 kept the
-> ten-minute lab meeting, the minute frames and the whole Lecture Notebooks
+> **Read this section together with the D75 and D79 amendments below.** D75 kept
+> the ten-minute lab meeting, the minute frames and the whole Lecture Notebooks
 > contract, and withdrew three things named here: the assigned reporter, the
-> D69/D71 slot draw, and the injected `### 📣 My Report Plan` cell. Wherever
-> this section names a reporter or that cell, it is recording what D74 built,
-> not what a notebook carries today.
+> D69/D71 slot draw, and the injected `### 📣 My Report Plan` cell. **D79
+> (2026-09-04) then retired the Lecture Notebooks contract itself**, so the
+> notebook is no longer collected or graded. Wherever
+> this section names a reporter, that cell, or a notebook submission, it is
+> recording what D74 built, not what a notebook carries today.
 
 **The opener changed hands.** The Student Research Lead role is retired as a
 graded role, and every Mon/Wed lecture from Week 2 now opens with a ten-minute
@@ -584,7 +586,10 @@ Nothing was deleted: `project/srl/`, `scripts/assign_srl_slots.py` and
 **10 / 20 / 12 / 8**. Boundaries 3 and 4 are unchanged, and Friday's studio frame
 is untouched.
 
-**The notebook is now collected — and that is a design constraint.** Lecture
+**The notebook is now collected — and that is a design constraint.**
+*(RETIRED by D79: it is not collected any more. The design constraint below
+survives as pedagogy — the reader still needs a visible place to write and a path
+that fits 50 minutes — but nothing is handed in and nothing is scored.)* Lecture
 Notebooks is a top-level **20%** category and the course's third undivided
 completion contract: one submission per week per student (the `nbNN` worked in
 class), due 11:59 PM on the Sunday that ends the studio week (Week 16 closes Fri
@@ -604,6 +609,25 @@ inside its 50 minutes, every writing move must leave a visible place to write
 ⏸ line — or behind a 🏠 label — may ever be needed for the credit. The milestone
 studio notebooks (`msNN`) are unaffected: they are submitted with their
 milestone, not under this category.
+
+## D79 amendment — the notebook is no longer collected (2026-09-04)
+
+**The Lecture Notebooks category is retired**, five days after D74 created it.
+Nothing from a Monday or Wednesday lecture is handed in or graded: not the
+notebook, not the ungraded lab-meeting round. The weekly notebook is still worked
+in class and is still the lesson. All 25 points freed by retiring the Student
+Research Lead now sit inside the **Final Project (75%)**, most of them on
+Milestone Deliverables (20 → 33 course points).
+
+**What this changes for an author: nothing about how a notebook is built.** The
+D74 constraints above stand as pedagogy rather than as grading obligations —
+every writing move still leaves a visible place to write, each lecture's required
+path still fits its 50 minutes, and material below the `### ⏸` line or behind a
+🏠 label is still optional depth. What is gone is the sentence that made those
+things a *credit*. Nothing was deleted: `course_config.yaml`'s
+`lecture_notebooks:` block, `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, the schedule
+generator and every Brightspace-kit string are kept on disk behind
+`LECTURE_NOTEBOOK_CATEGORY_ENABLED = False`.
 
 ## D75 amendment — the lab meeting loses its reporter (2026-08-31)
 

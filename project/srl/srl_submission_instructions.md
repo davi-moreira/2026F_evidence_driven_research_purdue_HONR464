@@ -54,16 +54,22 @@ one person's slot.** Instead, you hand in **the week's lecture notebook**, the
   (**File → Download → Download .ipynb**). Name it with your last name followed by
   the assignment's title.
 
-This is the **Lecture Notebooks (20%)** category, one of the course's three
-completion contracts:
+> **⚠️ Updated 2026-09-04 (D79).** The **Lecture Notebooks (20%)** category this
+> section pointed at is **retired**, five days after D74 created it. Nothing from a
+> Monday or Wednesday lecture is collected or graded: not the notebook, not the
+> lab-meeting round. The weekly notebook is still worked in class and is still the
+> lesson; it is simply not handed in, and there is no dropbox for it. All 25 points
+> freed by retiring this role sit inside the Final Project. What follows the table
+> is kept as a record of the withdrawn contract.
+
+The course's two completion contracts are Participation and IYT Practice:
 
 | Category | Weight |
 |---|---:|
 | Attendance | 1% |
 | Participation | 9% |
 | IYT Practice | 15% |
-| **Lecture Notebooks** | **20%** |
-| Final Project | 55% |
+| Final Project | 75% |
 | **Total** | **100%** |
 
 The dated list lives in `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, and your course

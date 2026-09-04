@@ -1,17 +1,21 @@
-# Participation (9%), IYT Practice (15%) and Lecture Notebooks (20%) — the three completion contracts
+# Participation (9%) and IYT Practice (15%) — the two completion contracts
 
-Three categories are graded by completion, and this page is the whole contract
-for all three of them. **Participation is 9%** and collects the studio feedback
+Two categories are graded by completion, and this page is the whole contract
+for both of them. **Participation is 9%** and collects the studio feedback
 survey, the student profile survey and the course reflection: 14 credits. **IYT
 Practice is 15%** and collects the "It is your turn" section of every required
-EDR\|AI chapter: 35 credits for a typical student. **Lecture Notebooks is 20%**
-and collects the weekly notebook worked in class: 16 credits. Each block is
-undivided, each credit inside a block is worth exactly the same as every other,
-and each block has its own **N**, its own drop allowance and its own formula.
+EDR\|AI chapter: 35 credits for a typical student. Each block is undivided, each
+credit inside a block is worth exactly the same as every other, and each block
+has its own **N**, its own drop allowance and its own formula.
 
-There is no published split inside any of the three blocks, and there is no
-unpublished one either. That is the whole rule, and it is the rule because it is
-the only version a student can verify and an instructor can defend.
+A third block, **Lecture Notebooks (20%)**, existed for five days: D74 opened it
+on 2026-08-31 and **D79 retired it on 2026-09-04**. Its section is kept below,
+behind a banner, because nothing here is ever deleted — but nothing in it is
+collected, and no notebook is handed in on any date.
+
+There is no published split inside either block, and there is no unpublished one
+either. That is the whole rule, and it is the rule because it is the only version
+a student can verify and an instructor can defend.
 
 Where the three sit in the grade:
 
@@ -20,8 +24,7 @@ Where the three sit in the grade:
 | Attendance | 1% | not a completion contract; the course platform records it |
 | **Participation** | **9%** | this page |
 | **IYT Practice** | **15%** | this page |
-| **Lecture Notebooks** | **20%** | this page |
-| Final Project | 55% | [`../_research_project/2026Fall/final_project_grading_and_project_modes.md`](../_research_project/2026Fall/final_project_grading_and_project_modes.md) |
+| Final Project | 75% | [`../_research_project/2026Fall/final_project_grading_and_project_modes.md`](../_research_project/2026Fall/final_project_grading_and_project_modes.md) |
 | **Total** | **100%** | |
 
 > **Retired 2026-08-23 (D57).** An earlier draft of this file proposed dividing
@@ -62,10 +65,23 @@ Where the three sit in the grade:
 > N = 16, still d = 2, still the same formula, the same Sunday rule and the same
 > two moved dates. What changed is only the list of what a submitted notebook
 > must contain, which can no longer name a cell that no longer exists.
+>
+> **Amended 2026-09-04 (D79).** The **Lecture Notebooks category is retired**,
+> five days after D74 created it. The weekly notebook is still worked in class
+> and is still the lesson; it is **not collected and not graded**, there is no
+> notebook dropbox, and no notebook is due on any date. Its section below is kept
+> in full behind its own banner, exactly as D58's quiz banks and D74/D75's SRL
+> material are kept. **Participation and IYT Practice are untouched in every
+> number** — 9% and 15%, N = 14 and N = 35, d = 2 and d = 4, the same credit
+> rule and the same two formulas. All 25 points freed by retiring the Student
+> Research Lead now sit inside the **Final Project, which is 75%**. The D57 ban
+> stands in the form D74 left it: lecture-notebook completion may never return
+> **as a participation item**, and the ±0.9 contribution adjustment still
+> reaches nothing but the 9%.
 
 ---
 
-## The credit rule — identical in all three blocks
+## The credit rule — identical in both blocks
 
 The grade attaches to **identity, completeness and timing**, never to content.
 Praise, criticism, confusion, low ratings, reported AI use and an analysis that
@@ -95,11 +111,12 @@ never earns extra credit.
 **Baseline N = 14 credits**: 12 studio responses, plus the profile survey, plus
 the course reflection. Every student owes the same 14.
 
-Nothing else is collected for participation. Two things that *are* collected sit
-in their own blocks and are credited there, never here: the "It is your turn"
-sections belong to **IYT Practice**, and the weekly lecture notebook belongs to
-**Lecture Notebooks**. No participation credit depends on either of them, and
-neither may be moved into this block (D57 as amended by D74).
+Nothing else is collected for participation. The "It is your turn" sections
+*are* collected, and they are credited in their own block, never here: they
+belong to **IYT Practice**. No participation credit depends on them, and they may
+not be moved into this block. The weekly lecture notebook is not collected at all
+since D79, and the ban on it as a participation item stands regardless (D57 as
+amended by D74 and D79).
 
 ### What makes a response valid
 
@@ -139,14 +156,14 @@ separate bucket with its own weight — it is a **documented adjustment of at mo
 written reason on file, for contribution that is either exceptional or
 conspicuously absent. In practice it will rarely fire; it exists so the block
 does not have to pretend that a full ledger and an engaged seminar member are
-the same thing. It belongs to Participation alone and never touches IYT Practice
-or Lecture Notebooks.
+the same thing. It belongs to Participation alone and never touches IYT
+Practice.
 
 **Two syllabus bonuses land here too.** The course-evaluation screenshot bonus
 (0.5%) and the course-materials issue-report bonus (0.25% each, through Fri Dec
 4) are added to the participation total *after* the ledger is computed. They are
 bonuses on top of the block, not a share of it, and they can carry a student
-above 9.0. They are not added to IYT Practice or to Lecture Notebooks.
+above 9.0. They are not added to IYT Practice.
 
 ---
 
@@ -197,7 +214,18 @@ and nothing else.
 
 ---
 
-## Lecture Notebooks — 20%
+## Lecture Notebooks — 20% *(RETIRED 2026-09-04, D79)*
+
+> **⚠️ Nothing in this section is in force.** D74 opened this contract on
+> 2026-08-31 and **D79 retired it on 2026-09-04**. There is no Lecture Notebooks
+> grade category, no notebook dropbox, and no notebook due on any date. The
+> weekly notebook is still worked in class and is still the lesson; it is simply
+> not collected and not graded. Its 20 points, together with the 5 D74 had
+> already moved, sit inside the **Final Project (75%)**.
+>
+> The section is kept **in full and unedited** below, exactly as D58's quiz banks
+> and D74/D75's SRL material are kept, so a future edition can turn it back on.
+> Read it as a record, not as a rule.
 
 ### The one thing Lecture Notebooks collects
 
@@ -323,24 +351,24 @@ performance in predictable ways (Dunning, Heath & Suls 2004,
 It must never become a mastery grade. `effort` is not a virtue score either:
 high effort on a hard studio is the design working.
 
-**Whether the analysis came out** *(Lecture Notebooks)*. A cell that errored, a
+**Whether the analysis came out** *(Lecture Notebooks — retired, D79)*. A cell that errored, a
 plot that came out ugly, an estimate later found to be wrong: none of that costs
 a credit. What is scored is that the notebook was worked and handed in. Say this
 early, because a student who believes otherwise will quietly stop submitting the
 weeks that went badly, which are exactly the weeks worth reading.
 
-**How the lab meeting went** *(Lecture Notebooks)*. The ten minutes that open each
+**How the lab meeting went** *(Lecture Notebooks — retired, D79; the round is ungraded either way)*. The ten minutes that open each
 Monday and Wednesday lecture are not graded at all: not for whether you spoke, not
 for the strength of the decision you reported, not for how the room's questions
 landed. Nobody is assigned to report and nothing is prepared in advance (D75), so
 there is nothing there to score. The round carries no score anywhere in the
 course, and the week's notebook credit does not depend on it either.
 
-**Whether you used AI** *(all three)*. Using a tool while reading or while
+**Whether you used AI** *(both)*. Using a tool while reading or while
 working a notebook is allowed. Concealing it is the violation, and that is the
 rule the AI Research Ledger already runs on.
 
-**Length** *(all three)*. Two exact sentences beat two vague paragraphs. The
+**Length** *(both)*. Two exact sentences beat two vague paragraphs. The
 survey sets no length validation at all, in either direction, so a short exact
 answer is a complete answer, in the survey and in a notebook cell alike. Say that
 out loud once; a reader carries an assumption that longer is safer.
@@ -367,7 +395,7 @@ ledger row is there. At roughly a minute a
 submission this is a few minutes a week for a seminar of six. Comment on the
 work when it deserves a comment; the score is still completion.
 
-**The Lecture Notebook ledger.** Open the week's file, confirm it is that week's
+**The Lecture Notebook ledger** *(retired, D79 — kept for a future edition)*. Open the week's file, confirm it is that week's
 notebook, that the in-class cells are worked rather than left as placeholders,
 and that each lecture's 📒 ledger row is there. Do not read it for correctness:
 an honest wrong answer is a full credit, and so is an analysis that failed. At
@@ -381,7 +409,7 @@ columns — `student`, `studio`, timestamp, anchor text — and award 1 / 0.5 / 
 Add the profile survey and the course reflection to the same ledger when each
 one closes.
 
-**Borderline calls.** These govern all three ledgers. When an anchor is specific
+**Borderline calls.** These govern both ledgers, and the retired notebook one. When an anchor is specific
 but thin, award the credit and reply once asking for the missing specificity next
 time. Reserve 0 for submissions that are absent or that could have been written
 without opening the book, and, for a notebook, for a file that arrives untouched
@@ -413,4 +441,4 @@ enter a decision, and "no change" still gets a reason.
 | Student profile survey | Participation | [`student_profile_survey.md`](student_profile_survey.md) |
 | Course reflection | Participation | [`course_reflection.md`](course_reflection.md) |
 | "It is your turn" assignments + the one instruction paragraph | IYT Practice | [`../planning/IYT_SUBMISSION_SCHEDULE.md`](../planning/IYT_SUBMISSION_SCHEDULE.md) |
-| Weekly lecture notebooks `nb01`–`nb16` | Lecture Notebooks | [`../planning/LECTURE_NOTEBOOK_SCHEDULE.md`](../planning/LECTURE_NOTEBOOK_SCHEDULE.md) · the notebooks themselves in [`../notebooks/student/`](../notebooks/student/) |
+| Weekly lecture notebooks `nb01`–`nb16` | *retired (D79) — not collected* | [`../planning/LECTURE_NOTEBOOK_SCHEDULE.md`](../planning/LECTURE_NOTEBOOK_SCHEDULE.md) · the notebooks themselves in [`../notebooks/student/`](../notebooks/student/) |

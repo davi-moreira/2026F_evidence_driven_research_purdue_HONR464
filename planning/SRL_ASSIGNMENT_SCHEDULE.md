@@ -64,7 +64,9 @@ any notebook.
 
 **Weight.** The lab meeting carries **none**. D74 retired the **25% Student
 Research Lead** category and opened **Lecture Notebooks (20%)** in its
-place, graded by completion. The SRL suite in `project/srl/` — the handbook, the
+place, graded by completion; **D79 (2026-09-04) then retired that category too**,
+so nothing from a Monday or Wednesday lecture is collected any more — not the
+notebook, not the round — and all 25 points sit inside the Final Project. The SRL suite in `project/srl/` — the handbook, the
 rubric, the Socratic question bank, the AI integration guide, the prep template,
 the peer feedback form and both protocols, with the handout PDFs
 `scripts/build_handout_pdfs.py` builds from them — is **kept on disk for a future

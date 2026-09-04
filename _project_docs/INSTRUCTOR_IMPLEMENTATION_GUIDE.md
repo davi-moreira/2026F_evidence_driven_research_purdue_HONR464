@@ -127,9 +127,12 @@ concept, and do not score it. Say out loud in Week 1, and again at the first lab
 meeting, that nothing said here is graded: the fear this format exists to remove
 comes back the moment the room suspects it is being marked.
 
-**Nothing to grade live.** What is collected is the **weekly lecture notebook**,
-from every student, on completion (§3). The lab meeting itself carries no score
-and produces no artifact.
+**Nothing to grade at all, from a lecture.** D74 collected the weekly lecture
+notebook on completion; **D79 retired that contract**, so nothing from a Monday or
+Wednesday is handed in or scored — not the notebook, not the round. Students still
+work the notebook in class, because it is the lesson. The graded work of the
+course is the Final Project (75%), plus the IYT Practice and participation
+contracts (§3).
 
 **The questions guide is yours.** Each lecture's three questions live in the
 notebook's `### 🔎 Questions to Keep You Thinking` cell, every one of them kept
@@ -216,16 +219,18 @@ The course has five weighted categories totaling 100 (D74):
 | Attendance | 1 |
 | Participation | 9 |
 | IYT Practice | 15 |
-| Lecture Notebooks | 20 |
-| Final Project | 55 |
+| Final Project | 75 |
 | **Total** | **100** |
 
 D74 retired the 25% Student Research Lead category and replaced it with **Lecture
 Notebooks 20%**; the 5 points that could not fit went to Milestone Deliverables
-inside the Final Project, which rose from 50% to 55%. D58 retired the quiz
+inside the Final Project, which rose from 50% to 55%. **D79 (2026-09-04) then
+retired Lecture Notebooks as well**, so nothing from a Monday or Wednesday lecture
+is collected or graded, and all 25 freed points sit inside the Final Project,
+which is 75%. D58 retired the quiz
 category for this edition, so nothing in the gradebook is scored on a quiz.
 
-Three of the five categories are **undivided completion contracts** with the same
+Two of the four categories are **undivided completion contracts** with the same
 credit rule (`1.0` on time, `0.5` within seven days, `0` otherwise) and the same
 automatic drop of the lowest `⌈0.10 × N⌉` credits. They are separate instruments
 with separate credit pools; never merge them, and never publish an internal split
@@ -248,7 +253,15 @@ design has stages), drop **d = 4**, so the block is
 is `planning/IYT_SUBMISSION_SCHEDULE.md`; the contract is the same
 `surveys/participation_grading.md`.
 
-**Lecture Notebooks is its own 20% block (D74)** — the course's third undivided
+**Lecture Notebooks was its own 20% block (D74) — RETIRED 2026-09-04 (D79).**
+Nothing in this bullet list is in force: there is no Lecture Notebooks category,
+no notebook dropbox, and no notebook due on any date. The weekly notebook is still
+worked in class and is still the lesson; it is simply not collected and not
+graded. Its 20 points went into the Final Project with the 5 D74 had already
+moved. The contract is recorded here, and kept in full on disk, for a future
+edition — flip `LECTURE_NOTEBOOK_CATEGORY_ENABLED` in
+`scripts/build_brightspace_kit.py` and restore the two `course_config.yaml`
+weights to bring it back. As it stood: the course's third undivided
 completion contract, and what replaced the live SRL score. Each student submits
 **the week's notebook `nbNN`, worked in class**, one per week, due **11:59 PM on
 the Sunday that ends the studio week** (Week 16 closes **Fri Dec 11**, the last
@@ -270,14 +283,14 @@ class day). Baseline **N = 16**, drop **d = 2**, so the block is
 - The milestone studio notebooks (`msNN`) are not part of this block; they arrive
   with their milestone.
 
-**Final Project (55%)** contains **Milestone Deliverables · Peer Evaluation ·
+**Final Project (75%)** contains **Milestone Deliverables · Peer Evaluation ·
 Peer Review · Poster Presentation at the Purdue Undergraduate Research
-Conference · Instructor/TA Evaluation**, worth **20 / 10 / 5 / 10 / 10** course
+Conference · Instructor/TA Evaluation**, worth **33 / 12 / 6 / 12 / 12** course
 points. D74 gave Milestone Deliverables the five points freed by retiring the SRL
-category, so student-facing surfaces now print those **course percentages** of
-the final grade rather than shares of the project (20/55 does not terminate);
-`course_config.yaml` keeps the exact project shares
-36.37 / 18.18 / 9.09 / 18.18 / 18.18 as the machine record. No component was
+category and D79 gave it most of the other twenty, so student-facing surfaces
+print those **course percentages** of the final grade rather than shares of the
+project; `course_config.yaml` keeps the project shares
+44 / 16 / 8 / 16 / 16 as the machine record. No component was
 renamed and no scoring rule inside a component changed. The syllabus states only
 those five names and their weights. The "comprehensive set of project
 guidelines" it promises is the student-facing
@@ -417,9 +430,9 @@ exchange as follows:
   scored under **Participation** as one credit; Studio 12's feedback survey
   closes the same night.
 - **End-of-term wrap:**
-  1. Grade M16, the reflection and the Week-16 lecture notebook (the last
-     Lecture Notebooks credit, due Fri Dec 11), and enter the Instructor/TA
-     Evaluation score from the locked M13 poster.
+  1. Grade M16 and the course reflection (the reflection is a Participation
+     credit, due Fri Dec 11), and enter the Instructor/TA Evaluation score from
+     the locked M13 poster. No lecture notebook is collected (D79).
   2. **Archive the course:** confirm the site is rendered and pushed
      (`quarto render` → commit `docs/` → push), the instructor material is synced
      to the private repo (`scripts/sync_instructor_repo.sh`), and the v2 build
@@ -440,7 +453,7 @@ exchange as follows:
 | Milestone briefs (Brightspace source) | `_research_project/2026Fall/milestone_NN_*.md` |
 | Final Project grading + project modes | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | Brightspace gradebook (generated) | `brightspace/gradebook_spec.md` |
-| Lecture Notebooks contract + schedule | `course_config.yaml lecture_notebooks:`, `planning/LECTURE_NOTEBOOK_SCHEDULE.md` |
+| Lecture Notebooks contract + schedule (retired this edition, kept on disk) | `course_config.yaml lecture_notebooks:`, `planning/LECTURE_NOTEBOOK_SCHEDULE.md`, `LECTURE_NOTEBOOK_CATEGORY_ENABLED` in `scripts/build_brightspace_kit.py` |
 | SRL suite + the withdrawn slot draw (retired this edition, kept on disk) | `project/srl/`, `scripts/assign_srl_slots.py`, `scripts/build_srl_packet.py`, `_adm/roster/` |
 | Session guides (generated) | `scripts/build_session_guides.py` → `session_guides/` |
 | Schedule data (the legacy `srl_*` fields; D75 assigns no one) | `scripts/schedule_data/part1–4.py` |
