@@ -215,13 +215,26 @@ updated when the D36 freeze lifts:
     - **`inquiry_compass.png` (ch06) and `declaration_anatomy.png` (ch07)** —
       EN, PT and ES strings all present. Nothing outstanding; rerunning the
       script with the freeze lifted emits all three editions.
-    - **`ai_coding_loop.png`, `claim_boundary_verb.png`, `critical_path.png`,
-      `provenance_chain.png`, `reproducibility_capsule.png`,
-      `retrieval_verification_loop.png`, `uln_move.png`** — **`L["book"]` only.
-      Seven `L["book-pt"]` and seven `L["book-es"]` `"<key>"` blocks are
-      missing** and must be authored before the freeze lifts, or
-      `build_book_concept_figures.py` will raise `KeyError` the moment
-      `ACTIVE_EDITIONS` includes a translated edition.
+    - **Seven builders are `L["book"]` only.** Both `L["book-pt"]` and
+      `L["book-es"]` hold five keys where `L["book"]` holds twelve. The seven
+      missing from each (dict key → the PNG it draws), verified by importing
+      the module and diffing the edition dicts:
+
+      | key | figure |
+      |---|---|
+      | `leadloop` | `retrieval_verification_loop.png` |
+      | `provenance` | `provenance_chain.png` |
+      | `codeloop` | `ai_coding_loop.png` |
+      | `verbgate` | `claim_boundary_verb.png` |
+      | `capsule` | `reproducibility_capsule.png` |
+      | `uln` | `uln_move.png` |
+      | `criticalpath` | `critical_path.png` |
+
+      Fourteen blocks in all (seven per edition). They must be authored before
+      the freeze lifts: `main()` skips inactive editions before it reads any
+      strings, so the gap is invisible today, but the moment `ACTIVE_EDITIONS`
+      includes a translated edition the per-builder `strings[key]` lookup
+      raises `KeyError`.
 
     This was a deliberate, declared choice by the authoring session, not an
     oversight: it declined to commit figure text it could not check in PT/ES.
