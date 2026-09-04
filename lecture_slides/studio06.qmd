@@ -343,7 +343,7 @@ Chapter 20 · The concept
 - Tracing back to it is your job, not the tool's.
 - Provenance asks where it came from; quality asks whether it fits your question.
 
-![](figs/provenance_chain.png){fig-align="center" width="100%" fig-alt="provenance_chain.png"}
+![](figs/provenance_chain.png){fig-align="center" width="100%" fig-alt="Four boxes in a chain. The primary source, the original record where the value was first produced, drawn with a heavy rule. Then two secondary sources, each re-reporting a value it did not produce. Then the value as it appears in your file. An arrow curves back from your file to the primary source, labelled trace it back yourself. Below, two boxes name what you must be able to answer: provenance, where did this value come from and through whose hands; and data quality, whether it is fit for your own question."}
 
 :::::
 

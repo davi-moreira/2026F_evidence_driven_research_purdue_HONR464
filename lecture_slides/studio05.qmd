@@ -382,7 +382,7 @@ Chapter 14 · The concept
 - **Overcoverage:** records on the list for people outside your target altogether.
 - **Duplicate:** one person listed twice, quietly given two chances of being picked.
 
-![](figs/sampling_groups.png){fig-align="center" width="52%" fig-alt="sampling_groups.png"}
+![](figs/sampling_groups.png){fig-align="center" width="52%" fig-alt="Diagram of overlapping regions. A large box is the target population; inside it, a shaded box is the accessible population. A dashed box, the sampling frame, starts inside those and extends out past the right edge of the target population. The sample is a solid box inside the frame. Three labels point into the picture: the part of the target never listed on the frame is undercoverage; the part of the frame outside the target is overcoverage; and two joined dots inside the frame are one unit listed twice, a duplicate."}
 
 :::::
 
@@ -681,7 +681,7 @@ Chapter 14 · A seeded simulation
 - That spread is honest, quantifiable uncertainty.
 - The convenience dot looks as confident as any other, and nothing warns you.
 
-![](figs/ch11_sampling_channels.png){fig-align="center" width="58%" fig-alt="ch11_sampling_channels.png"}
+![](figs/ch11_sampling_channels.png){fig-align="center" width="58%" fig-alt="Dot plot. Ten blue random-sample means huddle between about 47 and 51 around a dashed line at the true mean of 49.1. A single orange convenience-channel mean sits alone at about 33."}
 
 :::::
 
@@ -2392,7 +2392,7 @@ Chapter 17 · A seeded simulation
 - Orange selection error bottoms out near degree six, then climbs as the model memorizes noise.
 - Nothing in the blue line alone would ever tell you to stop.
 
-![](figs/ch14_overfitting.png){fig-align="center" width="72%" fig-alt="ch14_overfitting.png"}
+![](figs/ch14_overfitting.png){fig-align="center" width="72%" fig-alt="Two-panel chart. Left panel: a blue training-error line falling steadily across polynomial degrees 1 to 12, an orange selection-error line falling to degree six then climbing, a dotted vertical line at degree six labeled chosen on selection, and a black diamond labeled final holdout above the selection curve. Right panel: a histogram of the winner's true error minus its winning selection score across 500 simulated worlds, centered just right of zero, annotated mean optimism plus 0.025 RMSE, median plus 0.015, worse than its crowning score in 64 percent of worlds, with an arrow noting 4 worlds beyond plus 0.3 and the largest at plus 1.86."}
 
 :::::
 
@@ -3043,7 +3043,7 @@ Chapter 18 · A seeded simulation
 - It centers almost exactly on the truth: mean of estimates 5.0 against a true 5.0.
 - Most runs landed between about 2 and 8 points, and the extremes ran below zero and above 10.
 
-![](figs/ch15_randomization.png){fig-align="center" width="70%" fig-alt="ch15_randomization.png"}
+![](figs/ch15_randomization.png){fig-align="center" width="70%" fig-alt="Histogram of 2,000 estimated effects in blue, roughly bell-shaped from about 0 to 10 percentage points, with a dashed vertical line at the true effect of 5.0 and an annotation reading mean of estimates 5.0."}
 
 :::::
 
@@ -3126,7 +3126,7 @@ Chapter 18 · What attrition does to that promise
 - Retention was 59 percent in the reminder arm against 80 percent in control.
 - Leaving was tied to health, and health also drives the outcome.
 
-![](figs/ch15_attrition.png){fig-align="center" width="70%" fig-alt="ch15_attrition.png"}
+![](figs/ch15_attrition.png){fig-align="center" width="70%" fig-alt="Histogram of 2,000 complete-case contrasts in orange, centered near 8.1 percentage points, with a dashed vertical line at the true effect of 5.0 sitting far to the left of the entire distribution."}
 
 :::::
 

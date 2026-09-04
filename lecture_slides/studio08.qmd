@@ -1338,7 +1338,7 @@ Chapter 25 · A seeded simulation
 - Rarer runs reach roughly -0.48 and +0.47. The first run returned -0.03.
 - A researcher demanding a true zero would have failed all two thousand of them.
 
-![](figs/ch22_null_spread.png){fig-align="center" width="70%" fig-alt="ch22_null_spread.png"}
+![](figs/ch22_null_spread.png){fig-align="center" width="70%" fig-alt="Histogram of 2,000 measured vehicle effects in a world where the true effect is zero. The bars form a bell centered on zero, spanning roughly -0.4 to +0.4 millimetres, with a dashed line at zero and an orange line marking one experiment that read -0.03 millimetres."}
 
 :::::
 

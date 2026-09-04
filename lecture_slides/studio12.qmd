@@ -470,7 +470,7 @@ Chapter 38 · The concept
 - Roles joined by one dependency run in order.
 - Worker, critic, you: three steps that cannot collapse into fewer.
 
-![](figs/critical_path.png){fig-align="center" width="100%" fig-alt="critical_path.png"}
+![](figs/critical_path.png){fig-align="center" width="100%" fig-alt="Two panels. On the left, three subtasks with no dependency between them, so they run at the same time: check the design, check the citations, tighten the prose. On the right, three steps joined by one dependency each, so they run in order: a worker drafts, a critic attacks what the worker produced, and you integrate. The right-hand chain is labelled the critical path, three steps that cannot collapse into fewer."}
 
 :::::
 

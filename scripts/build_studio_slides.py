@@ -147,6 +147,12 @@ def menu_attr(label: str) -> str:
     return f'data-menu-title="{"".join(out)}"'
 
 
+def fig_alt(block) -> str:
+    """The chapter's own `fig-alt`, straight off the figure block."""
+    m = re.search(r'fig-alt="([^"]*)"', getattr(block, "attrs", "") or "")
+    return m.group(1) if m else ""
+
+
 def div(cls: str, body: str, marks: int = 3) -> str:
     """A Pandoc fenced div, with the blank lines Pandoc requires.
 
@@ -243,20 +249,30 @@ class Deck:
     def clean(self, text: str) -> str:
         return sp.clean(text, BOOK_URL, self.from_dir)
 
-    def figure(self, src: str, caption: str = "", width: str = "78%") -> str:
+    def figure(self, src: str, caption: str = "", width: str = "78%",
+               alt: str = "") -> str:
         """Copy a book figure into the shared deck figs/ and return markdown.
 
         A chapter writes its figures relative to its OWN directory
         (`../images/concepts/mida_map.png` from book/part2-.../), so the path
         is resolved against that directory before the file is located.
+
+        `alt` is the chapter's OWN `fig-alt`, which is written to be read
+        aloud and describes the whole diagram. It is preferred over anything
+        derived from the caption, and it is passed independently of whether
+        the caption is printed — a slide that drops the visible caption must
+        not thereby drop the alt text. The caption-derived string is the
+        fallback, and the bare filename is the last resort it should never
+        reach.
         """
         name = Path(src).name
         rel = Path(self.from_dir or ".") / src
         self.figs[str(Path(*rel.parts).as_posix())] = f"figs/{name}"
         cap = self.clean(caption)
-        alt = re.sub(r"[\[\]\"]", "", re.sub(r"\*", "", cap))[:150]
+        derived = re.sub(r"[\[\]\"]", "", re.sub(r"\*", "", cap))[:150]
+        chapter_alt = re.sub(r"\s+", " ", re.sub(r'["\\]', "", alt)).strip()
         md = (f'![](figs/{name}){{fig-align="center" width="{width}" '
-              f'fig-alt="{alt or name}"}}')
+              f'fig-alt="{chapter_alt or derived or name}"}}')
         if cap:
             md += "\n\n" + div("figure-caption", wrap(cap))
         return md
@@ -346,7 +362,9 @@ def prose_slides(deck: Deck, lesson_no: int | None, section: sp.Section,
                        else f"{section.heading} *(cont.)*", body, kicker=kicker)
             seen_prose += 1
         elif block.kind == "figure":
-            deck.slide(section.heading, deck.figure(block.src, block.caption),
+            deck.slide(section.heading,
+                       deck.figure(block.src, block.caption,
+                                   alt=fig_alt(block)),
                        kicker=kicker)
         elif block.kind == "mermaid":
             deck.slide(section.heading,
@@ -367,7 +385,8 @@ def prose_slides(deck: Deck, lesson_no: int | None, section: sp.Section,
 def _non_prose(deck: Deck, kicker: str, heading: str, block: sp.Block) -> None:
     """Figures, diagrams and code always get their own slide, plan or none."""
     if block.kind == "figure":
-        deck.slide(heading, deck.figure(block.src, block.caption),
+        deck.slide(heading, deck.figure(block.src, block.caption,
+                                        alt=fig_alt(block)),
                    kicker=kicker)
     elif block.kind == "mermaid":
         deck.slide(heading, f"```{{mermaid}}\n{block.text}\n```", kicker=kicker)
@@ -464,7 +483,8 @@ def _planned_slide(deck: Deck, kicker: str, section: sp.Section,
         if item.get("bullets") or item.get("lead"):
             caption = ""
         body_parts.append(deck.figure(block.src if block else fig, caption,
-                                      item.get("width", "70%")))
+                                      item.get("width", "70%"),
+                                      alt=fig_alt(block) if block else ""))
 
     if item.get("mermaid") is not None:
         blocks = section.all("mermaid")

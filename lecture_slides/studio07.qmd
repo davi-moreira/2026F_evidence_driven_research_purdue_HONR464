@@ -404,7 +404,7 @@ Chapter 22 · The concept
 - Any turn can add a filter, drop a join, or reach for a different column.
 - You define the quantity and the frame before; you confirm them every cycle.
 
-![](figs/ai_coding_loop.png){fig-align="center" width="100%" fig-alt="ai_coding_loop.png"}
+![](figs/ai_coding_loop.png){fig-align="center" width="100%" fig-alt="Across the top, a box: yours, before you delegate, the quantity of interest and the frame in plain words. Below it a row of five steps: prompt, read the output, interrogate it, refine, run it again. From run it again a path returns leftward through a heavily ruled box asking what quantity, over which cases, and then back up into read the output. A note reads that any turn can add a filter, drop a join, or reach for a different column, and nothing announces the change."}
 
 :::::
 
