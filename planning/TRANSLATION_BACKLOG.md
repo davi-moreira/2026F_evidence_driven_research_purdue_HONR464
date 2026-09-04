@@ -205,3 +205,42 @@ updated when the D36 freeze lifts:
     This is an identity-only change: no PT/ES prose was touched, and the
     freeze still holds. Nothing to translate; listed so the resync does not
     treat the new filenames as drift.
+
+22. **Nine new concept figures, seven of them with NO PT/ES strings
+    (2026-09-04).** `scripts/build_book_concept_figures.py` grew from three
+    builders to twelve. The file's own convention is that frozen editions stay
+    current so the translation pass can simply rerun the script, and two of the
+    nine hold to it while seven deliberately do not:
+
+    - **`inquiry_compass.png` (ch06) and `declaration_anatomy.png` (ch07)** —
+      EN, PT and ES strings all present. Nothing outstanding; rerunning the
+      script with the freeze lifted emits all three editions.
+    - **`ai_coding_loop.png`, `claim_boundary_verb.png`, `critical_path.png`,
+      `provenance_chain.png`, `reproducibility_capsule.png`,
+      `retrieval_verification_loop.png`, `uln_move.png`** — **`L["book"]` only.
+      Seven `L["book-pt"]` and seven `L["book-es"]` `"<key>"` blocks are
+      missing** and must be authored before the freeze lifts, or
+      `build_book_concept_figures.py` will raise `KeyError` the moment
+      `ACTIVE_EDITIONS` includes a translated edition.
+
+    This was a deliberate, declared choice by the authoring session, not an
+    oversight: it declined to commit figure text it could not check in PT/ES.
+    Recorded here because this file's header is explicit that an item missing
+    from it is a defect.
+
+    **Two things the translation pass must do, not one.** Authoring the
+    fourteen missing blocks is the obvious half. The other half is that these
+    are FIGURES: every string is baked into a PNG at build time, so a
+    translated string that overflows its box silently produces an unreadable
+    diagram. PT and ES both run longer than English for the same content.
+    After authoring, rerun the script for all three editions and **open every
+    generated PNG** — the script cannot detect collision or clipping, and no
+    validator checks rendered figure text.
+
+23. **Chapter defects logged separately (2026-09-04).** Three verified
+    chapter inconsistencies now live in `planning/CHAPTER_DEFECTS.md` (D-01 and
+    D-02 in ch32, D-03 in ch37). They are ENGLISH defects, so they are not
+    translation debt — but if any is fixed while the freeze holds, the fix
+    becomes an EN-only change that this backlog must replay. Check that file
+    when the freeze lifts.
+
