@@ -1264,7 +1264,7 @@ seven-step checklist every time.
 :::::
 
 
-## A lift you cannot reproduce is a rumor {data-menu-title="Ch 4 · A lift you cannot reproduce is a rumor"}
+## A result you cannot reproduce is a rumor {data-menu-title="Ch 4 · A result you cannot reproduce is a rumor"}
 
 ::: {.kicker}
 
@@ -1280,7 +1280,7 @@ Chapter 4 · Why this decision matters
 ::: {.note-card}
 
 Show me the comparison, not the number. Who saw each version, over which days,
-and measured against what? A lift I cannot reproduce is a rumor.
+and measured against what? A result I cannot reproduce is a rumor.
 
 :::
 
@@ -1410,9 +1410,9 @@ Chapter 4 · The concept
 ::: {.notes}
 
 Specify sounds like this: compare conversion on the old and new checkout
-pages, I expect the new page to win by a few percent, not by half, and both
-versions have to be measured on the same days. Interrogate sounds like this:
-when you report turnout, is the denominator registered voters or every
+pages, I expect the new page to win by a few percent, not by forty, and both
+versions have to be measured over the same weeks. Interrogate sounds like
+this: when you report turnout, is the denominator registered voters or every
 voting-age adult? Inspect means opening the analysis script and seeing which
 wells it treats as controls, instead of trusting the comment that says
 controls were excluded.
@@ -1605,7 +1605,7 @@ Chapter 4 · A worked example
 
 - You are checking whether a new checkout page converts better than the old one.
 - Conversion rate is the share of visits that end in a purchase.
-- Interrogate: the tool admits it pooled every session in the file.
+- Interrogate: the tool admits it combined every session, from both weeks.
 - Inspect: a site-wide sale filled week 1, and the new page went live only in week 2.
 
 :::::
@@ -1613,8 +1613,8 @@ Chapter 4 · A worked example
 ::: {.notes}
 
 Specify came first: the new page should win by a few percent at most, and the
-two versions have to be measured on the same days, on the same kind of
-shopper. Delegate was the script that computes each version's rate from the
+two versions have to be measured over the same weeks, on the same kind of
+traffic. Delegate was the script that computes each version's rate from the
 session log and reports the difference. The sale filled the site with bargain
 hunters who browse and leave, so the script charged version A an entire week
 of window shoppers that version B never saw. If the room needs the rate
@@ -1623,7 +1623,7 @@ spelled out: 40 purchases out of 1,000 visits is 4 percent.
 :::
 
 
-## Two rows, one log, and only one survives Verify {data-menu-title="Ch 4 · Two rows, one log, and only one survives Verify"}
+## Two numbers describe the same gap {data-menu-title="Ch 4 · Two numbers describe the same gap"}
 
 ::: {.kicker}
 
@@ -1633,44 +1633,76 @@ Chapter 4 · A worked example
 
 ::::: {.slide-body}
 
-- The pooled row is what the tool's script reported.
-- The week 2 row is what survived Inspect and Verify.
-- Watch the relative difference collapse once both versions run side by side.
+:::: {.terms}
+
+::: {.term}
+
+[Percentage-point difference]{.t}
+
+[One rate minus the other. 4.24 percent minus 4.00 percent is 0.24 percentage points.]{.d}
+
+:::
+
+::: {.term}
+
+[Relative increase]{.t}
+
+[That difference against the rate you started from. 0.24 divided by 4.00 is 6 percent.]{.d}
+
+:::
+
+::::
+
+:::::
+
+::: {.notes}
+
+Both describe one thing: twelve more recorded purchases for version B out of
+5,000 visits. Ask the room which of the two a headline would print, and why.
+This is the confusion that makes a small gap sound decisive, and naming both
+scales is the cure.
+
+:::
+
+
+## The log keeps its exact counts {data-menu-title="Ch 4 · The log keeps its exact counts"}
+
+::: {.kicker}
+
+Chapter 4 · A worked example
+
+:::
+
+::::: {.slide-body}
 
 ```python
 import numpy as np, pandas as pd
 SEED = 464
 rng = np.random.default_rng(SEED)
 
-# A constructed session log: exact purchase counts per cell, shuffled into
-# session order. Week 1 is the site-wide sale, and only version A was live.
+# A constructed session log. Week 1 is the site-wide sale, and only version A
+# was live. Each row is one visit; version, week, visits, purchases.
 cells = [("A", 1, 5000, 105), ("A", 2, 5000, 200), ("B", 2, 5000, 212)]
 log = pd.concat([
     pd.DataFrame({"version": v, "week": w,
                   "bought": rng.permutation(np.r_[np.ones(b), np.zeros(n - b)])})
-    for v, w, n, b in cells])
-
-pooled = log.groupby("version")["bought"].mean()
-week2 = log[log.week == 2].groupby("version")["bought"].mean()
-print(f"pooled over both weeks : A {pooled['A']*100:.2f}%   B {pooled['B']*100:.2f}%"
-      f"   -> {(pooled['B']-pooled['A'])/pooled['A']*100:+.0f}% relative")
-print(f"week 2, both live      : A {week2['A']*100:.2f}%   B {week2['B']*100:.2f}%"
-      f"   -> {(week2['B']-week2['A'])/week2['A']*100:+.0f}% relative")
+    for v, w, n, b in cells], ignore_index=True)
 ```
 
 :::::
 
 ::: {.notes}
 
-The block builds the session log and computes the number both ways. The log is
-constructed with exact purchase counts per cell, shuffled into session order,
-under SEED = 464. Have the room predict the pooled figure before you run it,
-then read the two printed lines against each other.
+The first block builds visit-level rows from three sets of exact counts, under
+SEED = 464. Inside each version-week group it shuffles the purchase and
+non-purchase rows without changing either count, so the rates are fixed by the
+counts alone. Note what the log does not hold: no routing, no shopper
+identity, no day.
 
 :::
 
 
-## Defend states the result and what it does not establish {data-menu-title="Ch 4 · Defend states the result and what it does not establish"}
+## One gap, reported on both scales {data-menu-title="Ch 4 · One gap, reported on both scales"}
 
 ::: {.kicker}
 
@@ -1680,22 +1712,64 @@ Chapter 4 · A worked example
 
 ::::: {.slide-body}
 
-- Verify: restrict both versions to the second week and recompute.
-- Also confirm both versions count a purchase the same way.
-- Document: log the prompt, the fix, and the verified numbers.
-- Defend: the new page converted about 6 percent better over the five shared days.
-- Then name the bounds: no sale period tested, no separate look at mobile traffic.
+- All weeks: 3.05 percent against 4.24 percent, a 39 percent relative increase.
+- Week 2 alone: 4.00 percent against 4.24 percent, 0.24 points, 6 percent relative.
+
+```python
+def report(label, frame):
+    counts = frame.groupby("version")["bought"].agg(["sum", "size", "mean"])
+    a, b = counts.loc["A"], counts.loc["B"]
+    print(label)
+    print(f"  A: {a['sum']:.0f}/{a['size']:.0f} = {a['mean']*100:.2f}%")
+    print(f"  B: {b['sum']:.0f}/{b['size']:.0f} = {b['mean']*100:.2f}%")
+    print(f"  gap: {(b['mean']-a['mean'])*100:+.2f} percentage points, "
+          f"{(b['mean']/a['mean']-1)*100:+.2f}% relative to A")
+
+report("all weeks, and the two versions do not share them", log)
+report("week 2, both versions live", log[log.week == 2])
+```
 
 :::::
 
 ::: {.notes}
 
-The defended sentence in full: "among shoppers who saw either version during
-the five days both were live, the new page converted about 6 percent better. I
-have not tested it during a sale, and I have not looked at mobile traffic
-separately." Running a fixed checklist rather than trusting recall is an old
-and well-studied safeguard in high-stakes work (Degani & Wiener 1993). The
-tool did the typing. You did the research.
+Have the room predict the all-weeks figure before you run it, then read the
+two results against each other. The first is what the tool's script produced.
+The second is what survived Inspect and Verify. Restricting to the shared week
+removes one unfair difference between the groups. It does not turn what is
+left into a finding.
+
+:::
+
+
+## A higher recorded rate is not yet a performance claim {data-menu-title="Ch 4 · A higher recorded rate is not yet a performance claim"}
+
+::: {.kicker}
+
+Chapter 4 · A worked example
+
+:::
+
+::::: {.slide-body}
+
+- Verify: restrict both versions to week 2 and recompute.
+- Also confirm both versions count a purchase the same way.
+- Document: the comparison thrown away, the one kept, and both scales.
+- Defend: 4.00 against 4.24 in the one shared week, and what the log cannot settle.
+
+:::::
+
+::: {.notes}
+
+The defended sentence in full: "in the one week both versions were live, the
+old page converted 4.00 percent of visits and the new page 4.24 percent. That
+is 0.24 percentage points, a 6 percent relative increase, and twelve
+purchases. This log does not record how visits reached either version or
+whether shoppers came back, so it does not establish that the new page
+performs better. I have not tested it during a sale, and I have not looked at
+mobile traffic separately." Running a fixed checklist rather than trusting
+recall is an old and well-studied safeguard in high-stakes work (Degani &
+Wiener 1993). The tool did the typing. You did the research.
 
 :::
 
@@ -1715,12 +1789,12 @@ Chapter 4
 [Where the tool failed]{.label}
 
 You ask for the analysis and the tool reports, with total confidence, "the new
-checkout page converts 50 percent better." The number is wrong, and the code
-that produced it runs without a single error. Here is the trap: the script
-pooled every session in the log. The old page's numbers include the sale week,
-when the site was full of bargain hunters who never intended to buy, and the
-new page only existed afterward. The comparison charged one version a crowd
-the other never met.
+checkout page converts 39 percent better." The arithmetic is right and the
+code runs without a single error. The comparison is still wrong. Here is the
+trap: the script combined every session in the log. The old page's numbers
+include the sale week, when the site was full of bargain hunters who never
+intended to buy, and the new page only existed afterward. The comparison
+charged one version a crowd the other never met.
 
 :::
 
@@ -1738,19 +1812,23 @@ Chapter 4 · An AI failure case
 ::::: {.slide-body}
 
 - You catch it at Inspect and Verify.
-- Reading the script shows it never filters by date.
-- Restricting both versions to the days they actually ran side by side collapses the "50 percent" to about 6.
-- A green check is not a correct result.
-- You verify the number, not the paragraph about the number.
+- Reading the script shows it never requires both versions to appear in the same week.
+- Restricting the comparison to the week they actually ran side by side shrinks the 39 percent to 6.
+- That repair removes one unfair difference between the two groups.
+- It does not turn what is left into a finding, because the log still cannot say how a visit reached either version.
 
 :::::
 
 ::: {.notes}
 
-You catch it at Inspect and Verify. Reading the script shows it never filters
-by date. Restricting both versions to the days they actually ran side by side
-collapses the "50 percent" to about 6. A green check is not a correct result.
-You verify the number, not the paragraph about the number.
+You catch it at Inspect and Verify. Reading the script shows it never requires
+both versions to appear in the same week. Restricting the comparison to the
+week they actually ran side by side shrinks the 39 percent to 6. That repair
+removes one unfair difference between the two groups. It does not turn what is
+left into a finding, because the log still cannot say how a visit reached
+either version. A green check is not a correct result, and a corrected number
+is not automatically a claim you can defend. You verify the comparison and the
+number, not the paragraph about them.
 
 :::
 

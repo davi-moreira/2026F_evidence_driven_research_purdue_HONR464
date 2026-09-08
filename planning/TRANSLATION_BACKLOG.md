@@ -257,3 +257,46 @@ updated when the D36 freeze lifts:
     becomes an EN-only change that this backlog must replay. Check that file
     when the freeze lifts.
 
+
+24. **CORRECTNESS divergence — ch04 checkout worked example (2026-09-08).**
+    This is the first item here that is a **correctness** divergence rather than
+    a stylistic or structural one, and it therefore **hard-gates** the
+    end-of-freeze sync: PT and ES currently ship a chapter whose prose states a
+    number its own code does not produce, and a defended claim the constructed
+    log cannot support. Both were reported by a student, verified, and fixed in
+    ENGLISH ONLY on 2026-09-08 (D36 forbids touching the frozen editions).
+
+    `book-pt/part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd`
+    and its ES sibling still carry, and must be replayed against the settled
+    English text:
+
+    - the AI failure case's headline number: **50 percent → 39 percent**, in
+      both the report sentence and the "collapses the … to about 6" sentence.
+      The chapter's own block prints `+39.02%`, never 50;
+    - the Defend sentence: the unbounded "converted about 6 percent better …
+      among shoppers … during the five days both were live" → the bounded
+      version that names both scales (0.24 percentage points, 6 percent
+      relative, twelve purchases) and states plainly that the log records
+      neither how visits reached each version nor whether shoppers returned, so
+      it does not establish better performance;
+    - the two new bolded definitions, **percentage-point difference** and
+      **relative increase**, which must be translated as terms, not paraphrased
+      (the confusion between them is what the student hit);
+    - the new `> **A question that often comes up here:**` block;
+    - "same days" → "same weeks" and "a single day" → the week-2 hand check,
+      everywhere: the constructed log has columns `version`, `week`, `bought`
+      and no day field at all, so the old instruction cannot be carried out in
+      any language;
+    - "A lift I cannot reproduce is a rumor" → "A result I cannot reproduce is
+      a rumor" in the epigraph ("lift" is undefined at that point), plus the
+      matching `quote:` in `planning/BOOK_SLIDE_PLANS/sdiivdd.yml`;
+    - the red-team prompt, now carrying the bounded claim;
+    - the **one code fence became two** (log construction, then a `report()`
+      helper printing counts and both scales). Regenerate
+      `notebooks/book/pt/ch04_*.ipynb` and `notebooks/book/es/ch04_*.ipynb`
+      after the sync: their cell COUNT changes, not just their text.
+
+    The counts in `cells` were deliberately **not** changed. Three independent
+    reviewers (two workflow judges and the Codex partner run) rejected tuning
+    the constructed data to make the wrong sentence true; the record is in
+    `planning/CHAPTER_DEFECTS.md` D-04.

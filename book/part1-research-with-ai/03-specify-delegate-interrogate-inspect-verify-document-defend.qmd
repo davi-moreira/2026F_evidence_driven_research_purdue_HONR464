@@ -22,7 +22,7 @@ advances.
 the same fixed checklist every single time.**
 
 > *"Show me the comparison, not the number. Who saw each version, over which days, and
-> measured against what? A lift I cannot reproduce is a rumor."*
+> measured against what? A result I cannot reproduce is a rumor."*
 > — an **analytics lead**, reading a claim that a new checkout page converts better
 
 A tool can now write the code, run it, and hand you a tidy result in one breath. That
@@ -54,8 +54,8 @@ The seven steps, each defined once with an example:
 
 1. **Specify.** Write down the exact task and your own expected answer *before* you
    ask. Example: "compare conversion on the old and new checkout pages; I expect the
-   new page to win by a few percent, not by half, and both versions have to be
-   measured on the same days."
+   new page to win by a few percent, not by forty, and both versions have to be
+   measured over the same weeks."
 2. **Delegate.** Hand the well-specified piece to the tool. To **delegate** is to
    assign a checkable chunk of work, not your judgment. Example: "pull the consumer
    price index values for 2019 and 2025 and write the code that converts my prices
@@ -157,69 +157,108 @@ in a purchase, so 40 purchases out of 1,000 visits is 4 percent. Watch the check
 run.
 
 **Specify.** You write your expectation first: "the new page should win by a few
-percent at most, and the two versions have to be measured on the same days, on the
-same kind of shopper."
+percent at most, and the two versions have to be measured over the same weeks, on the
+same kind of traffic."
 
 **Delegate.** You ask the tool to write the script that computes the conversion rate
 for each version from the session log and reports the difference.
 
 **Interrogate.** You ask, "what does your calculation assume about who saw each
-version?" It admits it pooled every session in the file.
+version?" It admits it combined every session in the file, from both weeks.
 
 **Inspect.** You read the script and then the data. The store ran a site-wide sale in
 the first week, which filled the site with bargain hunters who browse and leave. The
 new page only went live in the second week. The script charged version A an entire
 week of window shoppers that version B never saw.
 
-**Verify.** You restrict both versions to the second week, when they ran side by side,
-and recompute. You also confirm both versions count a purchase the same way.
+**Verify.** You restrict both versions to week 2, when they ran side by side, and
+recompute. You also confirm both versions count a purchase the same way.
 
-**Document.** You log the prompt, the fix, and the verified numbers.
+Two numbers describe that gap, and they are easy to mix up. A **percentage-point
+difference** subtracts one rate from the other: 4.24 percent minus 4.00 percent is
+0.24 percentage points. A **relative increase** compares that difference with the rate
+you started from: 0.24 divided by 4.00 is 6 percent. Both describe one thing, twelve
+more recorded purchases for version B out of 5,000 visits.
 
-**Defend.** You write: "among shoppers who saw either version during the five days
-both were live, the new page converted about 6 percent better. I have not tested it
-during a sale, and I have not looked at mobile traffic separately."
+Then you look at what the log does not hold. It does not record how a visit ended up on
+one version rather than the other, whether the same shopper came back, or which day a
+visit happened. So the fair comparison tells you what this one shared week recorded. It
+does not tell you that version B will do better on the next 5,000 visits.
+
+> **A question that often comes up here:** *"The 6 percent is real arithmetic. Why can I
+> not say the new page is better?"* Because the arithmetic describes this log, and
+> "better" is a claim about visits you have not seen yet. To get there you would need to
+> know how visits were routed to each version, and how much a different 5,000 visits
+> could move a gap this size. That second question is a lesson of its own, later in this
+> book, on uncertainty. Here the honest move is to report what you measured and say
+> where it stops.
+
+**Document.** You log the prompt, the comparison you threw away, the comparison you
+kept, and both ways of describing the gap.
+
+**Defend.** You write: "in the one week both versions were live, the old page converted
+4.00 percent of visits and the new page 4.24 percent. That is 0.24 percentage points, a
+6 percent relative increase, and twelve purchases. This log does not record how visits
+reached either version or whether shoppers came back, so it does not establish that the
+new page performs better. I have not tested it during a sale, and I have not looked at
+mobile traffic separately."
 
 The tool did the typing. You did the research.
 
 Running a fixed checklist rather than trusting recall is an old and well-studied safeguard in high-stakes work [@degani1993checklists].
 
-The block below builds the session log and computes the number both ways. The pooled row is what the tool's script reported; the week-2 row is what survived Inspect and Verify.
+The first block builds the session log from exact counts. Inside each version-week group
+it shuffles the purchase and non-purchase rows without changing either count, so the
+rates are fixed by the counts alone.
 
 ```python
 import numpy as np, pandas as pd
 SEED = 464
 rng = np.random.default_rng(SEED)
 
-# A constructed session log: exact purchase counts per cell, shuffled into
-# session order. Week 1 is the site-wide sale, and only version A was live.
+# A constructed session log. Week 1 is the site-wide sale, and only version A
+# was live. Each row is one visit; version, week, visits, purchases.
 cells = [("A", 1, 5000, 105), ("A", 2, 5000, 200), ("B", 2, 5000, 212)]
 log = pd.concat([
     pd.DataFrame({"version": v, "week": w,
                   "bought": rng.permutation(np.r_[np.ones(b), np.zeros(n - b)])})
-    for v, w, n, b in cells])
+    for v, w, n, b in cells], ignore_index=True)
+```
 
-pooled = log.groupby("version")["bought"].mean()
-week2 = log[log.week == 2].groupby("version")["bought"].mean()
-print(f"pooled over both weeks : A {pooled['A']*100:.2f}%   B {pooled['B']*100:.2f}%"
-      f"   -> {(pooled['B']-pooled['A'])/pooled['A']*100:+.0f}% relative")
-print(f"week 2, both live      : A {week2['A']*100:.2f}%   B {week2['B']*100:.2f}%"
-      f"   -> {(week2['B']-week2['A'])/week2['A']*100:+.0f}% relative")
+The second block prints the counts before the rates, and reports the gap on both scales.
+The first result is what the tool's script produced. The second is what survived Inspect
+and Verify.
+
+```python
+def report(label, frame):
+    counts = frame.groupby("version")["bought"].agg(["sum", "size", "mean"])
+    a, b = counts.loc["A"], counts.loc["B"]
+    print(label)
+    print(f"  A: {a['sum']:.0f}/{a['size']:.0f} = {a['mean']*100:.2f}%")
+    print(f"  B: {b['sum']:.0f}/{b['size']:.0f} = {b['mean']*100:.2f}%")
+    print(f"  gap: {(b['mean']-a['mean'])*100:+.2f} percentage points, "
+          f"{(b['mean']/a['mean']-1)*100:+.2f}% relative to A")
+
+report("all weeks, and the two versions do not share them", log)
+report("week 2, both versions live", log[log.week == 2])
 ```
 
 ## An AI failure case
 
 You ask for the analysis and the tool reports, with total confidence, "the new
-checkout page converts 50 percent better." The number is wrong, and the code that
-produced it runs without a single error. Here is the trap: the script pooled every
-session in the log. The old page's numbers include the sale week, when the site was
-full of bargain hunters who never intended to buy, and the new page only existed
-afterward. The comparison charged one version a crowd the other never met.
+checkout page converts 39 percent better." The arithmetic is right and the code runs
+without a single error. The comparison is still wrong. Here is the trap: the script
+combined every session in the log. The old page's numbers include the sale week, when
+the site was full of bargain hunters who never intended to buy, and the new page only
+existed afterward. The comparison charged one version a crowd the other never met.
 
-You catch it at Inspect and Verify. Reading the script shows it never filters by date.
-Restricting both versions to the days they actually ran side by side collapses the
-"50 percent" to about 6. A green check is not a correct result. You verify the number,
-not the paragraph about the number.
+You catch it at Inspect and Verify. Reading the script shows it never requires both
+versions to appear in the same week. Restricting the comparison to the week they
+actually ran side by side shrinks the 39 percent to 6. That repair removes one unfair
+difference between the two groups. It does not turn what is left into a finding, because
+the log still cannot say how a visit reached either version. A green check is not a
+correct result, and a corrected number is not automatically a claim you can defend. You
+verify the comparison and the number, not the paragraph about them.
 
 ## It is your turn
 
@@ -280,14 +319,17 @@ fair or the claim was earned. Those are yours.
 
    ```text
    Write the script that computes the conversion rate for version A and version B
-   from this session log. Then return a table of every assumption your calculation
-   makes: which sessions are included and excluded, how you count a purchase, whether
-   both versions ran over the same days, and how repeat visits are handled.
+   from this session log. Report the gap twice, as a percentage-point difference and as
+   a relative increase from version A. Then return a table of every assumption your
+   calculation makes: which sessions are included and excluded, how you count a
+   purchase, whether both versions ran over the same weeks, and how repeat visits are
+   handled.
    ```
 
-   After running, verify: recompute one version's rate for a single day by hand and check
-   that it matches. Counters *plausible-but-wrong-method* (a calculation that quietly
-   compares unequal conditions).
+   After running, verify: recompute one version's week-2 rate from the counts by hand,
+   200 divided by 5,000 is 4.00 percent, and check that the script agrees. Counters
+   *plausible-but-wrong-method* (a calculation that quietly compares unequal
+   conditions).
 4. **Verify.** Run one independent check and write its outcome down either
    way — "nothing changed" is a result worth recording. If the check and the output disagree, do not
    average them; find out which one is wrong.
@@ -296,17 +338,21 @@ fair or the claim was earned. Those are yours.
 
    *Optional depth. The milestone needs only this lesson's core cycle; run this second angle when you want more practice.*
 
-   **Red-team your lift.**
+   **Red-team the comparison.**
 
    ```text
-   Here is my claim: "the new checkout page converts about 6 percent better."
-   Act as a hostile reviewer. Name every way this comparison could be unfair or this
-   number could mislead. Do not rewrite the claim for me.
+   Here is my claim: "in the one week both versions were live, the new checkout page
+   converted 4.24 percent of visits against the old page's 4.00 percent, a gap of 0.24
+   percentage points. The log does not record how visits reached each version, so I am
+   not claiming the new page performs better."
+   Act as a hostile reviewer. Name every way this comparison could be unfair or these
+   numbers could mislead. Do not rewrite the claim for me.
    ```
 
-   After running, verify: if it only praises the claim, push back and demand the single
-   worst flaw. Counters *sycophantic agreement* (praise that reviews your ego, not your
-   evidence).
+   After running, verify: trace each criticism to a column the log actually has, or mark
+   it as something the log cannot settle. If it only praises the claim, push back and
+   demand the single worst flaw. Counters *sycophantic agreement* (praise that reviews
+   your ego, not your evidence).
 6. **Document** the whole run in your AI Research Ledger, naming the verification
    method you used from the [Verification Guide](../verification-guide.qmd) and the
    check's outcome — the step where you caught something the tool got wrong, or
