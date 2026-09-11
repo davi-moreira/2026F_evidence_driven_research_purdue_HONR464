@@ -96,6 +96,10 @@ When Davi asks to process downloaded HONR 464 submissions, grade a milestone,
 or prepare student research advice, invoke **`$honr464-milestone-review`** and
 use `_adm/student_research/2026Fall/` as the private working root.
 
+- Use one canonical student folder. Store original and extracted submissions,
+  assessment notes, and one feedback file per submission under
+  `students/<slug>/grading/`; store dated email messages and the cumulative
+  research action plan under `students/<slug>/mentor/`.
 - Grade only submissions identified as milestones. Apply the milestone's exact
   published rubric and hard caps, and write a separate Brightspace-ready
   feedback file. Mark classroom, oral, attachment, or timestamp evidence as an
@@ -106,8 +110,14 @@ use `_adm/student_research/2026Fall/` as the private working root.
 - Verify every literature recommendation independently. Prefer DOI, publisher,
   journal, or stable institutional-repository records; explain the source's
   relevance and boundary, and never present adjacent evidence as direct support.
-- Track each student's research question, revisions, methods, evidence,
-  feasibility/ethics risks, and next commitments longitudinally. Challenge weak
+- Build the action plan from M2 plus the student's Chapter 6 kind/reach and
+  Chapter 7 declaration work, then update it from later submissions. Map every
+  action to the relevant book lesson and milestone with an observable completion
+  check. Include a course-fit audit that says where the prescribed pathway may
+  fail the student's actual design. Separate student omissions from book or
+  milestone gaps and name the exact canonical course source that should change.
+- Track each student's question, revisions, methods, evidence,
+  feasibility/ethics risks, and commitments longitudinally. Challenge weak
   assumptions and give a concrete counter-proposal without taking ownership of
   the student's scientific decisions.
 - Keep roster data, submissions, grades, and emails inside the gitignored

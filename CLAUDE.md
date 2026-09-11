@@ -154,6 +154,10 @@ grade/review a student's milestone or draft the student's mentoring email, use
 the personal skill **`$honr464-milestone-review`**. The private working root is
 `_adm/student_research/2026Fall/`; roster data, submissions, grades, emails, and
 student progress records must never be placed in a tracked/public course path.
+Each student has one canonical folder: `students/<slug>/grading/` holds original
+submission copies, extracted review material, rubric notes, and one Brightspace
+feedback file per submission; `students/<slug>/mentor/` holds dated emails and
+the cumulative `action_plan.md`.
 
 Keep two outputs separate:
 
@@ -169,9 +173,15 @@ Keep two outputs separate:
    sources; link the DOI or publisher/repository record, state why each source
    matters, and label adjacent evidence or methodological analogies honestly.
 
-Maintain a cumulative progress file for each student so weekly advice responds
-to prior commitments, revisions, recurring weaknesses, and approaching project
-constraints. Mentor the decision rather than doing the research for the student:
+Maintain the action plan from the student's M2 declaration, Chapter 6 kind/reach
+work, Chapter 7 field card and boundary, and every later submission. Tie each
+step to the book lesson and course milestone that should produce it, with an
+observable completion check. Every plan also carries a **course-fit audit**:
+state where the book or milestone may fail this particular design, distinguish
+a student repair from a course-design gap, and propose the exact course source
+that should change rather than forcing a project into an unsuitable template.
+
+Mentor the decision rather than doing the research for the student:
 challenge assumptions, offer a defensible counter-proposal, preserve curiosity,
 and identify the next two or three high-leverage actions. Do not grade ordinary
 class work unless Davi explicitly identifies it as a milestone. A corrupt,
