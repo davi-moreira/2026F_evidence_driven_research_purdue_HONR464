@@ -90,6 +90,31 @@ When applicable, also inspect:
 - Differences between narrative claims and computed results.
 - Sensitive or identifiable data committed to the repository.
 
+## Student milestone grader and research mentor
+
+When Davi asks to process downloaded HONR 464 submissions, grade a milestone,
+or prepare student research advice, invoke **`$honr464-milestone-review`** and
+use `_adm/student_research/2026Fall/` as the private working root.
+
+- Grade only submissions identified as milestones. Apply the milestone's exact
+  published rubric and hard caps, and write a separate Brightspace-ready
+  feedback file. Mark classroom, oral, attachment, or timestamp evidence as an
+  instructor check when it is not visible in the artifact.
+- For each requested mentoring cycle, save a personalized email as Markdown and
+  print its complete text in the response. The email should make the next
+  milestone achievable and keep the research on a feasible route to the poster.
+- Verify every literature recommendation independently. Prefer DOI, publisher,
+  journal, or stable institutional-repository records; explain the source's
+  relevance and boundary, and never present adjacent evidence as direct support.
+- Track each student's research question, revisions, methods, evidence,
+  feasibility/ethics risks, and next commitments longitudinally. Challenge weak
+  assumptions and give a concrete counter-proposal without taking ownership of
+  the student's scientific decisions.
+- Keep roster data, submissions, grades, and emails inside the gitignored
+  private root. Never expose student identifiers in public or tracked files.
+- Treat corrupt, incomplete, missing, or illegible submissions as pending and
+  request replacement; do not infer content or fabricate a score.
+
 ## Finding format
 
 For every actionable finding, report:
