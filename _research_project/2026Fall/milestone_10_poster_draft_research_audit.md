@@ -46,7 +46,7 @@ your ledger, and submit by Sunday night.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. |
+| 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m10_artifact.pdf`** *or* a shared link | **The artifact**: your Expo poster draft built to the contract, labeled preliminary, together with the spoken spine (30-second and 3-minute) that carries the same claim aloud. This is the graded core. |
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of the same file | Your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
@@ -253,6 +253,35 @@ Dossier**: your **venue contract**, your **content map**, your
 **publication-ready artifact**, and your **defense rehearsal record** now exist.
 Name the file or section where each one lives.
 
+### 9. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M10-##` from my review of M9
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M10-01` | copy the request as I wrote it | M9 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M10-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M10.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -279,6 +308,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio (Oct 30); artifact criticism gallery run; defense rehearsed; submitted by Sunday, Nov 1 |
 | **Filenames** | `lastname_m10_contract.pdf`, `lastname_m10_artifact.pdf`, `lastname_m10_defense.pdf` (or the equivalent sections of one file) |
 | **Location** | Brightspace → Assignments → M10 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M10-##` request from the M9 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -298,6 +328,20 @@ and the rehearsal records defensible responses plus the unresolved work.
 | **Verification & robustness** (25) | Venue contract, transformation memo, and content map all present and specific; the mode test was really run and recorded; the gallery-walk audit ranks its hits and shows the single revision pass; the Poster Critic was run and every flag adjudicated by a named check, including one refuted (23–25) | All pieces present; one flag acted on without a named check, or the mode test recorded loosely (18–22) | A content map of intentions rather than locations, an audit with no ranking, or Poster Critic output pasted in unadjudicated (11–17) | No mode test, no audit, or an AI flag adopted or ignored with no check either way (0–10) |
 | **Uncertainty & limitations** (20) | Uncertainty sits in the same eye-span as the claim on the artifact itself; the ULN statement is precise rather than hedging; the five questions are genuinely hard and honestly marked (18–20) | Present; one beat stated loosely, or one question softened (14–17) | Uncertainty relegated to a corner the eye never reaches, or a question bank of easy questions (8–13) | Limitations dropped in the adaptation, or the finding presented as settled certainty (0–7) |
 | **Craft, ledger & communication** (15) | On-format, on-time, readable at its intended distance and hearable at its intended length; accessibility handled; gallery feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces, or gallery feedback ignored (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M10-##` requests from the M9 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M10 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -329,6 +373,10 @@ days of feedback recovers up to half the lost points.
   Beginning.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -348,6 +396,10 @@ days of feedback recovers up to half the lost points.
    evidence about your defense. Say the questions out loud, write the answers
    down, mark each defend, concede, or do-not-know, and settle every AI flag with
    a check you can show.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

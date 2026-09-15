@@ -45,7 +45,7 @@ submit by Sunday night.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
+| 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. Opens with the **Instructor Request Record** (Component 10), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m04_meeting_request.pdf`** | A PDF copy of the email you sent Professor Moreira proposing dates and times for your **Round 01 mentor meeting** (to be held **Mon Oct 5 to Sun Oct 11**). Offer at least three concrete slots, give your project in two sentences, and name the one decision you most want pressure-tested. Requesting the meeting is what is collected here; holding it is confirmed at M7. |
 | 3 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
@@ -372,6 +372,35 @@ nine fields with the model and its DAG, the alignment sentence, the diagnosis an
 redesign record, the permission determination with its governance decisions, and
 the claim boundary. Name the file or section where each now lives.
 
+### 10. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M04-##` from my review of M3
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M04-01` | copy the request as I wrote it | M3 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M04-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M04.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -397,6 +426,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio (Sep 18) with your AI assistant; declaration delivered; submitted by Sunday, Sep 20 |
 | **Filename** | `lastname_m04_contract.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M04 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M04-##` request from the M3 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -413,6 +443,20 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`, `contract-v0`).
 | **Verification of the diagnosis & AI-assisted parts** (20) | The diagnosis reruns and its numbers trace to the declared design, seeded (`SEED = 464`); every AI-assisted step has a ledger row with a named, non-vague verification method; the redesign and the honest call are argued in your words, not the tool's (18–20) | Diagnosis traceable and ledger present; one verification method vague or one step unlogged (14–17) | Diagnosis asserted but not traceable to the design, or AI outputs used with verification unnamed (8–13) | A diagnosis number with no path back to the design, or AI output reproduced with no verification (0–7) |
 | **Uncertainty, limitations & claim boundary** (20) | Bias is reported signed, detection carries its stated test and threshold, and the worst of the three is named with what it does to your answer; the uncertainty statement and its wrong twin are both present; both boundary sentences are there and the three-state call is made (18–20) | Threat named and both boundary sentences present; the uncertainty statement or the state call stated loosely (14–17) | Only one boundary sentence, a threat named without saying what it does, or a redesign that does not read the diagnosis (8–13) | No diagnosis, no boundary, a causal question relabeled descriptive to fit weak data, or language that slides from association to cause (0–7) |
 | **Craft, version, ledger & communication** (15) | Versioned with its reason, on-format, on-time, a clear 3-minute declaration that took questions on any field, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; version and ledger complete (10–12) | Missing pieces or a rushed declaration (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M04-##` requests from the M3 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M04 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Blocking gate (not scored, and it cannot be averaged away):** no work at or
 after this milestone proceeds past a **not authorized** determination. A Contract
@@ -447,6 +491,10 @@ days of feedback recovers up to half the lost points.
   ruling: the submission is returned before it is graded.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -469,6 +517,10 @@ days of feedback recovers up to half the lost points.
    as descriptive because the design cannot identify it. The honest move is to
    keep the question and write *causal but not yet identified by this design*,
    then bound the claim accordingly.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

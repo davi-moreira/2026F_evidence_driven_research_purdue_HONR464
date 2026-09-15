@@ -64,7 +64,7 @@ on the board that did not just reproduce.
 |---|---|---|
 | 1 | **`lastname_m13_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, and the dated frozen manifest. |
 | 2 | **`lastname_m13_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
-| 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** |
+| 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** Opens with the **Instructor Request Record** (Component 8), which is graded under the carry-forward adjustment. |
 | 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. |
 
 If you submit a folder or notebook link, set sharing so the instructor can open
@@ -286,6 +286,35 @@ cold-run record with its honest label, the two gate records, and the locked post
 whose every number came from the run those records describe. Name the file or
 section where each now lives.
 
+### 8. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open `lastname_m13_gates.pdf`, before the gate records, with an **Instructor Request
+Record**. Copy every request numbered `IR-M13-##` from my review of M12
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M13-01` | copy the request as I wrote it | M12 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M13-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M13.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -311,6 +340,7 @@ pre-submission checklist.
 | **Studio work** | Package assembled, cold run completed, and both gates cleared in the Friday production block |
 | **Filenames** | `lastname_m13_package.zip` (or a shared link), `lastname_m13_coldrun.pdf`, `lastname_m13_gates.pdf`, `lastname_m13_poster.pdf` |
 | **Location** | Brightspace → Assignments → M13 (and the URC channel) |
+| **Instructor Request Record** | Opens the gates PDF; every `IR-M13-##` request from the M12 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -330,13 +360,27 @@ evidence.
 | **Individual craft, ledger & closeout:** each member's personally attributable AI Research Ledger, individual lock-checklist sign-off, and dossier contribution are present | 20 |
 | **Total** | **100** |
 
+**Carry-forward adjustment (course decision D80; applies to the M13 process score entered in Milestone Deliverables only).**
+Let `U` be the number of numbered `IR-M13-##` requests from the M12 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M13 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone. It does not change the poster-quality score, the Poster Presentation component, or Instructor/TA Evaluation. M13 is terminal: a carry-forward deduction here has no revision window.
+
 ## Final Project poster-quality rubric (100 points)
 
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`). This score supplies the poster-quality
 evidence for **Poster Presentation at the Purdue Undergraduate Research
 Conference**. That Final Project
-component is worth 10% of your course grade, and its score is
+component is worth 12% of your course grade, and its score is
 `0.70 × this poster-quality score + 0.30 × the M15 live Expo presentation
 score`. For an approved group, this poster-quality score is common to the group;
 each member still receives their own live-presentation score. Do not enter either
@@ -386,6 +430,10 @@ by 11:59 PM on November 8.
 - Missing AI Research Ledger entry: that member's 20-point **Individual craft,
   ledger & closeout** row scores 0 and their submission is returned for
   completion before grading; the common poster-quality score is unchanged.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on the M13 process score; because M13 is terminal the deduction cannot be recovered after the deadline (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -403,6 +451,10 @@ by 11:59 PM on November 8.
    trap catches intervals: the point estimate is refreshed and the bound beside it
    is not. Lock the poster from the run you just made, and reproduce the
    uncertainty along with the estimate.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

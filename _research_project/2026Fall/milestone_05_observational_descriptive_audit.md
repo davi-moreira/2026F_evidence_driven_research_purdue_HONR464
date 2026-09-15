@@ -51,7 +51,7 @@ writing. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
+| 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. Opens with the **Instructor Request Record** (Component 7), which is graded under the carry-forward adjustment. |
 | 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional, and already submitted.** Only YOUR declared route's chapter was collected (plus the hybrid chapter when your design has stages), due on its own reading date as an IYT Practice submission. Your assigned contrast chapter is required reading you rule out in writing here, but its section is never handed in, and the remaining route chapters are jigsaw material. Not collected again here: carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -260,6 +260,35 @@ carrying the declared pathway, its written limits, the redrawn claim boundary,
 and the mandated contrast that priced the road you did not take. Name the file
 or section in your dossier where each now lives.
 
+### 7. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M05-##` from my review of M4
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M05-01` | copy the request as I wrote it | M4 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M05-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M05.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -283,6 +312,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio with your AI assistant; your jigsaw route advocated in class |
 | **Filename** | `lastname_m05_pathway_declaration.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M05 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M05-##` request from the M4 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -301,6 +331,20 @@ rails, and defensible as Research Contract v1.
 | **Verification & decision ownership** (20) | The required Skeptic run logged with every ranked attack answered or honestly carried; the counter-pathway argument answered in your own words; no judgment reproduces a tool's wording (18–20) | Skeptic run and answers present; one attack answered loosely or one reply leaning on the tool's phrasing (14–17) | Skeptic run logged but attacks left unanswered, or the counter-pathway row missing (8–13) | No Skeptic run, or a declaration that reproduces a tool's wording with no reasoning of your own (0–7) |
 | **Uncertainty & the route's limits** (20) | The never-establish sentence stated plainly; both claim-boundary sentences redrawn to the licence; the pathway's own uncertainty sources named in the Contract; the contrast's licence honestly priced (18–20) | Limits, boundary, and sources present; one stated loosely (14–17) | Limits gestured at without saying what they cost the claim, or a boundary left at its v0 wording (8–13) | No limits, or a declaration that concedes nothing its route cannot do (0–7) |
 | **Craft, ledger & communication** (10) | On-format, on-time; Contract v1 a dated, numbered version with a usable reason; the route-conditional reading completed for your route and the assigned contrast; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; reading and ledger complete (7–8) | Missing pieces, a version with a decorative reason, or only one of the two required chapters worked (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M05-##` requests from the M4 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M05 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -339,6 +383,10 @@ days of feedback recovers up to half the lost points.
   sequence of versions is itself part of your research record.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -369,6 +417,10 @@ days of feedback recovers up to half the lost points.
    you nothing has almost certainly not been taken seriously. Rewrite the
    boundary to the licence your route actually holds, even where the rewrite
    is a demotion.
+6. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

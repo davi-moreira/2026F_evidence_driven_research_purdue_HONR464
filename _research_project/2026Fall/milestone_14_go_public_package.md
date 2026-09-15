@@ -46,7 +46,7 @@ Due: **Sunday, November 15, 11:59 PM.**
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m14_plan.pdf`** | Your **presentation plan**: the audience-analysis paragraph, the three timed pitches with their word counts shown, the poster-integration outline, and the question-and-discussion strategy. |
+| 1 | **`lastname_m14_plan.pdf`** | Your **presentation plan**: the audience-analysis paragraph, the three timed pitches with their word counts shown, the poster-integration outline, and the question-and-discussion strategy. Opens with the **Instructor Request Record** (Component 6), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m14_invitation.pdf`** | A **screenshot of your public invitation post**, carrying the poster title, your name, and the date, time, and location exactly as the official Expo programme prints them. |
 | 3 | **`lastname_m14_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for this milestone: the spoken-upgrade check, the question-generation prompt, and any AI-assisted wording of the invitation post. |
 | 4 | **`lastname_m14_meeting_round02.pdf`** | Confirmation that your **Round 02 mentor meeting** happened, inside the **Mon Nov 2 to Sat Nov 7** window you requested at M8: the date and time, who attended, what the meeting changed, and what you carried out of it into the pitches and the question strategy above. |
@@ -137,6 +137,35 @@ name, and the date, time, and location **exactly as the official programme
 prints them**. Copy them; do not remember them. An invitation with the wrong room
 is a missed audience.
 
+### 6. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open `lastname_m14_plan.pdf`, before the audience analysis, with an **Instructor Request
+Record**. Copy every request numbered `IR-M14-##` from my review of M13
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M14-01` | copy the request as I wrote it | M13 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M14-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M14.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -153,6 +182,7 @@ is a missed audience.
 | **AI Research Ledger** | One row per AI-assisted step, verification method named and non-vague |
 | **Filenames** | `lastname_m14_plan.pdf`, `lastname_m14_invitation.pdf`, `lastname_m14_ledger.pdf` |
 | **Location** | Brightspace → Assignments → M14 |
+| **Instructor Request Record** | Opens the plan PDF; every `IR-M14-##` request from the M13 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -166,9 +196,23 @@ is a missed audience.
 | **Going public** (10) | Invitation posted; every programme detail copied exactly; screenshot submitted (9–10) | Posted, one detail paraphrased (7–8) | Posted late or incomplete (4–6) | Not posted (0–3) |
 | **Craft & ledger** (10) | Plan readable and complete; ledger rows name real verification steps (9–10) | Complete, one row loose (7–8) | Ledger thin (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
+**Carry-forward adjustment (course decision D80; applies to the M14 milestone score only).**
+Let `U` be the number of numbered `IR-M14-##` requests from the M13 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M14 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
+
 ---
 
-## Three Traps
+## Four Traps
 
 1. **The estimated word count.** You think the thirty-second version is about
    seventy words. It is a hundred and ten, and in the room it runs fifty seconds,
@@ -179,6 +223,10 @@ is a missed audience.
 3. **The remembered room number.** You post the invitation from memory, the
    programme says a different hall, and the people you invited spend your session
    looking for you. Copy the programme entry.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

@@ -4605,3 +4605,105 @@ propagation. D79 touches none of them. It does sharpen one of D74's open items:
 with both the SRL role and the notebook contract retired, **the only graded live
 performance left is the M15 Expo presentation** — 30% of a 12-point component, so
 3.6 course points.
+
+## D80 — Instructor review requests travel into the next milestone and are graded: the Instructor Request Record (2026-09-15)
+
+**Ruling.** Beginning with **M4**, every milestone submission carries the
+specific requests Professor Moreira issued when reviewing the immediately
+preceding milestone. The requests appear in the Brightspace feedback and in the
+mentoring email attached to that review, numbered `IR-MNN-##` where `MNN` is the
+milestone in which they are graded (the M3 review issues `IR-M04-01`,
+`IR-M04-02`, …). They are collected in one student-visible **Instructor Request
+Record** that opens the next artifact right after its version line, and that
+record is graded as part of the next milestone score.
+
+M1 has no previous review and therefore no record. For the 2026 Fall transition
+M1, M2, and M3 remain under the contracts published when they were submitted;
+the first graded record is M4, carrying the requests from the M3 review. An M3
+revision inside the seven-day window is rescored under the M3 rubric only.
+
+**What counts as a graded request.** Only a numbered `IR-` request enters the
+adjustment. Each states one observable action, why it matters, its completion
+check, and whether it is shared or individual. The same request repeated on
+both surfaces keeps one ID and counts once. General comments and longer-horizon
+advice are advice, never hidden grading requirements. A request can reduce a
+score only if its numbered wording reached the student at least 48 hours before
+that milestone's deadline; a later request is reissued under a new target ID.
+
+**What counts as addressed.** The student either completes the request and
+gives an exact location in the current submission, or does not adopt it and
+gives a specific scientific reason grounded in evidence, design, ethics or
+permissions, or feasibility, together with the choice made instead. A direct
+reason counts even when the instructor would choose differently; the quality of
+the choice is judged by the ordinary rubric, once. A missing row, an
+unlocatable "done", or "I disagree" without a reason is unaddressed.
+
+**The mechanism.** Let `U` be the number of unaddressed numbered requests. After
+the existing rubric, hard caps, and late rule are applied:
+
+`recorded milestone score = max(0, adjusted score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty per milestone. Where the
+milestone is revision-eligible the deduction follows the standing revision rule;
+M13 stays terminal. At M12 the adjustment touches only the M12 process score in
+Milestone Deliverables, never Peer Review; at M13 only the process score, never
+poster quality or Instructor/TA Evaluation; at M15 only the written reflection,
+never the live Expo presentation.
+
+**Why this mechanism.** Three designs were compared with Codex (partner run,
+gpt-5.6-sol, max, read-only): a new 10-point criterion, a bounded post-rubric
+deduction, and a Craft cap or return-for-completion rule. The bounded deduction
+was chosen because it keeps the five-virtue rubric architecture and every
+authored weight intact, works identically across sixteen differently weighted
+briefs and the M12/M13/M15 split scores, makes every numbered request
+consequential, and protects scientific judgment through the reasoned
+non-adoption route. Each milestone is worth 2.0625 course points, so one
+unaddressed request costs about 0.10 course point and the cap about 0.41. The
+new-criterion design would have taken ten points from substantive rows in
+different places in different briefs; the cap design would have varied with each
+brief's Craft weight and stacked awkwardly on the ledger return rule.
+
+**Why the rule at all.** The M1–M3 cycles showed feedback detaching from the
+next artifact: requests made in the M2 review (a data go/no-go table, a field
+card, the compass vocabulary, a separate ledger) reappeared unanswered at M3.
+The record makes feedback part of the visible research chain: students may carry
+it out or defend a better choice, but may not answer it with silence.
+
+**What does NOT change.** The Final Project shares (33 / 12 / 6 / 12 / 12), the
+equally weighted mean over M1–M16, every rubric row and weight, every hard cap
+and blocking gate, the late rule, the seven-day revision rule, and the AI
+Research Ledger rule (Craft 0 and return) are untouched. No new Final Project
+component is created; `planning/BOOK_ASSESSMENTS.yml` keeps its authored
+scientific criteria because this is a course-level post-rubric adjustment, not a
+book checkpoint. The milestone handout PDFs, which are book-first, do not
+change.
+
+**Surfaces.** All sixteen briefs in `_research_project/2026Fall/` gain the
+student-visible rule: a clause in the submission table, a numbered component
+(or the M1–M3 transition exception), a Definition of Done or Submission
+Expectations row, the carry-forward adjustment after the rubric or process
+table, a Penalties bullet where a Penalties section exists, and a pitfall
+("The invisible response"); M11, M12, and M14 rename Three Traps to Four Traps.
+While the files were open, three stale component shares were corrected (M12
+Peer Review 5% → 6%; M13 and M15 Poster Presentation 10% → 12%) and M15's
+rubric introduction now says "defense revision record" instead of
+"carry-forward record", so two different records no longer share a name. The
+canonical rule is recorded in `planning/ASSESSMENT_ARCHITECTURE.md`,
+`_research_project/2026Fall/final_project_grading_and_project_modes.md`,
+`CLAUDE.md`, and this entry; the student announcement is
+`_announcements/2026-09-15_instructor_request_record.md`.
+
+**Instructor operating rule.** Every review ends with one block, "Requests to
+carry forward to MNN (graded in MNN)", listing the numbered requests with Do /
+Why / Completion check / Scope; the mentoring email reproduces the same IDs and
+wording. A request added by email that is not yet on Brightspace gets the next
+ID and is posted as a dated Brightspace addendum. Never grade an unnumbered
+comment as a carry-forward request. During the compressed M11 → M12 → M13
+sequence, return the block fast enough to meet the 48-hour notice or roll the
+request forward.
+
+**⚠ Action for Davi, outside the repository.** Post the announcement and update
+the M4 Brightspace instructions before the Fri Sep 18 studio; enter the M3
+feedback with its `IR-M04-##` block for each student (the private feedback files
+already carry it); tell students in class on Wed Sep 16 that the rule begins
+with M4.

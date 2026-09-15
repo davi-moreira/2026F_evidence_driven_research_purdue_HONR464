@@ -41,7 +41,7 @@ always preserves at least three active projects, so every student reviews at
 least two other live projects. Group members do not confer before submitting
 their own reviews, and each student is scored individually. The **M12 milestone
 score** is one of the sixteen scores averaged
-inside **Milestone Deliverables**. The separate **Peer Review** component (5%
+inside **Milestone Deliverables**. The separate **Peer Review** component (6%
 of your course grade) scores the quality of your criticism using
 the rubric below. The same score is not entered twice, and neither score
 evaluates your own poster.
@@ -56,7 +56,7 @@ class, in a silent round, and finished in Friday's studio.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. |
-| 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **individual response record** on the sheets your project received: each finding ranked blocking or optional, each blocking finding paired with the repair you made or endorsed, and at least one finding you rejected with the reason you rejected it. |
+| 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **individual response record** on the sheets your project received: each finding ranked blocking or optional, each blocking finding paired with the repair you made or endorsed, and at least one finding you rejected with the reason you rejected it. Opens with the **Instructor Request Record** (Component 3), which is graded under the carry-forward adjustment. |
 
 ---
 
@@ -116,6 +116,35 @@ Where the same wrong inference appears on two independent sheets, say so. That
 recurrence is the strongest signal you will get before the Expo, because it is
 two readers failing the same way without having discussed it.
 
+### 3. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open `lastname_m12_response.pdf`, before the response record, with an **Instructor Request
+Record**. Copy every request numbered `IR-M12-##` from my review of M11
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M12-01` | copy the request as I wrote it | M11 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M12-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M12.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -130,6 +159,7 @@ two readers failing the same way without having discussed it.
 | **Response record** | Findings ranked; blocking findings paired with repairs; at least one reasoned rejection |
 | **Recurrence** | Any defect appearing on two independent sheets is identified as such |
 | **Location** | Brightspace → Assignments → M12 |
+| **Instructor Request Record** | Opens the response-record PDF; every `IR-M12-##` request from the M11 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -144,6 +174,20 @@ This score is entered only as M12 within **Milestone Deliverables**.
 | Repairs carried forward into the next poster version, with the version reason recorded | 15 |
 | Required notebook work, AI Research Ledger entry, and dossier update present | 15 |
 | **Total** | **100** |
+
+**Carry-forward adjustment (course decision D80; applies to the M12 process score entered in Milestone Deliverables only).**
+Let `U` be the number of numbered `IR-M12-##` requests from the M11 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M12 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone. It does not change the separate Final Project Peer Review score or any descriptor in the Peer Review rubric below.
 
 ## Peer Review rubric (100 points)
 
@@ -160,7 +204,7 @@ checkpoint arrived on time.
 
 ---
 
-## Three Traps
+## Four Traps
 
 1. **The conferring round.** You glance at a neighbour's sheet to check whether
    you are being too harsh, and independent checks collapse into one. Write
@@ -171,6 +215,10 @@ checkpoint arrived on time.
 3. **The agreeable response record.** You accept every sheet's findings
    wholesale, which feels generous and tells your reader nothing about which
    criticism was actually right. Reject something, on the merits, in writing.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

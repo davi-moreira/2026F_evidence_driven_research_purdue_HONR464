@@ -543,6 +543,29 @@ category is never permission to delete a quiz file or a quiz script.
   on **Milestone Deliverables (20 → 33 course points)**, because the 20 came off
   weekly collected work and M1–M16 is the weekly deliverable chain that remains.
 
+## The Instructor Request Record — review requests carry into the next milestone (D80, 2026-09-15)
+
+From **M4** on, every milestone artifact opens, right after its version line,
+with an **Instructor Request Record**: one row per numbered request
+(`IR-MNN-##`, where `MNN` is the milestone in which the request is graded)
+issued in the instructor's review of the previous milestone, on Brightspace and
+in the mentoring email. A request is **addressed** when it is done and located
+in the artifact, or not adopted for a specific scientific reason with the choice
+made instead. After the rubric, its hard caps, and the late rule:
+
+`recorded milestone score = max(0, adjusted score − min(20, 5 × U))`
+
+where `U` is the number of unaddressed numbered requests. Five points each,
+capped at twenty per milestone; revision-eligible milestones follow the standing
+revision rule; M13 stays terminal. At M12 the adjustment touches only the process
+score (never Peer Review), at M13 only the process score (never poster quality or
+Instructor/TA Evaluation), at M15 only the written reflection (never the live
+Expo presentation). A request counts only if its numbered wording reached the
+student at least 48 hours before the deadline. M1 has no record; the 2026 Fall
+M1–M3 scores carry no deduction. No weight, component, rubric row, hard cap, or
+the AI Research Ledger rule changes. Full ruling: `_project_docs/DECISIONS.md`
+D80; student-facing text: every brief in `_research_project/2026Fall/`.
+
 ## Rubric DNA — five virtues, one menu
 
 Every milestone rubric in `_research_project/2026Fall/` is a **100-point,

@@ -49,7 +49,7 @@ The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m06_data_governance.pdf`** *or* a shared Colab notebook link | The seven parts below: your acquisition route and provenance record, your data-management record, the route-specific permission recheck, your measurement specification (concept → construct → indicator, with the reliability check's result and the validity argument), the Contract version that settles your operationalization, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
+| 1 | **`lastname_m06_data_governance.pdf`** *or* a shared Colab notebook link | The seven parts below: your acquisition route and provenance record, your data-management record, the route-specific permission recheck, your measurement specification (concept → construct → indicator, with the reliability check's result and the validity argument), the Contract version that settles your operationalization, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. Opens with the **Instructor Request Record** (Component 8), which is graded under the carry-forward adjustment. |
 | 2 | **EDR\|AI "It is your turn" — ch. 20, ch. 21** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -278,6 +278,35 @@ measurement specification, permission recheck, and the Contract version that
 settled your operationalization. Name the file or section in your dossier
 where each now lives.
 
+### 8. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M06-##` from my review of M5
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M06-01` | copy the request as I wrote it | M5 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M06-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M06.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -301,6 +330,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio with your AI assistant |
 | **Filename** | `lastname_m06_data_governance.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M06 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M06-##` request from the M5 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -319,6 +349,20 @@ rails, and defensible as one governed-data record.
 | **Verification of AI-assisted parts** (20) | Every AI claim about your data verified against the file itself; the permission recheck run in the form your route requires; every ledger row's verification method named and non-vague (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but the against-the-file check not named (8–13) | An AI description of your dataset, or an AI-asserted licence, pasted in and never checked against the file (0–7) |
 | **Uncertainty & measurement error** (20) | Measurement error stated alongside sampling uncertainty; the construct–indicator gap named with what it could cost the claim; the boundary sentence says who the measure never reaches; the Contract version carries a usable reason (18–20) | Error, gap, and boundary present; one stated loosely, or the version reason thin (14–17) | Measurement error mentioned but not connected to the claim, or the gap declared closed by assertion (8–13) | No measurement-error statement, or a settled operationalization with no version and no reason (0–7) |
 | **Craft, ledger & communication** (10) | On-format, on-time; the four pieces assembled as one record a reader can follow; tables complete and readable; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed record (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M06-##` requests from the M5 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M06 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -354,6 +398,10 @@ days of feedback recovers up to half the lost points.
   changes what your estimand refers to and leaves no record that it happened.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -383,6 +431,10 @@ days of feedback recovers up to half the lost points.
    simply writing the new one down. Your estimand now refers to something
    else, and nothing in the record says so. Issue the Contract version, name
    the field that stops being provisional, and give the reason.
+6. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

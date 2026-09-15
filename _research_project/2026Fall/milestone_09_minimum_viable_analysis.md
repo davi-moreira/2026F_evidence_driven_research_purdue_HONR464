@@ -47,7 +47,7 @@ output or cut before you submit.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **The research note**: a stand-alone account of your study, carrying the question, the method in one paragraph, the results with their uncertainty, the bounded headline claim, the limitations, and the references. This is the graded core. |
+| 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **The research note**: a stand-alone account of your study, carrying the question, the method in one paragraph, the results with their uncertainty, the bounded headline claim, the limitations, and the references. This is the graded core. Opens with the **Instructor Request Record** (Component 6), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim-to-evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
 | 3 | **EDR\|AI "It is your turn" — ch. 28, ch. 29, ch. 30, ch. 31** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
@@ -258,6 +258,35 @@ Dossier**: your **bounded research note** and your **claim-to-evidence table**
 now exist, and your **AI disclosure statement** is on record. Name the file or
 section where each one lives.
 
+### 6. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M09-##` from my review of M8
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M09-01` | copy the request as I wrote it | M8 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M09-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M09.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -282,6 +311,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio (Oct 23) with your AI assistant; note red-teamed by a peer; the trace-or-cut drill run on every claim; submitted by Sunday, Oct 25 |
 | **Filenames** | `lastname_m09_note.pdf`, `lastname_m09_claims.pdf` (or the equivalent sections of one file or notebook) |
 | **Location** | Brightspace → Assignments → M09 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M09-##` request from the M8 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -302,6 +332,20 @@ the milestone's own product present and defensible.
 | **Verification & robustness** (25) | Every table row names a real check, and at least one was reopened and spot-checked; the disclosure is drafted from the ledger and names tool, task, verification, and what went unverified; the version line carries a usable reason (23–25) | Checks mostly named; one row vague, or the version reason decorative (18–22) | Generic "I checked it" entries, or a disclosure written from memory (11–17) | A number with no path back to a cell, or a claimed verification that never happened (0–10) |
 | **Uncertainty & limitations** (20) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (18–20) | Both present; one stated loosely (14–17) | A point estimate with no interval somewhere, or limitations gestured at generically (8–13) | No uncertainty stated, or the finding written as settled certainty (0–7) |
 | **Craft, ledger & communication** (15) | On-format, on-time, one to two pages a stranger can follow without you; red-team feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces, or studio feedback ignored (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M09-##` requests from the M8 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M09 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -331,6 +375,10 @@ days of feedback recovers up to half the lost points.
   or cut.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -351,6 +399,10 @@ days of feedback recovers up to half the lost points.
    names tool and task and verification, it includes what you sent to tools, and
    it names what you did not verify. If the ledger has no row, the disclosure has
    nothing honest to draw on, and the Craft rule (scored 0, returned) applies.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

@@ -51,7 +51,7 @@ and an unreviewed draft has nothing to revise from before Sunday's lock.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m11_posterdraft.pdf`** | Your **first full poster draft**, built on the course template and sized to the URC print spec. Every block present — title and author, the question, the design and data, the result with its uncertainty, the boundary, and the AI-use disclosure — even where a block is still rough. |
-| 2 | **`lastname_m11_trace.pdf`** *or* the same as notebook sections | Your **traceability sweep**: every number printed on the draft, listed with the notebook and cell that produced it. Any number you cannot trace is listed and marked as blocking. |
+| 2 | **`lastname_m11_trace.pdf`** *or* the same as notebook sections | Your **traceability sweep**: every number printed on the draft, listed with the notebook and cell that produced it. Any number you cannot trace is listed and marked as blocking. Opens with the **Instructor Request Record** (Component 5), which is graded under the carry-forward adjustment. |
 | 3 | **`lastname_m11_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for this milestone, including the reach-check prompt from Monday's lecture and the Poster Critic run from Wednesday's laboratory. |
 
 Bring a printed or screen-shareable copy to class as well — the review round
@@ -129,6 +129,35 @@ Two AI-assisted steps, both interrogated rather than accepted:
 
 Both go in the ledger with the verification method named.
 
+### 5. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open `lastname_m11_trace.pdf`, before the traceability sweep, with an **Instructor Request
+Record**. Copy every request numbered `IR-M11-##` from my review of M10
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M11-01` | copy the request as I wrote it | M10 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M11-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M11.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -146,6 +175,7 @@ Both go in the ledger with the verification method named.
 | **Timing** | Submitted at the start of Wednesday's class — the review round depends on it |
 | **Filenames** | `lastname_m11_posterdraft.pdf`, `lastname_m11_trace.pdf`, `lastname_m11_ledger.pdf` |
 | **Location** | Brightspace → Assignments → M11 |
+| **Instructor Request Record** | Opens the traceability PDF; every `IR-M11-##` request from the M10 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -159,9 +189,23 @@ Both go in the ledger with the verification method named.
 | **Craft, ledger & disclosure** (20) | Template and print spec met, legible at print scale, redundant encoding where colour carries meaning; complete ledger; AI-use disclosure block present (18–20) | Minor spec or accessibility lapse; ledger complete (14–17) | Off-spec or hard to read at size (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
 | **Readiness for review** (10) | Submitted at the start of class, complete enough that every reader from another active project can produce an actionable finding (9–10) | On time, one block too thin to review (7–8) | Late to the review round (4–6) | Not submitted in time to be reviewed (0–3) |
 
+**Carry-forward adjustment (course decision D80; applies to the M11 milestone score only).**
+Let `U` be the number of numbered `IR-M11-##` requests from the M10 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M11 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
+
 ---
 
-## Three Traps
+## Four Traps
 
 1. **The board built inside the template.** You open the template first, and the
    layout it offers becomes the argument you make. Draw the six blocks on paper
@@ -172,6 +216,10 @@ Both go in the ledger with the verification method named.
 3. **The compliment mistaken for a review.** You ask a tool whether the poster
    looks good and it says yes. Ask instead what a visitor would conclude from the
    board alone — that answer is usable, and it is often not the claim you made.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

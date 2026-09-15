@@ -541,6 +541,31 @@ the material.
 
 ---
 
+## 🚨 CRITICAL RULE — The Instructor Request Record  *(D80 — review requests are graded at the next milestone)*
+
+From **M4** on, every milestone artifact opens, right after its version line,
+with an **Instructor Request Record**: one row per numbered request (`IR-MNN-##`,
+`MNN` = the milestone in which it is graded) issued in the review of the previous
+milestone, on Brightspace and in the mentoring email. Addressed = done and
+located, or not adopted for a specific scientific reason with the choice made
+instead. **Each unaddressed request deducts 5 points from that milestone score,
+capped at 20**, after the rubric, hard caps, and late rule; revision-eligible
+milestones follow the standing revision rule; M13 stays terminal; at M12/M13/M15
+only the process or written score is touched. Only numbered requests count, and
+a request counts only if it reached the student 48 hours before the deadline.
+M1 has no record; the 2026 Fall M1–M3 scores carry no deduction.
+
+**Every review therefore ends with one block, "Requests to carry forward to MNN
+(graded in MNN)"**, listing the numbered requests with Do / Why / Completion
+check / Scope, and the mentoring email reproduces the same IDs and wording.
+Never grade an unnumbered comment as a carry-forward request. The
+`honr464-milestone-review` skill's feedback files carry this block. Canonical
+text: `_project_docs/DECISIONS.md` D80, `planning/ASSESSMENT_ARCHITECTURE.md`,
+and every brief in `_research_project/2026Fall/`; the book-first milestone PDFs
+do not change.
+
+---
+
 ## 🚨 CRITICAL RULE — Dataset Distribution  *(D15; unchanged)*
 
 `notebooks/data/` is the single canonical dataset folder; everything ships in
@@ -849,7 +874,15 @@ material.
 
 ---
 
-**Version:** 7.4 — D79, the lecture notebook stops being collected and the Final Project
+**Version:** 7.5 — D80, the Instructor Request Record (2026-09-15, DECISIONS.md D80): from **M4**
+on, every milestone artifact opens with a record answering the numbered `IR-MNN-##` requests
+issued in the previous review; **each unaddressed request deducts 5 points, capped at 20 per
+milestone**, after the rubric, hard caps, and late rule; a defended non-adoption counts as
+addressed; M1–M3 carry no deduction this term. All sixteen briefs, `ASSESSMENT_ARCHITECTURE.md`,
+the Final Project guidelines, and `_announcements/2026-09-15_instructor_request_record.md` carry
+the rule; three stale component shares in M12/M13/M15 were corrected (6% / 12% / 12%). No weight,
+rubric row, hard cap, or the ledger rule changes.
+(7.4 — D79, the lecture notebook stops being collected and the Final Project
 takes the whole SRL weight (2026-09-04, DECISIONS.md D79): the **Lecture Notebooks 20%
 category is RETIRED**, five days after D74 created it. Nothing from a Monday or Wednesday
 lecture is collected or graded any more — **not the notebook, not the ungraded lab-meeting
@@ -1191,5 +1224,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

@@ -335,6 +335,16 @@ Dossier**: your charter now carries a working agreement, an open AI Research
 Ledger, and a declared question with its kind, its reach, and its claim boundary.
 Name the file or section where each now lives.
 
+### 11. Carry-forward of instructor review requests
+
+<!-- d80-instructor-request-record -->
+**2026 Fall transition.** M2 was submitted before this rule took effect. No
+**Instructor Request Record** was required, and no carry-forward deduction
+applies to the original or revised M2 score. From M4 on, every milestone opens
+with that record and answers the numbered `IR-` requests from the review
+immediately before it (course decision D80, 2026-09-15).
+
+
 ---
 
 ## Submission Expectations
@@ -346,6 +356,7 @@ Name the file or section where each now lives.
 | **Style** | Plain language; version line and date at the top; the two halves clearly separated and each component headed; every technical term used as this week's lessons define it; any source retrievable; any code cell you keep seeded with `SEED = 464` |
 | **Filename** | `lastname_m02_rules_question.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M02 |
+| **Instructor Request Record** | Not required for the 2026 Fall M2 submission or revision; graded use begins with M4 |
 
 ---
 
@@ -362,6 +373,8 @@ Milestone 2 assesses. Both halves are graded, and neither can carry the other.
 | **Verification of AI-assisted parts** (20) | The ledger is open with retrospective rows, one verified factual hinge, and one complete SDIIVDD run whose outcome is on record; every verification method is named and non-vague (18–20) | Ledger present; one verification method vague or one exchange unlogged (14–17) | Ledger thin, or AI outputs used with verification not named, or the SDIIVDD run recorded with no outcome (8–13) | AI output reproduced with no verification anywhere, or the kind and reach taken from a tool and never checked against the definitions (0–7) |
 | **Uncertainty & claim boundary** (20) | All three boundary sentences present; the forbidden upgrade named precisely as one of the three (silent upgrade, leakage, after-therefore-because); the uncertainty-and-limitations line says what is imprecise, unmeasured, and uncovered (18–20) | Boundary present; the forbidden sentence or the limitations line stated loosely (14–17) | Only the defensible sentence, with no forbidden upgrade, or no limitations line (8–13) | No boundary, or a claim already upgraded past its reach with no caveat (0–7) |
 | **Craft, version, ledger & communication** (10) | Dated version zero with a usable reason; both halves separated and complete; the cross-read reported; on-format, on-time; the stranger-test record quotes what your reader misunderstood and names the revision you made because of it; dossier line present (9–10) | Minor format lapses, or a version whose reason is decorative; the stranger-test record names the misunderstanding but not the revision; ledger complete (7–8) | Missing pieces, no version line, no cross-read, or a stranger-test record that reports "it was clear" with nothing your reader actually said (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+
+**2026 Fall transition:** no carry-forward adjustment applies to M2 (D80).
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -407,6 +420,9 @@ days of feedback recovers up to half the lost points.
    only worth writing if a reader could use it to predict what you would refuse to
    delegate next week, and if the cross-read shows it covering the decisions your
    declaration actually made.
+4. **Turning a new rule into a retroactive deduction.** The Instructor Request
+   Record begins with M4. Feedback may still improve this work, but it creates no
+   new deduction on an M2 score after submission.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

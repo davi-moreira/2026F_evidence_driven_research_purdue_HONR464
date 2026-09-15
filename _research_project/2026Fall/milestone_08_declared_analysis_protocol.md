@@ -48,7 +48,7 @@ the room, and hand over your pending register for the flags you did not.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *or* **`lastname_m08_audit.ipynb`** | The eight-part audit record below, carried in the notebook itself or in an optional companion **`lastname_m08_audit.pdf`**: your dated pre-list of three checks with the attack each one answers, the run and what survived, your licensed null check, your reworded claim with its range and compass boundary, the verified AI-review trail, the one limitation no check could fix, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m08_audit.ipynb`** | The eight-part audit record below, carried in the notebook itself or in an optional companion **`lastname_m08_audit.pdf`**: your dated pre-list of three checks with the attack each one answers, the run and what survived, your licensed null check, your reworded claim with its range and compass boundary, the verified AI-review trail, the one limitation no check could fix, your AI Research Ledger rows, and your dossier line. This is the graded artifact. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m08_meeting_request.pdf`** | A PDF copy of the email you sent Professor Moreira proposing dates and times for your **Round 02 mentor meeting** (to be held **Mon Nov 2 to Sat Nov 7**). Same three things as the first request, plus one line naming what has changed since Round 01. Send it early: that window sits inside the busiest stretch of the conference block. |
 | 3 | **EDR\|AI "It is your turn" — ch. 24, ch. 25, ch. 26, ch. 27** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
@@ -336,6 +336,35 @@ in your **Research Project Dossier**: the robustness and diagnostic record now
 exists, together with the reworded claim it licenses and the limitation it could
 not remove. Name the file or section where each now lives.
 
+### 9. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M08-##` from my review of M7
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M08-01` | copy the request as I wrote it | M7 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M08-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M08.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -364,6 +393,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required reviewer role logged; submitted by Sunday, Oct 18 |
 | **Filename** | A shared Colab link or `lastname_m08_audit.ipynb`; optional `lastname_m08_audit.pdf` companion |
 | **Location** | Brightspace → Assignments → M08 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M08-##` request from the M7 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -381,6 +411,20 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Verification & adjudication** (30) | Flags ranked by damage if true, with the most damaging one settled by a data check whose output is shown; every unverified flag on the pending register with its check and its date; the loudest wrong flag named where a check produced one; the null check run with its prediction written first; every AI-assisted step ledgered with a non-vague verification (27–30) | The top flag settled and the register complete; one check, one date, or one prediction recorded loosely (21–26) | A flag answered by argument rather than by a check, a pending flag left off the register, or a null check run without a prior prediction (14–20) | Reviewer flags pasted in or dismissed unverified, an unrun check reported as checked, or no null check at all (0–13) |
 | **Uncertainty & claim boundary** (20) | Each panel's spread is reported as a direction plus a range and never as an interval or a cross-panel stitch; the null check is written up in its own currency, a permutation check against its justified spread with the exchangeability argument stated or a negative control as its own estimate with its own uncertainty and sensitivity; the verdict bounds concern to what that check could detect; any complete-case contrast is labeled honestly; the remaining limitation is named (18–20) | Present; one of the four guard-rails stated loosely (14–17) | The spread and the uncertainty blurred together, a span stitched across two panels, or the negative test judged against exact zero (8–13) | The spread sold as an uncertainty interval, a negative control collapsed into a pile of null draws, a quiet reading reported as a "clean pass", a complete-case contrast reported as the effect among stayers, or no limitation at all (0–7) |
 | **Craft, ledger & communication** (15) | Versioned with its reason, on-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed record (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M08-##` requests from the M7 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M08 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -413,6 +457,10 @@ days of feedback recovers up to half the lost points.
   prevent.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -460,6 +508,10 @@ days of feedback recovers up to half the lost points.
    incompleteness. It is not. Pending, with the check named and dated, is a
    finding about your own audit and scores as one; a fictional verification is
    the failure this milestone catches fastest.
+10. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

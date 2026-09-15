@@ -79,6 +79,15 @@ The **Milestone Deliverables** score is
 M = \frac{M1 + M2 + \cdots + M16}{16}.
 \]
 
+Each `Mn` is the milestone's recorded score after its own rubric, hard caps, late
+rule, and, from **M4** on, the **carry-forward adjustment** (D80): the artifact
+opens with an **Instructor Request Record** answering every numbered `IR-Mn-##`
+request from the previous review, and each unaddressed request deducts 5 points
+from that milestone's score, capped at 20. A request is addressed when it is
+done and located, or not adopted for a specific scientific reason with the choice
+made instead. The adjustment never touches Peer Review, the poster-quality
+score, the live Expo presentation, or Instructor/TA Evaluation.
+
 All milestones use a 100-point rubric and therefore carry equal weight in this
 mean. An approved group submits one shared artifact naming every member. Shared
 rubric rows receive a common score; each member's AI Research Ledger and every

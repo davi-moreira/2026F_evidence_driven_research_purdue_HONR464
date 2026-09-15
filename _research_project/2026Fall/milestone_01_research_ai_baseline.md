@@ -264,6 +264,16 @@ problem, and your AI-management record holds your first ledger rows. Name the
 file or section where each now lives. That line is your bridge into M2, where you
 set the rules you will work under and turn this problem into a declared question.
 
+### 9. Carry-forward of instructor review requests
+
+<!-- d80-instructor-request-record -->
+M1 opens the milestone chain. There is no earlier review to carry forward, so no
+**Instructor Request Record** is required here and no carry-forward adjustment
+applies. From M4 on, every milestone opens with that record and answers the
+numbered `IR-` requests from the review immediately before it (course decision
+D80, 2026-09-15).
+
+
 ---
 
 ## Submission Expectations
@@ -275,6 +285,7 @@ set the rules you will work under and turn this problem into a declared question
 | **Style** | Plain prose; the version line and date at the top; one labeled section per component; every source retrievable; any code cell you keep seeded with `SEED = 464` and rerunnable top to bottom |
 | **Filename** | `lastname_m01_curiosity.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M01 |
+| **Instructor Request Record** | Not applicable at M1: there is no previous milestone review |
 
 ---
 
@@ -294,6 +305,8 @@ change your mind.
 | **Verification of AI-assisted parts** (20) | Every AI-assisted step carries a ledger row with a named, non-vague verification method; anything the tool asserted as fact was retrieved and confirmed by you (18–20) | Ledger rows present; one verification method vague or one step unlogged (14–17) | AI output used with no verification named, or a row whose verification says "looks right" (8–13) | AI output reproduced with no verification named anywhere (0–7) |
 | **Uncertainty & limitations** (15) | The revising evidence is concrete and could actually be obtained; the expected answer is stated; the surprised person is real and named; the feasibility score admits what is hard (13–15) | Revising evidence and expected answer present, stated loosely (10–12) | Revising evidence vague ("better data"), or no surprised person named, or feasibility left unexamined (5–9) | No revising evidence and no limitation named anywhere (0–4) |
 | **Craft, version, ledger & communication** (15) | Dated version zero with a reason a reader could use to reconstruct your thinking; on-format, on-time; three ✓ readiness marks shown; complete ledger row; 30-second pitch delivered warm and on time (13–15) | Minor format lapses, or a version whose reason is decorative; ledger complete; pitch with a small overrun (10–12) | Missing pieces, unclear screenshot, no version line, or a rushed pitch (5–9) | Missing AI Research Ledger row (Craft scored 0, submission returned) (0–4) |
+
+**Carry-forward adjustment:** none at M1, because there is no previous milestone (D80).
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -335,6 +348,8 @@ week as much as points to reclaim.
    because no evidence could contradict it, which is exactly why it is not a
    starting belief. Write the version you would defend at dinner, then write what
    would make you take it back.
+4. **Looking for a previous review at M1.** There is none. M1 opens the chain, so
+   do not invent an Instructor Request Record for it.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

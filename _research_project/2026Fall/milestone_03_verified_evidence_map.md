@@ -289,6 +289,17 @@ candidate list, your search log, your verified registry, your three-zone map wit
 its bounded gap sentence, and your revised declaration. Name the file or section
 where each now lives.
 
+### 9. Carry-forward of instructor review requests
+
+<!-- d80-instructor-request-record -->
+**2026 Fall transition.** M3 was submitted before this rule took effect. No
+**Instructor Request Record** was required, and no carry-forward deduction
+applies to the original M3 submission or to an M3 revision submitted within the
+standing seven-day revision window. The numbered requests issued with the M3
+review carry IDs beginning `IR-M04-` and are graded first at M4 (course decision
+D80, 2026-09-15).
+
+
 ---
 
 ## Definition of Done
@@ -313,6 +324,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio (Sep 11) with your AI assistant; submitted by Sunday, Sep 13 |
 | **Filename** | `lastname_m03_evidence_base.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |
+| **Instructor Request Record** | Not required for the original 2026 Fall M3 submission or its revision; the requests from the M3 review are carried into M4 |
 
 ---
 
@@ -330,6 +342,9 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Verification of AI-assisted parts** (20) | Every AI-assisted step (the AI sweep, relation drafting, the gap red-team) has a ledger row with a named, non-vague verification method; each judgment is defended in your words, not the tool's; failed retrievals kept as dropped rows (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used with verification unnamed (8–13) | An AI citation carried into the registry with no retrieval, or a map assembled from AI suggestions never checked against the sources (0–7) |
 | **Uncertainty, contestation & claim boundary** (20) | The gap is stated in bounded form, never as "nothing is known"; the contested zone names what the field disagrees about and what your project inherits; the count of verified sources and what the map cannot see are both named (18–20) | Boundary present; the gap sentence or the source count stated loosely (14–17) | An absolute-absence claim ("no one has studied this"), or a contested zone flattened into consensus (8–13) | No boundary at all, or a claim about the whole field made from a handful of retrieved sources (0–7) |
 | **Craft, version, ledger & communication** (10) | Versioned with its reason, on-format, on-time, a clear gallery-walk presentation, one challenge genuinely incorporated with a note, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; version and ledger complete (7–8) | Missing pieces, challenge not incorporated, or a rushed walk (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+
+**2026 Fall transition:** no carry-forward adjustment applies to M3 or to an M3
+revision. The first adjusted score is M4 (D80).
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -379,6 +394,10 @@ days of feedback recovers up to half the lost points.
    milestone exists to prevent. Either the evidence changed your question, or you
    can name the sources that could have changed it and say why they did not. A
    silent "no change" reads as a search that was never really run.
+4. **Turning a new rule into a retroactive deduction.** The Instructor Request
+   Record begins with M4, using the `IR-M04-##` requests in your M3 feedback.
+   Feedback may still improve an M3 revision, but it creates no new deduction on
+   an M3 score.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

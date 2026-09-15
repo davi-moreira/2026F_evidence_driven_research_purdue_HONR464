@@ -36,7 +36,7 @@ checked it.
 This milestone records the public test and what you learned from it. The locked
 poster from M13 and your live **Expo presentation** on Tuesday, November 17
 together supply the Final Project's **Poster Presentation at the Purdue
-Undergraduate Research Conference** component (10% of your course grade):
+Undergraduate Research Conference** component (12% of your course grade):
 `70%` is the M13 poster-quality score and `30%` is the live-presentation score
 defined below. For
 an approved group, the poster-quality portion is shared, but every member must
@@ -62,7 +62,7 @@ pattern, and write the revision that pattern licenses.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m15_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. |
+| 1 | **`lastname_m15_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
 
 The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
 of Final Project's **Poster Presentation at the Purdue Undergraduate Research
@@ -324,6 +324,35 @@ check. Name
 the file or section where each now lives. That line is your bridge into M16, where
 you cold-run and red-team a classmate's anonymized package over the break.
 
+### 11. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M15-##` from my review of M14
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M15-01` | copy the request as I wrote it | M14 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M15-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M15.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -349,6 +378,7 @@ pre-submission checklist.
 | **Length** | Typically 2–4 pages PDF, or the equivalent notebook sections |
 | **Filename** | `lastname_m15_reflection.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M15 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M15-##` request from the M14 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -371,7 +401,7 @@ score and the second term is each member's own live-presentation score.
 ## M15 milestone reflection rubric (100 points)
 
 This score is entered only as M15 within **Milestone Deliverables** and evaluates
-the written reflection, criticism portfolio, and carry-forward record—not live
+the written reflection, criticism portfolio, and defense revision record—not live
 presentation quality.
 
 Four bands on the course's five shared virtues
@@ -386,6 +416,20 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Verification of AI-assisted parts** (20) | The pattern and any shares are checked against the counts, recomputed or hand-counted rather than felt; every AI-assisted step has a ledger row with a named, non-vague verification method; every revision was decided by you, with any AI-drafted wording checked before acceptance (18–20) | Verification present; one method vague, or one AI step unlogged (14–17) | Counts used but the pattern not verified against them, or AI output accepted without a named check (8–13) | A reported count that does not rerun from the tally, or an AI-drafted reflection, revision, or critique reproduced with no verification (0–7) |
 | **Uncertainty & limitations** (20) | The reflection states what remains untested and names its limits (how few questions were logged, the recall gap); each revision reason says why the evidence licenses that much and no more; the post-release note names any staleness honestly; the self-reflection check names a real weakness (18–20) | Honest reflection, revision reasons, and self-reflection; uncertainty or the warm-room caveat stated loosely (14–17) | Reflection general or performative; a revision reason that asserts rather than argues; limits gestured at but not named (8–13) | "It went great" with no substance, an overcorrection with no evidence behind it, or reception read as certainty about the claims (0–7) |
 | **Craft, ledger & communication** (10) | Versioned with its reason, on-format, on-time; proof of presentation and at least three completed poster reviews attached; post-release note present; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, a thin portfolio, a decorative version reason, or fewer than three poster reviews documented (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+
+**Carry-forward adjustment (course decision D80; applies to the M15 written reflection score entered in Milestone Deliverables only).**
+Let `U` be the number of numbered `IR-M15-##` requests from the M14 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M15 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone. It does not change the separate live Expo presentation score. An M14 request about live delivery is addressed by locating the presentation evidence and explaining the response in this written package.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -420,6 +464,10 @@ November 17 and has **no revision window**.
   regardless of the rest — the course's evidence-integrity rule with teeth.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on the M15 written reflection score; the live Expo presentation score is unchanged (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -442,6 +490,10 @@ November 17 and has **no revision window**.
    communication), points at specific evidence on the poster, and could be checked
    by anyone. A flaw you cannot find on the actual poster is one an AI tool
    imagined for you; cut it before it reaches your portfolio.
+5. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

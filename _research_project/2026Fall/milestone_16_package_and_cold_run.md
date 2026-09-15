@@ -53,7 +53,7 @@ table read and your second clean run).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m16_note.pdf`** *or* a shared Colab notebook link | **Research note v1**: the note opening with its dated **adjudication record**, then the five-move spine revised where the evidence demanded it, the updated claim–evidence table, and your redrafted AI disclosure. This is the graded prose artifact. |
+| 1 | **`lastname_m16_note.pdf`** *or* a shared Colab notebook link | **Research note v1**: the note opening with its dated **adjudication record**, then the five-move spine revised where the evidence demanded it, the updated claim–evidence table, and your redrafted AI disclosure. This is the graded prose artifact. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m16_package.ipynb`** *or* a shared folder / repository link | Your **repaired reusable package**: the seeded notebook, a README a stranger can follow, your data or its access recipe, the environment record, and the licence and permissions note. Every question your cold-runner had to ask you is answered here in writing. |
 | 3 | **`lastname_m16_coldrun.pdf`** *or* a clearly marked README section | The **second clean-run record**: a dated rerun in a fresh environment, performed *after your last change* to the package, showing the headline number and its uncertainty statement coming back, or every discrepancy explained and fixed. |
 | 4 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
@@ -275,6 +275,35 @@ Project Dossier**: your **research note v1** with its adjudication record, your
 claim–evidence table and AI disclosure. Name the file or section where each now
 lives.
 
+### 9. Carry-forward of instructor review requests: the Instructor Request Record
+
+<!-- d80-instructor-request-record -->
+Open this artifact, right after its version line, with an **Instructor Request
+Record**. Copy every request numbered `IR-M16-##` from my review of M15
+(the Brightspace feedback and the mentoring email that came with it), one row
+per request:
+
+| Request ID | Exact request | Source | Your response | Where I can verify it |
+|---|---|---|---|---|
+| `IR-M16-01` | copy the request as I wrote it | M15 feedback or email, dated | **Done:** what you changed. Or **Not adopted:** your scientific reason and the choice you made instead. | file, section, page, figure, table, or cell in this submission |
+
+A request is **addressed** in one of two ways: you completed it and give the
+exact place in this submission where I can verify the change; or you did not
+adopt it and give a specific reason grounded in the evidence, the design, ethics
+or permissions, or the project's feasibility, together with the choice you made
+instead. A defended "no" counts as addressed even when I would have chosen
+differently; the quality of the choice itself is judged by the rubric, once. A
+missing row, a "done" with no locatable change, or "I disagree" with no reason
+is unaddressed.
+
+Only numbered `IR-M16-##` requests count; advice outside the numbered block is
+advice. The same request repeated in Brightspace and in an email keeps one ID
+and counts once. If I issued no numbered requests, write one line: **No numbered
+instructor requests were issued for M16.** For an approved group, one record
+travels with the shared artifact and names the member responsible for each
+response; a request I marked individual is scored for that member only.
+
+
 ---
 
 ## Definition of Done
@@ -298,6 +327,7 @@ pre-submission checklist.
 | **Studio work** | Worked at the Friday studio: your adjudication table read by a peer, and your second clean run performed before you submit by Sunday, Dec 6 |
 | **Filenames** | `lastname_m16_note.pdf`, `lastname_m16_package.ipynb`, `lastname_m16_coldrun.pdf` (or shared links / the equivalent sections) |
 | **Location** | Brightspace → Assignments → M16 |
+| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M16-##` request from the M15 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 
 ---
 
@@ -312,6 +342,20 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 | **Verification** (25) | The headline number and its uncertainty statement rerun clean from the package after your last change; the five sins audited with the found-and-fixed one named; every cold-run question fixed or logged; every ledger row's verification method named and non-vague (22–25) | Reproduces; one part thin (a loose decision log, one vague ledger row) (18–21) | The clean-run record predates a change to the package, or restart-and-run-all needs manual fixes (11–17) | The headline number does not rerun from the package, or an AI-edited claim shipped with no verification (0–10) |
 | **Uncertainty & limitations** (20) | Uncertainty in the same eye-span as every result; limitations re-sized to what the Expo and the cold run revealed; a shrunken claim stated plainly as the system working (18–20) | Both present; one stated loosely (14–17) | The headline without its interval, or limitations generic and unchanged despite contrary findings (8–13) | No uncertainty on the headline, or a caveated finding silently upgraded (0–7) |
 | **Craft, rails & AI Research Ledger** (15) | On-format, on-time; README a stranger can follow; the studio table read weighed; the four rails carried (what you sent to tools disclosed, a row behind every claim, the shipped sentence yours, uncertainty never dropped); complete ledger; dossier line present (14–15) | Minor format lapses; one rail nominal; ledger complete (11–13) | Missing pieces, or a rushed table read (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+
+**Carry-forward adjustment (course decision D80; applies to this milestone score only).**
+Let `U` be the number of numbered `IR-M16-##` requests from the M15 review
+left unaddressed in your Instructor Request Record. After the rubric, its hard
+caps, and any late penalty are applied:
+
+`recorded M16 score = max(0, score − min(20, 5 × U))`
+
+Five points per unaddressed request, capped at twenty. A completed and located
+change is addressed; so is a reasoned decision not to adopt a request, with the
+choice made instead. Where this milestone is revision-eligible, the deduction
+follows the standing revision policy. A request can reduce this score only if
+its numbered wording reached you at least 48 hours before the deadline; a later
+request is reissued for a later milestone.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -346,6 +390,10 @@ days** of feedback recovers up to half the lost points.
   non-reproducing result until a fresh clean run is supplied.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
+- Numbered instructor review request left unaddressed in the Instructor Request
+  Record: −5 points each, up to −20 on this milestone score (D80). A completed,
+  located change or a specific scientific reason for not adopting the request
+  counts as addressed.
 
 ## Common Pitfalls
 
@@ -366,6 +414,10 @@ days** of feedback recovers up to half the lost points.
    Rebuttals belong on the list as much as acceptances, each with a reason you
    could defend aloud; "the reader misread it" is the start of a reason, not the
    whole of one.
+4. **The invisible response.** You changed something because I asked, but the
+   Instructor Request Record does not say where, or it says only "I disagree."
+   Neither can be verified, so both count as unaddressed. Point to the exact
+   place, or give the reason and the choice you made instead.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in
