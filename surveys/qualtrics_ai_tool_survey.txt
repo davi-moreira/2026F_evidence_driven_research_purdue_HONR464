@@ -1,0 +1,196 @@
+[[AdvancedFormat]]
+
+[[ED:instrument:ai_tool_decision_v1]]
+
+[[Block:Why you are answering this]]
+
+[[Question:DB]]
+[[ID:intro]]
+About five minutes, and it is not graded.<br><br>I am deciding whether the course buys everyone a seat in an instructor-administered workspace from Anthropic (Claude) or from OpenAI (ChatGPT), and whether it should buy one at all. I would rather decide from what you already use than from what I assume.<br><br>This is not a participation item, not an "It is your turn" item, and no answer affects any grade. Nothing here is a test of what you should already know; "never heard of it" is a real and useful answer.<br><br>I ask for your username because I need to know who would need a seat and who would need help setting one up. With four of us, that is not anonymity and I will not pretend otherwise. I will not quote you by name, and I will not use anything here to grade you.
+
+[[Question:TE:SingleLine]]
+[[ID:student]]
+Your Purdue username (the part of your email before @purdue.edu).
+
+[[PageBreak]]
+
+[[Block:What you already pay for]]
+
+[[Question:MC:MultipleAnswer:Vertical]]
+[[ID:subs_current]]
+Which of these do you pay for right now, out of your own pocket? Select every one that applies.
+[[Choices]]
+ChatGPT Plus
+ChatGPT Pro
+Claude Pro
+Claude Max
+Google AI Pro or another paid Gemini plan
+GitHub Copilot
+Cursor, Windsurf, or a similar coding editor
+Something else I will name below
+I pay for none of these
+
+[[Question:TE:SingleLine]]
+[[ID:subs_other]]
+If you selected "something else", what is it? Otherwise leave this blank.
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:subs_spend]]
+Roughly what do you spend on AI tools in a month? This is optional and it does not affect anything.
+[[Choices]]
+Nothing
+Under $20
+$20 to $40
+$40 to $100
+More than $100
+Prefer not to say
+
+[[Question:MC:MultipleAnswer:Vertical]]
+[[ID:access_other]]
+Do you already have access to any paid AI tool through somewhere other than your own wallet? Select every one that applies.
+[[Choices]]
+Through a job, internship, or research assistantship
+Through another Purdue course or program
+Through a student organization or club
+Through a family plan
+No, only what I pay for myself or use free
+
+[[PageBreak]]
+
+[[Block:Student offers]]
+
+[[Question:DB]]
+[[ID:student_offer_intro]]
+Both companies run student or campus access programs. I want to know whether those routes actually work for you, because if they do, the course may not need to buy anything.
+
+[[Question:Matrix]]
+[[ID:student_offers]]
+Have you tried either company's student or education offer?
+[[Choices]]
+OpenAI / ChatGPT student or education offer
+Anthropic / Claude student or education offer
+[[Answers]]
+I tried it and I have access now
+I tried it and it worked before, but it has run out
+I tried it and could not get it
+I knew about it and did not try
+I did not know it existed
+
+[[Question:TE:Essay]]
+[[ID:student_offers_detail]]
+If you tried either one, what happened? Anything you remember helps: what you had to verify, how long it took, what it gave you, whether it expired.
+
+[[PageBreak]]
+
+[[Block:The agentic tools]]
+
+[[Question:DB]]
+[[ID:tools_intro]]
+These four are different from the ordinary chat window. They can read, write, and run files on their own, which is why the course cares about them.<br><br><b>Claude Code</b> (Anthropic) writes and runs code on your machine under your direction.<br><b>Claude Cowork</b> (Anthropic) is its agent workspace for work that is not coding.<br><b>Codex</b> (OpenAI) writes and runs code under your direction.<br><b>ChatGPT Work</b> (OpenAI) is its agent and connected-work surface inside ChatGPT.<br><br>Answer honestly. I expect a lot of "never heard of it" and that tells me something useful.
+
+[[Question:Matrix]]
+[[ID:tools_extent]]
+How far have you gone with each one?
+[[Choices]]
+Claude Code
+Claude Cowork
+Codex (OpenAI)
+ChatGPT Work
+[[Answers]]
+Never heard of it
+Heard of it, never used it
+Opened it once or twice
+Used it for a real task
+Use it regularly
+
+[[Question:TE:Essay]]
+[[ID:tools_detail]]
+For anything you marked "used it for a real task" or "use it regularly": what did you actually do with it, and did it work? One or two sentences per tool is plenty.
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:tools_verify]]
+When one of these tools produced something for you, how often did you check its output against something else before you used it?
+[[Choices]]
+I have not used one of these tools
+Always
+Usually
+Sometimes
+Rarely
+Never
+
+[[PageBreak]]
+
+[[Block:What you would need from me]]
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:training_need]]
+Suppose the course gives you one of these agentic tools for your project. How much guided training would you need before you could use it on your own research?
+[[Choices]]
+None; I would work it out myself
+One short walkthrough, around 20 minutes
+One full class session plus a written guide
+More than one session; I would want help more than once
+I would rather not use one of these tools at all
+
+[[Question:MC:MultipleAnswer:Vertical]]
+[[ID:training_topics]]
+What should that training cover? Select every one that would help you.
+[[Choices]]
+Installing it and getting signed in
+Pointing it at the right folder, and keeping it away from the wrong one
+What never to paste into it
+Reading its output and checking whether it is right
+Knowing when not to delegate a decision to it
+Writing the AI Research Ledger row for what it did
+Using it with a Colab notebook without breaking the notebook
+Nothing; I would not need training
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:machine]]
+Which computer would you use for your project work?
+[[Choices]]
+Mac laptop
+Windows laptop
+Linux laptop
+Chromebook or tablet only
+A lab or library computer I do not control
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:terminal]]
+How comfortable are you opening a terminal or command line?
+[[Choices]]
+Very comfortable; I use one already
+I have used one, with instructions in front of me
+I have opened one once or twice
+I have never opened one
+I am not sure what that is
+
+[[PageBreak]]
+
+[[Block:Your recommendation]]
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:preference]]
+If the course provides one workspace for everyone, which would you pick?
+[[Choices]]
+Anthropic (Claude)
+OpenAI (ChatGPT)
+No preference; either is fine
+I would rather the course provided none and I kept using what I have
+
+[[Question:TE:Essay]]
+[[ID:preference_why]]
+Why? If your answer is that you already live in one of them and switching would slow you down, say so plainly. That is a real reason and I will weigh it.
+
+[[Question:MC:SingleAnswer:Vertical]]
+[[ID:purdue_account]]
+Would you be willing to join an instructor-administered workspace using your Purdue address, knowing I would see that you are a member and that the workspace closes after Dec 11?
+[[Choices]]
+Yes
+Yes, but I have questions first
+No, and I will explain below
+I am not sure
+
+[[Question:TE:Essay]]
+[[ID:anything_else]]
+Anything else I should know before I decide? Optional.
