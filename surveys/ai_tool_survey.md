@@ -1,5 +1,7 @@
 # AI Tool Survey — the instrument and the decision it settles
 
+**Survey name (Qualtrics and Brightspace): `AI Tool Survey`.**
+
 **Purpose.** Decide whether the course buys every student a seat in an
 instructor-administered AI workspace, and if so, whether that workspace comes
 from **Anthropic (Claude)** or **OpenAI (ChatGPT)**.
@@ -9,14 +11,31 @@ folder is the Qualtrics Advanced Format import file and is the source of truth
 for the wording; edit it there, re-import, and never rebuild the questions by
 hand inside the Qualtrics UI.
 
-**Not graded.** This is **not** a participation item (D57 fixes participation at
-three item families, N = 14, and this is none of them), **not** an IYT Practice
-item (D61), and not a milestone. Nothing it collects may set any grade. The
-announcement says so explicitly and the survey's first screen repeats it.
+**Graded inside Participation (9%), completion only.** One credit for
+submitting by the deadline, `0.5` within seven days after, `0` otherwise —
+the same rule as every other participation item. Credit never depends on the
+content of an answer, and nothing here may set any other grade. It is **not**
+an IYT Practice item (D61) and not a milestone.
+
+⚠ **Consequence for the contract, not yet applied.** This is a **fourth**
+participation item family, where D57 fixed three. The numbers that move:
+
+| | Before | After |
+|---|---:|---:|
+| Baseline `N` | 14 | **15** |
+| Drops `d = ceil(0.10 N)` | 2 | **2** (unchanged) |
+| Formula | `9.0 x (highest 12) / 12` | `9.0 x (highest 13) / 13` |
+
+Nothing else about D57 changes: the block stays **undivided at 9%**, every item
+is worth the same single credit, the ±0.9 contribution adjustment is untouched,
+and none of the banned items returns. `course_config.yaml participation:`
+(`baseline_credits: 14`, the `items:` map) and
+`surveys/participation_grading.md` still carry the old numbers and need a
+decision record before they are edited.
 
 **Identified, and honest about it.** The username is collected because the
-decision is per student: who needs a seat, who already pays for one, who needs
-setup help. At n = 4 anonymity is not achievable and the instrument does not
+credit has to be recorded, and because the decision is per student: who needs a
+seat, who already pays for one, who needs setup help. At n = 4 anonymity is not achievable and the instrument does not
 claim it. Responses are FERPA-adjacent and live only in Qualtrics and in the
 gitignored `_adm/`, never in a tracked path.
 
@@ -93,7 +112,8 @@ purchase decision.
 
 ## What the answers may not be used for
 
-- Setting or adjusting any grade, including participation.
+- Setting or adjusting any grade beyond the single completion credit, which is
+  earned by submitting and never by what the answers say.
 - Identifying a student in class as the one who does or does not pay.
 - Quoting a named student in the announcement of the decision.
 

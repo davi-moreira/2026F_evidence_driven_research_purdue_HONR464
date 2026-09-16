@@ -1,12 +1,13 @@
 [[AdvancedFormat]]
 
 [[ED:instrument:ai_tool_decision_v1]]
+[[ED:survey_name:AI Tool Survey]]
 
 [[Block:Why you are answering this]]
 
 [[Question:DB]]
 [[ID:intro]]
-About five minutes, and it is not graded.<br><br>I am deciding whether the course buys everyone a seat in an instructor-administered workspace from Anthropic (Claude) or from OpenAI (ChatGPT), and whether it should buy one at all. I would rather decide from what you already use than from what I assume.<br><br>This is not a participation item, not an "It is your turn" item, and no answer affects any grade. Nothing here is a test of what you should already know; "never heard of it" is a real and useful answer.<br><br>I ask for your username because I need to know who would need a seat and who would need help setting one up. With four of us, that is not anonymity and I will not pretend otherwise. I will not quote you by name, and I will not use anything here to grade you.
+<b>AI Tool Survey.</b> About five minutes.<br><br>I am deciding whether the course buys each of you a seat in an instructor-administered AI workspace, and if so, whether it comes from Anthropic (Claude) or OpenAI (ChatGPT). I would rather decide from what you already use than from what I assume.<br><br><b>This is a participation item, graded on completion only.</b> Submitting on time earns the credit. Credit never depends on what you answer, and no answer here affects any other grade. Nothing is a test of what you should already know; "never heard of it" is a real and useful answer.<br><br>I ask for your username because I have to record the credit, and because I need to know who would need a seat and who would need help setting one up. With four of us, that is not anonymity and I will not pretend otherwise. I record credit first, then read the answers to make the decision. I will not quote you by name, and I will not use anything here to set any other grade.
 
 [[Question:TE:SingleLine]]
 [[ID:student]]
@@ -36,7 +37,7 @@ If you selected "something else", what is it? Otherwise leave this blank.
 
 [[Question:MC:SingleAnswer:Vertical]]
 [[ID:subs_spend]]
-Roughly what do you spend on AI tools in a month? This is optional and it does not affect anything.
+Roughly what do you spend on AI tools in a month? This one is optional, and skipping it does not affect your credit.
 [[Choices]]
 Nothing
 Under $20
