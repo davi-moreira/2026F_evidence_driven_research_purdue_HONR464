@@ -360,10 +360,6 @@ request is reissued for a later milestone.
   communication* **0** and the submission is **returned** unread until it is
   supplied.
 
-**Blocking gate:** no work at or after M4 proceeds past a **not-authorized**
-permission determination. A declaration that does is returned ungraded until
-the determination is resolved; this is a gate, not a deduction.
-
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
 
@@ -376,8 +372,8 @@ days of feedback recovers up to half the lost points.
   Beginning regardless of the rest — the course's evidence-integrity rule
   with teeth.
 - A declared pathway that requires permissions your M4 determination does not
-  grant: the submission is returned until the determination is rechecked —
-  the blocking gate, not a point deduction.
+  grant, with no recheck recorded: *Pathway & compass alignment* drops to Developing
+  at best, because the pathway is not one you are in a position to run.
 - A Contract that arrives unversioned, or versioned with a decorative reason:
   *Craft, ledger & communication* drops to Developing at best, because the
   sequence of versions is itself part of your research record.

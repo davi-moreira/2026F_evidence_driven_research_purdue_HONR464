@@ -4707,3 +4707,78 @@ the M4 Brightspace instructions before the Fri Sep 18 studio; enter the M3
 feedback with its `IR-M04-##` block for each student (the private feedback files
 already carry it); tell students in class on Wed Sep 16 that the rule begins
 with M4.
+
+---
+
+## D81 — The permission blocking gate is retired; the permission determination stays, and is scored (2026-09-21)
+
+**Ruling.** The `permission-status-honoured` blocking gate is **RETIRED for this
+edition**. It read, verbatim and kept here as the record:
+
+> **Blocking gate.** No work at or after Studio 4 proceeds past a not-authorized
+> determination. This is not scored and cannot be averaged away.
+
+It rendered on the nine Book Milestone pages M4–M12 and their nine companion
+notebooks, and was restated in the M4, M5 and M6 course briefs and in nb04. It
+renders nowhere now.
+
+**What is NOT retired: the permission determination itself.** This ruling removes
+an un-averageable stop, never the requirement. The permission status remains
+
+- a **Research Contract field** (`ethics_permission_status` in
+  `planning/BOOK_ASSESSMENTS.yml`), taught by the ethics and data-governance
+  lesson with its four states (cleared / formal determination required / pending
+  / not authorized);
+- a named element of **criterion 5** of station `declare-and-diagnose` ("...your
+  permission status, and a redesign record");
+- part of the **ethics rail** that criterion 4 scores on every station;
+- a **Definition of Done row** in M4 ("Permission determination"), M5 and M6
+  ("Permission recheck"), all unchanged.
+
+**What replaces the gate in the three course briefs.** Where the brief previously
+returned a submission ungraded, the failure is now a scored deduction:
+
+| Brief | Was | Now |
+|---|---|---|
+| M4 | Undeclared status, or data work planned under *not authorized*: returned before grading | Undeclared permission status: *Contract completeness & alignment* drops to Developing at best |
+| M5 | Pathway needing permissions M4 did not grant: returned until rechecked | Same, with no recheck recorded: *Pathway & compass alignment* drops to Developing at best |
+| M6 | Work past a *not authorized* determination: returned ungraded | Status moved to *not authorized* with no recorded change of route: *Governance correctness (provenance & measurement)* drops to Developing at best |
+
+M6's closing instruction now reads "record the route you are taking instead and
+come to me" rather than invoking the gate.
+
+**The other blocking gates are untouched.** D81 is about the permission gate
+alone. Still standing, unchanged: M12's `package-current-with-cold-run` gate
+(release must match the Studio 11 cold run), M13's two gates (the author
+self-reproduction log and the release preflight), and Studio 1's two gates (tool
+readiness and a hand-written version zero).
+
+**DELETE NOTHING — the retirement is IN PLACE**, the fifth time this rule fires
+(after D58's quiz banks, D74/D75's SRL suite and D79's `lecture_notebooks:`
+block). Kept on disk, unapplied: all nine gate entries in
+`planning/BOOK_ASSESSMENTS.yml`, each now carrying `retired_this_edition: true`,
+and the rendering branch in `scripts/build_station_pages.py`, which skips the ids
+in the new **`RETIRED_GATE_IDS = {"permission-status-honoured"}`** constant.
+`_research_project/milestone_course_additions.yml` keeps its twelve 2026-08-23
+`instructor_notes` about the gate verbatim, behind a staleness banner, because
+they are the record of a real audit. **Reinstating costs two edits:** empty
+`RETIRED_GATE_IDS`, clear the nine `retired_this_edition` flags, rerun
+`build_station_pages.py` and the handout PDFs.
+
+**Surfaces changed.** `planning/BOOK_ASSESSMENTS.yml` (source) →
+`book/studios/milestone{04..12}-*.qmd` and
+`notebooks/book/studios/studio{04..12}_*.ipynb` (generated);
+`_research_project/2026Fall/milestone_0{4,5,6}_*.md` and their PDFs;
+`_production_kit/nb_sources/nb04_anatomy_of_design.py` →
+`notebooks/student/nb04_anatomy_of_design_student.ipynb`;
+`scripts/schedule_data/part1.py` (4 spots) and `part2.py` (1) →
+`planning/MEETING_SCHEDULE.{csv,md}` and the session guides. The studio decks
+never carried the gate and are unaffected.
+
+**⚠ Action for Davi, outside the repository.** The M4 Brightspace instructions
+and any M4/M5/M6 page already posted still state the gate; replace them with the
+regenerated PDFs. Students told in class that a not-authorized determination
+stops the project need to hear the amended rule: the determination is still
+required and still scored, and it no longer halts the milestone on its own.
+Purdue's own human-subjects requirements are unaffected by this course decision
+and continue to apply independently.

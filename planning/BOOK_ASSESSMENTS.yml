@@ -27,6 +27,17 @@
 #     REQUIRED; the generic anchors below constrain language only.
 #   - Blocking safety gates (e.g. permission-status) are separate from
 #     scored criteria and never averaged.
+#   - D81 (2026-09-21): the `permission-status-honoured` gate is RETIRED for
+#     this edition and KEPT here in full, the fifth time the delete-nothing
+#     rule fires (after D58's quiz banks, D74/D75's SRL suite and D79's
+#     lecture_notebooks: block). It carries `retired_this_edition: true` and
+#     `scripts/build_station_pages.py` skips the ids in RETIRED_GATE_IDS, so
+#     no milestone page or companion notebook prints it. The permission
+#     status itself is NOT retired: it stays a Research Contract field
+#     (ethics_permission_status, below), it stays inside criterion 5 of
+#     station declare-and-diagnose, and it stays on the ethics rail that
+#     criterion 4 scores. What is gone is the un-averageable stop, never the
+#     requirement. Reinstating: clear the flags and empty RETIRED_GATE_IDS.
 #   - Exemplars come in PAIRS sharing one task/context, with full provenance,
 #     rights, consent state, and per-locale availability (S3): a
 #     student-derived exemplar without documented permission must fail the
@@ -252,6 +263,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: develop-the-pathway
     checkpoint: pathway-declared-v1
@@ -296,6 +308,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: govern-data-measurement
     checkpoint: data-measurement-v1
@@ -340,6 +353,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: first-analysis
     checkpoint: first-analysis-v1
@@ -384,6 +398,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: stress-test
     checkpoint: robustness-audit-v1
@@ -428,6 +443,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: write-bound-disclose
     checkpoint: bounded-claims-v1
@@ -472,6 +488,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: adapt-and-defend
     checkpoint: defense-ready-v1
@@ -516,6 +533,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: reproduce-and-package
     checkpoint: package-v1
@@ -560,6 +578,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
   - station: release-next-cycle
     checkpoint: release-audit-v1
@@ -604,6 +623,7 @@ stations:
       - id: permission-status-honoured
         blocking: true
         scored: false
+        retired_this_edition: true   # D81 - kept authored, not rendered
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
       - id: package-current-with-cold-run
         blocking: true

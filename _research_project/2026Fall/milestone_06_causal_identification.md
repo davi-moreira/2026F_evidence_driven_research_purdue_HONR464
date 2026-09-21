@@ -198,7 +198,7 @@ declared in part 1.
 
 Close with one declared outcome: still cleared, or what changed and what you
 did about it. If the answer is that your status moved to **not authorized**,
-the blocking gate applies and you stop and come to me.
+record the route you are taking instead and come to me.
 
 ### 4. The measurement specification
 
@@ -376,10 +376,6 @@ request is reissued for a later milestone.
   communication* **0** and the submission is **returned** unread until it is
   supplied.
 
-**Blocking gate:** no work at or after M4 proceeds past a **not-authorized**
-permission determination. A record that does is returned ungraded until the
-determination is resolved; this is a gate, not a deduction.
-
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
 
@@ -390,9 +386,9 @@ days of feedback recovers up to half the lost points.
 - Any dataset, licence, or source you cite that turns out not to exist or not
   to say what you claim: *Evidence integrity & provenance* scores Beginning
   regardless of the rest — the course's evidence-integrity rule with teeth.
-- Work that proceeds past a **not-authorized** permission determination is
-  returned ungraded until the determination is resolved — the blocking gate,
-  not a point deduction.
+- A permission status that moved to **not authorized** with no recorded change
+  of route: *Governance correctness (provenance & measurement)* drops to
+  Developing at best, because the record plans work the authority has declined.
 - A measurement that changed since M4 without a Contract version: *Uncertainty
   & measurement error* drops to Developing at best, because a silent swap
   changes what your estimand refers to and leaves no record that it happened.

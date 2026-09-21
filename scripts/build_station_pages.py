@@ -52,6 +52,14 @@ GENERATED_MARK = (
     "# (rubrics). Edit the YAML and rerun the script; edits made here are\n"
     "# silently reverted on the next build and fail `--check` in CI.\n"
 )
+# D81 (2026-09-21) — the permission blocking gate is RETIRED for this edition,
+# and the instrument is KEPT, exactly as D58 kept the quiz banks, D74/D75 kept
+# the SRL suite and D79 kept the lecture_notebooks: block. Every gate entry
+# stays authored in BOOK_ASSESSMENTS.yml; the ids named here are simply not
+# rendered onto a milestone page or its companion notebook. Reinstating the
+# gate costs one line: remove its id from this set and rerun the builder.
+RETIRED_GATE_IDS = {"permission-status-honoured"}
+
 NB_DIR = REPO / "notebooks" / "book" / "studios"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 COLAB = ("https://colab.research.google.com/github/davi-moreira/"
@@ -99,6 +107,8 @@ def rubric_md(entry: dict | None) -> str:
            f"Each row scores **0**, **1**, or **2**. **{total} points total.**\n\n"
            + "\n".join(rows) + "\n")
     for gate in entry.get("gates", []):
+        if gate["id"] in RETIRED_GATE_IDS:      # D81: kept, not rendered
+            continue
         out += (f"\n::: {{.callout-important title=\"Blocking gate\"}}\n"
                 f"{gate['text']} This is not scored and cannot be averaged "
                 f"away.\n:::\n")

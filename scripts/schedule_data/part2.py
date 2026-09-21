@@ -155,7 +155,7 @@ MEETINGS_P2 = [
         "exit_ticket": "Claim Ticket #14: the one route boundary I will carry unchanged into analysis, however inconvenient it gets.",
         "homework_next_milestone": "Submit M5 tonight (11:59 PM). Weekend: read the data-provenance lesson — Monday governs how your data reach you and under what permission.",
         "instructor_prep": "Print the M5 rubric; stage the M6 Brightspace brief; confirm the Causal Identification Skeptic role is live and brief the room that four of the five routes are not causal, so the paste differs by route; set the consult order from the stand-up risks.",
-        "risks_contingency": "Route uncertainty threatens submission time → a marked provisional route with the missing evidence named is accepted, and hiding a 'causal, currently unidentified' status is the only wrong answer; Skeptic runs queue → the declarations closest to causal language go first and the rest are logged after class; a permission status changed with the pathway → the blocking gate is resolved before the record is graded.",
+        "risks_contingency": "Route uncertainty threatens submission time → a marked provisional route with the missing evidence named is accepted, and hiding a 'causal, currently unidentified' status is the only wrong answer; Skeptic runs queue → the declarations closest to causal language go first and the rest are logged after class; a permission status changed with the pathway → the recheck is recorded with the route taken instead, before the record is graded.",
     },
     # ------------------------------------------------------------------ M17
     {

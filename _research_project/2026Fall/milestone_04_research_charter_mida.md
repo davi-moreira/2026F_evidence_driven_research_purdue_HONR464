@@ -137,10 +137,10 @@ reading what it does: whether its estimates sit off the truth, how much they
 wobble, and how often it would detect what you are looking for. A design you
 never diagnosed makes no promises, however rigorous its wording sounds.
 
-One field in this Contract can stop the project: the **permission
-determination**. It gates every later studio, and no work proceeds past a *not
-authorized* ruling. A rubric cannot clear you, and neither can an AI tool. Only
-the competent authority can.
+One field in this Contract answers to an authority outside this course: the
+**permission determination**. Declare exactly one status, and name the competent
+authority and the date you asked if it is anything but cleared. A rubric cannot
+clear you, and neither can an AI tool. Only the competent authority can.
 
 > **A question that often comes up here:** *"If your AI can draft a whole design
 > in seconds, why build it field by field myself?"* Because a design is a chain of
@@ -458,12 +458,6 @@ follows the standing revision policy. A request can reduce this score only if
 its numbered wording reached you at least 48 hours before the deadline; a later
 request is reissued for a later milestone.
 
-**Blocking gate (not scored, and it cannot be averaged away):** no work at or
-after this milestone proceeds past a **not authorized** determination. A Contract
-that plans data work under a *not authorized* or undeclared status is returned,
-whatever its other scores, until the status is settled with the competent
-authority.
-
 **Hard caps (a single failure caps the row regardless of the rest):**
 
 - A **fabricated or unretrievable source** caps *Evidence integrity &
@@ -487,8 +481,9 @@ days of feedback recovers up to half the lost points.
   or not to say what you claim: *Evidence integrity & provenance* scores
   Beginning regardless of the rest — the course's evidence-integrity rule with
   teeth.
-- An undeclared permission status, or planned data work under a *not authorized*
-  ruling: the submission is returned before it is graded.
+- An undeclared permission status: *Contract completeness & alignment* drops to
+  Developing at best, because the Contract is missing a field the design depends
+  on.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 - Numbered instructor review request left unaddressed in the Instructor Request

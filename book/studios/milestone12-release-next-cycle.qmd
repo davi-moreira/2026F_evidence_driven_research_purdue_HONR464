@@ -75,10 +75,6 @@ Each row scores **0**, **1**, or **2**. **10 points total.**
 | 5 | The milestone's own product is present and defensible: A review-management record for your directed AI team, a release audit recording release or withhold-pending-a-named-repair, your final dossier with a complete manifest, an explicit stopping rule, and your next-study agenda | release claimed despite a stale cold run or a blocking item, or the dossier manifest or next-study agenda is absent | components present, but one audit disposition is unsupported or the next study is generic | every disposition is traceable, blocking items are honored, the manifest is complete or explicitly accounts for absences, and the next study follows from a documented unresolved issue |
 
 ::: {.callout-important title="Blocking gate"}
-No work at or after Studio 4 proceeds past a not-authorized determination. This is not scored and cannot be averaged away.
-:::
-
-::: {.callout-important title="Blocking gate"}
 Release requires the package to match its Studio 11 cold run; any change since that run means withhold pending a repeat. This is not scored and cannot be averaged away.
 :::
 

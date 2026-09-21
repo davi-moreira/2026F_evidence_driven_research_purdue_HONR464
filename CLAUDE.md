@@ -874,7 +874,31 @@ material.
 
 ---
 
-**Version:** 7.5 — D80, the Instructor Request Record (2026-09-15, DECISIONS.md D80): from **M4**
+**Version:** 7.6 — D81, the permission blocking gate is retired and the determination becomes
+scored (2026-09-21, DECISIONS.md D81): the `permission-status-honoured` **blocking gate is RETIRED
+for this edition**. It read "No work at or after Studio 4 proceeds past a not-authorized
+determination. This is not scored and cannot be averaged away.", and it rendered on the nine Book
+Milestone pages **M4–M12**, their nine companion notebooks, the M4/M5/M6 course briefs and nb04. It
+renders nowhere now. **The permission determination itself is NOT retired:** it stays a Research
+Contract field (`ethics_permission_status`), stays named in criterion 5 of station
+`declare-and-diagnose`, stays on the ethics rail criterion 4 scores, and keeps its Definition of Done
+row in M4, M5 and M6. What is gone is the un-averageable stop. In the three briefs a returned
+submission becomes a scored deduction: M4 undeclared status → *Contract completeness & alignment*
+Developing at best; M5 pathway needing permissions M4 did not grant with no recheck → *Pathway &
+compass alignment*; M6 status moved to not authorized with no recorded change of route →
+*Governance correctness (provenance & measurement)*. **The other blocking gates are untouched** —
+M12's cold-run gate, M13's two gates (author self-reproduction log, release preflight) and Studio 1's
+two gates all stand. **DELETE NOTHING — the fifth time this rule fires** (after D58's quiz banks,
+D74/D75's SRL suite and D79's `lecture_notebooks:` block): all nine gate entries stay authored in
+`planning/BOOK_ASSESSMENTS.yml` carrying `retired_this_edition: true`, the rendering branch stays in
+`scripts/build_station_pages.py` behind **`RETIRED_GATE_IDS = {"permission-status-honoured"}`**, and
+`milestone_course_additions.yml` keeps its twelve 2026-08-23 audit notes verbatim behind a staleness
+banner. Reinstating: empty the set, clear the nine flags, rerun `build_station_pages.py` and
+`build_handout_pdfs.py`. ⚠ Action for Davi OUTSIDE the repository: the M4 Brightspace instructions
+and any posted M4/M5/M6 page still state the gate and need the regenerated PDFs; students told in
+class that a not-authorized determination stops the project need the amended rule. Purdue's own
+human-subjects requirements are unaffected by this course decision and continue to apply.
+(7.5 — D80, the Instructor Request Record (2026-09-15, DECISIONS.md D80): from **M4**
 on, every milestone artifact opens with a record answering the numbered `IR-MNN-##` requests
 issued in the previous review; **each unaddressed request deducts 5 points, capped at 20 per
 milestone**, after the rubric, hard caps, and late rule; a defended non-adoption counts as
@@ -1224,5 +1248,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants
