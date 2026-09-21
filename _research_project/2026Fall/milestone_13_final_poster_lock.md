@@ -65,7 +65,7 @@ on the board that did not just reproduce.
 | 1 | **`lastname_m13_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, and the dated frozen manifest. |
 | 2 | **`lastname_m13_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
 | 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** Opens with the **Instructor Request Record** (Component 8), which is graded under the carry-forward adjustment. |
-| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. |
+| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. It also delivers what your **research action plan** commits you to for this milestone (Component 9). |
 
 If you submit a folder or notebook link, set sharing so the instructor can open
 it, and confirm the package runs top to bottom in a clean session. Submit the
@@ -314,6 +314,39 @@ instructor requests were issued for M13.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 9. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+This is the milestone where the poster and reproducibility commitments in your action plan come due, so the package, cold run, and gate records your plan said you would have ready must be exactly what produces every number on the poster you lock here.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -341,6 +374,7 @@ pre-submission checklist.
 | **Filenames** | `lastname_m13_package.zip` (or a shared link), `lastname_m13_coldrun.pdf`, `lastname_m13_gates.pdf`, `lastname_m13_poster.pdf` |
 | **Location** | Brightspace → Assignments → M13 (and the URC channel) |
 | **Instructor Request Record** | Opens the gates PDF; every `IR-M13-##` request from the M12 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

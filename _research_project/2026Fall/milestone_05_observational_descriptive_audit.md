@@ -51,7 +51,7 @@ writing. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. Opens with the **Instructor Request Record** (Component 7), which is graded under the carry-forward adjustment. |
+| 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 8). Opens with the **Instructor Request Record** (Component 7), which is graded under the carry-forward adjustment. |
 | 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional, and already submitted.** Only YOUR declared route's chapter was collected (plus the hybrid chapter when your design has stages), due on its own reading date as an IYT Practice submission. Your assigned contrast chapter is required reading you rule out in writing here, but its section is never handed in, and the remaining route chapters are jigsaw material. Not collected again here: carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -288,6 +288,39 @@ instructor requests were issued for M05.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 8. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+M5 is the moment to deliver every action-plan step that settles your design route: the pathway you committed to declare, the access, permission, or anchor evidence you promised to secure for it, and the limits you promised to write down before you defend the route in class.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -313,6 +346,7 @@ pre-submission checklist.
 | **Filename** | `lastname_m05_pathway_declaration.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M05 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M05-##` request from the M4 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

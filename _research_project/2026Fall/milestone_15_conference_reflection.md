@@ -62,7 +62,7 @@ pattern, and write the revision that pattern licenses.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m15_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
+| 1 | **`lastname_m15_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. It also delivers what your **research action plan** commits you to for this milestone (Component 12). Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
 
 The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
 of Final Project's **Poster Presentation at the Purdue Undergraduate Research
@@ -352,6 +352,39 @@ instructor requests were issued for M15.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 12. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+This is the milestone where you deliver the action plan steps that were meant to close after your work met a public audience: the coded questions the room actually asked you, the revision to claim, boundary, or defense that those questions license, and the updated standing of the project now that strangers have tested it.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -379,6 +412,7 @@ pre-submission checklist.
 | **Filename** | `lastname_m15_reflection.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M15 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M15-##` request from the M14 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

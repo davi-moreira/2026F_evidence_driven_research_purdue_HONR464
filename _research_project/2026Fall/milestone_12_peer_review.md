@@ -55,7 +55,7 @@ class, in a silent round, and finished in Friday's studio.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. |
+| 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. It also delivers what your **research action plan** commits you to for this milestone (Component 4). |
 | 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **individual response record** on the sheets your project received: each finding ranked blocking or optional, each blocking finding paired with the repair you made or endorsed, and at least one finding you rejected with the reason you rejected it. Opens with the **Instructor Request Record** (Component 3), which is graded under the carry-forward adjustment. |
 
 ---
@@ -144,6 +144,39 @@ instructor requests were issued for M12.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 4. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+This is the milestone where your action plan's review-and-repair step comes due: hand in the independent review sheets you owe every other active project, and show in your response record that the repairs your plan schedules for your own poster are the ones you ranked, made, or defended on the record.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -160,6 +193,7 @@ response; a request I marked individual is scored for that member only.
 | **Recurrence** | Any defect appearing on two independent sheets is identified as such |
 | **Location** | Brightspace → Assignments → M12 |
 | **Instructor Request Record** | Opens the response-record PDF; every `IR-M12-##` request from the M11 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

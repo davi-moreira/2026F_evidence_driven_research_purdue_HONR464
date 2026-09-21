@@ -47,7 +47,7 @@ and submit by Tuesday night, after the October Break weekend.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12). Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m07_conference_application.pdf`** | Proof that you applied to present at the Fall Undergraduate Research Expo: the confirmation page or confirmation email, saved as a PDF. Applying is not optional and it is not something the course does for you. Without this confirmation there is no poster session for you to present at, however good the rest of your project is. |
 | 3 | **`lastname_m07_meeting_round01.pdf`** | Confirmation that your **Round 01 mentor meeting** happened, inside the **Mon Oct 5 to Sun Oct 11** window you requested at M4: the date and time, who attended, and the two or three decisions that came out of it, each with what you changed or why you kept your course. |
 | 4 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
@@ -355,6 +355,39 @@ instructor requests were issued for M07.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 12. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+This is the milestone where the analysis steps in your action plan stop being intentions and become executed code, so whatever your plan commits you to at this stage (the assembled dataset, the estimate with its uncertainty, the verification runs, and the abstract that reports them) must appear here as work that actually ran.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -382,6 +415,7 @@ pre-submission checklist.
 | **Filename** | A shared Colab link or `lastname_m07_first_analysis.ipynb`; optional `lastname_m07_first_analysis.pdf` companion |
 | **Location** | Brightspace → Assignments → M07 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M07-##` request from the M6 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

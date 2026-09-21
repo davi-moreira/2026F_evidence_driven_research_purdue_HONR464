@@ -45,7 +45,7 @@ submit by Sunday night.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. Opens with the **Instructor Request Record** (Component 10), which is graded under the carry-forward adjustment. |
+| 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 11). Opens with the **Instructor Request Record** (Component 10), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m04_meeting_request.pdf`** | A PDF copy of the email you sent Professor Moreira proposing dates and times for your **Round 01 mentor meeting** (to be held **Mon Oct 5 to Sun Oct 11**). Offer at least three concrete slots, give your project in two sentences, and name the one decision you most want pressure-tested. Requesting the meeting is what is collected here; holding it is confirmed at M7. |
 | 3 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
@@ -400,6 +400,39 @@ instructor requests were issued for M04.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 11. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+This is the milestone where you deliver the contract-level moves your action plan committed to at this stage: the estimand, population, and data strategy your plan named, the causal model drawn as a DAG with the diagnosis and redesign it called for, and the permission and data governance steps you promised to take before you touch any data.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -427,6 +460,7 @@ pre-submission checklist.
 | **Filename** | `lastname_m04_contract.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M04 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M04-##` request from the M3 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

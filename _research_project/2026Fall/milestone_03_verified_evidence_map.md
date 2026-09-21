@@ -47,7 +47,7 @@ submit by Sunday night.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m03_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
+| 1 | **`lastname_m03_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
 | 2 | **EDR\|AI "It is your turn" — ch. 8, ch. 9** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -299,6 +299,39 @@ standing seven-day revision window. The numbered requests issued with the M3
 review carry IDs beginning `IR-M04-` and are graded first at M4 (course decision
 D80, 2026-09-15).
 
+### 10. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+This is the milestone where your action plan's evidence work comes due: the specific sources you committed to retrieve and read, the searches you promised to run, and the revision your verified record forces on the question you declared.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -325,6 +358,7 @@ pre-submission checklist.
 | **Filename** | `lastname_m03_evidence_base.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |
 | **Instructor Request Record** | Not required for the original 2026 Fall M3 submission or its revision; the requests from the M3 review are carried into M4 |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 

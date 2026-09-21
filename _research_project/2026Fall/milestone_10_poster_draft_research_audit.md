@@ -47,7 +47,7 @@ your ledger, and submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
-| 2 | **`lastname_m10_artifact.pdf`** *or* a shared link | **The artifact**: your Expo poster draft built to the contract, labeled preliminary, together with the spoken spine (30-second and 3-minute) that carries the same claim aloud. This is the graded core. |
+| 2 | **`lastname_m10_artifact.pdf`** *or* a shared link | **The artifact**: your Expo poster draft built to the contract, labeled preliminary, together with the spoken spine (30-second and 3-minute) that carries the same claim aloud. This is the graded core. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of the same file | Your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
@@ -281,6 +281,39 @@ instructor requests were issued for M10.** For an approved group, one record
 travels with the shared artifact and names the member responsible for each
 response; a request I marked individual is scored for that member only.
 
+### 10. Your action plan's commitments for this milestone
+
+<!-- action-plan-commitments -->
+You hold a personal **research action plan**, written for your project and
+reissued after every review, with a version number that tells you which one is
+current. It is where this course's general instructions become the specific next
+moves your project needs.
+
+**This submission delivers what your current action plan commits you to for this
+milestone.** Take the row for this milestone from your plan's
+milestone-to-poster table, together with any decision the plan leaves open with a
+closing date on or before this milestone, and deliver them here. Where a plan
+commitment and a component above describe the same work, they are one deliverable
+written twice: do it once.
+
+M10 is the moment your action plan's poster-readiness steps come due, so the venue contract, content map, preliminary poster draft, and rehearsed spoken spine your plan committed to for this checkpoint must be visible in this submission.
+
+If a commitment has become wrong, say so in one line, with the reason and what you
+are doing instead. A defended departure is a decision; a silent one is drift. If
+your plan and this brief genuinely conflict, follow the brief and tell me, so the
+plan gets corrected.
+
+> **Highly recommended: use the course AI workspace to get there.** These
+> commitments are exactly what your ChatGPT Business seat is for. Open a Project
+> for this milestone, paste your plan's row for it into the Project's
+> instructions, and work the tasks it names. Hand over the parts you can check:
+> drafting, code, restructuring, listing what a step assumes, arguing against a
+> choice you have made. Keep the ones this course never delegates: the estimand,
+> the sentence that says what your interval claims, the choice of independent
+> unit, and the declaration of your design and target population. Every use gets a
+> ledger row, and nothing identifiable ever goes in.
+
+
 
 ---
 
@@ -309,6 +342,7 @@ pre-submission checklist.
 | **Filenames** | `lastname_m10_contract.pdf`, `lastname_m10_artifact.pdf`, `lastname_m10_defense.pdf` (or the equivalent sections of one file) |
 | **Location** | Brightspace → Assignments → M10 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M10-##` request from the M9 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
 
