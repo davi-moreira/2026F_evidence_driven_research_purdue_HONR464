@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (peer criticism, applied to every other active project's draft): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M12-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 3 shows the request table and Component 4 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -166,6 +177,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -199,15 +212,20 @@ plan gets corrected.
 
 ## M12 milestone process score (100 points)
 
+**What these two rubrics score.** The book and the course together. Your book milestone's own checks are split across them: *complete and specific to your project* and *a dated, numbered version with its reason* in this process score (the complete cycle and the version reason rows); *every judgment defended by you*, *the milestone's own product* and *the four rails* in the Peer Review rubric below, which scores the criticism itself. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 This score is entered only as M12 within **Milestone Deliverables**.
 
 | Process criterion | Points |
 |---|---:|
-| All required review surveys and the response record submitted by the deadline | 40 |
-| Complete cycle: every other active project covered and every received finding dispositioned | 30 |
-| Repairs carried forward into the next poster version, with the version reason recorded | 15 |
-| Required notebook work, AI Research Ledger entry, and dossier update present | 15 |
+| All required review surveys and the response record submitted by the deadline | 36 |
+| Complete cycle: every other active project covered and every received finding dispositioned | 27 |
+| Repairs carried forward into the next poster version, with the version reason recorded | 14 |
+| Required notebook work, AI Research Ledger entry, and dossier update present | 13 |
+| **Carry-forward: your action plan's steps.** Every step your plan sets for this milestone is in your record, done and located or departed from with a reason (10); all addressed, one thin (7); some silently missing (4); no plan section (0) | 10 |
 | **Total** | **100** |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M12-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to the M12 process score entered in Milestone Deliverables only).**
 Let `U` be the number of numbered `IR-M12-##` requests from the M11 review

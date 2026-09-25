@@ -43,7 +43,7 @@ studio, and the Labor Day weekend is yours to finish it).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m02_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test record (what your reader misunderstood, and what you revised because of it), and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12). |
+| 1 | **`lastname_m02_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test record (what your reader misunderstood, and what you revised because of it), and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12), not collected at M2: the carry-forward record starts at M4. |
 | 2 | **EDR\|AI "It is your turn" — ch. 2, ch. 3, ch. 4, ch. 5, ch. 6, ch. 7** | The pieces Book Milestone 2's checklist names, from each chapter's "It is your turn": your opened AI Research Ledger with its first verified exchange (ch. 2), your delegation map (ch. 3), one complete SDIIVDD run (ch. 4), your ownership statement with its never-delegate list (ch. 5), your lead question placed by kind and reach (ch. 6), and your formal declaration with its field card and boundary pair (ch. 7) — already submitted on their own reading dates, as IYT Practice submissions. Prompts marked *Optional depth* are not required. Not collected again here: carry the work into this milestone and your Research Project Dossier. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -347,6 +347,8 @@ immediately before it (course decision D80, 2026-09-15).
 ### 12. Your action plan's commitments for this milestone
 
 <!-- action-plan-commitments -->
+> **Not collected at M2.** The carry-forward record, with your action plan's steps, starts at M4 (course decision D82). What follows is a preview of how it will work.
+
 You hold a personal **research action plan**, written for your project and
 reissued after every review, with a version number that tells you which one is
 current. It is where this course's general instructions become the specific next
@@ -390,7 +392,7 @@ plan gets corrected.
 | **Filename** | `lastname_m02_rules_question.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M02 |
 | **Instructor Request Record** | Not required for the 2026 Fall M2 submission or revision; graded use begins with M4 |
-| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
+| **Action-plan commitments** | Not applicable at M2: the carry-forward record, with your action plan's steps, starts at M4 |
 
 ---
 

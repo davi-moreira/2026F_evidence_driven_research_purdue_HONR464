@@ -6,6 +6,17 @@
 > It is a *revisit*: the next version of an artifact whose first version already exists.
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M11-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 5 shows the request table and Component 6 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -179,6 +190,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -215,13 +228,18 @@ plan gets corrected.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Reading architecture** and **Readiness for review**; *a dated, numbered version with its reason* in **Craft, ledger & disclosure**; *every judgment defended by you, not asserted by a tool* in **Craft, ledger & disclosure**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Traceability**, **Craft, ledger & disclosure** and **Uncertainty placement**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 | Criterion | Excellent | Proficient | Developing | Inadequate |
 |---|---|---|---|---|
-| **Reading architecture** (25) | The headline sits in a compass position the author can name and defend; the six blocks read in the order the eye travels; the ninety-second read delivers question, result, and bound (23–25) | The order works with one block out of position (18–22) | A visitor has to hunt for the result or the question (11–17) | No discernible reading order; the board must be read like a paper (0–10) |
-| **Traceability** (25) | Every number on the draft is listed with its notebook and cell; untraceable numbers are named as blocking rather than quietly left (23–25) | Complete, with one number needing a hunt (18–22) | Several numbers not readily traceable (11–17) | A number on the board with no run behind it (0–10) |
-| **Uncertainty placement** (20) | The interval or caveat is inside the headline's eye-span; the boundary sentence is present and stops where the evidence stops (18–20) | Present, one placement off the read path (14–17) | Uncertainty present but off-path or vague (8–13) | No uncertainty on the board, or the result shown as settled (0–7) |
-| **Craft, ledger & disclosure** (20) | Template and print spec met, legible at print scale, redundant encoding where colour carries meaning; complete ledger; AI-use disclosure block present (18–20) | Minor spec or accessibility lapse; ledger complete (14–17) | Off-spec or hard to read at size (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
-| **Readiness for review** (10) | Submitted at the start of class, complete enough that every reader from another active project can produce an actionable finding (9–10) | On time, one block too thin to review (7–8) | Late to the review round (4–6) | Not submitted in time to be reviewed (0–3) |
+| **Reading architecture** (23) | The headline sits in a compass position the author can name and defend; the six blocks read in the order the eye travels; the ninety-second read delivers question, result, and bound; complete and unmistakably about your project (21–23) | The order works with one block out of position (17–20) | A visitor has to hunt for the result or the question (10–16) | No discernible reading order; the board must be read like a paper (0–9) |
+| **Traceability** (22) | Every number on the draft is listed with its notebook and cell; untraceable numbers are named as blocking rather than quietly left (20–22) | Complete, with one number needing a hunt (16–19) | Several numbers not readily traceable (10–15) | A number on the board with no run behind it (0–9) |
+| **Uncertainty placement** (18) | The interval or caveat is inside the headline's eye-span; the boundary sentence is present and stops where the evidence stops (16–18) | Present, one placement off the read path (13–15) | Uncertainty present but off-path or vague (7–12) | No uncertainty on the board, or the result shown as settled (0–6) |
+| **Craft, ledger & disclosure** (18) | Template and print spec met, legible at print scale, redundant encoding where colour carries meaning; complete ledger; AI-use disclosure block present; a dated, numbered version with a reason a reader could use; every judgment defended in your own reasoning, not a tool's; the ethics, permissions and data-exposure rail carried as this studio requires (16–18) | Minor spec or accessibility lapse; ledger complete (13–15) | Off-spec or hard to read at size (7–12) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–6) |
+| **Readiness for review** (9) | Submitted at the start of class, complete enough that every reader from another active project can produce an actionable finding (8–9) | On time, one block too thin to review (6–7) | Late to the review round (4–5) | Not submitted in time to be reviewed (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M11-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to the M11 milestone score only).**
 Let `U` be the number of numbered `IR-M11-##` requests from the M10 review

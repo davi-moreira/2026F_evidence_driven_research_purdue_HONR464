@@ -43,7 +43,7 @@ studio and submit by Sunday night).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m01_curiosity.pdf`** *or* a shared Colab notebook link | Your committed curiosity, dated as version zero with the reason for the version: the four lines you wrote by hand, your own two candidate directions plus the brainstormed ones with every NEW element marked and each candidate kept or rejected with its reason, the research problem you chose with its three scores and your red-team of it, your expected answer and the person a different answer would surprise, the four rails in the forms named below, your readiness screenshot, and your AI Research Ledger row. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
+| 1 | **`lastname_m01_curiosity.pdf`** *or* a shared Colab notebook link | Your committed curiosity, dated as version zero with the reason for the version: the four lines you wrote by hand, your own two candidate directions plus the brainstormed ones with every NEW element marked and each candidate kept or rejected with its reason, the research problem you chose with its three scores and your red-team of it, your expected answer and the person a different answer would surprise, the four rails in the forms named below, your readiness screenshot, and your AI Research Ledger row. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10), not collected at M1: the carry-forward record starts at M4. |
 | 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — already submitted on its own reading date, as an IYT Practice submission. Prompts marked *Optional depth* are not required. Not collected again here: carry the work into this milestone and your Research Project Dossier. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -276,6 +276,8 @@ D80, 2026-09-15).
 ### 10. Your action plan's commitments for this milestone
 
 <!-- action-plan-commitments -->
+> **Not collected at M1.** The carry-forward record, with your action plan's steps, starts at M4 (course decision D82). What follows is a preview of how it will work.
+
 You hold a personal **research action plan**, written for your project and
 reissued after every review, with a version number that tells you which one is
 current. It is where this course's general instructions become the specific next
@@ -319,7 +321,7 @@ plan gets corrected.
 | **Filename** | `lastname_m01_curiosity.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M01 |
 | **Instructor Request Record** | Not applicable at M1: there is no previous milestone review |
-| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
+| **Action-plan commitments** | Not applicable at M1: the carry-forward record, with your action plan's steps, starts at M4 |
 
 ---
 

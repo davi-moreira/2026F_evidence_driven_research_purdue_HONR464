@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (the spoken editions - three timed pitches and the question strategy): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M14-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 6 shows the request table and Component 7 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -187,6 +198,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -222,13 +235,18 @@ plan gets corrected.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Bound discipline under compression** and **The three architectures**; *a dated, numbered version with its reason* in **Craft & ledger**; *every judgment defended by you, not asserted by a tool* in **Craft & ledger**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Bound discipline under compression**, **Craft & ledger** and **Going public**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 | Criterion | Excellent | Proficient | Developing | Inadequate |
 |---|---|---|---|---|
-| **Bound discipline under compression** (30) | The boundary sentence is present and identical at all three lengths; no word is stronger in the short version than in the long one (27–30) | One soft word creeps in at thirty seconds (22–26) | The short version drops the bound (13–21) | The short version states a stronger claim than the evidence licenses (0–12) |
-| **The three architectures** (25) | All three written, rehearsed aloud, within their ceilings with counts shown; each does its own job rather than being a truncation of the next (23–25) | Within ceilings, one version doing the wrong job (18–22) | Over ceiling, or one version missing (11–17) | Pitches not written or not timed (0–10) |
-| **Question strategy** (25) | Predicted questions are derived from the design and typed correctly; the audience-directed questions would actually produce information; the prepared concession is true and the smaller claim is real (23–25) | Complete, one question generic (18–22) | Questions plausible but not design-derived (11–17) | No prepared concession, or a concession that gives away more than the evidence (0–10) |
-| **Going public** (10) | Invitation posted; every programme detail copied exactly; screenshot submitted (9–10) | Posted, one detail paraphrased (7–8) | Posted late or incomplete (4–6) | Not posted (0–3) |
-| **Craft & ledger** (10) | Plan readable and complete; ledger rows name real verification steps (9–10) | Complete, one row loose (7–8) | Ledger thin (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Bound discipline under compression** (27) | The boundary sentence is present and identical at all three lengths; no word is stronger in the short version than in the long one; complete and unmistakably about your project (24–27) | One soft word creeps in at thirty seconds (20–23) | The short version drops the bound (12–19) | The short version states a stronger claim than the evidence licenses (0–11) |
+| **The three architectures** (23) | All three written, rehearsed aloud, within their ceilings with counts shown; each does its own job rather than being a truncation of the next (21–23) | Within ceilings, one version doing the wrong job (17–20) | Over ceiling, or one version missing (10–16) | Pitches not written or not timed (0–9) |
+| **Question strategy** (22) | Predicted questions are derived from the design and typed correctly; the audience-directed questions would actually produce information; the prepared concession is true and the smaller claim is real (20–22) | Complete, one question generic (16–19) | Questions plausible but not design-derived (10–15) | No prepared concession, or a concession that gives away more than the evidence (0–9) |
+| **Going public** (9) | Invitation posted; every programme detail copied exactly; screenshot submitted; the ethics, permissions and data-exposure rail carried as this studio requires (8–9) | Posted, one detail paraphrased (6–7) | Posted late or incomplete (4–5) | Not posted (0–3) |
+| **Craft & ledger** (9) | Plan readable and complete; ledger rows name real verification steps; a dated, numbered version with a reason a reader could use; every judgment defended in your own reasoning, not a tool's (8–9) | Complete, one row loose (6–7) | Ledger thin (4–5) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M14-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to the M14 milestone score only).**
 Let `U` be the number of numbered `IR-M14-##` requests from the M13 review

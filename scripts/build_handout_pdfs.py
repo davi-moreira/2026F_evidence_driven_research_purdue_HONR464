@@ -54,6 +54,18 @@ under `retired_additions_markdown`.
 `schedule_mark` in that same file drives the schedule plus. Under the narrowed
 rule the two coincide: a milestone carries a section exactly when it is marked.
 
+AMENDED BY D82 (instructor ruling, 2026-09-25): THE CARRY-FORWARD OPENING
+-------------------------------------------------------------------------
+From M4 on, every milestone PDF opens with "Start here", authored once in
+scripts/milestone_carry_forward.py: the carry-forward record comes first (the
+numbered requests from the last review and the steps the student's action plan
+sets for this milestone), then the book work, then any Expo additions. The PDF
+says THAT these are required and how to answer each item; it never details what
+they ask, because they differ per student and live in the review email and the
+action plan. This is not a course "addition" in the narrowed sense above, so it
+does not touch `classification`. It does add the schedule plus from M4 on,
+through milestone_map.marked_on_schedule().
+
 WHAT IS ENFORCED
 ----------------
   * NO em dashes anywhere in a PDF (instructor ruling). Normalized on the way
@@ -97,6 +109,7 @@ import yaml
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
+import milestone_carry_forward as carry_forward  # noqa: E402
 from milestone_map import additions, milestone_map  # noqa: E402
 from submission_pdf_howto import POINTER, markdown as howto_markdown  # noqa: E402
 
@@ -231,6 +244,14 @@ def book_page(path: Path) -> tuple[str, str]:
     # the badge became a text link, so the book's own cross-reference to it must
     # follow, or "the badge above" points at nothing on the page
     t = t.replace("with the badge above", "with the link above")
+    # D82: in the COURSE handout the book's 10-point table is not the grade. The
+    # course rubric on Brightspace scores the milestone and already contains
+    # these checks, so the heading says so rather than looking like the grade.
+    t = t.replace("## How this milestone is assessed",
+                  "## The book's own checks\n\nYour course rubric on Brightspace "
+                  "scores these checks inside its rows, so use this table to test "
+                  "your work before you hand it in. The points below are the "
+                  "book's, not your course score.\n")
     t = re.sub(r"\n{3,}", "\n\n", t).strip()
     return title, t
 
@@ -266,16 +287,40 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
                 f"beside it, because {'it' if len(extras) == 1 else 'they'} cannot "
                 f"live inside a PDF:")
 
-    head = [
-        "## What to submit",
-        "",
-        lead,
-        "",
-        f"Submit it on Brightspace, under **Assignments** then **M{info['num']}**. "
-        f"Brightspace carries the deadline.",
-        "",
-        POINTER,
-        "",
+    submit_line = (f"Submit it on Brightspace, under **Assignments** then "
+                   f"**M{info['num']}**. Brightspace carries the deadline.")
+    if carry_forward.applies(n):
+        # D82: from M4 on the PDF opens with the carry-forward record. It says
+        # THAT the record comes first and how to answer each item, never what
+        # the requests or the plan contain: those are personal to each student
+        # and live in the review email and the action plan.
+        file_lead = f"Everything this milestone collects goes into one file, {main}."
+        if extras:
+            file_lead = (f"Everything this milestone collects goes into one file, "
+                         f"{main}, except the "
+                         f"{'artifact' if len(extras) == 1 else 'artifacts'} "
+                         f"listed at the end of this section, which cannot live "
+                         f"inside a PDF.")
+        head = [
+            carry_forward.pdf_block(n, file_lead=file_lead,
+                                    has_additions=bool(add.get("additions_markdown"))),
+            submit_line,
+            "",
+            POINTER,
+            "",
+        ]
+    else:
+        head = [
+            "## What to submit",
+            "",
+            lead,
+            "",
+            submit_line,
+            "",
+            POINTER,
+            "",
+        ]
+    head += [
         "This milestone presents "
         + " and ".join(f"**Book Milestone {b['n']}: {_short(b['title'])}** "
                        f"({b['relationship']}, {b['version_label']})"
@@ -283,6 +328,8 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         + " of the course book, EDR\\|AI.",
         "",
     ]
+    if extras and carry_forward.applies(n):
+        head += ["Beside your PDF, hand in:", ""]
     for e in extras:
         head.append(f"- `{e['name']}`: {e['why']}")
     if extras:

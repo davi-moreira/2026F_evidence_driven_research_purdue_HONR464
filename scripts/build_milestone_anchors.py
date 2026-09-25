@@ -16,6 +16,10 @@ This script rewrites, in each `_research_project/2026Fall/milestone_NN_*.md`:
      scripts/submission_pdf_howto.py and shared with the milestone PDFs, so the
      brief and the PDF can never give different instructions,
 
+  4. from M4 on, the carry-forward "Start here" block right under the bridge
+     (D82), authored once in scripts/milestone_carry_forward.py and shared with
+     the milestone PDFs,
+
 from COURSE_BOOK_CROSSWALK.yml home anchors + BOOK_ARCHITECTURE.yml identity
 (display numbers derived from rank; links from url_path and companion).
 Everything else in the brief is left byte-for-byte alone.
@@ -36,6 +40,7 @@ from book_manifest import (active_lessons, load_crosswalk,  # noqa: E402
 from submission_pdf_howto import BEGIN as HOWTO_BEGIN  # noqa: E402
 from submission_pdf_howto import END as HOWTO_END  # noqa: E402
 from submission_pdf_howto import brief_block  # noqa: E402
+import milestone_carry_forward as carry_forward  # noqa: E402
 
 BRIEFS = REPO / "_research_project" / "2026Fall"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
@@ -147,6 +152,39 @@ def apply_howto(text: str) -> str:
                       + lines[nav:])
 
 
+START_RE = re.compile(re.escape(carry_forward.BEGIN) + r".*?"
+                      + re.escape(carry_forward.END), re.S)
+COMPONENT_RE = re.compile(r"^### (\d+)\. (.+)$", re.M)
+
+
+def apply_start(text: str, num: int) -> str:
+    """D82: open the brief with the carry-forward "Start here" block (M4 on).
+
+    Placed right after the Book Milestone bridge, so it is the first thing a
+    student reads. The component numbers it points at are read from the brief's
+    own headings, never typed.
+    """
+    if not carry_forward.applies(num):
+        return (START_RE.sub("", text).replace("\n\n\n\n", "\n\n")
+                if START_RE.search(text) else text)
+    ir = plan = None
+    for mo in COMPONENT_RE.finditer(text):
+        if "Instructor Request Record" in mo.group(2):
+            ir = int(mo.group(1))
+        elif "action plan" in mo.group(2).lower():
+            plan = int(mo.group(1))
+    block = carry_forward.brief_block(num, ir_component=ir, plan_component=plan)
+    if START_RE.search(text):
+        return START_RE.sub(lambda _: block, text)
+    if BRIDGE_END in text:
+        return text.replace(BRIDGE_END, BRIDGE_END + "\n\n" + block, 1)
+    lines = text.split("\n")
+    for i, line in enumerate(lines):
+        if line.startswith("# "):
+            return "\n".join(lines[:i + 1] + ["", block] + lines[i + 1:])
+    return block + "\n\n" + text
+
+
 def render(text: str, picked: list[dict]) -> str:
     if not picked:
         return text
@@ -188,6 +226,7 @@ def main() -> int:
         if mi in rows:
             new = apply_bridge(new, bridge_block(rows[mi], stations))
         new = apply_howto(new)
+        new = apply_start(new, int(m.group(1)))
         if new == src:
             continue
         if check:

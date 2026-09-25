@@ -33,7 +33,8 @@ from validate_calendar import no_class_days  # noqa: E402
 from session_readings import (lesson_index, rdss_note_compact,  # noqa: E402
                               render_cell, studio_pages)
 from milestone_map import (additions, live_milestones,  # noqa: E402
-                           milestone_map)
+                           marked_on_schedule, milestone_map)
+from milestone_carry_forward import SCHEDULE_LEGEND  # noqa: E402
 
 
 def tracked_students() -> set[str]:
@@ -91,8 +92,7 @@ Studio, so those rows carry no deck.
 [data.zip](notebooks/data/data.zip). Download it once.
 
 **Milestone column.** Every milestone links to the Book Milestone it presents in
-[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** means that this
-course requests something in addition to the book milestone.
+[EDR|AI](book/index.html){target="_blank"}. {LEGEND}
 
 ## Core Course References
 
@@ -101,7 +101,7 @@ course requests something in addition to the book milestone.
   Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
 
 :::
-'''.replace("{PLUS}", PLUS)
+'''.replace("{LEGEND}", SCHEDULE_LEGEND.format(plus="{PLUS}")).replace("{PLUS}", PLUS)
 
 
 #: The one dataset bundle the course and the book share. It used to repeat
@@ -264,7 +264,7 @@ def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
         if not info or not info["books"]:
             out.append(f"**{cid}**")
             continue
-        mark = f" {PLUS}" if adds.get(key, {}).get("schedule_mark") else ""
+        mark = f" {PLUS}" if marked_on_schedule(key, adds) else ""
         # The course id carries the link to the Book Milestone it presents;
         # naming both was saying the same thing twice in every row.
         first, rest = info["books"][0], info["books"][1:]

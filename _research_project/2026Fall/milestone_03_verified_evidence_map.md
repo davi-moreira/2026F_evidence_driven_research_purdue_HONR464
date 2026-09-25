@@ -47,7 +47,7 @@ submit by Sunday night.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m03_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
+| 1 | **`lastname_m03_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10), not collected at M3: the carry-forward record starts at M4. |
 | 2 | **EDR\|AI "It is your turn" — ch. 8, ch. 9** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -302,6 +302,8 @@ D80, 2026-09-15).
 ### 10. Your action plan's commitments for this milestone
 
 <!-- action-plan-commitments -->
+> **Not collected at M3.** The carry-forward record, with your action plan's steps, starts at M4 (course decision D82). What follows is a preview of how it will work.
+
 You hold a personal **research action plan**, written for your project and
 reissued after every review, with a version number that tells you which one is
 current. It is where this course's general instructions become the specific next
@@ -358,7 +360,7 @@ pre-submission checklist.
 | **Filename** | `lastname_m03_evidence_base.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |
 | **Instructor Request Record** | Not required for the original 2026 Fall M3 submission or its revision; the requests from the M3 review are carried into M4 |
-| **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
+| **Action-plan commitments** | Not applicable at M3: the carry-forward record, with your action plan's steps, starts at M4 |
 
 ---
 

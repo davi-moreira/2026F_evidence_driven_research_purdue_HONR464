@@ -4782,3 +4782,78 @@ stops the project need to hear the amended rule: the determination is still
 required and still scored, and it no longer halts the milestone on its own.
 Purdue's own human-subjects requirements are unaffected by this course decision
 and continue to apply independently.
+
+## D82 — The carry-forward record opens every milestone from M4, on every surface, and the rubric scores it (2026-09-25)
+
+**Why.** A 2026-09-25 audit (Claude, with an independent Codex pass) found that
+none of the sixteen milestone PDFs students are handed asked for either thing the
+mentoring cycle depends on: the numbered review requests of D80 and the
+action-plan commitments added to the briefs on 2026-09-21. Worse, each PDF opened
+"Everything this milestone asks for goes inside it, as sections in the order
+below", and neither appeared below. The Brightspace instruction copies (built
+2026-09-15) lacked the action-plan component and still printed the gate D81
+retired; the studio workbooks, which three of four M4 submissions were printed
+from, had no place for either. The mismatch was designed into the pipeline by the
+2026-08-23 book-first ruling, so re-rendering could not fix it.
+
+**Ruling (instructor, 2026-09-25).**
+
+1. **One carry-forward record, from M4 on.** It opens every milestone artifact and
+   holds two parts: every numbered `IR-MNN-##` request from the last review (D80),
+   and every step the student's action plan sets for this milestone. Each item is
+   marked **Done** with its location, or **Not adopted** with a reason and the
+   choice made instead. M1 to M3 do not collect it (their briefs keep the
+   component as a preview, marked *not collected*); the plan is first issued with
+   the M2 review and D80 starts at M4, so M4 is the first milestone where both
+   parts exist for everyone.
+2. **The PDF says THAT, never WHAT.** Every milestone PDF from M4 opens with a
+   short **Start here** block: the record comes first, what it holds, how to
+   answer each item, and how it is scored. It does not restate the requests or
+   the plan, which are personal and live in the review email and the plan. This
+   is a narrow amendment to the 2026-08-23 book-first ruling: the carry-forward
+   opening is not a course "addition", so `classification` and the Expo-only
+   "What this course adds" rule are unchanged. The same block opens every brief
+   (M4 on) inside `<!-- carry-forward-start -->` markers. Mentor voice, second
+   person, written to an undergraduate.
+3. **The schedule plus marks M4 to M16.** `milestone_map.marked_on_schedule()`
+   ORs the carry-forward rule into the Expo `schedule_mark`; the legend says what
+   the plus now means.
+4. **The rubrics score the book and the course together.** Every milestone-score
+   rubric from M4 opens with *What this rubric scores*, mapping the book
+   milestone's own checks (complete and specific, versioned with its reason,
+   judgments owned, the four rails, the milestone's product) onto the course
+   rows; where a check was not visibly scored, its clause was added to that
+   row's top band. A new row, **Carry-forward: your action plan's steps (10)**,
+   is added from M4, and the other rows are **rescaled proportionally to 90**
+   (largest-remainder rounding, every band range rescaled with them), so no one
+   course virtue pays for it. A plan step that is also a numbered request is
+   scored once, through D80's adjustment, not in the row. D80's adjustment
+   itself is unchanged (5 points per unaddressed request, cap 20, 48-hour
+   notice). M12 and M13 process scores take the same row the same way
+   (M13's per-member share becomes the last two rows, 28 points).
+   **M1 to M3 rubrics are left exactly as graded**; M4 carried no numeric score
+   this edition, so its revised rubric changes no recorded grade.
+5. **In the course PDF, the book's 10-point table is relabelled** *The book's own
+   checks*, with a line saying the course rubric scores them inside its rows.
+6. **Workbooks from Milestone 4** open with a book-neutral *Answer your last
+   review first* cell and a response table (the book stays institution-agnostic).
+7. **Brightspace instruction copies are generated** from the current briefs by
+   `scripts/build_brightspace_kit.py` (new `brightspace/milestones/` step), and
+   the M11 unit now says *at the start of class*, not 11:59 PM.
+
+**Single source.** `scripts/milestone_carry_forward.py` (the PDF block, the brief
+block, the schedule legend, the workbook cell, `FIRST = 4`), read by
+`build_handout_pdfs.py`, `build_milestone_anchors.py`, `update_schedule_badges.py`
+(through `milestone_map`) and `build_station_pages.py`.
+
+**Also fixed.** M12's additions text no longer assumes five projects and four
+reviews (`milestone_course_additions.yml`).
+
+**Not changed.** Weights, D80's rule, hard caps, revision and late rules, the
+Expo additions and every M1 to M3 score.
+
+**⚠ Action for Davi, outside the repository.** Replace the posted M5 to M16
+instructions and PDFs on Brightspace with the regenerated ones (M5 is due
+Sun 2026-09-27), send the announcement drafted at
+`_announcements/2026-09-25_carry_forward_record.md`, and update the Brightspace
+rubric objects to the new rows and weights if rubrics are attached there.

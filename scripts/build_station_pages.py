@@ -39,6 +39,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from book_manifest import (active_lessons, load_architecture,  # noqa: E402
                            require_lock)
+import milestone_carry_forward as carry_forward  # noqa: E402
 
 STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
 ASSESS_YML = REPO / "planning" / "BOOK_ASSESSMENTS.yml"
@@ -301,6 +302,12 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
                    f"A milestone is a *version*, not a pass. Date it, number it, "
                    f"and write why this version exists.\n")]
     i = 1
+    if n >= carry_forward.FIRST:
+        # D82: from Milestone 4 on, the workbook opens by answering the last
+        # review, item by item. Book-neutral wording (the book is institution-
+        # agnostic); the course's own rule lives in the brief and the PDF.
+        cells.append(md(i, carry_forward.WORKBOOK_HEAD)); i += 1
+        cells.append(md(i, carry_forward.WORKBOOK_CELL)); i += 1
     if spec.get("opening_move"):
         cells.append(md(i, f"## Start without a tool\n\n"
                           f"{spec['opening_move'].strip()}\n"))

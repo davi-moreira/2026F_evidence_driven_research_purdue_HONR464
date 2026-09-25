@@ -39,6 +39,15 @@
 # live in course_config.yaml `mentor_meetings:` and on the course platform, never
 # in these PDFs, which ban calendar dates.
 #
+# AMENDED 2026-09-25 (instructor ruling, D82). From M4 on every milestone also
+# collects the CARRY-FORWARD RECORD: the student's answer to the numbered review
+# requests (D80) and to the steps their action plan sets for that milestone. It
+# is not an Expo addition, so nothing below changes: `classification` and
+# `schedule_mark` keep their Expo meaning. The PDF's "Start here" opening and the
+# second reason for the schedule plus come from scripts/milestone_carry_forward.py
+# (milestone_map.marked_on_schedule ORs it in). A `schedule_mark: false` below
+# therefore no longer means "no plus" from M4 on.
+#
 # THIS FILE IS THE SINGLE SOURCE OF TRUTH for both distinctions.
 # scripts/build_handout_pdfs.py reads `classification` (the PDF section) and
 # scripts/update_schedule_badges.py reads `schedule_mark` (the schedule plus),
@@ -937,7 +946,7 @@ milestones:
       \ you to turn that same criticism outward, on every other live\nproject, and then to adjudicate\
       \ the criticism your own project receives. Both\nparts go in your one PDF, as two clearly labelled\
       \ sections.\n\n### 1. Review every other active project\n\nYou review **every other active project\
-      \ or poster**, with none skipped. When all\nfive projects are individual, that is four reviews;\
+      \ or poster**, with none skipped. When every\nproject is individual, that is one review per classmate (three when four projects are live);\
       \ an approved group lowers the\ncount, and you always review at least two other live projects. This\
       \ is\nindividual work even if your own project is a group project.\n\nWrite one review survey per\
       \ project, on the course poster rubric's four\ncriteria: reading architecture, traceability, uncertainty\

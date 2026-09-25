@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 7 — Your first reproducible analysis** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M07-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 11 shows the request table and Component 12 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -377,6 +388,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -421,6 +434,8 @@ pre-submission checklist.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Compass & pathway alignment**; *a dated, numbered version with its reason* in **Craft, ledger & abstract gate**; *every judgment defended by you, not asserted by a tool* in **Verification**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & provenance**, **Verification**, **Uncertainty & claim boundary** and **Craft, ledger & abstract gate**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
 criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
@@ -428,11 +443,14 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (15) | The pipeline implements exactly the declared analysis; the result answers the declared question in the declared form; the abstract stays inside the route's licence (13–15) | Declared analysis implemented; one link between the result and the declaration loose (10–12) | Undeclared extras feed the reported result, or the result drifts from the declared form (5–9) | The pipeline answers a different question than the project declared (0–4) |
-| **Evidence integrity & provenance** (20) | Data loaded from the documented M6 source; the environment is recorded; every reported number traces to a data cell and a line of code (18–20) | Traceable; one trace row or the environment record thin (14–17) | A dataset or number asserted without a locatable origin, or an incomplete trace (8–13) | A source that does not exist, or a number with no path back to data (0–7) |
-| **Verification** (30) | The clean restart is run and recorded; every discrepancy explained and fixed; both re-derivations are genuinely independent and judged against a tolerance declared first; the line review and known-answer test are real; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification (27–30) | All five checks present; one recorded loosely (21–26) | A restart claimed but not recorded, a re-derivation that reuses the original code, a tolerance written after the gap was visible, or a flag answered without a check (14–20) | No clean restart, a discrepancy left unexplained, an auditor flag pasted in or dismissed unverified, or code in the pipeline you cannot explain (0–13) |
-| **Uncertainty & claim boundary** (20) | The uncertainty statement is attached, reproduces, and is read correctly; the result is never worded as settled certainty; the abstract makes no promise the evidence cannot keep (18–20) | Uncertainty present and reproducing; one reading or boundary sentence loose (14–17) | A point estimate with no uncertainty, or uncertainty reported but never read (8–13) | The first verified run narrated as a certain finding, or an abstract that overclaims past the route (0–7) |
-| **Craft, ledger & abstract gate** (15) | Versioned with its reason, on-format, on-time, gate cleared, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; abstract and ledger complete (10–12) | Missing pieces, a rushed clinic walkthrough, or an ungated abstract (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Compass & pathway alignment** (14) | The pipeline implements exactly the declared analysis; the result answers the declared question in the declared form; the abstract stays inside the route's licence; complete and unmistakably about your project (12–14) | Declared analysis implemented; one link between the result and the declaration loose (9–11) | Undeclared extras feed the reported result, or the result drifts from the declared form (5–8) | The pipeline answers a different question than the project declared (0–4) |
+| **Evidence integrity & provenance** (18) | Data loaded from the documented M6 source; the environment is recorded; every reported number traces to a data cell and a line of code (16–18) | Traceable; one trace row or the environment record thin (13–15) | A dataset or number asserted without a locatable origin, or an incomplete trace (7–12) | A source that does not exist, or a number with no path back to data (0–6) |
+| **Verification** (27) | The clean restart is run and recorded; every discrepancy explained and fixed; both re-derivations are genuinely independent and judged against a tolerance declared first; the line review and known-answer test are real; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification; every judgment defended in your own reasoning, not a tool's (24–27) | All five checks present; one recorded loosely (19–23) | A restart claimed but not recorded, a re-derivation that reuses the original code, a tolerance written after the gap was visible, or a flag answered without a check (13–18) | No clean restart, a discrepancy left unexplained, an auditor flag pasted in or dismissed unverified, or code in the pipeline you cannot explain (0–12) |
+| **Uncertainty & claim boundary** (18) | The uncertainty statement is attached, reproduces, and is read correctly; the result is never worded as settled certainty; the abstract makes no promise the evidence cannot keep (16–18) | Uncertainty present and reproducing; one reading or boundary sentence loose (13–15) | A point estimate with no uncertainty, or uncertainty reported but never read (7–12) | The first verified run narrated as a certain finding, or an abstract that overclaims past the route (0–6) |
+| **Craft, ledger & abstract gate** (13) | Versioned with its reason, on-format, on-time, gate cleared, complete AI Research Ledger, dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses; abstract and ledger complete (9–10) | Missing pieces, a rushed clinic walkthrough, or an ungated abstract (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M07-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to this milestone score only).**
 Let `U` be the number of numbered `IR-M07-##` requests from the M6 review

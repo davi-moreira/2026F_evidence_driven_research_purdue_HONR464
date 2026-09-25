@@ -28,6 +28,7 @@ import html
 import json
 import math
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -438,11 +439,20 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
         add(f"<h3>Milestone {mkey}: {esc(mdata.get('title', ''))}</h3>")
         due = mdata.get("due")
         if due:
-            add(
-                f"<p><strong>Due {esc(pretty(due, weekday=True))} at "
-                "11:59 PM.</strong> "
-                "You build it in Friday's studio and submit it from there.</p>"
-            )
+            # D82 audit fix: a milestone due AT CLASS (M11, kind "lecture") is
+            # not an 11:59 PM deadline, and is not built in Friday's studio.
+            if mdata.get("kind") == "lecture":
+                add(
+                    f"<p><strong>Due {esc(pretty(due, weekday=True))}, at the "
+                    "start of class.</strong> Bring your draft to the review "
+                    "round in that class.</p>"
+                )
+            else:
+                add(
+                    f"<p><strong>Due {esc(pretty(due, weekday=True))} at "
+                    "11:59 PM.</strong> "
+                    "You build it in Friday's studio and submit it from there.</p>"
+                )
         bp = brief_path(mkey)
         if bp:
             add(
@@ -1280,6 +1290,22 @@ def main() -> int:
         if body:
             (OUT / "units" / f"week{week:02d}.html").write_text(body)
 
+    # D82: the milestone instructions pasted into each Brightspace assignment
+    # are rendered from the CURRENT briefs, every time, so they can never lag a
+    # brief again (the Sep 15 copies missed the Sep 21 action-plan component
+    # and still carried the gate D81 retired).
+    (OUT / "milestones").mkdir(exist_ok=True)
+    pandoc = shutil.which("pandoc")
+    n_briefs = 0
+    for brief in sorted(BRIEFS.glob("milestone_*.md")):
+        if not pandoc:
+            print("⚠ pandoc not found: milestone instructions not rendered")
+            break
+        subprocess.run([pandoc, "-f", "markdown", "-t", "html", str(brief),
+                        "-o", str(OUT / "milestones" / f"{brief.stem}.html")],
+                       check=True)
+        n_briefs += 1
+
     (OUT / "gradebook_spec.md").write_text(gradebook_spec(config))
     (OUT / "00_pre_semester_checklist.md").write_text(checklist(config))
     (OUT / "simple_syllabus_ai_policy.md").write_text(ai_policy_component(config))
@@ -1295,7 +1321,7 @@ def main() -> int:
         print("⚠ the Schedule paste edition did not build — see the error above")
 
     print(f"✓ Brightspace kit written to {OUT.relative_to(ROOT)}/")
-    print(f"  {len(weeks)} weekly units, gradebook spec, checklist, AI policy,")
+    print(f"  {len(weeks)} weekly units, {n_briefs} milestone instructions, gradebook spec, checklist, AI policy,")
     print(f"  and the Week 1 welcome announcement "
           f"({(ANNOUNCEMENTS / '01_welcome.md').relative_to(ROOT)})")
     print("  (brightspace/ is gitignored — nothing here is published)")

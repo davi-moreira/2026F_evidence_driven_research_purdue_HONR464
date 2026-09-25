@@ -566,6 +566,21 @@ M1–M3 scores carry no deduction. No weight, component, rubric row, hard cap, o
 the AI Research Ledger rule changes. Full ruling: `_project_docs/DECISIONS.md`
 D80; student-facing text: every brief in `_research_project/2026Fall/`.
 
+## The carry-forward record and the rubric (D82, 2026-09-25)
+
+D82 widens D80's record into a **carry-forward record** that opens every
+milestone artifact from **M4**: the numbered `IR-MNN-##` requests (D80, graded by
+the adjustment above, unchanged) **plus** the steps the student's action plan
+sets for that milestone. Every milestone PDF and brief from M4 opens with a
+**Start here** block saying so (never detailing the requests or the plan), and
+the schedule marks M4–M16 with the plus sign. From M4 every milestone-score rubric
+carries a sixth row, **Carry-forward: your action plan's steps (10)**, the other
+rows rescaled proportionally to 90, and opens with a *What this rubric scores*
+map of the book milestone's own checks onto the course rows. A plan step that is
+also a numbered request is scored once, through the D80 adjustment. M1–M3 rubrics
+stay as graded. This amends "no rubric row changes" in D80 above for M4–M16 only.
+Full ruling: `_project_docs/DECISIONS.md` D82.
+
 ## Rubric DNA — five virtues, one menu
 
 Every milestone rubric in `_research_project/2026Fall/` is a **100-point,

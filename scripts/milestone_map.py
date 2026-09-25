@@ -144,4 +144,10 @@ def marked_on_schedule(key: str, adds: dict | None = None) -> bool:
     required instruction from the PDF, so they are separate flags.
     """
     adds = additions() if adds is None else adds
-    return bool(adds.get(key, {}).get("schedule_mark"))
+    # D82 (2026-09-25): from M4 on, every milestone also collects the
+    # carry-forward record (the numbered review requests and the action plan's
+    # steps), which the book milestone never asks for. The Expo mark in the
+    # additions file is unchanged; this ORs the second reason in.
+    from milestone_carry_forward import applies as carry_forward_applies
+    return (bool(adds.get(key, {}).get("schedule_mark"))
+            or carry_forward_applies(int(key[1:])))

@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 9 — Your bounded claims** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M09-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 6 shows the request table and Component 7 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -308,6 +319,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -351,6 +364,8 @@ pre-submission checklist.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Compass & pathway alignment**; *a dated, numbered version with its reason* in **Craft, ledger & communication**; *every judgment defended by you, not asserted by a tool* in **Verification & robustness**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & provenance**, **Verification & robustness**, **Uncertainty & limitations** and **Craft, ledger & communication**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
 criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
@@ -361,11 +376,14 @@ the milestone's own product present and defensible.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (20) | The headline carries its kind and its reach in one sentence, each warranted separately; every verb in the note is sized to what the design established; a causal question the design cannot identify is reported as unidentified (18–20) | Inside the boundary; one verb slightly strong, or the reach stated loosely (14–17) | Boundary present but the prose drifts toward a claim the design does not license (8–13) | Overclaim: an observational association written as a cause, a sample written as a population, or a causal question relabeled descriptive because the data were weak (0–7) |
-| **Evidence integrity & provenance** (20) | Every claim in the note has a table row; every number walks back to the cell that produced it; every reference is retrievable and says what is claimed (18–20) | Traceable; one row thin or one reference under-linked (14–17) | A claim in the note with no row, or a reference asserted without a locatable origin (8–13) | A fabricated or unretrievable source, or a headline claim with no evidence row at all (0–7) |
-| **Verification & robustness** (25) | Every table row names a real check, and at least one was reopened and spot-checked; the disclosure is drafted from the ledger and names tool, task, verification, and what went unverified; the version line carries a usable reason (23–25) | Checks mostly named; one row vague, or the version reason decorative (18–22) | Generic "I checked it" entries, or a disclosure written from memory (11–17) | A number with no path back to a cell, or a claimed verification that never happened (0–10) |
-| **Uncertainty & limitations** (20) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (18–20) | Both present; one stated loosely (14–17) | A point estimate with no interval somewhere, or limitations gestured at generically (8–13) | No uncertainty stated, or the finding written as settled certainty (0–7) |
-| **Craft, ledger & communication** (15) | On-format, on-time, one to two pages a stranger can follow without you; red-team feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces, or studio feedback ignored (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+| **Compass & pathway alignment** (18) | The headline carries its kind and its reach in one sentence, each warranted separately; every verb in the note is sized to what the design established; a causal question the design cannot identify is reported as unidentified; complete and unmistakably about your project (16–18) | Inside the boundary; one verb slightly strong, or the reach stated loosely (13–15) | Boundary present but the prose drifts toward a claim the design does not license (7–12) | Overclaim: an observational association written as a cause, a sample written as a population, or a causal question relabeled descriptive because the data were weak (0–6) |
+| **Evidence integrity & provenance** (18) | Every claim in the note has a table row; every number walks back to the cell that produced it; every reference is retrievable and says what is claimed (16–18) | Traceable; one row thin or one reference under-linked (13–15) | A claim in the note with no row, or a reference asserted without a locatable origin (7–12) | A fabricated or unretrievable source, or a headline claim with no evidence row at all (0–6) |
+| **Verification & robustness** (23) | Every table row names a real check, and at least one was reopened and spot-checked; the disclosure is drafted from the ledger and names tool, task, verification, and what went unverified; the version line carries a usable reason; every judgment defended in your own reasoning, not a tool's (21–23) | Checks mostly named; one row vague, or the version reason decorative (17–20) | Generic "I checked it" entries, or a disclosure written from memory (10–16) | A number with no path back to a cell, or a claimed verification that never happened (0–9) |
+| **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (16–18) | Both present; one stated loosely (13–15) | A point estimate with no interval somewhere, or limitations gestured at generically (7–12) | No uncertainty stated, or the finding written as settled certainty (0–6) |
+| **Craft, ledger & communication** (13) | On-format, on-time, one to two pages a stranger can follow without you; red-team feedback incorporated; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces, or studio feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M09-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to this milestone score only).**
 Let `U` be the number of numbered `IR-M09-##` requests from the M8 review

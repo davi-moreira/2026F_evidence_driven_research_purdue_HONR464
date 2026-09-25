@@ -561,8 +561,21 @@ check / Scope, and the mentoring email reproduces the same IDs and wording.
 Never grade an unnumbered comment as a carry-forward request. The
 `honr464-milestone-review` skill's feedback files carry this block. Canonical
 text: `_project_docs/DECISIONS.md` D80, `planning/ASSESSMENT_ARCHITECTURE.md`,
-and every brief in `_research_project/2026Fall/`; the book-first milestone PDFs
-do not change.
+and every brief in `_research_project/2026Fall/`.
+
+**D82 (2026-09-25) widens it into the CARRY-FORWARD RECORD**, from M4 on: the
+numbered requests PLUS the steps the student's action plan sets for that
+milestone. Every milestone PDF and brief from M4 opens with a generated
+**Start here** block that says THAT the record comes first and how to answer
+each item, and **never details what the requests or the plan ask** (they are
+personal; they live in the email and the plan). The schedule marks M4–M16 with
+the ✚. Every milestone-score rubric from M4 carries a **Carry-forward: your
+action plan's steps (10)** row (other rows rescaled to 90) and opens with a
+*What this rubric scores* map of the book's checks; a plan step that is also a
+numbered request is scored once, through D80. Workbooks from Milestone 4 open
+with an *Answer your last review first* table. M1–M3 rubrics stay as graded.
+Single source: `scripts/milestone_carry_forward.py` — never hand-edit the
+generated blocks.
 
 ---
 
@@ -874,7 +887,8 @@ material.
 
 ---
 
-**Version:** 7.6 — D81, the permission blocking gate is retired and the determination becomes
+**Version:** 7.7 — D82, the carry-forward record opens every milestone from M4 (2026-09-25, DECISIONS.md D82): generated **Start here** block at the top of every milestone PDF and brief from M4 (says THAT the numbered requests and the action plan's steps come first, never WHAT they ask); ✚ on M4–M16; new rubric row *Carry-forward: your action plan's steps (10)* with the other rows rescaled proportionally to 90, plus a *What this rubric scores* book-check map; book table relabelled *The book's own checks* in course PDFs; workbooks 4–12 open with a review-response table; Brightspace milestone HTML now generated from the briefs; M1–M3 rubrics untouched. ⚠ For Davi: repost M5–M16 instructions/PDFs on Brightspace and send `_announcements/2026-09-25_carry_forward_record.md`.
+(7.6 — D81, the permission blocking gate is retired and the determination becomes
 scored (2026-09-21, DECISIONS.md D81): the `permission-status-honoured` **blocking gate is RETIRED
 for this edition**. It read "No work at or after Studio 4 proceeds past a not-authorized
 determination. This is not scored and cannot be averaged away.", and it rendered on the nine Book
@@ -1248,5 +1262,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

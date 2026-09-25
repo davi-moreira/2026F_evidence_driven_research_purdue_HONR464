@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 6 — Your data and measurement, governed** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone06-govern-data-measurement.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M06-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 8 shows the request table and Component 9 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -328,6 +339,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -370,6 +383,8 @@ pre-submission checklist.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Governance correctness (provenance & measurement)**; *a dated, numbered version with its reason* in **Craft, ledger & communication**; *every judgment defended by you, not asserted by a tool* in **Verification of AI-assisted parts**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & provenance**, **Verification of AI-assisted parts**, **Uncertainty & measurement error** and **Governance correctness (provenance & measurement)**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`). The rows also carry what Book
 Milestone 6 asks of the artifact: that it be complete and unmistakably yours,
@@ -378,11 +393,14 @@ rails, and defensible as one governed-data record.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Governance correctness (provenance & measurement)** (30) | Acquisition route settled in writing; provenance complete for every source with its terms and retrieval date named; the data-management record says where files live, who can open them, and which columns survived the analysis test; the measurement ladder narrows at every rung; reliability run on items, occasions, or raters; validity argued as interpretation and use with its rival reading (26–30) | All parts present; one rung, one source's terms, or one check thin (21–25) | A governance piece missing or malformed: reliability by respondent-splitting, columns kept with no analysis behind them, or provenance that stops at a link (13–20) | No acquisition route declared, or a measurement specification that never descends below the concept (0–12) |
-| **Evidence integrity & provenance** (20) | Every dataset, licence, and borrowed number is real and retrievable; the primary source behind your headline claim was opened and read; missing links written as unknown rather than guessed; a reader can trace each entry to its origin (18–20) | Real and traceable; one provenance entry thin (14–17) | A dataset, licence, or number asserted without a locatable source (8–13) | A cited dataset, licence, or source that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI claim about your data verified against the file itself; the permission recheck run in the form your route requires; every ledger row's verification method named and non-vague (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but the against-the-file check not named (8–13) | An AI description of your dataset, or an AI-asserted licence, pasted in and never checked against the file (0–7) |
-| **Uncertainty & measurement error** (20) | Measurement error stated alongside sampling uncertainty; the construct–indicator gap named with what it could cost the claim; the boundary sentence says who the measure never reaches; the Contract version carries a usable reason (18–20) | Error, gap, and boundary present; one stated loosely, or the version reason thin (14–17) | Measurement error mentioned but not connected to the claim, or the gap declared closed by assertion (8–13) | No measurement-error statement, or a settled operationalization with no version and no reason (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time; the four pieces assembled as one record a reader can follow; tables complete and readable; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed record (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Governance correctness (provenance & measurement)** (27) | Acquisition route settled in writing; provenance complete for every source with its terms and retrieval date named; the data-management record says where files live, who can open them, and which columns survived the analysis test; the measurement ladder narrows at every rung; reliability run on items, occasions, or raters; validity argued as interpretation and use with its rival reading; the ethics, permissions and data-exposure rail carried as this studio requires (24–27) | All parts present; one rung, one source's terms, or one check thin (19–23) | A governance piece missing or malformed: reliability by respondent-splitting, columns kept with no analysis behind them, or provenance that stops at a link (12–18) | No acquisition route declared, or a measurement specification that never descends below the concept (0–11) |
+| **Evidence integrity & provenance** (18) | Every dataset, licence, and borrowed number is real and retrievable; the primary source behind your headline claim was opened and read; missing links written as unknown rather than guessed; a reader can trace each entry to its origin (16–18) | Real and traceable; one provenance entry thin (13–15) | A dataset, licence, or number asserted without a locatable source (7–12) | A cited dataset, licence, or source that does not exist or does not say what you claim (0–6) |
+| **Verification of AI-assisted parts** (18) | Every AI claim about your data verified against the file itself; the permission recheck run in the form your route requires; every ledger row's verification method named and non-vague; every judgment defended in your own reasoning, not a tool's (16–18) | Ledger present; one verification method vague or one step unlogged (13–15) | Ledger thin; AI outputs used but the against-the-file check not named (7–12) | An AI description of your dataset, or an AI-asserted licence, pasted in and never checked against the file (0–6) |
+| **Uncertainty & measurement error** (18) | Measurement error stated alongside sampling uncertainty; the construct–indicator gap named with what it could cost the claim; the boundary sentence says who the measure never reaches; the Contract version carries a usable reason (16–18) | Error, gap, and boundary present; one stated loosely, or the version reason thin (13–15) | Measurement error mentioned but not connected to the claim, or the gap declared closed by assertion (7–12) | No measurement-error statement, or a settled operationalization with no version and no reason (0–6) |
+| **Craft, ledger & communication** (9) | On-format, on-time; the four pieces assembled as one record a reader can follow; tables complete and readable; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use (8–9) | Minor format lapses; ledger complete (6–7) | Missing pieces or a rushed record (4–5) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M06-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to this milestone score only).**
 Let `U` be the number of numbered `IR-M06-##` requests from the M5 review

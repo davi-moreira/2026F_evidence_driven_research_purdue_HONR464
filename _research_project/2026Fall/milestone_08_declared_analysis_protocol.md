@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 8 — Your robustness audit** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone08-stress-test.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M08-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 9 shows the request table and Component 10 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -386,6 +397,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -433,6 +446,8 @@ pre-submission checklist.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Compass & pathway alignment**; *a dated, numbered version with its reason* in **Craft, ledger & communication**; *every judgment defended by you, not asserted by a tool* in **Verification & adjudication**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & full reporting**, **Verification & adjudication**, **Uncertainty & claim boundary** and **Craft, ledger & communication**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
 criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
@@ -440,11 +455,14 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (15) | Every check tests the same substantive claim; panels are commensurable; the reworded claim names its kind and reach and stops there (13–15) | Aligned; one panel or boundary sentence loose (10–12) | A check that answers a different question is folded in, or the reworded claim drifts past the route (5–9) | The audit tests something other than the declared claim, or the claim keeps a reach the design never had (0–4) |
-| **Evidence integrity & full reporting** (20) | The pre-list is dated before the runs; all three results reported, including the unfavorable ones; every reported figure traces to its output (18–20) | Complete; one trace row or one date thin (14–17) | A result omitted, or a check added later and presented as pre-listed without a label (8–13) | Selective reporting, a fabricated source, or a post-hoc check reported as pre-listed (0–7) |
-| **Verification & adjudication** (30) | Flags ranked by damage if true, with the most damaging one settled by a data check whose output is shown; every unverified flag on the pending register with its check and its date; the loudest wrong flag named where a check produced one; the null check run with its prediction written first; every AI-assisted step ledgered with a non-vague verification (27–30) | The top flag settled and the register complete; one check, one date, or one prediction recorded loosely (21–26) | A flag answered by argument rather than by a check, a pending flag left off the register, or a null check run without a prior prediction (14–20) | Reviewer flags pasted in or dismissed unverified, an unrun check reported as checked, or no null check at all (0–13) |
-| **Uncertainty & claim boundary** (20) | Each panel's spread is reported as a direction plus a range and never as an interval or a cross-panel stitch; the null check is written up in its own currency, a permutation check against its justified spread with the exchangeability argument stated or a negative control as its own estimate with its own uncertainty and sensitivity; the verdict bounds concern to what that check could detect; any complete-case contrast is labeled honestly; the remaining limitation is named (18–20) | Present; one of the four guard-rails stated loosely (14–17) | The spread and the uncertainty blurred together, a span stitched across two panels, or the negative test judged against exact zero (8–13) | The spread sold as an uncertainty interval, a negative control collapsed into a pile of null draws, a quiet reading reported as a "clean pass", a complete-case contrast reported as the effect among stayers, or no limitation at all (0–7) |
-| **Craft, ledger & communication** (15) | Versioned with its reason, on-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed record (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Compass & pathway alignment** (14) | Every check tests the same substantive claim; panels are commensurable; the reworded claim names its kind and reach and stops there; complete and unmistakably about your project (12–14) | Aligned; one panel or boundary sentence loose (9–11) | A check that answers a different question is folded in, or the reworded claim drifts past the route (5–8) | The audit tests something other than the declared claim, or the claim keeps a reach the design never had (0–4) |
+| **Evidence integrity & full reporting** (18) | The pre-list is dated before the runs; all three results reported, including the unfavorable ones; every reported figure traces to its output (16–18) | Complete; one trace row or one date thin (13–15) | A result omitted, or a check added later and presented as pre-listed without a label (7–12) | Selective reporting, a fabricated source, or a post-hoc check reported as pre-listed (0–6) |
+| **Verification & adjudication** (27) | Flags ranked by damage if true, with the most damaging one settled by a data check whose output is shown; every unverified flag on the pending register with its check and its date; the loudest wrong flag named where a check produced one; the null check run with its prediction written first; every AI-assisted step ledgered with a non-vague verification; every judgment defended in your own reasoning, not a tool's (24–27) | The top flag settled and the register complete; one check, one date, or one prediction recorded loosely (19–23) | A flag answered by argument rather than by a check, a pending flag left off the register, or a null check run without a prior prediction (13–18) | Reviewer flags pasted in or dismissed unverified, an unrun check reported as checked, or no null check at all (0–12) |
+| **Uncertainty & claim boundary** (18) | Each panel's spread is reported as a direction plus a range and never as an interval or a cross-panel stitch; the null check is written up in its own currency, a permutation check against its justified spread with the exchangeability argument stated or a negative control as its own estimate with its own uncertainty and sensitivity; the verdict bounds concern to what that check could detect; any complete-case contrast is labeled honestly; the remaining limitation is named (16–18) | Present; one of the four guard-rails stated loosely (13–15) | The spread and the uncertainty blurred together, a span stitched across two panels, or the negative test judged against exact zero (7–12) | The spread sold as an uncertainty interval, a negative control collapsed into a pile of null draws, a quiet reading reported as a "clean pass", a complete-case contrast reported as the effect among stayers, or no limitation at all (0–6) |
+| **Craft, ledger & communication** (13) | Versioned with its reason, on-format, on-time, complete AI Research Ledger, dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses; ledger complete (9–10) | Missing pieces or a rushed record (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M08-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to this milestone score only).**
 Let `U` be the number of numbered `IR-M08-##` requests from the M7 review

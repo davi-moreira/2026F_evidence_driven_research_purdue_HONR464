@@ -5,6 +5,17 @@
 > This submission presents **Book Milestone 4 — Your research contract, v0** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html#milestone).
 <!-- book-milestone-bridge:end -->
 
+<!-- carry-forward-start:begin -->
+> **Start here: what this milestone collects from you.**
+>
+> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M04-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 10 shows the request table and Component 11 the plan section.
+> 2. **Your milestone work**, as the components below describe it.
+>
+> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
+>
+> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+<!-- carry-forward-start:end -->
+
 ## About the Research Project
 
 Your semester project is **individual by default**: one researcher, one question,
@@ -422,6 +433,8 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
 > for this milestone, paste your plan's row for it into the Project's
@@ -466,17 +479,22 @@ pre-submission checklist.
 
 ## Grading Rubric (100 points)
 
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Contract completeness & alignment**; *a dated, numbered version with its reason* in **Craft, version, ledger & communication**; *every judgment defended by you, not asserted by a tool* in **Verification of the diagnosis & AI-assisted parts**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & provenance**, **Verification of the diagnosis & AI-assisted parts**, **Uncertainty, limitations & claim boundary** and **Craft, version, ledger & communication**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
 criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`, `contract-v0`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Contract completeness & alignment** (30) | All nine fields present, specific to your project, and pointing at one quantity; the alignment sentence holds; the operationalization is marked provisional; the DAG shows a real confounder into both treatment and outcome (26–30) | Fields and DAG present and mostly aligned; one field or one arrow thin or under-argued (21–25) | A field blank or collapsed, the provisional marking missing, or the answer strategy targeting an easier quantity than the estimand (13–20) | A one-arrow "model," fields that point at different quantities, or a Contract generic enough to fit any project (0–12) |
-| **Evidence integrity & provenance** (15) | The data strategy names actual sources from your M3 registry by row; every source, number, or prior finding cited to justify the design is real and retrievable (13–15) | Real and traceable; one provenance link thin (11–12) | Sources named as types rather than rows, or a figure asserted without a locatable origin (6–10) | A cited source or number that does not exist, or does not say what you claim (0–5) |
-| **Verification of the diagnosis & AI-assisted parts** (20) | The diagnosis reruns and its numbers trace to the declared design, seeded (`SEED = 464`); every AI-assisted step has a ledger row with a named, non-vague verification method; the redesign and the honest call are argued in your words, not the tool's (18–20) | Diagnosis traceable and ledger present; one verification method vague or one step unlogged (14–17) | Diagnosis asserted but not traceable to the design, or AI outputs used with verification unnamed (8–13) | A diagnosis number with no path back to the design, or AI output reproduced with no verification (0–7) |
-| **Uncertainty, limitations & claim boundary** (20) | Bias is reported signed, detection carries its stated test and threshold, and the worst of the three is named with what it does to your answer; the uncertainty statement and its wrong twin are both present; both boundary sentences are there and the three-state call is made (18–20) | Threat named and both boundary sentences present; the uncertainty statement or the state call stated loosely (14–17) | Only one boundary sentence, a threat named without saying what it does, or a redesign that does not read the diagnosis (8–13) | No diagnosis, no boundary, a causal question relabeled descriptive to fit weak data, or language that slides from association to cause (0–7) |
-| **Craft, version, ledger & communication** (15) | Versioned with its reason, on-format, on-time, a clear 3-minute declaration that took questions on any field, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; version and ledger complete (10–12) | Missing pieces or a rushed declaration (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Contract completeness & alignment** (27) | All nine fields present, specific to your project, and pointing at one quantity; the alignment sentence holds; the operationalization is marked provisional; the DAG shows a real confounder into both treatment and outcome (24–27) | Fields and DAG present and mostly aligned; one field or one arrow thin or under-argued (19–23) | A field blank or collapsed, the provisional marking missing, or the answer strategy targeting an easier quantity than the estimand (12–18) | A one-arrow "model," fields that point at different quantities, or a Contract generic enough to fit any project (0–11) |
+| **Evidence integrity & provenance** (14) | The data strategy names actual sources from your M3 registry by row; every source, number, or prior finding cited to justify the design is real and retrievable (12–14) | Real and traceable; one provenance link thin (10–11) | Sources named as types rather than rows, or a figure asserted without a locatable origin (6–9) | A cited source or number that does not exist, or does not say what you claim (0–5) |
+| **Verification of the diagnosis & AI-assisted parts** (18) | The diagnosis reruns and its numbers trace to the declared design, seeded (`SEED = 464`); every AI-assisted step has a ledger row with a named, non-vague verification method; the redesign and the honest call are argued in your words, not the tool's (16–18) | Diagnosis traceable and ledger present; one verification method vague or one step unlogged (13–15) | Diagnosis asserted but not traceable to the design, or AI outputs used with verification unnamed (7–12) | A diagnosis number with no path back to the design, or AI output reproduced with no verification (0–6) |
+| **Uncertainty, limitations & claim boundary** (18) | Bias is reported signed, detection carries its stated test and threshold, and the worst of the three is named with what it does to your answer; the uncertainty statement and its wrong twin are both present; both boundary sentences are there and the three-state call is made (16–18) | Threat named and both boundary sentences present; the uncertainty statement or the state call stated loosely (13–15) | Only one boundary sentence, a threat named without saying what it does, or a redesign that does not read the diagnosis (7–12) | No diagnosis, no boundary, a causal question relabeled descriptive to fit weak data, or language that slides from association to cause (0–6) |
+| **Craft, version, ledger & communication** (13) | Versioned with its reason, on-format, on-time, a clear 3-minute declaration that took questions on any field, complete AI Research Ledger, dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses; version and ledger complete (9–10) | Missing pieces or a rushed declaration (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+
+*Carry-forward row:* a plan step that is also a numbered request (`IR-M04-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
 
 **Carry-forward adjustment (course decision D80; applies to this milestone score only).**
 Let `U` be the number of numbered `IR-M04-##` requests from the M3 review
