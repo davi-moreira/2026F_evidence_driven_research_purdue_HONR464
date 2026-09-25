@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>41&nbsp; Natural Experiments: Difference-in-Differences, Discontinuities, and Interrupted Time Series – EDR|AI — Evidence-Driven Research in the Age of AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part7-further-routes/survey-experiments.html" rel="next">
+<link href="../part7-further-routes/further-routes-overview.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part7-further-routes/further-routes-overview.html">Further Research Routes</a></li><li class="breadcrumb-item"><a href="../part7-further-routes/natural-experiments.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Natural Experiments: Difference-in-Differences, Discontinuities, and Interrupted Time Series</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">EDR|AI — Evidence-Driven Research in the Age of AI</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/part1-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How this book is organized</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio01-frame-the-inquiry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 1: Begin with your curiosity</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">From Curiosity to a Research Problem</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone01-frame-the-inquiry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 1: Your curiosity, committed</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio02-govern-the-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 2: Set your rules, shape your question</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">AI Is Your Arm, Not Your Brain</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/02-the-student-as-research-director.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">You as a Research Director</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Research Responsibility and Intellectual Ownership</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Choose Your Question’s Kind and Reach</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/declare-your-question.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Declare Your Research Question</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone02-govern-the-work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 2: Your rules and your question</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio03-ground-in-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 3: Ground it in verified evidence</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/07-research-builds-on-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Research Builds on Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Finding and Verifying Prior Evidence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone03-ground-in-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 3: Your evidence base</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio04-declare-and-diagnose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 4: Declare and diagnose provisionally</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Model, Inquiry, Data Strategy, and Answer Strategy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/uncertainty-foundations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Uncertainty Before You Need It</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Declaring and Diagnosing a Research Design</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/research-ethics-and-data-governance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Research Ethics and Data Governance</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone04-declare-and-diagnose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 4: Your research contract, v0</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio05-develop-the-pathway.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 5: Develop the pathway</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/11-observational-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Observational Descriptive Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/12-observational-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Observational Causal Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/13-experimental-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Experimental Descriptive Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/14-prediction-and-generalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prediction and Generalization</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/15-experimental-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Experimental Causal Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/16-hybrid-and-complex-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Hybrid and Complex Designs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone05-develop-the-pathway.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 5: Your pathway, declared</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio06-govern-data-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 6: Govern data and measurement</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Data Provenance and Data Quality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/18-measurement-and-operationalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Measurement and Operationalization</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone06-govern-data-measurement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 6: Your data and measurement, governed</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio07-first-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 7: Produce a reproducible first analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">AI as Programmer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">AI as Analytical Assistant</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone07-first-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 7: Your first reproducible analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio08-stress-test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 8: Stress-test and adjudicate</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Robustness and Sensitivity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Diagnostics and Negative Tests</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">AI as Adversarial Reviewer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/24-recognizing-false-confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Recognizing False Confidence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone08-stress-test.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 8: Your robustness audit</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio09-write-bound-disclose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 9: Write, bound, and disclose</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/25-from-results-to-claims.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">From Results to Claims</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/26-claim-evidence-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Claim–Evidence Tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/31-ai-disclosure-and-research-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">AI Disclosure and Research Integrity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/33-from-poster-to-research-note.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">From Dossier to Research Note</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone09-write-bound-disclose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 9: Your bounded claims</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio10-adapt-and-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 10: Prepare to publish or present</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/27-research-posters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Research Posters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/28-poster-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Poster Criticism</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/29-research-pitches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Research Pitches, Talks, and Seminars</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/30-difficult-questions-and-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Difficult Questions and Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone10-adapt-and-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 10: Your artifact, ready to publish or present</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio11-reproduce-and-package.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 11: Reproduce and package</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/32-replication-and-reproduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Replication and Reproduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/34-open-and-reusable-research-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Open and Reusable Research Packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone11-reproduce-and-package.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 11: Your reproducible package</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../studios/studio12-release-next-cycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Studio 12: Special topic: agentic AI, release, and the next cycle</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/35-managing-multiple-ai-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Managing Multiple AI Agents</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Conflicting Agents and Human Escalation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Final Research and AI-Management Portfolio</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../studios/milestone12-release-next-cycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 12: Your release and next cycle</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part7-further-routes/further-routes-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Further Research Routes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7-further-routes/natural-experiments.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Natural Experiments: Difference-in-Differences, Discontinuities, and Interrupted Time Series</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7-further-routes/survey-experiments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Survey Experiments: Vignettes, Conjoint, and List Experiments</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7-further-routes/audit-studies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Audit Studies: Testing How Institutions and AI Systems Treat Cases</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7-further-routes/text-as-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Documents, Archives, and Text as Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7-further-routes/qualitative-inquiry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Qualitative Inquiry: Interviews, Documents, and Themes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part7-further-routes/evidence-synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Evidence Synthesis: Scoping Reviews and Small Meta-Analyses</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../verification-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Verification Guide</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../for-instructors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">For Instructors</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../further-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Further Designs: A Field Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">41.1</span> Why this decision matters</a></li>
+  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">41.2</span> The concept</a>
+  <ul class="collapse">
+  <li><a href="#difference-in-differences-change-against-change" id="toc-difference-in-differences-change-against-change" class="nav-link" data-scroll-target="#difference-in-differences-change-against-change"><span class="header-section-number">41.2.1</span> Difference-in-differences: change against change</a></li>
+  <li><a href="#regression-discontinuity-the-effect-at-the-line" id="toc-regression-discontinuity-the-effect-at-the-line" class="nav-link" data-scroll-target="#regression-discontinuity-the-effect-at-the-line"><span class="header-section-number">41.2.2</span> Regression discontinuity: the effect at the line</a></li>
+  <li><a href="#interrupted-time-series-one-unit-many-periods" id="toc-interrupted-time-series-one-unit-many-periods" class="nav-link" data-scroll-target="#interrupted-time-series-one-unit-many-periods"><span class="header-section-number">41.2.3</span> Interrupted time series: one unit, many periods</a></li>
+  <li><a href="#what-the-three-designs-license" id="toc-what-the-three-designs-license" class="nav-link" data-scroll-target="#what-the-three-designs-license"><span class="header-section-number">41.2.4</span> What the three designs license</a></li>
+  </ul></li>
+  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">41.3</span> A worked example</a></li>
+  <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">41.4</span> A seeded simulation</a></li>
+  <li><a href="#where-these-designs-show-up" id="toc-where-these-designs-show-up" class="nav-link" data-scroll-target="#where-these-designs-show-up"><span class="header-section-number">41.5</span> Where these designs show up</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">41.6</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">41.7</span> It is your turn</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
+</div>
+<script>
+(function () {
+  var here = window.location.pathname;
+  var dirs = ["book-pt", "book-es", "book"];
+  var cur = null;
+  for (var i = 0; i < dirs.length; i++) {
+    if (here.indexOf("/" + dirs[i] + "/") !== -1) { cur = dirs[i]; break; }
+  }
+  var links = document.querySelectorAll(".edrai-lang a");
+  for (var j = 0; j < links.length; j++) {
+    var a = links[j], t = a.getAttribute("data-lang");
+    if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.target = "_blank"; a.rel = "noopener";
+    if (cur === "book" && t !== "book") {
+      // D36: EN has diverged from the frozen PT/ES editions (new lessons and
+      // station pages have no counterparts), so route to that edition's
+      // index — never to a per-page path that may 404.
+      a.href = here.slice(0, here.indexOf("/" + cur + "/")) + "/" + t + "/index.html";
+      continue;
+    }
+    a.href = here.replace("/" + cur + "/", "/" + t + "/");
+  }
+})();
+</script>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part7-further-routes/further-routes-overview.html">Further Research Routes</a></li><li class="breadcrumb-item"><a href="../part7-further-routes/natural-experiments.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Natural Experiments: Difference-in-Differences, Discontinuities, and Interrupted Time Series</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Natural Experiments: Difference-in-Differences, Discontinuities, and Interrupted Time Series</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="Under development">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Under development
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter is part of a book in active development and has not yet been through the author’s review. Content may change as the review advances.</p>
+</div>
+</div>
+<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch41_natural_experiments.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p><strong>The research decision.</strong> When a law, a date, or a cutoff assigned the treatment instead of you, decide which comparison you are willing to defend as the world that did not happen, and write down the one assumption that makes it stand in. The rule is in the documents and the assumption is in your sentence, so no tool gets to declare that the comparison it found is the counterfactual.</p>
+</blockquote>
+<section id="why-this-decision-matters" class="level2" data-number="41.1">
+<h2 data-number="41.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">41.1</span> Why this decision matters</h2>
+<p><strong>The decision on the table: which comparison you will defend as the world where the rule never applied.</strong></p>
+<blockquote class="blockquote">
+<p><em>“You tell me employment fell after the wage law passed. Employment also fell in the county next door, which passed nothing. Before I read your effect, tell me what you are subtracting, and why that county is the right thing to subtract.”</em> — a <strong>state budget analyst</strong>, reading a memo on a minimum-wage increase</p>
+</blockquote>
+<p>A state raises its wage floor on a fixed date. A scholarship goes to every applicant who scores 70 or higher. A city bans smoking in bars from the first of the month. Each rule hands you a treated group for free. None of them hands you the missing world. You still have to pick a comparison: the neighboring state, the applicants who scored 69, the months before the ban. Pick badly and a regional recession, a lucky cohort, or a winter flu season wears the policy’s name. Pick well and say why, and a policy question that no one could ever randomize gets a bounded, defensible causal answer. This chapter gives you three ways to build that comparison and the check each one owes a skeptical reader.</p>
+</section>
+<section id="the-concept" class="level2" data-number="41.2">
+<h2 data-number="41.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">41.2</span> The concept</h2>
+<p>This chapter extends the observational-causal pathway you met earlier in <a href="../part3-pathways/12-observational-causal-research.html">Observational Causal Research</a>. There, a <strong>natural experiment</strong> was a situation where a force outside anyone’s control decided who got treated. Two of the three designs below, difference-in-differences and regression discontinuity, are declared in the observational-causal section of the design library in RDSS, with their estimands and their failure points diagnosed by simulation <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>.</p>
+<p>An <strong>assignment rule</strong> is the written procedure that decided which units were treated and when. Example: a statute that raises the minimum wage in one state on April 1, or a program manual that funds every applicant scoring 70 or above. You find the rule in primary documents: the law itself, the agency’s notice, the program’s scoring sheet. A news story about the rule is a lead, not the rule. Read it exactly, including the exemptions, the announcement date, and whether anyone could see the rule coming and act early.</p>
+<section id="difference-in-differences-change-against-change" class="level3" data-number="41.2.1">
+<h3 data-number="41.2.1" class="anchored" data-anchor-id="difference-in-differences-change-against-change"><span class="header-section-number">41.2.1</span> Difference-in-differences: change against change</h3>
+<p><strong>Difference-in-differences</strong> is a design that compares how much the treated group changed with how much an untreated group changed over the same period. Example: employment in fast-food restaurants in a state that raised its wage floor fell by three workers per store, while stores across the border fell by two, so the difference-in-differences is minus one. Subtracting the neighbor’s change removes whatever hit both places at once, such as a regional downturn or a holiday season.</p>
+<p>The quantity this design targets is the <strong>average effect on the treated</strong>, the average change the policy caused among the units that actually got it, in the periods after it began. Example: the effect of this raise on these stores in these quarters, not the effect of every minimum wage everywhere.</p>
+<p>One assumption carries the whole design. <strong>Parallel trends</strong> is the assumption that, without the policy, the treated group’s outcome would have moved, on average, by the same amount as the comparison group’s. Example: had the wage law never passed, employment at the treated stores would have fallen by the same two workers as the stores across the border. You can never observe that sentence, because the law did pass. You can only make it plausible.</p>
+<p>The tool for making it plausible is the <strong>event study</strong>, a chart of the treated-minus-comparison gap period by period, before and after the policy, each measured relative to the last period before it began. The pre-policy estimates are called <strong>leads</strong>. Example: if the gap was already widening in the four quarters before the raise, the leads slope, and the comparison state was a poor stand-in from the start. Leads that slope are a warning you should act on. Leads that sit near zero are reassuring and nothing more, because a pre-period check can be too imprecise to see a real divergence, and because trends can part ways exactly when the policy arrives <span class="citation" data-cites="roth2022pretest roth2023trending">(<a href="#ref-roth2022pretest" role="doc-biblioref">Roth 2022</a>; <a href="#ref-roth2023trending" role="doc-biblioref">Roth et al. 2023</a>)</span>.</p>
+<p>Two quieter assumptions ride along. <strong>No anticipation</strong> means the treated units did not change course before the policy began. Example: if owners cut staff when the law was announced, months before it took effect, your “before” period already holds part of the effect. <strong>No spillover</strong> means the policy did not reach the comparison group. Example: if workers who lost hours crossed the border to take jobs, the comparison stores changed because of the law too. The closeness that makes a neighbor a good comparison is what lets a policy leak across the line.</p>
+<p>One warning concerns timing. When units adopt a policy on different dates, say states raising their wage floors in different years, the common shortcut of one regression with a term for each unit and each period can quietly compare late adopters with early adopters whose effects are still unfolding, and the weighted average it returns can even carry the wrong sign. Newer estimators compare each adopting group only with units not yet treated or never treated, and a review of them is the place to start before you write that regression <span class="citation" data-cites="roth2023trending">(<a href="#ref-roth2023trending" role="doc-biblioref">Roth et al. 2023</a>)</span>.</p>
+</section>
+<section id="regression-discontinuity-the-effect-at-the-line" class="level3" data-number="41.2.2">
+<h3 data-number="41.2.2" class="anchored" data-anchor-id="regression-discontinuity-the-effect-at-the-line"><span class="header-section-number">41.2.2</span> Regression discontinuity: the effect at the line</h3>
+<p><strong>Regression discontinuity</strong> is a design that compares units just above and just below a cutoff on a score that decides treatment. Example: small firms that scored 70 on a grant application received the grant, firms that scored 69 did not, and a point of score says little about a firm’s prospects. The score is the <strong>running variable</strong>, the number the rule reads, and the <strong>cutoff</strong> is the value where treatment switches on. The design estimates the jump in the outcome right at the line <span class="citation" data-cites="lee2010regression">(<a href="#ref-lee2010regression" role="doc-biblioref">Lee and Lemieux 2010</a>)</span>.</p>
+<p>The estimand is narrow on purpose: the effect for units whose score sits at the cutoff. Example: what the grant did for firms that scored about 70, not for a firm that scored 40. The warrant is <strong>continuity</strong>, the assumption that, without the rule, average outcomes would change smoothly as the score crosses the line. Here every firm at 70 or above got the grant. If crossing the line only raised the chance of treatment, say because some winners turned the grant down, the jump would measure the effect of becoming eligible; recovering the grant’s own effect (a fuzzy discontinuity) is a step to learn with a mentor.</p>
+<p>The <strong>bandwidth</strong> is how far from the cutoff you reach for data. Example: firms scoring 60 to 80 rather than 40 to 100. A narrow bandwidth compares more similar units but uses fewer of them, so the interval widens. A wide one is more precise and leans harder on the straight line you drew. Fix the bandwidth, or the data-driven rule that will choose it, before you see the estimate, and report the answer at two or three bandwidths. Published work goes further: it lets a rule pick the bandwidth that best trades bias against noise, weights applicants more heavily the closer they sit to the line, fits straight lines or gentle curves near the cutoff rather than one high-order curve across the whole score range <span class="citation" data-cites="gelman2019high">(<a href="#ref-gelman2019high" role="doc-biblioref">Gelman and Imbens 2019</a>)</span>, and reports an interval built to survive the bias a straight line leaves behind <span class="citation" data-cites="calonico2014robust">(<a href="#ref-calonico2014robust" role="doc-biblioref">Calonico et al. 2014</a>)</span>. The <code>rdrobust</code> package, written by the authors of that interval, does all of this. <strong>Sorting</strong> is units nudging their own score across the line. Example: applicants who learn the cutoff and rewrite a borderline application. You look for it in a <strong>density check</strong>, a count of units just below and just above the cutoff; a pile-up on the side the rule rewards is a warning. And you check <strong>covariate balance at the cutoff</strong>: traits fixed before the score, such as firm age, should not jump at 70 <span class="citation" data-cites="cattaneo2020practical">(<a href="#ref-cattaneo2020practical" role="doc-biblioref">Cattaneo et al. 2020</a>)</span>.</p>
+</section>
+<section id="interrupted-time-series-one-unit-many-periods" class="level3" data-number="41.2.3">
+<h3 data-number="41.2.3" class="anchored" data-anchor-id="interrupted-time-series-one-unit-many-periods"><span class="header-section-number">41.2.3</span> Interrupted time series: one unit, many periods</h3>
+<p>An <strong>interrupted time series</strong> is a design that follows one unit over many periods and compares what happened after a policy with the path the earlier periods projected. Example: monthly hospital admissions for heart attacks in one region, before and after a smoking ban in bars. The counterfactual is the pre-ban trend, carried forward. The design is common in public health, where a whole population is treated at once <span class="citation" data-cites="bernal2017interrupted">(<a href="#ref-bernal2017interrupted" role="doc-biblioref">Bernal et al. 2017</a>)</span>.</p>
+<p>Its weak points are easy to name. <strong>Seasonality</strong> is a pattern that repeats every year, such as winter admission spikes, which can pass for a policy effect if the policy starts in spring. A <strong>competing event</strong> is anything else that changed on the same date, such as a new tax on cigarettes, and the series alone cannot tell the two apart. Months are also not independent pieces of evidence: a busy month tends to follow a busy month, and an interval that ignores this comes out too narrow. A <strong>comparison series</strong>, an untreated region or an outcome the policy should not touch, turns the design into a close cousin of difference-in-differences.</p>
+</section>
+<section id="what-the-three-designs-license" class="level3" data-number="41.2.4">
+<h3 data-number="41.2.4" class="anchored" data-anchor-id="what-the-three-designs-license"><span class="header-section-number">41.2.4</span> What the three designs license</h3>
+<p>On the compass, all three serve a causal question. The crossing license is identification: an argument, grounded in how the rule assigned treatment, that the comparison stands in for the missing world. With no further argument, the reach is the data at hand: the treated units you observed, in the periods you observed, or the applicants near the cutoff. The interval still belongs in the answer, because it says how far the estimate could move if the same units ran through the same periods again with fresh noise. If those units were drawn by a sampling procedure from a larger list, say a random sample of every fast-food restaurant in the state, sampling can carry the answer to that population. Carrying it to another state, another decade, or scores far from the line is a transported effect, which needs its own argument. And if the assumption cannot be made plausible, say so: <em>causal, currently unidentified</em> is a legitimate conclusion.</p>
+<p>The failure this chapter watches for has a name you already know. <strong>Design mimicry</strong> is borrowing a design’s vocabulary for a comparison that never met its assumption. Example: calling a plain before-and-after comparison in one state a “difference-in-differences”, or calling any threshold a “discontinuity” when applicants could see it and aim for it.</p>
+<p>An AI partner can find the statute behind a date, fit an event study in seconds, and list competing events you had not thought of. It is also the fastest route to design mimicry, because it will run any of these designs on any data you hand it and label the output with the design’s name. It cannot know whether applicants saw the cutoff coming, or which bandwidth you meant to use before you saw the answer. <em>AI is your arm and your research assistant, not your brain</em>: the rule, the comparison, and the assumption stay with you.</p>
+<blockquote class="blockquote">
+<p><strong>A question that often comes up here:</strong> <em>“Can’t I just test whether the trends were parallel and be done?”</em> You can test whether the leads look flat. You cannot test the counterfactual after the policy starts. Report the leads with their intervals, say how large a divergence your check could have seen, and keep the assumption in your limitations.</p>
+</blockquote>
+</section>
+</section>
+<section id="a-worked-example" class="level2" data-number="41.3">
+<h2 data-number="41.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">41.3</span> A worked example</h2>
+<p>Bring this into labor economics. Two neighboring states share a border, a labor market, and the same weather. State A raises its minimum wage; State B does not. You survey 200 fast-food restaurants on each side in the quarter before the raise and again in the quarter after, and you count full-time-equivalent workers. This is the setting of a well-known study that surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after New Jersey’s 1992 increase and compared their employment changes <span class="citation" data-cites="card1994minimum">(<a href="#ref-card1994minimum" role="doc-biblioref">Card and Krueger 1994</a>)</span>. The numbers below are constructed for this example. They do not come from that paper, whose authors found no indication that the raise reduced employment.</p>
+<p>In the constructed world, a regional downturn cuts two workers per store on both sides of the border, and the raise itself cuts one more, only in State A. A reporter who looks only at State A sees a drop of almost three workers and blames it all on the law. That is a before-and-after comparison, and it cannot tell the law from the downturn. State B is your stand-in for the missing world: its change is your estimate of what State A would have done without the raise. Subtract it and the downturn cancels, if and only if the two states would have moved together.</p>
+<p>The block below builds that world and computes both numbers. Watch the gap between the first line and the last.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">200</span>                                   <span class="co"># restaurants on each side of the border</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Constructed world: a regional downturn cuts 2.0 workers EVERYWHERE,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># and the wage raise itself cuts 1.0 more, only in State A.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>state <span class="op">=</span> np.repeat([<span class="st">"A (raise)"</span>, <span class="st">"B (no raise)"</span>], n)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>before <span class="op">=</span> rng.normal(<span class="dv">20</span>, <span class="dv">4</span>, size<span class="op">=</span><span class="dv">2</span> <span class="op">*</span> n)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>after <span class="op">=</span> before <span class="op">-</span> <span class="fl">2.0</span> <span class="op">-</span> <span class="fl">1.0</span> <span class="op">*</span> (state <span class="op">==</span> <span class="st">"A (raise)"</span>) <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">1.5</span>, size<span class="op">=</span><span class="dv">2</span> <span class="op">*</span> n)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">"state"</span>: state, <span class="st">"change"</span>: after <span class="op">-</span> before})</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> df.groupby(<span class="st">"state"</span>)[<span class="st">"change"</span>].agg([<span class="st">"mean"</span>, <span class="st">"var"</span>, <span class="st">"size"</span>])</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>a, b <span class="op">=</span> g.loc[<span class="st">"A (raise)"</span>], g.loc[<span class="st">"B (no raise)"</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>did <span class="op">=</span> a[<span class="st">"mean"</span>] <span class="op">-</span> b[<span class="st">"mean"</span>]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>se <span class="op">=</span> np.sqrt(a[<span class="st">"var"</span>] <span class="op">/</span> a[<span class="st">"size"</span>] <span class="op">+</span> b[<span class="st">"var"</span>] <span class="op">/</span> b[<span class="st">"size"</span>])</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"true effect of the raise           : </span><span class="sc">{</span><span class="op">-</span><span class="fl">1.0</span><span class="sc">:+.2f}</span><span class="ss"> workers"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"before/after, State A only         : </span><span class="sc">{</span>a[<span class="st">'mean'</span>]<span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"before/after, State B only         : </span><span class="sc">{</span>b[<span class="st">'mean'</span>]<span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"difference-in-differences          : </span><span class="sc">{</span>did<span class="sc">:+.2f}</span><span class="ss">  "</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"(95% interval </span><span class="sc">{</span>did <span class="op">-</span> <span class="fl">1.96</span><span class="op">*</span>se<span class="sc">:+.2f}</span><span class="ss"> to </span><span class="sc">{</span>did <span class="op">+</span> <span class="fl">1.96</span><span class="op">*</span>se<span class="sc">:+.2f}</span><span class="ss">)"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the before/after number blames the raise for the downturn;"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"State B is what lets you subtract it, IF A would have moved like B"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>State A’s stores changed by -2.92 workers, State B’s by -1.95, and the difference-in-differences is -0.97, with a 95% interval from -1.27 to -0.67. The true effect we planted was -1.00. Now read that interval with suspicion. It treats the 400 restaurants as 400 independent pieces of evidence, but the policy varied between only two states. Anything else that hit State A alone in that quarter, a plant closing or a bad tourist season, moves every store in A together and lands inside your estimate. With two states, no formula can separate that from the law, so the real uncertainty is wider than the printed interval. Say so in the write-up, and add comparison states or earlier quarters if you can get them.</p>
+</section>
+<section id="a-seeded-simulation" class="level2" data-number="41.4">
+<h2 data-number="41.4" class="anchored" data-anchor-id="a-seeded-simulation"><span class="header-section-number">41.4</span> A seeded simulation</h2>
+<p>The left panel shows what an event study can and cannot tell you about parallel trends. It follows 200 and 200 restaurants for eight quarters, in two worlds with the same true effect of -1.0 worker: one where the states would have moved together, and one where State A was already losing 0.4 workers per quarter relative to State B before the raise. The right panel shows a regression discontinuity: 2,000 simulated grant applicants, a grant at a score of 70, and a true jump of 1.5 jobs a year later. The code also runs a stress test it does not plot: the same applicants with a differently shaped curve. The seed makes every run reproduce this exact figure and every printed number.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Event study: 200 stores per state, quarters -4..3, raise at quarter 0.</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>n, quarters, tau <span class="op">=</span> <span class="dv">200</span>, np.arange(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>), <span class="op">-</span><span class="fl">1.0</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> event_study(extra_trend):             <span class="co"># extra_trend &lt; 0: A was ALREADY sliding</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    base <span class="op">=</span> rng.normal(<span class="dv">20</span>, <span class="dv">4</span>, size<span class="op">=</span>(<span class="dv">2</span> <span class="op">*</span> n, <span class="dv">1</span>))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    shock <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.5</span>, size<span class="op">=</span>quarters.size)       <span class="co"># hits both states</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    treated <span class="op">=</span> np.repeat([<span class="va">True</span>, <span class="va">False</span>], n)[:, <span class="va">None</span>]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> (base <span class="op">+</span> shock <span class="op">+</span> extra_trend <span class="op">*</span> quarters <span class="op">*</span> treated</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> tau <span class="op">*</span> treated <span class="op">*</span> (quarters <span class="op">&gt;=</span> <span class="dv">0</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>         <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">1.5</span>, size<span class="op">=</span>(<span class="dv">2</span> <span class="op">*</span> n, quarters.size)))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    d <span class="op">=</span> y <span class="op">-</span> y[:, [<span class="dv">3</span>]]                                     <span class="co"># change since quarter -1</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    est <span class="op">=</span> d[:n].mean(<span class="dv">0</span>) <span class="op">-</span> d[n:].mean(<span class="dv">0</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    se <span class="op">=</span> np.sqrt(d[:n].var(<span class="dv">0</span>, ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> n <span class="op">+</span> d[n:].var(<span class="dv">0</span>, ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> n)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> y[:, <span class="dv">4</span>:].mean(<span class="dv">1</span>) <span class="op">-</span> y[:, :<span class="dv">4</span>].mean(<span class="dv">1</span>)          <span class="co"># after avg minus before avg</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    did <span class="op">=</span> change[:n].mean() <span class="op">-</span> change[n:].mean()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    did_se <span class="op">=</span> np.sqrt(change[:n].var(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> n <span class="op">+</span> change[n:].var(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> n)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> est, se, did, did_se</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>par, par_se, did_par, se_par <span class="op">=</span> event_study(<span class="fl">0.0</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>vio, vio_se, did_vio, se_vio <span class="op">=</span> event_study(<span class="op">-</span><span class="fl">0.4</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, est, did, s <span class="kw">in</span> ((<span class="st">"parallel"</span>, par, did_par, se_par),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                          (<span class="st">"sliding "</span>, vio, did_vio, se_vio)):</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: leads </span><span class="sc">{</span>np<span class="sc">.</span><span class="bu">round</span>(est[:<span class="dv">3</span>], <span class="dv">2</span>)<span class="sc">}</span><span class="ss">, after </span><span class="sc">{</span>np<span class="sc">.</span><span class="bu">round</span>(est[<span class="dv">4</span>:], <span class="dv">2</span>)<span class="sc">}</span><span class="ss">, "</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>          <span class="ss">f"overall </span><span class="sc">{</span>did<span class="sc">:+.2f}</span><span class="ss"> (</span><span class="sc">{</span>did <span class="op">-</span> <span class="fl">1.96</span><span class="op">*</span>s<span class="sc">:+.2f}</span><span class="ss"> to </span><span class="sc">{</span>did <span class="op">+</span> <span class="fl">1.96</span><span class="op">*</span>s<span class="sc">:+.2f}</span><span class="ss">)"</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Regression discontinuity: grant at score &gt;= 70, true jump 1.5 jobs.</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>m, cut, jump <span class="op">=</span> <span class="dv">2000</span>, <span class="dv">70</span>, <span class="fl">1.5</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> rng.uniform(<span class="dv">40</span>, <span class="dv">100</span>, m)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> score <span class="op">-</span> cut</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="fl">2.0</span>, m)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>jobs <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="fl">0.08</span> <span class="op">*</span> x <span class="op">+</span> <span class="fl">0.0008</span> <span class="op">*</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> jump <span class="op">*</span> (x <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">+</span> noise</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Stress test: the same applicants and noise, but an S-shaped curve that climbs</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co"># fastest near the cutoff and levels off at both ends. The true jump is still 1.5.</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>bent <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> np.tanh(x <span class="op">/</span> <span class="dv">12</span>) <span class="op">+</span> jump <span class="op">*</span> (x <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">+</span> noise</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rd(h, y<span class="op">=</span>jobs):                         <span class="co"># local straight lines within h points</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    ends, ses <span class="op">=</span> [], []</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> side <span class="kw">in</span> (x <span class="op">&lt;</span> <span class="dv">0</span>, x <span class="op">&gt;=</span> <span class="dv">0</span>):</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> side <span class="op">&amp;</span> (np.<span class="bu">abs</span>(x) <span class="op">&lt;=</span> h)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        X <span class="op">=</span> np.column_stack([np.ones(k.<span class="bu">sum</span>()), x[k]])</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> np.linalg.lstsq(X, y[k], rcond<span class="op">=</span><span class="va">None</span>)[<span class="dv">0</span>]</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> y[k] <span class="op">-</span> X <span class="op">@</span> b</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        ses.append(np.sqrt((r <span class="op">@</span> r <span class="op">/</span> (k.<span class="bu">sum</span>() <span class="op">-</span> <span class="dv">2</span>)) <span class="op">*</span> np.linalg.inv(X.T <span class="op">@</span> X)[<span class="dv">0</span>, <span class="dv">0</span>]))</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        ends.append(b)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ends[<span class="dv">1</span>][<span class="dv">0</span>] <span class="op">-</span> ends[<span class="dv">0</span>][<span class="dv">0</span>], np.hypot(<span class="op">*</span>ses), ends</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> h <span class="kw">in</span> (<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>):</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    e, s, _ <span class="op">=</span> rd(h)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"bandwidth </span><span class="sc">{</span>h<span class="sc">:2d}</span><span class="ss">: jump </span><span class="sc">{</span>e<span class="sc">:.2f}</span><span class="ss"> (95% interval </span><span class="sc">{</span>e<span class="op">-</span><span class="fl">1.96</span><span class="op">*</span>s<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>e<span class="op">+</span><span class="fl">1.96</span><span class="op">*</span>s<span class="sc">:.2f}</span><span class="ss">)"</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> h <span class="kw">in</span> (<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>):</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    e, s, _ <span class="op">=</span> rd(h, bent)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"S-curve, bandwidth </span><span class="sc">{</span>h<span class="sc">:2d}</span><span class="ss">: jump </span><span class="sc">{</span>e<span class="sc">:.2f}</span><span class="ss"> (</span><span class="sc">{</span>e<span class="op">-</span><span class="fl">1.96</span><span class="op">*</span>s<span class="sc">:.2f}</span><span class="ss"> to </span><span class="sc">{</span>e<span class="op">+</span><span class="fl">1.96</span><span class="op">*</span>s<span class="sc">:.2f}</span><span class="ss">)"</span>)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"applicants scoring 65-69.9:"</span>, ((x <span class="op">&gt;=</span> <span class="op">-</span><span class="dv">5</span>) <span class="op">&amp;</span> (x <span class="op">&lt;</span> <span class="dv">0</span>)).<span class="bu">sum</span>(),</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>      <span class="st">"| scoring 70-74.9:"</span>, ((x <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (x <span class="op">&lt;</span> <span class="dv">5</span>)).<span class="bu">sum</span>())</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="fl">10.4</span>, <span class="fl">3.8</span>))</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>ax1.errorbar(quarters <span class="op">-</span> <span class="fl">.12</span>, par, yerr<span class="op">=</span><span class="fl">1.96</span> <span class="op">*</span> par_se, fmt<span class="op">=</span><span class="st">"o"</span>, color<span class="op">=</span><span class="st">"#2a78d6"</span>,</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>             capsize<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"parallel trends hold"</span>)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>ax1.errorbar(quarters <span class="op">+</span> <span class="fl">.12</span>, vio, yerr<span class="op">=</span><span class="fl">1.96</span> <span class="op">*</span> vio_se, fmt<span class="op">=</span><span class="st">"s"</span>, color<span class="op">=</span><span class="st">"#eb6834"</span>,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>             capsize<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"treated state already sliding"</span>)</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>ax1.plot([<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">3.4</span>], [tau, tau], color<span class="op">=</span><span class="st">"#333333"</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>ax1.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"#bbbbbb"</span>)<span class="op">;</span> ax1.legend(fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>edges <span class="op">=</span> np.arange(<span class="dv">40</span>, <span class="fl">100.01</span>, <span class="fl">2.5</span>)<span class="op">;</span> bins <span class="op">=</span> np.digitize(score, edges) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>ax2.scatter((edges[:<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> edges[<span class="dv">1</span>:]) <span class="op">/</span> <span class="dv">2</span>,</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>            [jobs[bins <span class="op">==</span> i].mean() <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(edges.size <span class="op">-</span> <span class="dv">1</span>)], color<span class="op">=</span><span class="st">"#777777"</span>)</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>_, _, (b0, b1) <span class="op">=</span> rd(<span class="dv">10</span>)                    <span class="co"># the two local lines at bandwidth 10</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>xl, xr <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">20</span>), np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>ax2.plot(cut <span class="op">+</span> xl, b0[<span class="dv">0</span>] <span class="op">+</span> b0[<span class="dv">1</span>] <span class="op">*</span> xl, color<span class="op">=</span><span class="st">"#2a78d6"</span>)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>ax2.plot(cut <span class="op">+</span> xr, b1[<span class="dv">0</span>] <span class="op">+</span> b1[<span class="dv">1</span>] <span class="op">*</span> xr, color<span class="op">=</span><span class="st">"#2a78d6"</span>)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>ax2.axvline(cut, color<span class="op">=</span><span class="st">"#333333"</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/natural_experiments.png" class="img-fluid figure-img" alt="Two-panel chart. Left: event-study dot-and-whisker plot over quarters -4 to 3, blue circles for a world where parallel trends hold and orange squares for a world where the treated state was already sliding, with a dashed line at the true effect of -1.0 after the raise. Blue leads sit near zero; orange leads fall from +1.08 at quarter -4 to +0.31 at quarter -2, and orange post-policy estimates keep falling to -2.81 by quarter 3. Right: grey binned means of jobs one year later against application score from 40 to 100, a dashed vertical line at 70, and blue local straight lines within 10 points on each side showing a jump labeled estimated jump 1.36, 95% interval 0.77 to 1.94."></p>
+<figcaption>Leads that slope before the policy expose a failed comparison, and the grant’s effect shows up as a jump at the cutoff.</figcaption>
+</figure>
+</div>
+<p>Read the left panel first. In the blue world, the three leads sit between +0.07 and +0.14 workers, each with an interval of about plus or minus 0.4 that covers zero. After the raise, the blue estimates hover around the true -1.0. The overall difference-in-differences, which compares each store’s average over the four quarters after the raise with the four before, comes out at -1.15 (95% interval -1.36 to -0.95). In the orange world the leads slope: +1.08 four quarters out, +0.68 three quarters out, +0.31 two quarters out. State A was already falling behind, so the post-policy estimates keep sliding to -2.81 by the fourth quarter, and the overall difference-in-differences reads -2.59 (95% interval -2.80 to -2.38). That interval is narrow and nowhere near the truth. A sloped trend is not noise, and 400 restaurants make the wrong number precise rather than right. Notice also the orange lead closest to the policy: +0.31 with an interval that crosses zero. Someone who checked only that one quarter would have called the trends parallel.</p>
+<p>Now the right panel. At a bandwidth of 10 points the estimated jump is 1.36 jobs (95% interval 0.77 to 1.94), against a true 1.5. At 5 points it is 1.24 (0.44 to 2.05), wider because fewer applicants sit that close to the line. At 20 points it is 1.23 (0.80 to 1.66), tighter because it uses more applicants. The three agree on the sign and roughly on the size. You report all three, led by the bandwidth you fixed in advance. Do not read the 20-point shortfall as the price of a straight line. Here the curve bends the same way on both sides of 70, so on average the two lines miss the cutoff by the same amount and the misses cancel. The gap from 1.5 is noise.</p>
+<p>The stress test shows when a wide window does cost you. Its curve is S-shaped: jobs climb fastest for scores near 70 and level off at both ends. The applicants, the noise, and the true jump of 1.5 are unchanged. At 5 points the estimate is 1.27 (0.46 to 2.08), and at 10 points 1.54 (0.95 to 2.12). At 20 points it is 2.08 (1.65 to 2.51), an interval that no longer contains the truth. The straight lines cut across the bend, and the interval, which counts only noise, cannot see the bias. The rise from 5 to 20 points is the warning sign, which is why you report several bandwidths and a second curve shape. Treat these intervals as a teaching device; a real discontinuity reports the bias-aware interval described earlier.</p>
+<p>The density check counts 187 applicants just below the cutoff and 162 just above. A gap of that size, about 1.3 standard errors, turns up often by chance, and it runs the opposite way to a pile-up on the treated side. It lowers your concern about sorting without settling it, because a density check can only see sorting large enough to leave a mark in the counts. Comparing raw counts works here only because the simulated scores are spread evenly; with real scores, whose density slopes, a formal density test fits that slope on each side of the line <span class="citation" data-cites="cattaneo2020practical">(<a href="#ref-cattaneo2020practical" role="doc-biblioref">Cattaneo et al. 2020</a>)</span>. In the companion notebook, change the <code>-0.4</code> to <code>-0.1</code> and watch the orange leads crowd back toward zero while the post-policy estimates stay biased.</p>
+</section>
+<section id="where-these-designs-show-up" class="level2" data-number="41.5">
+<h2 data-number="41.5" class="anchored" data-anchor-id="where-these-designs-show-up"><span class="header-section-number">41.5</span> Where these designs show up</h2>
+<p>In political science, close elections are the classic discontinuity. A candidate who wins by a fraction of a point is, on average, much like one who loses by a fraction of a point, so comparing the parties that barely won with those that barely lost estimates what holding a seat does for a party’s chances next time <span class="citation" data-cites="lee2008randomized">(<a href="#ref-lee2008randomized" role="doc-biblioref">Lee 2008</a>)</span>. The estimand is the effect for races decided by a whisker, not for landslides. The checks still bind here. In postwar U.S. House races, bare winners turned out to differ from bare losers before the vote, in money, experience, and incumbency, which is exactly what a covariate-balance check at the cutoff exists to catch <span class="citation" data-cites="caughey2011elections">(<a href="#ref-caughey2011elections" role="doc-biblioref">Caughey and Sekhon 2011</a>)</span>.</p>
+<p>In business, a retailer that changes its return policy in one region on a fixed date invites a difference-in-differences against regions that kept the old policy. The threat is that the retailer picked the region because its sales were already slipping, the sloped lead an event study exists to catch.</p>
+<p>In public health, the smoking-ban series above grows more convincing once it gains a comparison series from an untreated region <span class="citation" data-cites="bernal2017interrupted">(<a href="#ref-bernal2017interrupted" role="doc-biblioref">Bernal et al. 2017</a>)</span>. In ecology, a fishing ban on some reefs from a fixed date sets up the same change-against-change comparison with reefs that stayed open. For a readable treatment of difference-in-differences and regression discontinuity, with code, see Cunningham’s textbook, free to read online <span class="citation" data-cites="cunningham2021mixtape">(<a href="#ref-cunningham2021mixtape" role="doc-biblioref">Cunningham 2021</a>)</span>.</p>
+</section>
+<section id="an-ai-failure-case" class="level2" data-number="41.6">
+<h2 data-number="41.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">41.6</span> An AI failure case</h2>
+<p>You paste your event-study table into a chatbot and ask whether your difference-in-differences is valid. It answers with a confident, well-formatted yes: “None of the pre-treatment coefficients is statistically significant, so the parallel trends assumption holds and the estimate can be interpreted causally.” This is two named failures at once. It is a <strong>plausible-but-wrong method</strong>, treating a failure to detect a pre-trend as proof that none exists, and it shows <strong>missing uncertainty</strong>, reporting a verdict with no word about how large a divergence your leads could have seen. A quiet lead is not a parallel trend. You catch it by plotting all the leads with their intervals, asking how large a pre-trend the check could have missed, and reading the slope across quarters rather than any one lead’s verdict. A sensitivity analysis can go one step further and ask how far your post-policy estimate moves if the trend kept diverging after the policy by up to a multiple of the largest divergence the leads show, a multiple you choose and report <span class="citation" data-cites="rambachan2023more">(<a href="#ref-rambachan2023more" role="doc-biblioref">Rambachan and Roth 2023</a>)</span>. Then you rewrite the sentence: the leads show no clear divergence at the precision the sample allows, and the post-policy comparison still rests on the untestable assumption that the states would have moved together. Log why.</p>
+</section>
+<section id="it-is-your-turn" class="level2" data-number="41.7">
+<h2 data-number="41.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">41.7</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>A further route beyond the five pathways.</strong> This lesson extends <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>. Read it once you have declared your primary pathway and your question calls for this design. Studio 5’s milestone asks for the same decisions, answered for this route. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You have a causal question and a rule that assigned treatment without asking you. This further route is where that rule becomes a comparison you can defend in writing, or an honest statement that it cannot be one yet.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
+<p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for a verdict. Work them as a loop. The first answer is a draft: find the claim you cannot check, say so in your next message, and run it again. Some tools will run that whole loop unattended and hand you a finished event study. The finished look is exactly what makes the questions in this chapter worth asking before you accept it.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Do not delegate
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Three calls stay yours. You decide <strong>what the assignment rule actually was</strong>, read from the primary document, including when it was announced and who could see it coming. You decide <strong>which comparison stands in for the world without the rule</strong>, and you write the assumption that lets it. And you decide <strong>whether the checks leave that assumption plausible enough to carry <em>because</em></strong>, or whether your answer is causal, currently unidentified. A tool can fit the model, draw the plot, and find papers. The counterfactual you defend carries your name.</p>
+</div>
+</div>
+<ol type="1">
+<li><p>Quote the assignment rule from its primary document. Write the exact sentence of the law, manual, or policy that decided treatment, with its source, its effective date, and its announcement date. Then write which of the three designs it fits: a date with an untreated comparison group (difference-in-differences), a cutoff on a score (regression discontinuity), or one population treated at once (interrupted time series).</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Act as a policy research librarian. I am studying [the policy] in [place] around
+[date]. Find the primary documents that set the rule: the statute or regulation,
+the agency notice, and any published scoring or eligibility sheet. For each, give
+the issuing body, the document title, the date, and where I can retrieve it. Only
+include documents you are confident exist; mark anything uncertain.</code></pre>
+<p>After running, verify: open every document yourself and find the sentence that assigns treatment; cut any item you cannot retrieve. Counters <strong>confident fabrication</strong> (an invented statute number arrives as confidently as a real one).</p></li>
+<li><p>Write your Research Contract lines for this route. Your question, as a treatment and an outcome. Your estimand, in one sentence that names whose effect, over which periods, or at which cutoff. Your data strategy: the units, the periods or score range, and the comparison group. Your answer strategy: the difference you will compute and the interval you will report, including how that interval accounts for the policy changing place by place rather than store by store. Your warrant: parallel trends, continuity at the cutoff, or a stable pre-trend, written in plain words a skeptic could argue with.</p></li>
+<li><p>Name the threat most likely to break your warrant, and the check you will run. For difference-in-differences, an event study with every lead shown, and a note on whether units adopted on different dates. For a discontinuity, the density check, covariate balance at the cutoff, and the estimate at two or three bandwidths you fix before looking, with a bias-aware interval and a second curve shape. For an interrupted time series, seasonality and the competing events of that same date, plus a comparison series.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Act as a hostile labor economist. Here is my design: [paste rule, comparison,
+outcome, periods]. List every event, trend, or behavior that could move my
+treated group differently from my comparison group around [date], in a table with
+the threat, the direction it would push my estimate, and the data I could use to
+check it. Then name the single threat you think I am most likely to miss.</code></pre>
+<p>After running, verify: compare the table with the threat you wrote first, and for each row find one real source that says the event happened when and where the tool says. Counters <strong>illusion of completeness</strong> (a tidy table that omits the one competing event that shares your date).</p></li>
+<li><p>Run a falsification test and say in advance what it would look like if your design were in trouble. Move the policy date to an earlier year when nothing happened, using only data from before the real policy. Or move the cutoff to a score where nothing changes, using only applicants on one side of the real cutoff so its jump cannot leak in. Or use an outcome the policy should not touch. A placebo estimate far from zero is a warning. One near zero lowers your concern about that specific threat, as far as the test was sensitive to it, and leaves the rest of the warrant where it was.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Act as a skeptical referee. Here is my design and the choices I fixed BEFORE
+seeing the estimate: [paste rule, comparison, outcome, periods or bandwidth].
+Propose three placebo tests for it: a fake policy date, a fake cutoff, or an
+outcome the policy should not touch. For each, tell me what result would worry
+me and roughly how large an effect the test could detect with my sample. Do not
+suggest changing my bandwidth, comparison group, or window to improve my main
+result.</code></pre>
+<p>After running, verify: open the documents again and confirm that no real rule changed at each fake date or cutoff, then run every placebo yourself and check that any number the tool quotes appears in your own output. If it slips in a new bandwidth or window that makes the main result significant, reject it and note it in your ledger. Counters <strong>sycophantic agreement</strong> (a helper that finds the result you seemed to want).</p></li>
+<li><p>Write the boundary sentence. State what your estimate describes, for whom, and over which periods or at which cutoff, with its interval, and name the one assumption a reader must accept for the word <em>because</em> to stand. If your checks left the assumption implausible, write the causal-language boundary instead: what the comparison shows, and the <em>because</em> you are declining to claim.</p></li>
+<li><p>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. A <strong>falsification test</strong> is the natural check for this route: the placebo date, placebo cutoff, or untouched outcome from step 4. <strong>Simulation</strong> is the strong second check: build a small world in which your comparison group was already drifting, as the orange world above was, and see whether your event study would have shown it. An AI reviewer may run the checks with you; the decision to accept or reject stays yours.</p></li>
+</ol>
+
+
+</section>
+<section id="bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bernal2017interrupted" class="csl-entry" role="listitem">
+Bernal, James Lopez, Steven Cummins, and Antonio Gasparrini. 2017. <span>“Interrupted Time Series Regression for the Evaluation of Public Health Interventions: A Tutorial.”</span> <em>International Journal of Epidemiology</em> 46 (1): 348–55. <a href="https://doi.org/10.1093/ije/dyw098">https://doi.org/10.1093/ije/dyw098</a>.
+</div>
+<div id="ref-blair2023rdss" class="csl-entry" role="listitem">
+Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
+</div>
+<div id="ref-calonico2014robust" class="csl-entry" role="listitem">
+Calonico, Sebastian, Matias D. Cattaneo, and Rocío Titiunik. 2014. <span>“Robust Nonparametric Confidence Intervals for Regression-Discontinuity Designs.”</span> <em>Econometrica</em> 82 (6): 2295–326. <a href="https://doi.org/10.3982/ECTA11757">https://doi.org/10.3982/ECTA11757</a>.
+</div>
+<div id="ref-card1994minimum" class="csl-entry" role="listitem">
+Card, David, and Alan B. Krueger. 1994. <span>“Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania.”</span> <em>American Economic Review</em> 84 (4): 772–93. <a href="https://www.jstor.org/stable/2118030">https://www.jstor.org/stable/2118030</a>.
+</div>
+<div id="ref-cattaneo2020practical" class="csl-entry" role="listitem">
+Cattaneo, Matias D., Nicolás Idrobo, and Rocío Titiunik. 2020. <em>A Practical Introduction to Regression Discontinuity Designs: Foundations</em>. Elements in Quantitative and Computational Methods for the Social Sciences. Cambridge University Press. <a href="https://doi.org/10.1017/9781108684606">https://doi.org/10.1017/9781108684606</a>.
+</div>
+<div id="ref-caughey2011elections" class="csl-entry" role="listitem">
+Caughey, Devin, and Jasjeet S. Sekhon. 2011. <span>“Elections and the Regression Discontinuity Design: Lessons from Close <span>U.S.</span> House Races, 1942–2008.”</span> <em>Political Analysis</em> 19 (4): 385–408. <a href="https://doi.org/10.1093/pan/mpr032">https://doi.org/10.1093/pan/mpr032</a>.
+</div>
+<div id="ref-cunningham2021mixtape" class="csl-entry" role="listitem">
+Cunningham, Scott. 2021. <em>Causal Inference: The Mixtape</em>. Yale University Press. <a href="https://doi.org/10.2307/j.ctv1c29t27">https://doi.org/10.2307/j.ctv1c29t27</a>.
+</div>
+<div id="ref-gelman2019high" class="csl-entry" role="listitem">
+Gelman, Andrew, and Guido Imbens. 2019. <span>“Why High-Order Polynomials Should Not Be Used in Regression Discontinuity Designs.”</span> <em>Journal of Business &amp; Economic Statistics</em> 37 (3): 447–56. <a href="https://doi.org/10.1080/07350015.2017.1366909">https://doi.org/10.1080/07350015.2017.1366909</a>.
+</div>
+<div id="ref-lee2008randomized" class="csl-entry" role="listitem">
+Lee, David S. 2008. <span>“Randomized Experiments from Non-Random Selection in <span>U.S.</span> House Elections.”</span> <em>Journal of Econometrics</em> 142 (2): 675–97. <a href="https://doi.org/10.1016/j.jeconom.2007.05.004">https://doi.org/10.1016/j.jeconom.2007.05.004</a>.
+</div>
+<div id="ref-lee2010regression" class="csl-entry" role="listitem">
+Lee, David S., and Thomas Lemieux. 2010. <span>“Regression Discontinuity Designs in Economics.”</span> <em>Journal of Economic Literature</em> 48 (2): 281–355. <a href="https://doi.org/10.1257/jel.48.2.281">https://doi.org/10.1257/jel.48.2.281</a>.
+</div>
+<div id="ref-rambachan2023more" class="csl-entry" role="listitem">
+Rambachan, Ashesh, and Jonathan Roth. 2023. <span>“A More Credible Approach to Parallel Trends.”</span> <em>The Review of Economic Studies</em> 90 (5): 2555–91. <a href="https://doi.org/10.1093/restud/rdad018">https://doi.org/10.1093/restud/rdad018</a>.
+</div>
+<div id="ref-roth2022pretest" class="csl-entry" role="listitem">
+Roth, Jonathan. 2022. <span>“Pretest with Caution: Event-Study Estimates After Testing for Parallel Trends.”</span> <em>American Economic Review: Insights</em> 4 (3): 305–22. <a href="https://doi.org/10.1257/aeri.20210236">https://doi.org/10.1257/aeri.20210236</a>.
+</div>
+<div id="ref-roth2023trending" class="csl-entry" role="listitem">
+Roth, Jonathan, Pedro H. C. Sant’Anna, Alyssa Bilinski, and John Poe. 2023. <span>“What’s Trending in Difference-in-Differences? <span>A</span> Synthesis of the Recent Econometrics Literature.”</span> <em>Journal of Econometrics</em> 235 (2): 2218–44. <a href="https://doi.org/10.1016/j.jeconom.2023.03.008">https://doi.org/10.1016/j.jeconom.2023.03.008</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<span id="edrai-new-tab-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">opens in a new tab</span>
+<style>.edrai-newtab-mark{font-size:.7em;vertical-align:super;opacity:.55;margin-left:.12em;text-decoration:none}</style>
+<script>
+// Two page behaviors for every book page:
+//
+// 1. Every hyperlink in the page body opens in a new tab, so the book never
+//    navigates away from the reader's place. Navigation chrome (sidebar,
+//    TOC, breadcrumbs, next/previous) and same-page anchors keep native
+//    behavior. Treated links carry an assistive-technology note (W3C G201);
+//    Quarto's link-external-icon marks truly external links visibly.
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
+//    demote it to <h2> so the chapter title stays the page's only h1.
+//    (Pandoc keeps the section id #bibliography whatever the visible title;
+//    the primary lookup is the stable div#refs container, so the behavior
+//    survives retitles and localized editions.)
+(function () {
+  var main = document.getElementById("quarto-document-content");
+  if (!main) return;
+  var links = main.querySelectorAll("a[href]");
+  for (var i = 0; i < links.length; i++) {
+    var a = links[i];
+    var href = a.getAttribute("href");
+    if (!href || href.charAt(0) === "#") continue;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) continue;
+    if (a.hasAttribute("download")) continue;
+    if (a.closest("nav")) continue;
+    try {
+      var u = new URL(href, window.location.href);
+      if (u.origin === location.origin && u.pathname === location.pathname &&
+          u.search === location.search) continue;   // same-document link
+    } catch (e) { /* unparseable href: treat as cross-document */ }
+    a.setAttribute("target", "_blank");
+    var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+    if (rel.indexOf("noopener") === -1) rel.push("noopener");
+    a.setAttribute("rel", rel.join(" "));
+    var desc = (a.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+    if (desc.indexOf("edrai-new-tab-note") === -1) desc.push("edrai-new-tab-note");
+    a.setAttribute("aria-describedby", desc.join(" "));
+    // Visible new-context cue (W3C G201) for links Quarto's external icon
+    // does not already mark; the hidden note above covers assistive tech.
+    if (!a.querySelector("i.bi") && !a.querySelector(".edrai-newtab-mark") &&
+        !a.querySelector("img")) {
+      var mark = document.createElement("span");
+      mark.className = "edrai-newtab-mark";
+      mark.setAttribute("aria-hidden", "true");
+      mark.textContent = "↗︎";
+      a.appendChild(mark);
+    }
+  }
+  var refs = main.querySelector("div#refs");
+  var bibSection = refs ? refs.closest("section")
+    : main.querySelector("section#bibliography, section#references");
+  if (bibSection) {
+    bibSection.classList.remove("level1");
+    bibSection.classList.add("level2");
+    var h1 = bibSection.querySelector("h1");
+    if (h1) {
+      var h2 = document.createElement("h2");
+      h2.className = h1.className;
+      if (h1.id) h2.id = h1.id;
+      while (h1.firstChild) h2.appendChild(h1.firstChild);
+      h1.parentNode.replaceChild(h2, h1);
+    }
+  }
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part7-further-routes/further-routes-overview.html" class="pagination-link" aria-label="Further Research Routes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Further Research Routes</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part7-further-routes/survey-experiments.html" class="pagination-link" aria-label="Survey Experiments: Vignettes, Conjoint, and List Experiments">
+        <span class="nav-page-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Survey Experiments: Vignettes, Conjoint, and List Experiments</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
