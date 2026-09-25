@@ -142,3 +142,6 @@ jobs:
 
       - name: Course-adoption de-coursing freshness
         run: python3 scripts/build_course_adoption.py --check
+
+      - name: D83 course-isolation guards (slide omit + BOOK_MAP negative tests)
+        run: python3 scripts/test_d83_guards.py

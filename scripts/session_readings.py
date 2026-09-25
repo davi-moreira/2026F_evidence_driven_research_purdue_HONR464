@@ -11,7 +11,10 @@ the manifests, exactly like the milestone Book Anchors:
 
   - the lesson set per session comes from `book_reading` in
     scripts/schedule_data/ (tokens `lesson-id:mode`, semicolon-separated);
-  - the display number comes from book_manifest.active_lessons() (rank order);
+  - the display number comes from book_manifest.active_lessons() (rank order),
+    and only the lessons the course ADOPTS are indexed (course_lessons(), D83:
+    a book-only lesson the crosswalk lists as `not_adopted:` is never read,
+    collected, or scheduled — a token naming one fails validation);
   - the TITLE comes from the chapter's own `title:` front matter, i.e. the
     string published on the book page;
   - the STUDIO title comes from BOOK_ARCHITECTURE.yml stations, which the
@@ -46,7 +49,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
-from book_manifest import active_lessons, load_architecture  # noqa: E402
+from book_manifest import course_lessons, load_architecture  # noqa: E402
 
 SITE_REL = "book"  # site-relative prefix for links on the course pages
 
@@ -78,9 +81,10 @@ def _title_of(lesson: dict) -> str:
 
 
 def lesson_index() -> dict[str, dict]:
-    """lesson id -> {display, title (as published), url_path, companion}."""
+    """lesson id -> {display, title (as published), url_path, companion},
+    for the lessons the course adopts (D83; display numbers unchanged)."""
     out = {}
-    for l in active_lessons():
+    for l in course_lessons():
         out[l["id"]] = {
             "id": l["id"],
             "display": l["display"],

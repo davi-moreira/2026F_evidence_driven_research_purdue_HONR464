@@ -136,6 +136,147 @@ print("one election, one numerator, three published turnout numbers.")
 print("a figure with no stated denominator is not yet evidence")
 ```
 
+## Missing data: the rows you do not see
+
+Suppose the county's election office also mails a short follow-up survey to 4,000
+registered voters, drawn at random from its list, asking whether they voted. About
+six in ten send it back. Your file has 4,000 rows, but the turnout column is blank
+in roughly 1,600 of them. Every summary you compute from that file quietly describes
+the people who answered, unless you decide otherwise and say how.
+
+**Missing data** are values that should exist in your file but do not. Example: a
+respondent who skipped the income question, a field sensor that failed for a week,
+or a firm that never filed one quarter's report. Ask of every blank what you ask of
+every value: who dropped it, and why. The answer decides what you can claim.
+
+Researchers sort those reasons into three mechanisms, a classification that goes back
+to Rubin [@rubin1976inference] and that later textbooks built into everyday practice
+[@little2019statistical; @vanbuuren2018flexible].
+
+- **Missing completely at random** means the chance a value is missing has nothing
+  to do with anything, measured or not. Example: a lab technician drops one tray of
+  samples picked by accident. You lose precision, but the answer does not tilt.
+- **Missing at random** means the chance a value is missing depends only on things
+  you did observe. Example: younger voters return the survey less often, and the
+  voter file tells you everyone's age. You then assume that, within an age group,
+  the people who answered vote like the people who did not.
+- **Missing not at random** means the chance a value is missing depends on the
+  missing value itself. Example: people who stayed home on election day are less
+  likely to return a survey about voting. No column in your file measures that gap.
+
+**Complete-case analysis** means computing your result only from the rows with no
+blanks. Example: averaging a column by skipping its empty cells, as most software
+does by default. When values are missing completely at random it gives an unbiased
+answer, only a less precise one. Under the other two mechanisms it can tilt the
+answer, though not always: if the blanks in an outcome depend only on the
+explanatory variables in a regression, the slopes fitted to the complete rows can
+still be right [@little2019statistical]. A plain average of the outcome, like
+county turnout, has no such protection.
+
+Your first move is descriptive. A **missingness table** is the share of blank values
+broken down by groups you can observe. Example: 74 percent of older voters answered
+and 46 percent of younger voters did. The table cannot reveal whether the
+non-answerers differ in the value you care about. It does show the blanks are spread
+far more unevenly than chance would produce, so the first mechanism is not your
+situation.
+
+**Imputation** means filling each blank with a value predicted from what you did
+observe. Example: give each non-answerer the turnout rate of answerers in the same
+age group. It removes the whole tilt only when the values are missing at random
+given the variables it uses and the model that fills them includes every variable
+your later analysis will use. Short of that, it can repair the part of the tilt that
+runs through variables you measured and leaves the rest in place.
+**Multiple imputation** fills each blank several times with plausible values and
+combines the results. Example: twenty filled-in copies of the survey file, analysed
+one by one and pooled. It carries the uncertainty of the guess into your interval
+[@vanbuuren2018flexible]. No method recovers information your file never held: if
+the values are missing not at random, the filled-in values inherit the tilt. And a
+single fill, like the one in the example, treated as real data makes your interval
+narrower than your knowledge, because the file now pretends the guesses were
+observed.
+
+So you add a check that needs no assumption about the blanks. **Bounds** are the
+lowest and highest values your answer could take under the most extreme
+possibilities for the missing rows, which you can compute whenever the value has
+natural limits, like a yes-or-no vote. Example: turnout if every non-answerer stayed
+home, and turnout if every one of them voted [@manski1989anatomy]. Bounds are often
+wide, and that width is exactly what your missing rows cost you.
+
+The block below builds a constructed county where you can see the true turnout,
+something you never get in practice. Answering depends on age, which the file
+records, and on voting itself, which it does not.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# 4,000 registered voters drawn at random from one county's list.
+# Older people vote more often.
+n = 4_000
+older = rng.random(n) < 0.5
+voted = rng.random(n) < np.where(older, 0.75, 0.50)
+# Who answers the follow-up survey? Older people answer more, AND people
+# who voted answer more than people who did not: the missing value itself.
+answered = rng.random(n) < 0.35 + 0.20 * older + 0.25 * voted
+
+df = pd.DataFrame({"group": np.where(older, "older", "younger"),
+                   "voted": voted, "answered": answered})
+print(df.groupby("group")["answered"].agg(people="size", share_answered="mean").round(2))
+
+seen = df[df.answered]
+missing = (~df.answered).sum()
+complete_case = seen.voted.mean()
+# Fill each blank with the turnout of answerers in the same age group.
+rate = seen.groupby("group").voted.mean()
+filled = df.voted.where(df.answered, df.group.map(rate)).mean()
+low = seen.voted.sum() / n                 # every non-answerer stayed home
+high = (seen.voted.sum() + missing) / n    # every non-answerer voted
+
+print(f"\nshare of rows missing                 : {missing / n:.3f}")
+se = np.sqrt(complete_case * (1 - complete_case) / len(seen))
+print(f"complete-case turnout                 : {complete_case:.3f}"
+      f"  (95% interval {complete_case - 1.96 * se:.3f} to {complete_case + 1.96 * se:.3f})")
+print(f"filled in by age group                : {filled:.3f}")
+print(f"bounds with no assumption at all      : [{low:.3f}, {high:.3f}]")
+print(f"true turnout of all 4,000 (unseen)    : {df.voted.mean():.3f}")
+print("\nfilling in by age repairs the age part of the gap, not the voting part;")
+print("only the bounds hold whatever the non-answerers did")
+```
+
+Read the output against the true value of 62.4 percent. With 40.2 percent of the
+rows blank, the complete-case turnout is 73.9 percent, and its 95 percent interval,
+72.2 to 75.7, misses the truth: that interval measures sampling noise among the
+people who answered, not who stayed silent. Filling in by age group moves it to 71.9
+percent, about two points repaired and 9.5 points still wrong, because the rest of
+the tilt runs through voting itself. The bounds run from 44.2 to 84.4 percent, a
+width of 40 points that equals the share of missing rows. They contain the truth,
+and they would contain it whatever the non-answerers did.
+
+Your estimand is turnout among all registered voters in the county, not among the
+people who returned the form. The random draw gives you the sampling license from
+4,000 voters to the county, but nonresponse breaks it unless you defend an
+assumption about why rows went missing, and nothing in the file can confirm that
+assumption. The bounds cover only the blanks among the 4,000; carried to the county,
+each end also needs a sampling interval. So you report a filled-in estimate, from
+multiple imputation so its interval carries the guess, with its assumption written
+beside it, the bounds as a sensitivity check, and one outside
+benchmark. In a real county the certified canvass counts the ballots, and a survey
+figure far above it warns you about who answered and about people overstating that
+they voted. When the blanks are outcomes in an experiment, the same logic returns as
+attrition on the experimental-causal pathway.
+
+An AI tool writes the missingness table, the imputation code, and the bounds in
+seconds. Two habits keep it honest. Ask it to print the number of rows before and
+after every step, because code tools often drop incomplete rows or fill blanks with
+a column average without telling you, a **silent scope change** from all 4,000
+voters to the ones who answered. And treat any sentence like "the data are missing
+at random" as your claim to defend, since it is a statement about people you never
+heard from. When values go missing or come back false because the question is
+sensitive, you can sometimes redesign the question instead: the [survey
+experiments](../part7-further-routes/survey-experiments.qmd) route shows how a list
+experiment lets people answer without revealing their own answer.
+
 ## An AI failure case
 
 You ask for county turnout and the tool returns "72 percent," with a citation to a

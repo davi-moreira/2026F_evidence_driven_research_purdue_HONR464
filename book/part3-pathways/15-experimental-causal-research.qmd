@@ -274,6 +274,179 @@ lose different shares of similar patients almost harmlessly, and equal shares of
 very different patients disastrously. The rates tell you where to dig; the digging
 is the sensitivity work from the honesty test above.
 
+## Within-unit designs: crossover, switchback, and N-of-1
+
+Go back to Ms. R. You see her Y(1) or her Y(0), never both. Some treatments soften
+that problem without solving it. A reminder can run for two weeks and stop for two,
+and her home blood-pressure cuff records both stretches: never both outcomes at
+once, but each condition at nearby moments.
+
+A **within-unit design** is a randomized experiment in which the same unit
+receives more than one condition, in an order chosen by chance. Example: each of
+24 patients gets two weeks with reminders and two weeks without, and a coin flip
+decides which comes first. Each person becomes their own comparison, so the large
+differences between people (one runs at 120, another at 150) drop out of the
+contrast. A **crossover design** is
+the classic two-condition version, where the groups differ only in the order of
+treatment. Example: half the patients get reminder-then-none, half none-then-reminder
+[@senn2002crossover].
+
+Three problems come with that pairing.
+A **period effect** is a change in outcomes that comes from *when* a measurement
+happens rather than from the treatment. Example: blood pressure drifts upward as
+winter arrives, whatever you do. Put half the patients in each order and average
+the two orders' results, and this drift cancels. **Carryover** is a treatment's
+effect lingering into the next period after the treatment stops. Example: patients
+who built a pill-taking habit during the reminder weeks keep some of it in the
+weeks without texts, so their "control" readings look better than a true control.
+A **washout period** is a gap between conditions, meant to let the first
+treatment's effect fade, whose readings you do not analyze. Example: a week of
+no reminders and no measurement between the two periods. A washout shrinks
+carryover; it cannot guarantee that carryover is gone, and a habit may never
+fade at all. How long the gap must be comes from the biology or the behavior, and
+that judgment is yours.
+
+Do not plan to settle carryover with a test on the same data. In a two-period
+crossover, a preliminary test for carryover has little power, and the old recipe
+of testing first and then choosing the analysis misstates its own false-alarm
+rate, even when no carryover exists [@freeman1989twostage; @senn2002crossover].
+Carryover is handled by design: a treatment whose effect plausibly switches off,
+a washout long enough by outside knowledge, and a written argument for both.
+
+The third problem is counting. Twenty-four patients measured every day for
+twenty-eight days give 672 readings, but they remain 24 people. Readings from the
+same person share that person's baseline, and today's reading leans on yesterday's.
+Treat them as 672 independent cases and your interval shrinks for no reason.
+
+The block below builds 24 patients whose reminder truly lowers pressure by about
+4 points, then analyzes the same trial four ways. Watch the standard error (SE)
+beside each estimate: the typical distance between an estimate and the truth if
+you reran the trial with fresh coin flips. A 95% interval runs about two standard
+errors either side of the estimate. With only 12 people per group the multiplier
+comes from the t distribution and is 2.07, a little wider than 2, and the code
+uses it.
+
+```python
+import numpy as np
+from scipy import stats
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n, days = 24, 14                        # 24 patients, two 14-day periods
+base = rng.normal(135, 15, n)           # people differ a LOT from each other
+gain = -4 + rng.normal(0, 3, n)         # reminder lowers pressure about 4 points
+first = rng.permutation(n) < n // 2     # coin flip: reminder first or second
+on = np.stack([first, ~first], axis=1)  # patient x period: reminder switched on?
+
+e = np.zeros((n, 2, days)); e[..., 0] = rng.normal(0, 8, (n, 2))
+for t in range(1, days):                # today's reading leans on yesterday's
+    e[..., t] = 0.7 * e[..., t - 1] + rng.normal(0, 5.7, (n, 2))
+
+def readings(carry):                    # patient x period x day
+    lingers = np.stack([0 * first, carry * first], axis=1)
+    effect = np.where(on, 1.0, lingers) * gain[:, None]
+    drift = np.array([0.0, 2.0])        # period 2 runs 2 points higher anyway
+    return base[:, None, None] + drift[None, :, None] + effect[..., None] + e
+
+def crossover(y):                       # each patient against themself
+    d = np.where(first, 1, -1) * (y[:, 0].mean(1) - y[:, 1].mean(1))
+    est = (d[first].mean() + d[~first].mean()) / 2   # the drift cancels
+    return est, np.sqrt(d[first].var(ddof=1) + d[~first].var(ddof=1)) / 2 / np.sqrt(12)
+
+def show(label, est, se, df):           # estimate, SE, 95% interval from t
+    m = stats.t.ppf(0.975, df)
+    print(f"{label}: {est:+.1f}  (SE {se:.1f}, 95% {est - m * se:+.1f} to {est + m * se:+.1f})")
+
+y = readings(carry=0.0)                 # suppose the washout cleared the effect
+a, b = y[first, 0].mean(1), y[~first, 0].mean(1)
+show("period 1 only, 12 vs 12 people ", a.mean() - b.mean(),
+     np.sqrt(a.var(ddof=1) / 12 + b.var(ddof=1) / 12), 22)
+show("crossover, each person vs self ", *crossover(y), 22)
+dev = y - y.mean(axis=(1, 2), keepdims=True)           # 672 readings, pooled
+r1, r0 = dev[on].ravel(), dev[~on].ravel()
+show("same, 672 readings as 672 cases", r1.mean() - r0.mean(),
+     np.sqrt(r1.var(ddof=1) / r1.size + r0.var(ddof=1) / r0.size), 670)
+show("crossover, effect lingers      ", *crossover(readings(0.75)), 22)
+print(f"true average effect            : {gain.mean():+.1f}")
+print("\npairing buys precision; readings are not new people;")
+print("a lingering effect biases the estimate, here toward zero")
+```
+
+Read the four lines against the true average effect, a drop of 4.1 points. Using
+only the first period throws away the pairing and compares 12 people with 12
+others: +5.4, the wrong sign, with a standard error of 7.1 and a 95% interval
+from −9.4 to +20.2. The crossover compares each person with themself and lands at
+−5.7 with a standard error of 1.2, an interval of −8.2 to −3.2 that contains the
+truth. Same patients, a standard error about six times smaller. Now count readings
+as people. The estimate does not move, but the standard error falls to 0.5, and
+the interval of −6.8 to −4.6 misses the true value entirely. That narrow interval
+is false precision, and nothing in the printout warns you.
+
+The fourth line keeps every reading and every coin flip and adds one thing: three
+quarters of the reminder's effect lingers into the no-reminder weeks for patients
+who got it first. The estimate shifts by 1.9 points, from −5.7 to −3.8, toward
+zero. Do not read −3.8 as the better answer because it sits nearer the truth. In
+this draw the noise pushed the crossover estimate low, and carryover pushed it
+back. On another draw the same pull would drag an accurate estimate toward zero.
+The direction is not a law, either. This lingering effect has the same sign as the
+treatment, so it pulls toward zero; a rebound after the treatment stops would push
+the estimate the other way. The printout gives no sign of either, which is why the
+case against carryover has to be made before the data arrive.
+
+A **switchback experiment** is a within-unit design in which a whole market or
+system switches between conditions over randomized time slots. Example: a
+food-delivery platform turns a new pricing rule on or off for a whole city in
+randomized two-hour blocks. Businesses use it when splitting customers would let
+the arms interfere, since treated and untreated orders compete for the same
+couriers. Carryover returns as orders placed under one rule still being delivered
+in the next block. Bojinov, Simchi-Levi, and Zhao derive the best switching
+schedule for an assumed length of carryover, study what happens when that length
+is wrong, offer a data-driven way to estimate it, and give exact randomization
+tests and conservative intervals for the result [@bojinov2023switchback]. The
+carryover length is again an assumption you state, not a detail the software
+settles.
+
+An **N-of-1 trial** is a within-unit experiment run on a single person, with
+several randomized treatment periods, to decide what works for that person.
+Example: a patient alternates two blood-pressure drugs over three randomized pairs
+of months, and she and her doctor pick the one that lowered her readings more.
+The counting problem is sharpest here. Ninety daily readings per drug are still
+three randomized comparisons, and the interval must be built from those three
+pairs, not from the days. Its reporting standard, CENT 2015, extends the
+checklist used for ordinary randomized trials to single N-of-1 trials and to
+series of them [@vohra2015cent].
+
+All three ask a causal question and sit on the experimental causal pathway, because
+you assign the order by chance. Name the quantity each design delivers. The
+crossover estimates the average short-run effect of the treatment for the people
+you enrolled, under the rotation you ran. The switchback estimates how the
+market's outcome differs between keeping the rule on and keeping it off long
+enough for carryover to play out, averaged over the slots you ran, in that one
+market. The N-of-1 trial estimates the effect for one person over the months of
+the trial, and its reach stops at that person. The warrant is the randomized
+order plus two assumptions you must defend: that the treatment's effect switches
+off once the treatment does, and that the condition itself stays stable enough for
+each unit to return to where it started. A within-unit design cannot answer for a
+treatment that cures, teaches, or permanently changes a unit, because a patient who
+learned a habit cannot be put back to the start. The reminder above is exactly
+that risk. If the texts build a lasting habit, the crossover estimates something
+smaller than the effect you care about, and the parallel design earlier in this
+chapter is the safer route. Reach follows the same rule as any experiment: a
+population wider than the people you enrolled needs the sampling license, not the
+coin flip.
+
+An AI tool is a strong arm here: it can generate a balanced random order and write
+the per-person difference code. Where it can fail is the counting. Handed a long
+table of readings, a tool may fit one model across all rows and report the narrow
+interval from the third line above, as if every row were a new person. It may also
+offer to test for carryover first and pick the analysis from the result, the
+recipe the carryover paragraph above warns against. Deciding whether the effect
+switches off, how long the washout must be, and whose effect the number describes
+stays with you. When several people each run their own N-of-1 trial, combining
+their results is a small synthesis problem, and the [evidence synthesis
+chapter](../part7-further-routes/evidence-synthesis.qmd) shows how to pool
+estimates without hiding how much they disagree.
+
 ## An AI failure case
 
 You paste your trial into the tool and it reports, with full confidence, "the

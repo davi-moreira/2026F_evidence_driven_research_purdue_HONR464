@@ -92,9 +92,18 @@ book:
         - part6-after-conference/36-conflicting-agents-and-human-escalation.qmd
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
         - studios/milestone12-release-next-cycle.qmd
+    - part: part7-further-routes/further-routes-overview.qmd
+      chapters:
+        - part7-further-routes/natural-experiments.qmd
+        - part7-further-routes/survey-experiments.qmd
+        - part7-further-routes/audit-studies.qmd
+        - part7-further-routes/text-as-data.qmd
+        - part7-further-routes/qualitative-inquiry.qmd
+        - part7-further-routes/evidence-synthesis.qmd
   appendices:
     - verification-guide.qmd
     - for-instructors.qmd
+    - further-designs.qmd
 
 bibliography: references.bib
 reference-section-title: References

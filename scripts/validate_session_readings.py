@@ -73,7 +73,9 @@ def main() -> int:
         for lid, _mode in parse(r["book_reading"]):
             if lid not in index:
                 errors.append(f"meeting {r['meeting']}: {lid!r} is not an "
-                              f"active lesson in BOOK_ARCHITECTURE.yml")
+                              f"active lesson the course adopts "
+                              f"(BOOK_ARCHITECTURE.yml; D83 crosswalk "
+                              f"not_adopted:)")
 
     # --- group meetings by milestone --------------------------------------
     weeks: dict[str, list[dict]] = {}

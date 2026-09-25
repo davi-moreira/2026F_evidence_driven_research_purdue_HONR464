@@ -19,6 +19,12 @@ Modes:
 On success (default mode) writes planning/.crosswalk_lock.json — hashes of the
 three manifests + validator version — the machine-readable "verified" flag the
 authored files may not carry themselves (C4).
+
+D83 (book-only further routes): a lesson with `scope: book-only` sits in a
+registered book-only `sections:` entry (a TOC part after the twelve studios),
+is role optional, and is listed in the crosswalk's `not_adopted:`; it is out
+of the studio checks and out of the home-anchor partition, and the A2 scan
+also covers section pages and the policy's `extra_sources:`.
 """
 from __future__ import annotations
 
@@ -89,6 +95,25 @@ def check_architecture(arch) -> list[str]:
             p.append(f"arch[{s['id']}]: station has no checkpoints")
     routes = set(arch.get("pathways", []))
     genres = set(arch.get("genres", []))
+    # D83 (book-only further routes): `sections:` registers the book-only TOC
+    # parts emitted after the twelve studios. Each opens with its own page,
+    # named *-overview.qmd so the book-sync orphan scan leaves it alone.
+    sections = {x["id"]: x for x in arch.get("sections", []) or []}
+    if len(sections) != len(arch.get("sections", []) or []):
+        p.append("arch: duplicate section ids")
+    sec_ranks = [x.get("rank") for x in arch.get("sections", []) or []]
+    if len(set(sec_ranks)) != len(sec_ranks):
+        p.append("arch: section ranks must be unique")
+    for x in sections.values():
+        for field in ("id", "rank", "title_en", "page"):
+            if field not in x:
+                p.append(f"arch[section {x.get('id')}]: missing `{field}`")
+        page = x.get("page", "")
+        if not page.endswith("-overview.qmd"):
+            p.append(f"arch[section {x['id']}]: page must be named "
+                     f"*-overview.qmd, got {page!r}")
+        elif not (REPO / "book" / page).exists():
+            p.append(f"arch[section {x['id']}]: page missing: book/{page}")
     lessons = arch.get("lessons", [])
     ids = [l["id"] for l in lessons]
     tomb_ids = {t["id"] for t in arch.get("tombstones", [])}
@@ -122,6 +147,20 @@ def check_architecture(arch) -> list[str]:
             p.append(f"arch[{lid}]: unregistered route {l['route']!r}")
         if "genre" in l and l["genre"] not in genres:
             p.append(f"arch[{lid}]: unregistered genre {l['genre']!r}")
+        # D83: `scope` has one legal value; a book-only lesson lives in a
+        # registered section as an optional route, and only a book-only
+        # lesson may carry a section (crosswalk `not_adopted:` is checked in
+        # check_crosswalk, where the crosswalk is loaded).
+        if "scope" in l and l["scope"] != "book-only":
+            p.append(f"arch[{lid}]: scope must be book-only, got {l['scope']!r}")
+        if l.get("scope") == "book-only":
+            if l.get("section") not in sections:
+                p.append(f"arch[{lid}]: a book-only lesson needs a registered "
+                         f"`section`, got {l.get('section')!r}")
+            if l.get("role") != "optional":
+                p.append(f"arch[{lid}]: a book-only lesson must be role optional")
+        elif "section" in l:
+            p.append(f"arch[{lid}]: `section` without `scope: book-only`")
         src = REPO / "book" / l["source"]
         if l.get("state") == "active" and not src.exists():
             p.append(f"arch[{lid}]: active but source missing: {l['source']}")
@@ -134,9 +173,34 @@ def check_architecture(arch) -> list[str]:
     used_routes = {l.get("route") for l in lessons if l.get("route")}
     if routes - used_routes:
         p.append(f"arch: registered pathway never used: {routes - used_routes}")
-    used_stations = {l["station"] for l in lessons}
+    # D83: a station is populated by its STUDIO lessons; a book-only lesson
+    # names its home station without keeping that studio alive.
+    used_stations = {l["station"] for l in lessons
+                     if l.get("scope") != "book-only"}
     if set(stations) - used_stations:
         p.append(f"arch: station with no lessons: {set(stations) - used_stations}")
+    used_sections = {l.get("section") for l in lessons
+                     if l.get("scope") == "book-only"}
+    if set(sections) - used_sections:
+        p.append(f"arch: section with no lessons: {set(sections) - used_sections}")
+    # D83 display invariant: Quarto numbers chapters by TOC position, the
+    # manifest by rank. The TOC is (studio rank, lesson rank) and then the
+    # book-only sections (section rank, lesson rank), so the two numberings
+    # agree only while that order IS rank order: a book-only lesson must
+    # outrank every studio lesson, and sections must follow rank.
+    act = [l for l in lessons if l.get("state") == "active"]
+    srank = {s["id"]: s["rank"] for s in arch.get("stations", [])}
+    try:
+        toc = sorted(act, key=lambda l: (
+            (1, sections[l["section"]]["rank"], l["rank"])
+            if l.get("scope") == "book-only" else
+            (0, srank[l["station"]], l["rank"])))
+        if [l["id"] for l in toc] != [l["id"] for l in
+                                      sorted(act, key=lambda l: l["rank"])]:
+            p.append("arch: TOC order != rank order — Quarto chapter numbers "
+                     "would disagree with manifest display numbers (D83)")
+    except (KeyError, TypeError):
+        pass                              # unknown station/section reported above
     # identity epoch (round-8 P1 / A10): every id + url_path released at the
     # epoch must survive unchanged — renames and URL moves fail here, not in
     # review. Tombstoned ids are the only legal exits.
@@ -176,7 +240,7 @@ def check_toc(arch) -> list[str]:
     """The EN _quarto.yml chapters block must be byte-identical to what
     scripts/build_book_toc.py renders from the manifest (D38: the TOC is a
     generated projection — twelve studio parts in (studio rank, lesson rank)
-    order). Otherwise the TOC is a second, hand-maintained ordering source
+    order, then the D83 book-only sections). Otherwise the TOC is a second, hand-maintained ordering source
     that can silently disagree with identity (Phase-2 critique, step 5)."""
     sys.path.insert(0, str(REPO / "scripts"))
     import build_book_toc
@@ -194,9 +258,12 @@ def check_station_specs(arch) -> list[str]:
     if not spec_path.exists():
         return ["stations: planning/BOOK_STATIONS.yml is missing"]
     spec = {s["id"]: s for s in yaml.safe_load(spec_path.read_text())["stations"]}
+    # D83: book-only lessons are not studio lessons — they feed no milestone
+    # piece, so they are out of the contributions gate (a `contributions`
+    # entry naming one fails below as "not an active lesson of this studio").
     active_by_station: dict[str, set[str]] = {}
     for l in arch.get("lessons", []):
-        if l.get("state") == "active":
+        if l.get("state") == "active" and l.get("scope") != "book-only":
             active_by_station.setdefault(l["station"], set()).add(l["id"])
     for st in arch.get("stations", []):
         sid = st["id"]
@@ -222,7 +289,16 @@ def check_station_specs(arch) -> list[str]:
         # D42: a studio whose branch lessons split by route/genre must carry
         # the matching authored chooser on its pages.
         active = [l for l in arch.get("lessons", [])
-                  if l.get("station") == sid and l.get("state") == "active"]
+                  if l.get("station") == sid and l.get("state") == "active"
+                  and l.get("scope") != "book-only"]
+        # D83: the studio opener lists its book-only further routes under an
+        # authored introduction.
+        if any(l.get("station") == sid and l.get("state") == "active"
+               and l.get("scope") == "book-only"
+               for l in arch.get("lessons", [])) \
+                and not spec[sid].get("further_routes_intro"):
+            p.append(f"stations[{sid}]: book-only further routes but no "
+                     f"authored `further_routes_intro`")
         if any(l.get("role") == "branch" and l.get("route") for l in active) \
                 and not spec[sid].get("route_guide"):
             p.append(f"stations[{sid}]: route-branch lessons but no authored "
@@ -281,6 +357,24 @@ def check_crosswalk(arch, cw) -> list[str]:
     lessons = {l["id"]: l for l in arch["lessons"]}
     active = {i for i, l in lessons.items() if l["state"] == "active"}
     planned = {i for i, l in lessons.items() if l["state"] == "planned"}
+    # D83: `not_adopted:` names active lessons the course does not adopt.
+    # Every book-only lesson must be on it; none of them may be touched by
+    # any crosswalk row (checked after the row loop).
+    na_list = [x.get("lesson") for x in (cw.get("not_adopted") or [])]
+    not_adopted = set(na_list)
+    if len(not_adopted) != len(na_list):
+        p.append("cw: not_adopted lists a lesson twice")
+    for x in cw.get("not_adopted") or []:
+        if not x.get("reason"):
+            p.append(f"cw: not_adopted {x.get('lesson')!r} has no `reason`")
+    if not_adopted - active:
+        p.append(f"cw: not_adopted names non-active lessons: "
+                 f"{sorted(not_adopted - active)}")
+    book_only = {i for i in active if lessons[i].get("scope") == "book-only"}
+    if book_only - not_adopted:
+        p.append(f"cw: book-only lessons missing from not_adopted: "
+                 f"{sorted(book_only - not_adopted)}")
+    touched: set[str] = set()
     stations = {s["id"]: {c["id"] for c in s["checkpoints"]}
                 for s in arch["stations"]}
     anchors: list[str] = []
@@ -297,6 +391,7 @@ def check_crosswalk(arch, cw) -> list[str]:
         nbs.append(r.get("nb", "?"))
         for a in r.get("assignments", []):
             lid = a.get("lesson")
+            touched.add(lid)
             if lid not in active:
                 p.append(f"cw[{mi}]: assignment references non-active lesson "
                          f"{lid!r}")
@@ -362,6 +457,7 @@ def check_crosswalk(arch, cw) -> list[str]:
             if not b.get("version_label"):
                 p.append(f"cw[{mi}/{st}]: book_milestones missing version_label")
             refs = b.get("contribution_refs", [])
+            touched.update(refs)
             if not refs:
                 p.append(f"cw[{mi}/{st}]: contribution_refs is empty")
             bad = set(refs) - lessons_of_station.get(st, set())
@@ -428,9 +524,17 @@ def check_crosswalk(arch, cw) -> list[str]:
     dup = {a for a in anchors if anchors.count(a) > 1}
     if dup:
         p.append(f"cw: lesson home-anchored more than once: {dup}")
-    if set(anchors) != active:
-        p.append(f"cw: home anchors do not partition active lessons; "
-                 f"missing {active - set(anchors)}, extra {set(anchors) - active}")
+    # Rule 6 (D83): the home anchors partition the ADOPTED active lessons,
+    # i.e. active minus not_adopted; a not-adopted lesson appears in no row.
+    if not_adopted & touched:
+        p.append(f"cw: not_adopted lessons appear in crosswalk rows "
+                 f"(assignments or contribution_refs): "
+                 f"{sorted(not_adopted & touched)}")
+    adopted = active - not_adopted
+    if set(anchors) != adopted:
+        p.append(f"cw: home anchors do not partition the adopted active "
+                 f"lessons; missing {adopted - set(anchors)}, "
+                 f"extra {set(anchors) - adopted}")
     if set(planned_anchors) != planned:
         p.append(f"cw: planned_home_anchor mismatch: {set(planned_anchors) ^ planned}")
     if sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(1, 17)]:
@@ -572,15 +676,31 @@ def a2_scan(arch, leak, hard: bool) -> list[str]:
     p: list[str] = []
     rules = [(r["id"], re.compile(r["pattern"], re.I)) for r in leak.get("rules", [])]
     excl = {e["artifact"] for e in leak.get("structural_exclusions", [])}
+    # D83: besides every active lesson source, scan each book-only section's
+    # opening page and every `extra_sources:` page the policy names (the
+    # further-designs appendix), keyed by artifact id like the lessons.
+    targets = [(l["id"], l["source"]) for l in arch["lessons"]
+               if l["state"] == "active"]
+    targets += [(f"section:{s['id']}", s["page"])
+                for s in arch.get("sections", []) or [] if s.get("page")]
+    targets += [(x["artifact"], x["source"])
+                for x in leak.get("extra_sources", []) or []]
     hits = []
-    for l in arch["lessons"]:
-        if l["state"] != "active" or l["id"] in excl:
+    for aid, rel in targets:
+        if aid in excl:
             continue
-        f = REPO / "book" / l["source"]
+        f = REPO / "book" / rel
+        if not f.exists():
+            # a missing lesson source or section page is reported by
+            # check_architecture; only an extra source is reported here
+            if not aid.startswith("section:") and not any(
+                    l["id"] == aid for l in arch["lessons"]):
+                p.append(f"A2: extra source missing: book/{rel} ({aid})")
+            continue
         text = " ".join(f.read_text(errors="ignore").lower().split())
         for rid, rx in rules:
             for m in rx.finditer(text):
-                hits.append((l["id"], rid, m.group(0)))
+                hits.append((aid, rid, m.group(0)))
     if hits:
         msg = (f"A2 leakage: {len(hits)} hit(s) in active EN chapter bodies "
                f"(hard gate at the v1 freeze)")
@@ -596,7 +716,8 @@ def a2_scan(arch, leak, hard: bool) -> list[str]:
             for (lid, rid), n in sorted(agg.items()):
                 print(f"      {lid}: {rid} ×{n}")
     else:
-        print("  ✓ A2 leakage: no hits in active EN chapter bodies")
+        print("  ✓ A2 leakage: no hits in active EN chapter bodies (+ section "
+              "pages and extra sources)")
     return p
 
 

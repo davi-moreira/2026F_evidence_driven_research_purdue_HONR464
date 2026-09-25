@@ -1,0 +1,736 @@
+---
+title: "Further Designs: A Field Guide"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+*Seven designs that answer real research questions and that this book does not
+teach you to run alone. Each entry tells you what the design answers, what has to
+be true for its answer to hold, what it asks of you beyond this book, and where to
+learn it properly. Read an entry when your question seems to point at the design,
+then take it to someone who has used it.*
+
+::: {.callout-important title="Learn these with a mentor"}
+Every design below is used well in published research, and every one is used badly
+more often. The assumptions it rests on, or the interpretive craft it demands, take
+more unsupervised practice to defend than a first project allows. If your question calls for
+one, name it in your Research Contract, write down the assumption you would have to
+defend, and find a person who has run the design before you commit to it.
+:::
+
+## Why these designs are here and not in the route library
+
+Suppose you read that a lottery for job-training seats "shows" the program raised
+earnings by two thousand dollars, and you want to run the same analysis on your own
+city's lottery. The code takes ten lines. The argument behind them takes a
+semester of reading: why the lottery could touch earnings
+only through the program, whose earnings the number describes, and what happens to
+the estimate when few winners actually enroll.
+
+That gap between a short computation and a long argument is what the seven designs
+in this guide share. The compass still classifies each of them. Every question here
+has a kind (descriptive or causal) and a reach (the data at hand, a population, or
+unseen cases), and every answer still needs the crossing license its reach demands:
+sampling for a population, a held-out check for unseen cases, assignment or
+identification for a cause. None of these designs creates a new license. Each one
+is a particular way of trying to earn an existing one, and each has failure modes
+that specialists spend careers mapping.
+
+The entries follow one pattern, so you can compare them:
+
+- **The question it answers**, stated in the compass's terms.
+- **What licenses the answer**, the assumptions in words.
+- **A picture**, one concrete case, often with a short seeded block you can run.
+- **What it demands beyond this book**, the skills and decisions a mentor supplies.
+- **What AI can and cannot do here**, the arm and the brain, separated.
+- **Where to learn it**, sources that have been opened and checked, listed with the
+  most accessible first.
+
+| Design | Kind, and whom the answer covers | What earns the answer | The hardest demand |
+|---|---|---|---|
+| Instrumental variables | causal, a subgroup you cannot list | an outside push that reaches the outcome only through the treatment | defending the exclusion restriction |
+| Synthetic control | causal, one unit | a weighted blend of untreated units that tracked the treated one | a long, good pre-period fit and a clean donor pool |
+| Staggered-adoption difference-in-differences | causal, the units that adopted | parallel trends for each adoption group | choosing comparisons and weights on purpose |
+| Ethnography | descriptive, often of how a process unfolds; one setting | prolonged presence, field notes, reflexivity | access, time, and the ethics of observation |
+| Qualitative Comparative Analysis | set relations (a causal reading is contested); the cases studied | calibrated set membership and case knowledge | calibration and a contested causal reading |
+| Network analysis | descriptive (causal only with great care), one network | a defended boundary and tie definition | dependence among ties |
+| Bayesian analysis | any kind, any reach | a stated model and prior, plus the design's own license | justifying the prior and checking the model |
+
+## Instrumental variables
+
+**The question it answers.** What is the causal effect of a treatment that people
+choose for themselves, when some outside push changes who takes it? An
+**instrumental variable** is a factor that shifts who receives a treatment but has
+no other route to the outcome. Example: a lottery offers seats in a job-training
+program. The offer changes who enrolls, and if the design holds it touches later
+earnings only through enrollment. The question is causal. Its reach is narrower
+than most readers expect. The answer is a **local average treatment effect**, which
+is the average effect among **compliers**, the people who take the treatment when
+pushed and skip it when not. It is not the effect for everyone who enrolled, and it
+is not the effect for the whole population.
+
+**What licenses the answer.** Four assumptions, stated in the framework that made
+this reading precise [@angrist1996identification]. First, **relevance**: the
+instrument really moves take-up. You can check this one, because it is the gap in
+enrollment between people offered and not offered, called the **first stage**.
+Second, the instrument is assigned as if at random, so the offered and the
+not-offered are comparable. Third, the **exclusion restriction**: the instrument
+reaches the outcome only through the treatment. No data set can confirm this; you
+argue it from how the institution works. Fourth, **monotonicity**: nobody does the
+opposite of the push, refusing the program because they were offered it. With all
+four in place, one ratio recovers the average effect among compliers: the offer's
+effect on earnings divided by the offer's effect on enrollment. Monotonicity also
+makes the first stage equal to the share of compliers. RDSS declares an instrumental-variables design in its
+observational-causal library, which is the place to see these assumptions written
+as a model you can diagnose [@blair2023rdss].
+
+**A picture.** The block below builds four thousand applicants. Unmeasured
+motivation raises both enrollment and earnings, so enrollees look better off for
+reasons that have nothing to do with the program. The program adds \$2,000 for
+compliers and \$500 for people who would enroll anyway.
+
+```python
+import numpy as np
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+n = 4_000
+
+# A lottery OFFERS a job-training seat. Motivation (unmeasured) drives both
+# who enrolls and later earnings, so enrollees differ from non-enrollees.
+motivation = rng.normal(0, 1, n)
+offer = rng.integers(0, 2, n)                        # the instrument: a coin flip
+always = motivation > 1.0                            # enroll with or without an offer
+complier = (motivation > -0.5) & ~always             # enroll only if offered
+enroll = always | (complier & (offer == 1))
+effect = np.where(complier, 2.0, 0.5)                # the program helps compliers MORE
+earnings = 30 + 3 * motivation + effect * enroll + rng.normal(0, 4, n)   # $1,000s
+
+def wald(y, d, z):
+    itt_y = y[z == 1].mean() - y[z == 0].mean()
+    itt_d = d[z == 1].mean() - d[z == 0].mean()
+    return itt_y / itt_d, itt_d
+
+naive = earnings[enroll].mean() - earnings[~enroll].mean()
+late, first_stage = wald(earnings, enroll, offer)
+boot = []
+for _ in range(1_000):
+    i = rng.integers(0, n, n)
+    boot.append(wald(earnings[i], enroll[i], offer[i])[0])
+lo, hi = np.percentile(boot, [2.5, 97.5])
+
+print(f"share of compliers           : {complier.mean():.2f}")
+print(f"first stage (offer -> enroll): {first_stage:+.2f}")
+print(f"naive enrolled-vs-not gap    : {naive:+.2f}")
+print(f"Wald (IV) estimate           : {late:+.2f}  95% interval [{lo:+.2f}, {hi:+.2f}]")
+print(f"true effect among compliers  : {2.0:+.2f}")
+print(f"true effect among enrollees  : {effect[enroll].mean():+.2f}")
+print("\nthe lottery recovers the effect for COMPLIERS, a group you cannot list by name;")
+print("it says nothing directly about the always-takers or anyone else")
+```
+
+The naive gap between enrollees and everyone else is \$5,040, most of it
+motivation. The lottery's ratio gives \$2,210. A **bootstrap interval** is a range
+built by redrawing the applicants with replacement many times and recomputing the
+ratio each time; here the 95% bootstrap interval runs from \$1,630 to \$2,700 and
+contains the planted \$2,000 for compliers. The ratio does not recover the average
+effect among everyone who enrolled, which is \$1,440, because the always-takers
+gain less. About 54% of applicants are compliers here,
+and you could not name a single one of them from the data. Biology uses the same
+logic under another name. **Mendelian randomization** is the use of gene variants,
+passed from parents to children largely by chance at conception, as instruments for
+an exposure such as alcohol intake [@daveysmith2003mendelian]. It needs the same
+conditions. The variant must really shift the exposure. It must share no cause with
+the disease, which differences in ancestry within a population can break. And it
+must reach the disease only through the exposure. That last condition fails under
+**pleiotropy**, which is one gene affecting several traits, for instance a variant
+that changes alcohol intake and also acts on the liver by a second route. Even when
+all three hold, the answer describes a lifelong difference in exposure, not the
+effect of changing the exposure for a year.
+
+**What it demands beyond this book.** A **weak instrument** is one whose first stage
+is small, so the ratio divides by a number near zero. Its estimates drift toward
+the confounded comparison and its usual intervals are too narrow, which is why
+specialists use inference built for weak instruments. You will also need
+**two-stage least squares**, which is the regression version of the same ratio that
+lets you add background variables such as age or prior earnings, standard errors that match how the
+instrument was assigned, and above all a written exclusion argument that someone
+who knows the institution has tried to break [@angrist2009mostly]. The
+observational-causal pathway chapter,
+[Observational Causal Research](part3-pathways/12-observational-causal-research.qmd),
+is where you name this leverage and its price before reaching for it.
+
+**What AI can and cannot do here.** A tool will write the two-stage code correctly,
+compute the first stage, and list instruments other researchers have used. It will
+also propose an instrument with a fluent paragraph asserting the exclusion
+restriction, which is **plausible-but-wrong-method** at its most dangerous, and it
+will describe the estimate as "the effect of the program," a **silent scope change**
+from compliers to everyone. Ask it to argue against its own instrument: every path
+from the instrument to the outcome that bypasses the treatment. Then check one
+consequence you can see. If the instrument works only through the program, it
+should show no link to earnings in a subgroup where it cannot change enrollment,
+such as applicants who had already accepted full-time jobs before the draw (confirm
+first that the offer really leaves their enrollment unchanged). A null
+there reduces your concern about one route; it leaves the others standing.
+The exclusion argument stays yours.
+
+**Where to learn it.** Start with the instrumental-variables chapter of
+Cunningham's book, which is free online and written for readers new to the method
+[@cunningham2021mixtape]. Then read Angrist, Imbens, and Rubin, who set out the
+complier interpretation [@angrist1996identification]. Angrist and Pischke teach the
+estimator for applied economists [@angrist2009mostly]. Hernán and Robins give the
+epidemiologist's version, with its assumptions drawn as diagrams
+[@hernan2020whatif]. Davey Smith and Ebrahim set out Mendelian randomization and its
+assumptions for epidemiology [@daveysmith2003mendelian].
+
+## Synthetic control
+
+**The question it answers.** What happened to one treated unit (a state, a
+country, a firm's region) after a policy, compared with what would have happened
+without it? **Synthetic control** is a method that builds that missing comparison
+as a weighted average of untreated units, choosing the weights so the blend
+reproduces the treated unit's path before the policy. Example: California's 1988
+tobacco control program was compared with a "synthetic California" made from other
+states, and cigarette sales were tracked after the program began
+[@abadie2010synthetic]. A political-science application estimated what German
+reunification did to West Germany's economy by blending other rich democracies
+[@abadie2015comparative]. The question is causal, and its reach is one unit over
+one stretch of years. No population is sampled, so no population claim follows.
+
+**What licenses the answer.** The blend that tracked the treated unit through many
+years before the policy would have kept tracking it without the policy. That
+requires three things you defend in writing. The pre-period fit is close and long.
+No donor was touched by the policy or hit by its own large shock. And the treated
+unit sits within the range of its donors, since weights are non-negative and sum
+to one, so the method interpolates and never extrapolates [@abadie2021using].
+
+**A picture.** One region taxes sugary drinks. Twelve untreated regions are the
+donor pool, with twenty years before the tax and ten after. The block plants a
+fall of four liters per person and asks whether the blend finds it.
+
+```python
+import numpy as np
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+T0, T1, J = 20, 10, 12             # pre years, post years, donor regions
+
+# Sugary-drink sales per person follow a mix of two shared trends plus noise.
+trends = np.cumsum(rng.normal(0.3, 1.0, (T0 + T1, 2)), axis=0)
+load = rng.uniform(0, 1, (J + 1, 2))
+Y = 50 + trends @ load.T + rng.normal(0, 0.8, (T0 + T1, J + 1))
+Y[T0:, 0] -= 4.0                   # region 0 taxes sugary drinks: sales FALL by 4 liters
+
+def simplex_weights(X, x, steps=5_000, lr=0.002):
+    """Non-negative weights summing to 1 that make X @ w track x (projected gradient)."""
+    w = np.full(X.shape[1], 1 / X.shape[1])
+    for _ in range(steps):
+        w -= lr * X.T @ (X @ w - x) / len(x)
+        u = np.sort(w)[::-1]; c = np.cumsum(u) - 1
+        k = np.nonzero(u - c / np.arange(1, len(u) + 1) > 0)[0][-1]
+        w = np.maximum(w - c[k] / (k + 1), 0)
+    return w
+
+def gap_ratio(j):
+    donors = [d for d in range(J + 1) if d != j]
+    w = simplex_weights(Y[:T0, donors], Y[:T0, j])
+    gap = Y[:, j] - Y[:, donors] @ w
+    pre, post = np.sqrt(np.mean(gap[:T0] ** 2)), np.sqrt(np.mean(gap[T0:] ** 2))
+    return w, gap, post / pre
+
+w, gap, ratio0 = gap_ratio(0)
+print(f"donors with weight > 0.05     : {int((w > 0.05).sum())} of {J}, weights {np.sort(w)[::-1][:4].round(2)}")
+print(f"pre-period fit (RMSE)         : {np.sqrt(np.mean(gap[:T0] ** 2)):.2f}")
+print(f"average post-period gap       : {gap[T0:].mean():+.2f}   (planted effect -4.00)")
+ratios = [gap_ratio(j)[2] for j in range(J + 1)]
+rank = 1 + sum(r > ratio0 for r in ratios[1:])
+print(f"placebo rank of treated region: {rank} of {J + 1}  (smallest possible p = 1/{J + 1} = {1 / (J + 1):.2f})")
+print("\nthe synthetic region is a weighted average of real ones;")
+print("its credibility rests on the pre-period fit, and with 12 donors")
+print("no placebo ranking can report a p-value below 1 in 13")
+```
+
+Four donors carry nearly all the weight (0.56, 0.18, 0.18, 0.08), and across the
+twenty pre-tax years the blend misses the taxed region by a typical 0.69 liters a
+year (the root-mean-square gap: square each year's miss, average, take the square
+root). After the tax the gap averages −4.04 liters against the planted
+−4.00. The uncertainty comes from **placebo runs**: you pretend each donor was
+treated, rebuild its blend, and compute the same ratio for every region, the
+post-tax gap divided by the pre-tax miss (both as root-mean-square values). The ratio
+keeps a region whose blend never fit well from looking unusual for that reason
+alone [@abadie2010synthetic; @abadie2015comparative]. The taxed region ranks first
+of thirteen. A **p-value** is the share of runs, under the assumption that nothing
+happened, that look at least as extreme as the real one; here that is 1 in 13, or
+about 0.08. That share is a true probability only if you are willing to treat the
+taxed region as if it had been drawn at random from the thirteen. Policies are
+rarely placed that way, so read the rank first as a measure of how unusual the
+region is among its placebos [@abadie2021using]. It is also the strongest statement
+the design can make with twelve donors. More donors buy a finer ranking; they do not
+buy a population.
+
+**What it demands beyond this book.** You choose the donor pool and the predictors
+before you look at the post-policy years, and you report why each excluded unit
+was excluded. You check that a good fit is not overfitting noise, rerun the
+analysis leaving out each heavily weighted donor, and run placebos in time as well
+as in space (pretend the policy started earlier and see whether a gap appears).
+Newer variants relax parts of the method, and knowing when they help takes a
+mentor [@abadie2021using].
+
+**What AI can and cannot do here.** A tool is fast at the weight optimization, the
+placebo loop, and the gap plot. The failure to watch is donor-pool shopping: the
+tool, asked to "improve the fit," drops donors after seeing the post-policy
+results, and the placebo ranking silently loses its meaning. It may also describe a
+rank of one out of thirteen as "highly significant," which is **missing
+uncertainty** in formal dress. Recompute the rank yourself with **alternative
+code**, and keep the donor list, written and dated before the post-period data,
+in your ledger. The donor list is yours.
+
+**Where to learn it.** Start with the synthetic-control chapter of Cunningham's
+book [@cunningham2021mixtape]. Then read Abadie's review, which sets out when the
+method is feasible and when it fails [@abadie2021using]. The method first appeared
+in a study of terrorism's economic cost in the Basque Country
+[@abadie2003economic]. The tobacco study set out its general form and its placebo
+inference [@abadie2010synthetic], and the reunification study showed it to
+comparative politics [@abadie2015comparative].
+
+## Staggered-adoption difference-in-differences
+
+**The question it answers.** What did a policy do, on average, to the units that
+adopted it, when they adopted it in different years? **Staggered adoption** is a
+rollout in which different units begin treatment at different times and usually
+stay treated. Example: states pass the same kind of paid-sick-leave law in
+different years. The basic two-group version, with one treated group and one
+comparison group, is taught in
+[Natural Experiments](part7-further-routes/natural-experiments.qmd). The
+staggered version looks like a simple extension and is not one.
+
+**What licenses the answer.** The same promise as the basic design, made once for
+every adoption group: absent the policy, each group's outcome would have moved in
+parallel with its comparison group, and no group changed behavior in anticipation.
+The trap is the estimator. The standard **two-way fixed-effects regression**, which
+controls for each unit and each period and adds a single treated indicator, is an
+average of many hidden two-group comparisons, and none of their weights is negative
+[@goodmanbacon2021difference]. The trouble is what some comparisons are. They use
+units that were already treated as if they were controls, so when effects grow over
+time, the controls' own growing effects are subtracted from the answer. The same
+problem looks different if you write the regression in terms of the effect in each
+adoption group and period. Then some of those effects can carry negative weight, and
+when effects differ, the estimate can even be negative while every group's true
+effect is positive [@dechaisemartin2020two]. RDSS shows the same bias in
+its declared difference-in-differences design [@blair2023rdss]. The repair is to
+name the estimand first. A **group-time average effect** is the average effect for
+the units that adopted in one year, measured in one later period, and you then
+average these with weights you chose, comparing only against units not yet treated
+or never treated [@callaway2021difference].
+
+**A picture.** Forty states in two adoption groups, one starting in period 4 and
+one in period 8, with no state left untreated. The policy's effect grows by one
+unit every period after adoption.
+
+```python
+import numpy as np, pandas as pd
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+T = 12
+cohorts = {"early": 4, "late": 8}          # period each group of 20 states adopts
+rows = []
+for name, start in cohorts.items():
+    for s in range(20):
+        base = rng.normal(10, 2)
+        for t in range(T):
+            since = t - start
+            effect = 1.0 * (since + 1) if since >= 0 else 0.0   # effect GROWS each period
+            y = base + 0.5 * t + effect + rng.normal(0, 0.5)
+            rows.append((f"{name}{s}", name, t, int(since >= 0), effect, y))
+df = pd.DataFrame(rows, columns=["state", "cohort", "t", "treated", "effect", "y"])
+
+# The textbook two-way fixed-effects regression: y on treated + state + period dummies
+X = pd.get_dummies(df[["state", "t"]].astype(str), drop_first=True).astype(float)
+X.insert(0, "treated", df["treated"]); X.insert(0, "const", 1.0)
+twfe = np.linalg.lstsq(X.to_numpy(), df["y"].to_numpy(), rcond=None)[0][1]
+truth = df.loc[df.treated == 1, "effect"].mean()
+
+# A clean 2x2: early vs late, using only periods before the late group adopts
+m = lambda c, a, b: df[(df.cohort == c) & df.t.between(a, b)].y.mean()
+clean = (m("early", 4, 7) - m("early", 0, 3)) - (m("late", 4, 7) - m("late", 0, 3))
+true_clean = df[(df.cohort == "early") & df.t.between(4, 7)].effect.mean()
+
+# Uncertainty: resample whole STATES (the unit that adopts), never single rows
+pre_post = df[df.t <= 7].assign(post=df.t >= 4)
+change = pre_post.groupby(["cohort", "state", "post"]).y.mean().unstack()
+change = (change[True] - change[False])
+early, late = change["early"].to_numpy(), change["late"].to_numpy()
+boot = [rng.choice(early, 20).mean() - rng.choice(late, 20).mean() for _ in range(1_000)]
+lo, hi = np.percentile(boot, [2.5, 97.5])
+
+print(f"true average effect, all treated state-periods: {truth:+.2f}")
+print(f"two-way fixed-effects estimate               : {twfe:+.2f}")
+print(f"clean early-vs-not-yet-treated comparison    : {clean:+.2f}   (truth {true_clean:+.2f})")
+print(f"  95% interval, resampling states            : [{lo:+.2f}, {hi:+.2f}]")
+print("\nthe regression quietly used already-treated states as controls;")
+print("with growing effects, their growth was subtracted from the answer")
+```
+
+Across all treated state-periods, the true average effect is 3.83. The two-way
+regression reports 0.40, because in the later periods it compares the late
+adopters against early adopters whose effects are still growing. A clean
+comparison asks a narrower question: the early group against the not-yet-treated
+late group, only in periods 4 through 7. It returns 2.34, with a 95% interval from
+2.11 to 2.59 built by resampling whole states, and the planted value for that
+window is 2.50. The clean comparison recovers its own, smaller estimand within its
+interval; it says nothing about periods 8 through 11, where no untreated comparison
+is left.
+
+**What it demands beyond this book.** You choose the comparison group, the
+aggregation weights, and the event-time window, then explain each choice. You learn
+estimators built for effects that differ across groups and over time, and the
+event-study plots that go with them. You also
+learn that a flat pre-period can hide a trend violation large enough to matter,
+since pre-trend checks often have little power to detect it
+[@roth2022pretest; @roth2023trending].
+
+**What AI can and cannot do here.** Ask a tool for "a difference-in-differences
+regression" and it will usually write the two-way version, the default in most
+published code written before this literature appeared. This is **stale knowledge** meeting
+**plausible-but-wrong-method**. It may also call a package's function without
+knowing which estimator that function implements. Run a **simulation** like the one
+above, with effects you planted, and confirm the tool's code recovers them before
+you trust it on your data. Which comparisons are allowed is your decision.
+
+**Where to learn it.** Start with the difference-in-differences chapter of
+Cunningham's book, which walks through the staggered case [@cunningham2021mixtape].
+Then read Roth, Sant'Anna, Bilinski, and Poe, who survey the whole literature for
+applied readers [@roth2023trending]. Goodman-Bacon's decomposition shows which
+comparisons the two-way regression averages [@goodmanbacon2021difference]. De
+Chaisemartin and D'Haultfœuille show the negative weights on group-period effects
+[@dechaisemartin2020two]. Callaway and Sant'Anna give the group-time estimand
+[@callaway2021difference].
+
+## Ethnography
+
+**The question it answers.** How do people in a particular setting understand and
+carry out what they do, seen from long presence among them? **Ethnography** is
+research in which you take part in or closely observe a group's everyday life over
+an extended period and treat detailed field notes as your primary evidence.
+Example: a researcher works a season in a family restaurant's kitchen to learn how
+the owners actually decide to change menu prices, which may differ from what they
+say in an interview. The question is descriptive, about meanings and practices,
+and sometimes about how a process unfolds. Its reach is the setting studied.
+Whether an account holds in other settings is argued from how alike they are, not
+earned by sampling.
+
+**What licenses the answer.** Prolonged engagement, so people grow used to you and
+more of what you see is routine rather than a performance for a visitor. Time
+reduces **reactivity**, which is people changing what they do because they are
+watched, but never removes it, so your notes also record where your presence may
+have shaped a scene. **Field notes**, which are detailed written
+records made during or soon after observation, separating what happened from what
+you think it meant [@emerson2011writing]. **Reflexivity**, which is a written account
+of how your presence, role, and background shaped what people showed you and what
+you noticed [@hammersley2019ethnography]. And a trail from each note to each claim,
+including the cases that do not fit.
+
+**A picture.** A constructed field note: "7:40 pm. Owner crosses out the lamb
+price on the board, writes a new one, tells the server 'don't mention it unless
+they ask.' Earlier, at 4 pm, she said she never changes prices mid-week." An
+interview would have recorded the policy; the kitchen records the practice and the
+gap between the two. A claim built on this one note is narrow: on one evening,
+this owner changed a price she had said she never changes mid-week. To say how she
+prices across the season, you need entries from many evenings, including the ones
+when the board stayed the same. A claim about other kitchens needs an argument this
+one cannot supply.
+
+**What it demands beyond this book.** Access and trust, usually negotiated through
+gatekeepers. Months rather than weeks. The ethics of observing people who come and
+go without having agreed to be studied, and of writing descriptions so detailed
+that a reader could recognize them; start with
+[the ethics chapter](part2-curiosity-to-design/research-ethics-and-data-governance.qmd).
+The craft of writing notes daily. Supervision from someone who has done fieldwork.
+The interview and document methods in
+[Qualitative Inquiry](part7-further-routes/qualitative-inquiry.qmd) are the
+smaller, safer version of this route.
+
+**What AI can and cannot do here.** A tool can organize months of notes, suggest
+codes, find passages that bear on a theme, and test a draft claim against the
+notes you give it. It cannot see what you did not write down. It tends to turn
+"this owner" into "restaurant owners," a **silent scope change**, and to smooth a
+quoted remark into words nobody said, which is **confident fabrication**. Uploading
+notes that identify people to an outside tool is itself an ethics decision. Check
+every quote against the original note by **primary-source reading**. Being there,
+choosing what to notice, and accounting for yourself stay human.
+
+**Where to learn it.** Start with Hammersley and Atkinson, the standard introduction
+to the approach [@hammersley2019ethnography], and Emerson, Fretz, and Shaw teach the
+writing of field notes [@emerson2011writing].
+
+## Qualitative Comparative Analysis
+
+**The question it answers.** Across a modest number of cases, often between ten and
+fifty, which combinations of conditions go together with an outcome? **Qualitative
+Comparative Analysis** is a method that codes each case's membership in a set of
+conditions and uses the logic of AND, OR, and NOT to find combinations that are consistently
+sufficient or necessary for an outcome [@ragin2008redesigning]. Example: which mixes
+of few parties, a parliamentary majority, and a small ideological gap accompany
+coalition governments that survive their full term. Two ideas drive it.
+**Conjunctural causation** means conditions may matter only in combination.
+**Equifinality** means several different combinations can lead to the same
+outcome.
+
+**What licenses the answer.** **Calibration**, which is the decision about what
+counts as membership in each set, made from knowledge of the cases and not from
+the data's median. Then two measures, whose formulas depend on the relation you
+test and the kind of set [@schneider2012settheoretic]. In a **crisp set**, each case
+is simply in (1) or out (0), as a government either has a majority or does not. A
+combination is **sufficient** for the outcome when the cases that have it also show
+the outcome. Its **consistency** is the share of those cases that do, and its
+**coverage** is the share of all cases with the outcome that it accounts for. A
+condition is **necessary** when the outcome appears only where the condition does,
+and the shares flip: consistency becomes the share of outcome cases that have the
+condition. In a **fuzzy set**, a case can be partly in, say 0.7 in the set of
+ideologically close coalitions, and each share is computed from summed memberships
+rather than counts [@ragin2008redesigning]. What these measures license is a statement about set
+relations in these cases. Whether that statement is causal is contested. A
+simulation study found that the method recovered the true causal structure in 3 of
+70 solutions [@lucas2014qualitative], and Ragin published a reply in the same
+issue [@ragin2014comment]. Read both before you use the word *cause*.
+
+**A picture.** Twelve constructed coalition governments, three crisp conditions,
+one outcome, and a test of sufficiency.
+
+```python
+import pandas as pd
+
+# 12 coalition governments (constructed cases), coded 1 = present, 0 = absent
+cases = pd.DataFrame({
+    "few_parties": [1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1],
+    "majority":    [1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0],
+    "ideology_gap":[0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1],
+    "survived":    [1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0],
+})
+conds = ["few_parties", "majority", "ideology_gap"]
+table = (cases.groupby(conds).survived.agg(n="size", survived="sum").reset_index())
+table["consistency"] = (table.survived / table.n).round(2)
+print(table.to_string(index=False))
+print(f"rows with no cases at all (logical remainders): {2 ** len(conds) - len(table)}")
+
+# Is "few parties AND majority AND no ideology gap" sufficient for survival?
+has = (cases.few_parties == 1) & (cases.majority == 1) & (cases.ideology_gap == 0)
+consistency = cases[has].survived.mean()
+coverage = cases[has].survived.sum() / cases.survived.sum()
+print(f"\nconfiguration consistency : {consistency:.2f}  (share of its cases that survived)")
+print(f"configuration coverage    : {coverage:.2f}  (share of survivors it accounts for)")
+print("\none contrary case out of four; twelve cases cannot say whether that is noise")
+```
+
+Seven of the eight possible combinations appear, and one has no cases at all. That
+empty row is a **logical remainder**, and any simplification of the results must
+make an assumption about what would have happened there. The configuration with
+few parties, a majority, and no ideological gap has consistency 0.75 (three of its
+four governments survived) and coverage 0.50 (it accounts for three of the six
+survivors). Two other combinations show survival in every case they contain, but
+each contains a single government, and the sixth survivor sits in a row where one
+of two governments survived. With twelve cases, one recoded government changes these numbers visibly.
+
+**What it demands beyond this book.** Calibration you can defend case by case.
+Minimization software, which simplifies the table into the shortest combinations
+that still cover the outcome, and the choices it hides about remainders. Tests of how the
+solution changes when you recode one case or move one threshold. Enough knowledge
+of every case to explain its place in the table.
+
+**What AI can and cannot do here.** A tool builds the truth table and runs the
+minimization quickly. It will also invent calibration thresholds with no case
+knowledge behind them, read consistency as if it were a probability or a
+significance test, and describe the solution as "the causes of survival." Those
+are **plausible-but-wrong-method** and **silent scope change**. Recompute
+consistency and coverage by **direct calculation** from the table, and keep each
+threshold's reason in your ledger. The calibration is yours.
+
+**Where to learn it.** Start with Schneider and Wagemann, the careful textbook
+[@schneider2012settheoretic]. Ragin's book develops the fuzzy-set version
+[@ragin2008redesigning]. Read the critique and the reply together
+[@lucas2014qualitative; @ragin2014comment].
+
+## Network analysis
+
+**The question it answers.** How are units connected, which positions do they
+occupy, and do those positions matter? A **network** is a set of units, called
+nodes, and the ties between them. Example: legislators linked by co-sponsoring
+bills, firms linked by supply contracts, species linked by who eats whom.
+**Centrality** is a measure of how important a node's position is; the simplest,
+**degree**, counts a node's ties [@borgatti2009network]. A **broker** is a node
+that connects groups that would otherwise have no link, and a broker can have very
+few ties. Most network questions are descriptive and reach one
+network. Causal questions about influence are much harder.
+
+**What licenses the answer.** For description, a defended **boundary** (who counts
+as a node) and a defended tie definition (what counts as a link, over what time).
+Network measures change when nodes or ties are missing, so both belong in your
+limits. For inference, the rows are not independent: two ties that share a person
+share that person's traits. For causal claims about peer influence, people also
+choose ties to similar others and share environments, and in observational data
+those processes cannot, in general, be told apart from influence without strong
+extra assumptions [@shalizi2011homophily].
+
+**A picture.** A small biology department: two tight lab clusters and one postdoc
+who talks to both.
+
+```python
+import numpy as np
+
+# Who shares data with whom in a small biology department (constructed).
+# Two tight lab clusters; one postdoc, "P", belongs to neither but talks to both.
+edges = [("A","B"),("A","C"),("A","D"),("B","C"),("B","D"),("C","D"),
+         ("E","F"),("E","G"),("E","H"),("F","G"),("F","H"),("G","H"),
+         ("D","P"),("P","E")]
+nodes = sorted({x for e in edges for x in e})
+idx = {v: i for i, v in enumerate(nodes)}
+A = np.zeros((len(nodes), len(nodes)), int)
+for a, b in edges:
+    A[idx[a], idx[b]] = A[idx[b], idx[a]] = 1
+
+def reachable_pairs(A):
+    """Count pairs of people linked by SOME path (a breadth-first search from each)."""
+    total = 0
+    for s in range(len(A)):
+        seen, frontier = {s}, [s]
+        while frontier:
+            frontier = [j for i in frontier for j in np.nonzero(A[i])[0] if j not in seen]
+            seen.update(frontier)
+        total += len(seen) - 1
+    return total // 2
+
+degree = {v: int(d) for v, d in zip(nodes, A.sum(axis=1))}
+print("ties per person (degree):", degree)
+base = reachable_pairs(A)
+for v in ["A", "D", "P"]:
+    keep = [i for i in range(len(nodes)) if nodes[i] != v]
+    print(f"remove {v}: connected pairs {base} -> {reachable_pairs(A[np.ix_(keep, keep)])}")
+print("\nP has the FEWEST ties and holds the network together;")
+print("and the pairs share people, so a standard error built for independent rows does not apply")
+```
+
+Nine people make 36 possible pairs, and every pair is connected by some path.
+Removing a typical lab member (A) leaves all 28 pairs among the other eight
+connected. Removing the postdoc P, who has the fewest ties of anyone (two), leaves
+only 12 connected pairs, because the two labs no longer reach each other. D, a lab
+member who is also P's contact, matters almost as much (13 pairs). Degree ranks P
+last; position ranks P first.
+
+**What it demands beyond this book.** Boundary specification and missing-data
+decisions. The knowledge that you cannot sample nodes at random and keep the
+network intact. Statistical models built for dependent ties, and the humility to
+say when influence and selection cannot be separated [@newman2018networks].
+
+**What AI can and cannot do here.** A tool turns an edge list into a graph and
+computes a dozen centralities in seconds. It will also scrape co-occurrences and
+call them ties without a definition, attach standard errors that assume
+independent rows (**missing uncertainty** dressed as precision), or describe a
+data set of network ties that does not exist (**confident fabrication**). Check one
+centrality by hand with **direct calculation**, and write the tie definition
+before you collect anything. The boundary is yours.
+
+**Where to learn it.** Start with the short social-science overview by Borgatti,
+Mehra, Brass, and Labianca [@borgatti2009network]. Newman's textbook then covers the
+mathematics and the measures [@newman2018networks]. Shalizi and Thomas show why
+influence claims need strong assumptions [@shalizi2011homophily].
+
+## Bayesian analysis
+
+**The question it answers.** Given what you believed before and what you observed,
+what should you now believe about a quantity, and how uncertain should you be?
+**Bayesian analysis** is an approach in which you state a **prior** (a probability
+distribution for the unknown quantity before seeing the data), combine it with a
+model of how the data arise, and report the **posterior** (the updated
+distribution). Example: a seed bank estimating the germination rate of a rare
+orchid. Bayesian analysis is an answer strategy, not a design. It changes how you
+express uncertainty. It does not change a question's kind or reach, and it grants
+no crossing license: a causal posterior still needs assignment or identification,
+and a population posterior still needs a sampling argument.
+
+**What licenses the answer.** The model and the prior, both stated in writing
+before the data are analyzed. A 95% **credible interval** is a range that holds 95%
+of the posterior's probability, given that model and that prior. You earn it by
+checking what the prior implies before seeing data, checking whether the fitted
+model can reproduce data like yours, and showing how much the answer moves under
+other defensible priors [@gelman2013bayesian].
+
+**A picture.** In a constructed case, seven of twenty orchid seeds germinate. Two
+researchers analyze the same seeds with different priors.
+
+```python
+import numpy as np
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# A seed bank tests a rare orchid: 7 of 20 seeds germinate.
+germinated, tried = 7, 20
+
+# Two priors, written down BEFORE the data, as Beta(a, b) shapes.
+priors = {"flat (no view)      ": (1, 1),
+          "skeptical (~10% ± 7)": (2, 18)}      # imagined past trials rarely beat 10%
+
+for name, (a, b) in priors.items():
+    post = rng.beta(a + germinated, b + tried - germinated, 100_000)
+    lo, hi = np.percentile(post, [2.5, 97.5])
+    print(f"{name}: posterior mean {post.mean():.2f}, 95% interval [{lo:.2f}, {hi:.2f}],"
+          f" P(rate > 0.25) = {(post > 0.25).mean():.2f}")
+print(f"raw share                  : {germinated / tried:.2f}")
+print("\nsame 20 seeds, two answers: the prior is an assumption you must show and defend")
+```
+
+The raw share is 0.35. With a flat prior, the posterior mean is 0.36 and the 95%
+credible interval runs from 0.18 to 0.57; the probability that the rate exceeds
+0.25 is 0.87. With a skeptical prior centered near 10%, standing in for past orchid
+trials that are imagined for this example, the posterior mean is 0.23, the interval runs from 0.11 to 0.36, and the
+same probability is 0.33. Twenty seeds are not enough to overwhelm a prior worth
+about twenty seeds of past evidence. More data would pull the two answers
+together. With these data the prior carries real weight, so you show it and rerun
+the analysis under other defensible priors. The uncertainty lesson in
+[Uncertainty Before You Need It](part2-curiosity-to-design/uncertainty-foundations.qmd)
+covers the confidence interval, built from imagined repeated samples, that this
+approach complements.
+
+**What it demands beyond this book.** Sampling algorithms for models without a
+neat formula, and the diagnostics that tell you whether those algorithms
+converged. Prior elicitation from real knowledge. Model checking against the
+data. Hierarchical models that let groups share information
+[@gelman2013bayesian; @mcelreath2020statistical].
+
+**What AI can and cannot do here.** A tool writes model code in a probabilistic
+programming language and explains the output well. It will also choose a default
+prior without telling you, which is still a choice; report a posterior probability
+as the probability that a hypothesis is true in the world, regardless of the
+model; and pass over convergence warnings. Ask it to list every prior in the model
+and what each assumes. Then draw fake data from the priors alone and see whether
+they produce believable germination rates, a **simulation** check, and rerun the
+analysis with a second defensible prior yourself. The prior's
+justification is yours.
+
+**Where to learn it.** Start with Kruschke, a gentle, applied introduction
+[@kruschke2015doing]. McElreath then teaches the ideas through building and
+checking models [@mcelreath2020statistical]. Gelman and colleagues is the full
+reference [@gelman2013bayesian].
+
+## If your question points here
+
+When one of these entries fits your question better than anything in the route
+library, do four things before any code runs. Write the design's name and its
+estimand in your Research Contract, in the words of its entry. Write the one
+assumption that would sink the answer if it failed, and how you would argue for
+it. List what you would have to learn and who could teach it. Then decide, with
+that person, whether your current project should use the design or should report
+a narrower answer while you learn it.
+
+A narrower answer is not a failure. "Causal, currently unidentified" is a
+legitimate conclusion, and so is a well-bounded description of one setting. Every
+AI-assisted result from these designs still gets at least one named method from
+the [Verification Guide](verification-guide.qmd) before you trust it, and the
+decision to accept it stays yours.
+
+*AI is your arm and your research assistant, not your brain.*

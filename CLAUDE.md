@@ -599,9 +599,14 @@ Notebooks load data via `load_course_data()` (GitHub raw first, local fallback).
 
 The course book is **EDR|AI** (*Evidence-Driven Research in the Age of AI*;
 `book/`, 37 chapters + Part I overview — 40 lessons and 12 practice stations
-under D35's Architecture v0, provisional; front matter: Preface then About the
-Author; appendices: Verification Guide, For Instructors (SRL retired to
-`project/srl/`, D35); rendered to `docs/book/`; book author is "Davi Moreira",
+under D35's Architecture v0, provisional; **D83 adds six BOOK-ONLY lessons,
+chapters 41–46, in a "Further Research Routes" TOC section after Studio 12**
+(`book/part7-further-routes/`, `scope: book-only`, listed in the crosswalk's
+`not_adopted:` — the course never reads, collects or schedules them, and new
+sections in existing chapters stay off the decks via slide-plan `omit:`);
+front matter: Preface then About the Author; appendices: Verification Guide,
+For Instructors (SRL retired to `project/srl/`, D35), and D83's Further
+Designs field guide (`further-designs.qmd`, appendix C); rendered to `docs/book/`; book author is "Davi Moreira",
 no title). **Chapter review is FROZEN until Architecture v1 (D35;
 `planning/BOOK_DESIGN_ACCEPTANCE.md` holds the acceptance tests).** The loop:
 
@@ -887,7 +892,8 @@ material.
 
 ---
 
-**Version:** 7.7 — D82, the carry-forward record opens every milestone from M4 (2026-09-25, DECISIONS.md D82): generated **Start here** block at the top of every milestone PDF and brief from M4 (says THAT the numbered requests and the action plan's steps come first, never WHAT they ask); ✚ on M4–M16; new rubric row *Carry-forward: your action plan's steps (10)* with the other rows rescaled proportionally to 90, plus a *What this rubric scores* book-check map; book table relabelled *The book's own checks* in course PDFs; workbooks 4–12 open with a review-response table; Brightspace milestone HTML now generated from the briefs; M1–M3 rubrics untouched. ⚠ For Davi: repost M5–M16 instructions/PDFs on Brightspace and send `_announcements/2026-09-25_carry_forward_record.md`.
+**Version:** 7.8 — D83, Further Research Routes (2026-09-25, DECISIONS.md D83): six book-only chapters 41–46 (natural experiments, survey experiments, audit studies, text as data, qualitative inquiry, evidence synthesis) after Studio 12; Tier-B sections in ten existing chapters (IYT untouched except ch12 step 4's pointer); appendix C field guide (IV, synthetic control, staggered DiD, ethnography, QCA, networks, Bayesian); book scope widened to empirical research with precise, checkable answers; live course byte-identical (numbering, IYT 35, decks, schedules, briefs). ⚠ For Davi: full Codex re-review of the content (r1–r4) is owed after the Codex quota resets 2026-09-30; the ch21 misconception pin (pre-existing CI red) needs your confirmation to re-pin.
+(7.7 — D82, the carry-forward record opens every milestone from M4 (2026-09-25, DECISIONS.md D82): generated **Start here** block at the top of every milestone PDF and brief from M4 (says THAT the numbered requests and the action plan's steps come first, never WHAT they ask); ✚ on M4–M16; new rubric row *Carry-forward: your action plan's steps (10)* with the other rows rescaled proportionally to 90, plus a *What this rubric scores* book-check map; book table relabelled *The book's own checks* in course PDFs; workbooks 4–12 open with a review-response table; Brightspace milestone HTML now generated from the briefs; M1–M3 rubrics untouched. ⚠ For Davi: repost M5–M16 instructions/PDFs on Brightspace and send `_announcements/2026-09-25_carry_forward_record.md`.
 (7.6 — D81, the permission blocking gate is retired and the determination becomes
 scored (2026-09-21, DECISIONS.md D81): the `permission-status-honoured` **blocking gate is RETIRED
 for this edition**. It read "No work at or after Studio 4 proceeds past a not-authorized
@@ -1262,5 +1268,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

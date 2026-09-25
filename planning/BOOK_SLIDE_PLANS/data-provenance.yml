@@ -3,8 +3,11 @@
 # the auto key-terms card (Data provenance, Data quality), the AI failure
 # case, the "Do not delegate" rule, and the "It is your turn" steps.
 lesson: data-provenance
-source_sha256: "facf2936b239b7f642d477ecbc594b1766c863701e24b1e0148a0af515811d80"
+source_sha256: "2be717e92550cb86bca947394bd78b2a4854642701acda22d34f290cdbab0131"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Missing data: the rows you do not see"
 sections:
 
   "Why this decision matters":

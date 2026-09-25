@@ -482,6 +482,17 @@ stations:
 
       If your project combines pieces of several rows, read the complex-designs
       lesson as an overlay after you have declared your primary pathway.
+    # D83 (book-only further routes): generated into this opener as
+    # "Beyond the five pathways", followed by the list of further routes.
+    further_routes_intro: >-
+      Some questions call for a design that no single row above names: a rule
+      or a cutoff that assigned the treatment for you, an experiment run
+      inside a questionnaire, matched cases sent to an institution or an AI
+      system, a corpus of documents, a set of interviews, or the studies other
+      researchers have already run. The six further routes below take those
+      designs one at a time. Each still sits on the compass and on one of the
+      five pathways, so declare your primary pathway first, then read the
+      route your question calls for.
     steps:
       - Use the route guide on the studio opener to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
       - "Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim."

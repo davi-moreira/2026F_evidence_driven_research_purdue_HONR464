@@ -21,6 +21,14 @@ same rubrics are collected into <edition>/_iyt-rubrics.qmd, included in the
 For-instructors appendix for grading. Branch/optional lessons close with a
 studio-junction note instead of a bare Next link (D38 route graph).
 
+D83 (book-only further routes): the Next links chain the studio lessons among
+themselves and the book-only lessons among themselves, so the last studio
+lesson keeps its "last chapter" close and the last further route gets its own
+close; in _iyt-rubrics.qmd the further routes' rubrics sit under their own
+sub-heading saying the companion course does not assign them. The two new
+strings exist in the EN edition only (PT/ES are frozen, D36) and are read
+with fallbacks.
+
 Cell ids are deterministic so regeneration produces clean git diffs. Re-run
 after ANY chapter edit (the book-first loop):
 
@@ -35,8 +43,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from book_manifest import (active_lessons, load_architecture,  # noqa: E402
-                           require_lock)
+from book_manifest import (active_lessons, is_book_only,  # noqa: E402
+                           load_architecture, require_lock)
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 
 EDITIONS = [
@@ -135,6 +143,16 @@ EDITIONS = [
         "last_line": ("This was the last chapter: the **It is your turn** sections "
                       "you worked are your research project. Assemble the portfolio, "
                       "and defend it."),
+        # D83: EN-only keys for the book-only further routes (ed.get fallbacks)
+        "further_last_line": ("This was the last of the further research routes. "
+                              "Carry what you wrote back to [Studio {sn}: "
+                              "{stitle}]({surl}): its milestone asks for the same "
+                              "decisions, answered for your route."),
+        "further_rubrics_heading": "### Further research routes",
+        "further_rubrics_note": ("These chapters are further research routes, "
+                                 "outside the twelve studios. The companion course "
+                                 "does not assign or collect them; use a rubric "
+                                 "when a project takes that route."),
     },
     {
         "code": "pt",
@@ -562,7 +580,8 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
     rubric = rubric_table(ed, steps, n)
     add_md(ed["rubric_heading"] + "\n\n" + rubric)
     if rubrics is not None:
-        rubrics.append((n, title, rubric))
+        rubrics.append((n, title, rubric,
+                        bool(lesson and is_book_only(lesson))))   # D83
     add_code(ed["scratch"])
 
     closing = ((ed.get("closing_pre_ledger") if n == 1 else None)
@@ -578,6 +597,13 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
                 sn=station["rank"], stitle=station["title"],
                 surl=(f"{ed['site_base']}/studios/"
                       f"studio{station['rank']:02d}-{station['id']}.html"))
+    elif lesson and is_book_only(lesson) and station \
+            and ed.get("further_last_line"):
+        # D83: the last further route closes back into its studio
+        closing += "\n\n" + ed["further_last_line"].format(
+            sn=station["rank"], stitle=station["title"],
+            surl=(f"{ed['site_base']}/studios/"
+                  f"studio{station['rank']:02d}-{station['id']}.html"))
     else:
         closing += "\n\n" + ed["last_line"]
     add_md(closing)
@@ -622,12 +648,16 @@ def main() -> None:
         if missing:
             sys.exit(f"✗ {ed['book_dir']}: manifest lessons without a source "
                      f"file: {missing}")
-        rubrics: list[tuple[int, str, str]] = []
+        rubrics: list[tuple[int, str, str, bool]] = []
         for k, lesson in enumerate(lessons):
             path = book_dir / lesson["source"]
             nxt = None
-            if k + 1 < len(lessons):
-                nxt_lesson = lessons[k + 1]
+            # D83: Next stays inside the lesson's own chain — studio lessons
+            # link to studio lessons, book-only further routes to each other
+            same = [x for x in lessons[k + 1:]
+                    if is_book_only(x) == is_book_only(lesson)]
+            if same:
+                nxt_lesson = same[0]
                 nxt_path = book_dir / nxt_lesson["source"]
                 nxt_title, _ = parse_front_matter(nxt_path.read_text())
                 nxt = (f"{ed['site_base']}/{nxt_lesson['url_path']}", nxt_title)
@@ -637,8 +667,15 @@ def main() -> None:
             out.write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n")
             total += 1
         inc = [ed["appendix_title"], "", ed["appendix_intro"], ""]
-        for n, title, rubric in rubrics:
-            inc += [f"### {ed['ch_word']} {n} — {title}", "", rubric, ""]
+        further_open = False
+        for n, title, rubric, book_only in rubrics:
+            if book_only and not further_open and ed.get("further_rubrics_heading"):
+                # D83: the further routes' rubrics, under their own heading
+                inc += [ed["further_rubrics_heading"], "",
+                        ed.get("further_rubrics_note", ""), ""]
+                further_open = True
+            level = "####" if further_open else "###"
+            inc += [f"{level} {ed['ch_word']} {n} — {title}", "", rubric, ""]
         (book_dir / "_iyt-rubrics.qmd").write_text("\n".join(inc))
         print(f"✓ {ed['book_dir']}: {len(lessons)} companion notebooks → "
               f"{out_dir.relative_to(REPO)}/ + _iyt-rubrics.qmd")

@@ -12,6 +12,12 @@ studio. This keeps two generated blocks in sync across the 39 lessons:
   2. At the end of the studio's LAST lesson: the checkpoint return —
      back to the studio page's `#checkpoint` anchor to produce the artifact.
 
+D83 (book-only further routes): a `scope: book-only` lesson is not a lesson
+of its studio. It gets its own pointer between the same markers ("a further
+route beyond the five pathways ... extends Studio N"), never a studio-continue
+block, and it never counts as its studio's last lesson — so the studio's real
+last lesson keeps its "Milestone next" return.
+
 Managed between HTML markers so they are rewritten, never duplicated. (The
 marker strings keep the historical "station" token — they are machine-layer,
 invisible to readers, and changing them would churn 39 files for nothing.)
@@ -29,7 +35,8 @@ import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from book_manifest import active_lessons, load_architecture, require_lock  # noqa: E402
+from book_manifest import (active_lessons, is_book_only,  # noqa: E402
+                           load_architecture, require_lock, studio_lessons)
 
 STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
 
@@ -53,6 +60,15 @@ ROUTE_WORDS = {
 
 def pointer(lesson: dict, station: dict, n: int) -> str:
     rel = f"../studios/studio{n:02d}-{station['id']}.qmd"
+    if is_book_only(lesson):
+        # D83: a further route extends the studio; it is not one of its lessons
+        return (f"{BEGIN}\n"
+                f"> **A further route beyond the five pathways.** This lesson\n"
+                f"> extends [Studio {n}: {station['title']}]({rel}). Read it once\n"
+                f"> you have declared your primary pathway and your question\n"
+                f"> calls for this design. Studio {n}'s milestone asks for the\n"
+                f"> same decisions, answered for this route.\n"
+                f"{END}\n\n")
     head = f"> **You are working inside [Studio {n}: {station['title']}]({rel}).**"
     if lesson.get("role") == "branch" and lesson.get("route"):
         tail = (f"> This lesson serves the **{ROUTE_WORDS[lesson['route']]}**\n"
@@ -90,7 +106,8 @@ def render_all() -> dict[Path, str]:
         STATIONS_YML.read_text())["stations"]}
     lessons = active_lessons(arch)
     last_in_station = {}
-    for l in lessons:                       # rank order -> last one wins
+    # rank order -> last one wins; D83: a book-only lesson never closes a studio
+    for l in studio_lessons(arch):
         last_in_station[l["station"]] = l["id"]
     out: dict[Path, str] = {}
     for lesson in lessons:

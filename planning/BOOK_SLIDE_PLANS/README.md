@@ -71,6 +71,59 @@ sections:
 `figure`, `mermaid` and `code` address blocks that already exist in the
 chapter. They cannot introduce new ones, and an out-of-range index is ignored.
 
+### Keeping a section off the deck: `omit:`
+
+A plan may also carry a top-level `omit:` list (D83, book-only further
+routes). Each entry is the EXACT `##` heading of a chapter section that must
+never reach the deck: no prose slide, no key-term card, no figure. The book
+can then grow a section (a new design discussion, say) without changing the
+lecture the live course already teaches from that deck.
+
+```yaml
+lesson: observational-causal
+source_sha256: "…"
+omit:
+  - "Process tracing: causal inference inside one case"
+sections:
+  "The concept": [...]
+```
+
+An omission is invalid when `omit:` is not a list, when an entry is not an
+exact `##` heading of the chapter (matching is case-sensitive), when it is
+builder-owned ("An AI failure case", "It is your turn" cannot be omitted),
+when it is listed twice, or when the same heading is also planned under
+`sections:`. One read-only helper, `omit_problems()` in
+`scripts/build_studio_slides.py`, owns that rule, and both tools call it:
+
+- the **builder** runs it over every target plan **before writing anything**
+  (logo, deck or figure) and exits 1 on any defect, in build and `--check`
+  mode alike, leaving every deck byte untouched. This matters because the
+  book-edit hook runs the builder directly: renaming an omitted heading
+  without updating the plan would otherwise match nothing and push the
+  section into a lecture through the mechanical fallback;
+- `scripts/validate_slide_sync.py` reports the same defects in CI.
+
+The check does not depend on the plan's digest. The builder honours `omit:`
+even while the plan is STALE, so a valid omission keeps its section off the
+deck through the fallback, and an invalid one still stops the build. Lessons
+marked `scope: book-only` in the manifest join no deck at all and need no
+plan.
+
+The guard has a committed negative test, which mutates a plan in memory and
+builds into a scratch copy of `lecture_slides/` (no tracked file is written):
+
+```bash
+.venv/bin/python scripts/test_d83_guards.py
+```
+
+It renames an omitted heading on a stale plan and asserts that the builder
+exits nonzero in both modes with deck bytes unchanged and that the validator
+reports it; that a stale plan with a resolving omission still keeps the
+section off (and that the section appears once the omission is removed); and,
+for `planning/BOOK_MAP.md`, that only lessons listed under the crosswalk's
+`not_adopted:` render as "— (book only)" while an adopted lesson stripped of
+its home anchor fails both the generator and `build_book_map.py --check`.
+
 ## Rules a plan must obey
 
 1. **Nothing new.** Every claim, number, name, and example on a slide is in the

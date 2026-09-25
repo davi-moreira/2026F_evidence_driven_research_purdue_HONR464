@@ -155,6 +155,157 @@ print("three defensible numbers, none of them 0.50, and the unit of")
 print("randomization was the TANK, not the larva")
 ```
 
+## Replication with new data
+
+A package that reproduces has passed one test: its own files return its own number.
+It has not shown that the effect turns up anywhere outside those files. That second
+question belongs to replication, the new-data half of the pair this chapter opened
+with. For the zebrafish study, a replication would mean new tanks, new larvae, and a
+new batch of probiotic, analyzed with the tank as the unit from the start.
+
+Two kinds are usually named. A **direct replication** is a new study that repeats the
+original procedure as closely as it can on new units. Example: a second lab reruns a
+published pricing experiment with the same instructions, the same prices, and new
+participants. A **conceptual replication** is a new study that tests the same claim
+with a different procedure or measure. Example: checking whether a price anchor moves
+willingness to pay by running real auctions instead of asking hypothetical questions.
+Either way, write down first the quantity the original claimed, its estimand, and
+the population it was about. Example: the average gap in willingness to pay
+between anchored and unanchored shoppers. A replication
+can only speak to the quantity it shares with the original. If its participants come
+from a different population, a smaller effect may mean the claim does not travel to
+them, not that the original was wrong.
+Nosek and Errington argue that the label matters less than one test: a study counts as
+a replication when any outcome it could produce would change your confidence in the
+original claim [@nosek2020replication]. If a disappointing result would only prompt
+"well, the procedure was different," the study was probing how far the claim travels.
+That is useful work, under another name.
+
+The published record gives you reason to take this seriously. When a large team
+repeated 100 published psychology studies, 97 percent of the originals had reported
+statistically significant results, but only 36 percent of the replications did, and
+the replication effects were about half the size of the originals
+[@osc2015estimating]. A parallel effort in economics repeated 18 laboratory
+experiments, each with enough participants to detect the original effect at least 90
+percent of the time. Eleven of the 18 found a significant effect in the same
+direction, and the replicated effects averaged 66 percent of the original size
+[@camerer2016evaluating]. Neither says which single original overstated its effect. Both say that one published
+estimate is often larger than what a new study will find.
+
+So the hard decision is what counts as consistent. Comparing significance labels
+misleads. "The original was significant and the
+replication was not" can happen when both studies estimate exactly the same effect,
+because a small replication has a wide interval. Compare estimates and intervals
+instead. Here effects are measured as **Cohen's d**, which is the gap between the two
+group averages divided by the typical spread of individual outcomes. Example: d = 0.5
+means the treated group's average sits half of that typical spread above the control
+group's average.
+
+Then ask two questions. The first is whether the replication landed where the
+original said it would. Checking whether the replication's interval contains the
+original's number is not enough, because it treats the original as exact when it is
+itself one noisy study. Patil, Peng, and Leek use a **prediction interval** instead:
+the range a replication of a given size should land in 95 times out of 100, by
+chance alone, if both studies estimate the same effect [@patil2016what]. Its width adds the noise of both
+studies, so a small original gives a wide range. Example: a 50-person-per-group
+replication of a 20-per-group original with d = 0.70 should land between about -0.06 and 1.46.
+You can fix that range from the two sample sizes before the new data arrive. In the
+psychology project above, 77 percent of the replications fell inside or above their
+prediction intervals, which says that many "failures" were within ordinary noise, and
+also that about a quarter fell below, more than chance alone allows.
+
+The second question is whether the replication is precise enough to say the effect is
+smaller than the original study could reliably have detected. The
+**small-telescopes test** is Simonsohn's answer: it finds the effect size that would have given the
+original study only a 33 percent chance of detecting it, called d33, and asks whether
+the replication's estimate sits clearly below that benchmark [@simonsohn2015small].
+Example: with 20 people per group, an effect of 0.48 would be detected only a third of
+the time. A replication showing the effect is clearly below 0.48 says that whatever
+effect exists is too small for the original's telescope to have detected reliably.
+Simonsohn also works out that a replication needs about 2.5 times the original sample
+to have an 80 percent chance of passing this test when the true effect is zero.
+
+The block below sets up a constructed original, a pricing experiment with 20 people
+per group that reported d = 0.70. It then runs two replications in a world where the
+real effect is only 0.10: one the same size as the original, one 2.5 times larger.
+
+```python
+import numpy as np
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+def se_d(d, n):                   # standard error of d, n people per group
+    return np.sqrt(2 / n + d**2 / (4 * n))
+
+def cohen_d(a, b):
+    sd = np.sqrt((a.var(ddof=1) + b.var(ddof=1)) / 2)
+    d = (a.mean() - b.mean()) / sd
+    se = se_d(d, len(a))
+    return d, d - 1.96 * se, d + 1.96 * se, se
+
+# The original lab study (constructed): 20 people per group, d = 0.70.
+n_orig, d_orig = 20, 0.70
+se_orig = se_d(d_orig, n_orig)
+# d33: the effect that would have given the ORIGINAL study only 33% power.
+# 1.96 is the usual cutoff; 0.44 is the normal value that leaves 33% power.
+d33 = np.sqrt(2 / n_orig) * (1.96 - 0.44)
+
+TRUE_D = 0.10                     # the world's real effect is SMALL
+print(f"original (constructed)    : d = {d_orig:.2f}, "
+      f"95% interval {d_orig-1.96*se_orig:.2f} to {d_orig+1.96*se_orig:.2f}")
+print(f"small-telescope benchmark : d33 = {d33:.2f}\n")
+for n in (20, 50):                # same size as the original, then 2.5 times
+    # Prediction interval, fixed BEFORE the new data arrive: where a
+    # replication of this size should land if both studies estimate the
+    # same effect. It carries the noise of BOTH studies.
+    se_both = np.sqrt(se_orig**2 + se_d(d_orig, n)**2)
+    p_lo, p_hi = d_orig - 1.96 * se_both, d_orig + 1.96 * se_both
+    treat = rng.normal(TRUE_D, 1, n)
+    ctrl = rng.normal(0, 1, n)
+    d, lo, hi, se = cohen_d(treat, ctrl)
+    z_below = (d - d33) / se      # is the effect clearly smaller than d33?
+    print(f"replication, {n} per group : d = {d:+.2f}, 95% interval "
+          f"{lo:+.2f} to {hi:+.2f}")
+    print(f"   prediction interval {p_lo:+.2f} to {p_hi:+.2f}, "
+          f"lands inside: {p_lo <= d <= p_hi}")
+    print(f"   clearly below d33: {z_below < -1.645}")
+print("\nboth replications are 'not significant'; only one of them")
+print("lands outside what the original predicted, and only that one")
+print("shows the effect is too small for the original to detect reliably")
+```
+
+The original's own interval runs from 0.06 to 1.34, so one small study pins down
+little. The first replication finds d = 0.44, with an interval from -0.19 to 1.06. It
+is not significant, yet it lands well inside its prediction interval (-0.20 to 1.60),
+and its own interval holds the benchmark d33 = 0.48. So it is inconclusive: too noisy
+to support or undercut the original. The second replication finds -0.10, with an
+interval from -0.49 to 0.29. It lands just below its prediction interval (-0.06 to
+1.46) and sits clearly below d33 (the code's test of "clearly" is a one-sided test at
+the 5 percent level). That one is informative. Someone counting only significance
+labels would call both of them failures to replicate, and only the second earns the
+sentence.
+
+Read even the second with care. It sits only a little outside what the original
+predicted, so it says the two studies probably disagree, not by how much or which one
+is off. The prediction interval also takes the original at face value. If the original
+was published partly because it came out significant, its 0.70 is likely too high,
+and the interval does not correct for that. Nor does the second replication show the
+effect is zero, since its interval still allows a modest positive effect up to 0.29.
+The code uses a shortcut formula (a normal approximation) for the intervals and for
+d33, so treat the second decimal as approximate.
+
+An AI tool helps with preparation: it can turn a paper's methods section into a
+replication checklist and flag where your protocol departs from it. It fails when you ask it for the verdict. Shown the first replication above, a tool will
+write "the study failed to replicate." That is **plausible-but-wrong-method**: it reads
+a non-significant result as evidence of no effect. It will also paraphrase the original
+claim into something broader or narrower, a **silent scope change** that can make any
+outcome look consistent. So you write the original claim down word for word, decide before you
+see the new data which outcomes would lower your confidence in it, and let the tool
+check your arithmetic, never your verdict. When several replications of one claim
+exist, combining them is a design of its own with its own traps, and the
+[evidence-synthesis lesson](../part7-further-routes/evidence-synthesis.qmd) takes it
+up.
+
 ## An AI failure case
 
 You paste the whole package into a general AI tool and ask, "Does this study

@@ -12,6 +12,12 @@ The six former parts survive as non-navigational arcs (see the manifest's
 `parts:` list and the "How this book is organized" page); they no longer
 appear in the TOC.
 
+D83 (book-only further routes): after the twelve studio parts, each
+registered `sections:` entry becomes one more part, opened by its own page
+and holding its `scope: book-only` lessons in rank order. Those lessons
+outrank every studio lesson (the validator enforces TOC order == rank
+order), so Quarto's chapter numbers keep matching the manifest's.
+
     .venv/bin/python scripts/build_book_toc.py            # write
     .venv/bin/python scripts/build_book_toc.py --check    # CI: fresh?
 
@@ -27,7 +33,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from book_manifest import active_lessons, load_architecture  # noqa: E402
+from book_manifest import (active_lessons, is_book_only,  # noqa: E402
+                           load_architecture, studio_lessons)
 
 QUARTO_YML = REPO / "book" / "_quarto.yml"
 
@@ -46,9 +53,8 @@ def studio_page_rel(st: dict) -> str:
 def render_chapters_block(arch: dict | None = None) -> str:
     """The full `  chapters:` block (manifest order), ending with a newline."""
     arch = arch or load_architecture()
-    lessons = active_lessons(arch)
     by_station: dict[str, list[dict]] = {}
-    for l in lessons:
+    for l in studio_lessons(arch):          # D83: book-only lessons go below
         by_station.setdefault(l["station"], []).append(l)
     lines = [
         "  chapters:",
@@ -65,6 +71,14 @@ def render_chapters_block(arch: dict | None = None) -> str:
             lines.append(f"        - {l['source']}")
         # D40: the studio's milestone chapter closes its part
         lines.append(f"        - studios/milestone{st['rank']:02d}-{st['id']}.qmd")
+    # D83: book-only sections follow the studios, each opened by its page.
+    book_only = [l for l in active_lessons(arch) if is_book_only(l)]
+    for sec in sorted(arch.get("sections", []) or [], key=lambda s: s["rank"]):
+        lines.append(f"    - part: {sec['page']}")
+        lines.append("      chapters:")
+        for l in book_only:                      # already rank-ordered
+            if l.get("section") == sec["id"]:
+                lines.append(f"        - {l['source']}")
     return "\n".join(lines) + "\n"
 
 

@@ -23,6 +23,14 @@ gets sharper as plans land. A plan records the chapter digest it was written
 against; when the chapter moves past it, the plan is STALE and the validator
 says which one.
 
+D83 (book-only further routes): decks are built from STUDIO lessons only — a
+`scope: book-only` lesson joins no deck. A plan may also carry `omit:`, a
+list of exact `##` headings of its chapter that never reach the deck (not as
+slides, not as key terms); the book can grow a section without the live
+course's lecture changing. Omissions are checked (omit_problems) before any
+file is written, stale plan or not, and an unresolved one aborts the build
+with exit 1 and every deck left untouched.
+
     .venv/bin/python scripts/build_studio_slides.py            # all 12 decks
     .venv/bin/python scripts/build_studio_slides.py 3          # studio 3 only
     .venv/bin/python scripts/build_studio_slides.py --check    # exit 1 if stale
@@ -48,7 +56,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 import slide_parts as sp                                        # noqa: E402
-from book_manifest import active_lessons, load_architecture     # noqa: E402
+from book_manifest import load_architecture, studio_lessons     # noqa: E402
 
 BOOK = REPO / "book"
 OUT_ROOT = REPO / "lecture_slides"
@@ -186,7 +194,7 @@ def studios() -> list[dict]:
     """Each studio with its lessons, opener page and milestone page."""
     arch = load_architecture()
     by_station: dict[str, list[dict]] = {}
-    for lesson in active_lessons():
+    for lesson in studio_lessons():          # D83: book-only lessons: no deck
         by_station.setdefault(lesson["station"], []).append(lesson)
 
     out = []
@@ -222,6 +230,56 @@ def plan_state(lesson: dict) -> tuple[str, dict]:
         return "none", {}
     live = sp.digest_of(lesson["source"])
     return ("current" if plan.get("source_sha256") == live else "stale"), plan
+
+
+#: The builder owns these sections; a plan can neither plan nor omit them.
+BUILDER_OWNED = {"an ai failure case", "it is your turn"}
+
+
+def omit_problems(lesson: dict, plan: dict | None = None,
+                  page: "sp.Page | None" = None) -> list[str]:
+    """Every defect in a plan's D83 `omit:` list. Read-only; [] when clean.
+
+    Shared by this builder (which runs it over every target plan BEFORE any
+    file is written, and aborts on a defect) and by validate_slide_sync.py
+    (which reports it in CI), so the two can never disagree about what a
+    valid omission is. The check does not depend on the plan's digest: a
+    STALE plan's omissions are still honoured, so they must still resolve.
+    An omission that no longer names an exact heading would otherwise match
+    nothing, and the section it was meant to keep off the deck would reach
+    the lecture through the mechanical fallback.
+    """
+    if plan is None:
+        plan = load_plan(lesson["id"])
+    if not plan or "omit" not in plan or plan.get("omit") is None:
+        return []
+    where = f"BOOK_SLIDE_PLANS/{lesson['id']}.yml"
+    omit = plan["omit"]
+    if not isinstance(omit, list):
+        return [f"{where}: `omit:` must be a list of `##` headings"]
+    if page is None:
+        page = sp.parse(BOOK / lesson["source"])
+    exact = {h for h in page.headings() if h}
+    planned = set(plan.get("sections") or {})
+    out: list[str] = []
+    seen: set[str] = set()
+    for heading in omit:
+        if not isinstance(heading, str) or not heading.strip():
+            out.append(f"{where}: omit entry {heading!r} is not a heading "
+                       f"string")
+            continue
+        if heading in seen:
+            out.append(f"{where}: omit {heading!r} is listed twice")
+        seen.add(heading)
+        if heading.lower() in BUILDER_OWNED:
+            out.append(f"{where}: omit {heading!r} is built from the "
+                       f"chapter itself and cannot be omitted")
+        elif heading not in exact:
+            out.append(f"{where}: omit {heading!r} is not an exact `##` "
+                       f"heading of {lesson['source']}")
+        if heading in planned:
+            out.append(f"{where}: {heading!r} is both omitted and planned")
+    return out
 
 
 # ------------------------------------------------------- slide emitters
@@ -510,6 +568,21 @@ def chapter_slides(deck: Deck, lesson: dict, n_in_studio: int) -> str:
     deck.quoting(lesson["source"])
     state, plan = plan_state(lesson)
     plan_sections = (plan.get("sections") or {}) if state == "current" else {}
+    # D83: a plan's `omit:` headings leave the deck entirely — they are dropped
+    # from the parsed page, so no prose slide, key term, or figure of theirs
+    # is emitted. Exact heading match, as the plan's `sections:` keys. Applied
+    # even while the plan is stale, so an omitted section never reaches a
+    # lecture through the mechanical fallback. main() has already run
+    # omit_problems() over every target plan and refused to write on a defect,
+    # so every entry here resolves to a real heading; the guard is repeated so
+    # a direct caller of build_deck() cannot render an unresolved omission.
+    problems = omit_problems(lesson, plan, page)
+    if problems:
+        raise ValueError("invalid slide-plan omission:\n  "
+                         + "\n  ".join(problems))
+    omit = set(plan.get("omit") or [])
+    if omit:
+        page.sections = [s for s in page.sections if s.heading not in omit]
     display = lesson["display"]
     ch_url = f"{BOOK_URL}/{lesson['url_path']}"
     colab = ("https://colab.research.google.com/github/davi-moreira/"
@@ -817,12 +890,27 @@ def main() -> None:
                          "build, or any plan is stale")
     args = ap.parse_args()
 
-    ensure_logo()
     all_studios = studios()
     targets = [s for s in all_studios
                if args.studio is None or s["rank"] == args.studio]
     if not targets:
         raise SystemExit(f"✗ no studio {args.studio} (1-{len(all_studios)})")
+
+    # D83 preflight, before ANY write (logo, deck or figure): every target
+    # plan's `omit:` must resolve. A renamed heading would otherwise match
+    # nothing and put the section it was meant to hide into the lecture.
+    bad = [p for st in targets for lesson in st["lessons"]
+           for p in omit_problems(lesson)]
+    if bad:
+        print(f"✗ {len(bad)} invalid slide-plan omission(s) — no deck "
+              f"written:")
+        for p in bad:
+            print(f"    {p}")
+        print("  fix the plan's `omit:` (exact `##` headings of the chapter) "
+              "and rerun")
+        raise SystemExit(1)
+
+    ensure_logo()
 
     stale: list[str] = []
     unplanned: list[str] = []

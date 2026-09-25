@@ -153,6 +153,222 @@ print("that number says the item is repeatable. it says NOTHING about whether")
 print("recommend-a-friend captures engagement, or about the people who quit")
 ```
 
+## When the measurement is the contribution
+
+Suppose the people-analytics lead from the start of this chapter comes back with a
+harder request. The company wants a short engagement check for its frontline retail
+staff, and nobody has ever tested one on people who work split shifts and answer on a
+phone in the break room. Now the ladder is the whole project. Nobody is asking
+whether the pilot sites are more engaged. The question is whether a new instrument
+supports the reading the company wants to give it.
+
+A **validation study** is a project whose finding is evidence about a measure: what its
+numbers can be read as meaning, for which people, and for what use. Example: fielding a
+four-item engagement scale to 400 frontline employees and reporting how its scores
+behave against measures they should and should not track. On the compass it is a descriptive question about an instrument rather than about
+the world the instrument reads, and its reach is the population your field-test sample
+was drawn from.
+The claim still belongs to a use, exactly as the testing standards say for any
+indicator [@aera2014standards]. A published primer lays out the full sequence, from
+defining the construct's domain and writing items through pretesting, fielding, and
+the reliability and validity checks at the end [@boateng2018best]. Three of those
+steps carry most of the weight in a one-person project.
+
+**Pretesting** is trying a draft instrument on a few people from the target group, and
+revising it, before anyone's answers count as data. Example: giving the four draft
+items to eight cashiers and stockers and watching where they hesitate. The strongest
+form is a **cognitive interview**, a one-on-one session in which a person answers a
+draft question and then tells you, aloud, how they understood it and how they chose
+their answer [@willis2005cognitive]. Example: you ask a stocker about "I would
+recommend this company as a place to work," and she explains that she read
+"recommend" as recommending the store's products to customers. She would give the same answer every time, and it would still mean something else. No correlation would ever have told you that. The
+interview did, and you rewrite the item before the field test, not after.
+
+Once the items read as intended, the field test asks whether the scores relate to
+other measures the way your reading predicts. **Convergent evidence** is agreement
+between your measure and a different measure of the same construct. Example: the new
+scale should rise and fall with an established, longer engagement questionnaire given
+to the same employees. **Discriminant evidence** is a clearly weaker association between your measure and a measure of a construct it should not reflect. Example: engagement scores
+should barely move with commute length. Campbell and Fiske built the classic argument
+that you need both, since a scale that correlates with everything may only be picking
+up a general mood or a habit of agreeing [@campbell1959convergent].
+
+The block below plants a known engagement level in 400 simulated employees, builds the
+new scale, an established measure, and commute length, then reports each correlation
+with its interval.
+
+```python
+import numpy as np
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 400                                            # frontline staff in the field test
+engagement = rng.normal(0, 1, n)                   # the construct nobody observes
+# Four new items, each = engagement + item-specific noise.
+items = engagement[:, None] + rng.normal(0, 1.0, size=(n, 4))
+new_scale = items.mean(axis=1)
+# Convergent: an established engagement measure, read with its own noise.
+established = engagement + rng.normal(0, 0.8, n)
+# Discriminant: a different construct that should barely move with engagement.
+commute = 0.1 * engagement + rng.normal(0, 1, n)
+
+def r_ci(x, y):
+    r = np.corrcoef(x, y)[0, 1]
+    z, se = np.arctanh(r), 1 / np.sqrt(len(x) - 3)
+    return r, np.tanh(z - 1.96 * se), np.tanh(z + 1.96 * se)
+
+for label, other in [("with the established measure (convergent)", established),
+                     ("with commute length (discriminant)      ", commute)]:
+    r, lo, hi = r_ci(new_scale, other)
+    print(f"new scale {label}: r = {r:.2f}  [95% interval {lo:.2f} to {hi:.2f}]")
+print("\nthe pattern is evidence FOR one reading of the scale, in this workforce;")
+print("it does not show that the scale measures engagement everywhere")
+```
+
+The new scale correlates 0.72 with the established measure (95% interval 0.66 to 0.76)
+and 0.08 with commute length (interval -0.02 to 0.17). That is the pattern your
+reading predicts, and it is evidence, not a verdict. The quantity you estimated is the
+correlation among frontline staff like the 400 you surveyed. It reaches the whole
+workforce only if those 400 were sampled from it, and it says nothing about other
+companies, other languages, or whether engagement causes anything. Random error in the
+established measure pulls the correlation down, so on that count 0.72 understates the
+overlap. A shared method pushes the other way: two self-reports answered on the same
+phone in one sitting can agree partly because of the format, not the construct. And a
+high convergent correlation cannot show that both instruments are right; they could
+share the same blind spot.
+
+The same shape works in every domain. A political scientist can validate a new
+three-item measure of trust in local government against a longer standard battery. A
+field biologist can validate a quick visual score of leaf damage against lab
+measurements of leaf area lost on the same plants.
+
+An AI tool helps with the drafting. It can propose items, flag a question that asks two
+things at once, and write a probe script for your cognitive interviews. It cannot tell
+you how a stocker on a split shift reads the word "recommend." Only she can, and
+simulated respondents cannot stand in for her. If your pretest interviews grow into a
+study of their own, the craft of neutral probes, consent, and recording is set out in
+[Qualitative Inquiry: Interviews, Documents, and Themes](../part7-further-routes/qualitative-inquiry.qmd).
+
+## Validating labels an AI produced
+
+Your engagement survey also collected 3,000 open-text comments, and you want to know
+what share mention burnout. Reading them all would take days. A chatbot will label
+every comment in minutes. The label it returns is a new indicator, and it needs the
+same validity argument as any number in this chapter.
+
+A **gold standard** is a set of cases coded by careful human judgment under a written
+rule, used as the reference an automated label is checked against. Example: 300
+comments drawn at random from the 3,000 and hand-coded by you with a one-page codebook
+that defines "mentions burnout" and gives examples of borderline cases. Three details
+make it trustworthy. You write the codebook before you see any AI labels. You code
+blind, without looking at what the tool said. And you draw the subset at random, so it
+represents the whole pile rather than the comments that were easy to find. Your own
+coding is a measurement too, so a second coder on part of the subset tells you how
+reliable the gold standard itself is.
+
+Against that subset you report more than one agreement number. Raw agreement flatters a
+labeler when most comments are negatives, since saying "no" to everything already
+agrees often. **Cohen's kappa** is an agreement score that subtracts the agreement two
+coders would reach by chance given how often each says yes, so 0 means chance-level and
+1 means perfect agreement [@cohen1960coefficient]. Example: two coders agree on 90 of 100
+comments, 85 of them easy negatives, and each says yes 10 times; their kappa is only
+about 0.44. You
+also report the errors by category: the share of real burnout mentions the tool caught,
+and the share of other comments it wrongly flagged. Those two numbers tell you which
+direction the tool's count leans.
+
+High agreement is necessary and still not enough. On several annotation tasks a
+general-purpose chatbot has matched or beaten crowd workers [@gilardi2023chatgpt]. Yet
+even labels that are right 80 to 90 percent of the time can bias the estimate you
+actually care about, such as a share or a difference between groups, and give intervals
+that are too narrow [@egami2023using]. The fix those authors propose, in its simplest form, uses the same
+random, human-coded subset: measure how far the AI's labels are off on it, and correct
+the full-pile estimate by that amount. The block below plants a true burnout share,
+lets an imperfect labeler tag all 3,000 comments, and compares the AI-only share with
+the corrected one.
+
+```python
+import numpy as np
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+N, n_gold = 3_000, 300
+# TRUTH: 18% of comments mention burnout. Nobody sees this column.
+truth = rng.random(N) < 0.18
+# The AI labeler misses 40% of real mentions and flags 3% of the rest.
+ai = np.where(truth, rng.random(N) < 0.60, rng.random(N) < 0.03)
+
+# You hand-code a RANDOM 300, blind to the AI label (assume your codes match truth).
+gold = rng.choice(N, size=n_gold, replace=False)
+h, a = truth[gold].astype(float), ai[gold].astype(float)
+
+agree = (h == a).mean()
+p_chance = h.mean() * a.mean() + (1 - h.mean()) * (1 - a.mean())
+kappa = (agree - p_chance) / (1 - p_chance)
+caught = a[h == 1].mean()                        # share of real mentions the AI flagged
+false_flags = a[h == 0].mean()                   # share of non-mentions it flagged
+
+naive = ai.mean()               # the AI labeled all 3,000: known exactly, not estimated
+d = h - a                       # the AI's error on each coded comment
+corrected = naive + d.mean()
+# The only chance left is WHICH 300 you coded. The error average carries it,
+# shrunk by the share of the pile you did not code (sampling without replacement).
+fpc = 1 - n_gold / N
+se = np.sqrt(fpc * d.var(ddof=1) / n_gold)
+se_h = np.sqrt(fpc * h.var(ddof=1) / n_gold)    # your 300 codes on their own
+
+print(f"agreement on the coded 300     : {agree:.2f}   kappa: {kappa:.2f}")
+print(f"real mentions the AI caught    : {caught:.2f}   false flags: {false_flags:.2f}")
+print(f"true share (hidden)            : {truth.mean():.3f}")
+print(f"AI-only share                  : {naive:.3f}")
+print(f"corrected with the coded 300   : {corrected:.3f}  "
+      f"[95% interval {corrected - 1.96*se:.3f} to {corrected + 1.96*se:.3f}]")
+print(f"your 300 codes alone           : {h.mean():.3f}  "
+      f"[95% interval {h.mean() - 1.96*se_h:.3f} to {h.mean() + 1.96*se_h:.3f}]")
+print("\nhigh agreement did not make the AI's share right;")
+print("the random hand-coded subset is what lets you repair it, and bound it")
+```
+
+On the coded 300 the tool agrees with you 90 percent of the time, with a kappa of 0.62.
+That looks respectable until you read the error by category: it caught only 57 percent
+of the real burnout mentions while flagging 2 percent of the rest. Misses outnumber
+false flags, so the AI-only share of 13.5 percent sits well below the planted 18.2
+percent. The corrected share is 19.5 percent, with a 95% interval from 16.2 to 22.8
+percent, which contains the truth. Your 300 codes on their own would give 18.7 percent,
+from 14.5 to 22.9. The correction keeps the protection of the random draw and still
+narrows the interval, because the AI's labels carry most of the information and the
+subset only has to measure their error.
+
+Read the interval formula against its target. The AI's share of all 3,000 has no
+sampling error at all, since the tool labeled every comment. The only chance left is
+which 300 you happened to code, so the interval comes from the spread of the AI's
+errors on those 300. Because the 300 are a tenth of the pile, that spread shrinks by the
+share you did not code, the factor `1 - 300/3000`. Rerun the draw of 300 many times on
+this same pile and an interval built this way contains the true share about 95 times in
+100. Adding a separate term for the AI's share would treat a count of every comment
+as if it were a sample, and give a wider interval than the design warrants. If
+you wanted the burnout share among comments like these in general, rather than in these
+3,000, you would add the ordinary sampling spread of a 3,000-comment sample on top.
+
+The simulation grants you something real data never will: your own codes are assumed
+perfect. With real coders the correction moves the AI toward your codes, not toward
+the truth, so a gold standard that leans one way passes that lean straight into the
+corrected share. Report your coders' agreement alongside the interval, and read the
+interval as a bound on the AI's error against your codebook, not on your own.
+
+The estimand here is the share of all 3,000 comments that mention burnout, as your
+codebook defines it. The warrant for the correction is the random draw of the gold
+subset, the same sampling license you would claim for any estimate from part of a
+population. It does not tell you how many employees feel burned out, only how many
+wrote about it in a comment box. The tool's version and settings belong in your
+records with the date, because a later model can label the same comments differently.
+
+The AI is a fast, tireless labeler here, your arm. The codebook, the random draw, the
+blind coding, and the decision about which error matters more for your claim stay
+with you. The full route for projects whose data are documents, from building a corpus
+to intercoder checks, is in
+[Documents, Archives, and Text as Data](../part7-further-routes/text-as-data.qmd).
+
 ## An AI failure case
 
 You ask, "operationalize employee engagement for my pilot study," and the tool

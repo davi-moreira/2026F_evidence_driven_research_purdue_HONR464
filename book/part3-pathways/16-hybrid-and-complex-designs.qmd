@@ -116,6 +116,255 @@ print("\naveraging twelve months bought precision, not correctness. the")
 print("denominator is missing sales, so every share, and the index, tilts up")
 ```
 
+## Mixed methods: two kinds of evidence, one question
+
+Your concentration index says the grocery market is tight. A city councillor then asks a
+different question: why do shoppers in some neighborhoods pay more for the same basket?
+Shelf prices can tell you where the gap is and how large it is. They cannot tell you what
+shoppers do about it, which store they would switch to, or whether they can reach another
+store at all. For that you have to ask people.
+
+**Mixed methods research** is a design that collects both numerical and qualitative
+evidence (words, observations, and accounts rather than numbers) and joins them to
+answer one question [@creswell2018designing]. Example: basket
+prices recorded from store shelves, plus interviews with shoppers about where they buy
+groceries and why. That makes it a hybrid design in exactly this chapter's sense: two
+moving pieces, each with its own error, stitched into one answer. Everything the chapter
+says about alignment applies. The price data and the interviews have to target the same
+inquiry, or you end up with two studies sharing a cover page.
+
+What separates a mixed-methods design from two studies stapled together is integration.
+**Integration** means the planned points where you link the two kinds of evidence, so
+that each one shapes how you read the other [@fetters2013achieving]. Fetters, Curry, and
+Creswell locate it at three levels. At the design level you choose an order. An **explanatory sequence** is a design
+where the numbers come first and interviews follow to explain them. Example: your prices
+show a gap, so you interview shoppers in the neighborhoods where it is largest. An
+**exploratory sequence** runs the other way, with interviews first and a measurement
+built from what they reveal. Example: shoppers tell you they count the bus ride as part of
+the price, so you add travel time to your basket. A **convergent design** collects both at
+roughly the same time and compares them afterward. Example: you record shelf prices and
+interview shoppers in the same month, then set the two side by side. At the methods
+level, you choose how the two components touch. One can pick whom the other samples, as
+when the price data choose which neighborhoods you visit (Fetters and colleagues call this
+*connecting*). One can supply what the other measures, as the bus-ride remark did for your
+basket (*building*). Or the two can be brought together only at analysis (*merging*), which
+is what a convergent design does. At the interpretation and reporting level, you bring the
+two together where a reader can inspect the meeting.
+
+That last move has a tool. A **joint display** is a table or figure that puts the
+numerical and the qualitative result for the same unit side by side, with a column that
+says how they fit [@fetters2013achieving]. Example: one row per neighborhood, holding its
+price gap, what its shoppers said about choice, and a verdict. Fetters and colleagues name
+three kinds of fit. In *confirmation* the two agree. In *expansion* one covers an aspect of
+the phenomenon the other cannot reach. In *discordance* they conflict. A discordant row often
+teaches you the most, but it does not tell you which side is wrong. The numbers do not win
+by default. The conflict may come from bias in either component, from a sampling choice,
+or from two measures that were never tapping the same thing, and Fetters and colleagues
+list the usual responses: look for the source of bias, re-analyze what you have, gather
+more data, look to theory, or challenge whether your measures capture the construct you
+named [@fetters2013achieving]. What you do not do is delete the row so the table reads
+cleaner. If the conflict survives your checks, you report it.
+
+The block below builds a small joint display. The prices are simulated and the interview
+counts are constructed for the example. The block writes the rule for "fit" down before
+it prints the table, which is the habit to copy: fix the rule first, so the table cannot
+tempt you to bend it. Notice what a threshold rule cannot do. It sorts rows into agree and
+conflict, but *expansion* needs a reading of what people actually said, so no cutoff will
+assign it for you.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Six neighborhoods. The "price gap" is the basket price above the city median.
+# The interview column is what you coded from 4 shopper interviews in each one.
+hoods = ["Northgate", "Riverside", "Old Mill", "Eastfield", "Harbor", "Elm Park"]
+chains = [1, 1, 2, 2, 3, 4]                     # chains within a 10-minute walk
+gap = 9 - 2 * np.array(chains) + rng.normal(0, 1.5, size=6)
+said_no_choice = [4, 3, 1, 3, 0, 0]              # interviewees who said "no other store"
+
+jd = pd.DataFrame({"chains": chains, "price gap (%)": gap.round(1),
+                   "said 'no other store' (of 4)": said_no_choice}, index=hoods)
+def fit(row):
+    high_gap, no_choice = row["price gap (%)"] > 3, row["said 'no other store' (of 4)"] >= 2
+    if high_gap == no_choice:
+        return "confirms"
+    return "discordant: go back"
+jd["fit"] = jd.apply(fit, axis=1)
+print(jd.to_string())
+print(f"\nrows that confirm   : {(jd['fit'] == 'confirms').sum()} of {len(jd)}")
+print("\nagreement makes the description sturdier. it does not make the")
+print("gap causal, and 4 interviews per place are not a prevalence estimate")
+```
+
+Four of the six rows confirm. Old Mill is the row to chase: its basket costs 6.5% more
+than the city median, yet only one of four shoppers said they had no other store. Perhaps
+they drive to a warehouse club outside your map, which would mean your count of chains
+within a walk measures the wrong market. That is the alignment problem again, surfaced by
+the discordance. Harbor sits at 3.8%, just over the 3% line you chose, with nobody
+reporting a lack of choice. That row is a warning about your cutoff as much as about
+Harbor.
+
+Now the limit that matters most. Agreement between the two components creates no crossing
+license. When prices and interviews both point at "one chain, no choice, higher prices",
+the description is sturdier, because two methods with different weaknesses reached it.
+That holds only if the weaknesses really are separate. If you coded the interviews while
+looking at the price column, your reading of the quotes can bend toward the numbers, so
+code them first, or have someone who has not seen the prices code them. The councillor's
+question also stays what it was. "Why" is a causal question, and a joint display does not
+turn it into a descriptive one. It gives you a sturdier description and a candidate
+mechanism, while the causal answer stays unidentified for now. The claim that missing
+competition *raises* prices still needs its own
+identification argument. Both components can share a confounder: high rents could keep
+competitors out of a neighborhood and push up every shelf price, and shoppers would
+describe the same situation either way. Four interviews per neighborhood, chosen on
+purpose rather than at random, also license no prevalence claim, meaning no claim about
+how common a view is among all the neighborhood's shoppers. "Three of four" counts the people you chose
+to hear, not a share of the neighborhood. Each component carries its own warrant into the
+joint display, and the table cannot upgrade either one.
+
+An AI tool helps here in bounded ways. It can draft an interview guide from your price
+findings, lay out the joint display, and flag rows where your codes and your numbers
+disagree. It fails in a predictable direction. Asked to "integrate the findings", it
+writes a smooth narrative in which every quote supports every number, and the discordant
+rows disappear. Which rows count as discordant, and what you go back to measure because of
+them, stays your call. For the qualitative half on its own terms, including whom to
+interview and how to trace every theme back to what people actually said, work through
+[the further-route chapter on qualitative inquiry](../part7-further-routes/qualitative-inquiry.qmd).
+
+## When the simulation is the research
+
+So far in this chapter, simulation has been a check. You plant a known bias, as the
+grocery block did with the missing stores, run the design, and see whether your answer
+strategy finds it. Some projects turn that
+around, and the simulated world becomes the thing you study. The economist Thomas
+Schelling asked whether a city could end up sharply divided even if nobody wanted
+division, only a mild wish not to be heavily outnumbered on their own block. He could not
+rerun a city. So he built one out of rules and watched what the rules produced
+[@schelling1971dynamic].
+
+An **agent-based model** is a simulation in which many individual actors each follow
+simple written rules, and the pattern you study emerges from their interactions. Example:
+households on a grid, each moving to a random empty cell when fewer than 30% of its
+neighbors are like it. A **process model** is the broader family: any simulation that
+writes a mechanism down step by step. Example: a model of how an infection spreads through
+a herd of cattle, or how a rumor moves through a firm's email network. In MIDA terms, the
+Model is now your code, and the Inquiry is a quantity inside that code's world. The Data
+strategy is which settings you run, with how many seeds, and what you record from each
+run. The Answer strategy is how you summarize what comes out.
+
+The distinction you must never blur is between two kinds of claim. A **model-world
+claim** is a statement about what happens in the world your rules define. Example: "in
+this model, a 30% preference produces heavy sorting." An **observed-world claim** is a
+statement about what happened in a real place. Example: "this city is segregated because
+of mild preferences." A simulation can settle the first, up to run-to-run wobble and only
+at the settings you actually ran. It settles the second not at all. What it can support is a sufficiency claim: these rules
+are enough to generate the pattern. Schelling drew the sharp consequence himself, that
+inferences about individual motives usually cannot be drawn from aggregate patterns
+[@schelling1971dynamic]. Many different rule sets, including deliberate exclusion, can
+produce the same map.
+
+The block below builds a small, simplified variant of the model. In Schelling's own
+version an unhappy household moves to the nearest spot that would satisfy it; here it
+jumps to a random empty cell, which is a different rule and can give a different number.
+Read the three lines it prints before you read the moral.
+
+```python
+import numpy as np
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+N, EMPTY, WANT = 30, 0.10, 0.30   # 30x30 grid, 10% empty, each wants >= 30% alike
+
+def like_share(g):
+    """Average share of an agent's occupied neighbors that are its own type."""
+    shares = []
+    for i, j in zip(*np.nonzero(g)):
+        nb = g[max(i-1, 0):i+2, max(j-1, 0):j+2].ravel()
+        nb = nb[nb != 0]
+        if len(nb) > 1:
+            shares.append(((nb == g[i, j]).sum() - 1) / (len(nb) - 1))
+    return np.mean(shares)
+
+def unhappy(g):
+    """How many agents still have fewer than WANT like neighbors."""
+    count = 0
+    for i, j in zip(*np.nonzero(g)):
+        nb = g[max(i-1, 0):i+2, max(j-1, 0):j+2].ravel()
+        nb = nb[nb != 0]
+        count += len(nb) > 1 and ((nb == g[i, j]).sum() - 1) / (len(nb) - 1) < WANT
+    return count
+
+def run(rng, rounds=40):
+    g = rng.choice([0, 1, 2], size=(N, N), p=[EMPTY, (1-EMPTY)/2, (1-EMPTY)/2])
+    start, sizes = like_share(g), np.bincount(g.ravel(), minlength=3)
+    for _ in range(rounds):
+        cells = list(zip(*np.nonzero(g)))
+        for k in rng.permutation(len(cells)):       # one agent at a time
+            i, j = cells[k]
+            nb = g[max(i-1, 0):i+2, max(j-1, 0):j+2].ravel()
+            nb = nb[nb != 0]
+            if len(nb) > 1 and ((nb == g[i, j]).sum() - 1) / (len(nb) - 1) < WANT:
+                empties = list(zip(*np.nonzero(g == 0)))
+                e = empties[rng.integers(len(empties))]
+                g[e], g[i, j] = g[i, j], 0          # unhappy agent moves to a random empty cell
+    kept = (np.bincount(g.ravel(), minlength=3) == sizes).all()   # nobody created or lost
+    return start, like_share(g), unhappy(g), kept
+
+results = np.array([run(rng) for _ in range(5)], dtype=float)
+print(f"like-neighbor share at start : {results[:, 0].mean():.2f} "
+      f"(runs {results[:, 0].min():.2f} to {results[:, 0].max():.2f})")
+print(f"like-neighbor share at end   : {results[:, 1].mean():.2f} "
+      f"(runs {results[:, 1].min():.2f} to {results[:, 1].max():.2f})")
+print(f"code checks, every run : {int(results[:, 2].max())} still unhappy, "
+      f"household counts kept = {bool(results[:, 3].all())}")
+print("\nin THIS model world, asking for 30% alike ends near 76% alike.")
+print("the rule is enough to make the pattern; no real city was observed")
+```
+
+With each household asking for only 30% like neighbors, the average share of like
+neighbors climbs from 0.50 under random placement to 0.76, and the five runs end between
+0.75 and 0.77. That narrow spread is the model's own variance across seeds, and it is the
+only uncertainty five runs can measure. It says nothing about the choices you fixed: the
+grid size, the share of empty cells, the move rule, the number of rounds. Changing those
+and watching the end share is a sensitivity analysis, and a model-world claim reaches only
+as far as the settings you swept. Nothing in the output measures how far the rules sit from
+real households either. That distance is a systematic error, and, as with the grocery
+survey's missing stores, more runs will never shrink it.
+
+Two checks keep a simulation study honest, and they answer different questions
+[@sargent2013verification]. **Verification** asks whether the code does what your written
+model says. Example: the block's third line checks two things the written rules promise.
+Moving must never create or delete a household, and if forty rounds were enough for the
+city to settle, no one should be left below the 30% wish. In all five runs no one is left
+unhappy and every count is kept. A
+second test sets `WANT` to 0, so no one is ever unhappy. No one should move, and the end
+share should equal the start share; it does, at 0.50. **Validation** asks whether the
+model world resembles the observed world closely enough for the purpose you state.
+Example: compare the model's clustering with block-level census maps of a real city.
+Verification is about your code. Validation is always judged against a purpose, so a
+model can pass for one question and fail for another. And even a close match earns only
+the modest conclusion that the mechanism is consistent with the pattern, not that it
+produced it.
+
+A model is only as checkable as its description, so the field has a standard way to write
+one down. The **ODD protocol** (Overview, Design concepts, Details) is a fixed template for
+describing an agent-based model completely enough that someone else could rebuild it from
+the text alone [@grimm2020odd]. Example: the Overview part includes a scheduling element
+that states whether agents move one at a time or all at once, a choice the block above
+makes in one line and one that can change the result. Ecologists use these models for animal movement, political scientists
+for how opinions cluster, and business researchers for how buyers choose among sellers.
+
+AI tools write agent-based code fast, and that speed is the risk. A tool asked to "make it
+run faster" may switch from one-at-a-time moves to simultaneous moves, which is a
+different model that can give a different answer, and report the new number as if nothing had
+changed. If you let it, it will also describe a model-world result in observed-world
+words. *AI is your arm and your research assistant, not your brain*: it can build the
+city in seconds. Choosing the rules, deciding which real pattern would count as
+validation, and writing the sentence that keeps the claim inside the model world stay
+yours.
+
 ## An AI failure case
 
 You paste your revenue table into an AI tool and ask for the concentration index. It

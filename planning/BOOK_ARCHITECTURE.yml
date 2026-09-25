@@ -44,8 +44,9 @@
 #      has >= 1 lesson and >= 1 checkpoint;
 #   5. A2 leakage scan per BOOK_LEAKAGE_POLICY.yml over active EN sources;
 #   6. crosswalk coverage: every ACTIVE lesson id has exactly one
-#      home-anchor disposition in COURSE_BOOK_CROSSWALK.yml (planned
-#      lessons: planned_home_anchor only);
+#      home-anchor disposition in COURSE_BOOK_CROSSWALK.yml, or is listed in
+#      its `not_adopted:` (D83) and then appears in no crosswalk row at all
+#      (planned lessons: planned_home_anchor only);
 #   7. prerequisite timing: delegated to BOOK_ASSESSMENTS.yml's
 #      learning_progressions once checkpoints carry course events.
 
@@ -97,6 +98,19 @@ parts:
      title_en: "Communicating and defending research"}
   - {id: part6, rank: 6, slug: part6-after-conference,
      title_en: "Research after the conference"}   # retitle pending (D35 Phase 4)
+  - {id: part7, rank: 7, slug: part7-further-routes,
+     title_en: "Further research routes"}           # D83 (book-only further routes)
+
+sections:
+  # D83 (book-only further routes): book-only TOC parts emitted AFTER the
+  # twelve studios, each opened by its own page (named *-overview.qmd). A
+  # lesson joins a section with `scope: book-only, section: <id>`; it keeps a
+  # `station:` naming the studio it extends, but it is on no studio deck,
+  # studio page, or milestone checklist, and the course crosswalk lists it
+  # under `not_adopted:`. Ranks above every studio lesson keep display
+  # numbers 1-40 unchanged (the validator enforces TOC order == rank order).
+  - {id: further-routes, rank: 1, title_en: "Further Research Routes",
+     page: part7-further-routes/further-routes-overview.qmd}
 
 stations:
   # Immutable `id` (slug); mutable `rank`; `checkpoints` are the versioned
@@ -131,7 +145,8 @@ stations:
 lessons:
   # Fields: id (immutable) · state (active|planned) · rank (mutable, unique)
   # · part · station (slug) · role (core|branch|optional) · route/genre
-  # (registry token, branch lessons only) · title_en (authored; display
+  # (registry token, branch lessons only) · scope + section (D83: `scope:
+  # book-only` with a registered `sections:` id, optional lessons only) · title_en (authored; display
   # titles for active lessons still live in the chapter files until the
   # generator consumes this manifest) · source (EN, edition roots + state
   # govern PT/ES) · url_path (immutable canonical HTML path).
@@ -360,6 +375,46 @@ lessons:
      companion: ch40_final_research_and_ai_management_portfolio.ipynb,
      url_path: part6-after-conference/37-final-research-and-ai-management-portfolio.html}
      # Phase-4 rewrite: medium-neutral release audit (graded-portfolio spine retires)
+
+  # ---- Part VII · Further research routes (D83, book-only) -----------------
+  # Six Tier-A designs as numbered chapters 41-46 after Studio 12. Each extends
+  # the Studio 5 pathway work (its home station) without joining that studio.
+  - {id: natural-experiments,       state: active, rank: 380, part: part7,
+     station: develop-the-pathway, role: optional,
+     scope: book-only, section: further-routes,
+     source: part7-further-routes/natural-experiments.qmd,
+     companion: ch41_natural_experiments.ipynb,
+     url_path: part7-further-routes/natural-experiments.html}
+  - {id: survey-experiments,        state: active, rank: 390, part: part7,
+     station: develop-the-pathway, role: optional,
+     scope: book-only, section: further-routes,
+     source: part7-further-routes/survey-experiments.qmd,
+     companion: ch42_survey_experiments.ipynb,
+     url_path: part7-further-routes/survey-experiments.html}
+  - {id: audit-studies,             state: active, rank: 400, part: part7,
+     station: develop-the-pathway, role: optional,
+     scope: book-only, section: further-routes,
+     source: part7-further-routes/audit-studies.qmd,
+     companion: ch43_audit_studies.ipynb,
+     url_path: part7-further-routes/audit-studies.html}
+  - {id: text-as-data,              state: active, rank: 410, part: part7,
+     station: develop-the-pathway, role: optional,
+     scope: book-only, section: further-routes,
+     source: part7-further-routes/text-as-data.qmd,
+     companion: ch44_text_as_data.ipynb,
+     url_path: part7-further-routes/text-as-data.html}
+  - {id: qualitative-inquiry,       state: active, rank: 420, part: part7,
+     station: develop-the-pathway, role: optional,
+     scope: book-only, section: further-routes,
+     source: part7-further-routes/qualitative-inquiry.qmd,
+     companion: ch45_qualitative_inquiry.ipynb,
+     url_path: part7-further-routes/qualitative-inquiry.html}
+  - {id: evidence-synthesis,        state: active, rank: 430, part: part7,
+     station: develop-the-pathway, role: optional,
+     scope: book-only, section: further-routes,
+     source: part7-further-routes/evidence-synthesis.qmd,
+     companion: ch46_evidence_synthesis.ipynb,
+     url_path: part7-further-routes/evidence-synthesis.html}
 
 tombstones: []
   # A released id is never deleted or reused. Entries:

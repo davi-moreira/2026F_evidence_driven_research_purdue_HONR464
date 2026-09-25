@@ -45,9 +45,10 @@
 #       {lesson, requirement: required|recommended|route-required|optional,
 #        purpose: first-read|revisit, primary_lab: true|false,
 #        home_anchor: true|false}
-#     HOME-ANCHOR RULE: every ACTIVE lesson has exactly one home_anchor row
-#     across the file (the partition); revisit assignments are a separate
-#     multiset and never anchor. A first-read is always its lesson's home
+#     HOME-ANCHOR RULE: every ACTIVE lesson not listed in `not_adopted:`
+#     (D83) has exactly one home_anchor row across the file (the
+#     partition); revisit assignments are a separate multiset and never
+#     anchor. A first-read is always its lesson's home
 #     anchor; a re-read is a revisit.
 #   - `station_events:` {station, event: introduce|practice|checkpoint|revisit,
 #        checkpoint: <id, checkpoint/revisit only>, at: reading-due|studio|
@@ -66,6 +67,18 @@
 
 schema_version: "1.1"
 status: option2-active-d49
+
+# D83 (book-only further routes): active book lessons the course does NOT
+# adopt. They appear in no row below (no assignment, no contribution_ref), are
+# never read, collected, or scheduled, and are exempt from the home-anchor
+# partition (validator rule 6). Every `scope: book-only` lesson must be here.
+not_adopted:
+  - {lesson: natural-experiments,  reason: "book-only further route (D83)"}
+  - {lesson: survey-experiments,   reason: "book-only further route (D83)"}
+  - {lesson: audit-studies,        reason: "book-only further route (D83)"}
+  - {lesson: text-as-data,         reason: "book-only further route (D83)"}
+  - {lesson: qualitative-inquiry,  reason: "book-only further route (D83)"}
+  - {lesson: evidence-synthesis,   reason: "book-only further route (D83)"}
 
 rows:
   - milestone: M1

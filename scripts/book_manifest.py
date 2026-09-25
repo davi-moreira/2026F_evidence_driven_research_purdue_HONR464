@@ -14,7 +14,9 @@ place book structure is read:
 
 Display chapter numbers are DERIVED here (rank order among active lessons)
 and exist only for presentation; nothing may parse them back out of
-filenames.
+filenames. D83 adds two filtered views that keep those numbers:
+`studio_lessons()` (no book-only lessons) and `course_lessons()` (no lesson
+the crosswalk lists as `not_adopted:`).
 """
 from __future__ import annotations
 
@@ -89,6 +91,36 @@ def active_lessons(arch: dict | None = None) -> list[dict]:
         d["display"] = i
         out.append(d)
     return out
+
+
+# D83 (book-only further routes): a lesson may carry `scope: book-only`. It
+# is a real, numbered chapter of the book (display numbers still come from
+# ALL active lessons above, so appending it renumbers nothing), but it sits
+# in a book-only TOC section after the twelve studios, joins no studio deck,
+# studio page or milestone checklist, and the companion course does not
+# adopt it (the crosswalk lists it under `not_adopted:`).
+def is_book_only(l: dict) -> bool:
+    return l.get("scope") == "book-only"
+
+
+def studio_lessons(arch: dict | None = None) -> list[dict]:
+    """Active lessons that belong to a studio: active_lessons() minus the
+    book-only ones, `display` unchanged (D83)."""
+    return [l for l in active_lessons(arch) if not is_book_only(l)]
+
+
+def not_adopted_ids(cw: dict | None = None) -> set[str]:
+    """Lesson ids the crosswalk declares the course does NOT adopt (D83)."""
+    cw = cw or load_crosswalk()
+    return {x["lesson"] for x in (cw.get("not_adopted") or [])}
+
+
+def course_lessons(arch: dict | None = None,
+                   cw: dict | None = None) -> list[dict]:
+    """Active lessons the COURSE adopts: active_lessons() minus the crosswalk's
+    `not_adopted:` list, `display` unchanged (D83)."""
+    skip = not_adopted_ids(cw)
+    return [l for l in active_lessons(arch) if l["id"] not in skip]
 
 
 def primary_nb_by_lesson(cw: dict | None = None) -> dict[str, str]:

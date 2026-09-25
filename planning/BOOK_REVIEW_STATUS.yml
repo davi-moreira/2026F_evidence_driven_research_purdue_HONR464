@@ -2,7 +2,8 @@
 #
 # Keys are IMMUTABLE lesson ids from planning/BOOK_ARCHITECTURE.yml (A10:
 # review state follows the lesson, never its current display number), plus
-# part1_overview for the Part I page. Every unreviewed lesson carries the
+# part1_overview for the Part I page (and, D83, further_routes_overview and
+# further_designs_guide for the further-routes section page and appendix). Every unreviewed lesson carries the
 # under-development banner. When Davi reports one reviewed: set reviewed:
 # true + the date, run scripts/update_chapter_review_banners.py, re-render.
 # D37 (2026-08-01): Architecture v1 is frozen, so chapter review is OPEN.
@@ -49,3 +50,13 @@ lessons:
   managing-ai-agents: {reviewed: false, date: null}
   conflicting-agents: {reviewed: false, date: null}
   final-portfolio: {reviewed: false, date: null}
+  # D83 (book-only further routes): the section page, the six lessons, and
+  # the further-designs field-guide appendix
+  further_routes_overview: {reviewed: false, date: null}
+  natural-experiments: {reviewed: false, date: null}
+  survey-experiments: {reviewed: false, date: null}
+  audit-studies: {reviewed: false, date: null}
+  text-as-data: {reviewed: false, date: null}
+  qualitative-inquiry: {reviewed: false, date: null}
+  evidence-synthesis: {reviewed: false, date: null}
+  further_designs_guide: {reviewed: false, date: null}

@@ -4880,3 +4880,134 @@ instructions and PDFs on Brightspace with the regenerated ones (M5 is due
 Sun 2026-09-27), send the announcement drafted at
 `_announcements/2026-09-25_carry_forward_record.md`, and update the Brightspace
 rubric objects to the new rows and weights if rubrics are attached there.
+
+## D83 — Further Research Routes: six book-only chapters, ten chapter extensions, and a field guide, with the live course untouched (2026-09-25)
+
+**Why.** A 2026-09-25 gap audit (Claude and an independent Codex partner run,
+`_adm/codex_collab/2026-09-25_edrai-uncovered-paths/`) found that EDR|AI
+taught one kind of project very well and nothing else. It had no qualitative
+route, no evidence-synthesis route, no text-as-data route, and no
+quasi-experimental causal route. Chapter 12 named difference-in-differences,
+regression discontinuity and instrumental variables, then said "this book does
+not teach these". The audit sorted the missing designs into three tiers:
+A (full new material), B (a section in an existing chapter), and C (beyond an
+unsupervised semester).
+
+**Ruling (instructor, 2026-09-25).** Implement every Tier A, B, and C design in
+the English edition, in the book's voice and for its four domains, with Codex
+reviewing the work. PT/ES stay frozen (D36).
+
+**What changed in the book.**
+
+1. **Six new lessons, chapters 41–46, in a book-only TOC section "Further
+   Research Routes"** placed after Studio 12 and its milestone
+   (`book/part7-further-routes/`; opener `further-routes-overview.qmd`):
+   - `natural-experiments`: difference-in-differences, event studies,
+     regression discontinuity, interrupted time series
+   - `survey-experiments`: vignettes, conjoint, list experiments
+   - `audit-studies`: correspondence audits and AI-system audits
+   - `text-as-data`
+   - `qualitative-inquiry`
+   - `evidence-synthesis`: scoping reviews and small meta-analyses
+
+   Each chapter follows the full lesson template, including its own companion
+   notebook and "It is your turn" section. Five of them carry a seeded
+   simulation (SEED = 464) with numbers bound in `MISCONCEPTION_MANIFEST.yml`
+   (188 claims).
+2. **Tier-B sections inside ten existing chapters**, inserted before "An AI
+   failure case":
+   - ch10: preregistration and the pre-analysis plan
+   - ch11: description over time, description over space, and "a language model
+     is not a sample of people"
+   - ch12: process tracing
+   - ch14: rolling-origin forecast evaluation
+   - ch15: crossover, switchback and N-of-1 designs
+   - ch16: mixed-methods integration, and simulation as the research
+   - ch17: missing data
+   - ch18: measurement as the contribution, including validating AI labels
+   - ch25: subgroups and mechanisms, and external validity and transport
+   - ch32: replication with new data
+
+   **No "It is your turn" section of an existing chapter changed**, because they
+   are a live IYT contract. The one exception is the false parenthetical in
+   ch12 step 4, which now points to Chapter 41 and the field guide; the task
+   itself is unchanged.
+3. **Appendix C, "Further Designs: A Field Guide"** (`book/further-designs.qmd`):
+   instrumental variables, synthetic control, staggered-adoption DiD,
+   ethnography, QCA, network analysis and Bayesian analysis. Each entry covers
+   the question the design answers, its warrant, a picture, what it demands,
+   the role of AI, and where to learn it.
+4. **Scope.** The book's declared scope widens from quantitative empirical
+   research to empirical research whose answers are precise and checkable.
+   The qualitative lesson states the adaptation, which is that MIDA still
+   applies but the answer is a bounded account with an evidence trail. The
+   preface and `planning/RDSS_COVERAGE_MATRIX.md` are updated to match.
+   This record answers the positioning note in `BOOK_DESIGN_ACCEPTANCE.md`.
+
+**Machinery.** The book tooling changes are these:
+- **Manifest.** New lesson fields `scope: book-only` and `section:`, a
+  `sections:` registry, and `part7`, all in `BOOK_ARCHITECTURE.yml`.
+- **`book_manifest.py`.** Adds the `studio_lessons`, `course_lessons` and
+  `not_adopted_ids` helpers.
+- **Validator.** New rules check scope, section and role, and enforce that TOC
+  order equals rank order. The A2 leakage scan now also covers section pages
+  and `extra_sources`, which names the appendix.
+- **Studio 5 opener.** The station-pages generator adds a "Beyond the five
+  pathways" section to it.
+- **Pointers.** The six new lessons get their own "further route" pointer.
+- **Slide plans.** A new `omit:` key keeps the new sections off the course
+  decks. Omissions are validated before any deck write, and
+  `scripts/test_d83_guards.py` holds the negative tests (now a CI step).
+- **Course isolation.** `COURSE_BOOK_CROSSWALK.yml` gains a `not_adopted:`
+  list, and `session_readings` iterates adopted lessons only.
+
+**The live course did not move.**
+- **Numbering.** Chapters 1–40 keep their numbers.
+- **IYT Practice.** It still collects 35 sections.
+- **Decks.** All twelve studio decks are byte-identical to `3324345`.
+- **Course surfaces, all unchanged:**
+  - schedules and MEETING_SCHEDULE
+  - milestone briefs and PDFs
+  - `schedule.qmd`, `material.qmd`, `instructor.qmd`
+  - `for-instructors.qmd`
+  - `course_config.yaml`
+  - the Brightspace kit
+- **Companion notebooks.** Among the 40 existing ones, only the ten whose
+  chapters gained sections changed, and they only gained cells (ch15's
+  companion also carries the repointed step 4).
+- **Frozen editions.** `book-pt/` and `book-es/` are untouched.
+
+**Review.** Every item was authored by one agent and then adversarially verified
+by a second, specialist agent. Codex (gpt-6-astra, effort max, read-only) then
+ran five parallel reviews.
+- **r5 (tooling) completed.** Verdict: ship after fixes, with three findings,
+  all fixed.
+- **r1–r4 (content) were cut off.** Codex hit its ChatGPT-plan usage limit
+  after about nine minutes, before writing their final findings lists.
+- **The interim notes were still used.** They name the problems Codex had
+  confirmed, including:
+  - list-experiment privacy overstated;
+  - an audit exercise contradicted by its own simulation;
+  - AI-label-correction variance not matching its target;
+  - the synthesis chapter letting design decide the question's kind;
+  - reflexive thematic analysis judged by counts and falsifiability;
+  - Goodman-Bacon and de Chaisemartin–D'Haultfœuille weights conflated;
+  - synthetic-control placebo ranks read as p-values without qualification;
+  - replication compared without the original estimate's uncertainty.
+- **How they were handled.** Each note was independently reproduced and ruled
+  on, and a specialist pass looked for more problems of the same kinds.
+- **Tally.** 38 accepted, 17 adapted, 3 declined (each with a verified reason),
+  and 17 further problems found and fixed. Full table:
+  `_adm/codex_collab/2026-09-25_edrai-further-routes/reports/corrections.md`.
+- **Still to do:** a full Codex re-review of r1–r4 once the quota resets
+  (2026-09-30).
+
+**Not changed.** Every weight, contract, due date and milestone. The course does
+not adopt, collect or schedule the new chapters. Chapter review banners stay
+on all eight new pages until Davi reviews them.
+
+**Pre-existing, not fixed here.** CI's two misconception steps fail on HEAD
+because the ch21 `specification-spread` allow window is stale: pin
+`27715dcc…`, live `16a5cb02…`, after auto-commit `354a1ee` edited the
+paragraph. A person must confirm the paragraph still corrects the wording, then
+re-pin it.

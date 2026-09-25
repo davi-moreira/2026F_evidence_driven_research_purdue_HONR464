@@ -66,7 +66,8 @@ Two moves close the back door without an experiment.
 - **Natural experiment**: a situation where a chance-like force outside anyone's
   control decided who got treated, making assignment **as-if random** (credibly like a
   coin flip). Example: a visa lottery decides who makes a trip, so winners and losers
-  differ only by luck.
+  differ only by luck. [Chapter 41](../part7-further-routes/natural-experiments.qmd)
+  builds this move into full designs.
 
 One warning before the first move tempts you into adjusting for everything in the
 file. Adjusting is not free, and adjusting for the wrong variable manufactures bias
@@ -149,6 +150,160 @@ print("\nthe naive gap is the DIET gap wearing the microbe's name;")
 print("ten thousand mice make it precise, not true")
 ```
 
+## Process tracing: causal inference inside one case
+
+A town council votes 6 to 3 to ban single-use plastic bags. A student campaign had
+spent the spring collecting signatures, and the campaign now says it won the ban. You
+want to know whether that is true for this one town. You have no comparison group and no
+lottery. You have one case and an archive.
+
+**Process tracing** is a way of testing a causal claim inside a single case by asking
+what evidence each explanation predicts you will find, and then checking the record
+for it. Example: if the campaign moved the council, members must have heard from it
+before the vote, so any record of that contact should be dated before the vote, not
+after. RDSS places process tracing
+first in its observational-causal library and declares it as a design like any other,
+with a model, an inquiry, a data strategy, and an answer strategy you can diagnose
+[@blair2023rdss]. The inquiry is narrower than elsewhere in this chapter. It is a
+**cause-of-effect question**, one that asks whether a particular cause produced an
+outcome that already happened in a particular case. Example: did the campaign cause
+the ban in this town? That is a different question from how much campaigns change
+policy on average.
+
+The work starts with rivals. A **rival explanation** is a different causal story that
+could have produced the same outcome. Example: the council may have copied a
+neighboring city's ordinance, or acted early because a state bill was about to force
+the issue. Each rival does the job the diet did in the mouse study: it is
+the story your evidence must beat before *because* is earned. Write the rivals down
+before you open a single document, the same way you drew the causal diagram before
+you adjusted for anything.
+
+Next, sort each clue by how it bears on the claim. The four standard tests come from
+Van Evera [@vanevera1997guide]. Collier's guide lays them out by whether passing
+is necessary or sufficient for accepting the explanation
+[@collier2011understanding].
+
+- A **straw-in-the-wind test** looks for a clue that fits your explanation but also
+  turns up fairly often without it, so finding it helps a little and missing it hurts
+  a little. Example: a council member later praises "the young activists" in a
+  newspaper interview.
+- A **hoop test** looks for a clue your explanation must produce to stay alive, though
+  passing it settles little. Example: a dated record of the campaign reaching the
+  council before the vote, such as a speaker in the public-comment minutes, a petition
+  logged by the clerk, or an email to a member. If nobody from the campaign ever
+  reached the council, the campaign story is in deep trouble.
+- A **smoking-gun test** looks for a clue that rarely appears unless your explanation
+  is true, so finding it counts for a lot, while missing it counts for little.
+  Example: a staff memo dated before the vote that recommends the ban and names the
+  campaign's petition as the reason.
+- A **doubly decisive test** looks for a clue that is both required by your
+  explanation and rare without it. Real archives rarely hold one, so when you seem to
+  have found it, check both of its probabilities again before you lean on it.
+
+A hoop test has a trap. The explanation must produce the *event*, but you only ever
+search the *record*. A missing clue counts as a failed hoop only if the event would
+have been written down, the document survived, and you can get at it. Minutes often
+skip who spoke in public comment, and an email to a member may never reach a public
+file. Absence of evidence becomes evidence of absence only to the extent the record
+would have caught the event.
+
+The tests have a precise core. Each clue carries two probabilities: how likely you
+are to find it if your explanation is true, and how likely if a rival is true. The
+ratio between them decides how far the clue should move your belief, and RDSS writes
+the tests as exactly that kind of updating [@blair2023rdss]. The block below starts
+from even odds and computes where your belief should land when each clue is found
+or missing. The probabilities are constructed for the example; in your project they
+are judgments you write down before you search.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Your judgments, written BEFORE you open the archive:
+# P(clue appears | campaign caused the ban), P(clue appears | a rival caused it)
+tests = pd.DataFrame({
+    "test": ["straw-in-the-wind", "hoop", "smoking gun", "doubly decisive"],
+    "p_if_true":  [0.60, 0.95, 0.30, 0.90],
+    "p_if_false": [0.40, 0.60, 0.03, 0.05],
+})
+prior = 0.50
+def posterior(p_true, p_false, found):
+    lt, lf = (p_true, p_false) if found else (1 - p_true, 1 - p_false)
+    return prior * lt / (prior * lt + (1 - prior) * lf)
+
+tests["if_found"] = [posterior(a, b, True) for a, b in zip(tests.p_if_true, tests.p_if_false)]
+tests["if_absent"] = [posterior(a, b, False) for a, b in zip(tests.p_if_true, tests.p_if_false)]
+print(tests.round(2).to_string(index=False))
+
+# Check the smoking-gun row by simulation: 100,000 imagined towns, half where
+# the campaign really caused the ban. Among towns where the clue turns up,
+# how often was the campaign the cause?
+n = 100_000
+campaign_caused = rng.random(n) < prior
+clue = rng.random(n) < np.where(campaign_caused, 0.30, 0.03)
+print(f"\nsmoking gun found, simulated share true : {campaign_caused[clue].mean():.2f}")
+# The same clue, if you judged it less unique (a rival leaves it 10% of the time)
+print(f"smoking gun found, rival leaves it 10%  : {posterior(0.30, 0.10, True):.2f}")
+
+# A missing hoop clue: the record catches contact only if it was written down,
+# kept, and open to you. Suppose that happens half the time under either story.
+p_record = 0.50
+print(f"hoop clue absent, record always catches it : {posterior(0.95, 0.60, False):.2f}")
+print(f"hoop clue absent, record catches it half   : "
+      f"{posterior(0.95 * p_record, 0.60 * p_record, False):.2f}")
+print("\nthe posterior is only as good as the two probabilities you wrote first;")
+print("the archive supplies the clue, you supply what it would mean")
+```
+
+Read the table by rows. Passing the hoop test moves you only from 0.50 to 0.61, but
+failing it drops you to 0.11. Finding the memo lifts you to 0.91, while missing it
+leaves you at 0.42, barely below where you started. The straw in the wind nudges you
+to 0.60 or 0.40 and no further. The simulated towns agree with the formula at 0.91,
+which is a second route to the same number. The last line is the warning. If a rival
+story would leave that memo behind 10 percent of the time instead of 3, the same find
+supports only 0.75. The two hoop lines show why a silent archive is weak evidence.
+If the record would always have caught the contact, its absence drops you to 0.11.
+If the record catches it only half the time, the same absence leaves you at 0.43,
+because most of the silence is the archive's, not the council's. The honest
+uncertainty in process tracing lives in those
+judgments, so you report them next to your conclusion and show how it changes when a
+skeptic moves them.
+
+Every clue also needs **source assessment**, which means asking who produced a
+document, when, and for what audience, before you let it count. Example: a memo
+written for internal use before the vote is better evidence than an interview given
+a year later, when everyone wants credit for a popular ban. Bennett and Checkel's
+collection lays out standards for this work, including how to weigh sources that
+have reasons to shade the story [@bennett2015process]. Ask also which documents
+survived and who chose them. Minutes record formal business and leave out hallway
+conversations, and the campaign's own files keep the moments that flatter it. An
+archive filtered that way can make a true story look silent and a false one look
+loud. A clue whose origin you cannot establish should move your belief very little.
+
+Be exact about the warrant. Nothing here crosses by sampling or by assignment. The
+causal reading rests on four assumptions you state in writing: your list of rivals
+contains the true story, your starting odds and your two probabilities for each clue
+are defensible, your sources are what they claim to be, and clues you combine are
+separate witnesses. Two clues count as two only if each one's chance of turning up
+does not depend on the other under either story. A memo and a later interview by the
+same staffer are closer to one witness than two. On the compass this is a causal question
+whose reach is the data at hand, meaning this one case. A strong
+conclusion about this town says nothing about how often campaigns win bans
+elsewhere. Calling a clue a "smoking gun" without writing how often a rival would
+leave it behind is design mimicry at the scale of a single document.
+
+An AI tool is useful at two points here. It can widen your list of rivals, and it can
+draft, for each rival, the documents that story would leave behind. It fails where
+the archive begins. Asked to summarize council minutes, a tool may return a fluent
+quote that appears nowhere in them, and a tool asked whether your clue is decisive
+tends to agree. Reading the minutes yourself and writing the two probabilities
+yourself stay human. When your case rests on interviews and documents, the
+[qualitative inquiry chapter](../part7-further-routes/qualitative-inquiry.qmd) shows
+how to gather and trace that evidence, and the
+[text-as-data chapter](../part7-further-routes/text-as-data.qmd) covers coding a
+larger archive.
+
 ## An AI failure case
 
 You paste your mouse comparison into a chatbot and ask, "Is this a natural experiment,
@@ -219,7 +374,7 @@ your signature, not the model's.
    one you committed first, and map each trait to a back-door path (trait → microbe, trait
    → leanness). A trait with only one arrow is not a confounder.*
 4. Name your leverage and its price. Selection on observables, a natural experiment,
-   difference-in-differences, regression discontinuity, or instrumental variables (this book does not teach these, so name the one your situation seems to fit and say what you would have to learn and defend before using it, rather than reaching for it now), and
+   difference-in-differences, regression discontinuity, or instrumental variables (Chapter 41, on [natural experiments](../part7-further-routes/natural-experiments.qmd), introduces difference-in-differences, regression discontinuity, and interrupted time series, and the [field guide to further designs](../further-designs.qmd) introduces instrumental variables; name the one your situation seems to fit and say what you would have to learn and defend before using it), and
    underneath it the short list of load-bearing assumptions it rests on, each in
    plain language a skeptic could argue with. Start with the one you most doubt. If you have no leverage, write the causal-language boundary
    sentence instead: what your comparison shows, and the *because* you are declining to

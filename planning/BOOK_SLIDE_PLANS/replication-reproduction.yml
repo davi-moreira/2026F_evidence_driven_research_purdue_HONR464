@@ -1,8 +1,11 @@
 # Slide plan — Chapter 36, "Replication and Reproduction"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: replication-reproduction
-source_sha256: "e366ce6385ed4eed7c77314f95cc2d0ac5a0e7f772516692c0cf3f8ae69f69a7"
+source_sha256: "733a2711486b097751664ad7c88038392e193b59588132e44d44c68db42bc871"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Replication with new data"
 sections:
 
   "Why this decision matters":

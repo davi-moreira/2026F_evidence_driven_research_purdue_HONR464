@@ -48,8 +48,13 @@ BANNER_RE = re.compile(
 FRONT_RE = re.compile(r"\A(---\n.*?\n---\n\n?)", re.S)
 
 
-# non-chapter pages that also carry the banner, keyed in the registry
-EXTRA_PAGES = [("part1_overview", "part1-research-with-ai/part1-overview.qmd")]
+# non-chapter pages that also carry the banner, keyed in the registry.
+# D83 (book-only further routes): the further-routes section page and the
+# further-designs field-guide appendix join them.
+EXTRA_PAGES = [("part1_overview", "part1-research-with-ai/part1-overview.qmd"),
+               ("further_routes_overview",
+                "part7-further-routes/further-routes-overview.qmd"),
+               ("further_designs_guide", "further-designs.qmd")]
 
 
 def main() -> None:

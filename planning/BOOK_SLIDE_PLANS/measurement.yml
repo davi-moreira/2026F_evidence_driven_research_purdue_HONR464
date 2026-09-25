@@ -1,5 +1,9 @@
 lesson: measurement
-source_sha256: "7cfcf1fe66b03a38b2c6b6d50f49d8c10060ab1a6223cb3cb8f82c921670540e"
+source_sha256: "891aa946b178b2bbc79965b0ba0b1c80eb52601db974d7e1d1eaa00c56e7c627"
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "When the measurement is the contribution"
+  - "Validating labels an AI produced"
 sections:
   "Why this decision matters":
     - title: "\"Engaged\" is a word. Which number did you record?"

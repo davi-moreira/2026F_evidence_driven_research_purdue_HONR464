@@ -1,0 +1,99 @@
+---
+title: "Further Research Routes"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+Marisol studies how cities regulate housing. Her question is causal:
+did a new eviction-notice rule, adopted by one city on a known date,
+change how many tenants were evicted? She cannot assign the rule to
+anyone, so she declared the observational causal pathway at Studio 5.
+The observational causal lesson names the comparison her situation
+offers but does not teach it: a neighboring city that kept the old rule,
+observed month by month before and after the same date. That comparison
+has a warrant and a known way of failing, and Chapter 41 teaches both.
+
+## What a further route is
+
+A **further route** is a data strategy and answer strategy that a
+question may call for once the compass has placed it and you have
+declared a pathway, taught here as its own chapter. Marisol's question is
+still causal, it is still about the tenants of the city that changed its
+rule, and her pathway has not changed. The route adds the machinery that
+pathway needs when a date, a rule, or a cutoff did the assigning:
+difference-in-differences (comparing how much each city changed), a
+discontinuity (a jump in outcomes at a cutoff), or an interrupted time
+series (a break in one place's long trend).
+
+Every route is classified by the two questions you answered in Studio 2:
+which **kind** of answer your question wants (descriptive or causal),
+and how far it should **reach** (the data at hand, a population, or
+unseen cases). The question sets the kind, and choosing a route never
+changes it. What a route changes is what your design can license.
+Whenever an answer reaches past what you directly observed, or claims
+a cause, the route still names the crossing that licenses it. Sampling
+licenses a population claim. Prediction-time honesty plus a held-out
+check licenses a claim about unseen cases. Assignment or identification
+licenses a causal claim. Your declared model, inquiry, data strategy,
+and answer strategy still structure the design [@blair2023rdss]. A
+causal question whose route cannot identify the effect stays causal: you
+write "causal, currently unidentified" and say what evidence would
+change that.
+
+Two of the routes stretch the book's usual answer. A qualitative inquiry
+returns a bounded account of meanings, practices, or processes, where
+every claim traces back to what people said or wrote. An evidence
+synthesis returns a map or a pooled estimate built from other people's
+studies. Its kind follows your review question, and it inherits each
+study's warrant. Combining studies never creates a causal license that
+none of them had.
+
+## The six routes
+
+Read the row that sounds like your project. The milestones stay the
+same, and the last column shows the shape their products take on each
+route. The kind column describes the questions each route usually
+serves. It is not a rule: a survey experiment, an audit, or a review
+answers whatever kind your question asks for, and its chapter shows
+which pathway that puts you on.
+
+| Route | Kind and reach it usually serves | Pathway it extends | Data and answer strategy in your Research Contract | What Studios 5–11 produce on it |
+|---|---|---|---|---|
+| Chapter 41: [Natural experiments](natural-experiments.qmd) | Causal: the effect on the units the rule reached, in the periods you observed, or only at the cutoff for a discontinuity; a population only when those units were sampled from it | [Observational causal](../part3-pathways/12-observational-causal-research.qmd) | Records on both sides of an assignment you did not make, before and after a date or either side of a cutoff; a comparison of changes, a jump at the cutoff, or a break in a trend | A timing and cutoff document quoting the rule from its primary source; in the stress test, pre-period checks for a comparison of changes, a check that units did not sort around a cutoff, and a falsification test whose failing result you wrote down in advance |
+| Chapter 42: [Survey experiments](survey-experiments.qmd) | Set by your question. Descriptive when the experiment measures what respondents hold: a prevalence from a list experiment, stated preferences from a conjoint. Causal when you ask what a message, a frame, or an attribute does to their answers. Reach: your respondents, a population only when your sampling licenses it | [Experimental descriptive](../part3-pathways/13-experimental-descriptive-research.qmd) when your question asks what respondents hold; [experimental causal](../part3-pathways/15-experimental-causal-research.qmd) when it asks what a message, frame, or attribute does. The question decides, not the instrument | A questionnaire in which you randomize a wording, a vignette, an attribute, or a list; a difference in mean counts, AMCEs or marginal means, or a difference in mean support, each with an interval | The instrument written word for word with its randomization plan, a simulation of the interval your sample will give, a plan for failed attention and manipulation checks, and a permission record |
+| Chapter 43: [Audit studies](audit-studies.qmd) | Usually descriptive: the net response gap for these decision makers, or this AI system build, in this period; a defined list only when you sampled from it. A question about the effect of the signal itself reads the same contrast as causal | [Experimental descriptive](../part3-pathways/13-experimental-descriptive-research.qmd); [experimental causal](../part3-pathways/15-experimental-causal-research.qmd) when your question asks for the signal's effect | Cases identical except for one attribute, sent to decision makers or to a model; the response gap, with an interval that treats the decision maker, the posting, or the case template as the case | For an AI audit, a run record (model build, date, every setting, and a scoring rule written before the first run); for an audit of people, a permission record, and usually a reanalysis of published open data |
+| Chapter 44: [Text as data](text-as-data.qmd) | Descriptive: the corpus you hold, with the random human-coded subset as its crossing when humans read only part of it, or a population only with a defended corpus frame; unseen documents, the prediction position, when you train a classifier for new ones. A causal question makes text the outcome of a causal design, which must carry the identification | [Observational descriptive](../part3-pathways/11-observational-descriptive-research.qmd), and [prediction](../part3-pathways/14-prediction-and-generalization.qmd) for classifiers | A corpus with a written frame and a codebook; human coding, or model labels corrected with a random human-coded subset, reported with an interval | A written corpus frame with its likely gaps, the codebook, an agreement check between two coders, a validation table, and a corrected share with its interval |
+| Chapter 45: [Qualitative inquiry](qualitative-inquiry.qmd) | Descriptive accounts of meanings, practices, or processes in the cases you studied, the data at hand; transferable only as far as your description lets a reader judge, never a prevalence claim; a causal question stays causal, currently unidentified, unless a within-case design such as process tracing carries it | [Observational descriptive](../part3-pathways/11-observational-descriptive-research.qmd) | Interviews or documents from purposively chosen cases; thematic analysis with an evidence trail | A case-selection record, an interview guide, a consent and anonymization record, and an evidence trail from excerpt to code to theme to claim |
+| Chapter 46: [Evidence synthesis](evidence-synthesis.qmd) | Set by your review question. The included studies' designs set what the answer can license: pooled randomized experiments can support a causal claim, while a pile of observational comparisons leaves a causal question currently unidentified. Reach: for a map, every eligible study, warranted by your search log; a pooled effect describes settings like those studied and reported | The pathway your review question calls for, applied to the included studies and run as a multi-stage design ([Hybrid and complex designs](../part3-pathways/16-hybrid-and-complex-designs.qmd)) | A protocol with eligibility fixed before you search, a search log, and a map of the studies or a small meta-analysis | A review protocol, the search log, a flow diagram, a screening record with its second check, an extraction form, and a forest plot if you pool |
+
+In each route chapter, the **It is your turn** section walks you through
+writing the route's version of your Research Contract lines.
+
+## What AI does on these routes
+
+A language model can draft a codebook for you to revise, suggest search
+strings for a review, or write the code that randomizes a survey
+experiment. Each route also has its own way for the tool to fail. It can
+call a plain before-and-after comparison "difference-in-differences",
+return a supporting quote that appears nowhere in the document, or treat
+fifty runs of one résumé prompt as fifty different résumés. Each chapter
+names its failure and a check that can catch it. Which comparison you
+defend, which documents count, and whose accounts you gather stay your
+decisions. *AI is your arm and your research assistant, not your brain.*
+
+## Beyond this book
+
+Some designs ask for more than one project can supply without a mentor.
+Instrumental variables, synthetic control, difference-in-differences with
+staggered adoption, ethnography, qualitative comparative analysis,
+network analysis, and Bayesian analysis each rest on assumptions or
+interpretive skills that take supervised practice to defend. The appendix
+[Further Designs: A Field Guide](../further-designs.qmd) gives each one a
+short entry: what it answers, what licenses the answer, what it demands
+beyond this book, what AI can do for it, and where to learn it. Use it to
+recognize a design your question seems to need, then decide whether to
+learn it with a mentor or keep your project on a route taught here.

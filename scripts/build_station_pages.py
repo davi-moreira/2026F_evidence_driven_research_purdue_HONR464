@@ -18,6 +18,13 @@ checkpoint ids. Sources:
     hands_forward, contributions)
   - planning/BOOK_ASSESSMENTS.yml — the authored rubric per checkpoint
 
+D83 (book-only further routes): a `scope: book-only` lesson is not one of
+its studio's lessons, so it is off the opener's lesson list and the
+milestone's checklist. The opener of the studio it extends gains a generated
+"Beyond the five pathways" section instead: the authored
+`further_routes_intro` from BOOK_STATIONS.yml, then one line per further
+route (display number, title, relative link).
+
 Old `stations/stationNN-*.html` URLs stay alive through opener aliases, and
 the historical `#checkpoint` anchor lands on the opener's milestone
 anticipation. Milestones are VERSIONED, not locked passes (D35): every
@@ -37,8 +44,8 @@ import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from book_manifest import (active_lessons, load_architecture,  # noqa: E402
-                           require_lock)
+from book_manifest import (active_lessons, is_book_only,  # noqa: E402
+                           load_architecture, require_lock)
 import milestone_carry_forward as carry_forward  # noqa: E402
 
 STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
@@ -186,11 +193,24 @@ def opening_block(spec: dict) -> str:
             f"{spec['opening_move'].strip()}\n\n")
 
 
-def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
+def further_block(spec: dict, further: list[dict]) -> str:
+    """D83: the book-only further routes that extend this studio, after its
+    pathway guide. Links are relative (book/studios/ -> book/<source>)."""
+    if not further:
+        return ""
+    lines = "\n".join(f"- [Lesson {l['display']} — {l['title']}]"
+                      f"(../{l['source']})" for l in further)
+    return (f"## Beyond the five pathways {{#further-routes}}\n\n"
+            f"{spec['further_routes_intro'].strip()}\n\n{lines}\n\n")
+
+
+def opener_page(st: dict, spec: dict, lessons: list[dict], n: int,
+                further: list[dict] | None = None) -> str:
     rails_names = " · ".join(RAILS[k] for k in ("ethics", "evidence"))
     slug = st["id"]
     route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n\n"
                    if spec.get("route_guide") else "")
+    route_block += further_block(spec, further or [])
     genre_block = (f"## Choosing your format\n\n{spec['genre_guide']}\n\n"
                    if spec.get("genre_guide") else "")
     acq_block = (f"## Before you can work this studio\n\n"
@@ -400,7 +420,15 @@ def render_all() -> dict[Path, str]:
             sys.exit(f"✗ station {st['id']} has no entry in BOOK_STATIONS.yml")
         spec = spec_by_id[st["id"]]
         n = st["rank"]
-        mine = [l for l in lessons if l["station"] == st["id"]]
+        # D83: book-only lessons are not the studio's lessons; they are
+        # listed on its opener as further routes, never on the milestone.
+        mine = [l for l in lessons
+                if l["station"] == st["id"] and not is_book_only(l)]
+        further = [l for l in lessons
+                   if l["station"] == st["id"] and is_book_only(l)]
+        if further and not spec.get("further_routes_intro"):
+            sys.exit(f"✗ station {st['id']}: book-only further routes but no "
+                     f"authored `further_routes_intro`")
         missing = [l["id"] for l in mine if l["id"] not in
                    (spec.get("contributions") or {})]
         if missing:
@@ -408,7 +436,7 @@ def render_all() -> dict[Path, str]:
                      f"entry for lesson(s) {', '.join(missing)}")
         slug = st["id"].replace("-", "_")
         rb = rubric_by_station.get(st["id"])
-        out[OUT_DIR / opener_rel(st)] = opener_page(st, spec, mine, n)
+        out[OUT_DIR / opener_rel(st)] = opener_page(st, spec, mine, n, further)
         out[OUT_DIR / milestone_rel(st)] = milestone_page(
             st, spec, mine, n, stations, spec_by_id, idx, rb)
         out[NB_DIR / f"studio{n:02d}_{slug}.ipynb"] = json.dumps(

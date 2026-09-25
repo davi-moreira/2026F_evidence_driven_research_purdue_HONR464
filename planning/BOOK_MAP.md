@@ -10,7 +10,8 @@ RDSS remains the assigned theory text; EDR|AI is the course's own AI-era
 research manual (D20/D25). Chapter display numbers are DERIVED labels from
 manifest rank — lesson ids and canonical URLs are the stable identifiers.
 The **primary notebook** column is the course-loop mapping consumed by
-`scripts/build_material_page.py` and checked by `scripts/validate_book_sync.py`.
+`scripts/build_material_page.py` and checked by `scripts/validate_book_sync.py`;
+"— (book only)" marks a further route the course does not adopt (D83).
 
 Book project: `book/` (Quarto book) rendered into `docs/book/`.
 
@@ -56,3 +57,9 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | VI | 38 | Managing Multiple AI Agents | nb16 |
 | VI | 39 | Conflicting Agents and Human Escalation | nb16 |
 | VI | 40 | Final Research and AI-Management Portfolio | nb16 |
+| VII — Further research routes | 41 | Natural Experiments: Difference-in-Differences, Discontinuities, and Interrupted Time Series | — (book only) |
+| VII | 42 | Survey Experiments: Vignettes, Conjoint, and List Experiments | — (book only) |
+| VII | 43 | Audit Studies: Testing How Institutions and AI Systems Treat Cases | — (book only) |
+| VII | 44 | Documents, Archives, and Text as Data | — (book only) |
+| VII | 45 | Qualitative Inquiry: Interviews, Documents, and Themes | — (book only) |
+| VII | 46 | Evidence Synthesis: Scoping Reviews and Small Meta-Analyses | — (book only) |

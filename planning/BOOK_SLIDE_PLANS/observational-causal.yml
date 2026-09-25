@@ -1,5 +1,8 @@
 lesson: observational-causal
-source_sha256: "0e12053616f14b4a454d1ea30bd74fd606cf5c0e5151cd90d5d48ffe6add4cbf"
+source_sha256: "c87e5aa6d0cf05f007af936b0dbef59a3fa1d74c1b9e97cd1af23ee3fa96833a"
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Process tracing: causal inference inside one case"
 sections:
   "Why this decision matters":
     - title: "Your advisor's reply: after is not because"

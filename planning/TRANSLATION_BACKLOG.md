@@ -300,3 +300,36 @@ updated when the D36 freeze lifts:
     reviewers (two workflow judges and the Codex partner run) rejected tuning
     the constructed data to make the wrong sentence true; the record is in
     `planning/CHAPTER_DEFECTS.md` D-04.
+
+## D83 — Further Research Routes (2026-09-25), EN only
+
+Everything below exists in English only and must be translated at the
+end-of-freeze pass:
+
+- **Six new lessons.** The chapters `book/part7-further-routes/{natural-experiments,
+  survey-experiments,audit-studies,text-as-data,qualitative-inquiry,
+  evidence-synthesis}.qmd`, the opener `further-routes-overview.qmd`, and the
+  appendix `book/further-designs.qmd`. Each needs its PT/ES file and its PT/ES
+  companion notebook: `notebooks/book/{pt,es}/ch41…ch46`.
+- **The new sections in ten existing chapters.** git diff 3324345 over:
+  - ch10, the declare-diagnose file
+  - ch11, 12, 14, 15 and 16
+  - ch17 and 18
+  - ch25 and 32
+
+  Also sync ch12's repointed IYT step 4 and the part1-overview "Choose your
+  path" paragraph.
+- **Preface.** The paragraph on Further Research Routes and the field guide in
+  `book/index.qmd`.
+- **Five new sim figures.** Their label keys in `L["book"]` in
+  `scripts/build_book_sim_figures.py`: `ne_*`, `se_*`, `aud_*`, `tad_*` and
+  `es_*`. The functions fall back to EN labels, so `--editions all` works
+  today but renders English text.
+- **Generator strings, EN only.** The Studio 5 "Beyond the five pathways"
+  section (`further_routes_intro` in BOOK_STATIONS.yml and the generator
+  heading), the further-route station pointer, and the notebook generator's
+  further-routes closing line and rubric sub-heading.
+- **New PT/ES registry and TOC entries**, when those editions unfreeze:
+  - the `sections:` registry entries;
+  - BOOK_REVIEW_STATUS keys;
+  - the TOC section.

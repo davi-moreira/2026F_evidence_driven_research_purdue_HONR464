@@ -4,8 +4,12 @@
 # "It is your turn" steps.
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: hybrid-complex-designs
-source_sha256: "b1e2a296f919709230516362e8a70066dddde78522da174ae5ac7dab330390ff"
+source_sha256: "b678124f2b232dfd229a2dcea87c96ae1812b384559090e3ccfed0b55cc7bb05"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Mixed methods: two kinds of evidence, one question"
+  - "When the simulation is the research"
 sections:
 
   "Why this decision matters":

@@ -1,8 +1,11 @@
 # Slide plan — Chapter 17, "Prediction and Generalization"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: prediction-generalization
-source_sha256: "a481e964f238af9a55b8153d94807a9793465d1cd60992f88a8941b9f802bc2d"
+source_sha256: "80445d31f01c60c85fc5a4ef04b290a20127e07c0a9a4ad7c3afaa69ad9a8337"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Forecasting over time: rolling-origin evaluation"
 sections:
 
   "Why this decision matters":

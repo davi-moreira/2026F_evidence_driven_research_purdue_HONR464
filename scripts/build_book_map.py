@@ -19,12 +19,16 @@ from pathlib import Path
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO / "scripts"))
+
+from book_manifest import not_adopted_ids                       # noqa: E402
+
 ARCH = REPO / "planning" / "BOOK_ARCHITECTURE.yml"
 CW = REPO / "planning" / "COURSE_BOOK_CROSSWALK.yml"
 LOCK = REPO / "planning" / ".crosswalk_lock.json"
 OUT = REPO / "planning" / "BOOK_MAP.md"
 
-ROMAN = {1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI"}
+ROMAN = {1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII"}
 
 HEADER = """\
 # BOOK_MAP — the course book EDR|AI (GENERATED)
@@ -39,7 +43,8 @@ RDSS remains the assigned theory text; EDR|AI is the course's own AI-era
 research manual (D20/D25). Chapter display numbers are DERIVED labels from
 manifest rank — lesson ids and canonical URLs are the stable identifiers.
 The **primary notebook** column is the course-loop mapping consumed by
-`scripts/build_material_page.py` and checked by `scripts/validate_book_sync.py`.
+`scripts/build_material_page.py` and checked by `scripts/validate_book_sync.py`;
+"— (book only)" marks a further route the course does not adopt (D83).
 
 Book project: `book/` (Quarto book) rendered into `docs/book/`.
 
@@ -48,10 +53,21 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 """
 
 
+class MappingError(ValueError):
+    """A lesson's course mapping is missing or contradictory."""
+
+
 def render() -> str:
-    """The generated BOOK_MAP content (no writes)."""
+    """The generated BOOK_MAP content (no writes).
+
+    Raises MappingError when an active lesson has no home anchor and is not
+    explicitly listed under the crosswalk's `not_adopted:` (D83), or when a
+    lesson is both not adopted and anchored. Only an explicit exclusion earns
+    the "— (book only)" marker; an accidental omission must fail.
+    """
     arch = yaml.safe_load(ARCH.read_text())
     cw = yaml.safe_load(CW.read_text())
+    book_only = not_adopted_ids(cw)
     parts = {p["id"]: p for p in arch["parts"]}
     primary = {}
     for r in cw["rows"]:
@@ -59,6 +75,7 @@ def render() -> str:
             if a.get("home_anchor"):
                 primary[a["lesson"]] = r["nb"]
     rows = []
+    problems = []
     active = sorted((l for l in arch["lessons"] if l["state"] == "active"),
                     key=lambda l: l["rank"])
     for i, l in enumerate(active, start=1):
@@ -69,7 +86,24 @@ def render() -> str:
         roman = ROMAN[part["rank"]]
         label = f"{roman} — {part['title_en']}" if i == 1 or \
             active[i - 2]["part"] != l["part"] else roman
-        rows.append(f"| {label} | {i} | {title} | {primary[l['id']]} |")
+        # D83: only a lesson the crosswalk explicitly lists under
+        # `not_adopted:` is "book only"; every other lesson needs its anchor.
+        if l["id"] in book_only:
+            if l["id"] in primary:
+                problems.append(f"{l['id']} is listed under not_adopted: but "
+                                f"also has a home anchor in {primary[l['id']]}")
+                continue
+            nb = "— (book only)"
+        elif l["id"] in primary:
+            nb = primary[l["id"]]
+        else:
+            problems.append(f"{l['id']} (chapter {i}) has no home_anchor "
+                            f"row in COURSE_BOOK_CROSSWALK.yml and is not "
+                            f"listed under not_adopted:")
+            continue
+        rows.append(f"| {label} | {i} | {title} | {nb} |")
+    if problems:
+        raise MappingError("; ".join(problems))
     return HEADER + "\n".join(rows) + "\n"
 
 
@@ -77,7 +111,13 @@ def main() -> int:
     if "--check" in sys.argv:
         # freshness only (round-8 P1): the on-disk projection must equal the
         # regenerated content; no writes, no lock requirement
-        if OUT.read_text() != render():
+        try:
+            fresh = render()
+        except MappingError as exc:
+            print(f"✗ BOOK_MAP cannot be generated — missing course mapping: "
+                  f"{exc}")
+            return 1
+        if OUT.read_text() != fresh:
             print("✗ planning/BOOK_MAP.md is STALE — re-run the validator "
                   "then scripts/build_book_map.py")
             return 1
@@ -90,7 +130,10 @@ def main() -> int:
         q = REPO / "planning" / name
         if hashlib.sha256(q.read_bytes()).hexdigest() != lock["manifests"][name]:
             sys.exit(f"✗ {name} changed since the lock — re-run the validator")
-    content = render()
+    try:
+        content = render()
+    except MappingError as exc:
+        sys.exit(f"✗ BOOK_MAP not written — missing course mapping: {exc}")
     OUT.write_text(content)
     n = content.count("\n| ") + 1
     print(f"✓ BOOK_MAP.md generated — {sum(1 for l in content.splitlines() if l.startswith('| '))-1} table rows")

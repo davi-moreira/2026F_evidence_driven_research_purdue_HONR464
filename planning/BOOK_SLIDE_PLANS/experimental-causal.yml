@@ -1,8 +1,11 @@
 # Slide plan — Chapter 18, "Experimental Causal Research"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: experimental-causal
-source_sha256: "bd92cfef5e20e2f55606b48b24d68b9aae2f591f33e1dcaca9573b28a83fac98"
+source_sha256: "bf33fd531d1981901a496031d369e3bc8a992fb9c61044a8ac6eb8ebac7c080c"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Within-unit designs: crossover, switchback, and N-of-1"
 sections:
 
   "Why this decision matters":

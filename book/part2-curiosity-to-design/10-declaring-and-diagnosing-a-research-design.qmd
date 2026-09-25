@@ -167,6 +167,129 @@ print(pd.DataFrame(designs).T.round(2).to_string())
 print("\nsize cured the variance. it did nothing for the opt-in design's bias")
 ```
 
+## Preregistration and the pre-analysis plan
+
+Your checkout design passed its diagnosis at 400 shoppers per version. Before the
+first shopper taps anything, you do one more thing with it: you post it where
+anyone can read it, with a date stamp you cannot edit later.
+
+**Preregistration** is a public, time-stamped record of your question and your
+plan, filed before you see the outcomes [@nosek2018preregistration]. *Example:* a
+dated entry on a public registry saying that you will compare checkout seconds
+between shoppers randomly shown the reorder button and shoppers who were not.
+
+A **pre-analysis plan** is the detailed part of that record: every choice that
+turns raw data into your reported number, written precise enough that a stranger
+could compute it. *Example:* "The outcome is seconds from cart to payment for
+completed checkouts. The estimate is the difference in group means. We flag an
+effect when that gap exceeds 1.96 standard errors. Phones versus laptops is the
+only subgroup we will test." RDSS recommends that the plan center on the design
+declaration itself, the same model, inquiry, data strategy, and answer strategy you
+just wrote as code, ideally with mock analyses run on simulated data
+[@blair2023rdss]. Humphreys, Sanchez de la Sierra, and van der Windt went a step
+further: they wrote a complete mock report of their field experiment, running
+every planned analysis on fake treatment assignments before the real analysis
+[@humphreys2013fishing]. Your declaration from this
+chapter is most of a plan already.
+
+Why bother, if you intend to be honest? Because the choices you leave open keep
+multiplying after the data arrive, and each one looks reasonable in the moment.
+Humphreys and his coauthors showed that fixing only the outcome and the treatment
+in advance still leaves wide room to go fishing through covariates and subgroups
+[@humphreys2013fishing]. The block below runs the checkout study in a world where
+the button does nothing at all. One analyst reports the full-sample comparison she
+wrote down in advance. Another looks at the data and then reports whichever of five
+sensible cuts clears the bar: everyone, phone shoppers, laptop shoppers, returning
+shoppers, or everyone after dropping checkouts slower than 200 seconds.
+
+```python
+import numpy as np
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# The button does NOTHING here: the true effect is ZERO seconds.
+n, runs = 400, 4_000            # about 400 shoppers per version, 4,000 runs
+
+def flags(secs, treated, keep):
+    """Difference in means, flagged when it exceeds 1.96 standard errors."""
+    a, b = secs[keep & treated], secs[keep & ~treated]
+    se = np.sqrt(a.var(ddof=1) / len(a) + b.var(ddof=1) / len(b))
+    return abs(a.mean() - b.mean()) > 1.96 * se
+
+planned = forked = 0
+for _ in range(runs):
+    secs = rng.normal(150, 32, size=2 * n)
+    phone = rng.random(2 * n) < 0.5
+    returning = rng.random(2 * n) < 0.5
+    treated = rng.random(2 * n) < 0.5
+    everyone = np.full(2 * n, True)
+    paths = [everyone, phone, ~phone, returning, secs < 200]  # the last one drops
+    hits = [flags(secs, treated, keep) for keep in paths]     # slow checkouts
+    planned += hits[0]          # the one analysis written down in advance
+    forked += any(hits)         # report whichever path "worked"
+print(f"false alarms, planned analysis : {planned / runs:.1%}")
+print(f"false alarms, best of 5 paths  : {forked / runs:.1%}")
+print("\nfive sensible choices, made after looking, loosen a 5% rule")
+```
+
+The planned analysis cries effect in 4.5% of the 4,000 runs, close to the 5 percent
+its threshold promises. The analyst who picks a path after looking cries effect in
+16.9%, almost four times as often, for a button that saves no time. With 4,000
+runs, each rate has a simulation standard error below one percentage point, so the
+gap is no accident of this seed. How wide it grows in your study depends on how many
+paths you leave open. Nothing in the second analyst's report shows the forks she
+walked past.
+
+A plan can change, as long as the change is on the record. A **deviation** is any place where what you did
+differs from what you planned. *Example:* the retailer's app update changes how
+checkout time is logged halfway through, so you switch to the server's timestamp.
+Deviations are common, and the fix is to report each one: what changed, why, and
+whether you had seen outcomes when you decided [@nosek2018preregistration]. Readers
+can then judge the change for themselves. A silent change is the problem.
+
+The plan also sorts your findings into two honest piles. A **confirmatory
+analysis** is one you committed to in the plan; an **exploratory analysis** is one
+you chose after seeing data. *Example:* the phone-versus-laptop split is
+confirmatory; a pattern you notice by day of week is exploratory. Both belong in
+your report. What differs is what the threshold can tell a reader. For a committed
+test, the reader knows how many chances you gave yourself, so the stated 5 percent
+means something, provided the test's own assumptions hold. For an exploratory
+result, nobody knows how many paths were tried, so the same threshold no longer says
+how often such a finding turns up by chance [@nosek2018preregistration]. The
+committed rate also holds one test at a time. The example plan above makes two
+tests, the full sample and the phone-versus-laptop split, so it should also say how
+it handles that second chance, for instance with a stricter threshold. Label every
+result with the pile it came from.
+
+When the data already exist, as with a public election file in political science
+or a firm's past sales records, a time stamp cannot show you never peeked. Then you
+say plainly what you have and have not looked at, write the plan before opening the
+outcome columns, or split the file and seal one part until your exploring is done
+[@nosek2018preregistration]. Your credibility rests on that record, and a reader
+may still discount it.
+
+Some journals go further with **registered reports**, a format in which reviewers
+judge your question and plan before the results exist and the journal can accept
+the paper in principle, whatever the results turn out to be, provided you carry out
+the approved plan [@chambers2013registered].
+Neither format makes a design sound. The opt-in checkout design, preregistered
+word for word, still centers on 14 seconds. And a vague plan leaves the forks open:
+when Ofosu and Posner read 195 plans filed on two social-science registries in
+2011–2016, they found wide variation in whether the plans were clear and precise
+enough to stop fishing [@ofosu2023preanalysis].
+
+An AI tool is a fast drafter here. Give it your declared code and it will produce
+a plan template and list the choices your declaration left unstated, such as
+exclusions, missing outcomes, and subgroups. It also fails in two predictable ways.
+It fills gaps silently with its own defaults, and it writes soft sentences like
+"we will explore heterogeneity" that commit you to nothing. After the data arrive,
+an agentic tool can run dozens of specifications in seconds, which makes the
+forking paths cheaper than ever. Which analysis is primary, and the decision to
+post the plan with your name on it, stay with you. Systematic reviews register
+their protocols in the same spirit; the
+[evidence-synthesis route](../part7-further-routes/evidence-synthesis.qmd) shows
+what that plan contains.
+
 ## An AI failure case
 
 You paste your confounded observational design and ask, "My estimate is noisy. What

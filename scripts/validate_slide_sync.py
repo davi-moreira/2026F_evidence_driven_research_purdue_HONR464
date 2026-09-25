@@ -10,10 +10,13 @@ Five checks, in the order they fail usefully:
 
   1. FRESH        every deck on disk is byte-identical to a fresh build
   2. PLAN AGE     every slide plan's `source_sha256` matches its chapter now
-  3. COVERAGE     every active lesson lands on exactly one studio deck, and
-                  every studio with lessons has a deck
+  3. COVERAGE     every studio lesson lands on exactly one studio deck, and
+                  every studio with lessons has a deck (D83: a book-only
+                  lesson is on no deck and needs no plan)
   4. FIDELITY     every claim-bearing plan bullet's citation keys exist in
-                  book/references.bib, and no plan invents a section heading
+                  book/references.bib, no plan invents a section heading, and
+                  every D83 `omit:` heading is an exact, prose `##` heading of
+                  the chapter (never builder-owned, never also planned)
   5. VOICE        the student-facing voice rules that apply to slide text
 
     .venv/bin/python scripts/validate_slide_sync.py            # report
@@ -35,9 +38,10 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 import slide_parts as sp                                        # noqa: E402
-from book_manifest import active_lessons                        # noqa: E402
-from build_studio_slides import (PLANS, build_deck, load_plan,   # noqa: E402
-                                 studios)
+from book_manifest import studio_lessons                        # noqa: E402
+from build_studio_slides import (BUILDER_OWNED, PLANS,           # noqa: E402
+                                 build_deck, load_plan,
+                                 omit_problems, studios)
 
 BOOK = REPO / "book"
 BIB = BOOK / "references.bib"
@@ -51,8 +55,8 @@ AI_TELLS = [
     "in today's data-driven", "when it comes to",
 ]
 
-#: The builder owns these sections; a plan entry for one is dead configuration.
-BUILDER_OWNED = {"an ai failure case", "it is your turn"}
+#: BUILDER_OWNED (imported): the builder owns these sections; a plan entry
+#: for one is dead configuration, and an omission of one is refused.
 
 
 def bib_keys() -> set[str]:
@@ -92,7 +96,12 @@ def main() -> None:
 
     # -- 1. every deck matches a fresh build ---------------------------------
     for st in all_studios:
-        text, _ = build_deck(st)
+        try:
+            text, _ = build_deck(st)
+        except ValueError as exc:       # an unresolved `omit:` (check 4)
+            fail.append(f"deck lecture_slides/{st['qmd'].name} cannot be "
+                        f"built: {str(exc).splitlines()[0]}")
+            continue
         out = st["qmd"]
         if not out.exists():
             fail.append(f"deck missing: {out.relative_to(REPO)}")
@@ -101,7 +110,7 @@ def main() -> None:
                         f"scripts/build_studio_slides.py")
 
     # -- 3. coverage ---------------------------------------------------------
-    lessons = active_lessons()
+    lessons = studio_lessons()              # D83: book-only lessons: no deck
     placed = {l["id"] for st in all_studios for l in st["lessons"]}
     for l in lessons:
         if l["id"] not in placed:
@@ -165,6 +174,14 @@ def main() -> None:
                         fail.append(f"{where}: {heading} #{i} figure "
                                     f"{slide['figure']!r} is not in that "
                                     f"section")
+
+        # D83: `omit:` keeps a chapter section off the deck. Each entry must
+        # be an EXACT `##` heading (the builder matches case-sensitively), a
+        # prose section (builder-owned ones cannot be omitted), and not also
+        # planned (its slides would be dead configuration).
+        # The check itself lives in the builder (omit_problems), which runs
+        # it before writing anything; sharing it keeps the two in agreement.
+        fail.extend(omit_problems(l, plan, page))
 
         # 4. citation integrity + 5. voice, over every authored string
         for locator, text in plan_text(plan):

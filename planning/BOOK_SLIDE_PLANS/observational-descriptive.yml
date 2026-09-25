@@ -1,8 +1,13 @@
 # Slide plan — Chapter 14, "Observational Descriptive Research"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: observational-descriptive
-source_sha256: "c859177ec9fc313cee6f28cd096ef2b7a7da90594de7e20893dbd8e5812fb54c"
+source_sha256: "508e293a05d8b8a0bf1945cd5914bd9b86391e234978b8fdf8fd594f06d82589"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Description over time"
+  - "Description over space"
+  - "A language model is not a sample of people"
 sections:
 
   "Why this decision matters":

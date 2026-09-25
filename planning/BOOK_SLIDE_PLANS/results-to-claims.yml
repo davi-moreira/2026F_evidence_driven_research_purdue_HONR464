@@ -1,8 +1,12 @@
 # Slide plan — Chapter 28, "From Results to Claims"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: results-to-claims
-source_sha256: "2dc3bcd9768df955fc9f137a4a2b35b87a815edb18643f44d9e09b0af151345d"
+source_sha256: "ed16033518aadc487c10160906181d388652e9d6d90e40db4308d4a5dc9c354c"
 
+# D83: book-only sections (further-route material) kept off the studio deck.
+omit:
+  - "Who it works for and why"
+  - "Claims that travel"
 sections:
 
   "Why this decision matters":

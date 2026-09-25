@@ -1043,3 +1043,230 @@ numbers:
       - {text: "runs the experiment 2,000 times", value: 2000, source: "fig_ch22.reps", tolerance: 0}
       - {text: "2,000 measured vehicle effects", value: 2000, source: "fig_ch22.reps", tolerance: 0}
       - {text: "measures twelve matched vehicle", value: 12, source: "fig_ch22.pairs", tolerance: 0}
+  # D83 (2026-09-25): the five further-route simulations (Chapters 41-44, 46).
+  # Every number the prose and alt text state is bound to fig_<route> in
+  # scripts/build_book_sim_figures.py.
+  - id: natural-experiments-sim
+    file: book/part7-further-routes/natural-experiments.qmd
+    claims:
+      # setup (prose)
+      - {text: "same true effect of -1.0 worker", source: "fig_natural_experiments.tau", tolerance: 0}
+      - {text: "already losing 0.4 workers per quarter", source: "fig_natural_experiments.pre_slide", tolerance: 0}
+      - {text: "2,000 simulated grant applicants", value: 2000, source: "fig_natural_experiments.n_applicants", tolerance: 0}
+      - {text: "a true jump of 1.5 jobs", source: "fig_natural_experiments.jump", tolerance: 0}
+      # left panel (prose)
+      - {text: "the three leads sit between +0.07 and", source: "fig_natural_experiments.par_m3", tolerance: 0.005}
+      - {text: "+0.14 workers, each with an interval", source: "fig_natural_experiments.par_m2", tolerance: 0.005}
+      - {text: "an interval of about plus or minus 0.4 that covers zero", value: 0.4, source: "fig_natural_experiments.par_hw_m4", tolerance: 0.05}
+      - {text: "with the four before, comes out at -1.15", source: "fig_natural_experiments.did_par", tolerance: 0.005}
+      - {text: "(95% interval -1.36 to -0.95)", value: -1.36, source: "fig_natural_experiments.did_par_lo", tolerance: 0.005}
+      - {text: "(95% interval -1.36 to -0.95)", value: -0.95, source: "fig_natural_experiments.did_par_hi", tolerance: 0.005}
+      - {text: "+1.08 four quarters out", source: "fig_natural_experiments.vio_m4", tolerance: 0.005}
+      - {text: "+0.68 three quarters out", source: "fig_natural_experiments.vio_m3", tolerance: 0.005}
+      - {text: "+0.31 two quarters out", source: "fig_natural_experiments.vio_m2", tolerance: 0.005}
+      - {text: "sliding to -2.81 by the fourth quarter", source: "fig_natural_experiments.vio_p3", tolerance: 0.005}
+      - {text: "difference-in-differences reads -2.59", source: "fig_natural_experiments.did_vio", tolerance: 0.005}
+      - {text: "(95% interval -2.80 to -2.38)", value: -2.80, source: "fig_natural_experiments.did_vio_lo", tolerance: 0.005}
+      - {text: "(95% interval -2.80 to -2.38)", value: -2.38, source: "fig_natural_experiments.did_vio_hi", tolerance: 0.005}
+      - {text: "+0.31 with an interval that crosses zero", source: "fig_natural_experiments.vio_m2", tolerance: 0.005}
+      # right panel (prose)
+      - {text: "the estimated jump is 1.36 jobs", source: "fig_natural_experiments.rd10", tolerance: 0.005}
+      - {text: "(95% interval 0.77 to 1.94), against a true 1.5", value: 0.77, source: "fig_natural_experiments.rd10_lo", tolerance: 0.005}
+      - {text: "(95% interval 0.77 to 1.94), against a true 1.5", value: 1.94, source: "fig_natural_experiments.rd10_hi", tolerance: 0.005}
+      - {text: "(95% interval 0.77 to 1.94), against a true 1.5", value: 1.5, source: "fig_natural_experiments.jump", tolerance: 0}
+      - {text: "at 5 points it is 1.24 (0.44 to", value: 1.24, source: "fig_natural_experiments.rd5", tolerance: 0.005}
+      - {text: "at 5 points it is 1.24 (0.44 to", value: 0.44, source: "fig_natural_experiments.rd5_lo", tolerance: 0.005}
+      - {text: "2.05), wider because fewer", source: "fig_natural_experiments.rd5_hi", tolerance: 0.005}
+      - {text: "at 20 points it is 1.23 (0.80 to 1.66)", value: 1.23, source: "fig_natural_experiments.rd20", tolerance: 0.005}
+      - {text: "at 20 points it is 1.23 (0.80 to 1.66)", value: 0.80, source: "fig_natural_experiments.rd20_lo", tolerance: 0.005}
+      - {text: "at 20 points it is 1.23 (0.80 to 1.66)", value: 1.66, source: "fig_natural_experiments.rd20_hi", tolerance: 0.005}
+      - {text: "counts 187 applicants just below", source: "fig_natural_experiments.below", tolerance: 0}
+      - {text: "162 just above", source: "fig_natural_experiments.above", tolerance: 0}
+      - {text: "about 1.3 standard errors", source: "fig_natural_experiments.density_z_abs", tolerance: 0.05}
+      # stress test (prose; S-shaped curve, same applicants and noise)
+      - {text: "and the true jump of 1.5 are unchanged", source: "fig_natural_experiments.jump", tolerance: 0}
+      - {text: "At 5 points the estimate is 1.27 (0.46 to", value: 1.27, source: "fig_natural_experiments.rdb5", tolerance: 0.005}
+      - {text: "At 5 points the estimate is 1.27 (0.46 to", value: 0.46, source: "fig_natural_experiments.rdb5_lo", tolerance: 0.005}
+      - {text: "2.08), and at 10 points 1.54 (0.95 to 2.12)", value: 2.08, source: "fig_natural_experiments.rdb5_hi", tolerance: 0.005}
+      - {text: "2.08), and at 10 points 1.54 (0.95 to 2.12)", value: 1.54, source: "fig_natural_experiments.rdb10", tolerance: 0.005}
+      - {text: "2.08), and at 10 points 1.54 (0.95 to 2.12)", value: 0.95, source: "fig_natural_experiments.rdb10_lo", tolerance: 0.005}
+      - {text: "2.08), and at 10 points 1.54 (0.95 to 2.12)", value: 2.12, source: "fig_natural_experiments.rdb10_hi", tolerance: 0.005}
+      - {text: "At 20 points it is 2.08 (1.65 to 2.51)", value: 2.08, source: "fig_natural_experiments.rdb20", tolerance: 0.005}
+      - {text: "At 20 points it is 2.08 (1.65 to 2.51)", value: 1.65, source: "fig_natural_experiments.rdb20_lo", tolerance: 0.005}
+      - {text: "At 20 points it is 2.08 (1.65 to 2.51)", value: 2.51, source: "fig_natural_experiments.rdb20_hi", tolerance: 0.005}
+      # alt text
+      - {text: "orange leads fall from +1.08 at quarter -4", source: "fig_natural_experiments.vio_m4", tolerance: 0.005}
+      - {text: "to +0.31 at quarter -2", source: "fig_natural_experiments.vio_m2", tolerance: 0.005}
+      - {text: "keep falling to -2.81 by quarter 3", source: "fig_natural_experiments.vio_p3", tolerance: 0.005}
+      - {text: "dashed line at the true effect of -1.0", source: "fig_natural_experiments.tau", tolerance: 0}
+      - {text: "estimated jump 1.36, 95% interval 0.77 to 1.94", source: "fig_natural_experiments.rd10", tolerance: 0.005}
+      - {text: "estimated jump 1.36, 95% interval 0.77 to 1.94", value: 0.77, source: "fig_natural_experiments.rd10_lo", tolerance: 0.005}
+      - {text: "estimated jump 1.36, 95% interval 0.77 to 1.94", value: 1.94, source: "fig_natural_experiments.rd10_hi", tolerance: 0.005}
+  - id: survey-experiments-sim
+    file: book/part7-further-routes/survey-experiments.qmd
+    claims:
+      # simulation set-up
+      - {text: "only 45 percent of those with the trait answer truthfully", value: 45, source: "fig_survey_experiments.admit", tolerance: 0}
+      - {text: "with 800 respondents each choosing between two offers five times", value: 800, source: "fig_survey_experiments.n_resp_conjoint", tolerance: 0}
+      - {text: "with 800 respondents each choosing between two offers five times", value: 5, source: "fig_survey_experiments.n_tasks", tolerance: 0}
+      # left panel, prose
+      - {text: "at 1,200 respondents it reports 9.8 percent, plus or minus 1.7", value: 9.8, source: "fig_survey_experiments.direct_1200", tolerance: 0.05}
+      - {text: "at 1,200 respondents it reports 9.8 percent, plus or minus 1.7", value: 1.7, source: "fig_survey_experiments.direct_hw_1200", tolerance: 0.05}
+      - {text: "the square still sits near 8 percent, less than half the true 20", value: 8, source: "fig_survey_experiments.direct_4800", tolerance: 0.5}
+      - {text: "the square still sits near 8 percent, less than half the true 20", value: 20, source: "fig_survey_experiments.truth", tolerance: 0}
+      - {text: "at 1,200 respondents it reports 16.2 percent, plus or minus 10.5", value: 16.2, source: "fig_survey_experiments.list_1200", tolerance: 0.05}
+      - {text: "at 1,200 respondents it reports 16.2 percent, plus or minus 10.5", value: 10.5, source: "fig_survey_experiments.list_hw_1200", tolerance: 0.05}
+      - {text: "an interval about six times wider than the direct question's", value: 6, source: "fig_survey_experiments.hw_ratio_1200", tolerance: 0.5}
+      - {text: "at 300 respondents it reports 12.7, plus or minus 21.3", value: 12.7, source: "fig_survey_experiments.list_300", tolerance: 0.05}
+      - {text: "at 300 respondents it reports 12.7, plus or minus 21.3", value: 21.3, source: "fig_survey_experiments.list_hw_300", tolerance: 0.05}
+      - {text: "tighten to 19.6, plus or minus 5.4", value: 19.6, source: "fig_survey_experiments.list_4800", tolerance: 0.05}
+      - {text: "tighten to 19.6, plus or minus 5.4", value: 5.4, source: "fig_survey_experiments.list_hw_4800", tolerance: 0.05}
+      - {text: "look at 600 respondents, too: 29.7 percent", value: 29.7, source: "fig_survey_experiments.list_600", tolerance: 0.05}
+      # right panel, prose
+      - {text: "by 8.9 points (6.6 to 11.6)", value: 8.9, source: "fig_survey_experiments.amce_rem5", tolerance: 0.05}
+      - {text: "by 8.9 points (6.6 to 11.6)", value: 6.6, source: "fig_survey_experiments.amce_rem5_lo", tolerance: 0.05}
+      - {text: "by 8.9 points (6.6 to 11.6)", value: 11.6, source: "fig_survey_experiments.amce_rem5_hi", tolerance: 0.05}
+      - {text: "moved it by 15.5 points (12.7 to 17.9)", value: 15.5, source: "fig_survey_experiments.amce_sal20", tolerance: 0.05}
+      - {text: "moved it by 15.5 points (12.7 to 17.9)", value: 12.7, source: "fig_survey_experiments.amce_sal20_lo", tolerance: 0.05}
+      - {text: "moved it by 15.5 points (12.7 to 17.9)", value: 17.9, source: "fig_survey_experiments.amce_sal20_hi", tolerance: 0.05}
+      - {text: "by only 5.6 (2.8 to 8.3)", value: 5.6, source: "fig_survey_experiments.amce_sal10", tolerance: 0.05}
+      - {text: "by only 5.6 (2.8 to 8.3)", value: 2.8, source: "fig_survey_experiments.amce_sal10_lo", tolerance: 0.05}
+      - {text: "by only 5.6 (2.8 to 8.3)", value: 8.3, source: "fig_survey_experiments.amce_sal10_hi", tolerance: 0.05}
+      - {text: "moved choices by 1.9 points, with an interval from 0.0 to 4.2", value: 1.9, source: "fig_survey_experiments.amce_ai", tolerance: 0.05}
+      - {text: "moved choices by 1.9 points, with an interval from 0.0 to 4.2", value: 0.0, source: "fig_survey_experiments.amce_ai_lo", tolerance: 0.05}
+      - {text: "moved choices by 1.9 points, with an interval from 0.0 to 4.2", value: 4.2, source: "fig_survey_experiments.amce_ai_hi", tolerance: 0.05}
+      # concept example and failure-case rewrite (rounded copies of the same AMCEs)
+      - {text: "an amce of 9 points for \"five remote days\"", value: 9, source: "fig_survey_experiments.amce_rem5", tolerance: 0.2}
+      - {text: "by about 15 points, and five remote days by about 9", value: 15, source: "fig_survey_experiments.amce_sal20", tolerance: 0.6}
+      - {text: "by about 15 points, and five remote days by about 9", value: 9, source: "fig_survey_experiments.amce_rem5", tolerance: 0.2}
+      # alt text
+      - {text: "a dashed line at the true prevalence of 20 percent", value: 20, source: "fig_survey_experiments.truth", tolerance: 0}
+      - {text: "from 12.7 plus or minus 21.3 at 300", value: 12.7, source: "fig_survey_experiments.list_300", tolerance: 0.05}
+      - {text: "from 12.7 plus or minus 21.3 at 300", value: 21.3, source: "fig_survey_experiments.list_hw_300", tolerance: 0.05}
+      - {text: "to 19.6 plus or minus 5.4 at 4800", value: 19.6, source: "fig_survey_experiments.list_4800", tolerance: 0.05}
+      - {text: "to 19.6 plus or minus 5.4 at 4800", value: 5.4, source: "fig_survey_experiments.list_hw_4800", tolerance: 0.05}
+      - {text: "salary +10% at 5.6", value: 5.6, source: "fig_survey_experiments.amce_sal10", tolerance: 0.05}
+      - {text: "salary +20% at 15.5", value: 15.5, source: "fig_survey_experiments.amce_sal20", tolerance: 0.05}
+      - {text: "remote 2 days at 4.4", value: 4.4, source: "fig_survey_experiments.amce_rem2", tolerance: 0.05}
+      - {text: "remote 5 days at 8.9", value: 8.9, source: "fig_survey_experiments.amce_rem5", tolerance: 0.05}
+      - {text: "ai tools allowed at 1.9", value: 1.9, source: "fig_survey_experiments.amce_ai", tolerance: 0.05}
+  - id: audit-studies-sim
+    file: book/part7-further-routes/audit-studies.qmd
+    claims:
+      # prose
+      - {text: "whose true name gap is 6 points on average", source: "fig_audit_studies.true_gap", tolerance: 0}
+      - {text: "with 10 templates, the estimate came out at minus 10.0", value: -10.0, source: "fig_audit_studies.est_small", tolerance: 0.05}
+      - {text: "with 10 templates, the estimate came out at minus 10.0", value: 10, source: "fig_audit_studies.n_small", tolerance: 0}
+      - {text: "with an interval from minus 55.7 to plus 35.7", value: -55.7, source: "fig_audit_studies.lo_small", tolerance: 0.05}
+      - {text: "with an interval from minus 55.7 to plus 35.7", value: 35.7, source: "fig_audit_studies.hi_small", tolerance: 0.05}
+      - {text: "with 320 templates the estimate is 7.8", value: 320, source: "fig_audit_studies.n_large", tolerance: 0}
+      - {text: "with 320 templates the estimate is 7.8", value: 7.8, source: "fig_audit_studies.est_large", tolerance: 0.05}
+      - {text: "the interval runs from plus 0.2 to plus 15.5, close to the true 6", value: 0.2, source: "fig_audit_studies.lo_large", tolerance: 0.05}
+      - {text: "the interval runs from plus 0.2 to plus 15.5, close to the true 6", value: 15.5, source: "fig_audit_studies.hi_large", tolerance: 0.05}
+      - {text: "at 20 templates one run landed at plus 30.0", value: 30.0, source: "fig_audit_studies.est_20", tolerance: 0.05}
+      - {text: "the same 1,000 outputs, 10 templates run 50 times per name", value: 1000, source: "fig_audit_studies.n_outputs", tolerance: 0}
+      - {text: "the same 1,000 outputs, 10 templates run 50 times per name", value: 10, source: "fig_audit_studies.n_templates", tolerance: 0}
+      - {text: "the same 1,000 outputs, 10 templates run 50 times per name", value: 50, source: "fig_audit_studies.n_repeats", tolerance: 0}
+      - {text: "one estimate of 8.6 points", source: "fig_audit_studies.gap_first", tolerance: 0.05}
+      - {text: "as a new case and runs from 2.5 to 14.7", value: 2.5, source: "fig_audit_studies.naive_lo", tolerance: 0.05}
+      - {text: "as a new case and runs from 2.5 to 14.7", value: 14.7, source: "fig_audit_studies.naive_hi", tolerance: 0.05}
+      - {text: "one case and runs from minus 6.4 to 23.6", value: -6.4, source: "fig_audit_studies.clust_lo", tolerance: 0.05}
+      - {text: "one case and runs from minus 6.4 to 23.6", value: 23.6, source: "fig_audit_studies.clust_hi", tolerance: 0.05}
+      - {text: "across 1,000 reruns of the whole audit", value: 1000, source: "fig_audit_studies.n_reruns", tolerance: 0}
+      - {text: "covered the true gap only 67 percent of the time", source: "fig_audit_studies.pct_naive", tolerance: 0.5}
+      - {text: "the clustered interval covered it 94 percent of the time", source: "fig_audit_studies.pct_clust", tolerance: 0.5}
+      # alt text
+      - {text: "minus 55.7 to plus 35.7 at 10 templates", value: -55.7, source: "fig_audit_studies.lo_small", tolerance: 0.05}
+      - {text: "narrows to plus 0.2 to plus 15.5 at 320", value: 0.2, source: "fig_audit_studies.lo_large", tolerance: 0.05}
+      - {text: "narrows to plus 0.2 to plus 15.5 at 320", value: 15.5, source: "fig_audit_studies.hi_large", tolerance: 0.05}
+      - {text: "estimate 8.6 points", source: "fig_audit_studies.gap_first", tolerance: 0.05}
+      - {text: "the orange naive interval runs from 2.5 to 14.7 and covers the truth in 67 percent", value: 67, source: "fig_audit_studies.pct_naive", tolerance: 0.5}
+      - {text: "the orange naive interval runs from 2.5 to 14.7", value: 2.5, source: "fig_audit_studies.naive_lo", tolerance: 0.05}
+      - {text: "the blue clustered interval runs from minus 6.4 to 23.6 and covers the truth in 94 percent", value: 94, source: "fig_audit_studies.pct_clust", tolerance: 0.5}
+      - {text: "the blue clustered interval runs from minus 6.4 to 23.6", value: 23.6, source: "fig_audit_studies.clust_hi", tolerance: 0.05}
+      - {text: "a dashed line marks the true gap of 6", value: 6, source: "fig_audit_studies.true_gap", tolerance: 0}
+  - id: text-as-data-sim
+    file: book/part7-further-routes/text-as-data.qmd
+    claims:
+      # 2026-09-25 revision: difference estimator + finite-population correction
+      - {text: "Over\n1,000 reruns, 96 percent is within noise", value: 96, source: "fig_text_as_data.cover_corrected", tolerance: 0.5}
+      - {text: "once you have coded 300 of its 6,000", value: 300, source: "fig_text_as_data.n_gold", tolerance: 0}
+      - {text: "Humans\napplied the codebook to only 300 of them", value: 300, source: "fig_text_as_data.n_gold", tolerance: 0}
+      # setup (prose)
+      - {text: "the same 200 releases, in which 15 percent", value: 200, source: "fig_text_as_data.n_pair", tolerance: 0}
+      - {text: "6,000 releases, 20 percent of them", value: 6000, source: "fig_text_as_data.n_corpus", tolerance: 0}
+      - {text: "a human codes a random 300", value: 300, source: "fig_text_as_data.n_gold", tolerance: 0}
+      - {text: "repeated 1,000 times", value: 1000, source: "fig_text_as_data.reruns", tolerance: 0}
+      # left panel (prose)
+      - {text: "agrees on 0.89 of the releases", source: "fig_text_as_data.careful_observed", tolerance: 0.006}
+      - {text: "chance alone would have produced 0.68", source: "fig_text_as_data.careful_chance", tolerance: 0.005}
+      - {text: "their kappa of 0.64", source: "fig_text_as_data.careful_kappa", tolerance: 0.005}
+      - {text: "agrees on 0.77 of the releases", source: "fig_text_as_data.lazy_observed", tolerance: 0.005}
+      - {text: "chance alone predicts 0.78", source: "fig_text_as_data.lazy_chance", tolerance: 0.005}
+      - {text: "the kappa of -0.03", source: "fig_text_as_data.lazy_kappa", tolerance: 0.005}
+      # right panel (prose)
+      - {text: "the true share in this corpus is 19.8 percent", source: "fig_text_as_data.true_share", tolerance: 0.05}
+      - {text: "reports 17.4 percent with an interval from 16.4 to 18.3", value: 17.4, source: "fig_text_as_data.ai_share", tolerance: 0.05}
+      - {text: "reports 17.4 percent with an interval from 16.4 to 18.3", value: 16.4, source: "fig_text_as_data.ai_lo", tolerance: 0.05}
+      - {text: "reports 17.4 percent with an interval from 16.4 to 18.3", value: 18.3, source: "fig_text_as_data.ai_hi", tolerance: 0.05}
+      - {text: "covered the truth 0 percent of the time", value: 0, source: "fig_text_as_data.cover_ai", tolerance: 0.5}
+      - {text: "16.7 percent, from 12.5 to 20.8", value: 16.7, source: "fig_text_as_data.human_share", tolerance: 0.05}
+      - {text: "16.7 percent, from 12.5 to 20.8", value: 12.5, source: "fig_text_as_data.human_lo", tolerance: 0.05}
+      - {text: "16.7 percent, from 12.5 to 20.8", value: 20.8, source: "fig_text_as_data.human_hi", tolerance: 0.05}
+      - {text: "covering the truth in 95 percent of reruns", value: 95, source: "fig_text_as_data.cover_human", tolerance: 0.5}
+      - {text: "17.7 percent from 14.5 to 20.9", value: 17.7, source: "fig_text_as_data.corrected_share", tolerance: 0.05}
+      - {text: "17.7 percent from 14.5 to 20.9", value: 14.5, source: "fig_text_as_data.corrected_lo", tolerance: 0.05}
+      - {text: "17.7 percent from 14.5 to 20.9", value: 20.9, source: "fig_text_as_data.corrected_hi", tolerance: 0.05}
+      - {text: "covered the truth in 96 percent of reruns", value: 96, source: "fig_text_as_data.cover_corrected", tolerance: 0.5}
+      # alt text
+      - {text: "shows 0.89, 0.68 and 0.64", value: 0.89, source: "fig_text_as_data.careful_observed", tolerance: 0.006}
+      - {text: "shows 0.89, 0.68 and 0.64", value: 0.68, source: "fig_text_as_data.careful_chance", tolerance: 0.005}
+      - {text: "shows 0.89, 0.68 and 0.64", value: 0.64, source: "fig_text_as_data.careful_kappa", tolerance: 0.005}
+      - {text: "shows 0.77, 0.78 and minus 0.03", value: 0.77, source: "fig_text_as_data.lazy_observed", tolerance: 0.005}
+      - {text: "shows 0.77, 0.78 and minus 0.03", value: 0.78, source: "fig_text_as_data.lazy_chance", tolerance: 0.005}
+      - {text: "shows 0.77, 0.78 and minus 0.03", value: -0.03, source: "fig_text_as_data.lazy_kappa", tolerance: 0.005}
+      - {text: "true share of 19.8 percent", source: "fig_text_as_data.true_share", tolerance: 0.05}
+      - {text: "estimate is 17.4 percent with a narrow interval from 16.4 to 18.3", value: 17.4, source: "fig_text_as_data.ai_share", tolerance: 0.05}
+      - {text: "estimate is 17.4 percent with a narrow interval from 16.4 to 18.3", value: 16.4, source: "fig_text_as_data.ai_lo", tolerance: 0.05}
+      - {text: "estimate is 17.4 percent with a narrow interval from 16.4 to 18.3", value: 18.3, source: "fig_text_as_data.ai_hi", tolerance: 0.05}
+      - {text: "annotated 0 percent of 1,000 reruns cover the truth", value: 0, source: "fig_text_as_data.cover_ai", tolerance: 0.5}
+      - {text: "annotated 0 percent of 1,000 reruns cover the truth", value: 1000, source: "fig_text_as_data.reruns", tolerance: 0}
+      - {text: "is 16.7 percent with a wide interval from 12.5 to 20.8, annotated 95 percent", value: 16.7, source: "fig_text_as_data.human_share", tolerance: 0.05}
+      - {text: "is 16.7 percent with a wide interval from 12.5 to 20.8, annotated 95 percent", value: 12.5, source: "fig_text_as_data.human_lo", tolerance: 0.05}
+      - {text: "is 16.7 percent with a wide interval from 12.5 to 20.8, annotated 95 percent", value: 20.8, source: "fig_text_as_data.human_hi", tolerance: 0.05}
+      - {text: "is 16.7 percent with a wide interval from 12.5 to 20.8, annotated 95 percent", value: 95, source: "fig_text_as_data.cover_human", tolerance: 0.5}
+      - {text: "is 17.7 percent with an interval from 14.5 to 20.9, annotated 96 percent", value: 17.7, source: "fig_text_as_data.corrected_share", tolerance: 0.05}
+      - {text: "is 17.7 percent with an interval from 14.5 to 20.9, annotated 96 percent", value: 14.5, source: "fig_text_as_data.corrected_lo", tolerance: 0.05}
+      - {text: "is 17.7 percent with an interval from 14.5 to 20.9, annotated 96 percent", value: 20.9, source: "fig_text_as_data.corrected_hi", tolerance: 0.05}
+      - {text: "is 17.7 percent with an interval from 14.5 to 20.9, annotated 96 percent", value: 96, source: "fig_text_as_data.cover_corrected", tolerance: 0.5}
+  - id: evidence-synthesis-sim
+    file: book/part7-further-routes/evidence-synthesis.qmd
+    claims:
+      # design constants
+      - {text: "where 30 canvassing experiments are run", value: 30, source: "fig_evidence_synthesis.k_run", tolerance: 0}
+      - {text: "the true average effect is 1.0 point", value: 1.0, source: "fig_evidence_synthesis.mu", tolerance: 0}
+      # prose: published pile
+      - {text: "Twelve published studies, most intervals overlapping", value: 12, source: "fig_evidence_synthesis.n_pub", tolerance: 0}
+      - {text: "pooled diamond at 1.80 points", value: 1.80, source: "fig_evidence_synthesis.pub_m", tolerance: 0.005}
+      - {text: "with an interval from 0.93 to 2.67", value: 0.93, source: "fig_evidence_synthesis.pub_lo", tolerance: 0.005}
+      - {text: "to 2.67. Half the rows", value: 2.67, source: "fig_evidence_synthesis.pub_hi", tolerance: 0.005}
+      - {text: "Half the rows are significant", value: 6, source: "fig_evidence_synthesis.n_sig_pub", tolerance: 0}
+      - {text: "Here the 18 hollow circles", value: 18, source: "fig_evidence_synthesis.n_unpub", tolerance: 0}
+      - {text: "most of them report less than the true 1.0 point", value: 11, source: "fig_evidence_synthesis.n_unpub_below_mu", tolerance: 0}
+      - {text: "Pool all 30 and you get 1.16 points", value: 1.16, source: "fig_evidence_synthesis.all_m", tolerance: 0.005}
+      - {text: "from 0.72 to 1.60 that contains the truth", value: 0.72, source: "fig_evidence_synthesis.all_lo", tolerance: 0.005}
+      - {text: "to 1.60 that contains the truth", value: 1.60, source: "fig_evidence_synthesis.all_hi", tolerance: 0.005}
+      - {text: "Pool the published 12 and the estimate is about 55 percent larger", value: 12, source: "fig_evidence_synthesis.n_pub", tolerance: 0}
+      - {text: "about 55 percent larger", value: 1.55, source: "fig_evidence_synthesis.inflation_ratio", tolerance: 0.01}
+      # figure caption
+      - {text: "Twelve published studies pool to 1.80 points", value: 1.80, source: "fig_evidence_synthesis.pub_m", tolerance: 0.005}
+      - {text: "while all 30 studies that were run pool to 1.16", value: 1.16, source: "fig_evidence_synthesis.all_m", tolerance: 0.005}
+      - {text: "against a true average of 1.0", value: 1.0, source: "fig_evidence_synthesis.mu", tolerance: 0}
+      # alt text
+      - {text: "with 12 blue square estimates", value: 12, source: "fig_evidence_synthesis.n_pub", tolerance: 0}
+      - {text: "spanning about 0.93 to 2.67", value: 0.93, source: "fig_evidence_synthesis.pub_lo", tolerance: 0.005}
+      - {text: "0.93 to 2.67, so the true average", value: 2.67, source: "fig_evidence_synthesis.pub_hi", tolerance: 0.005}
+      - {text: "centred near 1.8 and spanning", value: 1.8, source: "fig_evidence_synthesis.pub_m", tolerance: 0.05}
+      - {text: "12 filled blue dots are published and 18 hollow grey circles", value: 18, source: "fig_evidence_synthesis.n_unpub", tolerance: 0}
+      - {text: "pooled published at 1.80", value: 1.80, source: "fig_evidence_synthesis.pub_m", tolerance: 0.005}
+      - {text: "pooled all run at 1.16", value: 1.16, source: "fig_evidence_synthesis.all_m", tolerance: 0.005}

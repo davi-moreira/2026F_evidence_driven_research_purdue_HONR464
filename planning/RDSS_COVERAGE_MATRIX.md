@@ -38,7 +38,11 @@ EDR|AI's scope · *EDR|AI-original* = no RDSS counterpart.
 | 22 | Realization | adapted | Studios 6–7: acquisition routes, governed data, first reproducible analysis |
 | 23 | Integration | adapted | Studios 8–9: stress-testing and writing claims at licensed strength |
 | 24 | Epilogue | adapted | Studio 12: release decision and the next cycle |
-| — | RDSS's qualitative and mixed-method design entries | omitted | EDR|AI's declared scope is quantitative empirical projects |
+| 16.1 | Process tracing | adapted | D83: ch. 12 section "Process tracing: causal inference inside one case" |
+| 16 (DiD, RD, IV, synthetic control) | Observational causal designs | adapted / field guide | D83: ch. 41 Natural Experiments (DiD, event study, RD, ITS); IV, synthetic control and staggered DiD in Appendix C |
+| 17 (audit, list, conjoint) | Experimental descriptive designs | adapted | D83: ch. 42 Survey Experiments, ch. 43 Audit Studies |
+| 18/19 (meta-analysis; multi-method) | Complex designs | adapted | D83: ch. 46 Evidence Synthesis; ch. 16 mixed-methods section |
+| — | RDSS's qualitative and mixed-method design entries | adapted | D83: ch. 45 Qualitative Inquiry (bounded account with an evidence trail), ch. 44 Text as Data, ch. 16 mixed methods; QCA and ethnography in Appendix C |
 
 **EDR|AI-original (no RDSS counterpart):** the AI-direction spine (ch. 1–4:
 arm-not-brain, research director, SDIIVDD, ownership; the AI Research

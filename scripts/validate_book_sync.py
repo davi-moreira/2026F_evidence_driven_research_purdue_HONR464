@@ -12,7 +12,9 @@ number-misbound artifacts passed) and checks the book both directions:
      the lesson-to-lab mapping lives in the For Instructors appendix, not in
      chapter bodies (D35 Phase 4 de-coursing)
   3. every registered notebook (nb01-nb16) carries >= 1 crosswalk assignment
-     (first-read or revisit; revisit-only calendar containers are legal, D41)
+     (first-read or revisit; revisit-only calendar containers are legal, D41),
+     and every adopted lesson has a home anchor (D83: lessons the crosswalk
+     lists as `not_adopted:` are exempt here and in check 5's table)
   4. every chapter carries the required element headings
   5. the For-instructors appendix exists in all three editions and the EN
      edition links every course lab nb01-nb16 (D25)
@@ -33,7 +35,8 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from notebooks_map import NOTEBOOKS, student_filename  # noqa: E402
 from book_manifest import (active_lessons, load_architecture,  # noqa: E402
-                           load_crosswalk, primary_nb_by_lesson)
+                           load_crosswalk, not_adopted_ids,
+                           primary_nb_by_lesson)
 
 BOOK_DIR = REPO / "book"
 NB_BOOK = REPO / "notebooks" / "book"
@@ -61,6 +64,7 @@ def main() -> None:
     arch = load_architecture()
     lessons = active_lessons(arch)
     primary = primary_nb_by_lesson()
+    skip = not_adopted_ids()          # D83: book-only further routes
     errs, warns = [], []
 
     # (3) coverage both directions, from the crosswalk. A notebook owns a
@@ -81,7 +85,7 @@ def main() -> None:
             errs.append(f"nb{n:02d} carries no crosswalk assignment "
                         f"(first-read or revisit)")
     for l in lessons:
-        if l["id"] not in primary:
+        if l["id"] not in primary and l["id"] not in skip:
             errs.append(f"{l['id']}: no home anchor in the crosswalk")
 
     for l in lessons:
@@ -148,6 +152,8 @@ def main() -> None:
             if student_filename(n) not in fi_text:
                 errs.append(f"For-instructors appendix does not link nb{n:02d}")
         for l in lessons:                      # every lesson mapped to its lab
+            if l["id"] in skip:               # D83: the course has no lab for it
+                continue
             if f"| Ch. {l['display']} |" not in fi_text:
                 errs.append(f"{l['id']}: missing from the For-instructors "
                             f"adoption table")

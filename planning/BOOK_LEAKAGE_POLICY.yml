@@ -9,7 +9,9 @@
 # Scanner contract (Phase-2 build):
 #   - scanned artifacts: every ACTIVE EN lesson `source:` from
 #     BOOK_ARCHITECTURE.yml, its generated companion notebook, and the
-#     rubric projections. The For Instructors appendix is STRUCTURALLY
+#     rubric projections; since D83 also every book-only section page
+#     (BOOK_ARCHITECTURE.yml `sections[].page`) and every `extra_sources:`
+#     page below. The For Instructors appendix is STRUCTURALLY
 #     excluded (that is where the companion course is presented, D25); the
 #     preface's languages/instructor pointers are excepted narrowly below.
 #   - scanned content: visible prose, code comments, link TARGETS, image alt
@@ -53,6 +55,13 @@ rules:
   - id: expo-conference
     pattern: "\\b(undergraduate research expo|fall expo|purdue expo)\\b"
     why: "chapters say 'your research conference'"
+
+extra_sources:
+  # D83 (book-only further routes): non-lesson book pages the A2 scanner also
+  # reads (paths relative to book/), keyed by artifact id like the lessons.
+  - artifact: further-designs
+    source: further-designs.qmd
+    reason: "the Further Designs field-guide appendix is reader-facing book prose"
 
 structural_exclusions:
   # Excluded by ARTIFACT ID, not by path glob.
