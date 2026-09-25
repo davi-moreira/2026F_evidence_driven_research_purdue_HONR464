@@ -38,8 +38,9 @@ Two words sound alike and mean different things. **Reproduction** is getting the
 same number from the *same* data and code a study shipped [@nasem2019reproducibility]. Example: you open another
 researcher's notebook, run it top to bottom, and check that the same growth figure
 comes back. **Replication** is getting a similar result from a *new* study or new
-data. Example: a second lab runs its own experiment and sees the same effect. This
-chapter is about reproduction. You test the package, not the world.
+data. Example: a second lab runs its own experiment and sees the same effect. Most
+of this chapter is about reproduction: you test the package, not the world. Its
+last section turns to replication with new data.
 
 What you test is a **reproducibility package**: the full bundle a study ships so
 someone else can rebuild its numbers, meaning the data, the code, the run order,

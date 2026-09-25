@@ -677,7 +677,7 @@ misconceptions:
       - text: 'Collapsing them into "the honest range is eight to fifteen" quietly claims a precision nobody computed'
         pins:
           - {file: "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd",
-             sha256: "27715dcc27fa8b6c9ef6c2e963d699095e9ad1301aaf0cd633e2d76ece77a5b9"}
+             sha256: "16a5cb02d381c08186445259d3dd1628d5a4565a5b72b88a29c398b706a2eee7"}  # re-pinned 2026-09-25 (D83 follow-up): 354a1ee only swapped "tools a later chapter adds" for "the interval tools you already have"; the window still CORRECTS the phrase
     allow_reversals:
       - 'Collapsing them into "the honest range is 8 to 15" is correct.'
       - 'Collapsing them into "the honest range is eight to fifteen" is the right call.'
@@ -1244,6 +1244,7 @@ numbers:
     claims:
       # design constants
       - {text: "where 30 canvassing experiments are run", value: 30, source: "fig_evidence_synthesis.k_run", tolerance: 0}
+      - {text: "an effect near 1.8 points", value: 1.8, source: "fig_evidence_synthesis.pub_m", tolerance: 0.05}
       - {text: "the true average effect is 1.0 point", value: 1.0, source: "fig_evidence_synthesis.mu", tolerance: 0}
       # prose: published pile
       - {text: "Twelve published studies, most intervals overlapping", value: 12, source: "fig_evidence_synthesis.n_pub", tolerance: 0}

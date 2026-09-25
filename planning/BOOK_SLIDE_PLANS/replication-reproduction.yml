@@ -1,7 +1,7 @@
 # Slide plan — Chapter 36, "Replication and Reproduction"
 # Schema and rules: planning/BOOK_SLIDE_PLANS/README.md
 lesson: replication-reproduction
-source_sha256: "733a2711486b097751664ad7c88038392e193b59588132e44d44c68db42bc871"
+source_sha256: "bda12218e315325c60e0033e3642a9675b225b78627012a44646261834ca69d4"
 
 # D83: book-only sections (further-route material) kept off the studio deck.
 omit:
@@ -45,6 +45,9 @@ sections:
         - "You open another researcher's notebook, run it top to bottom, check the figure comes back."
         - "**Replication:** a similar result from a *new* study or new data."
         - "A second lab runs its own experiment and sees the same effect."
+        # D83 follow-up (2026-09-25): the chapter now says "Most of this chapter is
+        # about reproduction" because its omitted last section covers replication;
+        # the deck never shows that section, so this line stays accurate for the deck.
         - "This chapter is about reproduction."
       note: >
         Two words sound alike and mean different things. Reproduction reruns

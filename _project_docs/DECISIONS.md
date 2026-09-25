@@ -5011,3 +5011,21 @@ because the ch21 `specification-spread` allow window is stale: pin
 `27715dcc…`, live `16a5cb02…`, after auto-commit `354a1ee` edited the
 paragraph. A person must confirm the paragraph still corrects the wording, then
 re-pin it.
+
+**Follow-up, same day (instructor: "keep going until it's all done").**
+- **The ch21 pin.** The window was re-read against auto-commit `354a1ee`. That
+  edit only swapped "tools a later chapter adds" for "the interval tools you
+  already have", so the paragraph still corrects "the honest range is"; it does
+  not endorse it. The allow window is re-pinned to `16a5cb02…`, with a comment in
+  `MISCONCEPTION_MANIFEST.yml`. CI's misconception steps go green again.
+- **ch32.** "This chapter is about reproduction." now reads "Most of this
+  chapter is about reproduction … Its last section turns to replication with new
+  data." The slide plan was reread and restamped, with a comment explaining why
+  its deck bullet stays as it was: the deck omits the replication section. The
+  studio11 deck is byte-identical.
+- **Numbers.** The synthesis chapter's "an effect near 1.8 points" is now bound
+  to `fig_evidence_synthesis.pub_m`.
+- **Codex re-review.** It is scheduled for 2026-09-30 18:07, after the quota
+  resets, as a session-scheduled task. If that session is gone by then, launch
+  the four briefs in `_adm/codex_collab/2026-09-25_edrai-further-routes/codex/`
+  by hand.
