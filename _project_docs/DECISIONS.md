@@ -4841,6 +4841,29 @@ from, had no place for either. The mismatch was designed into the pipeline by th
    `scripts/build_brightspace_kit.py` (new `brightspace/milestones/` step), and
    the M11 unit now says *at the start of class*, not 11:59 PM.
 
+**Revised after the independent Codex review (same day, before any student
+submitted under it).** (a) The PDF no longer claims the book page is the whole
+submission: item 2 sends the student to the Brightspace assignment for the
+complete course checklist, files and rubric, and the lead says "Your main file
+is `lastname_mNN.pdf`" instead of "everything goes into one file". (b) The plan
+row is scored **individually** (even in an approved group), by formula:
+`10 × eligible steps addressed ÷ eligible steps`, rounded. Eligible steps are
+those in the latest plan version sent **at least 48 hours before the deadline**
+(a new protection for plan steps, parallel to D80's for requests); steps that are
+also numbered requests are excluded and counted once through D80; with no
+eligible steps the student names the plan version checked and earns the full
+10. The row scores the response; research quality stays in the substantive rows.
+(c) M6 and M9 already scored the version reason in *Uncertainty* and
+*Verification*; the Craft clause added in the first pass is removed so one
+defect lowers one row. (d) M12's preface no longer claims the Peer Review rubric
+scores the book product and rails. (e) M13's missing-ledger rule now says 18
+points. (f) Brightspace milestone HTML rewrites repository-relative links to
+their GitHub pages and fails on a missing target or a missing pandoc.
+**Declined:** putting milestone-specific checklists in the PDF (the instructor
+ruled the PDF must not detail requirements), and removing M12's
+"at least one reasoned rejection" requirement (a deliberate pedagogy, flagged to
+Davi rather than changed).
+
 **Single source.** `scripts/milestone_carry_forward.py` (the PDF block, the brief
 block, the schedule legend, the workbook cell, `FIRST = 4`), read by
 `build_handout_pdfs.py`, `build_milestone_anchors.py`, `update_schedule_badges.py`

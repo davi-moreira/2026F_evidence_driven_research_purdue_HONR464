@@ -9,12 +9,10 @@
 <!-- carry-forward-start:begin -->
 > **Start here: what this milestone collects from you.**
 >
-> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M05-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 7 shows the request table and Component 8 the plan section.
-> 2. **Your milestone work**, as the components below describe it.
+> 1. **Your carry-forward record, at the very top.** Open my review email and your research action plan side by side. Answer every numbered request for this milestone (each has an ID like `IR-M05-01`) and every step your plan sets for this milestone. Next to each one, write **Done** and exactly where I can find it, or **Not adopted**, with your reason and what you chose instead. Several items can point to the same piece of work. Component 7 shows the request table and Component 8 the plan section.
+> 2. **Then your milestone work and files**, exactly as *What to Submit on Brightspace* and the components below list them.
 >
-> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
->
-> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+> **How this counts.** Your answer to the action plan is worth 10 points of the rubric, scored for you individually. Each numbered request left unanswered costs 5 points, up to 20. Only requests and plan steps I sent you at least 48 hours before the deadline count; anything later moves to the next milestone. A step that is also a numbered request is counted once, as a request. If I sent you no numbered requests, or no plan steps apply, say so in one line. Not sure what applies to you? Write to me before the deadline; that is exactly what I am here for.
 <!-- carry-forward-start:end -->
 
 ## About the Research Project
@@ -321,7 +319,7 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
-**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points), scored for you individually. The plan that counts is the latest version I sent you at least 48 hours before the deadline, and a step that is also a numbered request is answered once, in your Instructor Request Record.
 
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
@@ -380,9 +378,9 @@ rails, and defensible as Research Contract v1.
 | **Verification & decision ownership** (18) | The required Skeptic run logged with every ranked attack answered or honestly carried; the counter-pathway argument answered in your own words; no judgment reproduces a tool's wording (16–18) | Skeptic run and answers present; one attack answered loosely or one reply leaning on the tool's phrasing (13–15) | Skeptic run logged but attacks left unanswered, or the counter-pathway row missing (7–12) | No Skeptic run, or a declaration that reproduces a tool's wording with no reasoning of your own (0–6) |
 | **Uncertainty & the route's limits** (18) | The never-establish sentence stated plainly; both claim-boundary sentences redrawn to the licence; the pathway's own uncertainty sources named in the Contract; the contrast's licence honestly priced (16–18) | Limits, boundary, and sources present; one stated loosely (13–15) | Limits gestured at without saying what they cost the claim, or a boundary left at its v0 wording (7–12) | No limits, or a declaration that concedes nothing its route cannot do (0–6) |
 | **Craft, ledger & communication** (9) | On-format, on-time; Contract v1 a dated, numbered version with a usable reason; the route-conditional reading completed for your route and the assigned contrast; complete AI Research Ledger; dossier line present (8–9) | Minor format lapses; reading and ledger complete (6–7) | Missing pieces, a version with a decorative reason, or only one of the two required chapters worked (4–5) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
-| **Carry-forward: your action plan's steps** (10) | Every step your action plan sets for this milestone, and any decision it left open that closes by now, is in your record: done and located, or departed from in one line with the reason and what you did instead (9–10) | Every step addressed; one located loosely, or one departure reason thin (7–8) | Some steps missing from the record with no word, or marked done where the work cannot be found (4–6) | No action-plan section in your record, or most steps silently skipped (0–3) |
+| **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
-*Carry-forward row:* a plan step that is also a numbered request (`IR-M05-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
+*Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M05-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M05"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.
 
 **Carry-forward adjustment (course decision D80; applies to this milestone score only).**
 Let `U` be the number of numbered `IR-M05-##` requests from the M4 review

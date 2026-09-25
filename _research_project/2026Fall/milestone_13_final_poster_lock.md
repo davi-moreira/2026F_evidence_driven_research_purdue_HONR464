@@ -9,12 +9,10 @@
 <!-- carry-forward-start:begin -->
 > **Start here: what this milestone collects from you.**
 >
-> 1. **Your carry-forward record, at the very top.** This is where you answer me. It holds two things you already have: every numbered request from my review of your last milestone (in my email and your Brightspace feedback, each with an ID like `IR-M13-01`), and every step your research action plan sets for this milestone (use the latest version I sent you). Next to each one, write **Done** and where I can find it, or **Not adopted**, with your reason and what you did instead. Component 8 shows the request table and Component 9 the plan section.
-> 2. **Your milestone work**, as the components below describe it.
+> 1. **Your carry-forward record, at the very top.** Open my review email and your research action plan side by side. Answer every numbered request for this milestone (each has an ID like `IR-M13-01`) and every step your plan sets for this milestone. Next to each one, write **Done** and exactly where I can find it, or **Not adopted**, with your reason and what you chose instead. Several items can point to the same piece of work. Component 8 shows the request table and Component 9 the plan section.
+> 2. **Then your milestone work and files**, exactly as *What to Submit on Brightspace* and the components below list them.
 >
-> When a request, a plan step and a component ask for the same thing, do it once and point to it from your record.
->
-> **How it is scored.** The course rubric on Brightspace scores this milestone. It already includes the book's own checks, plus two things for the course: your action-plan steps are one row of the rubric, and each numbered request left unanswered costs 5 points, up to 20. If I sent you no numbered requests, say so in one line and move on. Not sure whether something applies to you? Ask me before the deadline; that is exactly what I am here for.
+> **How this counts.** Your answer to the action plan is worth 10 points of the rubric, scored for you individually. Each numbered request left unanswered costs 5 points, up to 20. Only requests and plan steps I sent you at least 48 hours before the deadline count; anything later moves to the next milestone. A step that is also a numbered request is counted once, as a request. If I sent you no numbered requests, or no plan steps apply, say so in one line. Not sure what applies to you? Write to me before the deadline; that is exactly what I am here for.
 <!-- carry-forward-start:end -->
 
 ## About the Research Project
@@ -285,7 +283,7 @@ output against reality.
 
 **A missing ledger is not a minor lapse.** This is an individual requirement in
 either project mode. A missing AI Research Ledger entry scores that student's
-20-point **Individual craft, ledger & closeout** row **0**, and their submission
+18-point **Individual craft, ledger & closeout** row **0**, and their submission
 is **returned** for completion before it is graded. It does not change an
 approved group's common poster-quality score.
 
@@ -347,7 +345,7 @@ are doing instead. A defended departure is a decision; a silent one is drift. If
 your plan and this brief genuinely conflict, follow the brief and tell me, so the
 plan gets corrected.
 
-**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points). The plan that counts is the latest version I sent you before the deadline, and a step that is also a numbered request is scored once, in your Instructor Request Record.
+**How it is scored.** This is the rubric's *Carry-forward: your action plan's steps* row (10 points), scored for you individually. The plan that counts is the latest version I sent you at least 48 hours before the deadline, and a step that is also a numbered request is answered once, in your Instructor Request Record.
 
 > **Highly recommended: use the course AI workspace to get there.** These
 > commitments are exactly what your ChatGPT Business seat is for. Open a Project
@@ -407,10 +405,10 @@ evidence.
 | Both blocking gates recorded and cleared before the lock | 27 |
 | Dated package, manifest, poster version, and reason for the version agree | 18 |
 | **Individual craft, ledger & closeout:** each member's personally attributable AI Research Ledger, individual lock-checklist sign-off, and dossier contribution are present | 18 |
-| **Carry-forward: your action plan's steps.** Every step your plan sets for this milestone is in your record, done and located or departed from with a reason (10); all addressed, one thin (7); some silently missing (4); no plan section (0) | 10 |
+| **Carry-forward: your action plan's steps.** 10 × eligible steps addressed ÷ eligible steps, rounded; addressed means done and located, or not adopted with your reason and the choice made instead | 10 |
 | **Total** | **100** |
 
-*Carry-forward row:* a plan step that is also a numbered request (`IR-M13-##`) is scored once, through the carry-forward adjustment below, not in this row. The plan that counts is the latest version I sent you before the deadline.
+*Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M13-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M13"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.
 
 **Carry-forward adjustment (course decision D80; applies to the M13 process score entered in Milestone Deliverables only).**
 Let `U` be the number of numbered `IR-M13-##` requests from the M12 review
@@ -479,7 +477,7 @@ by 11:59 PM on November 8.
 - Any cited source that does not exist or does not say what you claim: *Evidence
   integrity & provenance* scores Beginning regardless of the rest, which is the
   course's evidence-integrity rule with teeth.
-- Missing AI Research Ledger entry: that member's 20-point **Individual craft,
+- Missing AI Research Ledger entry: that member's 18-point **Individual craft,
   ledger & closeout** row scores 0 and their submission is returned for
   completion before grading; the common poster-quality score is unchanged.
 - Numbered instructor review request left unaddressed in the Instructor Request

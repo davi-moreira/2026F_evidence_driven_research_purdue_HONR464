@@ -294,13 +294,14 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         # THAT the record comes first and how to answer each item, never what
         # the requests or the plan contain: those are personal to each student
         # and live in the review email and the action plan.
-        file_lead = f"Everything this milestone collects goes into one file, {main}."
+        # Deliberately no "everything goes in one file" claim: several briefs
+        # name more than one file, and the Brightspace assignment is where the
+        # complete file list lives (Codex review, 2026-09-25).
+        file_lead = f"Your main file is {main}."
         if extras:
-            file_lead = (f"Everything this milestone collects goes into one file, "
-                         f"{main}, except the "
+            file_lead = (f"Your main file is {main}; the "
                          f"{'artifact' if len(extras) == 1 else 'artifacts'} "
-                         f"listed at the end of this section, which cannot live "
-                         f"inside a PDF.")
+                         f"listed at the end of this section travel beside it.")
         head = [
             carry_forward.pdf_block(n, file_lead=file_lead,
                                     has_additions=bool(add.get("additions_markdown"))),

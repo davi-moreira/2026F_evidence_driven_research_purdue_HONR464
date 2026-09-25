@@ -576,8 +576,8 @@ sets for that milestone. Every milestone PDF and brief from M4 opens with a
 the schedule marks M4–M16 with the plus sign. From M4 every milestone-score rubric
 carries a sixth row, **Carry-forward: your action plan's steps (10)**, the other
 rows rescaled proportionally to 90, and opens with a *What this rubric scores*
-map of the book milestone's own checks onto the course rows. A plan step that is
-also a numbered request is scored once, through the D80 adjustment. M1–M3 rubrics
+map of the book milestone's own checks onto the course rows. The row is scored individually as `10 × eligible steps addressed ÷ eligible steps`; eligible steps come from the plan version sent at least 48 hours before the deadline, a step that is
+also a numbered request is scored once, through the D80 adjustment, and no eligible steps earns the full 10. M1–M3 rubrics
 stay as graded. This amends "no rubric row changes" in D80 above for M4–M16 only.
 Full ruling: `_project_docs/DECISIONS.md` D82.
 

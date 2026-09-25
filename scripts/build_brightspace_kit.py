@@ -32,6 +32,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import quote, unquote, urlsplit
 
 import yaml
 
@@ -1278,7 +1279,51 @@ Prof. Moreira
 """
 
 
+def milestone_html(brief: Path, pandoc: str) -> str:
+    """One brief as a Brightspace-pastable HTML fragment.
+
+    Relative links in a brief resolve beside the brief in the repository, not
+    beside the pasted HTML, so every repository-relative link is rewritten to
+    its GitHub page (Codex review, 2026-09-25). A link to a file that does not
+    exist fails the build rather than shipping a dead link.
+    """
+    doc = json.loads(subprocess.run(
+        [pandoc, "-f", "markdown", "-t", "json", str(brief)],
+        check=True, capture_output=True, text=True).stdout)
+
+    def visit(node):
+        if isinstance(node, dict):
+            if node.get("t") == "Link":
+                target = node["c"][-1]
+                url = urlsplit(target[0])
+                if url.path and not url.scheme and not url.netloc:
+                    dest = (brief.parent / unquote(url.path)).resolve()
+                    if not dest.exists() or not dest.is_relative_to(ROOT):
+                        raise SystemExit(
+                            f"✗ {brief.name}: link to a missing file {target[0]}")
+                    target[0] = (f"https://github.com/{REPO}/blob/main/"
+                                 + quote(dest.relative_to(ROOT).as_posix(), safe="/"))
+                    if url.fragment:
+                        target[0] += "#" + url.fragment
+            for child in node.values():
+                visit(child)
+        elif isinstance(node, list):
+            for child in node:
+                visit(child)
+
+    visit(doc)
+    return subprocess.run([pandoc, "-f", "json", "-t", "html"],
+                          input=json.dumps(doc), check=True,
+                          capture_output=True, text=True).stdout
+
+
 def main() -> int:
+    # Resolved before anything is written, so a missing pandoc can never leave
+    # stale milestone instructions behind a success message.
+    pandoc = shutil.which("pandoc")
+    if pandoc is None:
+        raise SystemExit("✗ pandoc is required to rebuild the milestone "
+                         "instructions; nothing was written.")
     config, meetings = load()
     OUT.mkdir(exist_ok=True)
     (OUT / "units").mkdir(exist_ok=True)
@@ -1295,15 +1340,10 @@ def main() -> int:
     # brief again (the Sep 15 copies missed the Sep 21 action-plan component
     # and still carried the gate D81 retired).
     (OUT / "milestones").mkdir(exist_ok=True)
-    pandoc = shutil.which("pandoc")
     n_briefs = 0
     for brief in sorted(BRIEFS.glob("milestone_*.md")):
-        if not pandoc:
-            print("⚠ pandoc not found: milestone instructions not rendered")
-            break
-        subprocess.run([pandoc, "-f", "markdown", "-t", "html", str(brief),
-                        "-o", str(OUT / "milestones" / f"{brief.stem}.html")],
-                       check=True)
+        (OUT / "milestones" / f"{brief.stem}.html").write_text(
+            milestone_html(brief, pandoc))
         n_briefs += 1
 
     (OUT / "gradebook_spec.md").write_text(gradebook_spec(config))

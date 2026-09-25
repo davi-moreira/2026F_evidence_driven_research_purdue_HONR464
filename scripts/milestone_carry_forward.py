@@ -55,36 +55,48 @@ def _ir(num: int) -> str:
 
 def _record_item(num: int) -> str:
     return (
-        "**Your carry-forward record, at the very top.** This is where you "
-        "answer me. It holds two things you already have: every numbered "
-        "request from my review of your last milestone (in my email and your "
-        f"Brightspace feedback, each with an ID like {_ir(num)}), and every "
-        "step your research action plan sets for this milestone (use the "
-        "latest version I sent you). Next to each one, write **Done** and "
-        "where I can find it, or **Not adopted**, with your reason and what "
-        "you did instead."
+        "**Your carry-forward record, at the very top.** Open my review email "
+        "and your research action plan side by side. Answer every numbered "
+        f"request for this milestone (each has an ID like {_ir(num)}) and every "
+        "step your plan sets for this milestone. Next to each one, write "
+        "**Done** and exactly where I can find it, or **Not adopted**, with "
+        "your reason and what you chose instead. Several items can point to "
+        "the same piece of work."
+    )
+
+
+def _work_item() -> str:
+    return (
+        "**Then your milestone work and files.** The book milestone below "
+        "explains the research work. The complete course checklist, the files "
+        "to hand in and the rubric are in this milestone's assignment on "
+        "Brightspace: check them before you submit."
     )
 
 
 def _scoring(num: int) -> str:
     return (
-        "**How it is scored.** The course rubric on Brightspace scores this "
-        "milestone. It already includes the book's own checks, plus two "
-        "things for the course: your action-plan steps are one row of the "
-        "rubric, and each numbered request left unanswered costs 5 points, "
-        "up to 20. If I sent you no numbered requests, say so in one line and "
-        "move on. Not sure whether something applies to you? Ask me before "
-        "the deadline; that is exactly what I am here for."
+        "**How this counts.** Your answer to the action plan is worth 10 "
+        "points of the rubric, scored for you individually. Each numbered "
+        "request left unanswered costs 5 points, up to 20. Only requests and "
+        "plan steps I sent you at least 48 hours before the deadline count; "
+        "anything later moves to the next milestone. A step that is also a "
+        "numbered request is counted once, as a request. If I sent you no "
+        "numbered requests, or no plan steps apply, say so in one line. Not "
+        "sure what applies to you? Write to me before the deadline; that is "
+        "exactly what I am here for."
     )
 
 
 def pdf_block(num: int, *, file_lead: str, has_additions: bool) -> str:
     """The "Start here" opening of a milestone PDF from M4 on.
 
-    `file_lead` is the builder's own sentence naming the file to hand in.
+    It says THAT the record comes first and how to answer each item; it never
+    details the requests or the plan, and it points to the Brightspace
+    assignment for the complete course checklist rather than claiming the
+    book page is everything (Codex review, 2026-09-25).
     """
-    items = [_record_item(num),
-             "**Your milestone work**, as the book milestone below describes it."]
+    items = [_record_item(num), _work_item()]
     if has_additions:
         items.append("**The Expo work** in *What this course adds*, below.")
     listed = "\n".join(f"{i}. {t}" for i, t in enumerate(items, 1))
@@ -94,9 +106,6 @@ def pdf_block(num: int, *, file_lead: str, has_additions: bool) -> str:
         f"{file_lead} Build it in this order:",
         "",
         listed,
-        "",
-        "When a request, a plan step and the book work ask for the same thing, "
-        "do it once and point to it from your record.",
         "",
         _scoring(num),
         "",
@@ -117,10 +126,8 @@ def brief_block(num: int, *, ir_component: int | None,
         "> **Start here: what this milestone collects from you.**",
         ">",
         f"> 1. {_record_item(num)}{layout}",
-        "> 2. **Your milestone work**, as the components below describe it.",
-        ">",
-        "> When a request, a plan step and a component ask for the same thing, "
-        "do it once and point to it from your record.",
+        "> 2. **Then your milestone work and files**, exactly as *What to Submit "
+        "on Brightspace* and the components below list them.",
         ">",
         f"> {_scoring(num)}",
         END,
@@ -129,12 +136,12 @@ def brief_block(num: int, *, ir_component: int | None,
 
 #: Schedule legend (Milestone column), under the table.
 SCHEDULE_LEGEND = (
-    "A **{plus}** means that the milestone asks for something beyond its book "
+    "A **{plus}** marks course requirements that come with the book "
     "milestone. From M4 on, that always includes your **carry-forward "
     "record**: your answer to the numbered requests in my review email and "
     "to the steps your action plan sets for that milestone. Some milestones "
-    "also carry Expo work. The first page of the milestone's handout on "
-    "Brightspace tells you exactly what goes in."
+    "also carry Expo work. The milestone's assignment on Brightspace has the "
+    "complete checklist, the files, the deadline and the rubric."
 )
 
 #: Book-neutral opening cell for milestone workbooks from Milestone 4 on. The
@@ -143,14 +150,13 @@ SCHEDULE_LEGEND = (
 WORKBOOK_HEAD = (
     "## Answer your last review first\n\n"
     "If someone reviewed your last milestone version (a mentor, an "
-    "instructor, a peer reviewer) and asked you for specific changes, or "
-    "gave you a plan with steps for this milestone, answer them here before "
-    "anything else. A researcher who responds to review item by item keeps "
-    "control of the project; one who responds in general loses track of "
-    "what was asked.\n\n"
-    "For each item: **Done**, and where the change is; or **Not adopted**, "
-    "with your reason and what you did instead. A reasoned refusal is a "
-    "decision. A silent one is drift.\n"
+    "instructor, a peer reviewer) and asked for specific changes, or gave "
+    "you a plan with steps for this milestone, bring each of them into the "
+    "table below before anything else. It keeps track of what changed and "
+    "why, which is exactly what a reader of your work will want to know.\n\n"
+    "For each item, write **Done** and where the change is, or **Not "
+    "adopted**, with your reason and what you chose instead. A reasoned "
+    "choice not to adopt something is a real decision, and it counts.\n"
 )
 WORKBOOK_CELL = (
     "✍️ **Your response to review.** Double-click and fill one row per "
