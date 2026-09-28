@@ -142,8 +142,8 @@ dossier components and appear nowhere in student-facing material.
   the terminal Sun Nov 8 poster lock or the Tue Nov 17 Expo — so the omission
   may be deliberate. Davi rules whether they are revisable; until he does, do
   not assume either way.
-- Hard external anchors: URC abstract internal gate Tue Oct 13 (external
-  deadline TBD); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.
+- Hard external anchors: URC abstract draft in M6 (Sun Oct 4) and the final
+  abstract + Expo application in M7 (Tue Oct 13), D84 (external deadline TBD); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.
 - Fri Dec 11, the last class, is the course-closing **reflection session**
   (D54). It collects a light reflection deliverable scored under
   **participation**, not as a milestone, and it is not part of the M-mean.

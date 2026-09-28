@@ -374,9 +374,11 @@ Before the first class:
 Three hard anchors drive November. Miss the first and the print deadline slips;
 miss the print deadline and there is no poster to present.
 
-1. **Abstract gate — Fri Oct 9 (M7).** Internal completion gate for the URC
-   abstract (the external URC deadline is TBD; confirm and post it as soon as it
-   publishes). Run the abstract workshop in the M7 studio.
+1. **URC abstract — draft in M6 (Sun Oct 4), final + application in M7 (Tue Oct 13)** (D84).
+   Review the M6 draft and issue any change as a numbered `IR-M07` request at least
+   48 hours before the M7 deadline; the Fri Oct 9 studio checks the final abstract
+   before students apply (the external URC deadline is TBD; confirm and post it as
+   soon as it publishes).
 2. **Poster lock + print submission — Sun Nov 8, 11:59 PM (M13, terminal).** The
    poster is locked and submitted for printing. No changes after this time.
    Confirm the print vendor turnaround well before this date.

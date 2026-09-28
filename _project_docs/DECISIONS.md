@@ -5029,3 +5029,41 @@ re-pin it.
   resets, as a session-scheduled task. If that session is gone by then, launch
   the four briefs in `_adm/codex_collab/2026-09-25_edrai-further-routes/codex/`
   by hand.
+
+---
+
+## D84 — The URC abstract draft moves to M6; M7 keeps the conference application (2026-09-28)
+
+**Ruling (Davi, 2026-09-28).** Milestone M6 requests the **draft** of the
+conference abstract; M7 requests the **conference application**, submitted with
+the final abstract.
+
+- **M6 (Sun Oct 4)** gains Component 6, *The URC abstract draft*: 150–250 words
+  on the question, why it matters, the governed data and measures, the declared
+  analysis, and what that analysis will and will not show. **No result is
+  claimed**: M6 precedes the first executed analysis, so the draft states what
+  the analysis will estimate and how its uncertainty will be reported. It lives
+  inside `lastname_m06_data_governance.pdf`. No rubric weight moves: the draft is
+  scored inside the existing *Uncertainty & measurement error* (overclaiming) and
+  *Craft, ledger & communication* (presence, length) rows. Components 6–9 became
+  7–10; the generated carry-forward opening was rebuilt to match.
+- **M7 (Tue Oct 13)** keeps the Expo application and its proof
+  (`lastname_m07_conference_application.pdf`) and replaces the "internal gate"
+  with *The final abstract (your M6 draft, revised)*: revised for the M6 review
+  and the verified result, pasted exactly as submitted. The rubric row *Craft,
+  ledger & abstract gate* is renamed *Craft, ledger & conference application*
+  (same 13 points); its bands now name the application confirmation. The Friday
+  Oct 9 studio still checks the final abstract before students apply.
+- **PDFs.** `milestone_course_additions.yml`: M06 becomes `additions` with the
+  schedule mark (the published abstract is on the narrowed rule's own list of
+  Expo additions); M07's section 1 becomes the final abstract. Both PDFs rebuilt.
+- **Loop timing.** The M6 review must reach students early enough for the
+  application: any abstract change is issued as a numbered `IR-M07-##` request at
+  least 48 hours before the M7 deadline (D80).
+- Propagated to `course_config.yaml` notes, `scripts/schedule_data/part2.py`
+  (meetings 17, 19, 20 → schedule, session guides), `PROJECT_MILESTONES.md`,
+  `INSTRUCTOR_IMPLEMENTATION_GUIDE.md`, and the M8 back-link. Historical records
+  (earlier DECISIONS entries, BUILD_STATUS, FINAL_REPORT, AUDIT_FIXLIST) are left
+  as written.
+- ⚠ For Davi outside the repository: replace the M6 and M7 PDFs and instruction
+  text on Brightspace, and tell students (M6 is due Sunday).

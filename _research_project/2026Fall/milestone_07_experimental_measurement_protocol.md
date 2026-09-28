@@ -1,4 +1,4 @@
-# Course milestone M7 — First Reproducible Analysis (+ URC Abstract Internal Gate)
+# Course milestone M7 — First Reproducible Analysis (+ Conference Application)
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge** — course milestone **M7**.
@@ -48,15 +48,16 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Tuesday, October 13, 11:59 PM**. That week's Friday is Studio 7's milestone
-session, run as a **pipeline clinic and abstract workshop**: you bring your
+session, run as a **pipeline clinic and application check**: you bring your
 running notebook, restart it from empty in front of your own eyes, walk the
-verification record past your AI assistant's review, and clear the internal gate
-on your URC abstract before it can go out. You repair what the clinic exposes
+verification record past your AI assistant's review, and bring the abstract you
+drafted at M6, revised for my review and your verified result, so it is ready to
+go out with your Expo application. You repair what the clinic exposes
 and submit by Tuesday night, after the October Break weekend.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12). Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your final URC abstract (your M6 draft, revised), your AI Research Ledger rows, and your dossier line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12). Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m07_conference_application.pdf`** | Proof that you applied to present at the Fall Undergraduate Research Expo: the confirmation page or confirmation email, saved as a PDF. Applying is not optional and it is not something the course does for you. Without this confirmation there is no poster session for you to present at, however good the rest of your project is. |
 | 3 | **`lastname_m07_meeting_round01.pdf`** | Confirmation that your **Round 01 mentor meeting** happened, inside the **Mon Oct 5 to Sun Oct 11** window you requested at M4: the date and time, who attended, and the two or three decisions that came out of it, each with what you changed or why you kept your course. |
 | 4 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
@@ -140,11 +141,11 @@ auditor must find no leak and no unlicensed generalization in what you plan to
 say. If a number moves on the restart, the pipeline is the finding, and you
 explain and fix the cause before any claim goes forward.
 
-The same Friday carries a second, fixed anchor: the **URC abstract internal
-gate**. The abstract is the short public description of your project, and it
-leaves the course on the conference's calendar rather than on your research
-schedule. So it clears an internal check here, bounded by exactly what this
-week's verified result licenses and nothing beyond it.
+The same week carries a second, fixed anchor: your **application to the Fall
+Undergraduate Research Expo**. You drafted its abstract at M6, before you had a
+result. This week the abstract gains the verified result, bounded by exactly
+what that result licenses and nothing beyond it, and then it leaves the course
+on the conference's calendar rather than on your research schedule.
 
 > **A question that often comes up here:** *"My numbers matched on the first
 > restart. Am I done?"* A match is the entry ticket, not the milestone. A
@@ -255,34 +256,35 @@ For every flag, write your fix or your refutation, each settled by a check in
 your own pipeline. The auditor can miss a real leak and invent a false one, so
 its flags are hypotheses to test, never verdicts.
 
-### 7. The URC abstract draft (the internal gate)
+### 7. The final abstract (your M6 draft, revised)
 
-Write the abstract you would submit to the **Undergraduate Research
-Conference**, roughly 150–250 words, describing your project as it now stands:
-the question, what you measure, the analysis your pipeline executes, the
-verified result with its uncertainty, and the boundary around the claim. This is
-an **internal gate**, which means the abstract must clear the instructor's check
-at the studio before it goes out externally.
+Start from the abstract you drafted at M6 and the review it came back with.
+Revise it into the abstract you submit to the **Fall Undergraduate Research
+Expo**, roughly 150–250 words: the question, what you measure, the analysis your
+pipeline executes, the verified result with its uncertainty, and the boundary
+around the claim. Where the M6 draft said what your analysis *will* estimate,
+the final version reports what it *did* estimate. Paste the text exactly as you
+submitted it into this milestone, so the version on the conference's record is
+the version I grade.
 
-The gate has one non-negotiable rule. The abstract may use only the claims your
+One rule is non-negotiable. The abstract may use only the claims your
 current verified result licenses. An abstract that promises a causal finding
 your route does not license, that reaches a population your data never touched,
-or that states as settled a number no stress test has yet touched, does not
-clear the gate. Your result is verified this week and not yet audited: next
+or that states as settled a number no stress test has yet touched, is not
+ready to submit. Your result is verified this week and not yet audited: next
 week's robustness work can narrow it, and your wording has to survive that
 without becoming false.
 
-> **A question that often comes up here:** *"Why write the abstract now, when
-> the audit is still ahead?"* Because the abstract's clock is external and this
-> Friday is its fixed anchor. The skill being graded is writing a public
+> **A question that often comes up here:** *"Why submit the abstract now, when
+> the audit is still ahead?"* Because the application's clock is external and
+> this week is its fixed anchor. The skill being graded is writing a public
 > description that is both true today and safe tomorrow: bounded to your route,
 > carrying its uncertainty, and worded so no later check can make it
 > retroactively false.
 
 ### 8. Applying to the conference
 
-The gated abstract has somewhere to go. Once it clears the studio check, apply
-to present a poster at the **Fall Undergraduate Research Expo** through Purdue's
+Your final abstract has somewhere to go. Once it is ready, apply to present a poster at the **Fall Undergraduate Research Expo** through Purdue's
 Undergraduate Research site:
 <https://www.purdue.edu/undergrad-research/conferences/fall/index.php>.
 
@@ -290,8 +292,8 @@ The form asks for a specific set of things, and it is worth having them written
 down before you open it:
 
 - **Title.** Your project title, informative rather than clever.
-- **Abstract.** The one you just gated. Do **not** put your name inside the
-  abstract box.
+- **Abstract.** Your final abstract from Component 7. Do **not** put your name
+  inside the abstract box.
 - **Publication consent.** Yes, the abstract may appear in the booklet.
 - **Five keywords** that would let someone working on your question find you.
 - **Author.** You. Projects here are individual by default; an approved group
@@ -333,8 +335,8 @@ reproducible analysis)**, dated, with the reason a reader could use to
 reconstruct your thinking. Then end with one line recording what this milestone
 finalizes in your **Research Project Dossier**: the reproducible analysis
 notebook now exists, verified rather than merely executed, carrying its
-uncertainty statement, its environment record, its claim-to-output trace, and a
-gated URC abstract. Name the file or section where each now lives.
+uncertainty statement, its environment record, its claim-to-output trace, the
+final URC abstract, and your application confirmation. Name the file or section where each now lives.
 
 ### 11. Carry-forward of instructor review requests: the Instructor Request Record
 
@@ -417,12 +419,13 @@ pre-submission checklist.
 | **Claim-to-output trace** | Every number you plan to report pointed to the cell that produces it |
 | **Re-derivations** | Two key numbers recomputed by independent routes and judged against a tolerance declared before the run |
 | **Leakage audit** | Prediction & Leakage Auditor run; every flag fixed or refuted by a check in your own pipeline |
-| **URC abstract** | Roughly 150–250 words; inside the claims your verified result licenses; the internal gate cleared at the studio |
+| **Final URC abstract** | Your M6 draft revised for my review and your verified result; roughly 150–250 words; inside the claims your verified result licenses; pasted exactly as submitted |
+| **Conference application** | Applied to the Fall Undergraduate Research Expo with the final abstract; the confirmation saved as `lastname_m07_conference_application.pdf` |
 | **Version line** | Book Milestone 7, version 1, dated, with its reason |
 | **Permission status** | Your M4/M6 permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
-| **Dossier line** | The verified notebook, its trace, and the gated abstract located by file or section |
-| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; abstract gate cleared; submitted by Tuesday, Oct 13 |
+| **Dossier line** | The verified notebook, its trace, the final abstract, and the application confirmation located by file or section |
+| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; final abstract checked before the application went out; submitted by Tuesday, Oct 13 |
 | **Filename** | A shared Colab link or `lastname_m07_first_analysis.ipynb`; optional `lastname_m07_first_analysis.pdf` companion |
 | **Location** | Brightspace → Assignments → M07 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M07-##` request from the M6 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
@@ -432,7 +435,7 @@ pre-submission checklist.
 
 ## Grading Rubric (100 points)
 
-**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Compass & pathway alignment**; *a dated, numbered version with its reason* in **Craft, ledger & abstract gate**; *every judgment defended by you, not asserted by a tool* in **Verification**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & provenance**, **Verification**, **Uncertainty & claim boundary** and **Craft, ledger & abstract gate**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+**What this rubric scores.** The book and the course together. Your book milestone's own checks are scored inside these rows: *complete and specific to your project* and *the milestone's own product* in **Compass & pathway alignment**; *a dated, numbered version with its reason* in **Craft, ledger & conference application**; *every judgment defended by you, not asserted by a tool* in **Verification**; and *the four rails* (ethics and permissions, evidence, AI activity, uncertainty) across **Evidence integrity & provenance**, **Verification**, **Uncertainty & claim boundary** and **Craft, ledger & conference application**. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
 
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
@@ -445,7 +448,7 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Evidence integrity & provenance** (18) | Data loaded from the documented M6 source; the environment is recorded; every reported number traces to a data cell and a line of code (16–18) | Traceable; one trace row or the environment record thin (13–15) | A dataset or number asserted without a locatable origin, or an incomplete trace (7–12) | A source that does not exist, or a number with no path back to data (0–6) |
 | **Verification** (27) | The clean restart is run and recorded; every discrepancy explained and fixed; both re-derivations are genuinely independent and judged against a tolerance declared first; the line review and known-answer test are real; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification; every judgment defended in your own reasoning, not a tool's (24–27) | All five checks present; one recorded loosely (19–23) | A restart claimed but not recorded, a re-derivation that reuses the original code, a tolerance written after the gap was visible, or a flag answered without a check (13–18) | No clean restart, a discrepancy left unexplained, an auditor flag pasted in or dismissed unverified, or code in the pipeline you cannot explain (0–12) |
 | **Uncertainty & claim boundary** (18) | The uncertainty statement is attached, reproduces, and is read correctly; the result is never worded as settled certainty; the abstract makes no promise the evidence cannot keep (16–18) | Uncertainty present and reproducing; one reading or boundary sentence loose (13–15) | A point estimate with no uncertainty, or uncertainty reported but never read (7–12) | The first verified run narrated as a certain finding, or an abstract that overclaims past the route (0–6) |
-| **Craft, ledger & abstract gate** (13) | Versioned with its reason, on-format, on-time, gate cleared, complete AI Research Ledger, dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses; abstract and ledger complete (9–10) | Missing pieces, a rushed clinic walkthrough, or an ungated abstract (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft, ledger & conference application** (13) | Versioned with its reason, on-format, on-time, application confirmation submitted, complete AI Research Ledger, dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses; application and ledger complete (9–10) | Missing pieces, a rushed clinic walkthrough, or no application confirmation (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M07-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M07"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.
@@ -472,7 +475,7 @@ request is reissued for a later milestone.
   caps *Verification* at Beginning.
 - A **non-reproducing result** — a headline number or interval that does not
   rerun from a fresh runtime — caps *Verification* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & abstract gate*
+- A **missing AI Research Ledger entry** scores *Craft, ledger & conference application*
   **0** and the submission is **returned** unread until it is supplied.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
@@ -515,8 +518,8 @@ days of feedback recovers up to half the lost points.
 4. **The abstract that outruns the pipeline.** A URC abstract that promises a
    causal finding, or a population claim, while your pipeline licenses a result
    for the units you analyzed. The abstract must sit inside the claims your
-   verified result supports; an abstract that overclaims does not clear the
-   internal gate.
+   verified result supports; an abstract that overclaims is not ready to
+   submit, and once submitted it is public.
 5. **The invisible response.** You changed something because I asked, but the
    Instructor Request Record does not say where, or it says only "I disagree."
    Neither can be verified, so both count as unaddressed. Point to the exact

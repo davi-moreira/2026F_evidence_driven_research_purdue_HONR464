@@ -48,6 +48,12 @@
 # (milestone_map.marked_on_schedule ORs it in). A `schedule_mark: false` below
 # therefore no longer means "no plus" from M4 on.
 #
+# AMENDED 2026-09-28 (instructor ruling, D84). The URC abstract DRAFT moves from
+# M07 to M06, so it is reviewed before the Expo application goes out; M07 keeps
+# the application, its proof, and the final (revised) abstract. M06 therefore
+# becomes `additions` and gains the schedule mark, on the narrowed rule's own
+# terms: the published abstract is an Expo requirement the book page lacks.
+#
 # THIS FILE IS THE SINGLE SOURCE OF TRUTH for both distinctions.
 # scripts/build_handout_pdfs.py reads `classification` (the PDF section) and
 # scripts/update_schedule_badges.py reads `schedule_mark` (the schedule plus),
@@ -473,9 +479,13 @@ milestones:
       \ is. A relabeled question, or a cited study that turns out not to exist\nor not to use the pathway\
       \ you claim, is judged the same way.\n"
   M06:
-    schedule_mark: false
-    classification: pure
-    reason: 'Every one of the course brief''s seven parts is already asked for by Book Milestone 6: the
+    schedule_mark: true
+    classification: additions
+    reason: 'AMENDED 2026-09-28 (instructor ruling, D84): the URC abstract DRAFT moves here from M7, so
+      it gets a round of review before the Expo application goes out at M7. The published abstract is
+      on the narrowed rule''s own list of Expo additions, and Book Milestone 6 does not ask for one, so
+      M6 now carries a section. The original pure call below stands for everything else: every one
+      of the course brief''s other parts is book-covered. ORIGINAL CALL (2026-08-23): Every one of the course brief''s seven parts is already asked for by Book Milestone 6: the
       acquisition route, provenance record, data-management record, route-specific permission recheck,
       and measurement specification are its named product; the Contract version is its "A version, not
       a pass" and "What sends you back" sections; and the ledger and dossier lines are its AI rail and
@@ -522,7 +532,30 @@ milestones:
       and measurement governance. The filename slug is stale from an earlier sequencing and does not match
       the milestone; consider renaming, and check the previous/next navigation links at the foot of the
       neighboring briefs, which use the same stale slugs.
-    schedule_note: null
+    - 'D84 (2026-09-28): the abstract draft is reviewed in the M6 grading pass, and any change it needs
+      is issued as a numbered IR-M07 request. Return the M6 review at least 48 hours before the M7
+      deadline and early enough for the Expo application window, or the request cannot count.'
+    schedule_note: URC abstract draft
+    additions_markdown: |
+      ### The first draft of your conference abstract
+
+      You apply to present at the Undergraduate Research Expo at the next milestone, and
+      the abstract goes out with that application. An abstract written the night of the
+      application has had no reader, so its first draft comes in now, and the book
+      milestone does not ask for it.
+
+      Draft the abstract you will submit, roughly 150 to 250 words: the question, why it
+      matters, the data and measures you governed this week, the analysis your Contract
+      declares, and what that analysis will and will not be able to show. You do not have
+      a result yet, and the draft must not pretend you do. Where the finding will go,
+      write what your declared analysis will estimate and the uncertainty it will report.
+      Write no number and no direction you have not computed, no causal verb your design
+      cannot support, and no population your data never reach.
+
+      Put the draft inside your milestone document. The review of this milestone returns
+      it with numbered requests where it needs them; at the next milestone you revise it
+      for those requests and for your verified result, and it goes out with your
+      application.
   M07:
     schedule_mark: true
     classification: additions
@@ -532,21 +565,23 @@ milestones:
       settled by a check in the student''s own pipeline, and a 150 to 250 word Undergraduate Research
       Conference abstract that must clear an internal instructor gate at the Friday studio because its
       clock is external to the course.'
-    schedule_note: URC abstract, application, mentor meeting
+    schedule_note: Final abstract, application, mentor meeting
     additions_markdown: |
       ### The conference submission
 
       Two things leave your hands this week on the conference's calendar rather than
       on your research schedule, and the book milestone has neither.
 
-      **1. The abstract the conference publishes.** Write the abstract you would submit
-      to the Undergraduate Research Conference, roughly 150 to 250 words: the question,
-      what you measure, the analysis your pipeline executes, the verified result with
-      its uncertainty, and the boundary around the claim. It clears an internal gate at
-      the studio before it goes out. The gate has one rule: the abstract may use only
-      the claims your current verified result licenses. Your result is verified this
-      week and not yet audited, so your wording has to survive next week's robustness
-      work without becoming false.
+      **1. The final abstract the conference publishes.** Start from the abstract you
+      drafted at Milestone 6 and the review it came back with. Revise it into the
+      abstract you submit, roughly 150 to 250 words: the question, what you measure, the
+      analysis your pipeline executes, the verified result with its uncertainty, and the
+      boundary around the claim. Where the draft said what your analysis will estimate,
+      the final version reports what it did estimate. One rule is non-negotiable: the
+      abstract may use only the claims your current verified result licenses. Your
+      result is verified this week and not yet audited, so your wording has to survive
+      next week's robustness work without becoming false. Paste the text exactly as you
+      submitted it into your milestone document.
 
       **2. The application that puts your name on the programme.** Apply to present a
       poster through Purdue's Undergraduate Research site. The form wants your title,

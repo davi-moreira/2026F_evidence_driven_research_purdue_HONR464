@@ -617,7 +617,7 @@ is to check it against what actually happens.
 
 ---
 
-*Previous: [M07 — First Reproducible Analysis (+ URC Abstract Internal Gate)](milestone_07_experimental_measurement_protocol.md) ·
+*Previous: [M07 — First Reproducible Analysis (+ Conference Application)](milestone_07_experimental_measurement_protocol.md) ·
 Next: [M09 — Bounded Research Note and Claim-Evidence Table](milestone_09_minimum_viable_analysis.md) —
 what survived this audit becomes a written claim, every sentence traced to the
 evidence that licenses it.*
