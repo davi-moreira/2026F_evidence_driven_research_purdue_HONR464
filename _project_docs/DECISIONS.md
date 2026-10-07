@@ -5137,3 +5137,19 @@ alongside the abstract draft.
   findings, and the verified result goes into the same OURConnect submission
   before the Nov 2 final-updates deadline. M6's former ban on any direction
   for an uncomputed result became "never word an expectation as a finding".
+- **Amended again the same day (Davi, 2026-10-07, third instruction).** Parts 2
+  (data) and 3 (study design) of the abstract now carry the course book's material
+  and examples, in both briefs and both PDFs. Part 2 points to Ch. 20 (provenance:
+  the county-turnout worked example and its three denominators), Ch. 21
+  (concept → construct → indicator) and Ch. 12's confirmatory/exploratory split,
+  which keeps EDA insights labeled exploratory. Its example is built from Ch. 21's
+  flexible-scheduling case (16 sites × 60, one 1–7 item, a retest of a random
+  tenth). Part 3 points to Ch. 10 (data strategy = sample + collection tools; answer
+  strategy = estimate + uncertainty), Ch. 12 (sample size justified by diagnosis:
+  12 per version under 10% power, 400 over 90%), Ch. 11 (*Dependence, and what it
+  costs*: the sample size counts independent units; verified by rerunning the
+  chapter's code, 63.2% coverage treating 60 flats as independent vs 91.7% with 12
+  buildings as the unit) and the Studio 5 pathway chapters (Ch. 14–19). Its example
+  is built from Ch. 12's reorder-button case (randomized, 400 per version,
+  difference in means with a 95% interval). The PDFs use the book's own "Lesson NN"
+  labels; the briefs keep "Ch. NN", as their Book Anchor sections do.
