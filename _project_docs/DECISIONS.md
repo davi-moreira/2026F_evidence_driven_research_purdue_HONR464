@@ -5067,3 +5067,57 @@ the final abstract.
   as written.
 - ⚠ For Davi outside the repository: replace the M6 and M7 PDFs and instruction
   text on Brightspace, and tell students (M6 is due Sunday).
+
+## D85 — The Expo application follows the conference's own instructions; title + four-part abstract in M6 and M7 (2026-10-07)
+
+**Ruling (Davi, 2026-10-07).** M7 asks students to apply to the Fall Undergraduate
+Research Expo by following the conference's official pages (Guidelines and Apply,
+both last updated 2026-08-30, and the OURConnect abstract-submission how-to guide,
+last updated August 2026, read on 2026-10-07), after revising their abstract for
+the M6 review email and the Round 01 mentor meeting. M7 also collects the revised
+**title and abstract** as their own file, and M6 now asks for the **project title**
+alongside the abstract draft.
+
+- **Facts verified on the official pages (2026-10-07):** abstracts are due in
+  OURConnect **Wed Oct 14, 2026, 11:59 PM**; the title is capped at **125
+  characters** and the abstract at **2,000 characters**, spaces included; in-person
+  submissions are posters, with an opt-in to be considered for a talk (a talk
+  replaces the poster); the poster session is **Tue Nov 17**, PMU North & South
+  Ballrooms, with at least two availability slots required; the primary mentor
+  approves in OURConnect; final abstract updates close **Nov 2** and mentor
+  approval **Nov 4**; the Expo's AI guidance bars AI-generated abstracts and
+  requires disclosure of generative-AI use. These replace the brief's earlier
+  "roughly 150–250 words" and "deadline TBD / posted on Brightspace".
+- **Abstract structure (both milestones):** four parts. (1) Four sentences:
+  research question; the answer (M7: the verified result, no stronger than the
+  route licenses; M6: the expected answer stated as an expectation, never a
+  finding); background, gap, and objective or hypothesis; contribution. (2) The
+  dataset, with EDA results and insights where possible. (3) Study design, sample
+  size, data-collection tools, analytical technique. (4) The primary finding,
+  stated succinctly with its numbers and uncertainty and no "discuss later" (M6:
+  the exact result the declared analysis will report), then broader impact,
+  limitations, and future directions. **The title highlights the research problem
+  and the answer** (M6: the answer the project is working toward).
+- **M7 brief:** new file `lastname_m07_title_abstract.pdf` (title and abstract as
+  entered in OURConnect, character counts, and a change list tied to the review
+  comments, `IR-M07` requests, and meeting decisions); the notebook drops from nine
+  parts to eight; Component 8 is rewritten as the OURConnect walkthrough (login,
+  portal, every field, Submit vs. Save, confirmation checks, mentor approval);
+  `lastname_m07_conference_application.pdf` now holds the confirmation email plus
+  a My Abstracts screenshot; the Round 01 record names the title and abstract
+  decisions; a new pitfall covers the saved-but-never-submitted abstract.
+- **M6 brief:** Component 6 becomes *The project title and URC abstract draft*,
+  with the same structure and limits.
+- **Rubrics:** no weight moves. In M7 the *Craft, ledger & conference application*
+  bands and in M6 the *Craft, ledger & communication* bands now name the structure
+  and the limits. ⚠ M6 was due Sun Oct 4, before this ruling; the M6 submissions
+  already in hand should not lose points for a missing title or structure.
+- **PDFs:** the M06 and M07 blocks in `milestone_course_additions.yml` rewritten
+  (no dates, per the PDF rule) and both PDFs rebuilt. Propagated to
+  `course_config.yaml` (`urc_abstract_deadline`), `PROJECT_MILESTONES.md`,
+  `INSTRUCTOR_IMPLEMENTATION_GUIDE.md`, and `scripts/schedule_data/part2.py` (M6
+  homework), followed by a rebuild of the meeting schedule and session guides.
+- ⚠ For Davi outside the repository: replace the M7 (and M6) instructions and PDFs
+  on Brightspace, add the `lastname_m07_title_abstract.pdf` file to the M7
+  assignment, post the OURConnect how-to guide, and approve each submission in
+  OURConnect once it arrives.

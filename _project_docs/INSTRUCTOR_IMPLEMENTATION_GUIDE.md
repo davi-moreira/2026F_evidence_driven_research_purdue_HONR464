@@ -374,11 +374,13 @@ Before the first class:
 Three hard anchors drive November. Miss the first and the print deadline slips;
 miss the print deadline and there is no poster to present.
 
-1. **URC abstract — draft in M6 (Sun Oct 4), final + application in M7 (Tue Oct 13)** (D84).
+1. **URC title + abstract — draft in M6 (Sun Oct 4), final + application in M7 (Tue Oct 13)** (D84, D85).
    Review the M6 draft and issue any change as a numbered `IR-M07` request at least
-   48 hours before the M7 deadline; the Fri Oct 9 studio checks the final abstract
-   before students apply (the external URC deadline is TBD; confirm and post it as
-   soon as it publishes).
+   48 hours before the M7 deadline; the Round 01 mentor meeting discusses it; the
+   Fri Oct 9 studio checks the final title and abstract before students apply. The
+   Expo's own deadline is **Wed Oct 14, 11:59 PM** in OURConnect. Then approve each
+   submission in OURConnect (you are primary mentor); updates close Mon Nov 2 and
+   primary-mentor approval closes Wed Nov 4, 11:59 PM.
 2. **Poster lock + print submission — Sun Nov 8, 11:59 PM (M13, terminal).** The
    poster is locked and submitted for printing. No changes after this time.
    Confirm the print vendor turnaround well before this date.
