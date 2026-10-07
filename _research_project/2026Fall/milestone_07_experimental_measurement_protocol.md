@@ -50,17 +50,24 @@ instructions and rubrics live one page per milestone, like this one.
 Due: **Tuesday, October 13, 11:59 PM**. That week's Friday is Studio 7's milestone
 session, run as a **pipeline clinic and application check**: you bring your
 running notebook, restart it from empty in front of your own eyes, walk the
-verification record past your AI assistant's review, and bring the abstract you
-drafted at M6, revised for my review and your verified result, so it is ready to
-go out with your Expo application. You repair what the clinic exposes
-and submit by Tuesday night, after the October Break weekend.
+verification record past your AI assistant's review, and bring your title and
+the abstract you drafted at M6, revised for my M6 review and for what we decided
+at your Round 01 mentor meeting, so they are ready to go out with your Expo
+application. You repair what the clinic exposes and submit by Tuesday night,
+after the October Break weekend.
+
+**The Expo's own deadline comes one day later and does not move:** abstracts are
+due in OURConnect by **Wednesday, October 14, 11:59 PM**. This milestone collects
+the proof that yours went in, so submit it in OURConnect **before** you hand in
+M7 on Tuesday.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your final URC abstract (your M6 draft, revised), your AI Research Ledger rows, and your dossier line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12). Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
-| 2 | **`lastname_m07_conference_application.pdf`** | Proof that you applied to present at the Fall Undergraduate Research Expo: the confirmation page or confirmation email, saved as a PDF. Applying is not optional and it is not something the course does for you. Without this confirmation there is no poster session for you to present at, however good the rest of your project is. |
-| 3 | **`lastname_m07_meeting_round01.pdf`** | Confirmation that your **Round 01 mentor meeting** happened, inside the **Mon Oct 5 to Sun Oct 11** window you requested at M4: the date and time, who attended, and the two or three decisions that came out of it, each with what you changed or why you kept your course. |
-| 4 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The eight-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your AI Research Ledger rows, and your dossier line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 12). Opens with the **Instructor Request Record** (Component 11), which is graded under the carry-forward adjustment. |
+| 2 | **`lastname_m07_title_abstract.pdf`** | Your **revised project title and abstract** (Component 7), copied exactly as you entered them in OURConnect, each with its character count, followed by a short list of what changed from your M6 draft and which review comment or meeting decision each change answers. |
+| 3 | **`lastname_m07_conference_application.pdf`** | Proof that you applied to present at the Fall Undergraduate Research Expo (Component 8): the automated confirmation email, saved as a PDF, plus a screenshot of your row on OURConnect's **My Abstracts** page showing your title, Presentation ID, and status. Applying is not optional and it is not something the course does for you. Without this confirmation there is no poster session for you to present at, however good the rest of your project is. |
+| 4 | **`lastname_m07_meeting_round01.pdf`** | Confirmation that your **Round 01 mentor meeting** happened, inside the **Mon Oct 5 to Sun Oct 11** window you requested at M4: the date and time, who attended, and the two or three decisions that came out of it, including what we decided about your title and abstract, each with what you changed or why you kept your course. |
+| 5 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. The rerun is
 part of the milestone: confirm the result in your write-up matches what the
@@ -73,7 +80,8 @@ notebook prints from a fresh runtime, top to bottom, before you submit.
 The meeting you requested at M4 has to have happened by now, inside the
 **Mon Oct 5 to Sun Oct 11** window. This milestone collects the proof that it
 did: the date and time, who attended, and the two or three decisions that came
-out of it. For each decision, say what you changed. Where you kept your course,
+out of it. Your title and abstract were on that meeting's agenda, so what we
+decided about them belongs in this record. For each decision, say what you changed. Where you kept your course,
 say so plainly and say why the meeting did not move you. A meeting that changed
 nothing and cannot say why was a status report.
 
@@ -142,10 +150,11 @@ say. If a number moves on the restart, the pipeline is the finding, and you
 explain and fix the cause before any claim goes forward.
 
 The same week carries a second, fixed anchor: your **application to the Fall
-Undergraduate Research Expo**. You drafted its abstract at M6, before you had a
-result. This week the abstract gains the verified result, bounded by exactly
-what that result licenses and nothing beyond it, and then it leaves the course
-on the conference's calendar rather than on your research schedule.
+Undergraduate Research Expo**. You drafted its title and abstract at M6, before
+you had a result, and my M6 review and our Round 01 meeting told you what to
+change. This week they gain the verified result, bounded by exactly what that
+result licenses and nothing beyond it, and then they leave the course on the
+conference's calendar rather than on your research schedule.
 
 > **A question that often comes up here:** *"My numbers matched on the first
 > restart. Am I done?"* A match is the entry ticket, not the milestone. A
@@ -256,16 +265,49 @@ For every flag, write your fix or your refutation, each settled by a check in
 your own pipeline. The auditor can miss a real leak and invent a false one, so
 its flags are hypotheses to test, never verdicts.
 
-### 7. The final abstract (your M6 draft, revised)
+### 7. The final title and abstract (your M6 draft, revised)
 
-Start from the abstract you drafted at M6 and the review it came back with.
-Revise it into the abstract you submit to the **Fall Undergraduate Research
-Expo**, roughly 150–250 words: the question, what you measure, the analysis your
-pipeline executes, the verified result with its uncertainty, and the boundary
-around the claim. Where the M6 draft said what your analysis *will* estimate,
-the final version reports what it *did* estimate. Paste the text exactly as you
-submitted it into this milestone, so the version on the conference's record is
-the version I grade.
+Start from the title and abstract you drafted at M6 and work from two sources:
+the comments on them in my M6 review email, including any numbered `IR-M07-##`
+request about them, and what we decided about them at your Round 01 mentor
+meeting. Revise both into the title and abstract you submit to the **Fall
+Undergraduate Research Expo**. Where the M6 draft said what your analysis *will*
+estimate, the final version reports what it *did* estimate.
+
+**The conference's limits.** OURConnect caps the **title at 125 characters** and
+the **abstract at 2,000 characters**, spaces included in both. Count characters,
+not words: 2,000 characters is roughly 280 to 330 words. Capitalize the first
+letter of each major word in the title, as the form asks. Do **not** put your
+name inside the abstract box; the form collects authors separately.
+
+**Your title highlights your research problem and your answer.** A reader who
+sees only the title should know what you studied and what you found. One shape
+that works puts the problem before a colon and the answer after it. The answer
+in the title is bounded exactly the way the abstract bounds it.
+
+**Your abstract has four parts, in this order.**
+
+1. **Question, answer, context, contribution: four sentences.**
+   - The **first sentence** is your research question.
+   - The **second sentence** is your answer to it: your verified result, worded
+     no more strongly than your route licenses.
+   - The **third sentence** gives the reader the background context, the
+     research gap, and your primary objective or hypothesis.
+   - The **fourth sentence** states your contribution to the field.
+2. **Your data.** A description of your dataset: where it comes from, its units,
+   what it covers, and the measures you built from it. Where you can, add one or
+   two results from your **exploratory data analysis (EDA)**, the first look at
+   your data's counts, ranges, and distributions, together with the insight each
+   one gives. For example, how many units each group holds, or how spread out
+   your outcome is.
+3. **Your study design.** The design, the sample size, the tools that collected
+   the data, and the analytical technique your pipeline executes.
+4. **Your findings and what they mean.** Your primary finding, stated succinctly
+   and objectively, with its numbers: the data points, estimate, or effect size,
+   and the uncertainty around it. No promise to "discuss later": an abstract that
+   announces findings without stating them has none. Then the broader impact and
+   usefulness of the result, its main limitations, and the future direction it
+   opens.
 
 One rule is non-negotiable. The abstract may use only the claims your
 current verified result licenses. An abstract that promises a causal finding
@@ -275,43 +317,140 @@ ready to submit. Your result is verified this week and not yet audited: next
 week's robustness work can narrow it, and your wording has to survive that
 without becoming false.
 
+**The words are yours.** The Expo's AI guidance does not allow AI to generate
+your abstract or any full section of your presentation. AI may help you
+brainstorm, check grammar, spelling, and clarity, and critique a draft you
+wrote. Every such use gets a row in your AI Research Ledger, and the Expo asks
+you to disclose generative AI use on your work, for example in your poster's
+acknowledgements. The Expo's own test is the one this course runs on: if you
+cannot explain or defend your abstract without AI support, you have gone beyond
+acceptable use.
+
+Submit the result as **`lastname_m07_title_abstract.pdf`**: the title and the
+abstract exactly as you entered them in OURConnect, each with its character
+count, so the version on the conference's record is the version I grade. Below
+them, list in a few lines what changed from your M6 draft and which review
+comment, `IR-M07-##` request, or meeting decision each change answers. Where
+you kept something I questioned, say why.
+
 > **A question that often comes up here:** *"Why submit the abstract now, when
 > the audit is still ahead?"* Because the application's clock is external and
 > this week is its fixed anchor. The skill being graded is writing a public
 > description that is both true today and safe tomorrow: bounded to your route,
 > carrying its uncertainty, and worded so no later check can make it
-> retroactively false.
+> retroactively false. If next week's robustness work narrows your result, you
+> update the **same** OURConnect submission, and the Expo accepts final updates
+> until **Monday, November 2, 11:59 PM**. Any update after I approve it comes
+> back to me for approval again.
 
 ### 8. Applying to the conference
 
-Your final abstract has somewhere to go. Once it is ready, apply to present a poster at the **Fall Undergraduate Research Expo** through Purdue's
-Undergraduate Research site:
-<https://www.purdue.edu/undergrad-research/conferences/fall/index.php>.
+Your final title and abstract have somewhere to go. Apply to present a poster at
+the **Fall Undergraduate Research Expo** through **OURConnect**, Purdue's
+undergraduate research portal, following the conference's own instructions.
+Read these three pages before you open the form:
 
-The form asks for a specific set of things, and it is worth having them written
-down before you open it:
+- **Guidelines:** <https://www.purdue.edu/undergrad-research/conferences/fall/guidelines.php>
+  (the AI guidance above, poster size, and what the day involves)
+- **Apply:** <https://www.purdue.edu/undergrad-research/conferences/fall/apply.php>
+  (the deadline, the portal, and abstract-writing help)
+- **Abstract Submission how-to guide (.docx):**
+  <https://www.purdue.edu/undergrad-research/conferences/fall/OURConnect_ConferenceAbstractSubmission.docx>,
+  the step-by-step walkthrough of the form with screenshots, also posted on
+  Brightspace
 
-- **Title.** Your project title, informative rather than clever.
-- **Abstract.** Your final abstract from Component 7. Do **not** put your name
-  inside the abstract box.
-- **Publication consent.** Yes, the abstract may appear in the booklet.
-- **Five keywords** that would let someone working on your question find you.
-- **Author.** You. Projects here are individual by default; an approved group
-  lists every member.
-- **Format.** In person.
-- **Availability** on the day: select every slot you can genuinely make.
-- **Presentation type.** Poster. You are not applying for a research talk.
-- **Research category** and **judging unit**: the ones that fit your question,
-  which for an Honors project is usually the discipline your evidence comes from
-  rather than the college you are enrolled in. Ask me if it is not obvious.
-- **Mentor.** Davi Cordeiro Moreira, `dcordeir@purdue.edu`. The Expo requires a
-  faculty mentor of record, and an application without one does not stand.
+**The deadline is the conference's: Wednesday, October 14, 2026, 11:59 PM.** The
+Expo does not accept late applications to the poster session. Because the
+confirmation is part of this milestone, submit by **Tuesday, October 13**, when
+M7 is due.
 
-When the confirmation arrives, save it as a PDF and submit it with this
-milestone. That confirmation is your evidence that the step was actually taken,
-not merely planned. **The external application deadline is set by the
-conference, not by this course, and it is posted on Brightspace. It does not
-move because your analysis is still settling.**
+**Step 1. Log in.** Go to <https://www.purdue.edu/undergrad-research/ourconnect/>,
+click **Login**, and sign in with BoilerKey, since you have an `@purdue.edu`
+account.
+
+**Step 2. Open the conference portal.** Click **Conference**, then **New Abstract
+for 2026 Fall Expo - WL**. Anything you save or submit later appears under
+**Conference → My Abstracts**.
+
+**Step 3. Fill in the form.** Fields with a red asterisk are required. Have your
+title and abstract from Component 7 ready before you start.
+
+*Presentation*
+
+- **Title** and **Abstract:** paste them from Component 7, unchanged.
+- **Can we include your abstract in the abstract booklet?** Yes, the abstract can
+  be published.
+- **Format:** In person.
+- **Poster Availability:** the poster session is on **Tuesday, November 17**, in
+  the PMU North & South Ballrooms. Select at least the two slots the form
+  requires, and every slot you can genuinely make. You will be assigned one.
+- **Has the first student author presented a poster at a conference before?**
+  Answer truthfully.
+- **Presentation Type:** Poster. Do not ask to be considered for a research talk:
+  a talk replaces the poster, and the poster is the Expo deliverable this course
+  grades.
+
+*Categorization*
+
+- **Primary Research Category:** the one of the five (Creative, Humanities,
+  Social Science, STEM, Business Case Study) that describes your project. The
+  definitions are at <https://www.purdue.edu/undergrad-research/about/definitions.php>.
+- **Academic Review Unit:** choose the West Lafayette campus, then the college
+  or school that should review your abstract. The Expo's FAQ says this is
+  usually tied to the type of research, such as your primary mentor's unit, or
+  to your major. Ask me before you submit if it is not obvious.
+- **Course Connection**, if the form shows it: leave the VIP boxes unchecked.
+  This is not a VIP course.
+
+*Other information* is optional. Leave program, funding, and institutional-focus
+fields blank unless one genuinely applies to your project, and tick
+**Publishing** if you would like to hear about the Journal of Purdue
+Undergraduate Research.
+
+*Participants.* Each person appears once, in one role.
+
+- **UG Presenting Authors:** you. Enter your Purdue email, click **Confirm**, and
+  select your primary Purdue location. The first person listed is the primary
+  presenter. An approved group lists every presenting member.
+- **UG Contributing Authors** and **UG Researcher Acknowledgments:** leave empty
+  for an individual project.
+- **Mentors:** Davi Cordeiro Moreira, `dcordeir@purdue.edu`. Enter it, click
+  **Confirm**, and select the location. The first mentor listed is the primary
+  mentor, the only one who can approve your presentation, and an application
+  without a mentor does not stand.
+- **Other Acknowledgments** and **Associated Project:** leave blank unless one
+  applies.
+
+If OURConnect rejects a valid Purdue email, look the person up in the Purdue
+directory and use their alias with `@purdue.edu`.
+
+**Step 4. Submit, then check.** Click **Submit**, not **Save without
+submitting**. A saved abstract stays *Pending*: nobody but you can see it, and it
+has not been sent. After you submit, two things should happen. You receive an
+automated confirmation email, and your abstract appears under **My Abstracts**
+with the status *Submitted*. If either is missing, the Expo's instruction is to
+resubmit from an incognito browser window. If the problem persists, write to
+`OURConnect@purdue.edu` for portal problems or `OUREvents@purdue.edu` for
+questions about the Expo, and copy me.
+
+**What happens next.** I review your submission in OURConnect and approve it,
+and its status changes to *Mentor approved*. If I ask for a change, update the
+**same** submission rather than starting a new one; the Expo asks you to fix the
+original, and each student can be the first presenting author on only one
+abstract per conference. The Expo tells presenters their format by October 28,
+and the poster session itself is Tuesday, November 17.
+
+**Your proof for this milestone** is `lastname_m07_conference_application.pdf`:
+the automated confirmation email saved as a PDF, plus a screenshot of your row
+on **My Abstracts** showing your title, Presentation ID, and status. That
+confirmation is your evidence that the step was actually taken, not merely
+planned. **The application deadline belongs to the conference, not to this
+course, and it does not move because your analysis is still settling.**
+
+If you need a disability-related accommodation to take part in the Expo,
+contact the Disability Resource Center (`drc@purdue.edu`) early, as the Expo
+asks. The Apply page also explains how the Office of Undergraduate Research may
+use application data in an approved study, and how to opt out.
 
 ### 9. AI Research Ledger rows
 
@@ -320,8 +459,10 @@ Ledger** (the eight-field table: task delegated · tool used · prompt · output
 summary · decision · verification method · remaining concern · responsible
 researcher). Drafting pipeline code, debugging an error message, writing the
 environment-record cell, proposing a re-derivation route, running the Prediction
-& Leakage Auditor, and red-teaming your abstract are all delegable tasks, and
-each one you delegated needs a row naming how you verified the result. "No AI
+& Leakage Auditor, and asking AI to critique your title and abstract or check
+their grammar and clarity are all delegable tasks, and each one you delegated
+needs a row naming how you verified the result. Writing the abstract itself is
+not delegable (Component 7). "No AI
 used" is a legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
@@ -336,7 +477,7 @@ reconstruct your thinking. Then end with one line recording what this milestone
 finalizes in your **Research Project Dossier**: the reproducible analysis
 notebook now exists, verified rather than merely executed, carrying its
 uncertainty statement, its environment record, its claim-to-output trace, the
-final URC abstract, and your application confirmation. Name the file or section where each now lives.
+final title and abstract, and your application confirmation. Name the file or section where each now lives.
 
 ### 11. Carry-forward of instructor review requests: the Instructor Request Record
 
@@ -419,14 +560,14 @@ pre-submission checklist.
 | **Claim-to-output trace** | Every number you plan to report pointed to the cell that produces it |
 | **Re-derivations** | Two key numbers recomputed by independent routes and judged against a tolerance declared before the run |
 | **Leakage audit** | Prediction & Leakage Auditor run; every flag fixed or refuted by a check in your own pipeline |
-| **Final URC abstract** | Your M6 draft revised for my review and your verified result; roughly 150–250 words; inside the claims your verified result licenses; pasted exactly as submitted |
-| **Conference application** | Applied to the Fall Undergraduate Research Expo with the final abstract; the confirmation saved as `lastname_m07_conference_application.pdf` |
+| **Final title and abstract** | Your M6 draft revised for my M6 review, our Round 01 meeting, and your verified result; title of at most 125 characters that highlights your research problem and your answer; abstract of at most 2,000 characters (spaces included) in the four parts of Component 7, with the question as sentence 1 and the answer as sentence 2; your own words; inside the claims your verified result licenses; submitted as `lastname_m07_title_abstract.pdf`, exactly as entered in OURConnect, with character counts and the change list |
+| **Conference application** | Submitted (not just saved) in OURConnect by Tue Oct 13, ahead of the Expo's Wed Oct 14, 11:59 PM deadline: in person, poster, mentor `dcordeir@purdue.edu`; the confirmation email plus a **My Abstracts** screenshot saved as `lastname_m07_conference_application.pdf` |
 | **Version line** | Book Milestone 7, version 1, dated, with its reason |
 | **Permission status** | Your M4/M6 permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
-| **Dossier line** | The verified notebook, its trace, the final abstract, and the application confirmation located by file or section |
-| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; final abstract checked before the application went out; submitted by Tuesday, Oct 13 |
-| **Filename** | A shared Colab link or `lastname_m07_first_analysis.ipynb`; optional `lastname_m07_first_analysis.pdf` companion |
+| **Dossier line** | The verified notebook, its trace, the final title and abstract, and the application confirmation located by file or section |
+| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; final title and abstract checked before the application went out; submitted by Tuesday, Oct 13 |
+| **Filename** | A shared Colab link or `lastname_m07_first_analysis.ipynb` (optional `lastname_m07_first_analysis.pdf` companion); `lastname_m07_title_abstract.pdf`; `lastname_m07_conference_application.pdf`; `lastname_m07_meeting_round01.pdf` |
 | **Location** | Brightspace → Assignments → M07 |
 | **Instructor Request Record** | Opens the artifact after the version line; every `IR-M07-##` request from the M6 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 | **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
@@ -448,7 +589,7 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Evidence integrity & provenance** (18) | Data loaded from the documented M6 source; the environment is recorded; every reported number traces to a data cell and a line of code (16–18) | Traceable; one trace row or the environment record thin (13–15) | A dataset or number asserted without a locatable origin, or an incomplete trace (7–12) | A source that does not exist, or a number with no path back to data (0–6) |
 | **Verification** (27) | The clean restart is run and recorded; every discrepancy explained and fixed; both re-derivations are genuinely independent and judged against a tolerance declared first; the line review and known-answer test are real; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification; every judgment defended in your own reasoning, not a tool's (24–27) | All five checks present; one recorded loosely (19–23) | A restart claimed but not recorded, a re-derivation that reuses the original code, a tolerance written after the gap was visible, or a flag answered without a check (13–18) | No clean restart, a discrepancy left unexplained, an auditor flag pasted in or dismissed unverified, or code in the pipeline you cannot explain (0–12) |
 | **Uncertainty & claim boundary** (18) | The uncertainty statement is attached, reproduces, and is read correctly; the result is never worded as settled certainty; the abstract makes no promise the evidence cannot keep (16–18) | Uncertainty present and reproducing; one reading or boundary sentence loose (13–15) | A point estimate with no uncertainty, or uncertainty reported but never read (7–12) | The first verified run narrated as a certain finding, or an abstract that overclaims past the route (0–6) |
-| **Craft, ledger & conference application** (13) | Versioned with its reason, on-format, on-time, application confirmation submitted, complete AI Research Ledger, dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses; application and ledger complete (9–10) | Missing pieces, a rushed clinic walkthrough, or no application confirmation (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft, ledger & conference application** (13) | Versioned with its reason, on-format, on-time, application confirmation submitted, complete AI Research Ledger, dossier line present; the title and abstract follow Component 7's structure inside the Expo's limits; the ethics, permissions and data-exposure rail carried as this studio requires (11–13) | Minor format lapses, or one part of the abstract's structure thin; application and ledger complete (9–10) | Missing pieces, a rushed clinic walkthrough, an abstract that skips a required part or exceeds the limits, or no application confirmation (4–8) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M07-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M07"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.
@@ -520,7 +661,11 @@ days of feedback recovers up to half the lost points.
    for the units you analyzed. The abstract must sit inside the claims your
    verified result supports; an abstract that overclaims is not ready to
    submit, and once submitted it is public.
-5. **The invisible response.** You changed something because I asked, but the
+5. **The application that never left.** Filling in the OURConnect form, clicking
+   *Save without submitting*, and assuming it went in. A saved abstract stays
+   *Pending*, invisible to me and to the Expo. Click **Submit**, then check that
+   the confirmation email arrived and that **My Abstracts** shows *Submitted*.
+6. **The invisible response.** You changed something because I asked, but the
    Instructor Request Record does not say where, or it says only "I disagree."
    Neither can be verified, so both count as unaddressed. Point to the exact
    place, or give the reason and the choice you made instead.

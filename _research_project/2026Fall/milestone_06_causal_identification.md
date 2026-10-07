@@ -54,12 +54,12 @@ and Friday is their milestone. What you submit is one **governed-data record**:
 provenance documentation, a data-management record, a permission recheck run
 against your own acquisition route, and your measurement specification, with
 the Contract version that settles the operationalization M4 left provisional.
-It also carries the **first draft of your conference abstract**, which goes out
-with your Expo application at M7. The written document is what is graded.
+It also carries your **project title** and the **first draft of your conference
+abstract**, which go out with your Expo application at M7. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m06_data_governance.pdf`** *or* a shared Colab notebook link | The eight parts below: your acquisition route and provenance record, your data-management record, the route-specific permission recheck, your measurement specification (concept → construct → indicator, with the reliability check's result and the validity argument), the Contract version that settles your operationalization, your URC abstract draft, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10). Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
+| 1 | **`lastname_m06_data_governance.pdf`** *or* a shared Colab notebook link | The eight parts below: your acquisition route and provenance record, your data-management record, the route-specific permission recheck, your measurement specification (concept → construct → indicator, with the reliability check's result and the validity argument), the Contract version that settles your operationalization, your project title and URC abstract draft, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. It also delivers what your **research action plan** commits you to for this milestone (Component 10). Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
 | 2 | **EDR\|AI "It is your turn" — ch. 20, ch. 21** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -139,7 +139,8 @@ the next version of your Research Contract.
 > but it cannot support a claim about the world.
 
 The same record carries one more piece, and its clock is the conference's, not
-yours: the **first draft of your conference abstract**. You apply to the Fall
+yours: your **project title** and the **first draft of your conference
+abstract**. You apply to the Fall
 Undergraduate Research Expo at M7, and an abstract written the night of the
 application has had no reader. Drafting it now, when your question, data, and
 measures are settled but your result is not, gives it a round of review before
@@ -270,31 +271,68 @@ the revision:
   interval around a poorly measured quantity is still a poorly measured
   quantity.
 
-### 6. The URC abstract draft
+### 6. The project title and URC abstract draft
 
-Draft the abstract you will submit to the **Fall Undergraduate Research Expo**,
-roughly 150–250 words, describing your project as it stands this week: the
-question, why it matters, the data and measures you governed above, the analysis
-your Contract declares, and what that analysis will and will not be able to
-show.
+Draft the **project title** and the **abstract** you will submit to the **Fall
+Undergraduate Research Expo**, describing your project as it stands this week.
+Both follow the conference's limits from the start: OURConnect caps the **title
+at 125 characters** and the **abstract at 2,000 characters**, spaces included in
+both. Count characters, not words: 2,000 characters is roughly 280 to 330 words.
+Capitalize the first letter of each major word in the title.
 
-You do not have a result yet, and the draft must not pretend you do. Where the
-finding will go, write what your declared analysis will estimate and the
-uncertainty it will report. For example: *"I estimate the difference in
-first-year retention between the two cohorts, with a 95% bootstrap interval."*
-Write no number and no direction you have not computed. The draft also stays
+**Your title highlights your research problem and the answer you are working
+toward.** A reader who sees only the title should know what you are studying
+and what kind of answer the project will deliver. At M7 the title is revised to
+carry your verified answer.
+
+**Your abstract has four parts, in this order.**
+
+1. **Question, answer, context, contribution: four sentences.**
+   - The **first sentence** is your research question.
+   - The **second sentence** is your answer to it. You have no result yet, so
+     state the answer you expect, worded plainly as your expectation or
+     hypothesis, never as a finding.
+   - The **third sentence** gives the reader the background context, the
+     research gap, and your primary objective or hypothesis.
+   - The **fourth sentence** states the contribution your project aims to make
+     to the field.
+2. **Your data.** A description of the dataset you governed this week: where it
+   comes from, its units, what it covers, and the measures you built from it. If
+   the data are not in hand yet, describe what you expect them to be. Where you
+   can, add one or two results from your **exploratory data analysis (EDA)**, the
+   first look at your data's counts, ranges, and distributions, together with the
+   insight each one gives. For example, how many units each group holds, or how
+   spread out your outcome is.
+3. **Your study design.** The design, the sample size, the tools that collect
+   the data, and the analytical technique you will use.
+4. **Your findings and what they mean.** You do not have a finding yet, and the
+   draft must not pretend you do. Name the primary result your declared analysis
+   will report, precisely: the quantity, for which units, and the uncertainty it
+   will carry. For example: *"I estimate the difference in first-year retention
+   between the two cohorts, with a 95% bootstrap interval."* A vague promise to
+   "discuss the results later" does not count. Then the broader impact and
+   usefulness the result can have, the study's main limitations, and its future
+   directions.
+
+Write no number and no direction for a result you have not computed; the EDA
+facts in part 2 are the only numbers this draft carries. The draft also stays
 inside your route's licence: no causal verb your design cannot support, and no
-population your data never reach.
+population your data never reach. The words are yours: the Expo's AI guidance
+does not allow AI to generate your abstract, though AI may help you brainstorm
+and check grammar and clarity, with a ledger row for each use.
 
-My review of this milestone returns the draft with numbered requests where it
-needs them. At M7 you revise it for those requests and for your verified result,
-and it goes out with your application.
+Put the title and the draft inside your milestone document, with each one's
+character count. My review of this milestone returns them with numbered
+requests where they need them, and we discuss them at your Round 01 mentor
+meeting. At M7 you revise both for those requests, for that meeting, and for
+your verified result, and they go out with your application.
 
 > **A question that often comes up here:** *"Why write the abstract before I
 > have a result?"* Because the application is due on the conference's calendar,
 > and a first draft needs a reader before it is public. There is a second reason.
-> If you cannot describe your question, data, and measures in 200 words, the
-> project is not yet settled, and this is the cheapest week to find that out.
+> If you cannot state your question, your expected answer, your data, and your
+> design in 2,000 characters, the project is not yet settled, and this is the
+> cheapest week to find that out.
 
 ### 7. AI Research Ledger rows
 
@@ -303,7 +341,8 @@ Ledger** (the eight fixed fields: task delegated · tool used · prompt ·
 output summary · decision · verification method · remaining concern ·
 responsible researcher). Hunting a licence, drafting the provenance table,
 proposing indicator wordings, listing what an indicator fails to capture,
-red-teaming your re-identification recheck, and tightening your abstract draft
+red-teaming your re-identification recheck, and checking your title and abstract
+draft for grammar and clarity (never writing them; see Component 6)
 are all delegable tasks. Each one
 you delegated needs a row naming how you verified the result against the
 actual file or page, because the verification is the only part a reader can
@@ -319,7 +358,7 @@ End with one line recording what this milestone finalizes in your **Research
 Project Dossier**: your **data and measurement documentation** component now
 exists — acquisition route, provenance record, data-management record,
 measurement specification, permission recheck, and the Contract version that
-settled your operationalization. Record also where your URC abstract draft lives.
+settled your operationalization. Record also where your project title and URC abstract draft live.
 Name the file or section in your dossier where each now lives.
 
 ### 9. Carry-forward of instructor review requests: the Instructor Request Record
@@ -404,7 +443,8 @@ pre-submission checklist.
 | **Reliability** | One check run on items, occasions, or raters, never on split respondents; its result reported, or "no defensible check available" written down with what you narrowed |
 | **Validity** | Interpretation and use both stated; the strongest rival reading named; the boundary sentence saying what the indicator misses and who it never reaches |
 | **Contract version** | The operationalization settled and issued as the next dated, numbered Contract version with a usable reason; the provisional M4 field named; measurement error stated alongside sampling uncertainty |
-| **URC abstract draft** | Roughly 150–250 words: the question, why it matters, the data and measures, the declared analysis, and what it will and will not show; no result claimed; nothing your route does not license |
+| **Project title** | At most 125 characters, spaces included; highlights your research problem and the answer you are working toward; character count shown |
+| **URC abstract draft** | At most 2,000 characters, spaces included, in the four parts of Component 6: question as sentence 1, expected answer as sentence 2 (stated as an expectation), context and gap as sentence 3, contribution as sentence 4; then your data with any EDA facts, your study design, and the result you will report with impact, limitations, and future directions; no result claimed; nothing your route does not license; your own words; character count shown |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named, non-vague, and run against the file or page itself |
 | **Dossier line** | The data and measurement documentation component located by file or section |
 | **Studio work** | Worked at the Friday studio with your AI assistant |
@@ -431,7 +471,7 @@ rails, and defensible as one governed-data record.
 | **Evidence integrity & provenance** (18) | Every dataset, licence, and borrowed number is real and retrievable; the primary source behind your headline claim was opened and read; missing links written as unknown rather than guessed; a reader can trace each entry to its origin (16–18) | Real and traceable; one provenance entry thin (13–15) | A dataset, licence, or number asserted without a locatable source (7–12) | A cited dataset, licence, or source that does not exist or does not say what you claim (0–6) |
 | **Verification of AI-assisted parts** (18) | Every AI claim about your data verified against the file itself; the permission recheck run in the form your route requires; every ledger row's verification method named and non-vague; every judgment defended in your own reasoning, not a tool's (16–18) | Ledger present; one verification method vague or one step unlogged (13–15) | Ledger thin; AI outputs used but the against-the-file check not named (7–12) | An AI description of your dataset, or an AI-asserted licence, pasted in and never checked against the file (0–6) |
 | **Uncertainty & measurement error** (18) | Measurement error stated alongside sampling uncertainty; the construct–indicator gap named with what it could cost the claim; the boundary sentence says who the measure never reaches; the Contract version carries a usable reason; the URC abstract draft claims no result and promises nothing your route does not license (16–18) | Error, gap, and boundary present; one stated loosely, or the version reason thin (13–15) | Measurement error mentioned but not connected to the claim, or the gap declared closed by assertion (7–12) | No measurement-error statement, a settled operationalization with no version and no reason, or an abstract draft that announces a finding you have not computed (0–6) |
-| **Craft, ledger & communication** (9) | On-format, on-time; the four pieces assembled as one record a reader can follow; tables complete and readable; the URC abstract draft present at 150–250 words; complete AI Research Ledger; dossier line present (8–9) | Minor format lapses; ledger and abstract draft complete (6–7) | Missing pieces, including a missing abstract draft, or a rushed record (4–5) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft, ledger & communication** (9) | On-format, on-time; the four pieces assembled as one record a reader can follow; tables complete and readable; the project title and URC abstract draft present, in Component 6's structure and inside the Expo's limits; complete AI Research Ledger; dossier line present (8–9) | Minor format lapses, or one part of the abstract's structure thin; ledger, title, and abstract draft complete (6–7) | Missing pieces, including a missing title or abstract draft, an abstract that skips a required part or exceeds the limits, or a rushed record (4–5) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M06-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M06"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.

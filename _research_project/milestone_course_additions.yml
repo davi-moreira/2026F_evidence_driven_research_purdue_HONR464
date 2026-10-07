@@ -537,63 +537,147 @@ milestones:
       deadline and early enough for the Expo application window, or the request cannot count.'
     schedule_note: URC abstract draft
     additions_markdown: |
-      ### The first draft of your conference abstract
+      ### Your project title and the first draft of your conference abstract
 
       You apply to present at the Undergraduate Research Expo at the next milestone, and
-      the abstract goes out with that application. An abstract written the night of the
-      application has had no reader, so its first draft comes in now, and the book
-      milestone does not ask for it.
+      your title and abstract go out with that application. An abstract written the night
+      of the application has had no reader, so the title and the first draft come in now,
+      and the book milestone does not ask for them.
 
-      Draft the abstract you will submit, roughly 150 to 250 words: the question, why it
-      matters, the data and measures you governed this week, the analysis your Contract
-      declares, and what that analysis will and will not be able to show. You do not have
-      a result yet, and the draft must not pretend you do. Where the finding will go,
-      write what your declared analysis will estimate and the uncertainty it will report.
-      Write no number and no direction you have not computed, no causal verb your design
-      cannot support, and no population your data never reach.
+      Follow the conference's limits from the start: the submission portal caps the title
+      at 125 characters and the abstract at 2,000 characters, spaces included in both.
+      Count characters, not words, and capitalize the first letter of each major word in
+      the title.
 
-      Put the draft inside your milestone document. The review of this milestone returns
-      it with numbered requests where it needs them; at the next milestone you revise it
-      for those requests and for your verified result, and it goes out with your
-      application.
+      **Your title highlights your research problem and the answer you are working
+      toward.** A reader who sees only the title should know what you are studying and
+      what kind of answer the project will deliver.
+
+      **Your abstract has four parts, in this order.**
+
+      1. **Question, answer, context, contribution: four sentences.** The first sentence
+         is your research question. The second is your answer to it; you have no result
+         yet, so state the answer you expect, plainly as your expectation or hypothesis,
+         never as a finding. The third gives the background context, the research gap,
+         and your primary objective or hypothesis. The fourth states the contribution your
+         project aims to make to the field.
+      2. **Your data.** A description of the dataset you governed this week, or of what
+         you expect it to be if it is not in hand yet: its source, units, coverage, and
+         the measures you built. Where you can, add one or two results from your
+         exploratory data analysis (EDA), the first look at your data's counts, ranges,
+         and distributions, with the insight each one gives.
+      3. **Your study design.** The design, the sample size, the tools that collect the
+         data, and the analytical technique you will use.
+      4. **Your findings and what they mean.** Name precisely the primary result your
+         declared analysis will report: the quantity, for which units, and the
+         uncertainty it will carry. A vague promise to discuss the results later does not
+         count. Then the broader impact and usefulness the result can have, the study's
+         main limitations, and its future directions.
+
+      Write no number and no direction for a result you have not computed, no causal verb
+      your design cannot support, and no population your data never reach. The words are
+      yours: the Expo's AI guidance does not allow AI to generate your abstract, though AI
+      may help you brainstorm and check grammar and clarity, with a ledger row for each use.
+
+      Put the title and the draft inside your milestone document, each with its character
+      count. The review of this milestone returns them with numbered requests where they
+      need them, and your first mentor meeting discusses them; at the next milestone you
+      revise both for those requests, for that meeting, and for your verified result, and
+      they go out with your application.
   M07:
     schedule_mark: true
     classification: additions
     reason: 'The Book Milestone page asks only for the declared analysis, the result with uncertainty,
       a clean restart, an environment record, and a claim-to-output trace. The course adds two things
       the page never mentions: a required Prediction and Leakage Auditor pass whose flags must each be
-      settled by a check in the student''s own pipeline, and a 150 to 250 word Undergraduate Research
-      Conference abstract that must clear an internal instructor gate at the Friday studio because its
-      clock is external to the course.'
+      settled by a check in the student''s own pipeline, and the final title and abstract plus the
+      Expo application itself, whose clock is external to the course. AMENDED 2026-10-07 (D85): the
+      application follows the Expo''s own Guidelines and Apply pages and its OURConnect how-to guide;
+      the title and abstract follow the instructor''s four-part structure inside the portal''s limits
+      (125 and 2,000 characters).'
     schedule_note: Final abstract, application, mentor meeting
     additions_markdown: |
       ### The conference submission
 
-      Two things leave your hands this week on the conference's calendar rather than
-      on your research schedule, and the book milestone has neither.
+      Three things leave your hands this week on the conference's calendar rather than on
+      your research schedule, and the book milestone has none of them.
 
-      **1. The final abstract the conference publishes.** Start from the abstract you
-      drafted at Milestone 6 and the review it came back with. Revise it into the
-      abstract you submit, roughly 150 to 250 words: the question, what you measure, the
-      analysis your pipeline executes, the verified result with its uncertainty, and the
-      boundary around the claim. Where the draft said what your analysis will estimate,
-      the final version reports what it did estimate. One rule is non-negotiable: the
-      abstract may use only the claims your current verified result licenses. Your
-      result is verified this week and not yet audited, so your wording has to survive
-      next week's robustness work without becoming false. Paste the text exactly as you
-      submitted it into your milestone document.
+      **1. Your final title and abstract.** Start from the title and abstract you drafted
+      at Milestone 6, the comments on them in your review, and what you and your mentor
+      decided about them at your first mentor meeting. Revise both into what you submit.
+      Where the draft said what your analysis will estimate, the final version reports
+      what it did estimate.
 
-      **2. The application that puts your name on the programme.** Apply to present a
-      poster through Purdue's Undergraduate Research site. The form wants your title,
-      your abstract with no author name inside the abstract box, five keywords, you as
-      author, in-person poster presentation, your availability on the day, a research
-      category and judging unit, and a faculty mentor of record: Davi Cordeiro Moreira,
-      dcordeir@purdue.edu. An application without a mentor does not stand.
+      Follow the conference's limits: the portal caps the title at 125 characters and the
+      abstract at 2,000 characters, spaces included in both. Capitalize the first letter of
+      each major word in the title, and put no author name inside the abstract.
 
-      Save the confirmation as a PDF and submit it as your proof of application. Without
-      that confirmation there is no poster session for you to present at, however good
-      the rest of your project is. The deadline belongs to the conference, not to this
-      course, and it is posted on your course platform.
+      **Your title highlights your research problem and your answer.** A reader who sees
+      only the title should know what you studied and what you found, bounded exactly the
+      way the abstract bounds it.
+
+      **Your abstract has four parts, in this order.**
+
+      1. **Question, answer, context, contribution: four sentences.** The first sentence
+         is your research question. The second is your answer to it: your verified
+         result, worded no more strongly than your route licenses. The third gives the
+         background context, the research gap, and your primary objective or hypothesis.
+         The fourth states your contribution to the field.
+      2. **Your data.** A description of your dataset: its source, units, coverage, and
+         the measures you built. Where you can, add one or two results from your
+         exploratory data analysis (EDA) with the insight each one gives.
+      3. **Your study design.** The design, the sample size, the tools that collected the
+         data, and the analytical technique your pipeline executes.
+      4. **Your findings and what they mean.** Your primary finding, stated succinctly and
+         objectively, with its numbers: the data points, estimate, or effect size, and the
+         uncertainty around it. No promise to discuss it later. Then the broader impact
+         and usefulness of the result, its main limitations, and its future direction.
+
+      One rule is non-negotiable: the abstract may use only the claims your current
+      verified result licenses. Your result is verified this week and not yet audited, so
+      your wording has to survive next week's robustness work without becoming false. The
+      words are yours: the Expo's AI guidance does not allow AI to generate your abstract
+      or any full section of your presentation, and asks you to disclose any generative
+      AI use on your work.
+
+      Submit the title and the abstract exactly as you entered them in the portal, each
+      with its character count, followed by a short list of what changed from your draft
+      and which review comment, numbered request, or meeting decision each change answers.
+
+      **2. The application that puts your name on the programme.** Apply through
+      OURConnect, Purdue's undergraduate research portal, following the conference's own
+      [Guidelines](https://www.purdue.edu/undergrad-research/conferences/fall/guidelines.php),
+      [Apply](https://www.purdue.edu/undergrad-research/conferences/fall/apply.php) page,
+      and [abstract-submission how-to guide](https://www.purdue.edu/undergrad-research/conferences/fall/OURConnect_ConferenceAbstractSubmission.docx).
+
+      - Log in at [OURConnect](https://www.purdue.edu/undergrad-research/ourconnect/) with
+        BoilerKey, then open **Conference** and the **New Abstract** entry for the Fall
+        Expo.
+      - Paste your title and abstract unchanged, allow the abstract to be published in
+        the booklet, choose the **in-person** format and the **Poster** presentation type,
+        and select at least the two poster-session slots the form requires, and every slot
+        you can genuinely make. Do not ask to be considered for a research talk: a talk
+        replaces the poster this course grades.
+      - Choose the primary research category that describes your project and the
+        academic review unit the Expo's FAQ points you to; ask your mentor if it is not
+        obvious. Optional program and funding fields stay blank unless one genuinely
+        applies.
+      - List yourself as the presenting author, and your faculty mentor of record, Davi
+        Cordeiro Moreira, dcordeir@purdue.edu, as the primary mentor. Click **Confirm**
+        after each email. An application without a mentor does not stand.
+      - Click **Submit**, not **Save without submitting**: a saved abstract stays Pending
+        and has not been sent. Then check that the automated confirmation email arrived and
+        that **My Abstracts** shows it as Submitted. If either is missing, resubmit from an
+        incognito browser window, as the Expo instructs.
+
+      Your mentor approves the submission in the portal. If a change is needed, update the
+      same submission rather than starting a new one.
+
+      **3. Your proof of application.** Save the confirmation email as a PDF, add a
+      screenshot of your row on My Abstracts showing your title, Presentation ID, and
+      status, and submit them. Without that confirmation there is no poster session for
+      you to present at, however good the rest of your project is. The deadline belongs to
+      the conference, not to this course, and it is posted on your course platform.
 
       ### Your Round 01 mentor meeting, confirmed
 
@@ -602,8 +686,8 @@ milestones:
       that it did.
 
       Write one short section into your milestone document naming the day and hour of
-      the meeting, who attended, and the two or three decisions that came out of it.
-      For each decision, say what you changed. Where you kept your course, say that
+      the meeting, who attended, and the two or three decisions that came out of it,
+      including what was decided about your title and abstract. For each decision, say what you changed. Where you kept your course, say that
       plainly and say why the meeting did not move you. A meeting that changed nothing
       and cannot say why was a status report.
 
