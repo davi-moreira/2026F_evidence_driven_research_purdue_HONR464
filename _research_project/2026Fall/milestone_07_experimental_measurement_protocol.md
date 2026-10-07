@@ -312,8 +312,53 @@ the parts carries the structure.
    your data's counts, ranges, and distributions, together with the insight each
    one gives. For example, how many units each group holds, or how spread out
    your outcome is.
+
+   *In the book:* [Ch. 20, Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html)
+   shows how to say where each value comes from and what it is a value *of*. Its
+   [worked example](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html#a-worked-example) traces a county turnout figure back
+   to the clerk's certified canvass and finds three different turnout rates
+   behind three denominators. [Ch. 21, Measurement and
+   Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html) shows how to describe the measures you built,
+   from concept to construct to indicator. An EDA insight is **exploratory**, a
+   pattern you noticed after seeing the data, so label it that way and never
+   present it as a test ([Ch. 12, *Preregistration and the pre-analysis
+   plan*](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#preregistration-and-the-pre-analysis-plan)).
+
+   *Example, built from [Ch. 21's worked example](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html#a-worked-example):*
+   "The data are 960 survey answers from employees at 16 work sites, 60 per
+   site, eight that piloted flexible scheduling and eight that kept fixed
+   shifts. Engagement is measured through one facet, willingness to recommend
+   the workplace, as the mean answer to a single 1–7 agreement item; re-asking
+   a random tenth of respondents two weeks later returned closely matching
+   answers."
+
 3. **Your study design.** The design, the sample size, the tools that collected
    the data, and the analytical technique your pipeline executes.
+
+   *In the book:* [Ch. 10, Model, Inquiry, Data Strategy, and Answer
+   Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html) gives you the words for this part. Your **data strategy**
+   is who was sampled, who got which condition, and how each outcome
+   was measured: your sample and your data-collection tools. Your **answer
+   strategy** is the estimate you computed and how you stated its
+   uncertainty: your analytical technique. [Ch. 12, Declaring and Diagnosing a
+   Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html) shows why a sample size is justified, not just
+   reported: in its [worked example](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#a-worked-example), 12 shoppers per
+   version detect a real 8-second gain in under 10% of simulated runs, and 400
+   per version in over 90%. [Ch. 11, *Dependence, and what it
+   costs*](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html#dependence-and-what-it-costs) shows why the sample size you
+   report counts independent units: 60 flats in 12 buildings, treated as 60
+   independent flats, give an interval that catches the truth far less often
+   than it promises. The pathway chapters of [Studio 5](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio05-develop-the-pathway.html) (Ch. 14 to 19)
+   name the design your route declares.
+
+   *Example, built from [Ch. 12's worked example](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#a-worked-example):*
+   "In a randomized experiment, 800 online shoppers were assigned by coin flip to
+   check out with or without a one-tap reorder button, 400 per version, a size a
+   simulation diagnosis showed detects an 8-second gain in over 90% of runs.
+   Seconds from cart to payment were logged for every completed checkout, and
+   the effect was estimated as the difference in group means, reported with its
+   95% interval."
+
 4. **Your findings and what they mean.** Your primary finding, stated succinctly
    and objectively, with its numbers: the data points, estimate, or effect size,
    and the uncertainty around it. No promise to "discuss later": an abstract that
