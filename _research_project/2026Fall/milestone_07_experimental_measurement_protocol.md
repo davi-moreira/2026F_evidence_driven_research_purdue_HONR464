@@ -283,17 +283,29 @@ name inside the abstract box; the form collects authors separately.
 **Your title highlights your research problem and your answer.** A reader who
 sees only the title should know what you studied and what you found. One shape
 that works puts the problem before a colon and the answer after it. The answer
-in the title is bounded exactly the way the abstract bounds it.
+in the title is bounded exactly the way the abstract bounds it, and an expected
+answer stays an expectation in the title too.
 
-**Your abstract has four parts, in this order.**
+**Your abstract is one structured paragraph.** Write it as a single paragraph,
+with no line breaks, that moves through four parts in this order. The order of
+the parts carries the structure.
 
 1. **Question, answer, context, contribution: four sentences.**
    - The **first sentence** is your research question.
    - The **second sentence** is your answer to it: your verified result, worded
-     no more strongly than your route licenses.
-   - The **third sentence** gives the reader the background context, the
-     research gap, and your primary objective or hypothesis.
-   - The **fourth sentence** states your contribution to the field.
+     no more strongly than your route licenses. If your result is not final
+     yet, give the answer you expect, worded plainly as an expectation (see
+     part 4).
+   - The **third sentence** gives the reader the background context, including
+     the **main conclusion of the literature** on your question, then the
+     research gap that conclusion leaves, your primary objective, and your
+     **main hypothesis**: what you expected to find before your analysis ran.
+     State the literature's conclusion from sources you have read and verified,
+     never from an AI summary.
+   - The **fourth sentence** states your contribution to the field: **how your
+     answer adds value to that main conclusion of the literature**, for
+     example by extending it, qualifying it, testing it in a new setting, or
+     challenging it.
 2. **Your data.** A description of your dataset: where it comes from, its units,
    what it covers, and the measures you built from it. Where you can, add one or
    two results from your **exploratory data analysis (EDA)**, the first look at
@@ -305,15 +317,24 @@ in the title is bounded exactly the way the abstract bounds it.
 4. **Your findings and what they mean.** Your primary finding, stated succinctly
    and objectively, with its numbers: the data points, estimate, or effect size,
    and the uncertainty around it. No promise to "discuss later": an abstract that
-   announces findings without stating them has none. Then the broader impact and
-   usefulness of the result, its main limitations, and the future direction it
-   opens.
+   announces findings without stating them has none. **You can present expected
+   results.** The Expo accepts ongoing research with preliminary results or
+   anticipated findings, so if your result is not final yet, present the result
+   you expect instead. Label it as expected ("I expect…", never "I find…") and
+   say what the expectation rests on: your hypothesis, the literature, your EDA,
+   or your first run. A number you have not computed may appear only as an
+   expectation with its source, never as a result. When the result is verified,
+   update the same OURConnect submission before the Expo's final-updates
+   deadline. Then the broader impact and usefulness of the result, its main
+   limitations, and the future direction it opens.
 
 One rule is non-negotiable. The abstract may use only the claims your
 current verified result licenses. An abstract that promises a causal finding
 your route does not license, that reaches a population your data never touched,
 or that states as settled a number no stress test has yet touched, is not
-ready to submit. Your result is verified this week and not yet audited: next
+ready to submit. Expected results follow the same rule: label each one as
+expected, and expect nothing your route could not license. Your result is
+verified this week and not yet audited: next
 week's robustness work can narrow it, and your wording has to survive that
 without becoming false.
 
@@ -560,7 +581,7 @@ pre-submission checklist.
 | **Claim-to-output trace** | Every number you plan to report pointed to the cell that produces it |
 | **Re-derivations** | Two key numbers recomputed by independent routes and judged against a tolerance declared before the run |
 | **Leakage audit** | Prediction & Leakage Auditor run; every flag fixed or refuted by a check in your own pipeline |
-| **Final title and abstract** | Your M6 draft revised for my M6 review, our Round 01 meeting, and your verified result; title of at most 125 characters that highlights your research problem and your answer; abstract of at most 2,000 characters (spaces included) in the four parts of Component 7, with the question as sentence 1 and the answer as sentence 2; your own words; inside the claims your verified result licenses; submitted as `lastname_m07_title_abstract.pdf`, exactly as entered in OURConnect, with character counts and the change list |
+| **Final title and abstract** | Your M6 draft revised for my M6 review, our Round 01 meeting, and your verified result; title of at most 125 characters that highlights your research problem and your answer; abstract of at most 2,000 characters (spaces included), written as one structured paragraph in the four parts of Component 7: the question as sentence 1, the answer as sentence 2, the literature's main conclusion, the gap, your objective, and your main hypothesis in sentence 3, and the value your answer adds to that conclusion in sentence 4; any expected result labeled as expected, with its source; your own words; inside the claims your verified result licenses; submitted as `lastname_m07_title_abstract.pdf`, exactly as entered in OURConnect, with character counts and the change list |
 | **Conference application** | Submitted (not just saved) in OURConnect by Tue Oct 13, ahead of the Expo's Wed Oct 14, 11:59 PM deadline: in person, poster, mentor `dcordeir@purdue.edu`; the confirmation email plus a **My Abstracts** screenshot saved as `lastname_m07_conference_application.pdf` |
 | **Version line** | Book Milestone 7, version 1, dated, with its reason |
 | **Permission status** | Your M4/M6 permission determination is still authorized; blocked work does not proceed |
@@ -659,8 +680,9 @@ days of feedback recovers up to half the lost points.
 4. **The abstract that outruns the pipeline.** A URC abstract that promises a
    causal finding, or a population claim, while your pipeline licenses a result
    for the units you analyzed. The abstract must sit inside the claims your
-   verified result supports; an abstract that overclaims is not ready to
-   submit, and once submitted it is public.
+   verified result supports; an abstract that overclaims, or that words an
+   expected result as a finding, is not ready to submit, and once submitted it
+   is public.
 5. **The application that never left.** Filling in the OURConnect form, clicking
    *Save without submitting*, and assuming it went in. A saved abstract stays
    *Pending*, invisible to me and to the Expo. Click **Submit**, then check that

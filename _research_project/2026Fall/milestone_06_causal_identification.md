@@ -285,17 +285,25 @@ toward.** A reader who sees only the title should know what you are studying
 and what kind of answer the project will deliver. At M7 the title is revised to
 carry your verified answer.
 
-**Your abstract has four parts, in this order.**
+**Your abstract is one structured paragraph.** Write it as a single paragraph,
+with no line breaks, that moves through four parts in this order. The order of
+the parts carries the structure.
 
 1. **Question, answer, context, contribution: four sentences.**
    - The **first sentence** is your research question.
    - The **second sentence** is your answer to it. You have no result yet, so
-     state the answer you expect, worded plainly as your expectation or
-     hypothesis, never as a finding.
-   - The **third sentence** gives the reader the background context, the
-     research gap, and your primary objective or hypothesis.
+     state the answer you expect, worded plainly as an expectation, never as a
+     finding.
+   - The **third sentence** gives the reader the background context, including
+     the **main conclusion of the literature** on your question, then the
+     research gap that conclusion leaves, your primary objective, and your
+     **main hypothesis**: the testable expectation your design will confront.
+     State the literature's conclusion from sources you have read and verified,
+     never from an AI summary.
    - The **fourth sentence** states the contribution your project aims to make
-     to the field.
+     to the field: **how your answer will add value to that main conclusion of
+     the literature**, for example by extending it, qualifying it, testing it in
+     a new setting, or challenging it.
 2. **Your data.** A description of the dataset you governed this week: where it
    comes from, its units, what it covers, and the measures you built from it. If
    the data are not in hand yet, describe what you expect them to be. Where you
@@ -310,12 +318,16 @@ carry your verified answer.
    will report, precisely: the quantity, for which units, and the uncertainty it
    will carry. For example: *"I estimate the difference in first-year retention
    between the two cohorts, with a 95% bootstrap interval."* A vague promise to
-   "discuss the results later" does not count. Then the broader impact and
-   usefulness the result can have, the study's main limitations, and its future
-   directions.
+   "discuss the results later" does not count. **You can present expected
+   results:** what you expect that result to show, labeled as an expectation
+   ("I expect…", never "I find…"), with what the expectation rests on (your
+   hypothesis, the literature, or your EDA). A number you have not computed may
+   appear only as an expectation with its source, never as a result. Then the
+   broader impact and usefulness the result can have, the study's main
+   limitations, and its future directions.
 
-Write no number and no direction for a result you have not computed; the EDA
-facts in part 2 are the only numbers this draft carries. The draft also stays
+Never word an expectation as a finding: the EDA facts in part 2 are the only
+computed numbers this draft carries. The draft also stays
 inside your route's licence: no causal verb your design cannot support, and no
 population your data never reach. The words are yours: the Expo's AI guidance
 does not allow AI to generate your abstract, though AI may help you brainstorm
@@ -444,7 +456,7 @@ pre-submission checklist.
 | **Validity** | Interpretation and use both stated; the strongest rival reading named; the boundary sentence saying what the indicator misses and who it never reaches |
 | **Contract version** | The operationalization settled and issued as the next dated, numbered Contract version with a usable reason; the provisional M4 field named; measurement error stated alongside sampling uncertainty |
 | **Project title** | At most 125 characters, spaces included; highlights your research problem and the answer you are working toward; character count shown |
-| **URC abstract draft** | At most 2,000 characters, spaces included, in the four parts of Component 6: question as sentence 1, expected answer as sentence 2 (stated as an expectation), context and gap as sentence 3, contribution as sentence 4; then your data with any EDA facts, your study design, and the result you will report with impact, limitations, and future directions; no result claimed; nothing your route does not license; your own words; character count shown |
+| **URC abstract draft** | At most 2,000 characters, spaces included, written as one structured paragraph in the four parts of Component 6: question as sentence 1, expected answer as sentence 2 (stated as an expectation), the literature's main conclusion, the gap, your objective, and your main hypothesis as sentence 3, the value your answer will add to that conclusion as sentence 4; then your data with any EDA facts, your study design, and the result you will report (expected results welcome, labeled as expected, with their source) with impact, limitations, and future directions; no result claimed; nothing your route does not license; your own words; character count shown |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named, non-vague, and run against the file or page itself |
 | **Dossier line** | The data and measurement documentation component located by file or section |
 | **Studio work** | Worked at the Friday studio with your AI assistant |
@@ -555,8 +567,10 @@ days of feedback recovers up to half the lost points.
    the field that stops being provisional, and give the reason.
 6. **The abstract that announces a result you do not have.** Writing "we find
    that" in a draft written before any analysis ran. The draft describes what
-   your analysis will estimate and how its uncertainty will be reported. The
-   finding arrives at M7, and it enters the abstract only once it is verified.
+   your analysis will estimate and how its uncertainty will be reported. An
+   expected result is welcome when it reads as one ("I expect…"); the defect is
+   an expectation worded as a finding. The finding itself arrives at M7, and it
+   enters the abstract as a finding only once it is verified.
 7. **The invisible response.** You changed something because I asked, but the
    Instructor Request Record does not say where, or it says only "I disagree."
    Neither can be verified, so both count as unaddressed. Point to the exact

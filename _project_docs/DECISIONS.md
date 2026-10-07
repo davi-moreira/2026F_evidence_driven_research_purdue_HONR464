@@ -5121,3 +5121,19 @@ alongside the abstract draft.
   on Brightspace, add the `lastname_m07_title_abstract.pdf` file to the M7
   assignment, post the OURConnect how-to guide, and approve each submission in
   OURConnect once it arrives.
+- **Amended the same day (Davi, 2026-10-07, second instruction).** Four additions
+  to the abstract structure in both milestones, in briefs and PDFs: (1) the
+  abstract is **one structured paragraph**, with no line breaks, its structure
+  carried by the order of the four parts; (2) sentence 3 now requires the **main
+  hypothesis** (M7: what the student expected before the analysis ran; M6: the
+  testable expectation the design will confront), replacing "objective or
+  hypothesis"; (3) sentence 3's background must state the **main conclusion of the
+  literature** (from sources read and verified, never an AI summary), and sentence 4's
+  contribution is **how the answer adds value to that conclusion**; (4) students
+  **can present expected results**, labeled as expected ("I expect", never "I
+  find"), with what each rests on; an uncomputed number may appear only as an
+  expectation with its source. At M7, sentence 2 may carry the expected answer when
+  the result is not final, citing the Expo FAQ's acceptance of anticipated
+  findings, and the verified result goes into the same OURConnect submission
+  before the Nov 2 final-updates deadline. M6's former ban on any direction
+  for an uncomputed result became "never word an expectation as a finding".
