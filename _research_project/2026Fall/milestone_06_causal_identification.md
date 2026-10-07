@@ -323,7 +323,7 @@ the parts carries the structure.
    present it as a test ([Ch. 12, *Preregistration and the pre-analysis
    plan*](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#preregistration-and-the-pre-analysis-plan)).
 
-   *Example, built from [Ch. 21's worked example](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html#a-worked-example):*
+   *Example, built from the [worked example in Ch. 21](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html#a-worked-example):*
    "The data are 960 survey answers from employees at 16 work sites, 60 per
    site, eight that piloted flexible scheduling and eight that kept fixed
    shifts. Engagement is measured through one facet, willingness to recommend
@@ -350,7 +350,7 @@ the parts carries the structure.
    than it promises. The pathway chapters of [Studio 5](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/studio05-develop-the-pathway.html) (Ch. 14 to 19)
    name the design your route declares.
 
-   *Example, built from [Ch. 12's worked example](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#a-worked-example):*
+   *Example, built from the [worked example in Ch. 12](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#a-worked-example):*
    "In a randomized experiment, 800 online shoppers will be assigned by coin flip
    to check out with or without a one-tap reorder button, 400 per version, a
    size a simulation diagnosis shows detects an 8-second gain in over 90% of
