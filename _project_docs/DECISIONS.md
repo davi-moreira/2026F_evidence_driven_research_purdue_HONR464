@@ -5153,3 +5153,53 @@ alongside the abstract draft.
   is built from Ch. 12's reorder-button case (randomized, 400 per version,
   difference in means with a 95% interval). The PDFs use the book's own "Lesson NN"
   labels; the briefs keep "Ch. NN", as their Book Anchor sections do.
+
+## D86 — Week 10 gains a course-only companion notebook on data communication and poster design (2026-10-21)
+
+**Ruling (Davi, 2026-10-21).** The Week 10 lecture material on the schedule covers,
+besides the Studio 10 book lessons (nb10), an adapted version of QM 47400's
+`nb17_data_communication_poster`. It is published **only on the course schedule,
+not in the book**.
+
+- **The notebook:** `notebooks/student/nb10b_data_communication_poster_student.ipynb`
+  (source `_production_kit/nb_sources/nb10b_data_communication_poster.py`; build
+  `nbbuild.py nb10b`). The three adaptations Davi named: the EDR|AI wordmark replaces
+  the QM 47400 logo (injected by nbbuild like every course notebook); the narrative is
+  research on the EDR|AI approach (licensed comparison, figure honesty, claim boundary,
+  uncertainty on the page, redundant encoding, compass position), never a predictive
+  model; and the poster half is an evidence-driven research poster for the Fall Expo
+  (six required blocks, read path, judges' criteria, the four-part Expo abstract of
+  D85), never a business case. AI elements follow the course: a partner briefing,
+  commit-before-AI, a required prompt modification, an interrogation, a Human-Only
+  Checkpoint for the title and abstract, Defend Your Decision, and a ledger row.
+- **Figures are drawn in code, none copied.** QM 47400 nb17's figure files are mostly
+  third-party (pages from *Storytelling with Data*, press screenshots, a web comic,
+  stock photos, memes), and D48 bars committing a figure copied from a copyrighted
+  source. Every figure is redrawn from `lapop_brazil`, `foos_etal`, or a seeded
+  simulation (seed 464); Section 16 reproduces nb10's 4.31 ± 0.33 against
+  4.83 ± 0.32 exactly, so the week's two notebooks agree.
+- **Verified for this build (2026-10-21):** the Fall Expo poster guidelines (size no
+  more than 4 ft either way, standard 4 ft wide by 3 ft tall, AI guidance) and the
+  Office of Undergraduate Research judge evaluation criteria PDF (version 6/4/2026);
+  the Kastellec & Leoni (2007) and Erren & Bourne (2007) DOIs through CrossRef; Tufte
+  and Knaflic in Open Library; Crameri et al. (2020) on colour-vision deficiency
+  (8% of men) through its PMC text. `audit_sources.py` gains the three chart-gallery
+  domains and the five works.
+- **Machinery, kept minimal:** `notebooks_map.COMPANIONS` registers companions by
+  the topic they accompany; `update_schedule_badges.py` prints a short
+  "+ Poster design" Colab link under nb10's badge on the three Week 10 rows (a text
+  link, not a second badge, because of the 65,535-character ceiling); `nbbuild.py`
+  builds a companion without lecture frames and runs the voice and citation gates on
+  it; `validate_misconceptions.py --local` certifies its freshness. A companion is not
+  one of the 16 template notebooks, is not on the Material page, is not a book
+  companion, and, like every lecture notebook since D79, is never collected.
+- **Aligned with the poster kit built the same day** (the parallel poster session,
+  D87): the template arrives with M10 (`lastname_m10_poster.pptx` + `.pdf`), M11
+  revises it, the rubric grades the M13 lock; the notebook links
+  `project/poster/honr464_poster_template.pptx` and
+  `Evidence_Driven_Research_Poster_Rubric.pdf` and uses the template's print minimums
+  (title 72 pt, headings 32, body 24, captions and references 18).
+- ⚠ **Open:** EDR|AI ch. 33's worked example says the compost interval is "roughly
+  ±9 bushels per acre", but the chapter's own seeded code prints ±3.7 and ±3.1 per
+  group (difference interval 1.0 to 10.6). Left for Davi's chapter review; the
+  companion does not use that example.
