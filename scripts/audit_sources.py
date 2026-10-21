@@ -43,6 +43,10 @@ ALLOWED_DOMAINS = {
     "www.youtube.com",             # nb01 + author page: Palmeiras video (D24, instructor-provided)
     "genai.rcac.purdue.edu",       # Purdue GenAI Studio (course AI reviewer bench)
     "doi.org",                     # DOI resolver for verified journal articles
+    # nb10b (D86) chart galleries, each opened and confirmed 2026-10-21
+    "python-graph-gallery.com",    # The Python Graph Gallery
+    "r-graph-gallery.com",         # The R Graph Gallery
+    "matplotlib.org",              # Matplotlib examples gallery (stable docs)
 }
 
 # Works verified real during the build (each was independently confirmed to
@@ -60,6 +64,14 @@ VERIFIED = [
     # (same works cited in book/references.bib, whose notes record the check).
     r"Zahavy, T\.{0,2} \(2026\)",                      # LLMs Can't Jump (DeepMind)
     r"Evans, J\..{0,40}King, G\. \(2026\)",            # Science 393(6808), designing for surprise
+    # nb10b (D86), verified 2026-10-21: the two DOIs resolved through CrossRef
+    # (title + authors matched); the two books confirmed in Open Library; Erren
+    # and Crameri are also in book/references.bib.
+    r"Tufte, E\. R\. \((1983|2001)\)",                 # Visual Display of Quantitative Information
+    r"Knaflic, C\. N\. \(2015\)",                      # Storytelling with Data (Wiley)
+    r"Kastellec.{0,40}Leoni.{0,20}\(2007\)",           # Perspectives on Politics 5(4), 10.1017/S1537592707072209
+    r"Erren.{0,40}Bourne.{0,20}\(2007\)",              # PLOS Comput Biol 3(5) e102, 10.1371/journal.pcbi.0030102
+    r"Crameri.{0,60}\(2020\)",                         # Nature Communications 11, 5444
 ]
 
 # Fake-citation blocklist (D16): these names were once planted fakes; they must

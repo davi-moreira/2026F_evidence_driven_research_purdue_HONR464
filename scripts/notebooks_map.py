@@ -67,6 +67,27 @@ MS_NOTEBOOKS = {
 }
 
 
+# Course-only COMPANION notebooks (D86): a second notebook that a week's schedule
+# rows link beside its topic notebook. Keyed by the topic notebook they
+# accompany. A companion is not one of the 16 template notebooks, so it carries
+# no lecture frames and no Lab Meeting cell; it is not a book companion (the book
+# owns notebooks/book/), it is not listed on the Material page, and like every
+# lecture notebook it is never collected (D79). Build: nbbuild.py nb10b.
+COMPANIONS = {
+    10: [("nb10b_data_communication_poster", "Poster design")],
+}
+
+
+def companion_slugs() -> list[str]:
+    return [slug for comps in COMPANIONS.values() for slug, _ in comps]
+
+
+def companion_colab_url(slug: str) -> str:
+    """The Colab URL of a companion notebook's STUDENT file."""
+    return (f"https://colab.research.google.com/github/{REPO_SLUG}/"
+            f"blob/main/notebooks/student/{slug}_student.ipynb")
+
+
 def student_filename(n: int) -> str:
     return f"{NOTEBOOKS[n][0]}_student.ipynb"
 

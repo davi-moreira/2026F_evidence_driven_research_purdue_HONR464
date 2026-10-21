@@ -59,7 +59,7 @@ and an unreviewed draft has nothing to revise from before Sunday's lock.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m11_posterdraft.pdf`** | Your **first full poster draft**, built on the course template and sized to the URC print spec. Every block present — title and author, the question, the design and data, the result with its uncertainty, the boundary, and the AI-use disclosure — even where a block is still rough. It also delivers what your **research action plan** commits you to for this milestone (Component 6). |
+| 1 | **`lastname_m11_posterdraft.pdf`** | Your **first full poster draft**, the next version of your M10 poster file, built on the course template (`honr464_poster_template.pptx`, 48 × 36 in, the Expo's standard board). Every block present — title and author, the question, the design and data, the result with its uncertainty, the boundary, and the AI-use disclosure — even where a block is still rough. It also delivers what your **research action plan** commits you to for this milestone (Component 6). |
 | 2 | **`lastname_m11_trace.pdf`** *or* the same as notebook sections | Your **traceability sweep**: every number printed on the draft, listed with the notebook and cell that produced it. Any number you cannot trace is listed and marked as blocking. Opens with the **Instructor Request Record** (Component 5), which is graded under the carry-forward adjustment. |
 | 3 | **`lastname_m11_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for this milestone, including the reach-check prompt from Monday's lecture and the Poster Critic run from Wednesday's laboratory. |
 
@@ -110,8 +110,9 @@ software offers; a poster laid out on paper takes the shape the argument needs.
 
 ### 2. The draft itself
 
-Built on the course template, sized to the URC print spec, and complete in the
-sense that every block exists. Rough is fine. Missing is not: a reviewer cannot
+Built on the course template (`honr464_poster_template.pptx`, 48 × 36 inches,
+with the minimum type sizes on its guide page), starting from the poster file you
+handed in at M10, and complete in the sense that every block exists. Rough is fine. Missing is not: a reviewer cannot
 find the defect in a block you did not draw.
 
 Check it once at print scale rather than screen scale. Text that is comfortable
@@ -210,7 +211,7 @@ plan gets corrected.
 |---|---|
 | **Storyboard** | Six blocks, ordered by the reading compass, headline placed in a named position |
 | **Draft completeness** | Every block present: title and author, question, design and data, result with uncertainty, boundary, AI-use disclosure |
-| **Print spec** | Template dimensions, minimum font sizes at print scale, required identifying elements |
+| **Print spec** | Built on `honr464_poster_template.pptx` at 48 × 36 in; the guide page's minimum type sizes met at print scale; every template panel present |
 | **Eye-span** | The headline's uncertainty is inside the same eye-span as the headline |
 | **Traceability sweep** | Every printed number listed with its notebook and cell; untraceable numbers marked blocking |
 | **Reach check** | Run, with every flag confirmed or dismissed against the claim–evidence table |

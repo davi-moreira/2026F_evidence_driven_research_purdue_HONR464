@@ -182,10 +182,13 @@ cancelled (HONR meets Mon Nov 16, skips Wed Nov 18, resumes asynchronously Fri
 Nov 20), and the printed posters are genuinely distributed in a dedicated
 preparation class (meeting 34, Fri 2026-11-13, "the printed poster arrives:
 rehearse on the real thing"). One adopted sentence is a forward promise: "A
-poster template and assessment rubric will be shared" — the rubric exists
-(`project/poster/poster_rubric.md`, M13), the **template does not yet exist**.
-It is due by M11 (Wed 2026-11-04) and tracked as workstream L3 on the private
-course tracker.
+poster template and assessment rubric will be shared" — **both now exist
+(D87, 2026-10-21)**: the template `project/poster/honr464_poster_template.pptx`
+(48 × 36 in, adapted from QM 47400's) and the poster rubric
+`project/poster/Evidence_Driven_Research_Poster_Rubric.{pdf,docx,xlsx}`, adapted
+from QM 47400's poster-only rubric. The rubric is the M13 poster-quality rubric,
+generated into the brief by `scripts/build_poster_kit.py`; M10 now collects the
+first poster draft file on the template. This closes workstream L3.
 
 ### What the syllabus no longer carries
 

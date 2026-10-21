@@ -28,7 +28,8 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 from notebooks_map import (NOTEBOOKS, colab_url, student_filename,  # noqa: E402
-                           nb_of, session_kind, lecture_labels)
+                           nb_of, session_kind, lecture_labels,
+                           COMPANIONS, companion_colab_url)
 from validate_calendar import no_class_days  # noqa: E402
 from session_readings import (lesson_index, rdss_note_compact,  # noqa: E402
                               render_cell, studio_pages)
@@ -125,6 +126,16 @@ def slides_cell(studio_rank: int | None) -> str:
 def notebook_cell(n: int) -> str:
     return (f'<a href="{colab_url(n)}"><img src="https://colab.research.'
             f'google.com/assets/colab-badge.svg" alt="Open In Colab"></a>')
+
+
+#: D86: a course-only companion notebook is linked under its topic's badge on
+#: every row of that week. A short text link, not a second badge image, because
+#: the page is held to the 65,535-character ceiling (see BYTE_CEILING).
+def companion_links(n: int, tracked: set[str]) -> str:
+    return "".join(
+        f"<br>[+ {label}]({companion_colab_url(slug)})"
+        for slug, label in COMPANIONS.get(n, [])
+        if f"{slug}_student.ipynb" in tracked)
 
 
 DAYNAMES = {0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri",
@@ -331,7 +342,7 @@ def build() -> str:
         badge = ""
         if n is not None:
             badge = (notebook_cell(n) if student_filename(n) in tracked
-                     else f"*nb{n:02d} (coming)*")
+                     else f"*nb{n:02d} (coming)*") + companion_links(n, tracked)
 
         title = r["title"].replace("ASYNC — ", "")
         lab = labels.get(int(r["meeting"]))

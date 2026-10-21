@@ -443,7 +443,8 @@ def check_freshness() -> list[str]:
         sys.path.insert(0, str(REPO / "scripts"))
         import notebooks_map as _nm
         active_stems = {v[0] for v in _nm.NOTEBOOKS.values()} | \
-                       {v[0] for v in _nm.MS_NOTEBOOKS.values()}
+                       {v[0] for v in _nm.MS_NOTEBOOKS.values()} | \
+                       set(_nm.companion_slugs())          # D86 companions
     except Exception as e:
         # FAIL CLOSED (round-9 N3): a broken registry would silently disable
         # the source-deletion protection if we fell back to file discovery.

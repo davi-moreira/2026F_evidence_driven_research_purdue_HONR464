@@ -22,7 +22,12 @@ pair, and validates it with the reduced studio contract. Studio notebooks carry
 no schedule badge, so the badge refresh runs only when a topic notebook (nbNN)
 was built.
 
-Usage: .venv/bin/python scripts/nbbuild.py nb01 [nb02 ...] [ms04 ...] [--no-exec]
+Course-only companion notebooks (D86, `notebooks_map.COMPANIONS`) build the
+same way: `nbbuild.py nb10b` reads `_production_kit/nb_sources/nb10b_<slug>.py`,
+writes the pair without lecture frames, and runs the voice and citation gates
+on the student file; its link appears on its topic's schedule rows.
+
+Usage: .venv/bin/python scripts/nbbuild.py nb01 [nb02 ...] [ms04 ...] [nb10b] [--no-exec]
 """
 from __future__ import annotations
 
@@ -41,6 +46,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from notebooks_map import (  # noqa: E402
     NOTEBOOKS, MS_NOTEBOOKS, instructor_filename, ms_instructor_filename,
+    companion_slugs,
 )
 
 SOURCES = REPO / "_production_kit" / "nb_sources"
@@ -256,6 +262,18 @@ def build_ms_instructor(n: int) -> Path:
     return _write_instructor(load_cells(MS_NOTEBOOKS[n][0]), out)
 
 
+def companion_slug(arg: str) -> str | None:
+    """`nb10b` -> its registered companion slug (D86); None for nbNN / msNN."""
+    return next((s for s in companion_slugs()
+                 if s.split("_")[0] == arg.lower()), None)
+
+
+def build_companion_instructor(slug: str) -> Path:
+    # D86: no lecture frames, no ⏸ normalization; the logo is still injected.
+    out = REPO / "notebooks" / "instructor" / f"{slug}_instructor.ipynb"
+    return _write_instructor(load_cells(slug), out)
+
+
 def execute(path: Path) -> None:
     nb = nbformat.read(path, as_version=4)
     client = NotebookClient(nb, timeout=300, kernel_name="python3",
@@ -296,6 +314,23 @@ def main() -> None:
         sys.exit("usage: nbbuild.py nbNN|msNN [...]")
     built_topic = False
     for a in args:
+        comp = companion_slug(a)
+        if comp:
+            # D86 companion: built, executed and stripped like a topic notebook,
+            # but it is outside the 16-notebook template, so instead of
+            # validate_notebooks it gets the voice and citation gates directly.
+            instr = build_companion_instructor(comp)
+            if do_exec:
+                execute(instr)
+            subprocess.run([sys.executable, str(REPO / "scripts" / "make_student.py"),
+                            str(instr)], check=True)
+            stamp_generation(instr)
+            student = REPO / "notebooks" / "student" / f"{comp}_student.ipynb"
+            for gate in ("voice_lint_notebooks.py", "audit_sources.py"):
+                subprocess.run([sys.executable, str(REPO / "scripts" / gate),
+                                str(student)], check=True)
+            built_topic = True          # its link lives on the schedule rows
+            continue
         is_ms = a.lower().startswith("ms")
         n = int(re.sub(r"\D", "", a))
         instr = build_ms_instructor(n) if is_ms else build_instructor(n)

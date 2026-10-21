@@ -3,14 +3,23 @@
 The single, authoritative poster rubric is the **Final Project poster-quality rubric** in
 [course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md).
 
-Grade the locked poster against that rubric's five criteria (Compass & pathway
-alignment, Evidence integrity & provenance, Verification & traceability,
-Uncertainty & limitations, and Craft, package & communication). The common
+Grade the locked poster against that rubric's eight criteria, one per group of
+template panels (D87): question, stakes & contribution; inquiry declaration &
+design; evidence, data & measurement; analysis, verification & reproducibility;
+results & figure honesty; claim boundary, uncertainty & limitations; sources, AI
+disclosure & integrity; and visual communication & accessibility. The common
 poster-quality score grades shared project-level provenance, disclosure, and
 accessibility. Each member's personally attributable AI Research Ledger is
-graded instead in the individual 20-point row of M13's milestone process score.
+graded instead in the individual 18-point row of M13's milestone process score.
 Do not maintain a second poster rubric here; this file exists only to point you
 there.
+
+Since D87 the same rubric also ships as documents students hold and graders
+fill in: [`Evidence_Driven_Research_Poster_Rubric.pdf`](Evidence_Driven_Research_Poster_Rubric.pdf)
+(with `.docx` and the `.xlsx` grading sheet), next to the course template
+[`honr464_poster_template.pptx`](honr464_poster_template.pptx). All of them, and
+M13's rubric block, are generated from one source by
+`scripts/build_poster_kit.py`; edit the script, never the files.
 
 The locked poster and its public delivery supply the Final Project's **Poster
 Presentation at the Purdue Undergraduate Research Conference** item (20% of
