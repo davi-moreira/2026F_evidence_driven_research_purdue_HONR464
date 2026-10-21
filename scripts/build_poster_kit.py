@@ -7,17 +7,16 @@ will be shared", D53) and that the D50 conference block left open:
   project/poster/honr464_poster_template.pptx
       The research poster template, adapted from QM 47400's business-analytics
       template (qm474_poster_template.pptx) to the EDR|AI way of doing research.
-      48 x 36 in, the Purdue Fall Undergraduate Research Expo's standard 4' x 3'
-      board. Same visual family as QM 47400's (grey outer columns, black bars
-      with Purdue-gold headings, Arial), because both courses print in one run;
-      the panels follow the book instead of CRISP-DM. A headline banner carries
-      the finding and its qualifier in one eye-span (ch. 32); three unequal
-      columns give the main result the centre: the question and what it adds
-      (ch. 7-9), the compass declaration and its warrants (ch. 6-7, 10, 12,
-      14-19) and the data card (ch. 20-21) on the left; the main result and the
-      checks (ch. 11, 22-25, 32, 36-37) in the centre; what the evidence
-      supports and where it stops (ch. 28-29, 35), then sources, on-poster AI
-      disclosure and credits (ch. 9, 30) on the right. Slide 2 is a HIDDEN
+      34 x 22.5 in, QM 47400's poster format, so both courses print in one run
+      (Davi's ruling, 2026-10-21). Same visual family as QM 47400's (grey outer
+      columns, black bars with Purdue-gold headings, Arial, the author photo).
+      A headline banner carries the finding and its qualifier in one eye-span
+      (ch. 32), over four columns of sections: Abstract, The question and why it
+      matters, What is already known (ch. 7-9); Design (ch. 6-7, 10, 12,
+      14-19), Data and measurement (ch. 20-21), Methods; Main result (ch. 32),
+      Checks and verification (ch. 24-25, 36-37); Conclusions, Limitations
+      (ch. 28-29, 35), AI use disclosure (ch. 30), References,
+      Acknowledgments. Slide 2 is a HIDDEN
       guide page (print spec, rules, panel -> rubric -> chapter map). The
       layout was re-hierarchized after the Codex review of 2026-10-21.
 
@@ -80,7 +79,7 @@ RUBRIC = [
     {
         "name": "Question, context & contribution",
         "points": 10,
-        "panels": "Title · The question and what it adds",
+        "panels": "Title · Abstract · The question and why it matters · What is already known",
         "virtue": "Compass & pathway alignment",
         "chapters": "Ch. 1, 7–9",
         "bands": [
@@ -119,7 +118,7 @@ RUBRIC = [
     {
         "name": "Analysis, checks & verification",
         "points": 15,
-        "panels": "Checks and verification · verification status line",
+        "panels": "Methods · Checks and verification · verification status line",
         "virtue": "Verification & robustness",
         "chapters": "Ch. 11, 22–25, 36–37",
         "bands": [
@@ -145,7 +144,7 @@ RUBRIC = [
     {
         "name": "Interpretation, uncertainty & limitations",
         "points": 15,
-        "panels": "Headline · What this means, and where it stops",
+        "panels": "Headline · Conclusions · Limitations",
         "virtue": "Uncertainty & limitations",
         "chapters": "Ch. 28–29, 35",
         "bands": [
@@ -158,7 +157,7 @@ RUBRIC = [
     {
         "name": "Sources, AI disclosure & credit",
         "points": 8,
-        "panels": "Sources, AI use, and credits",
+        "panels": "AI use disclosure · References · Acknowledgments",
         "virtue": "Evidence integrity & provenance",
         "chapters": "Ch. 9, 30",
         "bands": [
@@ -175,7 +174,7 @@ RUBRIC = [
         "virtue": "Craft & communication",
         "chapters": "Ch. 32–33",
         "bands": [
-            ("9–10", "A clear reading order: the finding is found in seconds, and the question, result, and boundary in a ninety-second read; built on the course template at 48 × 36 in, with the guide's minimum type sizes; strong contrast; every distinction carried in two channels (a label or pattern, never colour alone); each figure carries alt text in the file; no template guidance or EXAMPLE material left."),
+            ("9–10", "A clear reading order: the finding is found in seconds, and the question, result, and boundary in a ninety-second read; built on the course template at 34 × 22.5 in, with the guide's minimum type sizes; strong contrast; every distinction carried in two channels (a label or pattern, never colour alone); each figure carries alt text in the file; no template guidance or EXAMPLE material left."),
             ("7–8", "Readable and navigable, with minor craft lapses or one colour-only distinction."),
             ("4–6", "Dense, small, or poorly ordered content that needs the presenter; template text left on the board."),
             ("0–3", "The main message is illegible at print size, or meaning is carried by colour alone throughout."),
@@ -297,7 +296,7 @@ def build_rubric_docx(path: Path) -> None:
         "HONR 46400 · Purdue Fall Undergraduate Research Expo · grades the locked poster "
         "(M13) as the Final Project poster-quality score: 70% of the Poster Presentation "
         "component, with the M15 live presentation supplying the other 30%. Built for the "
-        "course template honr464_poster_template.pptx (48 × 36 in). Score each criterion in "
+        "course template honr464_poster_template.pptx (34 × 22.5 in). Score each criterion in "
         "one band; the hard caps below override the bands. The rubric scores what the poster "
         "communicates; check that it is true against the M9 note, the package, the run records "
         "and the ledger.",
@@ -436,13 +435,14 @@ def to_pdf(src: Path, outdir: Path) -> Path:
 INK, GOLD, GREY, WHITE = "000000", "CFB991", "E3E3E3", "FFFFFF"
 CRIMSON, MUTED = "8A1C2B", "404040"
 FONT = "Arial"
-W_IN, H_IN = 48, 36
-MARGIN, GUTTER = 0.75, 0.75
+W_IN, H_IN = 34, 22.5  # QM 47400's poster format; both courses print in one run
+MARGIN, GUTTER = 0.5, 0.4
 # Three unequal columns: the result takes the centre and most of the room (Codex review, D87).
-COL_W = [13.0, 19.0, 13.0]
-COL_X = [MARGIN, MARGIN + COL_W[0] + GUTTER, MARGIN + COL_W[0] + COL_W[1] + 2 * GUTTER]
-TOP, BOTTOM = 8.0, 34.5
-BODY, SUBST, SMALL = 26, 24, 20  # body prompts; substantive boxes and tables; captions and references
+COL_W = (W_IN - 2 * MARGIN - 3 * GUTTER) / 4
+COL_X = [MARGIN + k * (COL_W + GUTTER) for k in range(4)]
+TOP, BOTTOM = 5.1, 21.7
+BAR_H = 0.6
+BODY, SUBST, SMALL = 18, 18, 14  # body prompts; substantive boxes and tables; captions and references
 
 
 def example_numbers() -> dict:
@@ -476,8 +476,8 @@ def example_figure_png(n: dict) -> bytes:
     import matplotlib.pyplot as plt
 
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 22})
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(19, 11.0), dpi=200,
-                                   gridspec_kw={"width_ratios": [1.15, 1]})
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 11.5), dpi=200,
+                                   gridspec_kw={"height_ratios": [1.6, 1]})
     means = [n["a"], n["b"]]
     ax1.bar(["Version A", "Version B"], means, yerr=n["ci"], capsize=14, width=0.55,
             color=["#4a4a4a", "#a8a8a8"], hatch=["", "//"], edgecolor="black",
@@ -503,7 +503,7 @@ def example_figure_png(n: dict) -> bytes:
         for side in ("top", "right"):
             ax.spines[side].set_visible(False)
     ax2.spines["left"].set_visible(False)
-    fig.tight_layout(w_pad=3)
+    fig.tight_layout(h_pad=2)
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=200)
     plt.close(fig)
@@ -525,6 +525,8 @@ def build_template(qm474: Path, out: Path) -> None:
         for sh in src.slides[0].shapes
         if sh.shape_type == 13 and sh.image.size == (1423, 152)
     )
+    shots = {sh.image.size: sh.image.blob for sh in src.slides[0].shapes if sh.shape_type == 13}
+    photo, linkedin = shots[(933, 933)], shots[(512, 512)]  # QM 47400's author-photo example and icon
     ex = example_numbers()
 
     prs = Presentation()
@@ -579,11 +581,11 @@ def build_template(qm474: Path, out: Path) -> None:
             shape.name = name
         return shape
 
-    def bar(slide, x, w, y, title, size=34):
-        b = rect(slide, x, y, w, 0.95, INK, name=f"Heading: {title}")
+    def bar(slide, x, w, y, title, size=24):
+        b = rect(slide, x, y, w, BAR_H, INK, name=f"Heading: {title}")
         text(slide, 0, 0, 0, 0, [[(title, {"size": size, "bold": True, "color": GOLD, "after": 0})]],
-             anchor=MSO_ANCHOR.MIDDLE, inset=0.3, shape=b)
-        return y + 0.95
+             anchor=MSO_ANCHOR.MIDDLE, inset=0.2, shape=b)
+        return y + BAR_H
 
     def table(slide, x, y, w, rows, colw, size=SUBST, header=True, row_h=0.7, name=None):
         nrows, ncols = len(rows), len(rows[0])
@@ -600,8 +602,8 @@ def build_template(qm474: Path, out: Path) -> None:
                 cell.fill.solid()
                 is_head = header and i == 0
                 cell.fill.fore_color.rgb = rgb(INK if is_head else WHITE)
-                cell.margin_left = cell.margin_right = Inches(0.12)
-                cell.margin_top = cell.margin_bottom = Inches(0.06)
+                cell.margin_left = cell.margin_right = Inches(0.08)
+                cell.margin_top = cell.margin_bottom = Inches(0.03)
                 tf = cell.text_frame
                 tf.word_wrap = True
                 p = tf.paragraphs[0]
@@ -616,7 +618,7 @@ def build_template(qm474: Path, out: Path) -> None:
 
     def labeled_box(slide, x, y, w, h, label, body, label_w=3.1, name=None):
         lb = rect(slide, x, y, label_w, h, INK, name=f"{name}: label")
-        text(slide, 0, 0, 0, 0, [[(label, {"size": 22, "bold": True, "color": GOLD, "align": PP_ALIGN.CENTER,
+        text(slide, 0, 0, 0, 0, [[(label, {"size": 15, "bold": True, "color": GOLD, "align": PP_ALIGN.CENTER,
                                            "after": 0})]], anchor=MSO_ANCHOR.MIDDLE, inset=0.1, shape=lb)
         bx = rect(slide, x + label_w, y, w - label_w, h, WHITE, line=INK, name=name)
         text(slide, 0, 0, 0, 0, [[(body, {"size": SUBST, "after": 0})]], anchor=MSO_ANCHOR.MIDDLE, inset=0.2,
@@ -624,259 +626,266 @@ def build_template(qm474: Path, out: Path) -> None:
 
     # ------------------------------------------------------------- slide 1: the poster
     s = prs.slides.add_slide(blank)
-    left_edge = COL_X[0] + COL_W[0] + GUTTER / 2
-    right_edge = COL_X[2] - GUTTER / 2
-    rect(s, 0, TOP - 0.35, left_edge, H_IN - TOP + 0.35, GREY, name="Panel: left column")
-    rect(s, right_edge, TOP - 0.35, W_IN - right_edge, H_IN - TOP + 0.35, GREY, name="Panel: right column")
+    left_edge = COL_X[0] + COL_W + GUTTER / 2
+    right_edge = COL_X[3] - GUTTER / 2
+    rect(s, 0, TOP - 0.25, left_edge, H_IN - TOP + 0.25, GREY, name="Panel: left column")
+    rect(s, right_edge, TOP - 0.25, W_IN - right_edge, H_IN - TOP + 0.25, GREY, name="Panel: right column")
 
-    # header: title, authors, Purdue mark + Honors College, draft tag
-    text(s, MARGIN, 0.35, 31.5, 2.55,
-         [[("Title: your research problem and its answer", {"size": 72, "bold": True, "after": 0})]],
+    # header: author photo, title, authors, Purdue mark + Honors College, draft tag
+    ph = s.shapes.add_picture(io.BytesIO(photo), Inches(MARGIN), Inches(0.35), height=Inches(2.1))
+    ph.name = "Author photo (replace with yours; optional)"
+    ph._element.nvPicPr.cNvPr.set("descr", "Author photo")
+    li = s.shapes.add_picture(io.BytesIO(linkedin), Inches(MARGIN + 1.65), Inches(1.95), height=Inches(0.5))
+    li.name = "LinkedIn icon (optional)"
+    tx = MARGIN + 2.4
+    text(s, tx, 0.25, 21.0, 1.55,
+         [[("Title: your research problem and its answer", {"size": 54, "bold": True, "after": 0})]],
          name="Title")
-    text(s, MARGIN, 2.95, 31.5, 1.5, [
-        [("Your Name", {"size": 36, "bold": True}),
-         ("  ·  Your major, Your college  ·  John Martinson Honors College, Purdue University", {"size": 32})],
+    text(s, tx, 1.75, 21.0, 1.1, [
+        [("Your Name", {"size": 26, "bold": True}),
+         ("  ·  Your major, Your college  ·  John Martinson Honors College, Purdue University", {"size": 22})],
         [("Faculty mentor: Professor Davi Moreira, Mitch Daniels School of Business  ·  your.email@purdue.edu",
-          {"size": 28, "color": MUTED})],
+          {"size": 19, "color": MUTED})],
     ], name="Authors and affiliations")
-    logo_h = 1.75
-    pic = s.shapes.add_picture(io.BytesIO(logo), Inches(33.2), Inches(0.75), height=Inches(logo_h))
+    logo_h = 1.15
+    pic = s.shapes.add_picture(io.BytesIO(logo), Inches(24.0), Inches(0.45), height=Inches(logo_h))
     pic.crop_right = 1 - 778 / 1423
     pic.width = Inches(logo_h * 778 / 152)
     pic.name = "Purdue University mark"
     pic._element.nvPicPr.cNvPr.set("descr", "Purdue University")
-    x_rule = 33.2 + logo_h * 778 / 152 + 0.35
-    rect(s, x_rule, 0.8, 0.04, logo_h - 0.1, "8E8E8E", name="Lockup rule")
-    text(s, x_rule + 0.25, 0.7, W_IN - MARGIN - x_rule - 0.25, 1.9,
-         [[("John Martinson", {"size": 34, "bold": True, "after": 0})],
-          [("Honors College", {"size": 34, "bold": True})]],
+    x_rule = 24.0 + logo_h * 778 / 152 + 0.25
+    rect(s, x_rule, 0.5, 0.03, logo_h - 0.1, "8E8E8E", name="Lockup rule")
+    text(s, x_rule + 0.15, 0.4, W_IN - MARGIN - x_rule - 0.15, 1.3,
+         [[("John Martinson", {"size": 24, "bold": True, "after": 0})],
+          [("Honors College", {"size": 24, "bold": True})]],
          anchor=MSO_ANCHOR.MIDDLE, inset=0.05, name="Honors College")
-    tag = rect(s, 37.75, 3.0, W_IN - MARGIN - 37.75, 1.05, CRIMSON, shape=MSO_SHAPE.ROUNDED_RECTANGLE,
+    tag = rect(s, 27.0, 1.95, W_IN - MARGIN - 27.0, 0.7, CRIMSON, shape=MSO_SHAPE.ROUNDED_RECTANGLE,
                name="Draft tag (delete at the M13 lock)")
-    text(s, 0, 0, 0, 0, [[("PRELIMINARY DRAFT · version 1", {"size": 30, "bold": True, "color": WHITE,
+    text(s, 0, 0, 0, 0, [[("PRELIMINARY DRAFT · version 1", {"size": 22, "bold": True, "color": WHITE,
                                                               "align": PP_ALIGN.CENTER, "after": 0})]],
          anchor=MSO_ANCHOR.MIDDLE, shape=tag)
 
-    # headline banner: the finding and the qualifier that changes how it reads, in one eye-span (ch. 32)
-    hb = rect(s, MARGIN, 4.55, W_IN - 2 * MARGIN, 2.95, INK, name="Headline banner")
+    # headline banner: the finding and its qualifier in one eye-span (ch. 32)
+    hb = rect(s, MARGIN, 2.95, W_IN - 2 * MARGIN, 1.85, INK, name="Headline banner")
     text(s, 0, 0, 0, 0, [
-        [("HEADLINE  ", {"size": 32, "bold": True, "color": GOLD}),
+        [("HEADLINE  ", {"size": 22, "bold": True, "color": GOLD}),
          ("Your main finding, with the uncertainty or boundary that changes how a reader should take it.",
-          {"size": 46, "bold": True, "color": WHITE, "after": 6})],
+          {"size": 32, "bold": True, "color": WHITE, "after": 4})],
         [(f"Simulated example: checkout version B averaged {num(ex['diff'])} points higher than version A, but "
           f"the 95% interval for that difference runs from {num(ex['lo'])} to {num(ex['hi'])} points "
           f"({ex['weeks']} weekly samples per version, one store).",
-          {"size": 32, "italic": True, "color": GOLD})],
-    ], anchor=MSO_ANCHOR.MIDDLE, inset=0.45, shape=hb)
+          {"size": 22, "italic": True, "color": GOLD})],
+    ], anchor=MSO_ANCHOR.MIDDLE, inset=0.3, shape=hb)
 
-    # ---- left column: the question; the design; the data
-    x, w = COL_X[0], COL_W[0]
-    y = bar(s, x, w, TOP, "THE QUESTION AND WHAT IT ADDS")
-    text(s, x, y + 0.1, w, 8.3, [
-        [("Your research question,", {"bold": True}), (" in one sentence that ends with a question mark, "
-                                                       "and why it matters, and to whom.", {})],
-        [("What the literature already establishes,", {"bold": True}),
-         (" from at least two sources you read yourself (Author, Year).", {})],
-        [("What your project adds", {"bold": True}), (" to that conclusion.", {})],
+    w = COL_W
+    # ---- column 1: abstract, question, literature
+    x = COL_X[0]
+    y = bar(s, x, w, TOP, "ABSTRACT")
+    text(s, x, y + 0.05, w, 4.4, [
+        "Up to 150 words, one paragraph: your OURConnect abstract, updated to your verified results. "
+        "Keep its four parts in order: the question and its answer; what the literature concludes and "
+        "what you add; the data and the design; the main result with its uncertainty, and the "
+        "limitation that matters most.",
+    ], name="Abstract text")
+    y = bar(s, x, w, 10.3, "THE QUESTION AND WHY IT MATTERS")
+    text(s, x, y + 0.05, w, 4.6, [
+        [("Your research question,", {"bold": True}), (" in one sentence ending with a question mark.", {})],
+        [("Why it matters, and to whom:", {"bold": True}), (" the scientific or practical stake.", {})],
         [("Your main hypothesis,", {"bold": True}),
-         (" as you recorded it before the analysis ran. Label any analysis you added later as exploratory.", {})],
+         (" as you recorded it before the analysis ran. Label later analysis as exploratory.", {})],
     ], name="Question text")
-    y = bar(s, x, w, 17.55, "DESIGN: WHAT YOUR CLAIM NEEDS")
+    y = bar(s, x, w, 15.9, "WHAT IS ALREADY KNOWN")
+    text(s, x, y + 0.05, w, BOTTOM - y - 0.05, [
+        [("The main conclusion of the literature,", {"bold": True}),
+         (" from at least two sources you read yourself (Author, Year).", {})],
+        [("The gap,", {"bold": True}), (" and what your project adds to that conclusion.", {})],
+    ], name="Literature text")
+
+    # ---- column 2: design, data, methods
+    x = COL_X[1]
+    y = bar(s, x, w, TOP, "DESIGN: WHAT YOUR CLAIM NEEDS")
     rows = [
-        ("KIND", "☐ Descriptive   ☐ Causal.  If your aim is prediction, say so here."),
-        ("REACH", "☐ A population beyond your data: name its units, setting, and period.  "
-                  "☐ Unseen cases: which ones, from which population."),
-        ("TARGET", "The exact quantity you estimate or predict: outcome, comparison, units, time frame."),
-        ("WARRANT", "What carries the claim across: sampling → a population · assignment or identification "
-                    "(with its assumptions) → a cause · a held-out test against a baseline → unseen cases. "
-                    "Then: what your evidence cannot yet support."),
+        ("KIND", "☐ Descriptive  ☐ Causal. If your aim is prediction, say so."),
+        ("REACH", "☐ A population beyond your data (units, setting, period)  ☐ Unseen cases: which, from where."),
+        ("TARGET", "The exact quantity you estimate or predict: outcome, comparison, units, time."),
+        ("WARRANT", "Sampling → a population · assignment or identification (with assumptions) → a cause · "
+                    "held-out test vs. a baseline → unseen cases."),
     ]
-    yy = y + 0.2
-    heights = [1.2, 1.75, 1.75, 2.75]
-    for (label, body), h in zip(rows, heights):
-        labeled_box(s, x, yy, w, h, label, body, name=f"Compass box: {label}")
-        yy += h + 0.15
-    y = bar(s, x, w, yy + 0.25, "DATA AND MEASUREMENT")
+    yy = y + 0.1
+    for (label, body), h in zip(rows, [0.85, 1.15, 1.15, 1.45]):
+        labeled_box(s, x, yy, w, h, label, body, label_w=1.75, name=f"Compass box: {label}")
+        yy += h + 0.08
+    y = bar(s, x, w, 11.0, "DATA AND MEASUREMENT")
     card = [
-        ("Source and route", "[archive, URL or DOI, retrieval date; or your collection protocol]"),
-        ("Observations", "[number of rows or measurements]"),
-        ("Independent units", "[people, sites, groups …] and how observations are grouped"),
+        ("Source and route", "[archive, URL or DOI, retrieval date; or protocol]"),
+        ("Observations", "[rows or measurements]"),
+        ("Independent units", "[people, sites, groups …]; how grouped"),
         ("Time window", "[from … to …]"),
-        ("Concept → measure", "[concept] → [variable or item]; main validity concern"),
-        ("Missing data", "[how much, and what you did]"),
+        ("Concept → measure", "[concept] → [variable]; validity concern"),
+        ("Missing data", "[how much; what you did]"),
         ("Permissions", "[data licence; IRB determination]"),
     ]
-    table(s, x, y + 0.2, w, card, [3.6, w - 3.6], size=SUBST, header=False, row_h=0.72, name="Data card")
+    table(s, x, y + 0.1, w, card, [2.45, w - 2.45], size=SUBST, header=False, row_h=0.5, name="Data card")
+    y = bar(s, x, w, 16.35, "METHODS")
+    text(s, x, y + 0.05, w, BOTTOM - y - 0.05, [
+        [("Analysis:", {"bold": True}),
+         (" the comparison, estimator, or model you declared before seeing results, and why it fits your "
+          "design; any later change, and why.", {})],
+        [("Uncertainty:", {"bold": True}),
+         (" how you computed it, at the level of your independent unit, with any dependence named.", {})],
+        [("Tools:", {"bold": True}), (" software, seed (SEED = 464), and where the notebook lives.", {})],
+    ], name="Methods text")
 
-    # ---- centre column: the main result, then the checks
-    x, w = COL_X[1], COL_W[1]
+    # ---- column 3: main result, checks
+    x = COL_X[2]
     y = bar(s, x, w, TOP, "MAIN RESULT")
-    text(s, x, y + 0.1, w, 0.65, [[("EXAMPLE · replace it with the figure your notebook produced, and "
-                                     "replace its alt text with yours", {"size": 22, "bold": True,
-                                                                         "color": CRIMSON, "after": 0})]],
+    text(s, x, y + 0.02, w, 0.45, [[("EXAMPLE · replace with your notebook's figure and its alt text",
+                                     {"size": 15, "bold": True, "color": CRIMSON, "after": 0})]],
          name="Example stamp")
-    fig_h = w * 11.0 / 19
-    fig = s.shapes.add_picture(io.BytesIO(example_figure_png(ex)), Inches(x), Inches(y + 0.8), width=Inches(w))
+    fig_h = w * 11.5 / 10
+    fig = s.shapes.add_picture(io.BytesIO(example_figure_png(ex)), Inches(x), Inches(y + 0.5), width=Inches(w))
     fig.name = "Example figure (replace)"
     fig._element.nvPicPr.cNvPr.set(
         "descr",
-        f"Simulated example. Left: mean checkout completion rate by version, A about {ex['a']:.0f} percent and "
+        f"Simulated example. Top: mean checkout completion rate by version, A about {ex['a']:.0f} percent and "
         f"B about {ex['b']:.0f} percent, each with a 95 percent interval of about plus or minus 4 points. "
-        f"Right: the difference, B minus A, {num(ex['diff'])} points, with a 95 percent interval from "
+        f"Bottom: the difference, B minus A, {num(ex['diff'])} points, with a 95 percent interval from "
         f"{num(ex['lo'])} to {num(ex['hi'])} points that crosses zero.",
     )
-    fy = y + 0.8 + fig_h
-    text(s, x, fy + 0.1, w, 1.85, [
+    fy = y + 0.5 + fig_h
+    text(s, x, fy + 0.05, w, 1.3, [
         [("Fig. 1.", {"size": SMALL, "bold": True}),
-         (" Say what the figure shows and for which units; n = [observations] from [independent units]; the "
-          "interval's type, level and method; bars start at zero. Source: [notebook], cell [N]. "
-          "In the example, panel (b) carries the comparison the headline is about: the interval of the "
-          "difference, not whether the two intervals in (a) overlap.", {"size": SMALL})],
+         (" What it shows and for which units; n; the interval's type and level; bars start at zero. "
+          "Source: [notebook], cell [N]. Panel (b) is the comparison the headline is about.", {"size": SMALL})],
     ], name="Figure caption")
-    text(s, x, fy + 2.05, w, 2.0, [
+    text(s, x, fy + 1.3, w, 17.75 - fy - 1.3, [
         [("The result,", {"bold": True}),
-         (" in one or two sentences: the estimate, its units, and the uncertainty it warrants (an interval, "
-          "or a precise caveat saying why none is warranted), in the words your boundary allows.", {})],
+         (" in numbers, units, and the uncertainty it warrants, in the words your boundary allows.", {})],
     ], name="Result text")
-    y = bar(s, x, w, 28.3, "CHECKS AND VERIFICATION")
-    text(s, x, y + 0.1, w, BOTTOM - y - 0.1, [
-        [("Analysis:", {"bold": True}),
-         (" what you declared before seeing results and why it fits your design; any later change, and why.", {})],
-        [("Uncertainty:", {"bold": True}),
-         (" how you computed it, at the level of your independent unit, with any dependence named.", {})],
+    y = bar(s, x, w, 17.85, "CHECKS AND VERIFICATION")
+    text(s, x, y + 0.05, w, BOTTOM - y - 0.05, [
         [("One check:", {"bold": True}), (" a robustness, sensitivity, or diagnostic check, and what it changed.",
                                          {})],
+        [("Verification:", {"bold": True}),
+         (" what was reproduced from your package, by whom, when; label a solo rerun "
+          "“solo proxy; external cold run pending”.", {})],
     ], name="Checks text")
 
-    # ---- right column: meaning and boundary; sources, AI use, credits
-    x, w = COL_X[2], COL_W[2]
-    y = bar(s, x, w, TOP, "WHAT IT MEANS, AND WHERE IT STOPS", size=32)
-    for k, (label, body) in enumerate([
-        ("THIS EVIDENCE SUPPORTS", "[your claim, with its verb and its population]"),
-        ("IT DOES NOT YET SUPPORT", "[the larger claim a visitor might infer: a cause, a wider population, "
-                                    "a longer time]"),
-    ]):
-        bx = rect(s, x, y + 0.2 + k * 2.45, w, 2.3, WHITE, line=INK, name=f"Boundary: {label}")
-        text(s, 0, 0, 0, 0, [[(label, {"size": 22, "bold": True, "after": 4})],
-                             [(body, {"size": SUBST, "after": 0})]], inset=0.2, shape=bx)
-    text(s, x, y + 5.25, w, 21.75 - y - 5.25, [
-        [("Answer:", {"bold": True}), (" your question, in one sentence, no more strongly than the evidence allows.",
-                                      {})],
+    # ---- column 4: conclusions, limitations, AI use, references, acknowledgments
+    x = COL_X[3]
+    y = bar(s, x, w, TOP, "CONCLUSIONS")
+    half = (w - 0.15) / 2
+    for k, (label, body) in enumerate([("THIS EVIDENCE SUPPORTS", "[your claim, its verb, its population]"),
+                                        ("IT DOES NOT YET SUPPORT", "[a cause? a wider population?]")]):
+        bx = rect(s, x + k * (half + 0.15), y + 0.1, half, 1.55, WHITE, line=INK, name=f"Conclusion: {label}")
+        text(s, 0, 0, 0, 0, [[(label, {"size": 14, "bold": True, "after": 2})],
+                             [(body, {"size": SUBST, "after": 0})]], inset=0.1, shape=bx)
+    text(s, x, y + 1.75, w, 2.0, [
+        "Answer your question in one or two sentences, no more strongly than the evidence allows, "
+        "and say what it means for the stakeholder.",
+    ], name="Conclusions text")
+    y = bar(s, x, w, 9.95, "LIMITATIONS")
+    text(s, x, y + 0.05, w, 2.7, [
         [("Uncertainty:", {"bold": True}), (" how far the estimate could move.", {})],
         [("Limitation:", {"bold": True}), (" the one most likely to change the finding.", {})],
         [("Next step:", {"bold": True}), (" the study that would settle it.", {})],
-    ], name="Meaning and ULN text")
-    y = bar(s, x, w, 22.05, "SOURCES, AI USE, AND CREDITS", size=32)
-    text(s, x, y + 0.1, w, 4.3, [
-        [("AI use, on the poster itself.", {"bold": True, "size": SUBST}),
-         (" One line per tool:", {"size": SUBST})],
-        [("[Tool]: used to [purpose]; I [changed / kept what]; I checked it by [method].",
+    ], name="Limitations text")
+    y = bar(s, x, w, 13.85, "AI USE DISCLOSURE")
+    text(s, x, y + 0.05, w, 2.0, [
+        [("One line per tool, on the poster: ", {"size": SUBST}),
+         ("[Tool]: used to [purpose]; I [changed / kept what]; I checked it by [method].",
           {"size": SUBST, "italic": True})],
-        [("Write “No AI used” only if that is true.", {"size": SMALL, "color": MUTED})],
+        [("Write “No AI used” only if that is true.", {"size": 14, "color": MUTED})],
     ], name="AI disclosure")
-    text(s, x, y + 4.5, w, 3.3, [
-        [("References.", {"bold": True, "size": SMALL}),
-         (" Three to six sources you opened yourself: Author (Year). Title. Venue. DOI or URL.", {"size": SMALL})],
+    y = bar(s, x, w, 16.6, "REFERENCES")
+    text(s, x, y + 0.05, w, 1.85, [
+        [("Three to six sources you opened yourself. Author (Year). Title. Venue. DOI or URL.",
+          {"size": SMALL})],
     ], name="References text")
-    text(s, x, y + 7.9, w - 2.75, BOTTOM - y - 7.9, [
-        [("Acknowledgments.", {"bold": True, "size": 18}),
-         (" I thank Professor Davi Moreira for mentoring this project, and the John Martinson Honors College and "
+    y = bar(s, x, w, 19.25, "ACKNOWLEDGMENTS")
+    text(s, x, y + 0.05, w - 1.45, BOTTOM - y - 0.05, [
+        [("I thank Professor Davi Moreira for mentoring this project, and the John Martinson Honors College and "
           "the Office of Undergraduate Research for the chance to present it. [Thank any data provider, "
-          "participants, or funder.]", {"size": 18})],
+          "participants, or funder.]", {"size": 14})],
     ], name="Acknowledgments text")
-    qr = rect(s, x + w - 2.55, y + 8.0, 2.55, 2.55, WHITE, line="8E8E8E", name="QR code placeholder")
+    qr = rect(s, x + w - 1.35, y + 0.1, 1.35, 1.35, WHITE, line="8E8E8E", name="QR code placeholder")
     qr.line.dash_style = MSO_LINE.DASH
-    text(s, 0, 0, 0, 0, [[("Optional QR + short URL: a text version of this poster",
-                           {"size": 16, "color": MUTED, "align": PP_ALIGN.CENTER, "after": 0})]],
+    text(s, 0, 0, 0, 0, [[("Optional QR", {"size": 12, "color": MUTED, "align": PP_ALIGN.CENTER, "after": 0})]],
          anchor=MSO_ANCHOR.MIDDLE, shape=qr)
 
-    # footer: verification status and preliminary results
-    text(s, MARGIN, 34.85, 27.5, 0.85, [[
-        ("Verification status: [what has been checked, by whom, and when; what is still pending] · "
-         "Poster version [N], [date]", {"size": 18, "color": MUTED, "after": 0})]], name="Verification status line")
-    text(s, 28.5, 34.85, W_IN - MARGIN - 28.5, 0.85, [[
+    # footer
+    text(s, MARGIN, 21.85, 18.5, 0.5, [[
+        ("Verification status: [what has been checked, by whom, and when; what is pending] · "
+         "Poster version [N], [date]", {"size": 13, "color": MUTED, "after": 0})]], name="Verification status line")
+    text(s, 19.5, 21.85, W_IN - MARGIN - 19.5, 0.5, [[
         ("Preliminary results · HONR 46400 Evidence-Driven Research · Purdue Fall Undergraduate Research Expo 2026",
-         {"size": 18, "color": MUTED, "align": PP_ALIGN.RIGHT, "after": 0})]], name="Status line")
+         {"size": 13, "color": MUTED, "align": PP_ALIGN.RIGHT, "after": 0})]], name="Status line")
 
     # ------------------------------------------------------------- slide 2: hidden guide page
     g = prs.slides.add_slide(blank)
     g._element.set("show", "0")
-    text(g, MARGIN, 0.6, W_IN - 2 * MARGIN, 2.2, [
-        [("READ ME: how to use this template", {"size": 72, "bold": True})],
+    text(g, MARGIN, 0.4, W_IN - 2 * MARGIN, 1.6, [
+        [("READ ME: how to use this template", {"size": 48, "bold": True})],
         [("This page is hidden, but some export settings still include hidden slides. "
-          "Export slide 1 only, or delete this page first.", {"size": 34, "color": CRIMSON, "bold": True})],
+          "Export slide 1 only, or delete this page first.", {"size": 24, "color": CRIMSON, "bold": True})],
     ], name="Guide title")
-    gw = (W_IN - 2 * MARGIN - 2 * 1.0) / 3
-    gx = [MARGIN + k * (gw + 1.0) for k in range(3)]
-
-    def gbar(k, y, title):
-        return bar(g, gx[k], gw, y, title)
-
-    y = gbar(0, 4.2, "PRINT SPECIFICATION")
-    text(g, gx[0], y + 0.1, gw, 18.0, [
-        [("Size:", {"bold": True}), (" 48 × 36 in, landscape, the Expo's standard 4′ × 3′ board. "
-                                      "Do not change the slide size.", {})],
-        [("Type at print size:", {"bold": True}),
-         (" title 72 pt or more; headline 44 pt; headings 32 pt; everything substantive, including the "
-          "compass, the data card, the boundary boxes and the AI disclosure, 24 pt; captions, references, "
-          "acknowledgments and footer 18 pt. If it does not fit, cut or reorganize. Never shrink below these.", {})],
+    gw = (W_IN - 2 * MARGIN - 2 * 0.6) / 3
+    gx = [MARGIN + k * (gw + 0.6) for k in range(3)]
+    y = bar(g, gx[0], gw, 2.6, "PRINT SPECIFICATION")
+    text(g, gx[0], y + 0.1, gw, 17.0, [
+        [("Size:", {"bold": True}), (" 34 × 22.5 in, landscape, the course format shared with QM 47400's "
+                                      "print run. Do not change the slide size.", {})],
+        [("Type, in this file:", {"bold": True}),
+         (" title 54 pt; headline 32 pt; headings 24 pt; everything substantive 18 pt; captions, "
+          "references, acknowledgments and footer 13 pt. If it does not fit, cut or reorganize; "
+          "never shrink below these.", {})],
+        [("Photo:", {"bold": True}), (" replace the example photo with yours, or delete it.", {})],
         [("Figures:", {"bold": True}),
-         (" save each one from your notebook as PNG at 300 dpi at the size it will print, or as PDF or SVG. "
-          "Never paste a screenshot. Right-click → Edit Alt Text, and write what the figure shows.", {})],
+         (" save each from your notebook as PNG at 300 dpi, or PDF/SVG; never a screenshot. "
+          "Right-click → Edit Alt Text, and say what it shows.", {})],
         [("Export:", {"bold": True}),
-         (" export slide 1 only, as a PDF. Open it and check: exactly one page, 48 × 36 in, nothing clipped, "
-          "no missing figure. Then print one crop at actual size, without “fit to page”, and measure it with "
-          "a ruler. Screen zoom does not tell you the printed size.", {})],
+         (" slide 1 only, as a PDF: exactly one page, 34 × 22.5 in, nothing clipped.", {})],
         [("Files:", {"bold": True}),
-         (" M10: lastname_m10_poster.pptx and lastname_m10_poster.pdf. M11: lastname_m11_posterdraft.pdf. "
-          "M13: lastname_m13_poster.pdf, the print file, poster only.", {})],
-    ], name="Guide: print spec", size=34)
-
-    y = gbar(1, 4.2, "RULES THE BOARD KEEPS")
-    text(g, gx[1], y + 0.1, gw, 29.5, [
+         (" M10: lastname_m10_poster.pptx + .pdf. M11: lastname_m11_posterdraft.pdf. "
+          "M13: lastname_m13_poster.pdf, poster only.", {})],
+    ], name="Guide: print spec", size=22)
+    y = bar(g, gx[1], gw, 2.6, "RULES THE BOARD KEEPS")
+    text(g, gx[1], y + 0.1, gw, 17.0, [
         [("No result appears first on the poster.", {"bold": True}),
-         (" Every result, figure and citation comes from your M9 note and its claim-evidence table. If a check "
-          "changes a number, keep the submitted note, write a dated corrected version, then update the poster.",
-          {})],
-        [("Trace what you print.", {"bold": True}),
-         (" A result you computed traces to its notebook cell; a statistic from a source traces to that source; "
-          "rounding is documented.", {})],
-        [("The qualifier travels with the claim,", {"bold": True}),
-         (" in the same eye-span as the headline.", {})],
+         (" It comes from your M9 note; if a check changes a number, write a dated corrected note first.", {})],
+        [("Trace what you print:", {"bold": True}),
+         (" computed results to their notebook cell, quoted statistics to their source.", {})],
+        [("The qualifier travels with the claim,", {"bold": True}), (" in the headline's eye-span.", {})],
         [("Causal wording only with a defended identification argument;", {"bold": True}),
          (" population wording only with a reach argument.", {})],
-        [("Two channels for every distinction:", {"bold": True}), (" a label or a pattern, with colour as a bonus.",
-                                                                    {})],
-        [("Replace every bracket, every prompt and every EXAMPLE item.", {"bold": True}),
-         (" Panels may move, merge or resize; every kind of information stays.", {})],
+        [("Two channels for every distinction:", {"bold": True}), (" label or pattern, colour as a bonus.", {})],
+        [("Replace every bracket, prompt and EXAMPLE item.", {"bold": True}),
+         (" Panels may resize; every section stays.", {})],
         [("Draft tag through M11; delete it at the M13 lock.", {"bold": True}),
-         (" Keep “Preliminary results” in the footer: the project closes in December.", {})],
+         (" Keep “Preliminary results” in the footer.", {})],
         [("AI:", {"bold": True}),
-         (" disclose on the poster itself, per tool: purpose, what you changed or kept, how you checked it. The "
-          "Expo does not accept AI-generated sections or abstracts, or a poster designed by AI without "
-          "substantial human input. Every AI step also gets a ledger row.", {})],
-    ], name="Guide: rules", size=34)
-
-    y = gbar(2, 4.2, "PANEL → RUBRIC → BOOK")
-    table(g, gx[2], y + 0.2, gw, [
-        ("Panel", "Rubric", "Book"),
-        ("Title · The question and what it adds", "1", "Ch. 1, 7–9"),
+         (" disclose on the poster, per tool: purpose, what you changed or kept, how you checked it. The "
+          "Expo does not accept AI-generated sections or abstracts, or an AI-designed poster.", {})],
+    ], name="Guide: rules", size=22)
+    y = bar(g, gx[2], gw, 2.6, "SECTION → RUBRIC → BOOK")
+    table(g, gx[2], y + 0.15, gw, [
+        ("Section", "Rubric", "Book"),
+        ("Title · Abstract · The question · What is already known", "1", "Ch. 1, 7–9"),
         ("Design: what your claim needs", "2", "Ch. 6–7, 10, 12, 14–19"),
         ("Data and measurement", "3", "Ch. 13, 20–21"),
-        ("Checks and verification · status line", "4", "Ch. 11, 22–25, 36–37"),
+        ("Methods · Checks and verification", "4", "Ch. 11, 22–25, 36–37"),
         ("Main result", "5", "Ch. 32"),
-        ("Headline · What it means, and where it stops", "6", "Ch. 28–29, 35"),
-        ("Sources, AI use, and credits", "7", "Ch. 9, 30"),
+        ("Headline · Conclusions · Limitations", "6", "Ch. 28–29, 35"),
+        ("AI use disclosure · References · Acknowledgments", "7", "Ch. 9, 30"),
         ("The whole board", "8", "Ch. 32–33"),
-    ], [gw - 6.4, 2.0, 4.4], size=28, row_h=1.1, name="Guide: panel map")
-    text(g, gx[2], 17.5, gw, 8.0, [
-        "The final poster (M13) is graded with Evidence_Driven_Research_Poster_Rubric.pdf, handed out with "
-        "this template: eight criteria, 100 points, with hard caps. Read it before you build, not after.",
-    ], name="Guide: rubric", size=34)
-
+    ], [gw - 4.4, 1.3, 3.1], size=18, row_h=0.75, name="Guide: section map")
+    text(g, gx[2], 11.5, gw, 4.0, [
+        "The final poster (M13) is graded with Evidence_Driven_Research_Poster_Rubric.pdf: eight criteria, "
+        "100 points, hard caps. Read it before you build.",
+    ], name="Guide: rubric", size=22)
     prs.core_properties.title = "HONR 46400 research poster template"
     prs.core_properties.author = "Davi Moreira"
-    prs.core_properties.subject = "Purdue Fall Undergraduate Research Expo poster, 48 x 36 in"
+    prs.core_properties.subject = "Purdue Fall Undergraduate Research Expo poster, 34 x 22.5 in"
     out.parent.mkdir(parents=True, exist_ok=True)
     prs.save(str(out))
 

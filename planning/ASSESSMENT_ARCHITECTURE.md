@@ -184,7 +184,7 @@ preparation class (meeting 34, Fri 2026-11-13, "the printed poster arrives:
 rehearse on the real thing"). One adopted sentence is a forward promise: "A
 poster template and assessment rubric will be shared" — **both now exist
 (D87, 2026-10-21)**: the template `project/poster/honr464_poster_template.pptx`
-(48 × 36 in, adapted from QM 47400's) and the poster rubric
+(34 × 22.5 in, adapted from QM 47400's) and the poster rubric
 `project/poster/Evidence_Driven_Research_Poster_Rubric.{pdf,docx,xlsx}`, adapted
 from QM 47400's poster-only rubric. The rubric is the M13 poster-quality rubric,
 generated into the brief by `scripts/build_poster_kit.py`; M10 now collects the

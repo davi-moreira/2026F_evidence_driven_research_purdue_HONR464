@@ -56,7 +56,7 @@ your ledger, and submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file, `lastname_m10.pdf` | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
-| 2 | **`lastname_m10_poster.pptx`** *and* **`lastname_m10_poster.pdf`** | **Your poster draft file**, the graded core: your Expo poster built on the **course poster template** (`honr464_poster_template.pptx`, 48 × 36 in), every panel filled and the preliminary draft tag visible. Hand in both the editable file and its one-page PDF export at full size; the poster is always its own file, never a section of another PDF. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
+| 2 | **`lastname_m10_poster.pptx`** *and* **`lastname_m10_poster.pdf`** | **Your poster draft file**, the graded core: your Expo poster built on the **course poster template** (`honr464_poster_template.pptx`, 34 × 22.5 in), every panel filled and the preliminary draft tag visible. Hand in both the editable file and its one-page PDF export at full size; the poster is always its own file, never a section of another PDF. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of `lastname_m10.pdf` | Your **spoken spine** (the 30-second and 3-minute versions, written out and timed), your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
@@ -128,8 +128,8 @@ questions. Every field there changes what you build.
 For this course part of the contract is already written, because your venue is
 real and dated. Your artifact is the **Purdue Fall Undergraduate Research Expo**
 poster, presented Tuesday, November 17, together with the **oral defense** you
-give standing beside it. The medium is fixed down to the file: a 48 × 36 inch
-printed board, the Expo's standard size, built on the course poster template. Both branches are required here: the visual surface that
+give standing beside it. The medium is fixed down to the file: a 34 × 22.5 inch
+printed board, the course format, built on the course poster template. Both branches are required here: the visual surface that
 carries the research with no narrator, and the spoken spine that carries it when
 a visitor asks. Keep the general vocabulary anyway, because the transferable
 skill is the contract, not the poster. A manuscript, a seminar, and a recorded
@@ -170,7 +170,7 @@ vision, color-blindness, or a screen reader needs from you. **Submission rule**:
 the deadline and the file format. **Question channel**: live questions, written
 questions, or none at all.
 
-Several lines are fixed for you: a printed poster, 48 × 36 inches and
+Several lines are fixed for you: a printed poster, 34 × 22.5 inches and
 landscape, built on the course template, presented in a hall with live
 questions on Tuesday, November 17, submitted for print by Sunday, November 8 at
 11:59 PM. The template's panels are your **required elements**, and its guide
@@ -377,7 +377,7 @@ pre-submission checklist.
 | **Transformation memo** | What expands, compresses, moves, becomes visual, becomes spoken, in the move from the M9 note |
 | **Content map** | Claim, evidence, boundary, uncertainty, and disclosure each mapped to a location, not an intention |
 | **The artifact** | Poster draft built to the contract, labeled preliminary, plus the 30-second and 3-minute spoken spine |
-| **Poster draft file** | Built on the course template (`honr464_poster_template.pptx`, 48 × 36 in); every panel filled; no guidance, bracket, or EXAMPLE text left; editable `.pptx` and its one-page full-size `.pdf` both submitted |
+| **Poster draft file** | Built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in); every panel filled; no guidance, bracket, or EXAMPLE text left; editable `.pptx` and its one-page full-size `.pdf` both submitted |
 | **Adaptation rule** | Nothing on the artifact is absent from the M9 note (or its dated corrected version); the claim is no larger than the note's |
 | **Traceability** | Every load-bearing number and figure walks back through the claim-to-evidence table to the cell that produced it |
 | **Figure honesty & accessibility** | Values labeled directly; uncertainty shown as the design licenses; axes encode magnitude honestly; meaning never carried by color alone |

@@ -5330,3 +5330,17 @@ images go beside them.
   copied, so the logo strip was dropped).
 - **All 19 code cells kept** and re-executed; the voice, citation, and misconception
   gates pass.
+
+**Amended the same day (Davi, 2026-10-21).** The template is **34 × 22.5 in**,
+QM 47400's format, not the Expo's 48 × 36 standard, and it has a section for each
+part Davi named: **Abstract**, **Methods**, **Conclusions**, **Limitations**, a
+**References** section separate from the **AI use disclosure**, and
+**Acknowledgments** as a section like the others. The author photo slot returns,
+using QM 47400's example photo of Davi. Four columns: Abstract · The question and
+why it matters · What is already known | Design · Data and measurement · Methods |
+Main result · Checks and verification | Conclusions · Limitations · AI use
+disclosure · References · Acknowledgments. Type minimums in the file: title 54,
+headline 32, headings 24, substantive content 18, captions and references 13. The
+rubric keeps its eight criteria and weights; only its panel names and its size
+reference changed. Briefs, the M10 PDF additions, the M10 workbench and the
+announcement now say 34 × 22.5 in.
