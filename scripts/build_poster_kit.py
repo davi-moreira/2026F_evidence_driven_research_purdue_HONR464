@@ -103,29 +103,29 @@ RUBRIC = [
         ],
     },
     {
-        "name": "Data, provenance & measurement",
-        "points": 12,
-        "panels": "Data and measurement",
-        "virtue": "Evidence integrity & provenance",
-        "chapters": "Ch. 13, 20–21",
+        "name": "Research design & methodology",
+        "points": 15,
+        "panels": "Design: what your claim needs · Data and measurement · Methods",
+        "virtue": "Compass & pathway alignment",
+        "chapters": "Ch. 10, 12–21",
         "bands": [
-            ("11–12", "Source and route can be identified (archive, URL or DOI, retrieval date, or collection protocol); observations and independent units are distinguished, with any grouping named; the time window is given; each key concept is tied to its measure with the main validity concern; missing data and their handling are reported; the permission or IRB determination is stated."),
-            ("9–10", "The evidence is identifiable; one consequential detail is thin."),
-            ("5–8", "Important provenance or measurement information is missing."),
-            ("0–4", "The evidence cannot be identified, or a material permission problem is unresolved."),
+            ("14–15", "The design and method fit the question: the data strategy (who or what was observed, how units were selected, sample size counted in independent units, time window) and the answer strategy (the comparison, estimator, or model, and how its uncertainty is computed) are stated and justified; the data source and route can be identified; each key concept is tied to its measure with the main validity concern; missing data and the permission or IRB determination are reported; what was declared in advance is kept apart from later changes."),
+            ("11–13", "Design and method are appropriate and clearly described; one justification or one consequential detail (selection, measurement, missing data) is thin."),
+            ("6–10", "Methods are named but not justified for this question, or the data, selection, or measurement are described too vaguely to judge the design."),
+            ("0–5", "No identifiable design or method, a method that cannot answer the question, or evidence that cannot be identified."),
         ],
     },
     {
-        "name": "Analysis, checks & verification",
-        "points": 15,
-        "panels": "Methods · Checks and verification · verification status line",
+        "name": "Checks & verification",
+        "points": 12,
+        "panels": "Checks and verification · verification status line",
         "virtue": "Verification & robustness",
         "chapters": "Ch. 11, 22–25, 36–37",
         "bands": [
-            ("14–15", "The analysis fits the design; what was declared in advance is kept apart from later changes, and each change is explained; the uncertainty method fits the data, computed at the level of the independent unit with any dependence named; at least one consequential robustness, sensitivity, or diagnostic check is reported with what it changed; the verification status is accurate and honestly labeled (an external cold run, or \"solo proxy; external cold run pending\")."),
-            ("11–13", "Analysis and uncertainty are appropriate; the check or the verification account is thin."),
-            ("6–10", "A weak link between method and design, an uninformative check, or a verification claim the record does not support."),
-            ("0–5", "A material analytical error, or a displayed result with no trace or that fails to reproduce."),
+            ("11–12", "The uncertainty is computed at the level of the independent unit, with any dependence named; at least one consequential robustness, sensitivity, or diagnostic check is reported with what it changed; the verification status is accurate and honestly labeled (an external cold run, or \"solo proxy; external cold run pending\")."),
+            ("9–10", "Uncertainty appropriate; the check or the verification account is thin."),
+            ("5–8", "An uninformative check, or a verification claim the record does not support."),
+            ("0–4", "A material analytical error, or a displayed result with no trace or that fails to reproduce."),
         ],
     },
     {
@@ -186,11 +186,11 @@ HARD_CAPS = [
     ("A fabricated source, a source that cannot be identified after reasonable checking, or a materially "
      "false attribution to a source", "Sources, AI disclosure & credit"),
     ("A displayed result your project computed, with no reproducible trace to a notebook cell or output",
-     "Analysis, checks & verification"),
+     "Checks & verification"),
     ("A displayed result or bound that materially fails to reproduce from the submitted package "
-     "(documented rounding is not a failure)", "Analysis, checks & verification"),
+     "(documented rounding is not a failure)", "Checks & verification"),
     ("An author rerun presented as independent reproduction, or a solo proxy without its label",
-     "Analysis, checks & verification"),
+     "Checks & verification"),
     ("A central claim that materially exceeds its identification or reach warrant",
      "Interpretation, uncertainty & limitations"),
     ("A confirmed AI contribution missing from the on-poster disclosure", "Sources, AI disclosure & credit"),
@@ -274,7 +274,7 @@ def build_rubric_docx(path: Path) -> None:
     sec.page_width, sec.page_height = Inches(14), Inches(8.5)  # US legal, landscape
     for side in ("left_margin", "right_margin"):
         setattr(sec, side, Inches(0.5))
-    sec.top_margin = sec.bottom_margin = Inches(0.45)
+    sec.top_margin = sec.bottom_margin = Inches(0.35)
 
     style = doc.styles["Normal"]
     style.font.name = "Arial"
@@ -292,17 +292,6 @@ def build_rubric_docx(path: Path) -> None:
         return p
 
     para("Evidence-Driven Research Poster Rubric (Final Poster Assessment)", 14, bold=True, after=1)
-    para(
-        "HONR 46400 · Purdue Fall Undergraduate Research Expo · grades the locked poster "
-        "(M13) as the Final Project poster-quality score: 70% of the Poster Presentation "
-        "component, with the M15 live presentation supplying the other 30%. Built for the "
-        "course template honr464_poster_template.pptx (34 × 22.5 in). Score each criterion in "
-        "one band; the hard caps below override the bands. The rubric scores what the poster "
-        "communicates; check that it is true against the M9 note, the package, the run records "
-        "and the ledger.",
-        8.5, italic=True, color="404040", after=4,
-    )
-
     headers = ["#", "Criterion · panels graded", "Pts"] + list(BANDS) + ["Score"]
     widths = [0.3, 1.9, 0.4, 3.3, 2.2, 2.2, 2.0, 0.6]
     t = doc.add_table(rows=1, cols=len(headers))
@@ -320,7 +309,7 @@ def build_rubric_docx(path: Path) -> None:
         shd.set(qn("w:fill"), hexcolor)
         tcPr.append(shd)
 
-    def fill(cell, runs, size=8):
+    def fill(cell, runs, size=7.5):
         cell.text = ""
         p = cell.paragraphs[0]
         for text, bold, italic in runs:
@@ -342,8 +331,7 @@ def build_rubric_docx(path: Path) -> None:
     for i, crit in enumerate(RUBRIC, 1):
         cells = t.add_row().cells
         fill(cells[0], [(str(i), True, False)])
-        fill(cells[1], [(crit["name"], True, False), ("\n" + crit["panels"], False, True),
-                        (f"\n{crit['virtue']} · {crit['chapters']}", False, False)])
+        fill(cells[1], [(crit["name"], True, False), ("\n" + crit["panels"], False, True)])
         fill(cells[2], [(str(crit["points"]), True, False)])
         for k, (rng, text) in enumerate(crit["bands"]):
             fill(cells[3 + k], [(f"{rng} pts: ", True, False), (text, False, False)])
@@ -369,14 +357,6 @@ def build_rubric_docx(path: Path) -> None:
         r = p.add_run(f"{what} → {row}.")
         r.font.size = Pt(8.5)
     para(CAP_NOTE, 8.5, after=2)
-    para(
-        "Separate from this score: the poster does not lock without the two blocking gate "
-        "records (author self-reproduction log and release preflight), and a missing AI "
-        "Research Ledger is handled in the M13 process score. For an approved group the "
-        "poster-quality score is common; every member presents and receives their own live "
-        "score. Source of truth: milestone_13_final_poster_lock.md (generated block).",
-        8, italic=True, color="404040",
-    )
     doc.core_properties.title = "Evidence-Driven Research Poster Rubric"
     doc.core_properties.author = "Davi Moreira"
     doc.save(path)
