@@ -64,7 +64,7 @@ class, in a silent round, and finished in Friday's studio.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. It also delivers what your **research action plan** commits you to for this milestone (Component 4). |
+| 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the four peer-review lenses (reading architecture, traceability, uncertainty placement, and craft). Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. It also delivers what your **research action plan** commits you to for this milestone (Component 4). |
 | 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **individual response record** on the sheets your project received: each finding ranked blocking or optional, each blocking finding paired with the repair you made or endorsed, and at least one finding you rejected with the reason you rejected it. Opens with the **Instructor Request Record** (Component 3), which is graded under the carry-forward adjustment. |
 
 ---
@@ -101,8 +101,9 @@ reviewer whose criticism cannot be trusted.
 ### 1. The review surveys
 
 One for every other active project or poster, written independently in the
-silent round, on the rubric's four criteria: reading architecture,
-traceability, uncertainty placement, and craft. For each sheet:
+silent round, on the four peer-review lenses: reading architecture,
+traceability, uncertainty placement, and craft. The eight-criterion poster
+rubric that grades the final poster at M13 is a useful checklist while you read. For each sheet:
 
 - at least **one item recorded as sound**, named specifically;
 - at least **two findings**, each naming a block, a defect, and a repair;

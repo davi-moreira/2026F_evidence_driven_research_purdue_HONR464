@@ -60,9 +60,21 @@ your ledger, and submit by Sunday night.
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of `lastname_m10.pdf` | Your **spoken spine** (the 30-second and 3-minute versions, written out and timed), your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
-Nothing on the artifact may be new. Every number, figure, and citation that
+Nothing on the artifact may be new. Every result, figure, and citation that
 appears on it also appears in your M9 note, and each one walks back through your
-claim-to-evidence table to the cell that produced it.
+claim-to-evidence table: a result you computed to the cell that produced it, a
+statistic you quote to the exact place in its source, with any display rounding
+noted. If a check this week changes a number, do not quietly fix the poster: keep
+the submitted M9 note, write a dated corrected version with its evidence table
+updated, then update the poster and record what changed and why. Your name, the
+AI-use disclosure, and the version and verification lines are documentation, not
+new findings.
+
+This milestone grades the adaptation, the traces, the critique, and the
+rehearsal. Production polish is assessed at M13, so put your hours into a board
+that says the right thing, not yet into a perfect one. Export the poster
+directly from your slide editor as its own one-page, full-size PDF; the
+notebook-printing steps at the end of this page are for your other files.
 
 **The template and the rubric.** Both are posted with this assignment on
 Brightspace, and they also live in the course repository under
@@ -125,8 +137,9 @@ talk each get exactly this treatment.
 
 One rule governs the whole build, and it is why last week came first. **The
 artifact adapts the note; it never outruns it.** Nothing appears on the artifact
-that your M9 note does not already contain. Every number traces to a cell through
-your claim-to-evidence table. And the claim never grows under compression: a
+that your M9 note does not already contain, or a dated corrected version of it.
+Every number traces through your claim-to-evidence table, to a cell or to the
+exact place in a source. And the claim never grows under compression: a
 shorter sentence is not a bigger finding. When the format forces a cut, what
 leaves is detail, never the boundary. An adaptation that drops the limitations is
 not a shorter version of your work. It is a different claim.
@@ -238,8 +251,10 @@ Then adjudicate, exactly as you did in your M8 audit. A flag becomes real when a
 check in your own material confirms it, never because the reviewer sounded
 certain. An AI reviewer asserting a flaw your trace refutes is **confident
 fabrication**, and two reviewers wrong in the same way are **correlated errors**,
-not a confirmation. Record at least one flag you refuted, and name the check that
-refuted it. A flag with no check behind it does not change your artifact.
+not a confirmation. Mark every flag **accepted**, **partly accepted**, or
+**rejected**, and name the check that decided it and what you changed. If every
+flag holds up, say so and show the checks: you are never required to reject a
+valid criticism. A flag with no check behind it does not change your artifact.
 
 ### 6. The defense rehearsal record
 
@@ -276,8 +291,10 @@ Research Ledger entry scores the Craft criterion **0** and the submission is
 
 ### 8. The version line and the dossier update line
 
-Open the artifact with its version line: **Book Milestone 10, version 1**, dated,
-with the reason a reader could use to reconstruct your thinking. Then close with
+Open your contract file (`lastname_m10_contract.pdf`, or the top of
+`lastname_m10.pdf`) with its version line: **Book Milestone 10, version 1**,
+dated, with the reason a reader could use to reconstruct your thinking. The
+poster itself carries only the short version line in its footer. Then close with
 one line recording what this milestone finalizes in your **Research Project
 Dossier**: your **venue contract**, your **content map**, your
 **publication-ready artifact**, and your **defense rehearsal record** now exist.
@@ -286,8 +303,8 @@ Name the file or section where each one lives.
 ### 9. Carry-forward of instructor review requests: the Instructor Request Record
 
 <!-- d80-instructor-request-record -->
-Open this artifact, right after its version line, with an **Instructor Request
-Record**. Copy every request numbered `IR-M10-##` from my review of M9
+Open your contract file, right after its version line, with an **Instructor
+Request Record**; it never goes on the poster. Copy every request numbered `IR-M10-##` from my review of M9
 (the Brightspace feedback and the mentoring email that came with it), one row
 per request:
 
@@ -361,20 +378,20 @@ pre-submission checklist.
 | **Content map** | Claim, evidence, boundary, uncertainty, and disclosure each mapped to a location, not an intention |
 | **The artifact** | Poster draft built to the contract, labeled preliminary, plus the 30-second and 3-minute spoken spine |
 | **Poster draft file** | Built on the course template (`honr464_poster_template.pptx`, 48 × 36 in); every panel filled; no guidance, bracket, or EXAMPLE text left; editable `.pptx` and its one-page full-size `.pdf` both submitted |
-| **Adaptation rule** | Nothing on the artifact is absent from the M9 note; the claim is no larger than the note's |
+| **Adaptation rule** | Nothing on the artifact is absent from the M9 note (or its dated corrected version); the claim is no larger than the note's |
 | **Traceability** | Every load-bearing number and figure walks back through the claim-to-evidence table to the cell that produced it |
 | **Figure honesty & accessibility** | Values labeled directly; uncertainty shown as the design licenses; axes encode magnitude honestly; meaning never carried by color alone |
 | **Mode test** | Poster read at gallery distance; spine timed aloud on an outsider; the gallery-walk audit run across all five lenses and revised once in ranked order |
-| **Poster Critic** | Run; every untraceable-number flag and claim-boundary flag adjudicated by a check you can show; at least one refuted flag recorded with its check |
+| **Poster Critic** | Run; every untraceable-number flag and claim-boundary flag marked accepted, partly accepted, or rejected, each by a check you can show |
 | **Defense rehearsal** | Five hard questions, each marked defend, concede, or do-not-know; ULN statement present; the do-not-know list carried to M13 |
 | **Version line** | Book Milestone 10, version 1, dated, with a reason a reader could use to reconstruct your thinking |
-| **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
+| **Permission status** | Your permission determination is stated, with any change of route since M9; M13's release preflight must clear before public release |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Venue contract, content map, artifact, and rehearsal record located by file or section |
 | **Studio work** | Worked at the Friday studio (Oct 30); artifact criticism gallery run; defense rehearsed; submitted by Sunday, Nov 1 |
 | **Filenames** | `lastname_m10_poster.pptx` and `lastname_m10_poster.pdf`, always as their own files; plus `lastname_m10_contract.pdf` and `lastname_m10_defense.pdf`, or both as sections of one `lastname_m10.pdf` |
 | **Location** | Brightspace → Assignments → M10 |
-| **Instructor Request Record** | Opens the artifact after the version line; every `IR-M10-##` request from the M9 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
+| **Instructor Request Record** | Opens the contract file after the version line; every `IR-M10-##` request from the M9 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 | **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 
 ---
@@ -394,7 +411,7 @@ and the rehearsal records defensible responses plus the unresolved work.
 |---|---|---|---|---|
 | **Compass & pathway alignment** (18) | The artifact's headline carries the same kind and reach as the note's, in the venue's own form; no verb grew under compression; the spoken spine states the boundary before the evidence beats; complete and unmistakably about your project (16–18) | Inside the boundary; one verb slightly strong on the board or in the spine (13–15) | Boundary present but the compressed wording drifts toward a claim the design does not license (7–12) | Overclaim on a public surface: an association displayed as a cause, or a sample displayed as a population (0–6) |
 | **Evidence integrity & provenance** (18) | Every number, figure, and citation on the artifact appears in the M9 note and walks back through the claim-to-evidence table to its cell (16–18) | Traceable; one trace thin or one citation under-linked (13–15) | An element on the artifact that the note does not contain, or a number whose trace is asserted rather than shown (7–12) | A fabricated or unretrievable source, or an untraceable number displayed to an audience (0–6) |
-| **Verification & robustness** (23) | Venue contract, transformation memo, and content map all present and specific; the mode test was really run and recorded; the gallery-walk audit ranks its hits and shows the single revision pass; the Poster Critic was run and every flag adjudicated by a named check, including one refuted; every judgment defended in your own reasoning, not a tool's (21–23) | All pieces present; one flag acted on without a named check, or the mode test recorded loosely (17–20) | A content map of intentions rather than locations, an audit with no ranking, or Poster Critic output pasted in unadjudicated (10–16) | No mode test, no audit, or an AI flag adopted or ignored with no check either way (0–9) |
+| **Verification & robustness** (23) | Venue contract, transformation memo, and content map all present and specific; the mode test was really run and recorded; the gallery-walk audit ranks its hits and shows the single revision pass; the Poster Critic was run and every flag adjudicated by a named check (a valid flag accepted counts as fully as a false one refuted); every judgment defended in your own reasoning, not a tool's (21–23) | All pieces present; one flag acted on without a named check, or the mode test recorded loosely (17–20) | A content map of intentions rather than locations, an audit with no ranking, or Poster Critic output pasted in unadjudicated (10–16) | No mode test, no audit, or an AI flag adopted or ignored with no check either way (0–9) |
 | **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as the claim on the artifact itself; the ULN statement is precise rather than hedging; the five questions are genuinely hard and honestly marked (16–18) | Present; one beat stated loosely, or one question softened (13–15) | Uncertainty relegated to a corner the eye never reaches, or a question bank of easy questions (7–12) | Limitations dropped in the adaptation, or the finding presented as settled certainty (0–6) |
 | **Craft, ledger & communication** (13) | On-format (the poster built on the course template, with the editable file and its PDF both submitted), on-time, readable at its intended distance and hearable at its intended length; accessibility handled; gallery feedback incorporated; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a poster not built on the template, or no editable poster file), or gallery feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
@@ -421,8 +438,9 @@ request is reissued for a later milestone.
   provenance* at Beginning.
 - An **untraceable number** — a figure on the artifact with no path back to your
   data — caps *Evidence integrity & provenance* at Beginning.
-- An element on the artifact that **does not appear in the M9 note** caps
-  *Evidence integrity & provenance* at Beginning.
+- An element on the artifact that **does not appear in the M9 note** (or in a
+  dated corrected version of it) caps *Evidence integrity & provenance* at
+  Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 

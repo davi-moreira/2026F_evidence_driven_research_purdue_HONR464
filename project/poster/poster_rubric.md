@@ -22,9 +22,10 @@ M13's rubric block, are generated from one source by
 `scripts/build_poster_kit.py`; edit the script, never the files.
 
 The locked poster and its public delivery supply the Final Project's **Poster
-Presentation at the Purdue Undergraduate Research Conference** item (20% of
-Final Project, or 10 course points): `70%` comes from the M13 poster-quality
-rubric and `30%` from the M15 live Expo presentation rubric. For an approved
+Presentation at the Purdue Undergraduate Research Conference** item (16% of
+the 75-point Final Project, or 12 points of the course grade, D79): `70%` comes
+from the M13 poster-quality rubric (8.4 course points) and `30%` from the M15
+live Expo presentation rubric (3.6 course points). For an approved
 group project, the poster-quality score is common, but every member must present
 and receives their own live-presentation score. The poster also enters the final
 evidence base for **Instructor/TA Evaluation**. M13's process table supplies its

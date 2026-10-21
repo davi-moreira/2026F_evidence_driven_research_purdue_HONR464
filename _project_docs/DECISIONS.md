@@ -5203,3 +5203,88 @@ not in the book**.
   ±9 bushels per acre", but the chapter's own seeded code prints ±3.7 and ±3.1 per
   group (difference interval 1.0 to 10.6). Left for Davi's chapter review; the
   companion does not use that example.
+
+## D87 — The Expo poster template and the poster rubric exist; M10 collects the poster draft file (2026-10-21)
+
+**Ruling (Davi, 2026-10-21).** Adapt QM 47400's poster template
+(`qm474_poster_template.pptx`) and poster-only rubric
+(`Predictive_Analytics_Poster_Rubric`) to this course, so they ask for research the
+way EDR|AI teaches it rather than a business case and a predictive model. M10 (Sun
+Nov 1), in addition to what Book Milestone 10 requires, collects the student's
+**poster draft file** built on the template. The rubric is the one Davi uses to grade
+the **final poster** (M13). This closes the syllabus promise D53 made ("a poster
+template and assessment rubric will be shared") and workstream L3 of the D50 open
+items.
+
+- **One source:** `scripts/build_poster_kit.py` writes
+  `project/poster/honr464_poster_template.pptx`,
+  `project/poster/Evidence_Driven_Research_Poster_Rubric.{docx,pdf,xlsx}`, and the
+  rubric block of the M13 brief between `<!-- poster-rubric:begin/end -->`
+  (`--check` reports a stale block). The template build reads QM 47400's file only for
+  the Purdue mark, whose Daniels School half is cropped.
+- **The template:** 48 × 36 in, the Expo's standard 4′ × 3′ board (verified on the
+  Fall Expo guidelines page, 2026-10-21; QM 47400's file is 34 × 22.5 in). Same visual
+  family as QM 47400's (grey outer columns, black bars with Purdue-gold headings,
+  Arial) because both courses print in one run. A headline banner carries the finding
+  and the qualifier that changes how it reads; three unequal columns give the main
+  result the centre. Six areas: the question and what it adds; design (kind, reach,
+  target, warrant); data and measurement (observations kept apart from independent
+  units); main result; checks and verification; what it means and where it stops;
+  plus sources, on-poster AI disclosure (tool, purpose, what was changed or kept, how
+  it was checked, as the Expo requires) and credits. A crimson "PRELIMINARY DRAFT" tag
+  stays through M11 and is deleted at the M13 lock; the footer's "Preliminary results"
+  status stays. Slide 2 is a hidden guide page (print spec and type minimums: title
+  72, headline 44, headings 32, substantive content 24, captions and references 18;
+  export slide 1 only; the panel → rubric → chapter map). The example is ch. 32's
+  simulated checkout comparison (SEED = 464), redrawn with a second panel for the
+  difference the headline is about: B − A = 3.2 points, Welch 95% interval −2.5 to
+  9.0 (recomputed here).
+- **The rubric:** eight criteria, one per panel group, four bands, 100 points:
+  question, context & contribution 10; target, design & warranted claims 15; data,
+  provenance & measurement 12; analysis, checks & verification 15; results & figure
+  honesty 15; interpretation, uncertainty & limitations 15; sources, AI disclosure &
+  credit 8; visual communication & accessibility 10. On the five virtues: compass 25,
+  evidence 20, verification 30, uncertainty 15, craft 10 (the old M13 rows were
+  20/15/25/20/20). It **replaces** M13's five-row poster-quality table; the weight is
+  unchanged (70% of Poster Presentation, 12% of the course). Package craft (README,
+  licence, manifest) leaves the poster score: the gates and the M13 process score check
+  it now and M16 scores it. The rubric scores what the poster communicates; the grader
+  checks its truth against the M9 note, the package, the run records and the ledger.
+  Six hard caps, each applied once: fabricated or materially misattributed source (7);
+  computed result with no trace, result or bound that fails to reproduce, author
+  rerun sold as independent (4); claim beyond its identification or reach warrant
+  (6); confirmed AI contribution missing from the on-poster disclosure (7).
+- **Briefs:** M10 collects `lastname_m10_poster.pptx` + `lastname_m10_poster.pdf`
+  (always their own files), moves the spoken spine into the defense file, puts the
+  version line and the Instructor Request Record in the contract file, adds a
+  correction route to "nothing new" (a dated corrected M9 version, then the poster),
+  separates computed results (cell) from quoted statistics (source), and says
+  production polish is graded at M13. M10's PDF gains a "What this course adds"
+  section (classification `additions`; the ✚ was already there from D82). M11 names
+  the template and asks for a Poster Critic run made before class. M12's surveys use
+  "four peer-review lenses", so they are not confused with the eight-criterion rubric.
+  M13: one-page poster-only print file, the signed checklist moved to the gates PDF,
+  disclosure on the poster itself, causal wording allowed only with a defended
+  identification argument (it used to forbid it for every observational project,
+  against INQUIRY_MAP), traces to cell or source, and the stale criterion names in
+  its penalties corrected. The M10 workbench (`ms09`) follows.
+- **Independent review (Codex, gpt-6-astra, max effort; read-only;
+  `_adm/codex_reviews/2026-10-21_poster-kit/`).** Adopted: the compass fix (prediction
+  is an objective, not a third kind; reach names a population), the Expo-compliant AI
+  fields, "interval or justified caveat", the correction route, the stale penalty
+  names and pointer weights, the one-page print file, 24 pt for substantive content,
+  the three-column hierarchy, the difference panel, observations vs. independent
+  units, and **no forced refutation**: M10 asks students to mark every Poster Critic
+  flag accepted, partly accepted, or rejected, and never to reject a valid one.
+  Declined: fixed band scores (the course's rubrics use ranges), renaming M11's title,
+  and editing the book (chapter review is frozen).
+- ⚠ **For Davi, outside the repository:** replace the M10, M11, M12 and M13
+  instructions and PDFs on Brightspace (the HTML in `brightspace/milestones/` is
+  regenerated); attach the template and the rubric PDF to M10 (and again at M11/M13);
+  post `_announcements/2026-10-21_poster_template_and_rubric.md`. M12 also still
+  requires each author to "reject at least one finding"; that is the same forced
+  refutation removed from M10, left for your call.
+- ⚠ **Open for the chapter review:** EDR|AI ch. 32's worked example reads "within
+  overlapping intervals" as the uncertainty of the difference. Overlap of two
+  intervals is not the interval of the difference; the template now shows the
+  difference itself, and the chapter should follow when it is reviewed.

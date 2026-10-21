@@ -74,7 +74,7 @@ on the board that did not just reproduce.
 | 1 | **`lastname_m13_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, and the dated frozen manifest. |
 | 2 | **`lastname_m13_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
 | 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** Opens with the **Instructor Request Record** (Component 8), which is graded under the carry-forward adjustment. |
-| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. It also delivers what your **research action plan** commits you to for this milestone (Component 9). |
+| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**: exactly one 48 × 36 inch landscape page, the poster only, exported from slide 1 of the course template, with your **AI-use disclosure block** on the board itself. Your **signed final-lock checklist** goes in `lastname_m13_gates.pdf`, never in the print file. Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. It also delivers what your **research action plan** commits you to for this milestone (Component 9). |
 
 If you submit a folder or notebook link, set sharing so the instructor can open
 it, and confirm the package runs top to bottom in a clean session. Submit the
@@ -219,7 +219,7 @@ pending, or blocking:
 
 - **Permissions.** Everything on the poster is inside your permission
   determination, and nothing identifiable appears that should not.
-- **Disclosure.** The AI-use disclosure block is on or with the poster, and it is
+- **Disclosure.** The AI-use disclosure block is on the poster itself, and it is
   accurate.
 - **Reproducibility.** The package is complete, and the poster's numbers match the
   run recorded in Gate 1.
@@ -232,21 +232,27 @@ elsewhere, because a blocking gate is not scored.
 
 ### 5. The locked poster, built on the reproduced numbers
 
-The complete poster, sized and formatted to the URC print spec distributed in
-class: dimensions, minimum font sizes at print scale, required identifying
-elements. It must be legible at the size it will be printed, not only on your
-screen. Four properties are graded on the board itself:
+The complete poster, built on the course template (`honr464_poster_template.pptx`,
+48 × 36 inches, the Expo's standard board) with the minimum type sizes on its
+guide page. It must be legible at the size it will be printed, not only on your
+screen. Delete the template's **preliminary draft** tag at this lock, because the
+print file is final, and keep the footer's **Preliminary results** status, because
+the research continues to December. Four properties are graded on the board:
 
 - **One headline claim, inside its compass position.** Your headline states the
   finding in one sentence whose verb stays inside your **compass position**, the
-  kind and reach of the question your project answered. An observational project
-  says "is associated with," never "causes." The 90-second reader inherits
-  whatever the headline claims.
-- **Every number traces to a cell in the package.** Each percentage, estimate,
-  interval, and count on the poster points to the cell that produced it in the
-  notebook you just reran. A number typed from memory, rounded by hand, or carried
-  from a draft you have since changed is an **untraceable number**, and it cannot
-  go on the board.
+  kind and reach of the question your project answered. Use causal wording only
+  when your design supplies and defends an identification argument: observational
+  evidence can support a causal claim under stated assumptions. If your causal
+  target is still unidentified, keep that target explicit and report only the
+  association your evidence supports. The 90-second reader inherits whatever the
+  headline claims.
+- **Every number traces to its source.** Each percentage, estimate, interval, and
+  count your project computed points to the cell that produced it in the notebook
+  you just reran; a statistic you quote from another work points to the exact
+  place in that work; display rounding is documented. A computed number typed from
+  memory, rounded by hand, or carried from a draft you have since changed is an
+  **untraceable number**, and it cannot go on the board.
 - **Uncertainty visible in the same eye-span as the claim.** The interval or
   caveat around your headline sits where the reader meets it beside the claim,
   not exiled to a footnote the 90-second reader never reaches. Name the limitation
@@ -264,11 +270,12 @@ Two habits carry the poster through the lock, and you attest to both on a
   real, retrievable work you opened yourself. You click the link, the work loads,
   and it says what your poster says it says. No fabricated or unretrievable
   citation appears anywhere.
-- **AI-use disclosure block.** A short, honest note on or with the poster
-  recording which AI tool did which task, such as locating sources, drafting, or
-  critiquing, and how you verified its output. "No AI used" is a legitimate entry
-  when it is true. An undisclosed AI contribution is an academic-integrity
-  violation.
+- **AI-use disclosure block.** A short, honest note on the poster itself, as the
+  Expo requires: for each AI tool, its purpose, what you changed or kept from its
+  output, and how you checked it. The Expo does not accept AI-generated sections
+  or abstracts, or a poster designed by AI without substantial human input. "No AI
+  used" is a legitimate entry only when it is true. An undisclosed AI contribution
+  is an academic-integrity violation.
 
 ### 6. AI Research Ledger rows
 
@@ -373,11 +380,11 @@ pre-submission checklist.
 | **Uncertainty reproduced** | Intervals, bounds, or sensitivity ranges reproduce with the point estimates, and mismatches are repaired before the lock |
 | **Gate 1 — author self-reproduction log** | Dated fresh-runtime rerun; every poster number and bound matched; blocking |
 | **Gate 2 — release preflight** | Permissions, disclosure, reproducibility, claim boundary, each clear / pending / blocking; blocking |
-| **Locked poster** | Print-ready to URC spec; legible at print scale; headline inside its compass position; uncertainty in the same eye-span as the claim; reachable by a color-blind and a screen-reader reader |
+| **Locked poster** | Exactly one 48 × 36 in page, poster only, built on the course template, draft tag removed; legible at print scale; headline inside its compass position; uncertainty in the same eye-span as the claim; reachable by a color-blind and a screen-reader reader |
 | **Number-to-cell traceability** | Every number on the board traces to a cell in the package that just reran |
 | **Citation verification** | Every source resolves to a real, retrievable work you opened; none fabricated or unretrievable |
-| **Final-lock checklist** | Signed, attesting to traceability, citations, uncertainty placement, both gates, and print spec |
-| **AI-use disclosure block** | On or with the poster: tool, task, verify step (or "No AI used") |
+| **Final-lock checklist** | Signed, inside `lastname_m13_gates.pdf` (never in the print file), attesting to traceability, citations, uncertainty placement, both gates, and print spec |
+| **AI-use disclosure block** | On the poster itself: per tool, its purpose, what you changed or kept, and how you checked it (or "No AI used", only when true) |
 | **Version and reason** | The package and the cold-run record are dated and numbered as a version, with one line saying what changed and why |
 | **AI Research Ledger** | Each member supplies personally attributable rows for every AI-assisted step they performed; every verification method is named and non-vague |
 | **Dossier line** | Package, cold-run record, gate records, and poster located by file or section |
@@ -426,8 +433,9 @@ request is reissued for a later milestone. It does not change the poster-quality
 
 ## Final Project poster-quality rubric (100 points)
 
-This rubric grades **the board itself**, panel by panel, the way the Expo
-audience meets it. It is the course's poster rubric, adapted from QM 47400's
+This rubric scores **what your poster communicates**, panel by panel, the way
+the Expo audience meets it, and the grader checks that what it communicates is
+true against your M9 note, your package, your run records, and your ledger. It is the course's poster rubric, adapted from QM 47400's
 poster-only rubric to the EDR|AI way of doing research (D87), and it is built
 for the course poster template: each criterion names the template panels it
 reads. Its eight criteria sit on the course's five shared virtues
@@ -450,31 +458,37 @@ scores it in full.
 <!-- Generated by scripts/build_poster_kit.py (D87) from its RUBRIC and
      HARD_CAPS. Edit the script and rerun it; edits here are overwritten. -->
 
-Score each criterion in one band. The same rubric is handed out as
-`project/poster/Evidence_Driven_Research_Poster_Rubric.pdf` (with the grading sheet
+Score each criterion in one band. The rubric scores what your poster
+communicates, panel by panel; the grader checks that it is true (sources,
+computed results, reproduction, AI disclosure) against your M9 note, your
+package, your run records, and your ledger. Those checks decide whether the
+board can be trusted; they add no package-craft points. The same rubric is
+handed out as `project/poster/Evidence_Driven_Research_Poster_Rubric.pdf` (with the grading sheet
 `Evidence_Driven_Research_Poster_Rubric.xlsx`) next to the poster template
-`project/poster/honr464_poster_template.pptx`; each criterion grades
-the template panels named under it.
+`project/poster/honr464_poster_template.pptx`; each criterion names the
+template panels it reads.
 
 | # | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|---|
-| 1 | **Question, stakes & contribution** (10)<br>*Title · The question and why it matters · What is already known* | The question is one specific sentence a stranger could restate; the stakeholder and the decision it informs are named; the main conclusion of the literature is stated from at least two sources you read; the value your answer adds to that conclusion is explicit; the main hypothesis is stated as you held it before the analysis ran. (9–10) | The question is clear, but the literature or the contribution is general: one source, or "little is known" without saying what is known. (7–8) | The question is broad or ambiguous; the motivation is generic; sources are listed rather than summarized; no contribution or hypothesis is stated. (4–6) | No identifiable research question: the board names a topic, not a question. (0–3) |
-| 2 | **Inquiry declaration & design** (15)<br>*Design and what it licenses* | Kind (descriptive, causal, or prediction) and reach (a named population beyond the sample, or unseen cases) are declared and fit the question's words; the pathway is named; the estimand and target population are explicit; the board shows what licenses the reach (sampling for a population, assignment or identification for a cause, a held-out check for unseen cases) and says what the design cannot establish. (14–15) | Declaration and design are present and consistent; one link is thin: the estimand, the target population, or what licenses the reach. (11–13) | The design is described as a procedure without saying what it licenses; kind or reach is missing, mislabeled, or at odds with the question. (6–10) | No design is stated, or a design that cannot answer the question is presented as if it could. (0–5) |
-| 3 | **Evidence, data & measurement** (12)<br>*Data and measurement* | Source and route are given (archive, URL or DOI, retrieval date, or the collection protocol); the unit of observation, the sample size counted in independent units, and the time window are reported; each key concept is tied to its measure with the main validity or reliability concern named; missing data or attrition is reported with how it was handled; the permission or IRB status is stated as determined. (11–12) | Provenance and measurement are clear; one of the unit, the window, the missing data, or the validity concern is thin. (9–10) | Data are named without a route or a date; measures are asserted without the concept they stand for; missing data go unreported. (5–8) | The data source cannot be identified, or the data or their use fall outside the project's permissions. (0–4) |
-| 4 | **Analysis, verification & reproducibility** (15)<br>*Analysis and verification · footer version line* | The declared analysis (comparison, estimator, or model) fits the design and is stated as declared before the results; the uncertainty method is named and fits the data, computed at the level of the independent unit with any dependence named; at least one robustness, sensitivity, or diagnostic check is reported with what it changed; every number on the board reproduced from the seeded package in a dated clean run, labeled honestly (an external cold run, or "solo proxy; external cold run pending"). (14–15) | Analysis and uncertainty are appropriate; the robustness check is thin, or one number takes a hunt to trace. (11–13) | The analysis is named without why it fits; the uncertainty method is generic or ignores dependence; no robustness check; traceability is asserted rather than shown. (6–10) | The analysis is unstated or wrong for the design, or numbers appear with no run behind them. (0–5) |
-| 5 | **Results & figure honesty** (15)<br>*Results* | The headline figure answers the question directly; values are labeled on the marks; axes encode magnitude honestly (bars start at zero, units stated); the uncertainty the design licenses is drawn on the figure (an interval, or a stated caveat); each caption says what is shown, the n, and the notebook cell that produced it; the result is stated in numbers, with units and its interval. (14–15) | Figures are honest and readable; one lapse: a missing value label, a caption without its source cell, or uncertainty given in the text but not on the figure. (11–13) | A figure needs the presenter to explain it; axes are truncated or unlabeled; the result is stated without its uncertainty. (6–10) | A figure whose picture says more than its numbers (a truncated axis turning a small gap into a cliff), or results with no figure, table, or number a reader can check. (0–5) |
-| 6 | **Claim boundary, uncertainty & limitations** (15)<br>*Headline · Claim boundary and limitations · Conclusion* | The headline verb stays inside the compass position (an association is never narrated as a cause, a sample never described as the population); the interval or caveat sits in the same eye-span as the headline; the board states what the evidence supports and what it does not; the limitation most likely to change the finding is named in a precise uncertainty-limitation-next-step (ULN) statement; the preliminary status is stated plainly; the conclusion answers the question no more strongly than the evidence. (14–15) | Inside the boundary, with one soft word, or the uncertainty placed off the main read path. (11–13) | Uncertainty or limitations are generic ("results may vary") or exiled to a corner, or the conclusion drifts past the evidence. (6–10) | The central claim outruns the design (a causal verb without identification, a population claim from a convenience sample), or the result is presented as settled certainty with no uncertainty on the board. (0–5) |
-| 7 | **Sources, AI disclosure & integrity** (8)<br>*AI use and verification · References · Acknowledgments* | Every cited source is real, retrievable, opened by you, and says what the board says it says; references can be found (author, year, title, venue, DOI or URL); the AI-use block names each tool, its task, and how you checked or changed its output, as the Expo requires (or "No AI used", when true); acknowledgments credit the mentor and any data provider or funder. (8) | Sources and disclosure are complete; one reference is incomplete, or one disclosure line is vague about how the output was checked. (6–7) | In-text citations do not match the references; the AI-use block is generic ("AI helped with writing"). (3–5) | A fabricated or unretrievable source, or AI use your ledger records that the board does not disclose. (0–2) |
-| 8 | **Visual communication & accessibility** (10)<br>*The whole board* | A visitor finds the headline in seconds and the question, result, and boundary in a ninety-second read; the scan path follows the argument; built on the course template at 48 × 36 in, with every element legible at print size (body at least 24 pt, captions and references at least 18 pt); every distinction is carried in two channels (a label or pattern, never colour alone) at high contrast; typography is consistent; no template guidance or EXAMPLE material is left; few or no language errors. (9–10) | Readable and organized; minor layout, labeling, or consistency lapses, or one colour-only distinction. (7–8) | Dense text blocks that need the presenter; text below the print-size minimums; the scan path is unclear; template text left on the board. (4–6) | Disorganized or illegible at print size, or meaning carried by colour alone throughout. (0–3) |
+| 1 | **Question, context & contribution** (10)<br>*Title · The question and what it adds* | One specific research question, and why it matters; the main conclusion of the literature synthesized from at least two sources you read; what your project adds to that conclusion made explicit; the hypothesis you recorded before the analysis ran, with any later analysis labeled exploratory. (9–10) | The question is clear, but the context or the contribution stays general: one source, or "little is known" without saying what is known. (7–8) | The question is broad or ambiguous; sources are listed without saying what they establish; no contribution is stated. (4–6) | A topic without a usable research question. (0–3) |
+| 2 | **Target, design & warranted claims** (15)<br>*Design: what your claim needs* | The question's kind (descriptive or causal) and its reach (a named population beyond the data, or the unseen cases a prediction serves) are declared, with prediction named as an objective when it is one; the target quantity is exact; the board states what supports each crossing (a sampling argument for a population, an assignment or identification argument with its assumptions for a cause, a held-out test against a baseline for prediction) and what the evidence cannot yet support, including a causal target that remains unidentified. (14–15) | Design and target are clear; one warrant or assumption is underexplained. (11–13) | The link between target, design, and reach is ambiguous, or the kind is mislabeled (for example, a causal question silently relabeled descriptive). (6–10) | No defensible account of what the design can establish, or a design presented as able to answer a question it cannot. (0–5) |
+| 3 | **Data, provenance & measurement** (12)<br>*Data and measurement* | Source and route can be identified (archive, URL or DOI, retrieval date, or collection protocol); observations and independent units are distinguished, with any grouping named; the time window is given; each key concept is tied to its measure with the main validity concern; missing data and their handling are reported; the permission or IRB determination is stated. (11–12) | The evidence is identifiable; one consequential detail is thin. (9–10) | Important provenance or measurement information is missing. (5–8) | The evidence cannot be identified, or a material permission problem is unresolved. (0–4) |
+| 4 | **Analysis, checks & verification** (15)<br>*Checks and verification · verification status line* | The analysis fits the design; what was declared in advance is kept apart from later changes, and each change is explained; the uncertainty method fits the data, computed at the level of the independent unit with any dependence named; at least one consequential robustness, sensitivity, or diagnostic check is reported with what it changed; the verification status is accurate and honestly labeled (an external cold run, or "solo proxy; external cold run pending"). (14–15) | Analysis and uncertainty are appropriate; the check or the verification account is thin. (11–13) | A weak link between method and design, an uninformative check, or a verification claim the record does not support. (6–10) | A material analytical error, or a displayed result with no trace or that fails to reproduce. (0–5) |
+| 5 | **Results & figure honesty** (15)<br>*Main result* | The main evidence answers the question and is easy to inspect; key estimates and comparisons are labeled directly, with units and the n; the uncertainty the design warrants is shown (an interval with its type and level, or a precise caveat saying why none is warranted); scales are honest (bars start at zero, other plots carry clearly labeled scales); the caption names the notebook cell or output behind the figure. (14–15) | The result is understandable and honest; one labeling or caption omission. (11–13) | The reader has to reconstruct a key comparison, a denominator, or the uncertainty. (6–10) | The visual encoding distorts the result (a truncated bar axis turning a small gap into a cliff), or no inspectable result is presented. (0–5) |
+| 6 | **Interpretation, uncertainty & limitations** (15)<br>*Headline · What this means, and where it stops* | Headline and conclusion claim no more than the evidence: causal wording only with a defended identification argument, population wording only with a reach argument; the qualifier that blocks the likely wrong inference sits in the same eye-span as the claim; the consequential limitation and a feasible next step are explicit (uncertainty, limitation, next step); the preliminary status is stated. (14–15) | The interpretation is sound; the qualifier's placement or the next step is underdeveloped. (11–13) | Generic limitations ("results may vary"), uncertainty off the read path, or wording that drifts past the evidence. (6–10) | The central claim exceeds its warrant, or the result is presented as settled certainty. (0–5) |
+| 7 | **Sources, AI disclosure & credit** (8)<br>*Sources, AI use, and credits* | Citations and references correspond and survive checking, and each reference can be found (author, year, title, venue, DOI or URL); the AI disclosure is on the poster itself and names each tool, its purpose, what you changed or kept from its output, and how you checked it (or "No AI used", when true); help, data providers, and funding are credited. (8) | Complete, with one reference or one disclosure line ambiguous. (6–7) | References or disclosure incomplete enough to impede checking. (3–5) | A fabricated or materially misattributed source, or a confirmed AI contribution missing from the disclosure. (0–2) |
+| 8 | **Visual communication & accessibility** (10)<br>*The whole board* | A clear reading order: the finding is found in seconds, and the question, result, and boundary in a ninety-second read; built on the course template at 48 × 36 in, with the guide's minimum type sizes; strong contrast; every distinction carried in two channels (a label or pattern, never colour alone); each figure carries alt text in the file; no template guidance or EXAMPLE material left. (9–10) | Readable and navigable, with minor craft lapses or one colour-only distinction. (7–8) | Dense, small, or poorly ordered content that needs the presenter; template text left on the board. (4–6) | The main message is illegible at print size, or meaning is carried by colour alone throughout. (0–3) |
 
 **Hard caps (a single failure caps the criterion at Beginning, regardless of the rest):**
 
-- A fabricated or unretrievable source caps *Sources, AI disclosure & integrity* at Beginning.
-- An untraceable number on the board (no notebook cell behind it) caps *Analysis, verification & reproducibility* at Beginning.
-- A non-reproducing result: a number or bound on the board that does not rerun from the submitted package caps *Analysis, verification & reproducibility* at Beginning.
-- An author rerun labeled as independent reproduction, or a solo proxy without its label caps *Analysis, verification & reproducibility* at Beginning.
-- A headline or central claim that outruns the compass position (an association narrated as a cause, a sample described as a population) caps *Claim boundary, uncertainty & limitations* at Beginning.
-- AI use the ledger records that the board does not disclose caps *Sources, AI disclosure & integrity* at Beginning.
+- A fabricated source, a source that cannot be identified after reasonable checking, or a materially false attribution to a source: caps *Sources, AI disclosure & credit* at Beginning.
+- A displayed result your project computed, with no reproducible trace to a notebook cell or output: caps *Analysis, checks & verification* at Beginning.
+- A displayed result or bound that materially fails to reproduce from the submitted package (documented rounding is not a failure): caps *Analysis, checks & verification* at Beginning.
+- An author rerun presented as independent reproduction, or a solo proxy without its label: caps *Analysis, checks & verification* at Beginning.
+- A central claim that materially exceeds its identification or reach warrant: caps *Interpretation, uncertainty & limitations* at Beginning.
+- A confirmed AI contribution missing from the on-poster disclosure: caps *Sources, AI disclosure & credit* at Beginning.
+
+Apply each cap once, to its named criterion: the score falls to the top of the Beginning band, or stays at the lower score already earned. A temporary link failure is not a fabricated source, and missing ledger rows do not by themselves prove undisclosed AI use. Record the evidence behind any cap in the feedback.
 
 <!-- poster-rubric:end -->
 
@@ -493,12 +507,13 @@ by 11:59 PM on November 8.
   emergencies handled individually per Purdue policy). Because the artifact is
   terminal, a late poster also risks the print timeline for November 17, so the
   deadline is real for logistics and not only for grading.
-- Any number on the poster with no cell behind it, or any headline number or bound
-  that does not reproduce from your submitted package: *Verification &
-  traceability* scores Beginning regardless of the rest.
-- Any cited source that does not exist or does not say what you claim: *Evidence
-  integrity & provenance* scores Beginning regardless of the rest, which is the
-  course's evidence-integrity rule with teeth.
+- The poster-quality hard caps listed under the rubric apply, each once, to its
+  named criterion. A computed number on the poster with no cell behind it, or a
+  number or bound that does not reproduce from your submitted package, caps
+  *Analysis, checks & verification* at Beginning. A cited source that does not
+  exist, or that materially fails to say what you claim, caps *Sources, AI
+  disclosure & credit* at Beginning, which is the course's evidence-integrity rule
+  with teeth.
 - Missing AI Research Ledger entry: that member's 18-point **Individual craft,
   ledger & closeout** row scores 0 and their submission is returned for
   completion before grading; the common poster-quality score is unchanged.
