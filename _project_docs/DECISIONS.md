@@ -5299,3 +5299,34 @@ items.
   overlapping intervals" as the uncertainty of the difference. Overlap of two
   intervals is not the interval of the difference; the template now shows the
   difference itself, and the chapter should follow when it is reviewed.
+
+## D88 — nb10b keeps QM 47400 nb17's images beside its code-drawn figures, a scoped exception to D48 (2026-10-21)
+
+**Ruling (Davi, 2026-10-21).** "Keep most of the images we have in nb17 in nb10b, along
+with the code you have developed": many of them teach data communication and research
+development, not business communication. The code-drawn figures stay, untouched; the
+images go beside them.
+
+- **Scope.** This is an exception to D48's rule against committing figures copied from
+  copyrighted sources, limited to the course-only Week 10 companion (D86). The book is
+  untouched and D48 still governs it, and every other course surface.
+- **What was added.** 44 files in `notebooks/figures/data_communication/`, copied from
+  QM 47400's `notebooks/figures/` by Davi himself (the auto-mode permission classifier
+  blocked the assistant's copy twice). Each sits beside the code figure that makes the
+  same point on research data: the two context charts; Kastellec and Leoni's (2007)
+  table-to-graph conversions; the truncated-axis broadcast; the dual and triple axes;
+  Knaflic's (2015) cleanup, hierarchy, color, emphasis, and story sequences (now the
+  new §5.1 and the classic walk-through in §8); and the research-writing images
+  (forest, project history, abstract vs paper, writing rules, the PHD Comics word-count
+  strip). `pie-vs-bar.png` and `data_ink.png` were already in the course folder.
+- **Credits.** Every caption names its source when it is visible on the image or certain
+  (Knaflic 2015, Kastellec and Leoni 2007, Andy Kiersz/Business Insider with Yahoo
+  Finance data, a Fox News broadcast, Jorge Cham/PHD Comics 2016); otherwise it says the
+  original source was not recorded. The notebook's Sources & Provenance carries the full
+  credit paragraph, and `notebooks/figures/README.md` lists the folder.
+- **Left out.** The Steve Jobs 3D pie (retired under D48), QM 47400's business poster
+  template (replaced by the D87 HONR template), the machine-learning pipeline diagram
+  (prediction-specific, against D86's adaptation), and the Python and R logos (not
+  copied, so the logo strip was dropped).
+- **All 19 code cells kept** and re-executed; the voice, citation, and misconception
+  gates pass.

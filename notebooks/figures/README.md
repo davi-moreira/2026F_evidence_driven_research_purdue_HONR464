@@ -60,3 +60,19 @@ published figures and cite them.
 Notebook numbers in this table refer to the v1 build (git tag
 `v1-compass-build`); the v2 course generates its plots in-code. The book's own
 diagrams live in `book/images/` and are generated, never copied.
+
+## `data_communication/`: nb10b's images from QM 47400 nb17 (D88, 2026-10-21)
+
+A scoped exception to the D48 rule above, ruled by Davi for the course-only Week 10
+companion `nb10b_data_communication_poster` only (the book is untouched). The 44 files
+were copied from QM 47400's `notebooks/figures/` and each one sits beside a figure
+drawn in code from course data. Credits, as printed under each image in the notebook:
+
+| Files | Source |
+|---|---|
+| `limpeza-1`…`10`, `hierarquia-1`…`3`, `h-cores`, `cores`, `enfase`, `enfase-2`, `enfase-3`, `final-1`…`5`, `hist-1`…`9` (`.PNG`) | Knaflic (2015), *Storytelling with Data*, as used in Professor Moreira's course slides |
+| `table_vs_plot.png`, `table_vs_plot_02.png` | Kastellec & Leoni (2007), *Perspectives on Politics* 5(4) |
+| `contexto-add.png` | Chart by Andy Kiersz, Business Insider; data from Yahoo Finance |
+| `escala-fail.PNG` | Screenshot of a Fox News broadcast |
+| `thesis_word_count_02.gif` | Jorge Cham, PHD Comics (2016) |
+| `contexto-obs.png`, `eixo-duplo.png`, `eixo-triplo.png`, `floresta.jpg`, `project-history.jpg`, `paper-abstract.jpg`, `how-to-write-good-02.png` | Original source not recorded in the course materials |
