@@ -5203,6 +5203,17 @@ not in the book**.
   ±9 bushels per acre", but the chapter's own seeded code prints ±3.7 and ±3.1 per
   group (difference interval 1.0 to 10.6). Left for Davi's chapter review; the
   companion does not use that example.
+- **Aligned to the final D87 template (same day).** Sections 11 to 13, Exercise 2 and
+  the wrap-up now use the template's own structure: a headline banner and seven areas
+  (The question and what it adds · Design: what your claim needs · Data and
+  measurement · Main result · Checks and verification · What it means, and where it
+  stops · Sources, AI use, and credits), its type minimums (title 72, headline 44,
+  headings 32, substantive content 24, captions/references/footer 18), and its
+  one-line-per-tool AI disclosure. Following the template's caption rule, the worked
+  example now reports the interval of the **difference** (0.51, 95% interval 0.05 to
+  0.98) instead of noting that the two group intervals overlap, and its reach is a
+  population beyond the data (adults in Brazil) whose warrant the teaching resample
+  cannot carry, per the population-inference standard.
 
 ## D87 — The Expo poster template and the poster rubric exist; M10 collects the poster draft file (2026-10-21)
 
