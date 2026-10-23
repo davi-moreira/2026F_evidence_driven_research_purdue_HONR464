@@ -343,9 +343,17 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         body.append("## What this course adds\n")
         # D89: the note's sections are the poster template's, authored once in
         # scripts/poster_sections.py and dropped in wherever the token stands.
-        body.append(add["additions_markdown"].strip()
-                    .replace(poster_sections.TOKEN, poster_sections.note_sections_markdown())
-                    + "\n")
+        # A missing, doubled, or misspelled token must fail, not ship a PDF
+        # without the sections (Codex review, 2026-10-23).
+        md = add["additions_markdown"].strip()
+        n_tok = md.count(poster_sections.TOKEN)
+        if n_tok > 1 or (key in poster_sections.TOKEN_MILESTONES and n_tok != 1):
+            sys.exit(f"✗ {key}: additions_markdown must carry {poster_sections.TOKEN} "
+                     f"exactly once (found {n_tok})")
+        md = md.replace(poster_sections.TOKEN, poster_sections.note_sections_markdown())
+        if re.search(r"\{\{[^{}]*\}\}", md):
+            sys.exit(f"✗ {key}: unresolved template token in additions_markdown")
+        body.append(md + "\n")
 
     for i, page in enumerate(info["pages"]):
         ptitle, pbody = book_page(page)

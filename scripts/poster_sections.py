@@ -25,6 +25,8 @@ from __future__ import annotations
 NOTE_BEGIN = "<!-- note-sections:begin -->"
 NOTE_END = "<!-- note-sections:end -->"
 TOKEN = "{{NOTE_SECTIONS}}"
+#: Milestones whose PDF additions must carry TOKEN exactly once.
+TOKEN_MILESTONES = frozenset({"M09"})
 
 #: In reading order: column 1, then 2, 3 and 4 of the template.
 #: `heading` is the section bar's text (the template prints it in capitals);
@@ -57,8 +59,10 @@ SECTIONS: list[dict] = [
               "with any later change and its reason; how you computed the uncertainty, at the "
               "level of your independent unit, with any dependence named; software and seed.")},
     {"key": "result", "column": 3, "heading": "Main result",
-     "note": ("The result in numbers and units, with its interval in the same sentence, and "
-              "the figure you plan to print, captioned with the notebook cell that drew it.")},
+     "note": ("The result in numbers and units, with its uncertainty in the same sentence: the "
+              "interval or range your design supports or, where it genuinely carries none, the "
+              "precise reason why. Then the figure you plan to print, captioned with the "
+              "notebook cell that drew it.")},
     {"key": "checks", "column": 3, "heading": "Checks and verification",
      "note": ("The checks from your robustness audit and what each one changed, and what has "
               "been reproduced so far, by whom and when.")},

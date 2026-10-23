@@ -55,7 +55,7 @@ your ledger, and submit by Sunday night.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file, `lastname_m10.pdf` | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
+| 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file, `lastname_m10.pdf` | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo** (closing with its **New since M9** list), your **content map**, and your **current claim-to-evidence table**: every row marked with the milestone that added it (M09 for the rows your note brought), and every row added since naming its evidence, its verification, and its boundary. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m10_poster.pptx`** *and* **`lastname_m10_poster.pdf`** | **Your poster draft file**, the graded core: your Expo poster built on the **course poster template** (`honr464_poster_template.pptx`, 34 × 22.5 in), every panel filled and the preliminary draft tag visible. Hand in both the editable file and its one-page PDF export at full size; the poster is always its own file, never a section of another PDF. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of `lastname_m10.pdf` | Your **spoken spine** (the 30-second and 3-minute versions, written out and timed), your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
@@ -189,7 +189,9 @@ to three lines on the board and one spoken minute; the comparison you built
 becomes the only figure carrying numbers; the caveat moves out of the
 *Limitations* section and into the sentence directly under the headline. Close
 the memo with a **New since M9** list: each element on the board that the note
-did not carry, with the table row that traces it. "None" is a fine answer.
+did not carry, with the table row that traces it. "None" is a fine answer. Hand
+in your current claim-to-evidence table in the same file, so every row the list
+points to can be opened.
 
 The **content map** says where each research element will live on the artifact,
 decided before you build it: the claim, the evidence, the boundary, the
@@ -384,6 +386,7 @@ pre-submission checklist.
 | **Poster draft file** | Built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in); every panel filled; no guidance, bracket, or EXAMPLE text left; editable `.pptx` and its one-page full-size `.pdf` both submitted |
 | **Adaptation rule** | Each panel starts from the matching section of the M9 note; anything new since M9 has its own row in the claim-to-evidence table; the claim is no larger than its design warrants |
 | **Traceability** | Every load-bearing number and figure walks back through the claim-to-evidence table to the cell that produced it |
+| **Claim-to-evidence table** | The current table, in the contract file; every row marked with the milestone that added it; each row added since M9 names its evidence, its verification, and its boundary |
 | **Figure honesty & accessibility** | Values labeled directly; uncertainty shown as the design licenses; axes encode magnitude honestly; meaning never carried by color alone |
 | **Mode test** | Poster read at gallery distance; spine timed aloud on an outsider; the gallery-walk audit run across all five lenses and revised once in ranked order |
 | **Poster Critic** | Run; every untraceable-number flag and claim-boundary flag marked accepted, partly accepted, or rejected, each by a check you can show |
@@ -414,7 +417,7 @@ and the rehearsal records defensible responses plus the unresolved work.
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
 | **Compass & pathway alignment** (18) | The artifact's headline carries a kind and a reach no larger than the design warrants, in the venue's own form; no verb grew under compression; the spoken spine states the boundary before the evidence beats; complete and unmistakably about your project (16–18) | Inside the boundary; one verb slightly strong on the board or in the spine (13–15) | Boundary present but the compressed wording drifts toward a claim the design does not license (7–12) | Overclaim on a public surface: an association displayed as a cause, or a sample displayed as a population (0–6) |
-| **Evidence integrity & provenance** (18) | Every number, figure, and citation on the artifact has a row in the claim-to-evidence table, whether it came from the M9 note or arrived since, and walks back to its cell or its source (16–18) | Traceable; one trace thin or one citation under-linked (13–15) | An element on the artifact with no row in the table, or a number whose trace is asserted rather than shown (7–12) | A fabricated or unretrievable source, or an untraceable number displayed to an audience (0–6) |
+| **Evidence integrity & provenance** (18) | Every number, figure, and citation on the artifact has a row in the claim-to-evidence table, whether it came from the M9 note or arrived since, and walks back to its cell or its source (16–18) | Traceable; one trace thin or one citation under-linked (13–15) | A row that exists but traces thinly (its cell, source, or check not named), or a number whose trace is asserted rather than shown (7–12) | A fabricated or unretrievable source, an untraceable number displayed to an audience, or a result, figure, or citation with no row in the table (0–6) |
 | **Verification & robustness** (23) | Venue contract, transformation memo, and content map all present and specific; the mode test was really run and recorded; the gallery-walk audit ranks its hits and shows the single revision pass; the Poster Critic was run and every flag adjudicated by a named check (a valid flag accepted counts as fully as a false one refuted); every judgment defended in your own reasoning, not a tool's (21–23) | All pieces present; one flag acted on without a named check, or the mode test recorded loosely (17–20) | A content map of intentions rather than locations, an audit with no ranking, or Poster Critic output pasted in unadjudicated (10–16) | No mode test, no audit, or an AI flag adopted or ignored with no check either way (0–9) |
 | **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as the claim on the artifact itself; the ULN statement is precise rather than hedging; the five questions are genuinely hard and honestly marked (16–18) | Present; one beat stated loosely, or one question softened (13–15) | Uncertainty relegated to a corner the eye never reaches, or a question bank of easy questions (7–12) | Limitations dropped in the adaptation, or the finding presented as settled certainty (0–6) |
 | **Craft, ledger & communication** (13) | On-format (the poster built on the course template, with the editable file and its PDF both submitted), on-time, readable at its intended distance and hearable at its intended length; accessibility handled; gallery feedback incorporated; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a poster not built on the template, or no editable poster file), or gallery feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
@@ -448,6 +451,10 @@ request is reissued for a later milestone.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
+**One failure, one deduction.** When a hard cap and a penalty below name the
+same failure, it is applied once, to the row it names; a lower score you
+earned on that row stands.
+
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
 
@@ -460,9 +467,11 @@ days of feedback recovers up to half the lost points.
   the course's evidence-integrity rule with teeth.
 - An untraceable number displayed on the artifact: *Evidence integrity &
   provenance* scores Beginning regardless of the rest.
-- A claim on the artifact larger than its design warrants (a causal verb with no
-  defended identification argument, or a population with no reach argument):
-  *Compass & pathway alignment* scores Beginning.
+- A central claim on the artifact that materially exceeds its identification or
+  reach warrant (an association displayed as a cause with no defended
+  identification argument, or a sample displayed as a population with no reach
+  argument): *Compass & pathway alignment* scores Beginning. A verb only slightly
+  strong is scored inside the row, at Proficient, and is not capped.
 - Poster Critic not run, or its flags carried into the artifact with no check
   either confirming or refuting them: *Verification & robustness* scores
   Beginning.

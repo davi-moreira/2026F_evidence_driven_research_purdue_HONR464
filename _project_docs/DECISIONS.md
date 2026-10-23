@@ -5397,9 +5397,9 @@ Oct 25 deadline) and to future editions.
   cell or source, then goes on the board; a changed number updates its row, with no
   corrected note version. M10's transformation memo closes with a **New since M9**
   list. M10's hard cap becomes "a result, figure, or citation with no row in your
-  claim-to-evidence table" (Evidence integrity), and the penalty becomes "a claim
-  larger than its design warrants" (Compass), matching the D87 poster rubric's own
-  caps. The M10 rubric rows keep their names and weights; the DoD keeps its
+  claim-to-evidence table" (Evidence integrity), and the Compass penalty becomes "a
+  central claim that materially exceeds its identification or reach warrant", the
+  D87 poster rubric's own threshold (as amended after review, below). The M10 rubric rows keep their names and weights; the DoD keeps its
   "Adaptation rule" row with the new specification. The M13 rubric lead and the
   template guide page now check the poster against the claim-to-evidence table, not
   the M9 note.
@@ -5420,3 +5420,47 @@ Oct 25 deadline) and to future editions.
   `_announcements/2026-10-23_m9_note_is_your_poster_draft.md` **today**. It also
   withdraws the "nothing on the poster may be new" sentence of the 2026-10-21
   announcement.
+
+**Amended the same day after the independent review (Codex, gpt-6-astra, max
+effort, read-only; `~/.claude/codex-reviews/honr464/2026-10-23_d89_verdict.md`).**
+All six findings were confirmed and fixed, and the table-snapshot part of Codex's
+counter-proposal was adopted.
+
+1. **Length and deadline contradictions.** M9's Purpose still said "one to two pages";
+   it now says two to four. The Studio 9 and Studio 10 schedule rows ("submits
+   tonight", "due at Friday's studio") and the M9 workbench checklist ("submitted the
+   same day") now say Sunday, 11:59 PM, as D55 rules.
+2. **One failure, one band.** A claim (M9) or a result, figure, or citation (M10) with
+   no table row now sits in the rubric's Beginning band, matching its hard cap or
+   penalty; Developing is reserved for a row that exists but traces thinly. Both
+   briefs state that a cap and a penalty naming the same failure apply once, to the
+   row they name. M10's Compass penalty now uses the D87 threshold, "a central claim
+   that materially exceeds its identification or reach warrant"; a verb only slightly
+   strong is scored at Proficient and not capped.
+3. **The table is collected (the snapshot).** M9 rows are marked M09. M10 collects the
+   current claim-to-evidence table in the contract file (submission table, Component
+   2, a new Definition of Done row, the M10 PDF additions), every row marked with the
+   milestone that added it and each row added since M9 naming its evidence, check, and
+   boundary. M13 freezes the current table in the package and lists the rows added
+   since the M12 peer review, each with its check (package row and a new Definition of
+   Done row). The ms09 check now reads each row's milestone, evidence and check, warns
+   on a row that names none, and says it is an inventory check, not a verification.
+4. **Interval or a justified reason.** The Main result section, M9's results bullet,
+   its Definition of Done and its Uncertainty row now ask for the interval or range the
+   design supports or, where it genuinely carries none, the precise reason, matching
+   the D87 poster rubric and Davi's 2026-09-16 guidance not to manufacture an interval.
+5. **The M9 note is the history, not the ceiling.** The ms09 headline prompt now
+   compares the poster line with its current table row and warrant, and its checklist
+   says a line stronger than the note is fine when a newer row and check earned it.
+6. **Generator guards.** `build_handout_pdfs.py` stops if a milestone in
+   `poster_sections.TOKEN_MILESTONES` (M09) lacks `{{NOTE_SECTIONS}}` exactly once, or
+   if any `{{…}}` token survives; `build_poster_kit.py` requires exactly one begin
+   marker followed by one end marker. Fixtures for missing, doubled, misspelled and
+   reversed cases fail with a message.
+
+Declined from the counter-proposal for this term: stable row IDs (the milestone mark
+carries the snapshot) and a separate fill-in scaffold (the workbench's section table
+and the brief's per-section guidance serve). Codex's note stands that two to four
+pages is defensible as a synthesis of existing work, not because of the notice
+period.
+

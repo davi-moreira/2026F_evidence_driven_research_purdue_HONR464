@@ -259,8 +259,10 @@ def rubric_markdown() -> str:
 
 def _inject(path: Path, begin: str, end: str, block: str, check: bool) -> bool:
     text = path.read_text(encoding="utf-8")
-    if begin not in text or end not in text:
-        sys.exit(f"{path.name}: the {begin} / {end} markers are missing")
+    nb, ne = text.count(begin), text.count(end)
+    if nb != 1 or ne != 1 or text.index(begin) > text.index(end):
+        sys.exit(f"{path.name}: need exactly one {begin} followed by one {end} "
+                 f"(found {nb} begin, {ne} end)")
     head, rest = text.split(begin, 1)
     _, tail = rest.split(end, 1)
     new = head + block + tail

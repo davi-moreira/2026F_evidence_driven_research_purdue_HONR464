@@ -99,8 +99,9 @@ milestone and your Research Project Dossier.
 This is the milestone where your project stops living in a notebook and becomes
 a **claim in writing**. A **research note** is a short, self-contained account of
 a study: what you asked, what you did, what you found, and how far the finding
-reaches. Yours runs one to two pages, and it is written for a stranger who has
-only the page in front of them.
+reaches. Yours runs two to four pages, not counting the references and the
+claim-to-evidence table, under the sections of the course poster template, and it
+is written for a stranger who has only the page in front of them.
 
 Writing is where research leaves your head and can first be misread. Until this
 week your results lived in a notebook you could explain in person. On the page a
@@ -206,7 +207,7 @@ template, in its order, each under its own heading:
 | 4 | **Design: what your claim needs** | Kind, reach, target and warrant, one line each, plus the identification status. A causal question your design cannot identify is a causal target, currently unidentified, never relabeled descriptive. |
 | 5 | **Data and measurement** | Source and route with retrieval dates; observations kept apart from independent units; the time window; each concept and the measure that stands for it; missing data; permissions. |
 | 6 | **Methods** | The analysis you declared before seeing results and why it fits your design, with any later change and its reason; how you computed the uncertainty, at the level of your independent unit, with any dependence named; software and seed. |
-| 7 | **Main result** | The result in numbers and units, with its interval in the same sentence, and the figure you plan to print, captioned with the notebook cell that drew it. |
+| 7 | **Main result** | The result in numbers and units, with its uncertainty in the same sentence: the interval or range your design supports or, where it genuinely carries none, the precise reason why. Then the figure you plan to print, captioned with the notebook cell that drew it. |
 | 8 | **Checks and verification** | The checks from your robustness audit and what each one changed, and what has been reproduced so far, by whom and when. |
 | 9 | **Conclusions** | Your bounded headline claim, carrying its kind and its reach, then what this evidence supports and what it does not yet support. |
 | 10 | **Limitations** | The two or three limitations that genuinely threaten the claim, led by the one your robustness audit could not fix, each with the next step that would settle it. |
@@ -235,7 +236,9 @@ Inside the sections live the five moves the book asks of a research note:
   same eye-span** means the interval or the range sits beside the number, in the
   same sentence or on the same line. Example: "about 6 points lower (95%
   interval: 1 to 11)." A bound a reader has to hunt for is a bound doing hidden
-  work.
+  work. Where your design can carry an interval or a range, it belongs there;
+  where it genuinely carries none (a count you observed in full, say), state the
+  precise reason in that same spot instead of manufacturing one.
 - **The bounded headline claim** (your headline sentence, and *Conclusions*).
   One sentence carrying its kind and its reach, never a single flattering
   number. Example: "In the 30 precincts my sample
@@ -279,9 +282,11 @@ then write only the sentences its rows license.
 Spot-check one row at random before you submit. Reopen the traced output and read
 the number again. A table you have not spot-checked is a list of hopes.
 
-Keep the table after you submit it. It travels with you to the printed poster:
-anything new that reaches the board at M10, M11, or M13 (a result, a figure, a
-check, a source) gets its own row first, marked with the milestone that added it.
+Mark every row with the milestone that added it: **M09** for every row this
+week. Keep the table after you submit it. It travels with you to the printed
+poster, and you hand in its current version at M10 and M13: anything new that
+reaches the board at M10, M11, or M13 (a result, a figure, a check, a source)
+gets its own row first, marked with the milestone that added it.
 
 ### 3. The AI disclosure statement
 
@@ -398,7 +403,7 @@ pre-submission checklist.
 | **Version line** | Book Milestone 9, version 1, dated, with a reason a reader could use to reconstruct your thinking |
 | **Headline claim** | One sentence carrying its kind and its reach; every verb sized to what the design established |
 | **Kind and reach warranted separately** | Each dimension justified on its own; a causal question your design cannot identify is reported as a causal target, currently unidentified, never relabeled descriptive |
-| **Uncertainty** | Every result's interval or range in the same eye-span as the number |
+| **Uncertainty** | Every result's interval or range in the same eye-span as the number; where your design genuinely carries none, the precise reason sits there instead |
 | **Claim-to-evidence table** | Every claim a row (claim · evidence · verification · boundary); no claim in the note lacks a row |
 | **Verification column** | Each row names a real check (the cell, the clean-restart trace, the pre-listed check), never a bare "verified"; at least one row spot-checked before submission |
 | **References** | All retrievable; each says what the note claims it says |
@@ -429,9 +434,9 @@ the milestone's own product present and defensible.
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
 | **Compass & pathway alignment** (18) | The headline carries its kind and its reach in one sentence, each warranted separately; every verb in the note is sized to what the design established; a causal question the design cannot identify is reported as unidentified; complete and unmistakably about your project (16–18) | Inside the boundary; one verb slightly strong, or the reach stated loosely (13–15) | Boundary present but the prose drifts toward a claim the design does not license (7–12) | Overclaim: an observational association written as a cause, a sample written as a population, or a causal question relabeled descriptive because the data were weak (0–6) |
-| **Evidence integrity & provenance** (18) | Every claim in the note has a table row; every number walks back to the cell that produced it; every reference is retrievable and says what is claimed (16–18) | Traceable; one row thin or one reference under-linked (13–15) | A claim in the note with no row, or a reference asserted without a locatable origin (7–12) | A fabricated or unretrievable source, or a headline claim with no evidence row at all (0–6) |
+| **Evidence integrity & provenance** (18) | Every claim in the note has a table row; every number walks back to the cell that produced it; every reference is retrievable and says what is claimed (16–18) | Traceable; one row thin or one reference under-linked (13–15) | A row that exists but is thin (its evidence or its check not locatable), or a reference asserted without a locatable origin (7–12) | A fabricated or unretrievable source, or a claim in the note with no row in the table (0–6) |
 | **Verification & robustness** (23) | Every table row names a real check, and at least one was reopened and spot-checked; the disclosure is drafted from the ledger and names tool, task, verification, and what went unverified; the version line carries a usable reason; every judgment defended in your own reasoning, not a tool's (21–23) | Checks mostly named; one row vague, or the version reason decorative (17–20) | Generic "I checked it" entries, or a disclosure written from memory (10–16) | A number with no path back to a cell, or a claimed verification that never happened (0–9) |
-| **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (16–18) | Both present; one stated loosely (13–15) | A point estimate with no interval somewhere, or limitations gestured at generically (7–12) | No uncertainty stated, or the finding written as settled certainty (0–6) |
+| **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (16–18) | Both present; one stated loosely (13–15) | A point estimate with neither an interval nor the reason none is warranted, or limitations gestured at generically (7–12) | No uncertainty stated, or the finding written as settled certainty (0–6) |
 | **Craft, ledger & communication** (13) | On-format (every section of the poster template present, in its order), on-time, two to four pages a stranger can follow without you; red-team feedback incorporated; complete AI Research Ledger; dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a missing poster section), or studio feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
@@ -461,6 +466,10 @@ request is reissued for a later milestone.
   notebook it traces to — caps *Verification & robustness* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
+
+**One failure, one deduction.** When a hard cap and a penalty below name the
+same failure, it is applied once, to the row it names; a lower score you
+earned on that row stands.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
