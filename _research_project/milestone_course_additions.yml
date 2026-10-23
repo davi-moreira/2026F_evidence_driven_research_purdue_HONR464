@@ -981,15 +981,50 @@ milestones:
         A PDF cannot execute code, so the live notebook has to be shared alongside it; the link is pasted
         into the PDF but the runnable object itself is separate.
   M09:
-    schedule_mark: false
-    classification: pure
+    schedule_mark: true
+    classification: additions
     reason: The Book Milestone page asks only for the bounded claim, the claim-to-evidence table, uncertainty
       and limitations, and the AI disclosure, all written alone. The course additionally requires an in-class
       peer red-team of the note (reading and being read by another researcher), a trace-or-cut drill on
       every claim, a random-row spot-check, and same-day submission at the Friday studio, with "red-team
       feedback incorporated" graded; a student working from the book page alone would not do any of that.
-    schedule_note: null
+      Since D89 (2026-10-23) the note is also the Expo poster's first full draft, written under the course
+      poster template's sections, which ties it to the printed poster on the narrowed rule's own list and
+      which the book page never asks for.
+    schedule_note: the note is written under the poster template's sections
+    additions_markdown: |
+      ### Your note is your poster's first full draft
+
+      The book page below asks for a stand-alone research note. This course fixes
+      its shape, because your next artifact is a printed poster at the
+      undergraduate research expo: you write the note under the sections of the
+      course poster template (`honr464_poster_template.pptx`, 34 × 22.5 inches),
+      in the template's order. When the poster draft is due, every panel already
+      has its text, written in full sentences and traced.
+
+      {{NOTE_SECTIONS}}
+
+      Write every section in full sentences, in two to four pages, not counting
+      the references and the claim-to-evidence table; *Acknowledgments* may be
+      one line. The book's practice lives inside the sections: the claim with its
+      boundary in your headline sentence and *Conclusions*, uncertainty and
+      limitations in *Main result* and *Limitations*, and the disclosure from your
+      ledger in *AI use disclosure*. The claim-to-evidence table stays its own
+      section of your file.
+
+      ### Your claim-to-evidence table travels to the poster
+
+      Keep the table after you submit it. The poster may grow beyond the note: a
+      result, a figure, a check, or a source that improves your work later is
+      welcome on the board. It enters the way everything in the note did, as a
+      new row in the table, traced to the notebook cell that computed it or the
+      exact place in its source, before it goes on the poster.
     instructor_notes:
+    - D89 (2026-10-23, Davi's ruling) moved M09 from pure to additions and gave it the schedule mark,
+      because the note became the Expo poster's first full draft, written under the thirteen sections
+      of the course poster template. The section list is generated from scripts/poster_sections.py
+      (the {{NOTE_SECTIONS}} token above), the same list that draws the template's section bars. The
+      length rose from one to two pages to two to four.
     - 'Rubric difference in KIND, not only scale: the course brief adds four hard caps the book rubric
       has no analogue for (fabricated or unretrievable source, untraceable number, non-reproducing headline
       number, missing AI Research Ledger scored 0 and returned), plus a late penalty and the 7-day revision
@@ -1050,7 +1085,8 @@ milestones:
     reason: The book page leaves the venue open and makes the poster, the spoken spine, and the gallery-walk
       audit conditional, while the course fixes the venue as the research expo poster plus a live oral
       defense and requires all of those pieces. The course also adds a required AI reviewer role (Poster
-      Critic) with adjudication, a strict "nothing new beyond the M9 note" traceability rule, five rehearsal
+      Critic) with adjudication, a strict "nothing new beyond the M9 note" traceability rule (retired
+      by D89, 2026-10-23; anything new now enters through the claim-to-evidence table), five rehearsal
       questions instead of three, and an in-class artifact criticism gallery in which you critique other
       people's artifacts. Since D87 (2026-10-21) it also collects the Expo poster itself, as a draft file
       built on the course poster template, which is on the narrowed rule's own list (the printed poster)
@@ -1067,14 +1103,17 @@ milestones:
       \ is still rough, and keep its\n**preliminary draft** tag visible: this is a draft, and the printed\
       \ poster\nlocks later, at M13. Replace every guidance sentence, every bracket, and every\nitem marked\
       \ EXAMPLE with your own work. Export the poster from your slide editor as its\nown one-page,\
-      \ full-size PDF.\n\nNothing on the poster may be new. Every result, figure, and citation on it also\n\
-      appears in your bounded research note: a result you computed traces to the\nnotebook cell that\
-      \ produced it, and a statistic you quote traces to its source.\nIf a check changes a number, keep\
-      \ the submitted note, write a dated corrected\nversion, and only then update the poster.\n\n### The rubric that waits for the final poster\n\nThe template comes with the course\
+      \ full-size PDF.\n\nYour poster starts from your research note, section by section: each\nsection of the note drafts the panel with the same name. It may also grow. A\nresult, figure, check, or source you add after the note is welcome, and it\nenters the way everything in the note did: first as a new row in your\nclaim-to-evidence table, traced to the notebook cell that computed it or the\nexact place in its source, then on the board. If a check changes a number,\nupdate its row, record what changed and why, and update the poster.\n\n### The rubric that waits for the final poster\n\nThe template comes with the course\
       \ **poster rubric**,\n`Evidence_Driven_Research_Poster_Rubric.pdf`. It grades your final, locked\n\
       poster, not this draft. Read it now anyway: it names what each panel of the\ntemplate will be asked\
       \ to carry, and this draft is where you start building\ntoward it.\n"
     instructor_notes:
+    - D89 (2026-10-23, Davi's ruling) retired the "nothing new on the poster" rule. The poster starts
+      from the M9 note section by section and may grow beyond it; anything added enters first as a dated
+      row in the claim-to-evidence table, traced to its cell or source. No corrected version of the
+      note is needed. The brief's caps now read "a result, figure, or citation with no row in the
+      claim-to-evidence table" (evidence) and "a claim larger than its design warrants" (alignment).
+      Notes below that describe the old rule are kept as the record.
     - D87 (2026-10-21, Davi's ruling) moved M10 from pure to additions and gave it the schedule mark,
       because the Expo poster file is on the narrowed rule's own list. The poster draft is now its own
       file pair (lastname_m10_poster.pptx + .pdf) on the course template; the contract and the defense

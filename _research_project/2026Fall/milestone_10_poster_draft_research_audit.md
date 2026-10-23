@@ -60,15 +60,16 @@ your ledger, and submit by Sunday night.
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of `lastname_m10.pdf` | Your **spoken spine** (the 30-second and 3-minute versions, written out and timed), your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
-Nothing on the artifact may be new. Every result, figure, and citation that
-appears on it also appears in your M9 note, and each one walks back through your
-claim-to-evidence table: a result you computed to the cell that produced it, a
-statistic you quote to the exact place in its source, with any display rounding
-noted. If a check this week changes a number, do not quietly fix the poster: keep
-the submitted M9 note, write a dated corrected version with its evidence table
-updated, then update the poster and record what changed and why. Your name, the
-AI-use disclosure, and the version and verification lines are documentation, not
-new findings.
+Your poster starts from your M9 note, section by section: each section of the
+note drafts the panel with the same name. It may also grow. A result, figure,
+check, or citation you add after M9 is welcome, and it enters the way everything
+in the note did: first as a new row in your claim-to-evidence table, marked with
+the milestone that added it and traced to the cell that computed it or the exact
+place in its source, with any display rounding noted; then on the board. If a
+check this week changes a number the note printed, update its row, record what
+changed and why, and update the poster; no corrected version of the note is
+needed. Your name, the AI-use disclosure, and the version and verification lines
+are documentation, not findings.
 
 This milestone grades the adaptation, the traces, the critique, and the
 rehearsal. Production polish is assessed at M13, so put your hours into a board
@@ -135,14 +136,15 @@ a visitor asks. Keep the general vocabulary anyway, because the transferable
 skill is the contract, not the poster. A manuscript, a seminar, and a recorded
 talk each get exactly this treatment.
 
-One rule governs the whole build, and it is why last week came first. **The
-artifact adapts the note; it never outruns it.** Nothing appears on the artifact
-that your M9 note does not already contain, or a dated corrected version of it.
-Every number traces through your claim-to-evidence table, to a cell or to the
-exact place in a source. And the claim never grows under compression: a
-shorter sentence is not a bigger finding. When the format forces a cut, what
-leaves is detail, never the boundary. An adaptation that drops the limitations is
-not a shorter version of your work. It is a different claim.
+Two rules govern the whole build, and they are why last week came first.
+**Everything on the board is traced.** Your M9 note already drafted every panel,
+and anything you add since is welcome once it has its own row in your
+claim-to-evidence table, walking back to a cell or to the exact place in a
+source. New is welcome; untraced is not. **The claim never outgrows its
+warrant.** A sharper sentence is fine when new evidence earned it, but a shorter
+sentence is not a bigger finding. When the format forces a cut, what leaves is
+detail, never the boundary. An adaptation that drops the limitations is not a
+shorter version of your work. It is a different claim.
 
 This milestone is not the lock. Your poster is a draft here, labeled preliminary,
 and it stays revisable. The terminal deadline is **M13** (Sunday, November 8,
@@ -180,12 +182,14 @@ reviewer will test.
 
 ### 2. The transformation memo and the content map
 
-The **transformation memo** is a short account of the move from note to artifact:
-what expands, what compresses, what moves, what becomes visual, and what becomes
-spoken. Example: the note's method paragraph compresses to one line on the board
-and one spoken minute; the comparison you built becomes the only figure carrying
-numbers; the caveat moves out of the limitations section and into the sentence
-directly under the headline.
+The **transformation memo** is a short account of the move from note to artifact,
+section by section: what expands, what compresses, what moves, what becomes
+visual, and what becomes spoken. Example: the note's *Methods* section compresses
+to three lines on the board and one spoken minute; the comparison you built
+becomes the only figure carrying numbers; the caveat moves out of the
+*Limitations* section and into the sentence directly under the headline. Close
+the memo with a **New since M9** list: each element on the board that the note
+did not carry, with the table row that traces it. "None" is a fine answer.
 
 The **content map** says where each research element will live on the artifact,
 decided before you build it: the claim, the evidence, the boundary, the
@@ -374,11 +378,11 @@ pre-submission checklist.
 | Item | Specification |
 |---|---|
 | **Venue contract** | Seven fields, one line each, plus the sentence naming what your claim must lose to fit the format |
-| **Transformation memo** | What expands, compresses, moves, becomes visual, becomes spoken, in the move from the M9 note |
+| **Transformation memo** | What expands, compresses, moves, becomes visual, becomes spoken, in the move from the M9 note, section by section; closed by the **New since M9** list, each item with its table row |
 | **Content map** | Claim, evidence, boundary, uncertainty, and disclosure each mapped to a location, not an intention |
 | **The artifact** | Poster draft built to the contract, labeled preliminary, plus the 30-second and 3-minute spoken spine |
 | **Poster draft file** | Built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in); every panel filled; no guidance, bracket, or EXAMPLE text left; editable `.pptx` and its one-page full-size `.pdf` both submitted |
-| **Adaptation rule** | Nothing on the artifact is absent from the M9 note (or its dated corrected version); the claim is no larger than the note's |
+| **Adaptation rule** | Each panel starts from the matching section of the M9 note; anything new since M9 has its own row in the claim-to-evidence table; the claim is no larger than its design warrants |
 | **Traceability** | Every load-bearing number and figure walks back through the claim-to-evidence table to the cell that produced it |
 | **Figure honesty & accessibility** | Values labeled directly; uncertainty shown as the design licenses; axes encode magnitude honestly; meaning never carried by color alone |
 | **Mode test** | Poster read at gallery distance; spine timed aloud on an outsider; the gallery-walk audit run across all five lenses and revised once in ranked order |
@@ -409,8 +413,8 @@ and the rehearsal records defensible responses plus the unresolved work.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (18) | The artifact's headline carries the same kind and reach as the note's, in the venue's own form; no verb grew under compression; the spoken spine states the boundary before the evidence beats; complete and unmistakably about your project (16–18) | Inside the boundary; one verb slightly strong on the board or in the spine (13–15) | Boundary present but the compressed wording drifts toward a claim the design does not license (7–12) | Overclaim on a public surface: an association displayed as a cause, or a sample displayed as a population (0–6) |
-| **Evidence integrity & provenance** (18) | Every number, figure, and citation on the artifact appears in the M9 note and walks back through the claim-to-evidence table to its cell (16–18) | Traceable; one trace thin or one citation under-linked (13–15) | An element on the artifact that the note does not contain, or a number whose trace is asserted rather than shown (7–12) | A fabricated or unretrievable source, or an untraceable number displayed to an audience (0–6) |
+| **Compass & pathway alignment** (18) | The artifact's headline carries a kind and a reach no larger than the design warrants, in the venue's own form; no verb grew under compression; the spoken spine states the boundary before the evidence beats; complete and unmistakably about your project (16–18) | Inside the boundary; one verb slightly strong on the board or in the spine (13–15) | Boundary present but the compressed wording drifts toward a claim the design does not license (7–12) | Overclaim on a public surface: an association displayed as a cause, or a sample displayed as a population (0–6) |
+| **Evidence integrity & provenance** (18) | Every number, figure, and citation on the artifact has a row in the claim-to-evidence table, whether it came from the M9 note or arrived since, and walks back to its cell or its source (16–18) | Traceable; one trace thin or one citation under-linked (13–15) | An element on the artifact with no row in the table, or a number whose trace is asserted rather than shown (7–12) | A fabricated or unretrievable source, or an untraceable number displayed to an audience (0–6) |
 | **Verification & robustness** (23) | Venue contract, transformation memo, and content map all present and specific; the mode test was really run and recorded; the gallery-walk audit ranks its hits and shows the single revision pass; the Poster Critic was run and every flag adjudicated by a named check (a valid flag accepted counts as fully as a false one refuted); every judgment defended in your own reasoning, not a tool's (21–23) | All pieces present; one flag acted on without a named check, or the mode test recorded loosely (17–20) | A content map of intentions rather than locations, an audit with no ranking, or Poster Critic output pasted in unadjudicated (10–16) | No mode test, no audit, or an AI flag adopted or ignored with no check either way (0–9) |
 | **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as the claim on the artifact itself; the ULN statement is precise rather than hedging; the five questions are genuinely hard and honestly marked (16–18) | Present; one beat stated loosely, or one question softened (13–15) | Uncertainty relegated to a corner the eye never reaches, or a question bank of easy questions (7–12) | Limitations dropped in the adaptation, or the finding presented as settled certainty (0–6) |
 | **Craft, ledger & communication** (13) | On-format (the poster built on the course template, with the editable file and its PDF both submitted), on-time, readable at its intended distance and hearable at its intended length; accessibility handled; gallery feedback incorporated; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a poster not built on the template, or no editable poster file), or gallery feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
@@ -438,9 +442,9 @@ request is reissued for a later milestone.
   provenance* at Beginning.
 - An **untraceable number** — a figure on the artifact with no path back to your
   data — caps *Evidence integrity & provenance* at Beginning.
-- An element on the artifact that **does not appear in the M9 note** (or in a
-  dated corrected version of it) caps *Evidence integrity & provenance* at
-  Beginning.
+- A result, figure, or citation on the artifact with **no row in your
+  claim-to-evidence table** caps *Evidence integrity & provenance* at
+  Beginning. New material is welcome; untraced material is not.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
@@ -456,7 +460,8 @@ days of feedback recovers up to half the lost points.
   the course's evidence-integrity rule with teeth.
 - An untraceable number displayed on the artifact: *Evidence integrity &
   provenance* scores Beginning regardless of the rest.
-- A claim on the artifact that is larger than the same claim in your M9 note:
+- A claim on the artifact larger than its design warrants (a causal verb with no
+  defended identification argument, or a population with no reach argument):
   *Compass & pathway alignment* scores Beginning.
 - Poster Critic not run, or its flags carried into the artifact with no check
   either confirming or refuting them: *Verification & robustness* scores
@@ -470,11 +475,12 @@ days of feedback recovers up to half the lost points.
 
 ## Common Pitfalls
 
-1. **The artifact that outran the note.** A number, a figure, or a whole sentence
-   appears on the board that is nowhere in your M9 note, usually because the
-   layout left a gap and something had to fill it. An element built at layout
-   time has no trace by construction, and the Expo will ask for one. Build from
-   the note and the claim-to-evidence table, and let empty space stay empty.
+1. **The element with no row.** A number, a figure, or a whole sentence appears
+   on the board that nothing traces, usually because the layout left a gap and
+   something had to fill it. New material is welcome, but an element built at
+   layout time has no trace by construction, and the Expo will ask for one. Give
+   it a row in your claim-to-evidence table first, traced to its cell or source,
+   or let empty space stay empty.
 2. **The verb upgrade under compression.** Space is short, so *was associated
    with* becomes *drives*, "in my sample" becomes "in general," and the caveat is
    the first thing cut because it costs three lines. A shorter, cleaner sentence

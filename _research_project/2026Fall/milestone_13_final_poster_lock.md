@@ -435,7 +435,7 @@ request is reissued for a later milestone. It does not change the poster-quality
 
 This rubric scores **what your poster communicates**, panel by panel, the way
 the Expo audience meets it, and the grader checks that what it communicates is
-true against your M9 note, your package, your run records, and your ledger. It is the course's poster rubric, adapted from QM 47400's
+true against your claim-to-evidence table, your package, your run records, and your ledger. It is the course's poster rubric, adapted from QM 47400's
 poster-only rubric to the EDR|AI way of doing research (D87), and it is built
 for the course poster template: each criterion names the template panels it
 reads. Its eight criteria sit on the course's five shared virtues
@@ -461,8 +461,8 @@ scores it in full.
 
 Score each criterion in one band. The rubric scores what your poster
 communicates, panel by panel; the grader checks that it is true (sources,
-computed results, reproduction, AI disclosure) against your M9 note, your
-package, your run records, and your ledger. Those checks decide whether the
+computed results, reproduction, AI disclosure) against your claim-to-evidence
+table, your package, your run records, and your ledger. Those checks decide whether the
 board can be trusted; they add no package-craft points. The same rubric is
 handed out as `project/poster/Evidence_Driven_Research_Poster_Rubric.pdf` (with the grading sheet
 `Evidence_Driven_Research_Poster_Rubric.xlsx`) next to the poster template

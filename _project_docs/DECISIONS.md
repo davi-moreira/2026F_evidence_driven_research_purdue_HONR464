@@ -5344,3 +5344,79 @@ headline 32, headings 24, substantive content 18, captions and references 13. Th
 rubric keeps its eight criteria and weights; only its panel names and its size
 reference changed. Briefs, the M10 PDF additions, the M10 workbench and the
 announcement now say 34 × 22.5 in.
+
+## D89 — The M9 note is the poster's first full draft; the "nothing new on the poster" rule is retired (2026-10-23)
+
+**Ruling (Davi, 2026-10-23).** Facilitate the students' poster development: the M9
+research note is written under the course poster template's thirteen sections, so it
+is the poster's first full draft, and the poster may grow beyond it. Davi rejected the
+rule that nothing on the poster may be new. Applied to this term (no student had
+started M9; the announcement goes out Fri Oct 23, more than 48 hours before the Sun
+Oct 25 deadline) and to future editions.
+
+- **One source for the sections.** `scripts/poster_sections.py` holds the thirteen
+  sections in the template's order (Abstract · The question and why it matters ·
+  What is already known · Design: what your claim needs · Data and measurement ·
+  Methods · Main result · Checks and verification · Conclusions · Limitations · AI use
+  disclosure · References · Acknowledgments), each with what the note writes under it.
+  The template's section bars read that list (`build_poster_kit.py` stops if a bar is
+  missing or out of order); `build_poster_kit.py` writes the M9 brief's block between
+  `<!-- note-sections:begin/end -->` (`--check` covers it with the M13 block, and the
+  new `--blocks` regenerates both without the binaries); `build_handout_pdfs.py`
+  fills the `{{NOTE_SECTIONS}}` token in the M9 additions; the M9 workbench (`ms08`)
+  imports it.
+- **M9.** The note opens with the version line, a working title and the headline
+  sentence, then the thirteen sections, each in full sentences (*Acknowledgments* may
+  be one line). Length rises from one to two pages to **two to four**, references and
+  table not counted. The book's five moves are kept and located inside the sections
+  (spine in Question + Known; method in Design + Data + Methods, one paragraph each;
+  results in Main result; headline in the banner sentence + Conclusions; limitations
+  and references in their own); the identification card moves to *Design*; the AI
+  disclosure becomes the note's *AI use disclosure* section; the claim-to-evidence
+  table stays its own file and now **travels to the printed poster**. Rubric weights
+  and rows unchanged; the Craft row's format standard now names the poster sections,
+  the Definition of Done and the submission table follow, and a fifth pitfall ("the
+  section saved for the poster") is added. `milestone_course_additions.yml` moves M09
+  from `pure` to `additions` with the schedule mark, because the note is now the first
+  draft of the printed poster, which is on the narrowed rule's own list; the M9 PDF
+  gains "What this course adds". The book page is untouched (it already asks for "a
+  stand-alone research note or report draft"), so no book change is needed.
+- **The rule retired: "nothing on the poster may be new."** It was course-only (the
+  book never teaches it). Its wording, kept here as the record: *"Nothing on the
+  artifact may be new. Every result, figure, and citation that appears on it also
+  appears in your M9 note … If a check this week changes a number, do not quietly fix
+  the poster: keep the submitted M9 note, write a dated corrected version with its
+  evidence table updated, then update the poster"*; *"The artifact adapts the note; it
+  never outruns it"*; the hard cap *"An element on the artifact that does not appear in
+  the M9 note (or in a dated corrected version of it) caps Evidence integrity &
+  provenance at Beginning"*; and the penalty *"A claim on the artifact that is larger
+  than the same claim in your M9 note: Compass & pathway alignment scores Beginning."*
+- **What replaces it: new is welcome; untraced is not.** Anything added after M9 (a
+  result, figure, check or citation) enters first as a new row in the
+  claim-to-evidence table, marked with the milestone that added it and traced to its
+  cell or source, then goes on the board; a changed number updates its row, with no
+  corrected note version. M10's transformation memo closes with a **New since M9**
+  list. M10's hard cap becomes "a result, figure, or citation with no row in your
+  claim-to-evidence table" (Evidence integrity), and the penalty becomes "a claim
+  larger than its design warrants" (Compass), matching the D87 poster rubric's own
+  caps. The M10 rubric rows keep their names and weights; the DoD keeps its
+  "Adaptation rule" row with the new specification. The M13 rubric lead and the
+  template guide page now check the poster against the claim-to-evidence table, not
+  the M9 note.
+- **Surfaces changed.** M9 and M10 briefs and PDFs; M13 brief (rubric lead, generated
+  block); `milestone_course_additions.yml` (M09 additions; M10 additions paragraph;
+  D89 notes on both, the old notes kept as the record); the template (guide page rule;
+  section bars from the list); the `ms08` and `ms09` workbenches (ms09's check now
+  flags elements with no table row and lists the traced new ones); nb09's wrap-up;
+  Studio 9/10 rows in `scripts/schedule_data/part3.py` (schedule, session guides);
+  the Brightspace milestone pages; the schedule's M9 note.
+- **Not changed.** M16's research note v2 keeps its own brief; it inherits the
+  section structure only in practice. The rubric documents
+  (`Evidence_Driven_Research_Poster_Rubric.*`) carry no M9-note wording and were not
+  rebuilt.
+- ⚠ **For Davi, outside the repository:** replace the M9 and M10 instructions and
+  PDFs on Brightspace (M13's too, for the one-line rubric lead), attach the rebuilt
+  `honr464_poster_template.pptx` to M9 and replace it on M10, and post
+  `_announcements/2026-10-23_m9_note_is_your_poster_draft.md` **today**. It also
+  withdraws the "nothing on the poster may be new" sentence of the 2026-10-21
+  announcement.

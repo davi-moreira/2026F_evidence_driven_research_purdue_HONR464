@@ -56,8 +56,8 @@ output or cut before you submit.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **The research note**: a stand-alone account of your study, carrying the question, the method in one paragraph, the results with their uncertainty, the bounded headline claim, the limitations, and the references. This is the graded core. It also delivers what your **research action plan** commits you to for this milestone (Component 7). Opens with the **Instructor Request Record** (Component 6), which is graded under the carry-forward adjustment. |
-| 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim-to-evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
+| 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **The research note, written as your poster's first full draft**: a stand-alone account of your study under the thirteen section headings of the course poster template, in the template's order (Component 1), with your **AI disclosure statement** as its *AI use disclosure* section. This is the graded core. It also delivers what your **research action plan** commits you to for this milestone (Component 7). Opens with the **Instructor Request Record** (Component 6), which is graded under the carry-forward adjustment. |
+| 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim-to-evidence table** (every claim a row: claim · evidence · verification · boundary). It travels with you to the printed poster. |
 | 3 | **EDR\|AI "It is your turn" — ch. 28, ch. 29, ch. 30, ch. 31** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Your note is prose, but its numbers are not new. Every figure in it walks back
@@ -65,6 +65,10 @@ to a cell in the seeded analysis notebook you submitted for M7 (`SEED = 464`)
 and to the checks you adjudicated in your M8 audit. If you submit a notebook
 link, set sharing so the instructor can open it, and confirm that every number
 in the note still matches the cell that produced it.
+
+Keep the course poster template open while you write: `honr464_poster_template.pptx`
+(34 × 22.5 in), attached to this assignment and to M10 on Brightspace. Each
+section of your note becomes the panel with the same name next week.
 
 ---
 
@@ -115,12 +119,19 @@ producing new evidence this week. You are producing the sentences your evidence
 licenses.
 
 The order is the point, and it is the heart of this course. **The note comes
-before the poster.** Next week you write a venue contract and build the one
-artifact that satisfies it, and that artifact will be an adaptation of this note.
-A poster, a talk, and a manuscript are all compressions. Compressing a claim that
-does not yet exist in defensible written form lets the format's space limits
-author the claim for you. Write the note first, and every later artifact can only
-say less than the note, never more.
+before the poster, and the note is the poster's first full draft.** You write it
+under the thirteen section headings of the course poster template, in the
+template's order, so that next week every panel of your board already has its
+text. A claim that has never been written in full sentences has never been
+tested for size, and a format's space limits should never author your claim for
+you. Writing each section in full prose first is what keeps them from doing it.
+
+The poster may grow beyond the note. If a check, a figure, or a source after this
+week makes your work better, it belongs on the board. It enters the same way
+everything in the note did: first as a row in your claim-to-evidence table,
+traced to the cell that computed it or the exact place in its source, then on the
+poster. New is welcome; untraced is not. That is why the table you build this
+week is not a one-time form: it travels with you to the printed poster.
 
 ### Kind and reach are two dimensions, not two rungs
 
@@ -160,47 +171,85 @@ You never relabel the question descriptive to make the mismatch disappear. The
 kind belongs to the question; the identification status belongs to the design.
 
 > **A question that often comes up here:** *"The Expo is the deadline that
-> counts. Shouldn't I build the poster first and write the note after?"* No, and
-> the reason is protective. The poster is next week's job, and it will be an
-> adaptation of what you write now. A claim that has never been written in full
-> sentences has never been tested for size. The fastest way to manufacture an
-> overclaim is to shrink a result that was never bounded in prose.
+> counts. Shouldn't I build the poster first and write the note after?"* You are
+> building it now. The note carries the poster's own sections, so this week you
+> write each panel's content in full sentences, and next week you lay it out,
+> compress it, and choose the figure. The order is protective: the fastest way
+> to manufacture an overclaim is to shrink a result that was never bounded in
+> prose.
 
 ## Components
 
-### 1. The research note
+### 1. The research note: your poster's first full draft
 
-One to two pages, opening with a dated version line and its reason (for example:
-*"Book Milestone 9, version 1, October 23: first bounded write-up of the claim
-that survived the M8 audit"*). A version with no reason is decoration. Write the
-reason a reader could use to reconstruct your thinking. Then five moves, in
-order:
+Two to four pages, not counting the references and the claim-to-evidence table,
+opening with a dated version line and its reason (for example: *"Book Milestone
+9, version 1, October 23: first bounded write-up of the claim that survived the
+M8 audit"*). A version with no reason is decoration. Write the reason a reader
+could use to reconstruct your thinking.
 
-- **The question**, carried on a **problem-gap-question spine**: the real trouble
-  your work responds to, the specific thing prior retrievable work has not
-  established, and the answerable question that closes exactly that gap. State
-  the question as your Research Contract declares it, with its kind and its
-  reach.
-- **The method, in one paragraph.** Plain language a reader outside your field
-  could follow: where the data came from, the route you declared, and the
-  analysis you ran. No code, and no term you have not defined.
-- **The results, with uncertainty in the same eye-span.** **Uncertainty in the
+<!-- note-sections:begin -->
+<!-- Generated by scripts/build_poster_kit.py (D89) from
+     scripts/poster_sections.py. Edit that list and rerun; edits here are
+     overwritten. -->
+
+Open with your working title and your **headline sentence**: the bounded claim,
+with its interval or its boundary in the same sentence, as it will run in the
+poster's headline banner. Then write the thirteen sections of the course poster
+template, in its order, each under its own heading:
+
+| # | Section | What your note writes there |
+|--|----------------|--------------------------------|
+| 1 | **Abstract** | Your conference abstract, updated to your verified results: one paragraph of up to 150 words with the question and its answer, what the literature concludes and what you add, the data and the design, and the main result with its uncertainty and the limitation that matters most. Add one line saying what changed since you submitted it. |
+| 2 | **The question and why it matters** | Your research question in one sentence, as your Research Contract declares it, with its kind and its reach; why it matters, and to whom; your main hypothesis as you recorded it before the analysis ran. |
+| 3 | **What is already known** | The main conclusion of the literature, from at least two sources you read yourself; the gap; and what your project adds. With the question above, this is your problem-gap-question spine. |
+| 4 | **Design: what your claim needs** | Kind, reach, target and warrant, one line each, plus the identification status. A causal question your design cannot identify is a causal target, currently unidentified, never relabeled descriptive. |
+| 5 | **Data and measurement** | Source and route with retrieval dates; observations kept apart from independent units; the time window; each concept and the measure that stands for it; missing data; permissions. |
+| 6 | **Methods** | The analysis you declared before seeing results and why it fits your design, with any later change and its reason; how you computed the uncertainty, at the level of your independent unit, with any dependence named; software and seed. |
+| 7 | **Main result** | The result in numbers and units, with its interval in the same sentence, and the figure you plan to print, captioned with the notebook cell that drew it. |
+| 8 | **Checks and verification** | The checks from your robustness audit and what each one changed, and what has been reproduced so far, by whom and when. |
+| 9 | **Conclusions** | Your bounded headline claim, carrying its kind and its reach, then what this evidence supports and what it does not yet support. |
+| 10 | **Limitations** | The two or three limitations that genuinely threaten the claim, led by the one your robustness audit could not fix, each with the next step that would settle it. |
+| 11 | **AI use disclosure** | Drafted from your AI Research Ledger: for each tool, the task, what you changed or kept, and how you checked it; what you sent to tools; and what you did not verify. |
+| 12 | **References** | Every source the note cites, each one retrievable: author, year, title, venue, DOI or URL. |
+| 13 | **Acknowledgments** | One line is enough: your mentor, and anyone who provided data, took part, or funded the work. |
+
+<!-- note-sections:end -->
+
+Write every section in full sentences, for a stranger who has only the page;
+*Acknowledgments* may be a single line. Next week the poster compresses each
+section into its panel, so this is where each panel's content gets checked.
+Inside the sections live the five moves the book asks of a research note:
+
+- **The question**, carried on a **problem-gap-question spine** (*The question
+  and why it matters* and *What is already known*): the real trouble your work
+  responds to, the specific thing prior retrievable work has not established,
+  and the answerable question that closes exactly that gap. State the question
+  as your Research Contract declares it, with its kind and its reach.
+- **The method, in plain language** (*Design*, *Data and measurement*,
+  *Methods*). A reader outside your field could follow it: where the data came
+  from, the route you declared, and the analysis you ran. No code, and no term
+  you have not defined. Give each of the three sections its own short paragraph,
+  because each becomes its own panel.
+- **The results, with uncertainty in the same eye-span** (*Main result*). **Uncertainty in the
   same eye-span** means the interval or the range sits beside the number, in the
   same sentence or on the same line. Example: "about 6 points lower (95%
   interval: 1 to 11)." A bound a reader has to hunt for is a bound doing hidden
   work.
-- **The bounded headline claim.** One sentence carrying its kind and its reach,
-  never a single flattering number. Example: "In the 30 precincts my sample
+- **The bounded headline claim** (your headline sentence, and *Conclusions*).
+  One sentence carrying its kind and its reach, never a single flattering
+  number. Example: "In the 30 precincts my sample
   covers, turnout was about 61 percent, give or take 2 points." Every verb is
   sized to what the design established: *was associated with*, not *drives*,
   unless your route earned the causal verb.
-- **The limitations, then the references.** The two or three limitations that
-  genuinely threaten the claim, led by the one your M8 audit could not fix, each
-  stated as expertise rather than apology. Every reference is **retrievable**: a
-  reader can locate the source and confirm it says what you say it says.
+- **The limitations, then the references** (*Limitations*, *References*). The
+  two or three limitations that genuinely threaten the claim, led by the one
+  your M8 audit could not fix, each stated as expertise rather than apology.
+  Every reference is **retrievable**: a reader can locate the source and confirm
+  it says what you say it says.
 
-One small card keeps those five moves honest, and it belongs in your method
-paragraph or beside it: **question kind**, **identification status**, **result**,
+One small card keeps those five moves honest, and it belongs in your *Design*
+section: **question kind**, **identification status**, **result**,
 **claim boundary**. Keeping the four apart is what stops an overclaim before it
 is written, because the status belongs to the design while the kind belongs to
 the question.
@@ -230,9 +279,14 @@ then write only the sentences its rows license.
 Spot-check one row at random before you submit. Reopen the traced output and read
 the number again. A table you have not spot-checked is a list of hopes.
 
+Keep the table after you submit it. It travels with you to the printed poster:
+anything new that reaches the board at M10, M11, or M13 (a result, a figure, a
+check, a source) gets its own row first, marked with the milestone that added it.
+
 ### 3. The AI disclosure statement
 
-A short statement drafted **from your ledger, never from memory**. Three parts
+A short statement, written as your note's *AI use disclosure* section and drafted
+**from your ledger, never from memory**. Three parts
 make it complete: **which tool** you used, **for which task**, and **how you
 verified** what came back. Drop any one of the three and the disclosure fails.
 "I used AI" with no task says nothing, and a task with no verification is exactly
@@ -340,7 +394,7 @@ pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Research note** | One to two pages; problem-gap-question spine, one-paragraph method, results, bounded headline, limitations, references |
+| **Research note** | Two to four pages (references and table not counted), written as the poster's first full draft: title, headline sentence, then the thirteen sections of the course poster template in its order, each in full sentences (*Acknowledgments* may be one line), with the problem-gap-question spine, the plain-language method, the results, the bounded headline, the limitations, and the references inside them |
 | **Version line** | Book Milestone 9, version 1, dated, with a reason a reader could use to reconstruct your thinking |
 | **Headline claim** | One sentence carrying its kind and its reach; every verb sized to what the design established |
 | **Kind and reach warranted separately** | Each dimension justified on its own; a causal question your design cannot identify is reported as a causal target, currently unidentified, never relabeled descriptive |
@@ -348,7 +402,7 @@ pre-submission checklist.
 | **Claim-to-evidence table** | Every claim a row (claim · evidence · verification · boundary); no claim in the note lacks a row |
 | **Verification column** | Each row names a real check (the cell, the clean-restart trace, the pre-listed check), never a bare "verified"; at least one row spot-checked before submission |
 | **References** | All retrievable; each says what the note claims it says |
-| **AI disclosure** | Drafted from the ledger; names which tool, which task, how verified; includes what you sent to tools and what you did not verify |
+| **AI disclosure** | The note's *AI use disclosure* section, drafted from the ledger; names which tool, which task, how verified; includes what you sent to tools and what you did not verify |
 | **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Note, claim-to-evidence table, and disclosure located by file or section |
@@ -378,7 +432,7 @@ the milestone's own product present and defensible.
 | **Evidence integrity & provenance** (18) | Every claim in the note has a table row; every number walks back to the cell that produced it; every reference is retrievable and says what is claimed (16–18) | Traceable; one row thin or one reference under-linked (13–15) | A claim in the note with no row, or a reference asserted without a locatable origin (7–12) | A fabricated or unretrievable source, or a headline claim with no evidence row at all (0–6) |
 | **Verification & robustness** (23) | Every table row names a real check, and at least one was reopened and spot-checked; the disclosure is drafted from the ledger and names tool, task, verification, and what went unverified; the version line carries a usable reason; every judgment defended in your own reasoning, not a tool's (21–23) | Checks mostly named; one row vague, or the version reason decorative (17–20) | Generic "I checked it" entries, or a disclosure written from memory (10–16) | A number with no path back to a cell, or a claimed verification that never happened (0–9) |
 | **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (16–18) | Both present; one stated loosely (13–15) | A point estimate with no interval somewhere, or limitations gestured at generically (7–12) | No uncertainty stated, or the finding written as settled certainty (0–6) |
-| **Craft, ledger & communication** (13) | On-format, on-time, one to two pages a stranger can follow without you; red-team feedback incorporated; complete AI Research Ledger; dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces, or studio feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Craft, ledger & communication** (13) | On-format (every section of the poster template present, in its order), on-time, two to four pages a stranger can follow without you; red-team feedback incorporated; complete AI Research Ledger; dossier line present; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a missing poster section), or studio feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M09-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M09"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.
@@ -453,6 +507,11 @@ days of feedback recovers up to half the lost points.
    Instructor Request Record does not say where, or it says only "I disagree."
    Neither can be verified, so both count as unaddressed. Point to the exact
    place, or give the reason and the choice you made instead.
+5. **The section saved for the poster.** Leaving *Design*, *Data and
+   measurement*, or *Methods* as a single line, because the poster will compress
+   them anyway. The note is where those panels get their content written and
+   checked. Write each one in full now; deciding what to cut is next week's job,
+   and you can only cut well from a section that exists.
 
 <!-- submission-pdf-howto:begin -->
 ## Making the PDF you hand in

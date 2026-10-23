@@ -110,6 +110,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 import milestone_carry_forward as carry_forward  # noqa: E402
+import poster_sections  # noqa: E402
 from milestone_map import additions, milestone_map  # noqa: E402
 from submission_pdf_howto import POINTER, markdown as howto_markdown  # noqa: E402
 
@@ -340,7 +341,11 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
 
     if add.get("additions_markdown"):
         body.append("## What this course adds\n")
-        body.append(add["additions_markdown"].strip() + "\n")
+        # D89: the note's sections are the poster template's, authored once in
+        # scripts/poster_sections.py and dropped in wherever the token stands.
+        body.append(add["additions_markdown"].strip()
+                    .replace(poster_sections.TOKEN, poster_sections.note_sections_markdown())
+                    + "\n")
 
     for i, page in enumerate(info["pages"]):
         ptitle, pbody = book_page(page)

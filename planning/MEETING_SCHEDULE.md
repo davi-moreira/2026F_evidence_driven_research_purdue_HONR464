@@ -742,7 +742,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Monday's headline bounded claim; robustness-audit table and AI Research Ledger current and open; the colleague's revised note read before class; the ai-disclosure lesson read.
 - **Student artifact:** Completed audit sheet (locate · verify · diagnose · repair · calibrate) + your claim-evidence table + your note spine + a ledger-derived disclosure draft
 - **Exit ticket:** Claim Ticket #24: "One sentence I cut or marked unresolved was [x], because its evidence row could not be completed — and my disclosure now names [what I sent, what I rejected, what stays open]."
-- **Homework / next milestone:** Finish the note — spine, one complete row per claim, the ledger-derived disclosure. It is due at Friday's studio, where the required Research Note Reviewer runs and the trace-or-cut drill decides what stays.
+- **Homework / next milestone:** Finish the note under the course poster template's thirteen sections — spine, one complete row per claim, the ledger-derived disclosure. It is due at Friday's studio, where the required Research Note Reviewer runs and the trace-or-cut drill decides what stays.
 - **Instructor prep:** Confirm the colleague artifact's three seeded flaws and two sound rows against the private key; supply only retrieved real sources or explicitly unresolved suggestions, never a fabricated citation (D16); verify the recompute cell prints 70.8 percent and the 5.34-against-3.35 contrast on a fresh kernel; run the retrieval drill and the never-retrieved-source challenge yourself at the top of the laboratory block, and have two or three opening questions ready for the lab meeting's open round.
 - **Risks / contingency:** The lab runs long → the documented compression is 🔁 Modify the Prompt down to one written line plus a prediction; Verify and the 38–42 accuracy lock never compress, because an uncorrected record is the failure the whole device exists to prevent. A source cannot be retrieved in class → it stays unresolved, leaves the evidence table, and the claim it supported is cut or re-scoped, never shipped on the suggestion.
 
@@ -764,12 +764,12 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Hands-on activity:** Fill every row of your claim-to-evidence table by opening its traced cell, hunt the blanks and back-or-cut each one, write the disclosure from your ledger, run the required Research Note Reviewer, and submit the note.
 - **Practice:** 📝 during the sprint: pick one table row at random, reopen its traced output, and read the number again — a table you have not spot-checked is a list of hopes. Fix or cut whatever fails.
 - **Discussion prompt:** Which sentence did you cut today — and did cutting it make the note weaker, or make you more believable?
-- **Project connection:** M9 submits tonight; the note is now the core artifact — every genre after this one adapts it, and none of them may say more than it does.
+- **Project connection:** M9 submits tonight; the note is now the poster's first full draft — each of its sections becomes the panel with the same name, and anything the poster adds later enters through the claim-to-evidence table first.
 - **Milestone developed:** M9 — Bounded research note and claim-evidence table, Book Milestone 9 v1 (worked; DUE Sunday, October 25, 11:59 PM); M10 — Venue contract and the publication-ready artifact, Book Milestone 10 v1 (kickoff)
 - **Milestone work time:** 40 min studio block
 - **Milestone presentation/review:** M9 worked at the studio and submitted; note red-team in pairs + the trace-or-cut drill; required GenAI Studio Research Note Reviewer review, adjudicated in the ledger
 - **Student prep:** Note draft, claim-evidence table, and ledger current; the one thing your Human-Only Checkpoint named as standing between you and ready, brought as today's first task.
-- **Student artifact:** Submitted M9 — the stand-alone note, the claim-to-evidence table, and the AI disclosure statement, filed as a dated numbered version with its reason + the adjudicated reviewer record
+- **Student artifact:** Submitted M9 — the stand-alone note under the poster template's sections, the claim-to-evidence table, and the AI disclosure statement, filed as a dated numbered version with its reason + the adjudicated reviewer record
 - **Exit ticket:** Claim Ticket #25: "What my evidence licenses is [claim, at strength]; what I still cannot rule out is [x] — and my note says both."
 - **Homework / next milestone:** Submit M9 tonight on the course platform. Over the weekend read the research-posters and poster-criticism lessons and redraw the one figure that carries your lead claim — full axis, a value label on every mark, the uncertainty your design licenses drawn on the figure. Monday adapts your claim to a venue that will not give it a page.
 - **Instructor prep:** Stage the M9 brief and rubric plus the M10 brief on Brightspace; confirm the Research Note Reviewer role is provisioned and smoke-tested; pairing plan for the trace-or-cut red-team; consult rotation and timer.
@@ -784,7 +784,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Driving question:** The same numbers, drawn two ways: one panel repeats your note and one panel changes what the finding says. Which words and which pixels did the changing?
 - **Secondary questions:** What seven fields does a venue contract record, and why is it written before the artifact? What must a claim lose to fit a venue, and what may it never lose? What do the five audits check — claim boundary, figure honesty, read path, uncertainty, accessibility? Who never receives a claim carried by colour alone?
 - **Inquiry:** all positions (genre adaptation and artifact criticism)
-- **Claim PERMITTED:** "In this teaching resample, respondents rating the government more responsive reported police trust about half a point higher on a 1-to-7 scale, and the two 95% intervals overlap" — the artifact says less than the note and claims nothing the note does not.
+- **Claim PERMITTED:** "In this teaching resample, respondents rating the government more responsive reported police trust about half a point higher on a 1-to-7 scale, and the two 95% intervals overlap" — the artifact claims no more than its evidence warrants, and every number on it has a row.
 - **Claim NOT permitted:** An adaptation that drops the limitations — that is not a shorter version of the claim, it is a different claim; a causal headline verb over an observational comparison the design never licensed; and any distinction carried by colour alone.
 - **RDSS reading:** Required EDR|AI: 'Research Posters' and 'Poster Criticism' (part5-communicating); their 'It is your turn' figure steps are completed in the companion notebooks before class
 - **EDR|AI required reading (lesson ids):** research-posters:first-read; poster-criticism:first-read
@@ -841,11 +841,11 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 ### M28 — Fri 2026-10-30 (in-person) — Studio Friday — M10, due Sunday: the venue contract and one artifact that satisfies it (a version, not the lock)
 
-- **Driving question:** Your venue will not give you a page. What does its contract actually demand, and does the artifact you built say less than your note without ever saying more?
+- **Driving question:** Your venue will not give you a page. What does its contract actually demand, and does every element on the artifact you built trace to a row, with its claim inside its warrant?
 - **Secondary questions:** What do the seven contract fields record? What does the transformation memo track, and what does a content map name? What does the mode test do that a checklist cannot? Why is today a version while the lock is terminal?
 - **Inquiry:** all positions (venue-artifact studio)
 - **Claim PERMITTED:** "An artifact built to a written contract: every load-bearing number, figure, and citation traced to a row of my claim-evidence table, with the boundary and the uncertainty placed where a stranger actually meets them."
-- **Claim NOT permitted:** An artifact-first claim — anything on the artifact that is not in the M9 note and its table is a claim nobody audited; and calling today's version a lock.
+- **Claim NOT permitted:** An untraced claim — anything on the artifact with no row in the claim-to-evidence table is a claim nobody audited; and calling today's version a lock.
 - **RDSS reading:** (no new reading — studio Friday; bring your note, your claim-evidence table, your redrawn figure, and your boundary sentence)
 - **EDR|AI required reading (lesson ids):** research-posters:continue; poster-criticism:continue; research-pitches:continue; difficult-questions:continue
 - **Other material:** nb10 student notebook (adapt and defend) for the recap; the Studio 10 workbook (Colab); M10 Brightspace brief and rubric; M13 Brightspace brief (reproducible package + the terminal poster lock and its two blocking gates); Purdue GenAI Studio — required Poster Critic role, logged in the ledger; the URC poster spec

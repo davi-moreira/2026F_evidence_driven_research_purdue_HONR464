@@ -28,6 +28,14 @@ will be shared", D53) and that the D50 conference block left open:
       M13 brief between the `poster-rubric` markers, so the brief, the PDF the
       students hold and the grading sheet can never disagree.
 
+D89 (2026-10-23): the thirteen section headings live once, in
+scripts/poster_sections.py, because the M9 research note is the poster's first
+full draft and is written under the same headings. The template's section bars
+read that list (the build stops if a bar is missing or out of order), and this
+script also writes the M9 brief's note-sections block between the
+`note-sections` markers. The guide page's rule changed with it: anything added
+after M9 is welcome once it has its row in the claim-to-evidence table.
+
 The rubric text lives once, in RUBRIC / HARD_CAPS / CAP_NOTE below. The
 template's example is EDR|AI ch. 32's simulated checkout comparison (SEED =
 464), redrawn at print size with a second panel for the difference the
@@ -35,7 +43,8 @@ headline is about (Welch 95% interval, weeks treated as independent).
 
     .venv/bin/python scripts/build_poster_kit.py              # everything
     .venv/bin/python scripts/build_poster_kit.py --rubric     # rubric + M13 block only
-    .venv/bin/python scripts/build_poster_kit.py --check      # exit 1 if M13's block is stale
+    .venv/bin/python scripts/build_poster_kit.py --blocks     # M13 + M9 blocks only
+    .venv/bin/python scripts/build_poster_kit.py --check      # exit 1 if M13's or M9's block is stale
 
 The template build reads QM 47400's template for its Purdue logo (from the
 sibling course folder, or --qm474 PATH). The rubric build needs nothing outside
@@ -53,10 +62,15 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import poster_sections  # noqa: E402  (D89: the sections, once)
+
 OUT_DIR = ROOT / "project" / "poster"
 TEMPLATE_OUT = OUT_DIR / "honr464_poster_template.pptx"
 RUBRIC_STEM = "Evidence_Driven_Research_Poster_Rubric"
 M13 = ROOT / "_research_project" / "2026Fall" / "milestone_13_final_poster_lock.md"
+M09 = ROOT / "_research_project" / "2026Fall" / "milestone_09_minimum_viable_analysis.md"
 QM474_DEFAULT = (
     ROOT.parents[1]
     / "predictive_analytics"
@@ -215,8 +229,8 @@ def rubric_markdown() -> str:
         "",
         "Score each criterion in one band. The rubric scores what your poster",
         "communicates, panel by panel; the grader checks that it is true (sources,",
-        "computed results, reproduction, AI disclosure) against your M9 note, your",
-        "package, your run records, and your ledger. Those checks decide whether the",
+        "computed results, reproduction, AI disclosure) against your claim-to-evidence",
+        "table, your package, your run records, and your ledger. Those checks decide whether the",
         "board can be trusted; they add no package-craft points. The same rubric is",
         f"handed out as `project/poster/{RUBRIC_STEM}.pdf` (with the grading sheet",
         f"`{RUBRIC_STEM}.xlsx`) next to the poster template",
@@ -243,18 +257,28 @@ def rubric_markdown() -> str:
     return "\n".join(lines)
 
 
-def inject_m13(check: bool = False) -> bool:
-    text = M13.read_text(encoding="utf-8")
-    if BEGIN not in text or END not in text:
-        sys.exit(f"{M13.name}: the {BEGIN} / {END} markers are missing")
-    head, rest = text.split(BEGIN, 1)
-    _, tail = rest.split(END, 1)
-    new = head + rubric_markdown() + tail
+def _inject(path: Path, begin: str, end: str, block: str, check: bool) -> bool:
+    text = path.read_text(encoding="utf-8")
+    if begin not in text or end not in text:
+        sys.exit(f"{path.name}: the {begin} / {end} markers are missing")
+    head, rest = text.split(begin, 1)
+    _, tail = rest.split(end, 1)
+    new = head + block + tail
     if check:
         return new == text
     if new != text:
-        M13.write_text(new, encoding="utf-8")
+        path.write_text(new, encoding="utf-8")
     return True
+
+
+def inject_m13(check: bool = False) -> bool:
+    return _inject(M13, BEGIN, END, rubric_markdown(), check)
+
+
+def inject_m09(check: bool = False) -> bool:
+    """D89: the M9 brief lists the note's sections, which are the poster's."""
+    return _inject(M09, poster_sections.NOTE_BEGIN, poster_sections.NOTE_END,
+                   poster_sections.brief_block(), check)
 
 
 # ---------------------------------------------------------------------------
@@ -561,6 +585,14 @@ def build_template(qm474: Path, out: Path) -> None:
             shape.name = name
         return shape
 
+    # D89: every section bar takes its heading from scripts/poster_sections.py,
+    # the list the M9 note is also written under; each must be drawn exactly once.
+    drawn: list[str] = []
+
+    def section(key):
+        drawn.append(key)
+        return poster_sections.heading(key)
+
     def bar(slide, x, w, y, title, size=24):
         b = rect(slide, x, y, w, BAR_H, INK, name=f"Heading: {title}")
         text(slide, 0, 0, 0, 0, [[(title, {"size": size, "bold": True, "color": GOLD, "after": 0})]],
@@ -660,21 +692,21 @@ def build_template(qm474: Path, out: Path) -> None:
     w = COL_W
     # ---- column 1: abstract, question, literature
     x = COL_X[0]
-    y = bar(s, x, w, TOP, "ABSTRACT")
+    y = bar(s, x, w, TOP, section("abstract"))
     text(s, x, y + 0.05, w, 4.4, [
         "Up to 150 words, one paragraph: your OURConnect abstract, updated to your verified results. "
         "Keep its four parts in order: the question and its answer; what the literature concludes and "
         "what you add; the data and the design; the main result with its uncertainty, and the "
         "limitation that matters most.",
     ], name="Abstract text")
-    y = bar(s, x, w, 10.3, "THE QUESTION AND WHY IT MATTERS")
+    y = bar(s, x, w, 10.3, section("question"))
     text(s, x, y + 0.05, w, 4.6, [
         [("Your research question,", {"bold": True}), (" in one sentence ending with a question mark.", {})],
         [("Why it matters, and to whom:", {"bold": True}), (" the scientific or practical stake.", {})],
         [("Your main hypothesis,", {"bold": True}),
          (" as you recorded it before the analysis ran. Label later analysis as exploratory.", {})],
     ], name="Question text")
-    y = bar(s, x, w, 15.9, "WHAT IS ALREADY KNOWN")
+    y = bar(s, x, w, 15.9, section("known"))
     text(s, x, y + 0.05, w, BOTTOM - y - 0.05, [
         [("The main conclusion of the literature,", {"bold": True}),
          (" from at least two sources you read yourself (Author, Year).", {})],
@@ -683,7 +715,7 @@ def build_template(qm474: Path, out: Path) -> None:
 
     # ---- column 2: design, data, methods
     x = COL_X[1]
-    y = bar(s, x, w, TOP, "DESIGN: WHAT YOUR CLAIM NEEDS")
+    y = bar(s, x, w, TOP, section("design"))
     rows = [
         ("KIND", "☐ Descriptive  ☐ Causal. If your aim is prediction, say so."),
         ("REACH", "☐ A population beyond your data (units, setting, period)  ☐ Unseen cases: which, from where."),
@@ -695,7 +727,7 @@ def build_template(qm474: Path, out: Path) -> None:
     for (label, body), h in zip(rows, [0.85, 1.15, 1.15, 1.45]):
         labeled_box(s, x, yy, w, h, label, body, label_w=1.75, name=f"Compass box: {label}")
         yy += h + 0.08
-    y = bar(s, x, w, 11.0, "DATA AND MEASUREMENT")
+    y = bar(s, x, w, 11.0, section("data"))
     card = [
         ("Source and route", "[archive, URL or DOI, retrieval date; or protocol]"),
         ("Observations", "[rows or measurements]"),
@@ -706,7 +738,7 @@ def build_template(qm474: Path, out: Path) -> None:
         ("Permissions", "[data licence; IRB determination]"),
     ]
     table(s, x, y + 0.1, w, card, [2.45, w - 2.45], size=SUBST, header=False, row_h=0.5, name="Data card")
-    y = bar(s, x, w, 16.35, "METHODS")
+    y = bar(s, x, w, 16.35, section("methods"))
     text(s, x, y + 0.05, w, BOTTOM - y - 0.05, [
         [("Analysis:", {"bold": True}),
          (" the comparison, estimator, or model you declared before seeing results, and why it fits your "
@@ -718,7 +750,7 @@ def build_template(qm474: Path, out: Path) -> None:
 
     # ---- column 3: main result, checks
     x = COL_X[2]
-    y = bar(s, x, w, TOP, "MAIN RESULT")
+    y = bar(s, x, w, TOP, section("result"))
     text(s, x, y + 0.02, w, 0.45, [[("EXAMPLE · replace with your notebook's figure and its alt text",
                                      {"size": 15, "bold": True, "color": CRIMSON, "after": 0})]],
          name="Example stamp")
@@ -742,7 +774,7 @@ def build_template(qm474: Path, out: Path) -> None:
         [("The result,", {"bold": True}),
          (" in numbers, units, and the uncertainty it warrants, in the words your boundary allows.", {})],
     ], name="Result text")
-    y = bar(s, x, w, 17.85, "CHECKS AND VERIFICATION")
+    y = bar(s, x, w, 17.85, section("checks"))
     text(s, x, y + 0.05, w, BOTTOM - y - 0.05, [
         [("One check:", {"bold": True}), (" a robustness, sensitivity, or diagnostic check, and what it changed.",
                                          {})],
@@ -753,7 +785,7 @@ def build_template(qm474: Path, out: Path) -> None:
 
     # ---- column 4: conclusions, limitations, AI use, references, acknowledgments
     x = COL_X[3]
-    y = bar(s, x, w, TOP, "CONCLUSIONS")
+    y = bar(s, x, w, TOP, section("conclusions"))
     half = (w - 0.15) / 2
     for k, (label, body) in enumerate([("THIS EVIDENCE SUPPORTS", "[your claim, its verb, its population]"),
                                         ("IT DOES NOT YET SUPPORT", "[a cause? a wider population?]")]):
@@ -764,30 +796,33 @@ def build_template(qm474: Path, out: Path) -> None:
         "Answer your question in one or two sentences, no more strongly than the evidence allows, "
         "and say what it means for the stakeholder.",
     ], name="Conclusions text")
-    y = bar(s, x, w, 9.95, "LIMITATIONS")
+    y = bar(s, x, w, 9.95, section("limitations"))
     text(s, x, y + 0.05, w, 2.7, [
         [("Uncertainty:", {"bold": True}), (" how far the estimate could move.", {})],
         [("Limitation:", {"bold": True}), (" the one most likely to change the finding.", {})],
         [("Next step:", {"bold": True}), (" the study that would settle it.", {})],
     ], name="Limitations text")
-    y = bar(s, x, w, 13.85, "AI USE DISCLOSURE")
+    y = bar(s, x, w, 13.85, section("ai"))
     text(s, x, y + 0.05, w, 2.0, [
         [("One line per tool, on the poster: ", {"size": SUBST}),
          ("[Tool]: used to [purpose]; I [changed / kept what]; I checked it by [method].",
           {"size": SUBST, "italic": True})],
         [("Write “No AI used” only if that is true.", {"size": 14, "color": MUTED})],
     ], name="AI disclosure")
-    y = bar(s, x, w, 16.6, "REFERENCES")
+    y = bar(s, x, w, 16.6, section("references"))
     text(s, x, y + 0.05, w, 1.85, [
         [("Three to six sources you opened yourself. Author (Year). Title. Venue. DOI or URL.",
           {"size": SMALL})],
     ], name="References text")
-    y = bar(s, x, w, 19.25, "ACKNOWLEDGMENTS")
+    y = bar(s, x, w, 19.25, section("acknowledgments"))
     text(s, x, y + 0.05, w - 1.45, BOTTOM - y - 0.05, [
         [("I thank Professor Davi Moreira for mentoring this project, and the John Martinson Honors College and "
           "the Office of Undergraduate Research for the chance to present it. [Thank any data provider, "
           "participants, or funder.]", {"size": 14})],
     ], name="Acknowledgments text")
+    expected = [sec["key"] for sec in poster_sections.SECTIONS]
+    if drawn != expected:
+        sys.exit(f"template sections {drawn} do not match scripts/poster_sections.py {expected}")
     qr = rect(s, x + w - 1.35, y + 0.1, 1.35, 1.35, WHITE, line="8E8E8E", name="QR code placeholder")
     qr.line.dash_style = MSO_LINE.DASH
     text(s, 0, 0, 0, 0, [[("Optional QR", {"size": 12, "color": MUTED, "align": PP_ALIGN.CENTER, "after": 0})]],
@@ -831,10 +866,11 @@ def build_template(qm474: Path, out: Path) -> None:
     ], name="Guide: print spec", size=22)
     y = bar(g, gx[1], gw, 2.6, "RULES THE BOARD KEEPS")
     text(g, gx[1], y + 0.1, gw, 17.0, [
-        [("No result appears first on the poster.", {"bold": True}),
-         (" It comes from your M9 note; if a check changes a number, write a dated corrected note first.", {})],
-        [("Trace what you print:", {"bold": True}),
-         (" computed results to their notebook cell, quoted statistics to their source.", {})],
+        [("Start from your M9 note:", {"bold": True}),
+         (" each of its sections drafts the panel with the same name.", {})],
+        [("New is welcome; untraced is not.", {"bold": True}),
+         (" Anything added after M9 gets a row in your claim-to-evidence table first: computed "
+          "results to their notebook cell, quoted statistics to their source.", {})],
         [("The qualifier travels with the claim,", {"bold": True}), (" in the headline's eye-span.", {})],
         [("Causal wording only with a defended identification argument;", {"bold": True}),
          (" population wording only with a reach argument.", {})],
@@ -872,17 +908,25 @@ def build_template(qm474: Path, out: Path) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--rubric", action="store_true", help="rubric documents and the M13 block only")
-    ap.add_argument("--check", action="store_true", help="exit 1 if the M13 rubric block is stale")
+    ap.add_argument("--rubric", action="store_true",
+                    help="rubric documents and the M13 and M9 blocks only")
+    ap.add_argument("--blocks", action="store_true",
+                    help="the M13 rubric block and the M9 note-sections block only")
+    ap.add_argument("--check", action="store_true", help="exit 1 if the M13 or M9 block is stale")
     ap.add_argument("--qm474", type=Path, default=QM474_DEFAULT, help="QM 47400 template (logo source)")
     args = ap.parse_args()
 
     if args.check:
-        ok = inject_m13(check=True)
-        print("M13 poster rubric block:", "current" if ok else "STALE (run build_poster_kit.py)")
-        return 0 if ok else 1
+        ok13, ok09 = inject_m13(check=True), inject_m09(check=True)
+        print("M13 poster rubric block:", "current" if ok13 else "STALE (run build_poster_kit.py)")
+        print("M9 note-sections block:", "current" if ok09 else "STALE (run build_poster_kit.py)")
+        return 0 if ok13 and ok09 else 1
 
     inject_m13()
+    inject_m09()
+    if args.blocks:
+        print("M13 rubric block and M9 note-sections block current")
+        return 0
     docx_path = OUT_DIR / f"{RUBRIC_STEM}.docx"
     build_rubric_docx(docx_path)
     to_pdf(docx_path, OUT_DIR)
