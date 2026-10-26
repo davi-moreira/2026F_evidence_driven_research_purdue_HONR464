@@ -5494,3 +5494,63 @@ and the brief's per-section guidance serve). Codex's note stands that two to fou
 pages is defensible as a synthesis of existing work, not because of the notice
 period.
 
+
+## D90 — M11 is the final poster, graded with the poster rubric; M13 locks the print file (2026-10-26)
+
+**Ruling (Davi, 2026-10-26).** M11 is where students finalize the poster: they work
+only on their final poster, on the course template, following the poster rubric
+and the feedback they receive on M10. The poster rubric grades **the M11 final
+poster** (Davi's choice when asked, over keeping it on the M13 print file). M10
+collects only the Studio 10 book milestone plus the poster draft on the template,
+and must not point students to M13. Davi also renamed the M11 instructions file to
+`milestone_11_final_poster.{md,pdf}`.
+
+- **M11** (`milestone_11_final_poster.md`, title "Final Poster"; `course_config`
+  title "Final poster"): rewritten. It works from three things only: the M10
+  feedback (numbered `IR-M11-##` requests), the template (keep working in the M10
+  file, follow its guide page), and the rubric. Files: `lastname_m11_poster.pdf`
+  (final form, draft tag removed, slide 1 as one full-size page) and
+  `lastname_m11.pdf` (Instructor Request Record, action-plan commitments, rubric
+  self-check updated from M10, ledger rows). No venue contract, memo, content map,
+  or new rehearsal. The storyboard, traceability sweep, reach check and required
+  Poster Critic run are gone (the Poster Critic stays optional, as a last reading).
+  Two scores, as M13 had: a 100-point **M11 process score** (final file on time and
+  on the template 30, feedback worked on the board 25, rubric self-check 15,
+  individual craft, ledger & closeout 20, carry-forward 10) inside Milestone
+  Deliverables, and the **poster rubric**, now generated into M11 by
+  `build_poster_kit.py`, as the 70% poster part of Poster Presentation.
+- **Course-only instructions.** `milestone_course_additions.yml` gains
+  `instructions: course-only` (M11). For such a milestone the brief's bridge says
+  the instructions are complete on their own, the brief and PDF carry no book
+  milestone page and no Colab how-to, the PDF's course section is titled *What to
+  do*, and the schedule shows "M11 ✚" with no book link. The crosswalk still
+  records the revisit of Book Milestone 10 (labels now "the final poster" for M11
+  and M12). Machinery: `milestone_map.course_only()`, read by
+  `build_milestone_anchors.py`, `build_handout_pdfs.py`,
+  `milestone_carry_forward.pdf_block` and `update_schedule_badges.py`.
+- **M10** (brief, PDF, workbench `ms09`): every M13 pointer now names M11 (draft
+  until M11; do-not-know agenda for M11; the rubric grades the final poster at M11;
+  Next: M11). It opens by saying it collects two things, the Studio 10 milestone
+  and the poster draft.
+- **M13** becomes the print lock of the M11 poster with only the M12 repairs (and
+  any number the cold run corrects); its poster-quality rubric section is removed,
+  its penalties turn a non-reproducing number or a missing source into a blocking-gate
+  return, and Instructor/TA Evaluation still reads the locked poster (unchanged).
+- **The rubric itself** stays eight criteria and 100 points. Two lines that assumed
+  M13's package now fit M11's timing: criterion 4's verification status line says
+  honestly what has been rerun and what is pending, and the reproduction cap reruns
+  the traced notebook cell. The template guide says the draft tag is deleted in the
+  M11 final poster and names M11 as the graded poster.
+- **Propagated:** M12 (links, "final poster", rubric at M11), M15 (`0.70 ×` M11
+  final-poster score), `final_project_grading_and_project_modes.md`,
+  `ASSESSMENT_ARCHITECTURE.md`, `PROJECT_MILESTONES.md`, `course_config.yaml`
+  scoring rule, `build_brightspace_kit.py`, `INSTRUCTOR_IMPLEMENTATION_GUIDE.md`,
+  `project/poster/*` pointers and protocols, `handout_rewrites.yml` key,
+  `schedule_data/part3.py` (meeting schedule, session guides, schedule page). A
+  generator grammar slip ("the artifact … travel") was fixed on the way.
+- ⚠ **For Davi:** on Brightspace, replace the M10, M11, M12, M13 and M15 instructions
+  and PDFs, and update the gradebook so the Poster Presentation poster part is
+  entered from M11. The 2026-10-21 announcement draft still says the rubric grades
+  the poster at M13 and that nothing on the poster may be new; it was revised to
+  match. Make sure the M10 feedback reaches students at least 48 hours before the
+  M11 class, or its numbered requests cannot count (D80).

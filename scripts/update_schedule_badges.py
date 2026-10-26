@@ -33,7 +33,7 @@ from notebooks_map import (NOTEBOOKS, colab_url, student_filename,  # noqa: E402
 from validate_calendar import no_class_days  # noqa: E402
 from session_readings import (lesson_index, rdss_note_compact,  # noqa: E402
                               render_cell, studio_pages)
-from milestone_map import (additions, live_milestones,  # noqa: E402
+from milestone_map import (additions, course_only, live_milestones,  # noqa: E402
                            marked_on_schedule, milestone_map)
 from milestone_carry_forward import SCHEDULE_LEGEND  # noqa: E402
 
@@ -276,6 +276,11 @@ def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
             out.append(f"**{cid}**")
             continue
         mark = f" {PLUS}" if marked_on_schedule(key, adds) else ""
+        if course_only(key, adds):
+            # D90: a course-only milestone's instructions are on the course
+            # platform alone, so the schedule must not send students to a book page.
+            out.append(f"**{cid}**{mark}")
+            continue
         # The course id carries the link to the Book Milestone it presents;
         # naming both was saying the same thing twice in every row.
         first, rest = info["books"][0], info["books"][1:]
