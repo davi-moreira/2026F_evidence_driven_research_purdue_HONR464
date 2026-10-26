@@ -160,8 +160,8 @@ detail, never the boundary. An adaptation that drops the limitations is not a
 shorter version of your work. It is a different claim.
 
 This milestone is not the final poster. Your poster is a draft here, labeled
-preliminary, and it stays revisable. You finish it at **M11** (Wednesday,
-November 4, at the start of class), working from my feedback on this submission.
+preliminary, and it stays revisable. You finish it at **M11** (Sunday,
+November 8, 11:59 PM: the print file), working from my feedback on this submission.
 The gap is deliberate. Everything the criticism gallery and the defense rehearsal
 surface this week is still cheap to fix next week.
 
@@ -187,8 +187,8 @@ questions, or none at all.
 
 Several lines are fixed for you: a printed poster, 34 × 22.5 inches and
 landscape, built on the course template, presented in a hall with live
-questions on Tuesday, November 17, with the final poster due at M11 (Wednesday,
-November 4, at the start of class). The template's panels are your **required elements**, and its guide
+questions on Tuesday, November 17, with the final poster due at M11 (Sunday,
+November 8, 11:59 PM, the file that goes to print). The template's panels are your **required elements**, and its guide
 page sets the minimum type sizes at print scale. Write the rest yourself, then close the contract with one sentence
 naming what your claim must lose to fit this format. That sentence is the one a
 reviewer will test.
@@ -297,7 +297,8 @@ it caused the change; a small randomized pilot next term would settle it." That
 is **precision**, naming the exact boundary. "Take it with a grain of salt" is
 **hedging**, which protects you while informing nobody.
 
-Every question you marked do-not-know is your agenda for M11. Write them down as
+Every question you marked do-not-know is your agenda for M11, and for the
+question strategy you write at M12. Write them down as
 that, in one list, so next week starts where this week stopped.
 
 ### 7. AI Research Ledger rows
@@ -411,7 +412,7 @@ pre-submission checklist.
 | **Figure honesty & accessibility** | Values labeled directly; uncertainty shown as the design licenses; axes encode magnitude honestly; meaning never carried by color alone |
 | **Mode test** | Poster read at gallery distance; spine timed aloud on an outsider; the gallery-walk audit run across all five lenses and revised once in ranked order |
 | **Poster Critic** | Run; every untraceable-number flag and claim-boundary flag marked accepted, partly accepted, or rejected, each by a check you can show |
-| **Defense rehearsal** | Five hard questions, each marked defend, concede, or do-not-know; ULN statement present; the do-not-know list carried to M11 |
+| **Defense rehearsal** | Five hard questions, each marked defend, concede, or do-not-know; ULN statement present; the do-not-know list carried to M11 and M12 |
 | **Version line** | Book Milestone 10, version 1, dated, with a reason a reader could use to reconstruct your thinking |
 | **Permission status** | Your permission determination is stated, with any change of route since M9 |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |

@@ -41,13 +41,22 @@ NOTEBOOKS = {
 REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 
 # Milestone studio notebooks (msNN) — the light Friday-studio companions to the
-# M1–M16 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
+# M1–M17 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
 # final section). Keyed by milestone id. These carry the reduced required set,
 # no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
 # package ships; not every id is present until P4 completes.
-# D54 retired entries 11 and 15: both held the retired M17's release-audit /
-# final-chapter / portfolio material. M11, M12, and M14 have no studio notebook
-# (they never did — entry 11's "M14" label was wrong; its content was M17's).
+# D54 retired entries 11 and 15: both held the retired (pre-D91) M17's
+# release-audit / final-chapter / portfolio material, and their files moved to
+# _retired_d54/.
+# D91 (2026-10-26) rebuilt the conference block. Entries 10 and 12 describe
+# milestones D91 retired (the old M13 poster lock; the old M15 coded-tally
+# reflection). They are retired IN PLACE, not removed: still registered, so
+# nbbuild can rebuild them and validate_misconceptions keeps certifying their
+# freshness, each behind a student-visible "Retired by course decision D91"
+# banner cell, with every other cell unchanged. Entries 13 and 14 now support
+# the new M17 (the Studio 11 package and the peer cold run). The live M11–M16
+# (final poster, presentation planning, peer review, LinkedIn invitation, Expo
+# confirmation, conference reflection) have no studio notebook.
 MS_NOTEBOOKS = {
     0:  ("ms00_research_ai_baseline", "M1 studio — curiosity committed and the research problem"),
     1:  ("ms01_research_opportunity_landscape", "M2 studio — your rules and your question"),
@@ -60,10 +69,12 @@ MS_NOTEBOOKS = {
     7:  ("ms07_declared_analysis_protocol", "M8 studio — robustness audit"),
     8:  ("ms08_minimum_viable_analysis", "M9 studio — bounded research note and claim-evidence table"),
     9:  ("ms09_poster_draft_research_audit", "M10 studio — venue contract and the publication-ready artifact"),
-    10: ("ms10_final_poster_lock", "M13 studio — the final poster lock (terminal)"),
-    12: ("ms12_conference_reflection", "M15 studio — conference reflection"),
-    13: ("ms13_replication_redteam", "M16 support — the peer cold run"),
-    14: ("ms14_research_note_capsule", "M16 studio — reproducible package and the peer cold run"),
+    10: ("ms10_final_poster_lock",
+         "Retired by D91 — the old M13 final poster lock (kept as the record)"),
+    12: ("ms12_conference_reflection",
+         "Retired by D91 — the old M15 conference reflection (kept as the record)"),
+    13: ("ms13_replication_redteam", "M17 support — the peer cold run"),
+    14: ("ms14_research_note_capsule", "M17 studio — reproducible package and the peer cold run"),
 }
 
 

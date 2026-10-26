@@ -97,10 +97,10 @@ the instructor.
 | **15** | 26 | Mon Oct 26 | nb10 · Sun Nov 1, 2026 | 10 | Studio 10: Prepare to publish or present | Adapt and audit I: the venue contract, the artifact that satisfies it, and the audit that catches a figure changing the finding | Monday · guided investigation |
 | **16** | 27 | Wed Oct 28 | nb10 · Sun Nov 1, 2026 | 10 | Studio 10: Prepare to publish or present | Adapt and defend II: compress without inflating, then make the defend-or-concede call | Wednesday · applied AI laboratory |
 | **17** | 29 | Mon Nov 2 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | Poster production lab: the compass positions, and the number that has to trace | Monday · guided investigation |
-| **18** | 30 | Wed Nov 4 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | The draft on the wall: structured review across every active project | Wednesday · applied AI laboratory |
+| **18** | 30 | Wed Nov 4 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | The near-final poster on the wall: an ungraded reading round across every active project | Wednesday · applied AI laboratory |
 | **19** | 32 | Mon Nov 9 | nb12 · Sun Nov 15, 2026 | 12 | Conference block: presentation preparation | Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch | Monday · guided investigation |
 | **20** | 33 | Wed Nov 11 | nb12 · Sun Nov 15, 2026 | 12 | Conference block: presentation preparation | Questions you can predict, and the answer that concedes the smaller true claim | Wednesday · applied AI laboratory |
-| **21** | 35 | Mon Nov 16 | nb13 · Sun Nov 22, 2026 | 13 | Conference block: the public test (dress rehearsal and the Expo) | Dress rehearsal: the questions you can predict, and the numbers that moved since you locked | Monday · guided investigation |
+| **21** | 35 | Mon Nov 16 | nb13 · Sun Nov 22, 2026 | 13 | Conference block: the public test (dress rehearsal and the Expo) | Dress rehearsal: the questions you can predict, and the numbers that moved since the print file | Monday · guided investigation |
 | **22** | 38 | Mon Nov 30 | nb15 · Sun Dec 6, 2026 | 15 | Studio 11: Reproduce and package | The cold run: does your number come back without you in the room? | Monday · guided investigation |
 | **23** | 39 | Wed Dec 2 | nb15 · Sun Dec 6, 2026 | 15 | Studio 11: Reproduce and package | Package it for a stranger — then hand it to one: the capsule, its five sins, and the live cold run | Wednesday · applied AI laboratory |
 | **24** | 41 | Mon Dec 7 | nb16 · Fri Dec 11, 2026 | 16 | Studio 12: Special topic: agentic AI, release, and the next cycle | Direct the closing review: wire the reviewer roles, then price their agreement | Monday · guided investigation |
@@ -180,9 +180,9 @@ Kept in full, and re-owned. This section is the one part of the page D75 did not
 
 > Puzzle: two posters carry the same finding. One puts the headline claim in the reading position a visitor reaches first and its interval one line below; the other puts the claim in the top-left banner and the interval in a footnote at the bottom right. Commit in writing which one a hurried visitor will misquote, and name the structural fact that decides it — not the prettier one, the one whose layout makes the wrong reading harder.
 
-**Slot 18** · Wed Nov 4 · The draft on the wall: structured review across every active project
+**Slot 18** · Wed Nov 4 · The near-final poster on the wall: an ungraded reading round across every active project
 
-> Retrieval and challenge: a spoken drill from memory on the eye-span rule — one thing a claim printed away from its uncertainty may honestly be said to communicate, and one thing it may not. Then the instructor opens the review session by reading the rubric's four criteria aloud and stating the one rule that governs the hour: every finding names the block it lives in and the change that would fix it, or it is a preference and does not go on the sheet.
+> Retrieval and challenge: a spoken drill from memory on the eye-span rule — one thing a claim printed away from its uncertainty may honestly be said to communicate, and one thing it may not. Then the instructor opens the reading round by stating the one rule that governs the hour: every finding names the block it lives in and the change that would fix it, or it is a preference and does not go on the sheet — and nothing on the sheet is graded.
 
 **Slot 19** · Mon Nov 9 · Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch
 
@@ -192,9 +192,9 @@ Kept in full, and re-owned. This section is the one part of the page D75 did not
 
 > Retrieval and challenge: a spoken drill from memory on the compression rule — one thing a shorter pitch may drop, one thing it may not. Then the instructor opens the delivery round by naming the one rule of the hour: every questioner arrives with a question grounded in something visible on the board or in a ledger row, and no question is answered with a concession that is not true.
 
-**Slot 21** · Mon Nov 16 · Dress rehearsal: the questions you can predict, and the numbers that moved since you locked
+**Slot 21** · Mon Nov 16 · Dress rehearsal: the questions you can predict, and the numbers that moved since the print file
 
-> Puzzle: the poster has been locked since last week's deadline. Name the one thing that can still be wrong on that board, and the only repair still available between now and the moment a stranger reads it. The room should arrive at this: the lock froze the board, not your notebook — and when a printed number no longer reproduces, the only remaining repair is a spoken one.
+> Puzzle: the poster went to print at the M11 deadline. Name the one thing that can still be wrong on that board, and the only repair still available between now and the moment a stranger reads it. The room should arrive at this: the print file froze the board, not your notebook — and when a printed number no longer reproduces, the only remaining repair is a spoken one.
 
 **Slot 22** · Mon Nov 30 · The cold run: does your number come back without you in the room?
 
