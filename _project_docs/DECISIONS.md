@@ -5300,6 +5300,36 @@ items.
   intervals is not the interval of the difference; the template now shows the
   difference itself, and the chapter should follow when it is reviewed.
 
+**Amended again (Davi, 2026-10-26): the kit is used, not just available, and M11 is
+the complete poster.** Davi asked that M10 make students actually use the template,
+its instructions and the rubric, and that M11 collect the poster PDF; asked whether
+"final" meant M11 replacing the M13 lock, he chose the complete poster at M11 with
+M13 kept as the print lock.
+
+- **M10** (brief, PDF additions, workbench `ms09`): start from the template file
+  itself (no blank slide, slide size unchanged); read and follow the hidden guide page
+  (print size, type minimums, figures with alt text, export slide 1 only); read the
+  rubric before building, and hand in a **rubric self-check** in `lastname_m10.pdf`,
+  one line per criterion (sections that carry it, today's band, the change that moves
+  it up), scored for honesty and specificity, never for the band chosen. New DoD row;
+  the Craft row names the guide page and the self-check. No weight moved.
+- **M11** (brief and PDF): collects **`lastname_m11_poster.pdf`** (renamed from
+  `lastname_m11_posterdraft.pdf`), the **complete poster PDF**: every template section
+  in final form, no bracket, prompt or EXAMPLE item, print-ready except the repairs
+  the peer review finds; draft tag kept until M13; slide 1 exported as one full-size
+  page; the rubric self-check updated in the trace file. Storyboard, DoD, rubric
+  wording ("sections", not "six blocks") and the quoted-statistic trace aligned; the
+  wrong "Expo's standard board" for 34 × 22.5 in removed. The milestone title and its
+  weights are unchanged. `milestone_course_additions.yml` M11 becomes `additions` with
+  a "This version is your complete poster" section, because the M11 PDF was the book
+  page alone and said nothing about the poster file.
+- **Template guide page:** its rubric map was stale after the 2c8486d rubric
+  amendment (it sent Methods to criterion 4); it is now generated from `RUBRIC`, so it
+  cannot drift again. It also names the self-check and the new M11 filename.
+- ⚠ **For Davi:** on Brightspace, replace the M10 and M11 instructions and PDFs (and
+  their HTML from `brightspace/milestones/`), and attach the rebuilt template to M10
+  and M11. Tracker #27 covers the posting.
+
 ## D88 — nb10b keeps QM 47400 nb17's images beside its code-drawn figures, a scoped exception to D48 (2026-10-21)
 
 **Ruling (Davi, 2026-10-21).** "Keep most of the images we have in nb17 in nb10b, along

@@ -1095,22 +1095,54 @@ milestones:
       built on the course poster template, which is on the narrowed rule's own list (the printed poster)
       and which the book page never asks for.
     schedule_note: poster draft file on the course template
-    additions_markdown: "### Your format is the Expo poster, and you hand in its file\n\nThe book page\
-      \ below lets you choose a format. This course chooses it for you: a\nprinted research poster\
-      \ at the Purdue Undergraduate Research Expo, defended aloud\nwhile you stand beside it. So, in\
-      \ addition to everything the book milestone asks\nfor, hand in your **poster draft file**, built\
-      \ on the course poster template:\n\n1. **`lastname_m10_poster.pptx`**, the editable file, built\
-      \ on\n   `honr464_poster_template.pptx` (34 \xD7 22.5 inches, the course poster format).\n2.\
-      \ **`lastname_m10_poster.pdf`**, its one-page export at full size.\n\nThe poster is always its\
-      \ own file, never a section of another PDF. Fill every\npanel of the template, even where a panel\
-      \ is still rough, and keep its\n**preliminary draft** tag visible: this is a draft, and the printed\
-      \ poster\nlocks later, at M13. Replace every guidance sentence, every bracket, and every\nitem marked\
-      \ EXAMPLE with your own work. Export the poster from your slide editor as its\nown one-page,\
-      \ full-size PDF.\n\nYour poster starts from your research note, section by section: each\nsection of the note drafts the panel with the same name. It may also grow. A\nresult, figure, check, or source you add after the note is welcome, and it\nenters the way everything in the note did: first as a new row in your\nclaim-to-evidence table, traced to the notebook cell that computed it or the\nexact place in its source, then on the board. If a check changes a number,\nupdate its row, record what changed and why, and update the poster. Hand in\nyour current claim-to-evidence table inside `lastname_m10.pdf`, every row\nmarked with the milestone that added it.\n\n### The rubric that waits for the final poster\n\nThe template comes with the course\
-      \ **poster rubric**,\n`Evidence_Driven_Research_Poster_Rubric.pdf`. It grades your final, locked\n\
-      poster, not this draft. Read it now anyway: it names what each panel of the\ntemplate will be asked\
-      \ to carry, and this draft is where you start building\ntoward it.\n"
+    additions_markdown: |
+      ### Your format is the Expo poster, and you hand in its file
+
+      The book page below lets you choose a format. This course chooses it for you: a
+      printed research poster at the Purdue Undergraduate Research Expo, defended aloud
+      while you stand beside it. So, in addition to everything the book milestone asks
+      for, hand in your **poster draft file**, built on the course poster template:
+
+      1. **`lastname_m10_poster.pptx`**, the editable file, built on
+         `honr464_poster_template.pptx` (34 × 22.5 inches, the course poster format).
+      2. **`lastname_m10_poster.pdf`**, its one-page export at full size.
+
+      The poster is always its own file, never a section of another PDF.
+
+      ### Use the template, its guide page, and the rubric
+
+      The template and the rubric are attached to this assignment.
+
+      1. **Start from the template file itself.** Do not start from a blank slide or
+         another layout, and do not change the slide size. A poster that is not built
+         on the template is not the M10 poster.
+      2. **Read the template's guide page before you type anything.** Its second slide
+         is hidden (it shows dimmed in the slide list) and holds the instructions: the
+         print size, the minimum type sizes, how to save figures and write their alt
+         text, which rubric criterion reads which section, and how to export. Follow
+         it. Fill every section, even where a section is still rough; replace every
+         bracket, prompt, and item marked EXAMPLE with your own work; keep the
+         **preliminary draft** tag; export slide 1 only.
+      3. **Read the poster rubric before you build**,
+         `Evidence_Driven_Research_Poster_Rubric.pdf`. It grades your final, locked
+         poster at M13, not this draft. Show that you built toward it with a **rubric
+         self-check** in `lastname_m10.pdf`: one line for each of its eight criteria,
+         naming the sections that carry it, the band you would give it today, and the
+         one change that would move it up.
+
+      ### Your research note drafts the poster
+
+      Your poster starts from your research note, section by section: each section of
+      the note drafts the panel with the same name. It may also grow. A result, figure,
+      check, or source you add after the note is welcome, and it enters the way
+      everything in the note did: first as a new row in your claim-to-evidence table,
+      traced to the notebook cell that computed it or the exact place in its source,
+      then on the board. If a check changes a number, update its row, record what
+      changed and why, and update the poster. Hand in your current claim-to-evidence
+      table inside `lastname_m10.pdf`, every row marked with the milestone that added
+      it.
     instructor_notes:
+    - 2026-10-26 (Davi): the PDF now tells students to start from the template file, follow its hidden guide page, and hand in a rubric self-check, so the attached template and rubric are used, not just available.
     - D89 (2026-10-23, Davi's ruling) retired the "nothing new on the poster" rule. The poster starts
       from the M9 note section by section and may grow beyond it; anything added enters first as a dated
       row in the claim-to-evidence table, traced to its cell or source. No corrected version of the
@@ -1175,16 +1207,40 @@ milestones:
       \ note does not contain. The second is a\nclaim that grew under compression, so the board or the\
       \ spine says more than the\nnote earned. A shorter sentence is not a bigger finding.\n"
   M11:
-    schedule_mark: false
-    classification: pure
+    schedule_mark: true
+    classification: additions
     reason: The Book Milestone page lets the researcher choose any venue format and asks for a venue contract,
       adaptation, content map, and rehearsal record; the course instead requires one specific artifact,
       a first full poster draft on the course template at conference print spec, plus a per-number traceability
       sweep, a reach check, a GenAI Studio Poster Critic run, and delivery at the start of Wednesday's
       class so the in-class peer review round can read it. A student working only from the book page would
       build the wrong artifact and miss the review gate.
-    schedule_note: null
+    schedule_note: the complete poster PDF on the course template
+    additions_markdown: |
+      ### This version is your complete poster
+
+      The book page below treats this version as the peer-reviewed draft of an
+      artifact in any format. In this course it is your **complete poster PDF**, the
+      version your classmates review:
+
+      1. **`lastname_m11_poster.pdf`**: the next version of your M10 poster file,
+         still built on `honr464_poster_template.pptx` (34 × 22.5 inches) and following
+         its guide page, exported from slide 1 only as one full-size page. The poster
+         is always its own file.
+      2. **Complete** means every section of the template is in final form, with no
+         bracket, prompt, or EXAMPLE item left and nothing you still plan to add. It is
+         the board you would print if the review found nothing, so the review's
+         findings are the only changes left before the poster locks at M13. Keep the
+         **preliminary draft** tag until that lock.
+      3. **Check it against the poster rubric**,
+         `Evidence_Driven_Research_Poster_Rubric.pdf`, and hand in your **rubric
+         self-check**, updated from M10, with your traceability sweep: one line per
+         criterion, with today's band and what changed.
+
+      Hand it in at the start of the class in which the peer review runs, and bring a
+      printed or screen-shareable copy: the review reads the board, not the file list.
     instructor_notes:
+    - 2026-10-26 (Davi): M11 collects the complete poster PDF (lastname_m11_poster.pdf, renamed from lastname_m11_posterdraft.pdf) on the course template, every section in final form; it is the printed poster the narrowed rule lists, so M11 becomes additions with the schedule mark. M13 stays the locked print file.
     - 'Deadline is different in KIND, not just in date: M11 is due at the START of Wednesday''s class,
       not at midnight, because the M12 structured peer review runs in that session. The standard PDF header
       must carry the at-class wording, or the review round breaks.'

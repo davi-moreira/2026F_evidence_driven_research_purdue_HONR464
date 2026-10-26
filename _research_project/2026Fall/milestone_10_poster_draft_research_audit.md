@@ -57,7 +57,7 @@ your ledger, and submit by Sunday night.
 |---|---|---|
 | 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file, `lastname_m10.pdf` | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo** (closing with its **New since M9** list), your **content map**, and your **current claim-to-evidence table**: every row marked with the milestone that added it (M09 for the rows your note brought), and every row added since naming its evidence, its verification, and its boundary. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
 | 2 | **`lastname_m10_poster.pptx`** *and* **`lastname_m10_poster.pdf`** | **Your poster draft file**, the graded core: your Expo poster built on the **course poster template** (`honr464_poster_template.pptx`, 34 × 22.5 in), every panel filled and the preliminary draft tag visible. Hand in both the editable file and its one-page PDF export at full size; the poster is always its own file, never a section of another PDF. It also delivers what your **research action plan** commits you to for this milestone (Component 10). |
-| 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of `lastname_m10.pdf` | Your **spoken spine** (the 30-second and 3-minute versions, written out and timed), your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
+| 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of `lastname_m10.pdf` | Your **spoken spine** (the 30-second and 3-minute versions, written out and timed), your **mode-test record**, your **rubric self-check** against the poster rubric (Component 4), your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Your poster starts from your M9 note, section by section: each section of the
@@ -77,15 +77,25 @@ that says the right thing, not yet into a perfect one. Export the poster
 directly from your slide editor as its own one-page, full-size PDF; the
 notebook-printing steps at the end of this page are for your other files.
 
-**The template and the rubric.** Both are posted with this assignment on
-Brightspace, and they also live in the course repository under
-`project/poster/`. The template, `honr464_poster_template.pptx`, opens in
-PowerPoint, Keynote, or Google Slides; its hidden second page is the guide to
-the print specification and the panels. The rubric,
-`Evidence_Driven_Research_Poster_Rubric.pdf`, is the one that grades your
-**final, locked poster at M13**. It does not grade this draft, which is scored
-by the M10 rubric below. Read it now anyway: it tells you what each panel will
-be asked to carry, and this draft is where you start building toward it.
+**The template and the rubric.** Both files are attached to this assignment on
+Brightspace, next to these instructions, and they also live in the course
+repository under `project/poster/`. Use them in this order:
+
+1. **Start from the template file itself**, `honr464_poster_template.pptx`. It
+   opens in PowerPoint, Keynote, or Google Slides. Do not start from a blank
+   slide or another layout, and do not change the slide size (34 × 22.5 inches).
+   A poster that is not built on the template is not the M10 poster.
+2. **Read its guide page before you type anything.** The second slide is hidden
+   (it shows dimmed in the slide list) and is the template's instructions: the
+   print size, the minimum type sizes, how to save figures and write their alt
+   text, which rubric criterion reads which section, and how to export. Follow
+   it. Replace every bracket, every prompt, and every item marked EXAMPLE with
+   your own work, keep the preliminary draft tag, and export **slide 1 only** as
+   one full-size page.
+3. **Read the rubric before you build.** `Evidence_Driven_Research_Poster_Rubric.pdf`
+   grades your **final, locked poster at M13**; this draft is scored by the M10
+   rubric below. You still build toward it now, and you show that you did with
+   the **rubric self-check** in Component 4.
 
 ---
 
@@ -245,6 +255,13 @@ never earned travels furthest, because it changes what the whole board asserts. 
 crowded margin travels least. Revise once, in ranked order, and record what you
 fixed and what you deliberately left.
 
+Finish with the **rubric self-check**. Read your draft against
+`Evidence_Driven_Research_Poster_Rubric.pdf`, criterion by criterion, and write
+one line for each of its eight criteria: the template sections that carry it on
+your board, the band you would give it today, and the one change that would
+move it up. It is scored on being honest and specific, never on the band you
+choose. Your lowest line is your first job for M11.
+
 ### 5. The required AI review — the Poster Critic
 
 Submit your artifact draft, the text plus a description or export of each figure,
@@ -383,7 +400,8 @@ pre-submission checklist.
 | **Transformation memo** | What expands, compresses, moves, becomes visual, becomes spoken, in the move from the M9 note, section by section; closed by the **New since M9** list, each item with its table row |
 | **Content map** | Claim, evidence, boundary, uncertainty, and disclosure each mapped to a location, not an intention |
 | **The artifact** | Poster draft built to the contract, labeled preliminary, plus the 30-second and 3-minute spoken spine |
-| **Poster draft file** | Built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in); every panel filled; no guidance, bracket, or EXAMPLE text left; editable `.pptx` and its one-page full-size `.pdf` both submitted |
+| **Poster draft file** | Built from the course template file (`honr464_poster_template.pptx`, 34 × 22.5 in, slide size unchanged) following its guide page: minimum type sizes met, figures saved from your notebook with alt text, every section filled, no bracket, prompt, or EXAMPLE text left, draft tag kept; editable `.pptx` and its one-page full-size `.pdf` (slide 1 only) both submitted |
+| **Rubric self-check** | One line for each of the poster rubric's eight criteria: the sections that carry it, today's band, and the change that would move it up |
 | **Adaptation rule** | Each panel starts from the matching section of the M9 note; anything new since M9 has its own row in the claim-to-evidence table; the claim is no larger than its design warrants |
 | **Traceability** | Every load-bearing number and figure walks back through the claim-to-evidence table to the cell that produced it |
 | **Claim-to-evidence table** | The current table, in the contract file; every row marked with the milestone that added it; each row added since M9 names its evidence, its verification, and its boundary |
@@ -420,7 +438,7 @@ and the rehearsal records defensible responses plus the unresolved work.
 | **Evidence integrity & provenance** (18) | Every number, figure, and citation on the artifact has a row in the claim-to-evidence table, whether it came from the M9 note or arrived since, and walks back to its cell or its source (16–18) | Traceable; one trace thin or one citation under-linked (13–15) | A row that exists but traces thinly (its cell, source, or check not named), or a number whose trace is asserted rather than shown (7–12) | A fabricated or unretrievable source, an untraceable number displayed to an audience, or a result, figure, or citation with no row in the table (0–6) |
 | **Verification & robustness** (23) | Venue contract, transformation memo, and content map all present and specific; the mode test was really run and recorded; the gallery-walk audit ranks its hits and shows the single revision pass; the Poster Critic was run and every flag adjudicated by a named check (a valid flag accepted counts as fully as a false one refuted); every judgment defended in your own reasoning, not a tool's (21–23) | All pieces present; one flag acted on without a named check, or the mode test recorded loosely (17–20) | A content map of intentions rather than locations, an audit with no ranking, or Poster Critic output pasted in unadjudicated (10–16) | No mode test, no audit, or an AI flag adopted or ignored with no check either way (0–9) |
 | **Uncertainty & limitations** (18) | Uncertainty sits in the same eye-span as the claim on the artifact itself; the ULN statement is precise rather than hedging; the five questions are genuinely hard and honestly marked (16–18) | Present; one beat stated loosely, or one question softened (13–15) | Uncertainty relegated to a corner the eye never reaches, or a question bank of easy questions (7–12) | Limitations dropped in the adaptation, or the finding presented as settled certainty (0–6) |
-| **Craft, ledger & communication** (13) | On-format (the poster built on the course template, with the editable file and its PDF both submitted), on-time, readable at its intended distance and hearable at its intended length; accessibility handled; gallery feedback incorporated; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a poster not built on the template, or no editable poster file), or gallery feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Craft, ledger & communication** (13) | On-format (the poster built on the course template and following its guide page, with the editable file and its PDF both submitted, and the rubric self-check present), on-time, readable at its intended distance and hearable at its intended length; accessibility handled; gallery feedback incorporated; complete AI Research Ledger; dossier line present; a dated, numbered version with a reason a reader could use; the ethics, permissions and data-exposure rail carried as this studio requires (12–13) | Minor format lapses; ledger complete (10–11) | Missing pieces (including a poster not built on the template, no editable poster file, or no rubric self-check), or gallery feedback ignored (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M10-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M10"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.

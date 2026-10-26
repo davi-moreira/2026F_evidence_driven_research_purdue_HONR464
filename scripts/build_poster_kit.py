@@ -863,8 +863,8 @@ def build_template(qm474: Path, out: Path) -> None:
         [("Export:", {"bold": True}),
          (" slide 1 only, as a PDF: exactly one page, 34 × 22.5 in, nothing clipped.", {})],
         [("Files:", {"bold": True}),
-         (" M10: lastname_m10_poster.pptx + .pdf. M11: lastname_m11_posterdraft.pdf. "
-          "M13: lastname_m13_poster.pdf, poster only.", {})],
+         (" M10: lastname_m10_poster.pptx + .pdf. M11: lastname_m11_poster.pdf, the complete poster. "
+          "M13: lastname_m13_poster.pdf, the locked print file, poster only.", {})],
     ], name="Guide: print spec", size=22)
     y = bar(g, gx[1], gw, 2.6, "RULES THE BOARD KEEPS")
     text(g, gx[1], y + 0.1, gw, 17.0, [
@@ -879,27 +879,25 @@ def build_template(qm474: Path, out: Path) -> None:
         [("Two channels for every distinction:", {"bold": True}), (" label or pattern, colour as a bonus.", {})],
         [("Replace every bracket, prompt and EXAMPLE item.", {"bold": True}),
          (" Panels may resize; every section stays.", {})],
+        [("Check the board against the rubric", {"bold": True}),
+         (" before M10 and M11: one line per criterion in your rubric self-check.", {})],
         [("Draft tag through M11; delete it at the M13 lock.", {"bold": True}),
          (" Keep “Preliminary results” in the footer.", {})],
         [("AI:", {"bold": True}),
          (" disclose on the poster, per tool: purpose, what you changed or kept, how you checked it. The "
           "Expo does not accept AI-generated sections or abstracts, or an AI-designed poster.", {})],
     ], name="Guide: rules", size=22)
-    y = bar(g, gx[2], gw, 2.6, "SECTION → RUBRIC → BOOK")
-    table(g, gx[2], y + 0.15, gw, [
-        ("Section", "Rubric", "Book"),
-        ("Title · Abstract · The question · What is already known", "1", "Ch. 1, 7–9"),
-        ("Design: what your claim needs", "2", "Ch. 6–7, 10, 12, 14–19"),
-        ("Data and measurement", "3", "Ch. 13, 20–21"),
-        ("Methods · Checks and verification", "4", "Ch. 11, 22–25, 36–37"),
-        ("Main result", "5", "Ch. 32"),
-        ("Headline · Conclusions · Limitations", "6", "Ch. 28–29, 35"),
-        ("AI use disclosure · References · Acknowledgments", "7", "Ch. 9, 30"),
-        ("The whole board", "8", "Ch. 32–33"),
-    ], [gw - 4.4, 1.3, 3.1], size=18, row_h=0.75, name="Guide: section map")
-    text(g, gx[2], 11.5, gw, 4.0, [
+    y = bar(g, gx[2], gw, 2.6, "RUBRIC → SECTIONS → BOOK")
+    # Generated from RUBRIC, so the guide can never disagree with the rubric it points to.
+    table(g, gx[2], y + 0.15, gw,
+          [("Rubric criterion", "Sections it reads", "Book")]
+          + [(f"{i}. {c['name']} ({c['points']})", c["panels"], c["chapters"])
+             for i, c in enumerate(RUBRIC, 1)],
+          [3.9, gw - 6.2, 2.3], size=14, row_h=0.95, name="Guide: rubric map")
+    text(g, gx[2], 13.0, gw, 4.0, [
         "The final poster (M13) is graded with Evidence_Driven_Research_Poster_Rubric.pdf: eight criteria, "
-        "100 points, hard caps. Read it before you build.",
+        "100 points, hard caps. Read it before you build, and check your board against it before M10 and "
+        "M11.",
     ], name="Guide: rubric", size=22)
     prs.core_properties.title = "HONR 46400 research poster template"
     prs.core_properties.author = "Davi Moreira"

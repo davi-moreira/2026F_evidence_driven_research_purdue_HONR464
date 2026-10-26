@@ -59,8 +59,8 @@ and an unreviewed draft has nothing to revise from before Sunday's lock.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m11_posterdraft.pdf`** | Your **first full poster draft**, the next version of your M10 poster file, built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in, the Expo's standard board). Every block present — title and author, the question, the design and data, the result with its uncertainty, the boundary, and the AI-use disclosure — even where a block is still rough. It also delivers what your **research action plan** commits you to for this milestone (Component 6). |
-| 2 | **`lastname_m11_trace.pdf`** *or* the same as notebook sections | Your **traceability sweep**: every number printed on the draft, listed with the notebook and cell that produced it. Any number you cannot trace is listed and marked as blocking. Opens with the **Instructor Request Record** (Component 5), which is graded under the carry-forward adjustment. |
+| 1 | **`lastname_m11_poster.pdf`** | Your **complete poster PDF**: the next version of your M10 poster file, still built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in, the course format printed with QM 47400's posters) and following its guide page. Every one of the template's sections is in final form, with no bracket, prompt, or EXAMPLE item left, so the board is print-ready except for the repairs the peer review will find; the preliminary draft tag stays on until the M13 lock. Exported from slide 1 only, as one full-size page, and always its own file. It also delivers what your **research action plan** commits you to for this milestone (Component 6). |
+| 2 | **`lastname_m11_trace.pdf`** *or* the same as notebook sections | Your **traceability sweep**: every number printed on the poster, listed with the notebook and cell that produced it (or, for a statistic you quote, the exact place in its source); then your **rubric self-check**, updated from M10: one line per criterion of the poster rubric, with today's band and what changed since M10. Any number you cannot trace is listed and marked as blocking. Opens with the **Instructor Request Record** (Component 5), which is graded under the carry-forward adjustment. |
 | 3 | **`lastname_m11_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for the checks you completed before this submission, including the reach-check prompt from Monday's lecture and a Poster Critic run made before class. Checks you run during Wednesday's class go in your M12 response record. |
 
 Bring a printed or screen-shareable copy to class as well — the review round
@@ -90,9 +90,10 @@ you the claim.
 
 Two rules govern this milestone, and both are checked:
 
-1. **Every number on the board traces to the cell that produced it.** A number
-   with no run behind it is a fabricated number, whatever route it took onto the
-   poster.
+1. **Every number on the board traces to where it came from.** A number your
+   project computed traces to the cell that produced it; a statistic you quote
+   traces to the exact place in its source. A computed number with no run behind
+   it is a fabricated number, whatever route it took onto the poster.
 2. **The uncertainty rides in the same eye-span as the claim it qualifies.** A
    headline in the reading position and its interval in a bottom-right footnote
    are not read together, which means they are not communicated together.
@@ -103,17 +104,24 @@ Two rules govern this milestone, and both are checked:
 
 ### 1. The storyboard, built before the software
 
-Six blocks on paper, in the order a visitor's eye travels them, with the
-headline placed in a compass position you can name and defend. Draw it before
-you open the template. A poster laid out inside the software takes the shape the
+Before you revise your M10 file, sketch the board on paper: the template's
+sections in the order a visitor's eye travels them, with the headline placed in
+a compass position you can name and defend. Draw it before you reopen the
+template. A poster laid out inside the software takes the shape the
 software offers; a poster laid out on paper takes the shape the argument needs.
 
-### 2. The draft itself
+### 2. The complete poster
 
-Built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 inches,
-with the minimum type sizes on its guide page), starting from the poster file you
-handed in at M10, and complete in the sense that every block exists. Rough is fine. Missing is not: a reviewer cannot
-find the defect in a block you did not draw.
+Built on the course template (`honr464_poster_template.pptx`, 34 × 22.5 inches),
+starting from the poster file you handed in at M10, and following the template's
+guide page: the minimum type sizes, figures saved from your notebook with alt
+text, and slide 1 exported as one full-size page. **Complete** means every
+section of the template is in final form: no bracket, prompt, or EXAMPLE item
+left, and nothing you are still planning to add. This is the board you would
+print if the peer review found nothing, so the reviewers read the real poster
+and their findings are the only changes left before the M13 lock. Check it
+against the poster rubric (`Evidence_Driven_Research_Poster_Rubric.pdf`) before
+you submit, and update your rubric self-check.
 
 Check it once at print scale rather than screen scale. Text that is comfortable
 on a laptop is frequently unreadable from two metres, and two metres is where
@@ -210,8 +218,9 @@ plan gets corrected.
 
 | Element | Standard |
 |---|---|
-| **Storyboard** | Six blocks, ordered by the reading compass, headline placed in a named position |
-| **Draft completeness** | Every block present: title and author, question, design and data, result with uncertainty, boundary, AI-use disclosure |
+| **Storyboard** | The template's sections sketched in reading order, headline placed in a named compass position |
+| **Complete poster** | Every template section in final form; no bracket, prompt, or EXAMPLE item left; draft tag still on; one full-size page exported from slide 1 |
+| **Rubric self-check** | Updated from M10: one line per poster-rubric criterion, today's band, and what changed |
 | **Print spec** | Built on `honr464_poster_template.pptx` at 34 × 22.5 in; the guide page's minimum type sizes met at print scale; every template panel present |
 | **Eye-span** | The headline's uncertainty is inside the same eye-span as the headline |
 | **Traceability sweep** | Every printed number listed with its notebook and cell; untraceable numbers marked blocking |
@@ -219,7 +228,7 @@ plan gets corrected.
 | **Poster Critic** | Run for a reading rather than a compliment; the reading recorded |
 | **AI Research Ledger** | One row per AI-assisted step, verification method named and non-vague |
 | **Timing** | Submitted at the start of Wednesday's class — the review round depends on it |
-| **Filenames** | `lastname_m11_posterdraft.pdf`, `lastname_m11_trace.pdf`, `lastname_m11_ledger.pdf` |
+| **Filenames** | `lastname_m11_poster.pdf` (always its own file), `lastname_m11_trace.pdf`, `lastname_m11_ledger.pdf` |
 | **Location** | Brightspace → Assignments → M11 |
 | **Instructor Request Record** | Opens the traceability PDF; every `IR-M11-##` request from the M10 review copied and marked **Done** with an exact location or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 | **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
@@ -232,11 +241,11 @@ plan gets corrected.
 
 | Criterion | Excellent | Proficient | Developing | Inadequate |
 |---|---|---|---|---|
-| **Reading architecture** (23) | The headline sits in a compass position the author can name and defend; the six blocks read in the order the eye travels; the ninety-second read delivers question, result, and bound; complete and unmistakably about your project (21–23) | The order works with one block out of position (17–20) | A visitor has to hunt for the result or the question (10–16) | No discernible reading order; the board must be read like a paper (0–9) |
+| **Reading architecture** (23) | The headline sits in a compass position the author can name and defend; the sections read in the order the eye travels; the ninety-second read delivers question, result, and bound; complete and unmistakably about your project (21–23) | The order works with one block out of position (17–20) | A visitor has to hunt for the result or the question (10–16) | No discernible reading order; the board must be read like a paper (0–9) |
 | **Traceability** (22) | Every number on the draft is listed with its notebook and cell; untraceable numbers are named as blocking rather than quietly left (20–22) | Complete, with one number needing a hunt (16–19) | Several numbers not readily traceable (10–15) | A number on the board with no run behind it (0–9) |
 | **Uncertainty placement** (18) | The interval or caveat is inside the headline's eye-span; the boundary sentence is present and stops where the evidence stops (16–18) | Present, one placement off the read path (13–15) | Uncertainty present but off-path or vague (7–12) | No uncertainty on the board, or the result shown as settled (0–6) |
-| **Craft, ledger & disclosure** (18) | Template and print spec met, legible at print scale, redundant encoding where colour carries meaning; complete ledger; AI-use disclosure block present; a dated, numbered version with a reason a reader could use; every judgment defended in your own reasoning, not a tool's; the ethics, permissions and data-exposure rail carried as this studio requires (16–18) | Minor spec or accessibility lapse; ledger complete (13–15) | Off-spec or hard to read at size (7–12) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–6) |
-| **Readiness for review** (9) | Submitted at the start of class, complete enough that every reader from another active project can produce an actionable finding (8–9) | On time, one block too thin to review (6–7) | Late to the review round (4–5) | Not submitted in time to be reviewed (0–3) |
+| **Craft, ledger & disclosure** (18) | Template and its guide page followed (print spec, slide 1 exported as one full-size page), rubric self-check updated, legible at print scale, redundant encoding where colour carries meaning; complete ledger; AI-use disclosure block present; a dated, numbered version with a reason a reader could use; every judgment defended in your own reasoning, not a tool's; the ethics, permissions and data-exposure rail carried as this studio requires (16–18) | Minor spec or accessibility lapse; ledger complete (13–15) | Off-spec or hard to read at size (7–12) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–6) |
+| **Readiness for review** (9) | Submitted at the start of class as a complete poster, every section in final form, so every reader from another active project can produce an actionable finding (8–9) | On time, one section unfinished or too thin to review (6–7) | Late to the review round (4–5) | Not submitted in time to be reviewed (0–3) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M11-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M11"; that earns the full 10. This row scores your response; the quality of the research itself is scored in the rows above.
@@ -260,7 +269,7 @@ request is reissued for a later milestone.
 ## Four Traps
 
 1. **The board built inside the template.** You open the template first, and the
-   layout it offers becomes the argument you make. Draw the six blocks on paper
+   layout it offers becomes the argument you make. Sketch the sections on paper
    first; the software should serve the order, not set it.
 2. **The number that came from the write-up.** You copy a figure from your M10
    prose rather than from the run, and the prose was rounded. The sweep catches
