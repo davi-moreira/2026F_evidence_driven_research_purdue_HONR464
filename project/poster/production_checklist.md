@@ -16,7 +16,7 @@ prevent.
 
 Individual work is the default. An approved group runs one checklist on its
 shared poster, names every member on the record, and receives one common
-poster-quality score. Each member still completes a personally attributable
+poster score. Each member still completes a personally attributable
 traceability check and later receives an individual live-presentation score.
 
 ## Materials

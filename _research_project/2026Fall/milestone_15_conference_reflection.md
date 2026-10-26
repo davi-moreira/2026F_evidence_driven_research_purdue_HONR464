@@ -42,11 +42,11 @@ cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it.
 
-This milestone records the public test and what you learned from it. The locked
-poster from M13 and your live **Expo presentation** on Tuesday, November 17
+This milestone records the public test and what you learned from it. Your final
+poster (graded at M11) and your live **Expo presentation** on Tuesday, November 17
 together supply the Final Project's **Poster Presentation at the Purdue
 Undergraduate Research Conference** component (12% of your course grade):
-`70%` is the M13 poster-quality score and `30%` is the live-presentation score
+`70%` is the M11 final-poster score and `30%` is the live-presentation score
 defined below. For
 an approved group, the poster-quality portion is shared, but every member must
 present and receives their own live-presentation score. At the Expo, you stand
@@ -431,7 +431,7 @@ pre-submission checklist.
 
 This score is entered only through **Poster Presentation at the Purdue
 Undergraduate Research Conference**.
-The item calculation is `0.70 × M13 poster-quality score + 0.30 × this live
+The item calculation is `0.70 × M11 final-poster score + 0.30 × this live
 presentation score`. For an approved group, the first term is the shared poster
 score and the second term is each member's own live-presentation score.
 

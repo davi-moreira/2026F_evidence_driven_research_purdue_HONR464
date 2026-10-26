@@ -320,7 +320,7 @@ sixteen M1–M16 scores. An approved group submits one shared artifact naming
 every member. Enter shared rubric-row scores in common and score requirements
 marked individual per student; a milestone score may differ only on those
 individual rows. Every student still completes Peer Review and presents live. A
-group shares the poster-quality score and the instructor's evaluation of the
+group shares the M11 poster-rubric score and the instructor's evaluation of the
 locked poster; live delivery and Peer Evaluation remain individual.
 
 ---
@@ -386,7 +386,7 @@ miss the print deadline and there is no poster to present.
    Confirm the print vendor turnaround well before this date.
 3. **URC Expo — Tue Nov 17.** Required. Live presentation quality supplies 30%
    of Final Project's Poster Presentation at the Purdue Undergraduate Research
-   Conference item; M13 poster quality
+   Conference item; the poster rubric on the M11 final poster (D90)
    supplies the other 70%. M15 grades the written reflection, not live quality. Each student
    presents their poster and **evaluates at least three other conference
    posters** on the course criticism instrument. **No class Wed Nov 18.** Only a documented

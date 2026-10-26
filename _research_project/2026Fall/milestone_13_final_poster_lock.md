@@ -44,14 +44,14 @@ checked it. Milestone weights live in
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md);
 instructions and rubrics live one page per milestone, like this one.
 
-This milestone produces the locked poster later assessed inside the Final
-Project's **Poster Presentation at the Purdue Undergraduate Research
-Conference** component and used as evidence in **Instructor/TA Evaluation**.
-The M13 process score is one of the
+This milestone locks the print file of the **final poster you submitted at
+M11**, with only the repairs the M12 peer review found, and produces the
+reproducible package behind it. Your poster was graded at M11, with the poster
+rubric; the poster you lock here is the one you present at the Expo and the
+evidence for **Instructor/TA Evaluation**. The M13 process score is one of the
 sixteen scores averaged inside **Milestone Deliverables**: it records the
-on-time, gate-cleared lock and version record. The separate poster-quality and
-live-presentation scores evaluate terminal quality, and no rubric score is
-copied between components. It is a **terminal artifact**:
+on-time, gate-cleared lock and version record, and no rubric score is copied
+between components. It is a **terminal artifact**:
 **the deadline governs and there is no revision window.**
 Sunday, November 8, 11:59 PM is the real production deadline, not a buffer. It is a print deadline: your file goes straight to the press on a run shared with QM 47400. The
 poster you submit is the poster strangers read at the Expo on November 17. There
@@ -74,7 +74,7 @@ on the board that did not just reproduce.
 | 1 | **`lastname_m13_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, the dated frozen manifest, and your **current claim-to-evidence table**, frozen with it: every number, figure, and citation on the locked board has its row, marked with the milestone that added it. |
 | 2 | **`lastname_m13_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
 | 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** Opens with the **Instructor Request Record** (Component 8), which is graded under the carry-forward adjustment. |
-| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**: exactly one 34 × 22.5 inch landscape page, the poster only, exported from slide 1 of the course template, with your **AI-use disclosure block** on the board itself. Your **signed final-lock checklist** goes in `lastname_m13_gates.pdf`, never in the print file. Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. It also delivers what your **research action plan** commits you to for this milestone (Component 9). |
+| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**: your M11 final poster with only the repairs the M12 peer review found (and any number the cold run corrected); exactly one 34 × 22.5 inch landscape page, the poster only, exported from slide 1 of the course template, with your **AI-use disclosure block** on the board itself. Your **signed final-lock checklist** goes in `lastname_m13_gates.pdf`, never in the print file. Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. It also delivers what your **research action plan** commits you to for this milestone (Component 9). |
 
 If you submit a folder or notebook link, set sharing so the instructor can open
 it, and confirm the package runs top to bottom in a clean session. Submit the
@@ -232,12 +232,14 @@ elsewhere, because a blocking gate is not scored.
 
 ### 5. The locked poster, built on the reproduced numbers
 
-The complete poster, built on the course template (`honr464_poster_template.pptx`,
+Your M11 final poster, changed only where the M12 peer review found a defect or
+the cold run corrected a number. It stays on the course template (`honr464_poster_template.pptx`,
 34 × 22.5 inches, the course format shared with QM 47400's print run) with the minimum type sizes on its
 guide page. It must be legible at the size it will be printed, not only on your
 screen. Delete the template's **preliminary draft** tag at this lock, because the
 print file is final, and keep the footer's **Preliminary results** status, because
-the research continues to December. Four properties are graded on the board:
+the research continues to December. Four properties must still hold on the print
+file:
 
 - **One headline claim, inside its compass position.** Your headline states the
   finding in one sentence whose verb stays inside your **compass position**, the
@@ -291,8 +293,8 @@ output against reality.
 **A missing ledger is not a minor lapse.** This is an individual requirement in
 either project mode. A missing AI Research Ledger entry scores that student's
 18-point **Individual craft, ledger & closeout** row **0**, and their submission
-is **returned** for completion before it is graded. It does not change an
-approved group's common poster-quality score.
+is **returned** for completion before it is graded. It does not change the M11
+poster score.
 
 ### 7. Dossier update line
 
@@ -399,7 +401,7 @@ pre-submission checklist.
 
 ## M13 milestone process score (100 points)
 
-**What these two rubrics score.** The book and the course together. Your book milestone's own checks are split across them: *complete and specific to your project* and *a dated, numbered version with its reason* in this process score (the files, gates and version rows); *every judgment defended by you*, *the milestone's own product* and *the four rails* in the poster-quality rubric below. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
+**What this score records.** The book and the course together. Your book milestone's own checks are split across them: *complete and specific to your project* and *a dated, numbered version with its reason* in this process score (the files, gates and version rows); *every judgment defended by you*, *the milestone's own product* and *the four rails* were scored on your final poster at M11, by the poster rubric. What the course adds is your carry-forward record: the **Carry-forward** row below scores your action plan's steps, and the adjustment after the table covers the numbered review requests.
 
 This score is entered only as M13 within **Milestone Deliverables**.
 For an approved group, the first three rows (72 points) are common because they
@@ -430,69 +432,7 @@ change is addressed; so is a reasoned decision not to adopt a request, with the
 choice made instead. Where this milestone is revision-eligible, the deduction
 follows the standing revision policy. A request can reduce this score only if
 its numbered wording reached you at least 48 hours before the deadline; a later
-request is reissued for a later milestone. It does not change the poster-quality score, the Poster Presentation component, or Instructor/TA Evaluation. M13 is terminal: a carry-forward deduction here has no revision window.
-
-## Final Project poster-quality rubric (100 points)
-
-This rubric scores **what your poster communicates**, panel by panel, the way
-the Expo audience meets it, and the grader checks that what it communicates is
-true against your claim-to-evidence table, your package, your run records, and your ledger. It is the course's poster rubric, adapted from QM 47400's
-poster-only rubric to the EDR|AI way of doing research (D87), and it is built
-for the course poster template: each criterion names the template panels it
-reads. Its eight criteria sit on the course's five shared virtues
-(`planning/ASSESSMENT_ARCHITECTURE.md`): *Compass & pathway alignment* in
-criteria 1–3 (40 points, criterion 3 being research design and methodology),
-*Evidence integrity & provenance* in 7 (8), *Verification & robustness* in 4–5
-(27), *Uncertainty & limitations* in 6 (15), and *Craft & communication* in 8
-(10).
-
-This score supplies the poster-quality evidence for **Poster Presentation at
-the Purdue Undergraduate Research Conference**. That Final Project component is
-worth 12% of your course grade, and its score is `0.70 × this poster-quality
-score + 0.30 × the M15 live Expo presentation score`. For an approved group,
-this poster-quality score is common to the group; each member still receives
-their own live-presentation score. Do not enter either score as the M13
-milestone process score. The package's own quality (README, licence, manifest)
-is not scored here: the gates and the process score above check it now, and M16
-scores it in full.
-
-<!-- poster-rubric:begin -->
-<!-- Generated by scripts/build_poster_kit.py (D87) from its RUBRIC and
-     HARD_CAPS. Edit the script and rerun it; edits here are overwritten. -->
-
-Score each criterion in one band. The rubric scores what your poster
-communicates, panel by panel; the grader checks that it is true (sources,
-computed results, reproduction, AI disclosure) against your claim-to-evidence
-table, your package, your run records, and your ledger. Those checks decide whether the
-board can be trusted; they add no package-craft points. The same rubric is
-handed out as `project/poster/Evidence_Driven_Research_Poster_Rubric.pdf` (with the grading sheet
-`Evidence_Driven_Research_Poster_Rubric.xlsx`) next to the poster template
-`project/poster/honr464_poster_template.pptx`; each criterion names the
-template panels it reads.
-
-| # | Criterion | Exemplary | Proficient | Developing | Beginning |
-|---|---|---|---|---|---|
-| 1 | **Question, context & contribution** (10)<br>*Title · Abstract · The question and why it matters · What is already known* | One specific research question, and why it matters; the main conclusion of the literature synthesized from at least two sources you read; what your project adds to that conclusion made explicit; the hypothesis you recorded before the analysis ran, with any later analysis labeled exploratory. (9–10) | The question is clear, but the context or the contribution stays general: one source, or "little is known" without saying what is known. (7–8) | The question is broad or ambiguous; sources are listed without saying what they establish; no contribution is stated. (4–6) | A topic without a usable research question. (0–3) |
-| 2 | **Target, design & warranted claims** (15)<br>*Design: what your claim needs* | The question's kind (descriptive or causal) and its reach (a named population beyond the data, or the unseen cases a prediction serves) are declared, with prediction named as an objective when it is one; the target quantity is exact; the board states what supports each crossing (a sampling argument for a population, an assignment or identification argument with its assumptions for a cause, a held-out test against a baseline for prediction) and what the evidence cannot yet support, including a causal target that remains unidentified. (14–15) | Design and target are clear; one warrant or assumption is underexplained. (11–13) | The link between target, design, and reach is ambiguous, or the kind is mislabeled (for example, a causal question silently relabeled descriptive). (6–10) | No defensible account of what the design can establish, or a design presented as able to answer a question it cannot. (0–5) |
-| 3 | **Research design & methodology** (15)<br>*Design: what your claim needs · Data and measurement · Methods* | The design and method fit the question: the data strategy (who or what was observed, how units were selected, sample size counted in independent units, time window) and the answer strategy (the comparison, estimator, or model, and how its uncertainty is computed) are stated and justified; the data source and route can be identified; each key concept is tied to its measure with the main validity concern; missing data and the permission or IRB determination are reported; what was declared in advance is kept apart from later changes. (14–15) | Design and method are appropriate and clearly described; one justification or one consequential detail (selection, measurement, missing data) is thin. (11–13) | Methods are named but not justified for this question, or the data, selection, or measurement are described too vaguely to judge the design. (6–10) | No identifiable design or method, a method that cannot answer the question, or evidence that cannot be identified. (0–5) |
-| 4 | **Checks & verification** (12)<br>*Checks and verification · verification status line* | The uncertainty is computed at the level of the independent unit, with any dependence named; at least one consequential robustness, sensitivity, or diagnostic check is reported with what it changed; the verification status is accurate and honestly labeled (an external cold run, or "solo proxy; external cold run pending"). (11–12) | Uncertainty appropriate; the check or the verification account is thin. (9–10) | An uninformative check, or a verification claim the record does not support. (5–8) | A material analytical error, or a displayed result with no trace or that fails to reproduce. (0–4) |
-| 5 | **Results & figure honesty** (15)<br>*Main result* | The main evidence answers the question and is easy to inspect; key estimates and comparisons are labeled directly, with units and the n; the uncertainty the design warrants is shown (an interval with its type and level, or a precise caveat saying why none is warranted); scales are honest (bars start at zero, other plots carry clearly labeled scales); the caption names the notebook cell or output behind the figure. (14–15) | The result is understandable and honest; one labeling or caption omission. (11–13) | The reader has to reconstruct a key comparison, a denominator, or the uncertainty. (6–10) | The visual encoding distorts the result (a truncated bar axis turning a small gap into a cliff), or no inspectable result is presented. (0–5) |
-| 6 | **Interpretation, uncertainty & limitations** (15)<br>*Headline · Conclusions · Limitations* | Headline and conclusion claim no more than the evidence: causal wording only with a defended identification argument, population wording only with a reach argument; the qualifier that blocks the likely wrong inference sits in the same eye-span as the claim; the consequential limitation and a feasible next step are explicit (uncertainty, limitation, next step); the preliminary status is stated. (14–15) | The interpretation is sound; the qualifier's placement or the next step is underdeveloped. (11–13) | Generic limitations ("results may vary"), uncertainty off the read path, or wording that drifts past the evidence. (6–10) | The central claim exceeds its warrant, or the result is presented as settled certainty. (0–5) |
-| 7 | **Sources, AI disclosure & credit** (8)<br>*AI use disclosure · References · Acknowledgments* | Citations and references correspond and survive checking, and each reference can be found (author, year, title, venue, DOI or URL); the AI disclosure is on the poster itself and names each tool, its purpose, what you changed or kept from its output, and how you checked it (or "No AI used", when true); help, data providers, and funding are credited. (8) | Complete, with one reference or one disclosure line ambiguous. (6–7) | References or disclosure incomplete enough to impede checking. (3–5) | A fabricated or materially misattributed source, or a confirmed AI contribution missing from the disclosure. (0–2) |
-| 8 | **Visual communication & accessibility** (10)<br>*The whole board* | A clear reading order: the finding is found in seconds, and the question, result, and boundary in a ninety-second read; built on the course template at 34 × 22.5 in, with the guide's minimum type sizes; strong contrast; every distinction carried in two channels (a label or pattern, never colour alone); each figure carries alt text in the file; no template guidance or EXAMPLE material left. (9–10) | Readable and navigable, with minor craft lapses or one colour-only distinction. (7–8) | Dense, small, or poorly ordered content that needs the presenter; template text left on the board. (4–6) | The main message is illegible at print size, or meaning is carried by colour alone throughout. (0–3) |
-
-**Hard caps (a single failure caps the criterion at Beginning, regardless of the rest):**
-
-- A fabricated source, a source that cannot be identified after reasonable checking, or a materially false attribution to a source: caps *Sources, AI disclosure & credit* at Beginning.
-- A displayed result your project computed, with no reproducible trace to a notebook cell or output: caps *Checks & verification* at Beginning.
-- A displayed result or bound that materially fails to reproduce from the submitted package (documented rounding is not a failure): caps *Checks & verification* at Beginning.
-- An author rerun presented as independent reproduction, or a solo proxy without its label: caps *Checks & verification* at Beginning.
-- A central claim that materially exceeds its identification or reach warrant: caps *Interpretation, uncertainty & limitations* at Beginning.
-- A confirmed AI contribution missing from the on-poster disclosure: caps *Sources, AI disclosure & credit* at Beginning.
-
-Apply each cap once, to its named criterion: the score falls to the top of the Beginning band, or stays at the lower score already earned. A temporary link failure is not a fabricated source, and missing ledger rows do not by themselves prove undisclosed AI use. Record the evidence behind any cap in the feedback.
-
-<!-- poster-rubric:end -->
+request is reissued for a later milestone. It does not change the M11 poster score, the Poster Presentation component, or Instructor/TA Evaluation. M13 is terminal: a carry-forward deduction here has no revision window.
 
 **Blocking gates are separate from the score.** A submission without both gate
 records, or with a gate row still marked blocking, is returned rather than
@@ -509,16 +449,12 @@ by 11:59 PM on November 8.
   emergencies handled individually per Purdue policy). Because the artifact is
   terminal, a late poster also risks the print timeline for November 17, so the
   deadline is real for logistics and not only for grading.
-- The poster-quality hard caps listed under the rubric apply, each once, to its
-  named criterion. A computed number on the poster with no cell behind it, or a
-  number or bound that does not reproduce from your submitted package, caps
-  *Checks & verification* at Beginning. A cited source that does not
-  exist, or that materially fails to say what you claim, caps *Sources, AI
-  disclosure & credit* at Beginning, which is the course's evidence-integrity rule
-  with teeth.
+- A number or bound on the print file that does not reproduce from your
+  submitted package, or a cited source that does not exist, fails a blocking
+  gate: the file is returned, not printed, until it is repaired.
 - Missing AI Research Ledger entry: that member's 18-point **Individual craft,
   ledger & closeout** row scores 0 and their submission is returned for
-  completion before grading; the common poster-quality score is unchanged.
+  completion before grading; the M11 poster score is unchanged.
 - Numbered instructor review request left unaddressed in the Instructor Request
   Record: −5 points each, up to −20 on the M13 process score; because M13 is terminal the deduction cannot be recovered after the deadline (D80). A completed,
   located change or a specific scientific reason for not adopting the request

@@ -864,7 +864,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Note and claim-evidence table at hand; boundary sentence and marked defense record from Wednesday; your redrawn figure exported; a draft or storyboard started.
 - **Student artifact:** Submitted M10 — venue contract, transformation memo, content map, the built artifact with every load-bearing number traced, and the defense rehearsal record, filed as a dated numbered version with its reason
 - **Exit ticket:** Claim Ticket #28: "The claim now safe to carry to my venue is [claim] — and nothing outside my note appears on the artifact."
-- **Homework / next milestone:** Submit M10 on the course platform by Sunday, 11:59 PM. Over the weekend also revisit the research-posters lesson and begin your storyboard. Monday opens poster production, Wednesday puts the draft through structured review, and the terminal lock is Sunday, November 8, at 11:59 PM.
+- **Homework / next milestone:** Submit M10 on the course platform by Sunday, 11:59 PM. When my M10 feedback arrives, start your final poster from it, in your M10 file on the course template. Monday is poster production, your final poster (M11) is due at the start of Wednesday's class and goes through structured peer review there, and the print lock is Sunday, November 8, at 11:59 PM.
 - **Instructor prep:** Stage the M10 brief with its five rows and the M13 brief with both blocking gates; confirm the Poster Critic role is provisioned for this milestone and smoke-tested; consult rotation and timer; a print-scale test strip for the four-foot scan.
 - **Risks / contingency:** A draft is not display-ready → the mode test runs on the storyboard, the criticism gallery still happens (the obligation stands), and the submission stands tonight. Anyone treating today as the lock → the kickoff says "a version, not a pass" out loud, and both blocking gates stay entirely inside next week's brief.
 
@@ -890,14 +890,14 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Hands-on activity:** Storyboard your M10 artifact into six blocks on paper, place the headline in a compass position you can name and defend, then run the traceability sweep by hand and circle every number that does not reach a named cell.
 - **Practice:** 📝 nb11 practice: given three headline sentences and their intervals, name the word in each that reaches past what the interval licenses, and rewrite one of them to stop where the evidence stops.
 - **Discussion prompt:** Which block of your poster is doing the least work per square centimetre, and what would you put there instead?
-- **Project connection:** M11 opens: the storyboard you draw today is the draft due AT CLASS on Wednesday, and the traceability sweep is the record that lets it lock on Sunday.
-- **Milestone developed:** M11 — Poster first draft, Book Milestone 10 v2 (dev; storyboard + traceability sweep)
+- **Project connection:** M11 opens: today you turn your M10 draft into your final poster, from my M10 feedback, on the course template and against the poster rubric; it is due AT CLASS on Wednesday.
+- **Milestone developed:** M11 — Final poster, Book Milestone 10 v2 (dev; revised from the M10 feedback on the template)
 - **Milestone work time:** 15 min (storyboard + the traceability sweep on your own numbers)
 - **Milestone presentation/review:** none (production day; the storyboard check runs inside the investigation block)
 - **Student prep:** M10 submitted; the poster template downloaded; your claim-evidence table and the notebook that produced your numbers open before class.
 - **Student artifact:** A six-block storyboard with the headline placed and defended + the traceability sweep with every untraceable number circled + the ledger row for the reach-check prompt
 - **Exit ticket:** Claim Ticket #29: "My headline goes in [position] because [why], and the number on my board I cannot yet trace is [x]."
-- **Homework / next milestone:** Build the draft. It is due AT CLASS on Wednesday as a single PDF, and the structured peer review runs in that same session — a draft that arrives late cannot be reviewed, and an unreviewed draft has nothing to revise from before Sunday's lock.
+- **Homework / next milestone:** Finish your final poster. It is due AT CLASS on Wednesday as one full-size PDF exported from the template, with your response record, and the structured peer review runs in that same session; a poster that arrives late cannot be reviewed.
 - **Instructor prep:** Print the two-layout case and the storyboard sheets; have the URC print spec and the course poster template on the shared drive before class; keep the two-layouts puzzle to run yourself from minute 10 and collect the split aloud, and have two or three opening questions ready for the lab meeting's open round; M11 brief staged on Brightspace with the Wednesday at-class deadline stated in bold.
 - **Risks / contingency:** Someone arrives without an M10 artifact to cut down → they storyboard from the claim-evidence table alone, which is the part that matters, and the layout follows tomorrow. The room treats the traceability sweep as bureaucratic → the formalization settles it: a number no run produced is a fabricated number regardless of how it got onto the board, and Sunday's lock is terminal.
 
@@ -921,8 +921,8 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Hands-on activity:** Review every other active project's draft on the rubric survey without conferring, run the Poster Critic on your own board for a reading rather than a compliment, then rank your returned findings blocking-first.
 - **Practice:** 📝 nb11 practice: sort six sample review lines into findings and preferences, and rewrite each preference into a finding that names a block and a repair — or strike it.
 - **Discussion prompt:** Which finding on your sheet did you most want to argue with, and what would have to be true about your board for the reviewer to be right?
-- **Project connection:** M11 is due at the start of this session and M12 is the review survey you write for every other active project; both feed the revision you work on Friday and the file you lock on Sunday.
-- **Milestone developed:** M11 — Poster first draft, Book Milestone 10 v2 (DUE at class); M12 — Peer review submission, Book Milestone 10 peer-criticism practice (worked in class, due Friday 2:30 PM)
+- **Project connection:** M11, your final poster, is due at the start of this session and M12 is the review survey you write for every other active project; the review's repairs are the only changes before you lock the print file on Sunday.
+- **Milestone developed:** M11 — Final poster, Book Milestone 10 v2 (DUE at class); M12 — Peer review submission, Book Milestone 10 peer-criticism practice (worked in class, due Friday 2:30 PM)
 - **Milestone work time:** 20 min (the active-project review circuit + the Poster Critic pass on your own board)
 - **Milestone presentation/review:** two-minute rejected-finding defense + cross-examination
 - **Student prep:** Your draft finished and brought as a single PDF — this is a hard at-class deadline. The poster-criticism lesson re-read; the rubric's four criteria known before you walk in.

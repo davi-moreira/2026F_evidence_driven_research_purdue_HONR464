@@ -88,7 +88,8 @@ def _scoring(num: int) -> str:
     )
 
 
-def pdf_block(num: int, *, file_lead: str, has_additions: bool) -> str:
+def pdf_block(num: int, *, file_lead: str, has_additions: bool,
+              course_only: bool = False) -> str:
     """The "Start here" opening of a milestone PDF from M4 on.
 
     It says THAT the record comes first and how to answer each item; it never
@@ -96,9 +97,14 @@ def pdf_block(num: int, *, file_lead: str, has_additions: bool) -> str:
     assignment for the complete course checklist rather than claiming the
     book page is everything (Codex review, 2026-09-25).
     """
-    items = [_record_item(num), _work_item()]
-    if has_additions:
-        items.append("**The Expo work** in *What this course adds*, below.")
+    if course_only:
+        items = [_record_item(num),
+                 "**Then your milestone work and files**, exactly as *What to do*, "
+                 "below, lists them."]
+    else:
+        items = [_record_item(num), _work_item()]
+        if has_additions:
+            items.append("**The Expo work** in *What this course adds*, below.")
     listed = "\n".join(f"{i}. {t}" for i, t in enumerate(items, 1))
     return "\n".join([
         "## Start here",

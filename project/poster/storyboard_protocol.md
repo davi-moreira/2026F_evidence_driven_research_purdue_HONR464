@@ -2,7 +2,7 @@
 
 *The method for building your poster's storyboard before you build the poster.
 The read-path decision it produces underlies your poster adaptation at M13
-([course milestone M11 — Poster First Draft](../../_research_project/2026Fall/milestone_11_poster_first_draft.md))
+([course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md))
 and the poster you lock at
 [course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md).
 Re-derived and pressure-tested in the poster-criticism week (M29); the grid it
@@ -18,7 +18,7 @@ expensive to change in production week.
 
 Individual work is the default. An approved group creates one shared storyboard
 and poster, names every member on the grid, and receives one common
-poster-quality score. Every member participates in the storyboard decisions and
+poster score. Every member participates in the storyboard decisions and
 must be able to walk the complete read path; live presentation is scored later
 per student.
 

@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge** — course milestone **M12**.
-> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (peer criticism, applied to every other active project's draft): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (peer criticism, applied to every other active project's final poster): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 <!-- carry-forward-start:begin -->
@@ -103,7 +103,7 @@ reviewer whose criticism cannot be trusted.
 One for every other active project or poster, written independently in the
 silent round, on the four peer-review lenses: reading architecture,
 traceability, uncertainty placement, and craft. The eight-criterion poster
-rubric that grades the final poster at M13 is a useful checklist while you read. For each sheet:
+rubric that grades the final poster at M11 is a useful checklist while you read. For each sheet:
 
 - at least **one item recorded as sound**, named specifically;
 - at least **two findings**, each naming a block, a defect, and a repair;
@@ -325,7 +325,7 @@ is to check it against what actually happens.
 
 ---
 
-*Previous: [M11 — Poster First Draft](milestone_11_poster_first_draft.md) — the
-draft the review round reads · Next:
+*Previous: [M11 — Final Poster](milestone_11_final_poster.md) — the
+final poster the review round reads · Next:
 [M13 — Final Poster Lock](milestone_13_final_poster_lock.md) — the print file,
 terminal, due Sunday, November 8, at 11:59 PM.*

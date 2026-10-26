@@ -53,6 +53,9 @@ way your venue's audience will, from the distance that audience will use. Then
 you rehearse the defense against their hardest questions, revise once, update
 your ledger, and submit by Sunday night.
 
+M10 collects two things: your **Studio 10 milestone** (rows 1 and 3, the book's
+Milestone 10 practice) and your **poster draft** on the course template (row 2).
+
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file, `lastname_m10.pdf` | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo** (closing with its **New since M9** list), your **content map**, and your **current claim-to-evidence table**: every row marked with the milestone that added it (M09 for the rows your note brought), and every row added since naming its evidence, its verification, and its boundary. Opens with the **Instructor Request Record** (Component 9), which is graded under the carry-forward adjustment. |
@@ -72,7 +75,7 @@ needed. Your name, the AI-use disclosure, and the version and verification lines
 are documentation, not findings.
 
 This milestone grades the adaptation, the traces, the critique, and the
-rehearsal. Production polish is assessed at M13, so put your hours into a board
+rehearsal. Production polish is assessed at M11, your final poster, so put your hours into a board
 that says the right thing, not yet into a perfect one. Export the poster
 directly from your slide editor as its own one-page, full-size PDF; the
 notebook-printing steps at the end of this page are for your other files.
@@ -93,8 +96,8 @@ repository under `project/poster/`. Use them in this order:
    your own work, keep the preliminary draft tag, and export **slide 1 only** as
    one full-size page.
 3. **Read the rubric before you build.** `Evidence_Driven_Research_Poster_Rubric.pdf`
-   grades your **final, locked poster at M13**; this draft is scored by the M10
-   rubric below. You still build toward it now, and you show that you did with
+   grades your **final poster at M11**; this draft is scored by the M10 rubric
+   below. You still build toward it now, and you show that you did with
    the **rubric self-check** in Component 4.
 
 ---
@@ -156,9 +159,9 @@ sentence is not a bigger finding. When the format forces a cut, what leaves is
 detail, never the boundary. An adaptation that drops the limitations is not a
 shorter version of your work. It is a different claim.
 
-This milestone is not the lock. Your poster is a draft here, labeled preliminary,
-and it stays revisable. The terminal deadline is **M13** (Sunday, November 8,
-11:59 PM), where the reproducible package and the printed poster lock together.
+This milestone is not the final poster. Your poster is a draft here, labeled
+preliminary, and it stays revisable. You finish it at **M11** (Wednesday,
+November 4, at the start of class), working from my feedback on this submission.
 The gap is deliberate. Everything the criticism gallery and the defense rehearsal
 surface this week is still cheap to fix next week.
 
@@ -184,8 +187,8 @@ questions, or none at all.
 
 Several lines are fixed for you: a printed poster, 34 × 22.5 inches and
 landscape, built on the course template, presented in a hall with live
-questions on Tuesday, November 17, submitted for print by Sunday, November 8 at
-11:59 PM. The template's panels are your **required elements**, and its guide
+questions on Tuesday, November 17, with the final poster due at M11 (Wednesday,
+November 4, at the start of class). The template's panels are your **required elements**, and its guide
 page sets the minimum type sizes at print scale. Write the rest yourself, then close the contract with one sentence
 naming what your claim must lose to fit this format. That sentence is the one a
 reviewer will test.
@@ -230,7 +233,7 @@ interval where you have one, a stated caveat where you do not. Axes start where
 the encoding stays honest, because bars encode magnitude and a truncated axis
 turns a small gap into a cliff. The headline verb is the one your claim-to-evidence
 table's boundary column licenses, and nothing else. The board carries a visible
-**preliminary** label, because it is a draft until M13.
+**preliminary** label, because it is a draft until M11.
 
 **The spoken spine.** Your **30-second hook** and your **3-minute walk**, both
 built boundary-first. At 30 seconds: hook, claim, boundary, invitation, with no
@@ -294,7 +297,7 @@ it caused the change; a small randomized pilot next term would settle it." That
 is **precision**, naming the exact boundary. "Take it with a grain of salt" is
 **hedging**, which protects you while informing nobody.
 
-Every question you marked do-not-know is your agenda for M13. Write them down as
+Every question you marked do-not-know is your agenda for M11. Write them down as
 that, in one list, so next week starts where this week stopped.
 
 ### 7. AI Research Ledger rows
@@ -408,9 +411,9 @@ pre-submission checklist.
 | **Figure honesty & accessibility** | Values labeled directly; uncertainty shown as the design licenses; axes encode magnitude honestly; meaning never carried by color alone |
 | **Mode test** | Poster read at gallery distance; spine timed aloud on an outsider; the gallery-walk audit run across all five lenses and revised once in ranked order |
 | **Poster Critic** | Run; every untraceable-number flag and claim-boundary flag marked accepted, partly accepted, or rejected, each by a check you can show |
-| **Defense rehearsal** | Five hard questions, each marked defend, concede, or do-not-know; ULN statement present; the do-not-know list carried to M13 |
+| **Defense rehearsal** | Five hard questions, each marked defend, concede, or do-not-know; ULN statement present; the do-not-know list carried to M11 |
 | **Version line** | Book Milestone 10, version 1, dated, with a reason a reader could use to reconstruct your thinking |
-| **Permission status** | Your permission determination is stated, with any change of route since M9; M13's release preflight must clear before public release |
+| **Permission status** | Your permission determination is stated, with any change of route since M9 |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Venue contract, content map, artifact, and rehearsal record located by file or section |
 | **Studio work** | Worked at the Friday studio (Oct 30); artifact criticism gallery run; defense rehearsed; submitted by Sunday, Nov 1 |
@@ -579,6 +582,5 @@ is to check it against what actually happens.
 ---
 
 *Previous: [M09 — Bounded Research Note and Claim-Evidence Table](milestone_09_minimum_viable_analysis.md) ·
-Next: [M13 — Reproducible Package and the Final Poster Lock](milestone_13_final_poster_lock.md) —
-the artifact you just defended meets the clean-run test, and the package and the
-printed poster lock together.*
+Next: [M11 — Final Poster](milestone_11_final_poster.md) — the draft you just
+defended, finished on the course template from my feedback on this submission.*

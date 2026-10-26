@@ -41,6 +41,7 @@ from submission_pdf_howto import BEGIN as HOWTO_BEGIN  # noqa: E402
 from submission_pdf_howto import END as HOWTO_END  # noqa: E402
 from submission_pdf_howto import brief_block  # noqa: E402
 import milestone_carry_forward as carry_forward  # noqa: E402
+from milestone_map import course_only  # noqa: E402
 
 BRIEFS = REPO / "_research_project" / "2026Fall"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
@@ -115,6 +116,23 @@ def bridge_block(row: dict, stations: dict[str, dict]) -> str:
                      f"({sg['use'].replace('-', ' ')}).")
     lines.append(BRIDGE_END)
     return "\n".join(lines)
+
+
+def course_only_bridge(mi: str) -> str:
+    """The opening of a COURSE-ONLY brief (milestone_course_additions.yml
+    `instructions: course-only`, D87 amended 2026-10-26).
+
+    Such a milestone still revisits a Book Milestone in the crosswalk, but its
+    instructions are the course's alone, so the brief must not send students to
+    the book's milestone page. The book relationship stays recorded in the
+    crosswalk; only the student-facing line changes.
+    """
+    return "\n".join([
+        BRIDGE_BEGIN,
+        f"> **Course milestone {mi}.** These instructions are complete on their own: "
+        "you do not work from a book milestone page for this milestone.",
+        BRIDGE_END,
+    ])
 
 
 def apply_bridge(text: str, block: str) -> str:
@@ -223,9 +241,17 @@ def main() -> int:
             stale.append(f"{brief.name} (bullet surface missing)")
             continue
         new = render(src, picked)
-        if mi in rows:
+        solo = course_only(f"M{int(m.group(1)):02d}")
+        if solo:
+            new = apply_bridge(new, course_only_bridge(mi))
+        elif mi in rows:
             new = apply_bridge(new, bridge_block(rows[mi], stations))
-        new = apply_howto(new)
+        if solo:
+            # nothing in a course-only milestone is printed from a notebook
+            new = HOWTO_RE.sub("", new)
+            new = re.sub(r"\n{3,}", "\n\n", new)
+        else:
+            new = apply_howto(new)
         new = apply_start(new, int(m.group(1)))
         if new == src:
             continue

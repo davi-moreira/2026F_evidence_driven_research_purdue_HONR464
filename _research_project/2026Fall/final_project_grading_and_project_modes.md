@@ -70,7 +70,7 @@ milestone category and no sixth Final Project component.
 | **Milestone Deliverables** | Your score is the arithmetic mean of your sixteen M1–M16 scores. | Each member's score is the arithmetic mean of that member's own sixteen M1–M16 scores; there is no pooled group mean. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
 | **Peer Evaluation** | Two instructor-assigned project peers who have observed your work in scheduled studios and checks rate you confidentially. You complete every evaluation the instructor assigns; assignments need not be reciprocal. There is no self-rating. | Every member confidentially rates every other teammate and may also be assigned to observe and rate an individual-project researcher. There is no self-rating. The score is per member, so teammates can receive different scores. |
 | **Peer Review** | You independently review every other active project or poster and submit your own structured criticism, scored with the **M12** Final Project Peer Review rubric. | Every member independently reviews every other active project or poster and submits their own criticism without conferring. This is not a teammate rating and is scored per student. |
-| **Poster Presentation at the Purdue Undergraduate Research Conference** | The poster you lock at **M13** supplies 70% of this component score, and your **M15** live presentation supplies 30%. | The shared locked **M13** poster supplies the common 70% poster-quality portion. Every member must present; each member's **M15** live presentation supplies their own 30% portion. |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | Your **final poster at M11**, graded with the poster rubric, supplies 70% of this component score, and your **M15** live presentation supplies 30%. | The shared **M11** final poster supplies the common 70% poster portion. Every member must present; each member's **M15** live presentation supplies their own 30% portion. |
 | **Instructor/TA Evaluation** | The instructor evaluates the **final poster submission you lock at M13** with the published rubric. | The shared locked poster is common evidence and receives a common score. |
 
 The **Milestone Deliverables** score is
@@ -113,8 +113,8 @@ piece of research communication: whether the argument is traceable, the
 results reproducible, the uncertainty and limitations stated where the claim
 is made, the sources verified, and AI's contribution disclosed honestly. It is
 graded on the published rubric, and it is a different judgement from the
-**Poster Presentation** component, which scores poster quality against the M13
-rubric and your live delivery at the conference. For an approved group, the
+**Poster Presentation** component, which scores your M11 final poster against the
+poster rubric and your live delivery at the conference. For an approved group, the
 shared locked poster receives a common score. If no TA is assigned to the
 course, the instructor records this item.
 

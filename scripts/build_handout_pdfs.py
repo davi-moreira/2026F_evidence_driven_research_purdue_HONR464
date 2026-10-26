@@ -111,7 +111,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 import milestone_carry_forward as carry_forward  # noqa: E402
 import poster_sections  # noqa: E402
-from milestone_map import additions, milestone_map  # noqa: E402
+from milestone_map import additions, course_only, milestone_map  # noqa: E402
 from submission_pdf_howto import POINTER, markdown as howto_markdown  # noqa: E402
 
 STUDIOS = REPO / "book" / "studios"
@@ -276,6 +276,9 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
     """(title, markdown body) for one course milestone PDF."""
     n = int(info["num"])
     title = f"Course milestone M{n}: {info['topic']}"
+    # D87 amended (2026-10-26): a course-only milestone's PDF is its own
+    # instructions, with no book milestone page and no Colab how-to.
+    solo = course_only(key, {key: add})
     extras = add.get("extra_artifacts") or []
 
     main = f"`lastname_m{info['num']}.pdf`"
@@ -302,15 +305,15 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         if extras:
             file_lead = (f"Your main file is {main}; the "
                          f"{'artifact' if len(extras) == 1 else 'artifacts'} "
-                         f"listed at the end of this section travel beside it.")
+                         f"listed at the end of this section "
+                         f"{'travels' if len(extras) == 1 else 'travel'} beside it.")
         head = [
             carry_forward.pdf_block(n, file_lead=file_lead,
-                                    has_additions=bool(add.get("additions_markdown"))),
+                                    has_additions=bool(add.get("additions_markdown")),
+                                    course_only=solo),
             submit_line,
             "",
-            POINTER,
-            "",
-        ]
+        ] + ([] if solo else [POINTER, ""])
     else:
         head = [
             "## What to submit",
@@ -322,14 +325,15 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
             POINTER,
             "",
         ]
-    head += [
-        "This milestone presents "
-        + " and ".join(f"**Book Milestone {b['n']}: {_short(b['title'])}** "
-                       f"({b['relationship']}, {b['version_label']})"
-                       for b in info["books"])
-        + " of the course book, EDR\\|AI.",
-        "",
-    ]
+    if not solo:
+        head += [
+            "This milestone presents "
+            + " and ".join(f"**Book Milestone {b['n']}: {_short(b['title'])}** "
+                           f"({b['relationship']}, {b['version_label']})"
+                           for b in info["books"])
+            + " of the course book, EDR\\|AI.",
+            "",
+        ]
     if extras and carry_forward.applies(n):
         head += ["Beside your PDF, hand in:", ""]
     for e in extras:
@@ -340,7 +344,7 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
     body = ["\n".join(head)]
 
     if add.get("additions_markdown"):
-        body.append("## What this course adds\n")
+        body.append("## What to do\n" if solo else "## What this course adds\n")
         # D89: the note's sections are the poster template's, authored once in
         # scripts/poster_sections.py and dropped in wherever the token stands.
         # A missing, doubled, or misspelled token must fail, not ship a PDF
@@ -354,6 +358,9 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         if re.search(r"\{\{[^{}]*\}\}", md):
             sys.exit(f"✗ {key}: unresolved template token in additions_markdown")
         body.append(md + "\n")
+
+    if solo:
+        return title, "\n".join(body)
 
     for i, page in enumerate(info["pages"]):
         ptitle, pbody = book_page(page)

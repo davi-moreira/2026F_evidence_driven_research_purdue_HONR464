@@ -1098,7 +1098,8 @@ milestones:
     additions_markdown: |
       ### Your format is the Expo poster, and you hand in its file
 
-      The book page below lets you choose a format. This course chooses it for you: a
+      M10 collects two things: the book's Studio 10 milestone, below, and your poster
+      draft. The book page lets you choose a format; this course chooses it for you: a
       printed research poster at the Purdue Undergraduate Research Expo, defended aloud
       while you stand beside it. So, in addition to everything the book milestone asks
       for, hand in your **poster draft file**, built on the course poster template:
@@ -1107,7 +1108,8 @@ milestones:
          `honr464_poster_template.pptx` (34 × 22.5 inches, the course poster format).
       2. **`lastname_m10_poster.pdf`**, its one-page export at full size.
 
-      The poster is always its own file, never a section of another PDF.
+      The poster is always its own file, never a section of another PDF. You finish
+      it at M11, from my feedback on this submission.
 
       ### Use the template, its guide page, and the rubric
 
@@ -1124,8 +1126,8 @@ milestones:
          bracket, prompt, and item marked EXAMPLE with your own work; keep the
          **preliminary draft** tag; export slide 1 only.
       3. **Read the poster rubric before you build**,
-         `Evidence_Driven_Research_Poster_Rubric.pdf`. It grades your final, locked
-         poster at M13, not this draft. Show that you built toward it with a **rubric
+         `Evidence_Driven_Research_Poster_Rubric.pdf`. It grades your final poster
+         at M11, not this draft. Show that you built toward it with a **rubric
          self-check** in `lastname_m10.pdf`: one line for each of its eight criteria,
          naming the sections that carry it, the band you would give it today, and the
          one change that would move it up.
@@ -1209,37 +1211,72 @@ milestones:
   M11:
     schedule_mark: true
     classification: additions
+    instructions: course-only
     reason: The Book Milestone page lets the researcher choose any venue format and asks for a venue contract,
       adaptation, content map, and rehearsal record; the course instead requires one specific artifact,
       a first full poster draft on the course template at conference print spec, plus a per-number traceability
       sweep, a reach check, a GenAI Studio Poster Critic run, and delivery at the start of Wednesday's
       class so the in-class peer review round can read it. A student working only from the book page would
       build the wrong artifact and miss the review gate.
-    schedule_note: the complete poster PDF on the course template
+    schedule_note: your final poster on the course template
     additions_markdown: |
-      ### This version is your complete poster
+      ### Your final poster
 
-      The book page below treats this version as the peer-reviewed draft of an
-      artifact in any format. In this course it is your **complete poster PDF**, the
-      version your classmates review:
+      This milestone finishes your poster. You take the draft you submitted at M10,
+      work through my feedback on it, and finish it on the course template, against
+      the poster rubric. Your classmates review it at M12, and M13 locks the print file
+      with only the repairs that review finds.
 
-      1. **`lastname_m11_poster.pdf`**: the next version of your M10 poster file,
-         still built on `honr464_poster_template.pptx` (34 × 22.5 inches) and following
-         its guide page, exported from slide 1 only as one full-size page. The poster
-         is always its own file.
-      2. **Complete** means every section of the template is in final form, with no
-         bracket, prompt, or EXAMPLE item left and nothing you still plan to add. It is
-         the board you would print if the review found nothing, so the review's
-         findings are the only changes left before the poster locks at M13. Keep the
-         **preliminary draft** tag until that lock.
-      3. **Check it against the poster rubric**,
-         `Evidence_Driven_Research_Poster_Rubric.pdf`, and hand in your **rubric
-         self-check**, updated from M10, with your traceability sweep: one line per
-         criterion, with today's band and what changed.
+      **What you work from**, and only these three things:
 
-      Hand it in at the start of the class in which the peer review runs, and bring a
-      printed or screen-shareable copy: the review reads the board, not the file list.
+      1. **My feedback on your M10 submission**, on Brightspace and in your mentoring
+         email, with numbered requests. Start from it.
+      2. **The course poster template**, `honr464_poster_template.pptx`. Keep working
+         in your M10 file, and follow its hidden guide page.
+      3. **The poster rubric**, `Evidence_Driven_Research_Poster_Rubric.pdf`, attached
+         to this assignment. It grades this poster.
+
+      This milestone asks for no venue contract, transformation memo, content map, or
+      new defense rehearsal: those belonged to M10. This week is the poster.
+
+      ### What to hand in
+
+      1. **`lastname_m11_poster.pdf`**, your final poster: on the template, every
+         section in final form (no bracket, prompt, or EXAMPLE item, and nothing you
+         still plan to add), the preliminary draft tag removed, exported from slide 1
+         only as one full-size page. It is always its own file.
+      2. **`lastname_m11.pdf`**, your response record: the Instructor Request Record
+         answering every numbered request from my M10 feedback, your action plan's
+         commitments, your rubric self-check updated from M10 (one line per criterion:
+         the sections that carry it, today's band, and what changed), and this
+         milestone's AI Research Ledger rows.
+
+      ### How to do it
+
+      1. **Revise from the feedback, on the board.** Every numbered request and every
+         other comment either changes the poster or gets a reason in your record. A
+         change that lives only in your record has not been made.
+      2. **Finish it on the template.** Keep the slide size, meet the minimum type
+         sizes, and save every figure from the notebook cell that produced it, with alt
+         text and the cell named in the caption. Check every number against your
+         claim-to-evidence table, and give anything new its row there first. Keep
+         "Preliminary results" in the footer.
+      3. **Check it against the rubric** and update your self-check. A criterion you
+         would still put below Proficient is where your last hours go.
+      4. **Hand it in at the start of the class in which the peer review runs**, and
+         bring a printed or screen-shareable copy: the review reads the board.
+
+      ### How it is graded
+
+      The poster rubric grades your final poster, and that score is the poster part of
+      your Poster Presentation grade. A separate process score records the file on time
+      and on the template, the feedback worked on the board, the self-check, and the
+      ledger.
+    extra_artifacts:
+    - name: lastname_m11_poster.pdf
+      why: Your final poster, exported from slide 1 of the course template as one full-size page. It is graded with the poster rubric and cannot live inside another PDF.
     instructor_notes:
+    - 2026-10-26 (Davi, D90): M11 IS the final poster, graded with the poster rubric (the Poster Presentation poster score moved here from M13). Its instructions are course-only, so neither the brief nor the PDF sends students to the book Milestone 10 page; the crosswalk still records the revisit.
     - 2026-10-26 (Davi): M11 collects the complete poster PDF (lastname_m11_poster.pdf, renamed from lastname_m11_posterdraft.pdf) on the course template, every section in final form; it is the printed poster the narrowed rule lists, so M11 becomes additions with the schedule mark. M13 stays the locked print file.
     - 'Deadline is different in KIND, not just in date: M11 is due at the START of Wednesday''s class,
       not at midnight, because the M12 structured peer review runs in that session. The standard PDF header
@@ -1315,7 +1352,7 @@ milestones:
       \ or poster**, with none skipped. When every\nproject is individual, that is one review per classmate (three when four projects are live);\
       \ an approved group lowers the\ncount, and you always review at least two other live projects. This\
       \ is\nindividual work even if your own project is a group project.\n\nWrite one review survey per\
-      \ project, on the course poster rubric's four\ncriteria: reading architecture, traceability, uncertainty\
+      \ project, on four peer-review\nlenses: reading architecture, traceability, uncertainty\
       \ placement, and craft.\nOn every sheet:\n\n1. Name **at least one item that is genuinely sound**,\
       \ specifically enough that\n   the author knows what to protect while revising.\n2. Give **at least\
       \ two findings**. A finding names the block it lives in, the\n   defect, and the repair that would\
@@ -1594,7 +1631,7 @@ milestones:
       \   in your own work honestly for you.\n\nAlso include, inside the same file, proof that you presented\
       \ and a record of\nyour three poster reviews. A photograph or a small table is fine.\n\n### How\
       \ it is judged\n\nTwo separate scores come out of this milestone.\n\n- The **live presentation**\
-      \ feeds your Final Project poster item, which is 70\n  percent your locked poster quality and 30\
+      \ feeds your Final Project poster item, which is 70\n  percent your final poster's rubric score and 30\
       \ percent this live performance. It\n  happens in the room, it is terminal, and it has no revision\
       \ window. Missing\n  the conference without an approved emergency arrangement scores that live\n\
       \  part 0.\n- The **written package** is the milestone score. It is eligible for revision\n  under\

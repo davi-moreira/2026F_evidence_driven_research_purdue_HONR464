@@ -135,7 +135,7 @@ in `course_config.yaml final_project_breakdown:` as the machine record:
 | **Milestone Deliverables** | 33% | 33 | 44.00% | Equal-weight mean of M1–M16's sixteen 0–100 milestone scores |
 | **Peer Evaluation** | 12% | 12 | 16.00% | Confidential per-student evaluation by every teammate (group project) or two assigned project peers (individual project) |
 | **Peer Review** | 6% | 6 | 8.00% | M12 Final Project Peer Review rubric; each student completes the required reviews |
-| **Poster Presentation at the Purdue Undergraduate Research Conference** | 12% | 12 | 16.00% | `0.70 ×` M13 poster-quality score + `0.30 ×` each student's M15 live-presentation score |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 12% | 12 | 16.00% | `0.70 ×` the poster-rubric score of the M11 final poster (D90) + `0.30 ×` each student's M15 live-presentation score |
 | **Instructor/TA Evaluation** | 12% | 12 | 16.00% | `1.00 ×` the instructor's evaluation of the final poster submission locked at M13 (D54) |
 | **Total** | **75%** | **75** | **100.00%** | |
 
@@ -186,9 +186,10 @@ poster template and assessment rubric will be shared" — **both now exist
 (D87, 2026-10-21)**: the template `project/poster/honr464_poster_template.pptx`
 (34 × 22.5 in, adapted from QM 47400's) and the poster rubric
 `project/poster/Evidence_Driven_Research_Poster_Rubric.{pdf,docx,xlsx}`, adapted
-from QM 47400's poster-only rubric. The rubric is the M13 poster-quality rubric,
-generated into the brief by `scripts/build_poster_kit.py`; M10 now collects the
-first poster draft file on the template. This closes workstream L3.
+from QM 47400's poster-only rubric. The rubric grades the M11 final poster (D90,
+2026-10-26; it was M13's until then) and is generated into the M11 brief by
+`scripts/build_poster_kit.py`; M10 collects the first poster draft file on the
+template. This closes workstream L3.
 
 ### What the syllabus no longer carries
 
@@ -204,7 +205,7 @@ governs the operational detail.
 | Machinery removed from `syllabus.qmd` | Authoritative home now |
 |---|---|
 | The five-row component table with both columns — share of the Final Project and share of the course (D74: 20 / 10 / 5 / 10 / 10 course points, from 15 / 10 / 5 / 10 / 10) | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `brightspace/gradebook_spec.md` |
-| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the sixteen M1–M16 scores; Poster item = `0.70 ×` M13 poster quality + `0.30 ×` M15 live presentation; Instructor/TA = the instructor's evaluation of the M13 final poster submission | the same two files, plus the "Deterministic Final Project scoring rules" table below |
+| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the sixteen M1–M16 scores; Poster item = `0.70 ×` M11 final-poster score (poster rubric, D90) + `0.30 ×` M15 live presentation; Instructor/TA = the instructor's evaluation of the M13 final poster submission | the same two files, plus the "Deterministic Final Project scoring rules" table below |
 | "How the same five components work in both project modes" (shared vs individual rows) | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | "Peer Evaluation is not Peer Review", including `received_rating_score = min(100, 100 × mean received rating / 3)`, `item = 0.80 × received_rating_score +` submission points, the rule that a missing rating never costs its recipient, and the neutral 80 after failed follow-up | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `project/final_dossier/peer_evaluation_instrument.md` |
 | The group-approval conditions: at most one group of two at n=4, at least three active projects remaining, and a feasible Peer Evaluation plan | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `course_config.yaml course.project_mode:` |
@@ -242,7 +243,7 @@ has a nonempty submission set.
 - **Peer Review.** Every student completes the M12 structured criticism, including
   every member of a group. It evaluates criticism of other projects, not
   contribution to one's own project.
-- **Poster Presentation at the Purdue Undergraduate Research Conference.** A group's M13 poster-quality score is
+- **Poster Presentation at the Purdue Undergraduate Research Conference.** A group's M11 final-poster score is
   shared; every student is scored individually on live delivery and must present.
 - **Instructor/TA Evaluation.** A group's final research artifact subscore is
   shared. The AI-management portfolio and Evidence Defense are individual. The
@@ -283,8 +284,9 @@ Several milestones produce evidence later evaluated in another Final Project
 component. Never copy one raw rubric score into two places. M12's milestone score
 records completion, timeliness, versioning, and response; its separate Peer
 Review rubric scores the quality of criticism. M13's milestone score records the
-on-time, gate-cleared lock; its poster-quality rubric feeds the conference item.
-M13's poster is read a second time, as research communication, for
+on-time, gate-cleared lock. Since D90 the poster rubric is applied to the M11
+final poster, and that score feeds the conference item. M13's locked poster is
+read again, as research communication, for
 Instructor/TA Evaluation — a different judgement from poster quality, and the
 one place a single artifact feeds two components (D54).
 
@@ -299,7 +301,7 @@ the score itself is produced:
 | Milestone Deliverables | `mean(M1, M2, …, M16)`; all sixteen scores are equally weighted |
 | Peer Evaluation | `0.80 × min(100, 100 × mean received rating / 3) + submission points`, where complete required evaluations with usable comments earn 20 submission points and non-submission earns 0; documented instructor moderation may correct strategic ratings |
 | Peer Review | M12 **Final Project Peer Review rubric** (100 points) |
-| Poster Presentation at the Purdue Undergraduate Research Conference | `0.70 ×` M13 **poster-quality rubric** + `0.30 ×` M15 **live Expo presentation rubric** |
+| Poster Presentation at the Purdue Undergraduate Research Conference | `0.70 ×` **poster rubric** on the M11 final poster (D90) + `0.30 ×` M15 **live Expo presentation rubric** |
 | Instructor/TA Evaluation | `1.00 ×` the instructor's evaluation of the **M13 final poster submission**, judged as research communication (D54) |
 
 The `70/30` poster/live split is an HONR
@@ -561,8 +563,8 @@ made instead. After the rubric, its hard caps, and the late rule:
 where `U` is the number of unaddressed numbered requests. Five points each,
 capped at twenty per milestone; revision-eligible milestones follow the standing
 revision rule; M13 stays terminal. At M12 the adjustment touches only the process
-score (never Peer Review), at M13 only the process score (never poster quality or
-Instructor/TA Evaluation), at M15 only the written reflection (never the live
+score (never Peer Review), at M11 only the process score (never the poster-rubric
+score), at M13 only the process score (never Instructor/TA Evaluation), at M15 only the written reflection (never the live
 Expo presentation). A request counts only if its numbered wording reached the
 student at least 48 hours before the deadline. M1 has no record; the 2026 Fall
 M1–M3 scores carry no deduction. No weight, component, rubric row, hard cap, or

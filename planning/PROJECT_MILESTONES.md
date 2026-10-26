@@ -77,7 +77,7 @@ are `M1…M16`.
 | M8 | Robustness audit | M20–M22 | audit walkthrough + adjudication round (M22) | Sun Oct 18, 11:59 PM | 8 — Your robustness audit (v1) |
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Sun Oct 25, 11:59 PM | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Sun Nov 1, 11:59 PM | 10 — Your artifact, ready to publish or present (v1) |
-| M11 | Poster first draft | M29–M30 | storyboard + traceability sweep (M29); the draft is due AT CLASS (M30) | Wed Nov 4, at class | 10 (v2, the peer-reviewed draft) |
+| M11 | Final poster | M29–M30 | the final poster revised from the M10 feedback on the template (M29); due AT CLASS (M30), graded with the poster rubric (D90) | Wed Nov 4, at class | 10 (v2; course-only instructions) |
 | M12 | Peer review submission | M30–M31 | silent active-project review circuit (M30) + revision studio (M31) | Fri Nov 6, 2:30 PM | 10 — peer-criticism practice |
 | M13 | Final poster lock | M28–M31 | pre-lock gate sweep + print-scale check (M31) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v3, the locked print edition) |
 | M14 | Go-public package: presentation plan and invitation | M32–M34 | pitch drafting (M32) + typed-panel questioning (M33) + rehearsal at the printed board (M34) | Sun Nov 15, 11:59 PM | 10 — spoken-editions practice |
@@ -126,7 +126,7 @@ dossier components and appear nowhere in student-facing material.
 
 - The Expo presentation (Tue Nov 17) is graded only in Final Project's **Poster
   Presentation at the Purdue Undergraduate Research Conference** item (`70%`
-  M13 poster quality + `30%` live delivery).
+  the M11 final poster's poster-rubric score + `30%` live delivery).
   M15 grades the reflection checkpoint and records proof of participation; there
   is no separate milestone ID for the event itself.
 - M16's package exchange is anonymized: each student receives a peer's

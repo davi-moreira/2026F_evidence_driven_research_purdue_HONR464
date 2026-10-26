@@ -267,7 +267,7 @@ rows:
     station_events:
       - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
     book_milestones:
-      - {station: adapt-and-defend, relationship: revisit, version_label: "version 2 - the peer-reviewed draft",
+      - {station: adapt-and-defend, relationship: revisit, version_label: "version 2 - the final poster",
          contribution_refs: [research-posters, poster-criticism]}
 
   - milestone: M12
@@ -280,7 +280,7 @@ rows:
     station_events:
       - {station: adapt-and-defend, event: practice, at: studio}
     book_milestones:
-      - {station: adapt-and-defend, relationship: practice, version_label: "peer criticism, applied to every other active project's draft",
+      - {station: adapt-and-defend, relationship: practice, version_label: "peer criticism, applied to every other active project's final poster",
          contribution_refs: [poster-criticism]}
 
   - milestone: M13

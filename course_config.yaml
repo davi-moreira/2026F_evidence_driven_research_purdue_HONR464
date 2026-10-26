@@ -89,7 +89,7 @@ calendar:
   no_class: ["2026-09-07", "2026-10-12", "2026-11-18", "2026-11-25", "2026-11-27"]
   events:
     urc_expo: "2026-11-17"          # Tuesday — REQUIRED poster presentation
-    poster_draft_due: "2026-11-04"  # M11 poster first draft, due at class (peer review same session)
+    poster_draft_due: "2026-11-04"  # M11 final poster, due at class (peer review same session; D90)
     poster_deadline: "2026-11-08"   # M13 final poster lock, Sun 11:59 PM (terminal);
                                     # shared print run with QM 47400, which locks the same night
     reflection_due: "2026-11-29"    # Sunday — M15 conference reflection
@@ -295,7 +295,7 @@ milestones:
   M10: {title: "Venue contract and the publication-ready artifact", due: "2026-11-01", kind: "studio"}
   # Weeks 11-14: the conference block. These present no new book milestone;
   # they carry Milestone 10 forward as versions 2, 3, and 4.
-  M11: {title: "Poster first draft",                               due: "2026-11-04", kind: "lecture",  note: "due at class Wednesday; the in-class peer review runs the same session"}
+  M11: {title: "Final poster",                                     due: "2026-11-04", kind: "lecture",  note: "due at class Wednesday; the in-class peer review runs the same session"}
   M12: {title: "Peer review submission",                           due: "2026-11-06", kind: "studio",   note: "independent structured reviews of every other active project; individually scored"}
   M13: {title: "Final poster lock",                                due: "2026-11-08", kind: "terminal", note: "Sunday 11:59 PM, one print-ready PDF; shared print run with QM 47400"}
   M14: {title: "Go-public package: presentation plan and invitation", due: "2026-11-15", kind: "studio", note: "three timed pitches, audience analysis, question strategy, and the invitation post"}
@@ -558,7 +558,7 @@ final_project_breakdown:
     project_share: 16.00       # D79; was 18.18 under D74 and 20 under D52
     course_share: 12
     includes: "the locked poster and each student's required public presentation at the Expo"
-    scoring_rule: "70% M13 poster-quality rubric + 30% M15 live Expo presentation rubric"
+    scoring_rule: "70% poster rubric on the M11 final poster (D90) + 30% M15 live Expo presentation rubric"
   instructor_ta_evaluation:
     label: "Instructor/TA Evaluation"
     project_share: 16.00       # D79; was 18.18 under D74 and 20 under D52

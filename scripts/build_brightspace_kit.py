@@ -798,8 +798,8 @@ def gradebook_spec(config: dict) -> str:
         "- **Final Project → Peer Review** — one individually scored item from "
         "the M12 Final Project Peer Review rubric.",
         "- **Final Project → Poster Presentation at the Purdue Undergraduate "
-        "Research Conference** — one per-student item: 70% M13 poster quality "
-        "+ 30% M15 live presentation.",
+        "Research Conference** — one per-student item: 70% the poster rubric "
+        "on the M11 final poster (D90) + 30% M15 live presentation.",
         "- **Final Project → Instructor/TA Evaluation** — one per-student "
         "item: 100% the instructor's evaluation of the final poster "
         "submission locked at M13 (D54). The final research chapter, the "
@@ -1036,8 +1036,8 @@ shared. Both are instructor deliverables with a date, not background material.
 
 {template_todo}
 - [ ] **Publish the poster assessment rubric.** `project/poster/poster_rubric.md`
-      is a pointer file: the authoritative rubric is the poster-quality rubric
-      inside `_research_project/2026Fall/milestone_13_final_poster_lock.md`.
+      is a pointer file: the authoritative rubric is the poster rubric inside
+      `_research_project/2026Fall/milestone_11_final_poster.md` (D90).
       Publish the rubric students will actually be graded on, in {poster_unit},
       with the template. Say plainly that it supplies 70% of the Poster
       Presentation item, with the M15 live presentation supplying the other 30%.

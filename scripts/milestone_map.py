@@ -129,6 +129,14 @@ def additions() -> dict[str, dict]:
     return doc.get("milestones", {})
 
 
+def course_only(key: str, adds: dict | None = None) -> bool:
+    """True when the milestone's instructions are the course's alone (D87 amended,
+    2026-10-26): its brief and PDF carry no book milestone page, even though the
+    crosswalk still records the Book Milestone it revisits."""
+    adds = additions() if adds is None else adds
+    return adds.get(key, {}).get("instructions") == "course-only"
+
+
 def has_additions(key: str, adds: dict | None = None) -> bool:
     """True when the milestone PDF carries a "What this course adds" section."""
     adds = additions() if adds is None else adds

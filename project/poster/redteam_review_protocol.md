@@ -1,8 +1,8 @@
 # Red-Team Review Protocol — M30 (Wed Nov 4)
 
 *The structured adversarial review of your draft poster, run in class M30.
-The four-plus-one audits it runs are the same audits graded on your poster draft
-([course milestone M11 — Poster First Draft](../../_research_project/2026Fall/milestone_11_poster_first_draft.md))
+The four-plus-one audits it runs are the same audits graded on your final poster
+([course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md))
 and re-run as the gallery-walk audit record of your locked poster
 ([course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md)).
 Rule of the room: hard on the poster, warm on the person.*

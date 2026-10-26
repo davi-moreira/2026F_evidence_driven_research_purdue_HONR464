@@ -443,7 +443,7 @@ files:
     - find: '| **Studio work** | Worked at the Friday studio (Oct 30); artifact criticism gallery run; defense rehearsed; submitted the same day |'
       replace: '| **Studio work** | Worked at this milestone''s Friday studio; artifact criticism gallery run; defense rehearsed; submitted the same day |'
       why: Definition-of-Done row carried the abbreviated date "(Oct 30)". The Friday-studio requirement and the same-day submission rule are load-bearing and stay; only the date leaves.
-  milestone_11_poster_first_draft.md:
+  milestone_11_final_poster.md:
     rules:
     - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 
