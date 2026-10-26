@@ -436,11 +436,18 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
         )
     add("</ul>")
 
-    if mkey and mdata:
-        add(f"<h3>Milestone {mkey}: {esc(mdata.get('title', ''))}</h3>")
+    # D91 (2026-10-26): a conference-block week can carry several milestones
+    # (Week 12: M12, M13, M14), listed in the week's `also_due:`.
+    keys = [mkey] if mkey else []
+    for w in config["weeks"]:
+        if w["week"] == week:
+            keys += [k for k in w.get("also_due", []) or [] if k not in keys]
+    for key in keys:
+        mdata = config["milestones"].get(key, {})
+        add(f"<h3>Milestone {key}: {esc(mdata.get('title', ''))}</h3>")
         due = mdata.get("due")
         if due:
-            # D82 audit fix: a milestone due AT CLASS (M11, kind "lecture") is
+            # D82 audit fix: a milestone due AT CLASS (kind "lecture") is
             # not an 11:59 PM deadline, and is not built in Friday's studio.
             if mdata.get("kind") == "lecture":
                 add(
@@ -448,13 +455,18 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
                     "start of class.</strong> Bring your draft to the review "
                     "round in that class.</p>"
                 )
-            else:
+            elif mdata.get("kind") == "studio" and datetime.date.fromisoformat(due).weekday() == 6:
                 add(
                     f"<p><strong>Due {esc(pretty(due, weekday=True))} at "
                     "11:59 PM.</strong> "
                     "You build it in Friday's studio and submit it from there.</p>"
                 )
-        bp = brief_path(mkey)
+            else:
+                add(
+                    f"<p><strong>Due {esc(pretty(due, weekday=True))} at "
+                    "11:59 PM.</strong></p>"
+                )
+        bp = brief_path(key)
         if bp:
             add(
                 f"<p>The full brief is the page <em>{esc(bp.stem)}</em> in this "
@@ -525,7 +537,7 @@ def gradebook_spec(config: dict) -> str:
             "Final Project",
             "One category with the same five QM474 component items, re-shared "
             "by D79 so Milestone Deliverables carries 33 course points; "
-            "Milestone Deliverables contains M1-M16",
+            "Milestone Deliverables contains M1-M17 (D91)",
         ),
     }
     # The retired Student Research Lead category is registered ONLY when the
@@ -711,10 +723,12 @@ def gradebook_spec(config: dict) -> str:
         f"| **Total** | **{round(fp_project_total, 2):.2f}%** | "
         f"**{fp_course_total}%** | | |",
         "",
-        "Do not create a top-level Final Project Milestones category. M1-M16 "
+        "Do not create a top-level Final Project Milestones category. M1-M17 "
         "are the source scores for the Milestone Deliverables item inside the "
         "single Final Project category. Enter that item as the equal-weight "
-        "mean of all sixteen 0-100 milestone scores. Keep the sixteen "
+        "mean of all seventeen 0-100 milestone scores (M14 and M15 are scored "
+        "on completion, 100 or 0, with M14's 50 for a published post missing a "
+        "required element). Keep the seventeen "
         "numeric source items for feedback without giving them additional "
         "weight; use a calculated item when available or enter the verified "
         "mean manually.",
@@ -787,7 +801,7 @@ def gradebook_spec(config: dict) -> str:
         "## Items inside each category",
         "",
         f"- **Final Project → Milestone Deliverables** — {len(config['milestones'])} "
-        "source items, M1 through M16, each with the due date below; the "
+        "source items, M1 through M17, each with the due date below; the "
         "component score is their equal-weight mean.",
         "- **Final Project → Peer Evaluation** — one confidential per-student "
         "item; use every teammate for approved groups and two assigned project "
@@ -796,13 +810,14 @@ def gradebook_spec(config: dict) -> str:
         "the neutral 80-point received-rating portion; do not add a substitute "
         "evaluator after observation ends.",
         "- **Final Project → Peer Review** — one individually scored item from "
-        "the M12 Final Project Peer Review rubric.",
+        "the M13 Final Project Peer Review rubric (D91).",
         "- **Final Project → Poster Presentation at the Purdue Undergraduate "
         "Research Conference** — one per-student item: 70% the poster rubric "
-        "on the M11 final poster (D90) + 30% M15 live presentation.",
+        "on the M11 final poster (D90) + 30% the live presentation, scored at "
+        "the Expo with the rubric in the M15 brief.",
         "- **Final Project → Instructor/TA Evaluation** — one per-student "
         "item: 100% the instructor's evaluation of the final poster "
-        "submission locked at M13 (D54). The final research chapter, the "
+        "submitted at M11, the print file (D54, D91). The final research chapter, the "
         "AI-management portfolio and the oral Evidence Defense no longer "
         "carry grade weight and get no gradebook item.",
         # D79 Ruling: the Lecture Notebooks bullet is KEPT VERBATIM and simply
@@ -994,7 +1009,7 @@ Notebooks, so the weekly notebook is no longer collected and promises nothing.""
     )
     poster_week = week_for_milestone(poster_key, config)
     poster_unit = f"the Week {poster_week} unit" if poster_week else "the poster-draft unit"
-    lock_due = config["milestones"].get("M13", {}).get("due", "TBD")
+    lock_due = config["milestones"].get("M11", {}).get("due", "TBD")   # D91: M11 is the print file
     templates = poster_template_files()
 
     if templates:
@@ -1025,7 +1040,7 @@ Notebooks, so the weekly notebook is no longer collected and promises nothing.""
             "The syllabus now promises one, so this is a commitment to "
             f"students, not a nice-to-have. Deadline: in students' hands by "
             f"{poster_key} ({poster_when}), published in {poster_unit}. Size "
-            "it for the shared print run that locks at M13 "
+            "it for the shared print run that locks at M11 "
             f"({lock_due}, 11:59 PM) with QM 47400."
         )
 
@@ -1040,7 +1055,8 @@ shared. Both are instructor deliverables with a date, not background material.
       `_research_project/2026Fall/milestone_11_final_poster.md` (D90).
       Publish the rubric students will actually be graded on, in {poster_unit},
       with the template. Say plainly that it supplies 70% of the Poster
-      Presentation item, with the M15 live presentation supplying the other 30%.
+      Presentation item, with the live presentation (rubric in the M15 brief)
+      supplying the other 30%.
 """
 
     return f"""# Brightspace — pre-semester checklist

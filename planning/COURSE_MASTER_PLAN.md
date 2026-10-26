@@ -55,8 +55,8 @@ decision" column is the project choice the student commits to that week.
 
 | Calendar exception | Meeting | Date |
 |---|---|---|
-| Asynchronous online — post-Expo audience-data capture | m36 | Fri Nov 20 |
-| Asynchronous online — Thanksgiving reflection module | m37 | Mon Nov 23 |
+| Asynchronous online — M16 conference reflection survey (D91) | m36 | Fri Nov 20 |
+| Asynchronous online — M16 plan for the research (D91) | m37 | Mon Nov 23 |
 | No class — Labor Day | — | Mon Sep 7 |
 | No class — October break | — | Mon Oct 12 |
 | No class — pre-Thanksgiving | — | Wed Nov 18 |
@@ -75,7 +75,8 @@ what the studios built. Week 1's Monday is the instructor-led orientation, the
 one other exception. Course milestone M(n) presents book Milestone (n+1)
 through M16 (`planning/COURSE_BOOK_CROSSWALK.yml`). **D54 retired M17**: Week 16
 teaches Studio 12 but collects nothing, and its Friday is the course-closing
-reflection. **D55**: a milestone is worked at its Friday studio and due the
+reflection. *(Superseded for Weeks 11–15 by D50 and D91: the current chain is in
+the table below, M1–M17.)* **D55**: a milestone is worked at its Friday studio and due the
 Sunday after, 11:59 PM.
 
 | Wk | Studio (notebook) | Lec | Milestone · due | The week's research decision |
@@ -90,11 +91,11 @@ Sunday after, 11:59 PM.
 | 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M8 · Sun Oct 18 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
 | 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M9 · Sun Oct 25 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
 | 10 | S10 Adapt and defend (`nb10`) | 2 | M10 · Sun Nov 1 | What does my venue require, and what artifact satisfies it without inflating the claim? |
-| 11 | Conference block: poster production + peer review (`nb11`) | 2 | M11 · Wed Nov 4 at class; M12 · Fri Nov 6, 2:30 PM; M13 · Sun Nov 8, 11:59 PM (terminal) | Is the poster traceable to my evidence, and does peer criticism reach me before the lock? |
-| 12 | Conference block: presentation preparation (`nb12`) | 2 | M14 · Sun Nov 15 | Can I say this work in thirty seconds, ninety, and two minutes — and take the hard question? |
-| 13 | The public test: dress rehearsal + the Expo (`nb13`) | 1 | — (Expo Tue Nov 17) | What does a room of strangers ask that I had not prepared for? |
-| 14 | Async reflection: what the public test returned (`nb14`) | 0 | M15 · Sun Nov 29 (async) | Does public questioning change the claim, its boundary, or only how I say it? |
-| 15 | S11 Reproduce and package (`nb15`) | 2 | M16 · Sun Dec 6 (the final milestone) | Does my work reproduce from a clean package in a stranger's hands, and what did I accept, rebut, or bound? |
+| 11 | Conference block: the final poster (`nb11`) | 2 | M11 · Sun Nov 8, 11:59 PM (terminal, the print file; D91) | Is the poster traceable to my evidence, and does it say no more than the evidence allows? |
+| 12 | Conference block: presentation preparation, peer review, practice presentations (`nb12`) | 2 | M12 · Wed Nov 11; M13 · Thu Nov 12; M14 · Sun Nov 15 | Can I say this work in thirty seconds, ninety, and two minutes — and take the hard question? |
+| 13 | The public test: dress rehearsal + the Expo (`nb13`) | 1 | M15 · Tue Nov 17 (Expo photo) | What does a room of strangers ask that I had not prepared for? |
+| 14 | Async reflection: the conference, the audience, and the plan (`nb14`) | 0 | M16 · Mon Nov 23 (async; survey Fri Nov 20 + plan Mon Nov 23) | What did the audience teach me, and what work remains to make the claim stronger? |
+| 15 | S11 Reproduce and package (`nb15`) | 2 | M17 · Sun Dec 6 (the final milestone) | Does my work reproduce from a clean package in a stranger's hands? |
 | 16 | S12 Release and direct the next cycle (`nb16`) | 2 | — (Fri Dec 11 is the course-closing reflection, under participation) | Do I release or withhold pending a named repair, and what should the next study ask? |
 
 ## 3. The lecture format — the ten-minute lab meeting *(D74, amended D75)*
@@ -240,8 +241,8 @@ through a fixed set of moves:
 **GenAI Studio reviewer bench.** Purdue GenAI Studio supplies custom reviewer
 roles at designated milestones (`genai_studio.student_touchpoints`, D41): **M5 Causal
 Identification Skeptic** (route declaration), **M8 Prediction & Leakage
-Auditor**, **M9 Robustness & Sensitivity Reviewer**, **M13 Poster Critic**
-(at the lock), **M16 Reproducibility Auditor**. Gemini remains the
+Auditor**, **M9 Robustness & Sensitivity Reviewer**, **M11 Poster Critic**
+(optional last reading of the final poster), **M17 Reproducibility Auditor** (D91). Gemini remains the
 primary in-notebook tool; the reviewer bench is an adversarial second opinion the
 student must answer, not obey. Studio capability is implemented only at levels
 1–4 (prompted role → custom model → RAG assistant → sequential workflow); a
@@ -255,9 +256,9 @@ literature map · MIDA design declaration · data and measurement documentation 
 reproducible Colab notebook · declared analysis protocol · claim–evidence table ·
 robustness and diagnostic record · AI Research Ledger · poster and presentation
 materials · replication record · research note. The dossier accumulates across
-all sixteen milestones; the AI Research Ledger threads through every one. The
+all seventeen milestones (D91); the AI Research Ledger threads through every one. The
 full milestone chain — develop → present → submit → revise cadence, kickoff
-rules, dossier mapping, and the M13 terminal lock — lives in
+rules, dossier mapping, and the M11 terminal print file — lives in
 `planning/PROJECT_MILESTONES.md`.
 
 ## 7. Assessment architecture *(D52, amended D57/D58/D61, and D74, 2026-08-31)*
@@ -323,15 +324,16 @@ before shared work begins. With four students, at most one group of two
 may be approved. Approvals must preserve at least three active
 projects for Peer Review and allow two observers per individual researcher plus
 at least one evaluation submission per student. Milestone Deliverables is the
-equal-weight mean of M1–M16. Group members receive common scores on shared rubric
+equal-weight mean of M1–M17 (D91). Group members receive common scores on shared rubric
 rows, while requirements marked individual are scored per member; recorded
 milestone scores may differ only on those rows. Peer Evaluation uses actual
 confidential ratings: every teammate for a group project, or two assigned project peers for
 an individual project. Peer Review remains each student's independent criticism
-of every other active project. The conference item combines `70%` M13 poster
-quality and `30%` individual M15 live delivery. Instructor/TA Evaluation is the
-instructor's evaluation of the M13 final poster submission, judged as research
-communication (D54). The syllabus carries only the weights
+of every other poster (M13, D91). The conference item combines `70%` the M11
+final poster's poster-rubric score and `30%` individual live delivery at the Expo
+(rubric in the M15 brief). Instructor/TA Evaluation is the instructor's
+evaluation of the M11 final poster, the print file, judged as research
+communication (D54, D91). The syllabus carries only the weights
 and the five component descriptions; the "comprehensive set of project
 guidelines" it promises is the student-facing
 `_research_project/2026Fall/final_project_grading_and_project_modes.md`, its
@@ -356,7 +358,7 @@ contrast; hybrid when the design has stages — D41). Course adoption is machine
 **crosswalk** (`planning/COURSE_BOOK_CROSSWALK.yml`, schema 1.1) maps every
 lesson to exactly one home milestone (40-lesson bijection), fires every
 studio checkpoint, and carries the D40 naming bridge (course milestones
-M1–M16 present book Milestones 1–11 as versions; no course milestone presents Book Milestone 12). Studio↔week alignment is
+M1–M17 present book Milestones 1–11 as versions; no course milestone presents Book Milestone 12). Studio↔week alignment is
 §2's table; per-lesson detail is the generated `planning/BOOK_MAP.md` and
 the For Instructors adoption table.
 

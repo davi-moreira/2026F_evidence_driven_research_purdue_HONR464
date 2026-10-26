@@ -537,8 +537,9 @@ def check_crosswalk(arch, cw) -> list[str]:
                  f"extra {set(anchors) - adopted}")
     if set(planned_anchors) != planned:
         p.append(f"cw: planned_home_anchor mismatch: {set(planned_anchors) ^ planned}")
-    if sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(1, 17)]:
-        p.append("cw: milestones are not exactly M1..M16")
+    # D91 (2026-10-26): the conference block was rebuilt and the chain is M1..M17.
+    if sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(1, 18)]:
+        p.append("cw: milestones are not exactly M1..M17")
     # D50: Week 11 carries three submissions off one notebook and Week 13 carries
     # none, so the nb column is no longer a partition. It must still name only
     # real notebooks, and every notebook that owns a milestone must be reachable.

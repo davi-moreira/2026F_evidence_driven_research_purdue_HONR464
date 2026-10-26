@@ -256,7 +256,7 @@ def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
     lead = re.match(r"\s*M(\d+)", raw)
     if not lead:
         # D54: a session that develops no milestone says so in its own words
-        # ("None — the chain closed at M16 ..."). Without this the segment
+        # ("None — the chain closed at M17 ..."). Without this the segment
         # loop below would re-prefix it and print "MNone".
         return "No milestone"
     if f"M{int(lead.group(1)):02d}" not in live_milestones():
@@ -376,7 +376,7 @@ def build() -> str:
             lines.append(
                 f"| – | Tue Nov 17 | {week} | {studio} | **🎓 Purdue Fall "
                 "Undergraduate Research Expo — REQUIRED poster presentation "
-                "(graded in Final Project)** | | | M15 reflection evidence · "
+                "(graded in Final Project)** | | | M15 Expo presentation confirmation (photo due tonight) · "
                 "Final Project Poster Presentation at the Purdue "
                 "Undergraduate Research Conference "
                 "| *No new chapter — you present the artifact Studio 10 "

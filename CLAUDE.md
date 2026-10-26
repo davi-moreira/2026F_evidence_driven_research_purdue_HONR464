@@ -65,7 +65,7 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 |---|---|
 | `_project_docs/ACTIVITY_TEMPLATE.md` | Creating/restructuring a topic notebook — the machine-validated template |
 | `_project_docs/DECISIONS.md` | Before proposing convention changes — D17–D22 govern the v2 build |
-| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M1–M16) |
+| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M1–M17 since D91) |
 | `planning/PROJECT_MILESTONES.md` | The milestone chain (dev meetings, presentations, due dates) |
 | `planning/SOURCE_AUDIT_V2.md` | The rebuild audit: rulings, reuse map, GenAI Studio verification |
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
@@ -310,27 +310,35 @@ frames, enforced by the session-guide generator (sums = 50):
 Wednesday), so every D22 and D34 ruling about the later blocks stands exactly as
 written. Friday's 5 / 40 / 5 studio frame (D58) is untouched.
 
-**D50 — the conference block.** Weeks 1–10 are Studios 1–10, so **course
-milestone M(n) presents Book Milestone (n) one-to-one for n = 1..10**. Weeks
-11–14 are the CONFERENCE BLOCK and anchor no new lesson: poster production and
-the in-class peer review (M11 draft due AT CLASS Wednesday, M12 one independent
-review of every other active project), the **terminal poster lock Sun Nov 8,
-11:59 PM (M13)**, presentation
-preparation (M14, three timed pitches + the invitation post), the Expo, and two
-ASYNCHRONOUS reflection sessions (Fri Nov 20 + Mon Nov 23) closing at M15.
-**Studios 11 and 12 run POST-conference on Weeks 15–16 in the standard frame**
-(MW teach the lessons, Friday IS the milestone): M16 presents Book Milestone 11
-and M17 presented Book Milestone 12 until **D54 retired M17**: the chain is
-**M1–M16**, Week 16 still TEACHES Studio 12 but collects nothing, and the last
-Friday (Dec 11) is the course-closing reflection, graded under participation.
-The peer cold run is IN CLASS on the Week-15 Wednesday. Course milestones are
-**M1–M16**; never write M0 and never write M17.
+**D50 — the conference block, REBUILT BY D91 (2026-10-26).** Weeks 1–10 are
+Studios 1–10, so **course milestone M(n) presents Book Milestone (n) one-to-one
+for n = 1..10**. Weeks 11–14 are the CONFERENCE BLOCK and anchor no new lesson.
+Since **D91** they follow QM 47400's post-lock sequence: **M11 the final poster
+AND the print file (Sun Nov 8, 11:59 PM, terminal)**; **M12** presentation
+planning (Wed Nov 11: audience analysis, 30 s / 90 s / 2 min pitches at ≤75 / ≤200
+/ ≤300 words, poster integration, question strategy, Round 02 mentor-meeting
+confirmation); **M13** peer review (Thu Nov 12: constructive, tangible feedback +
+questions for every other poster, from a shared folder; the questions are asked
+at the **Fri Nov 13 in-class practice presentations**, which M12 mentions WITHOUT
+a date); **M14** the LinkedIn invitation (Sun Nov 15, completion); **M15** the Expo
+presentation confirmation (Tue Nov 17: photo in front of the poster, completion;
+the live presentation is scored at the Expo); **M16** the conference reflection
+(the two ASYNCHRONOUS sessions after the Expo: survey Fri Nov 20, plan to improve
+and complete the research Mon Nov 23; its brief carries NO dates). **Studio 11
+runs POST-conference on Week 15 in the standard frame**: **M17 presents Book
+Milestone 11** (the package, the solo cold run, the in-class package exchange on
+the Week-15 Wednesday, the two blocking gates moved from the retired M13 lock,
+the second clean run; due Sun Dec 6). Week 16 still TEACHES Studio 12 but
+collects nothing (D54), and the last Friday (Dec 11) is the course-closing
+reflection, graded under participation. Course milestones are **M1–M17**; never
+write M0. The D50/D90 briefs D91 replaced live in
+`_research_project/2026Fall/_retired_d91/`.
 
 **D55 — every milestone is due the Sunday after its Friday studio, 11:59 PM.**
 The studio is still where the work happens; the deadline is the end of that
-weekend. Three exceptions keep their weekday slots: M11 (Wed Nov 4, at class),
-M12 (Fri Nov 6, 2:30 PM, so peer criticism reaches authors before the lock) and
-M13 (Sun Nov 8, terminal). **D66 adds two holiday exceptions: M2 is Mon Sep 7
+weekend. The conference block (D91) follows the Expo instead: M11 Sun Nov 8
+(terminal), M12 Wed Nov 11, M13 Thu Nov 12, M14 Sun Nov 15, M15 Tue Nov 17, M16
+Mon Nov 23, all 11:59 PM. **D66 adds two holiday exceptions: M2 is Mon Sep 7
 (Labor Day) and M7 is Tue Oct 13 (October Break).**
 `course_config.yaml milestones:` is the source of truth for every due date.
 
@@ -543,7 +551,8 @@ the material.
 
 ## 🚨 CRITICAL RULE — The Instructor Request Record  *(D80 — review requests are graded at the next milestone)*
 
-From **M4** on, every milestone artifact opens, right after its version line,
+From **M4** on (except the conference block **M12–M16**, D91, whose requests are
+answered at **M17**), every milestone artifact opens, right after its version line,
 with an **Instructor Request Record**: one row per numbered request (`IR-MNN-##`,
 `MNN` = the milestone in which it is graded) issued in the review of the previous
 milestone, on Brightspace and in the mentoring email. Addressed = done and
@@ -651,12 +660,12 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
 3. **Notebook content must reflect the book** — course notebooks derive from
    the chapters; every notebook's wrap-up names its chapters; never edit a
    chapter's design content without checking its notebook (and vice versa).
-   Every milestone brief M1–M16 **names** its **Book Anchor** chapters but no
+   Every milestone brief M1–M17 **names** its **Book Anchor** chapters but no
    longer collects them (D57): each "It is your turn" section is handed in on
    its own chapter's reading date, under **IYT Practice** (15%, D61). The
    anchors do not partition the book's 40 active lessons — ch. 38–40 anchor to
    nb16, whose crosswalk row carries no milestone (D54), so they are
-   IYT-Practice-only, and M11–M15 anchor no chapters at all.
+   IYT-Practice-only, and M11–M16 anchor no chapters at all.
 4. **The instructor manually reviews and updates the book**; the assistant then
    articulates and incorporates those reviews across the course material
    (notebooks, guides, site).
@@ -885,14 +894,16 @@ material.
   (nb01–nb16, one per week); milestone studio notebooks `msNN_topic_student.ipynb`.
 - Instructor notebooks (gitignored): `notebooks/instructor/…_instructor.ipynb`
 - Cell sources (gitignored, canonical for editing): `_production_kit/nb_sources/`
-- Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M1–M16;
-  the two D49 briefs the renumber retired are archived under `_retired_d50/`)
+- Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M1–M17;
+  the two D49 briefs the renumber retired are archived under `_retired_d50/`, and
+  the five D50/D90 conference-block briefs D91 replaced under `_retired_d91/`)
 - Commit messages: `<type>: <subject>` (feat|fix|docs|chore|build|refactor) with a
   trailing `Co-Authored-By:` line. Stage specific files — never `git add .`.
 
 ---
 
-**Version:** 7.8 — D83, Further Research Routes (2026-09-25, DECISIONS.md D83): six book-only chapters 41–46 (natural experiments, survey experiments, audit studies, text as data, qualitative inquiry, evidence synthesis) after Studio 12; Tier-B sections in ten existing chapters (IYT untouched except ch12 step 4's pointer); appendix C field guide (IV, synthetic control, staggered DiD, ethnography, QCA, networks, Bayesian); book scope widened to empirical research with precise, checkable answers; live course byte-identical (numbering, IYT 35, decks, schedules, briefs). ⚠ Owed: full Codex re-review of the content (r1–r4) after the Codex quota resets 2026-09-30 (briefs ready in `_adm/codex_collab/2026-09-25_edrai-further-routes/codex/`); the pre-existing ch21 misconception pin was re-pinned after review (the edit was a benign cross-reference swap).
+**Version:** 7.9 — D91, the conference block rebuilt on QM 47400's post-lock sequence (2026-10-26, DECISIONS.md D91): M11 final poster = the print file (Sun Nov 8, terminal); M12 presentation planning (Wed Nov 11) with the Round 02 confirmation; M13 peer review (Thu Nov 12; questions asked at the Fri Nov 13 practice presentations); M14 LinkedIn invitation (Sun Nov 15, completion); M15 Expo presentation confirmation (Tue Nov 17, photo, completion; live score at the Expo); M16 conference reflection (survey + plan, the two async sessions, due Mon Nov 23, no dates in the brief); M17 = Book Milestone 11 (Sun Dec 6) with the old lock's package, cold run and gates. Chain M1–M17; carry-forward record exempts M12–M16; weights unchanged. ⚠ For Davi: Brightspace M11–M17, the Qualtrics survey, the poster folder for M13, and the announcement.
+(7.8 — D83, Further Research Routes (2026-09-25, DECISIONS.md D83): six book-only chapters 41–46 (natural experiments, survey experiments, audit studies, text as data, qualitative inquiry, evidence synthesis) after Studio 12; Tier-B sections in ten existing chapters (IYT untouched except ch12 step 4's pointer); appendix C field guide (IV, synthetic control, staggered DiD, ethnography, QCA, networks, Bayesian); book scope widened to empirical research with precise, checkable answers; live course byte-identical (numbering, IYT 35, decks, schedules, briefs). ⚠ Owed: full Codex re-review of the content (r1–r4) after the Codex quota resets 2026-09-30 (briefs ready in `_adm/codex_collab/2026-09-25_edrai-further-routes/codex/`); the pre-existing ch21 misconception pin was re-pinned after review (the edit was a benign cross-reference swap).
 (7.7 — D82, the carry-forward record opens every milestone from M4 (2026-09-25, DECISIONS.md D82): generated **Start here** block at the top of every milestone PDF and brief from M4 (says THAT the numbered requests and the action plan's steps come first, never WHAT they ask); ✚ on M4–M16; new rubric row *Carry-forward: your action plan's steps (10)* with the other rows rescaled proportionally to 90, plus a *What this rubric scores* book-check map; book table relabelled *The book's own checks* in course PDFs; workbooks 4–12 open with a review-response table; Brightspace milestone HTML now generated from the briefs; M1–M3 rubrics untouched. ⚠ For Davi: repost M5–M16 instructions/PDFs on Brightspace and send `_announcements/2026-09-25_carry_forward_record.md`.
 (7.6 — D81, the permission blocking gate is retired and the determination becomes
 scored (2026-09-21, DECISIONS.md D81): the `permission-status-honoured` **blocking gate is RETIRED
@@ -1268,5 +1279,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

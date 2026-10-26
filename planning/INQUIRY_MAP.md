@@ -203,8 +203,8 @@ holds, and (3) key limitations and sources of uncertainty.
 | Weeks 5–9 (`nb05`–`nb09`), M5–M9 | Each pathway is deepened; the project's design is matched and audited against its warrant |
 | M6 (GenAI Studio: Causal Identification Skeptic) | The identification paragraph — or the honest causal-language boundary — is defended |
 | M8 (GenAI Studio: Prediction & Leakage Auditor) | The declared analysis protocol; leakage and baseline honesty are audited |
-| M10 / M16 | Robustness and replication branch by position — the classification has consequences |
-| Expo + M15 (public defense) | Public questioning cross-examines the classification, the pathway match, and the claim boundary |
+| M10 / M17 | Robustness and replication branch by position — the classification has consequences |
+| Expo (M15) + the reflection (M16) | Public questioning cross-examines the classification, the pathway match, and the claim boundary |
 
 ## Combinations (justified, not accidental)
 

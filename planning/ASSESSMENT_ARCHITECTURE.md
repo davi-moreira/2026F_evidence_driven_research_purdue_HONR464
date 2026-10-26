@@ -2,9 +2,9 @@
 
 Authoritative reconciliation of the v2 grading system for `syllabus.qmd`.
 Philosophy: **no conventional midterm or final exam.** The course assesses one
-semester-long research project carried through sixteen milestones (M1–M16),
-presented at the Purdue Fall Undergraduate Research Expo, and closed with a
-reproducible package, a bounded research note, and a written reflection. Individual work is
+semester-long research project carried through seventeen milestones (M1–M17,
+D91), presented at the Purdue Fall Undergraduate Research Expo, and closed with a
+reproducible package and a written reflection with a plan for the research. Individual work is
 the default; students may complete a group project with instructor approval.
 Grading rewards correctness, transparency, reproducibility, question-design
 (compass) alignment, and responsible interpretation — **never coding elegance**
@@ -132,11 +132,11 @@ in `course_config.yaml final_project_breakdown:` as the machine record:
 
 | Final Project component | Share of the final grade (student-facing) | Course points | Exact project share (machine record) | HONR grading home |
 |---|---:|---:|---:|---|
-| **Milestone Deliverables** | 33% | 33 | 44.00% | Equal-weight mean of M1–M16's sixteen 0–100 milestone scores |
+| **Milestone Deliverables** | 33% | 33 | 44.00% | Equal-weight mean of M1–M17's seventeen 0–100 milestone scores (D91; M14 and M15 graded on completion) |
 | **Peer Evaluation** | 12% | 12 | 16.00% | Confidential per-student evaluation by every teammate (group project) or two assigned project peers (individual project) |
-| **Peer Review** | 6% | 6 | 8.00% | M12 Final Project Peer Review rubric; each student completes the required reviews |
+| **Peer Review** | 6% | 6 | 8.00% | M13 Final Project Peer Review rubric (D91); each student completes the required reviews |
 | **Poster Presentation at the Purdue Undergraduate Research Conference** | 12% | 12 | 16.00% | `0.70 ×` the poster-rubric score of the M11 final poster (D90) + `0.30 ×` each student's M15 live-presentation score |
-| **Instructor/TA Evaluation** | 12% | 12 | 16.00% | `1.00 ×` the instructor's evaluation of the final poster submission locked at M13 (D54) |
+| **Instructor/TA Evaluation** | 12% | 12 | 16.00% | `1.00 ×` the instructor's evaluation of the final poster submitted at M11, the print file (D54, D91) |
 | **Total** | **75%** | **75** | **100.00%** | |
 
 Under D79 no component carries a rounding remainder: the machine column sums to
@@ -205,7 +205,7 @@ governs the operational detail.
 | Machinery removed from `syllabus.qmd` | Authoritative home now |
 |---|---|
 | The five-row component table with both columns — share of the Final Project and share of the course (D74: 20 / 10 / 5 / 10 / 10 course points, from 15 / 10 / 5 / 10 / 10) | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `brightspace/gradebook_spec.md` |
-| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the sixteen M1–M16 scores; Poster item = `0.70 ×` M11 final-poster score (poster rubric, D90) + `0.30 ×` M15 live presentation; Instructor/TA = the instructor's evaluation of the M13 final poster submission | the same two files, plus the "Deterministic Final Project scoring rules" table below |
+| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the seventeen M1–M17 scores (D91); Poster item = `0.70 ×` M11 final-poster score (poster rubric, D90) + `0.30 ×` the live presentation scored at the Expo (rubric in the M15 brief); Instructor/TA = the instructor's evaluation of the M11 final poster, the print file (D91) | the same two files, plus the "Deterministic Final Project scoring rules" table below |
 | "How the same five components work in both project modes" (shared vs individual rows) | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | "Peer Evaluation is not Peer Review", including `received_rating_score = min(100, 100 × mean received rating / 3)`, `item = 0.80 × received_rating_score +` submission points, the rule that a missing rating never costs its recipient, and the neutral 80 after failed follow-up | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `project/final_dossier/peer_evaluation_instrument.md` |
 | The group-approval conditions: at most one group of two at n=4, at least three active projects remaining, and a feasible Peer Evaluation plan | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `course_config.yaml course.project_mode:` |
@@ -227,7 +227,7 @@ student can review at least two other live projects and permit a Peer Evaluation
 plan in which each individual researcher has two observers and every student
 has a nonempty submission set.
 
-- **Milestone Deliverables.** An individual researcher receives their own M1–M16
+- **Milestone Deliverables.** An individual researcher receives their own M1–M17
   scores. An approved group submits one shared artifact naming every member.
   Shared rubric rows receive a common score; requirements marked individual,
   including each member's AI Research Ledger evidence, are scored per member,
@@ -240,7 +240,7 @@ has a nonempty submission set.
   a nonempty set of required evaluations to submit; received and submission
   sets need not be reciprocal. Ratings are confidential and scored per student.
   This is not Peer Review.
-- **Peer Review.** Every student completes the M12 structured criticism, including
+- **Peer Review.** Every student completes the M13 peer review (D91), including
   every member of a group. It evaluates criticism of other projects, not
   contribution to one's own project.
 - **Poster Presentation at the Purdue Undergraduate Research Conference.** A group's M11 final-poster score is
@@ -281,14 +281,15 @@ go but inside the Final Project** — and they went to Milestone Deliverables, t
 component that already scores the sixteen-step chain those notebooks feed.
 
 Several milestones produce evidence later evaluated in another Final Project
-component. Never copy one raw rubric score into two places. M12's milestone score
-records completion, timeliness, versioning, and response; its separate Peer
-Review rubric scores the quality of criticism. M13's milestone score records the
-on-time, gate-cleared lock. Since D90 the poster rubric is applied to the M11
-final poster, and that score feeds the conference item. M13's locked poster is
-read again, as research communication, for
-Instructor/TA Evaluation — a different judgement from poster quality, and the
-one place a single artifact feeds two components (D54).
+component. Never copy one raw rubric score into two places. M13's milestone score
+records completion and coverage; its separate Peer Review rubric scores the
+quality of the feedback and the questions (D91). Since D90 the poster rubric is
+applied to the M11 final poster, and that score feeds the conference item; since
+D91 M11 is also the print file, so the M11 poster is read again, as research
+communication, for Instructor/TA Evaluation — a different judgement from poster
+quality, and the one place a single artifact feeds two components (D54). M15's
+milestone score is completion (the photo); the live presentation it confirms is
+scored separately, into the conference item.
 
 ## Deterministic Final Project scoring rules
 
@@ -298,11 +299,11 @@ the score itself is produced:
 
 | Final Project item | Scoring rule |
 |---|---|
-| Milestone Deliverables | `mean(M1, M2, …, M16)`; all sixteen scores are equally weighted |
+| Milestone Deliverables | `mean(M1, M2, …, M17)`; all seventeen scores are equally weighted (D91) |
 | Peer Evaluation | `0.80 × min(100, 100 × mean received rating / 3) + submission points`, where complete required evaluations with usable comments earn 20 submission points and non-submission earns 0; documented instructor moderation may correct strategic ratings |
-| Peer Review | M12 **Final Project Peer Review rubric** (100 points) |
-| Poster Presentation at the Purdue Undergraduate Research Conference | `0.70 ×` **poster rubric** on the M11 final poster (D90) + `0.30 ×` M15 **live Expo presentation rubric** |
-| Instructor/TA Evaluation | `1.00 ×` the instructor's evaluation of the **M13 final poster submission**, judged as research communication (D54) |
+| Peer Review | M13 **Final Project Peer Review rubric** (100 points; D91) |
+| Poster Presentation at the Purdue Undergraduate Research Conference | `0.70 ×` **poster rubric** on the M11 final poster (D90) + `0.30 ×` the **live Expo presentation rubric** (in the M15 brief) |
+| Instructor/TA Evaluation | `1.00 ×` the instructor's evaluation of the **M11 final poster submission** (the print file), judged as research communication (D54, D91) |
 
 The `70/30` poster/live split is an HONR
 operational rule inside the imported QM474 items; they do not create additional
@@ -562,10 +563,11 @@ made instead. After the rubric, its hard caps, and the late rule:
 
 where `U` is the number of unaddressed numbered requests. Five points each,
 capped at twenty per milestone; revision-eligible milestones follow the standing
-revision rule; M13 stays terminal. At M12 the adjustment touches only the process
-score (never Peer Review), at M11 only the process score (never the poster-rubric
-score), at M13 only the process score (never Instructor/TA Evaluation), at M15 only the written reflection (never the live
-Expo presentation). A request counts only if its numbered wording reached the
+revision rule; M11 is terminal. At M11 the adjustment touches only the process
+score (never the poster-rubric score or Instructor/TA Evaluation). **D91 exempts
+the conference block M12–M16** from the record: their one-to-three-day cadence
+makes the 48-hour rule unmeetable, so requests issued in those weeks are answered
+at M17. A request counts only if its numbered wording reached the
 student at least 48 hours before the deadline. M1 has no record; the 2026 Fall
 M1–M3 scores carry no deduction. No weight, component, rubric row, hard cap, or
 the AI Research Ledger rule changes. Full ruling: `_project_docs/DECISIONS.md`
@@ -578,12 +580,14 @@ milestone artifact from **M4**: the numbered `IR-MNN-##` requests (D80, graded b
 the adjustment above, unchanged) **plus** the steps the student's action plan
 sets for that milestone. Every milestone PDF and brief from M4 opens with a
 **Start here** block saying so (never detailing the requests or the plan), and
-the schedule marks M4–M16 with the plus sign. From M4 every milestone-score rubric
+the schedule marks M4 onward with the plus sign (the conference block M12–M16
+carries it for its Expo additions, not for a record; D91). From M4 every milestone-score rubric
 carries a sixth row, **Carry-forward: your action plan's steps (10)**, the other
 rows rescaled proportionally to 90, and opens with a *What this rubric scores*
 map of the book milestone's own checks onto the course rows. The row is scored individually as `10 × eligible steps addressed ÷ eligible steps`; eligible steps come from the plan version sent at least 48 hours before the deadline, a step that is
 also a numbered request is scored once, through the D80 adjustment, and no eligible steps earns the full 10. M1–M3 rubrics
-stay as graded. This amends "no rubric row changes" in D80 above for M4–M16 only.
+stay as graded. This amends "no rubric row changes" in D80 above for M4–M11 and
+M17 (D91 exempts M12–M16).
 Full ruling: `_project_docs/DECISIONS.md` D82.
 
 ## Rubric DNA — five virtues, one menu
@@ -644,11 +648,12 @@ B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60. **No curve** (n
 **Revision.** Feedback returns within 3 days of each milestone; most milestones
 accept a revised version within **7 days** of feedback for up to half the lost
 points (revising is part of the graded craft). **Terminal artifacts have no
-revision window** — the deadline governs: **M13** final poster (Sun Nov 8,
-11:59 PM) and the live **Expo presentation** (Tue Nov 17, recorded through
-M15). Every other milestone is worked at its Friday studio and due the Sunday
-after, 11:59 PM (D55); M11 (Wed, at class) and M12 (Fri, 2:30 PM) keep weekday
-deadlines the conference block depends on.
+revision window** — the deadline governs: **M11** final poster, the print file
+(Sun Nov 8, 11:59 PM), and the live **Expo presentation** (Tue Nov 17, confirmed
+at M15). The completion-graded M14 and M15 have no revision window either. Every
+other milestone is worked at its Friday studio and due the Sunday after, 11:59 PM
+(D55), except the conference block, whose deadlines follow the Expo (D91): M12
+Wed Nov 11, M13 Thu Nov 12, M14 Sun Nov 15, M15 Tue Nov 17, M16 Mon Nov 23.
 
 **Revision and lateness do not reach the completion contracts.** Participation,
 IYT Practice and Lecture Notebooks have no revision window and no per-day
@@ -673,9 +678,10 @@ board.
   triggering the hard cap above. This is a graded habit, not a formality.
 - **Claim ledger** (what the research asserts: claim · evidence · verification ·
   boundary · sensitivity survival) — a separate instrument, graded at **M10**
-  (research audit) and **M16** (research note, the last milestone).
-- **Reproduction sign-off** — at **M16**, a classmate attests whether the peer's
-  headline number reproduces from the package alone.
+  (research audit) and frozen with the package at **M17** (D91; the research-note
+  revision left the chain).
+- **Reproduction sign-off** — at **M17**, a classmate's cold-run report says whether
+  the headline number reproduces from the package alone.
 
 ## The lab meeting — ungraded, and what it replaced (D74, amended D75)
 

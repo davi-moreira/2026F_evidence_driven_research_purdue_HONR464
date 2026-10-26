@@ -1,5 +1,7 @@
 # Course milestone M16 — Reproducible Package and the Peer Cold Run
 
+> **Retired by D91 (2026-10-26) — kept as the record, not in force.** The conference block was rebuilt: M11 is the final poster due Sun Nov 8 (the print file); M12 presentation planning; M13 peer review; M14 LinkedIn invitation; M15 Expo presentation confirmation; M16 conference reflection; M17 Book Milestone 11 (the reproducible package). This brief describes the D50/D90 chain and must not be posted. See `_project_docs/DECISIONS.md` D91.
+
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge** — course milestone **M16**.
 > This submission presents **Book Milestone 11 — Your reproducible package** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).

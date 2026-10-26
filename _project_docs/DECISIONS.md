@@ -5554,3 +5554,90 @@ and must not point students to M13. Davi also renamed the M11 instructions file 
   the poster at M13 and that nothing on the poster may be new; it was revised to
   match. Make sure the M10 feedback reaches students at least 48 hours before the
   M11 class, or its numbered requests cannot count (D80).
+
+## D91 — The conference block rebuilt on QM 47400's post-lock sequence: M11 is the print file, M12–M16 follow the Expo, M17 is Studio 11 (2026-10-26)
+
+**Ruling (Davi, 2026-10-26).** After reviewing what QM 47400 students submit after
+their Nov 8 poster deadline, Davi rebuilt every HONR 46400 milestone after M10:
+
+| M | Milestone | Due | Grading |
+|---|---|---|---|
+| **M11** | Final poster — **the print file** | Sun Nov 8, 11:59 PM, terminal | poster rubric (70% of Poster Presentation) + process score; Instructor/TA Evaluation reads it |
+| **M12** | Presentation planning: audience, pitches, questions (QM 47400's M11) + Round 02 mentor-meeting confirmation | Wed Nov 11, 11:59 PM | 100-pt rubric |
+| **M13** | Peer review: constructive, tangible feedback and questions for every other poster, from a shared folder of PDFs | Thu Nov 12, 11:59 PM | process score + the Peer Review component rubric |
+| **M14** | LinkedIn invitation (QM 47400's M12) | Sun Nov 15, 11:59 PM | completion (100 / 50 / 0) |
+| **M15** | Expo presentation confirmation: photo in front of the poster | Tue Nov 17, 11:59 PM | completion; the live presentation is scored at the Expo |
+| **M16** | Conference reflection: survey in the first async session after the Expo, written plan to improve and complete the research in the second | Mon Nov 23 | short 100-pt rubric |
+| **M17** | Reproducible package and the peer cold run = Book Milestone 11 | Sun Dec 6, 11:59 PM | 100-pt rubric + two blocking gates |
+
+Davi's choices when asked: the old M13 lock's package, solo cold run and two
+blocking gates **move to M17**; the old reflection becomes M16 (the conference,
+the audience, and the plan; an optional updated poster at an honors symposium if
+budget allows printing); M14 and M15 are graded **on completion**; the Round 02
+confirmation goes **into M12**; the photo and the reflection are separate
+milestones, so the chain is **M1–M17** (this supersedes D54's "there is no M17",
+which concerned the Studio 12 milestone; Week 16 still carries none). He asked
+that M12 mention the Fri Nov 13 in-class practice presentations **without a
+date**, that M13 say classmates ask their prepared questions there, and that the
+M16 brief carry **no dates**. M16 is graded with a short rubric; M17 presents Book
+Milestone 11 only, so the research-note revision (Book Milestone 9 v2) left the
+chain.
+
+Defaults taken in implementation (recorded for review):
+
+- **Carry-forward record (D80/D82) exempts M12–M16.** Their one-to-three-day
+  cadence makes the 48-hour rule unmeetable, and M14/M15 are completion-graded;
+  requests issued in those weeks are answered at M17 (`EXEMPT` in
+  `scripts/milestone_carry_forward.py`).
+- **One file per milestone** (`lastname_mNN.pdf`), the course's PDF rule, so the
+  Round 02 confirmation is a section of `lastname_m12.pdf` rather than a second
+  file.
+- **Wed Nov 4 keeps an ungraded in-class reading round** of the near-final posters
+  (nothing collected), so authors still get findings before the print file.
+- **M13 forbids uploading a classmate's poster to an AI tool** (unpublished work
+  carrying a name); AI may only tighten wording the student wrote.
+- **M12, M13 (process score) and M16 are revision-eligible**; M11 is terminal;
+  M14 and M15 have no revision window.
+- **M17 requires the cold-run report each student writes on a colleague's
+  package**, closing the gap an earlier audit note flagged in the old M16.
+- The duplicated D80 adjustment block in the M11 brief (a D90 leftover) was
+  removed, and M11 gained a Penalties section (late rule; a late file risks the
+  print run).
+
+**What changed.** Briefs: M11 edited; new `milestone_12_presentation_planning.md`,
+`milestone_13_peer_review.md`, `milestone_14_linkedin_invitation.md`,
+`milestone_15_expo_presentation.md`, `milestone_16_conference_reflection.md`,
+`milestone_17_package_and_cold_run.md`; the five D50/D90 briefs moved under
+`_research_project/2026Fall/_retired_d91/` with a status banner (DELETE NOTHING).
+`course_config.yaml` (milestones, weeks, events, mentor Round 02 → M12, scoring
+rules, GenAI touchpoint → M17); `planning/COURSE_BOOK_CROSSWALK.yml` (rows
+M11–M17, gates moved to M17 with `before_event: package-freeze`);
+`_research_project/milestone_course_additions.yml` (new course-only M12–M16
+entries, M17 pure; the old entries kept under `retired:` with `retired_by: D91`);
+validators (`validate_milestones.py` anchors, `validate_book_architecture.py`
+M1..M17, `validate_calendar.py` Nov 8 label); generators
+(`build_brightspace_kit.py` lists every milestone due in a week via `also_due`,
+`build_schedule_docx.py`, `build_syllabus_docx.py`, `update_schedule_badges.py`,
+`build_poster_kit.py` guide text); schedule data Weeks 11–16; notebooks nb10b,
+nb11–nb16 and the ms09/ms10/ms12/ms13/ms14 workbenches (ms10 and ms12 retired in
+place); protocols, GenAI role files and planning docs; new instrument
+`surveys/conference_reflection_survey.md` with its Qualtrics import
+`surveys/qualtrics_conference_reflection.txt`; announcements (new
+`2026-10-26_conference_block_new_milestones.md`; the Nov 20 and Nov 23 async
+announcements rewritten for M16).
+
+**Unchanged.** Weights (Final Project 75: Milestone Deliverables 33 · Peer
+Evaluation 12 · Peer Review 6 · Poster Presentation 12 · Instructor/TA 12),
+Participation 9, IYT Practice 15, the poster rubric, the Nov 8 print run shared
+with QM 47400, the Expo, Week 16 and the Dec 11 course reflection.
+
+⚠ **For Davi, outside the repository:** (1) Brightspace — replace the M11
+instructions and due date (Wed Nov 4 → Sun Nov 8), delete or hide the old M12–M16
+assignments, create M12–M17 with the new dates, and add the Conference Reflection
+Survey link to M16; the Milestone Deliverables mean now has seventeen items.
+(2) Build the survey in Qualtrics from `surveys/qualtrics_conference_reflection.txt`
+and set Force Response by hand. (3) Share the folder of final-poster PDFs with the
+students by Wed Nov 11 for M13. (4) Post
+`_announcements/2026-10-26_conference_block_new_milestones.md`. (5) The
+honors-symposium reprint in M16 depends on budget; nothing is promised to
+students.

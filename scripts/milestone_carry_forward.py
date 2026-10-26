@@ -44,9 +44,17 @@ ROW_NAME = "Carry-forward: your action plan's steps"
 ROW_POINTS = 10
 
 
+#: D91 (2026-10-26): the conference block runs one to three days apart (M12
+#: Wed, M13 Thu, M14 Sun, M15 Tue, M16 the two sessions after the Expo), so no
+#: review can reach a student 48 hours before the next deadline, and M14/M15 are
+#: graded on completion. These milestones carry no record; numbered requests
+#: issued in those weeks are answered at M17.
+EXEMPT = frozenset({12, 13, 14, 15, 16})
+
+
 def applies(num: int | str) -> bool:
     """True when course milestone `num` opens with the carry-forward record."""
-    return int(num) >= FIRST
+    return int(num) >= FIRST and int(num) not in EXEMPT
 
 
 def _ir(num: int) -> str:
@@ -143,7 +151,8 @@ def brief_block(num: int, *, ir_component: int | None,
 #: Schedule legend (Milestone column), under the table.
 SCHEDULE_LEGEND = (
     "A **{plus}** marks course requirements that come with the book "
-    "milestone. From M4 on, that always includes your **carry-forward "
+    "milestone. From M4 on (except the conference-block milestones M12 to "
+    "M16), that always includes your **carry-forward "
     "record**: your answer to the numbered requests in my review email and "
     "to the steps your action plan sets for that milestone. Some milestones "
     "also carry Expo work. The milestone's assignment on Brightspace has the "

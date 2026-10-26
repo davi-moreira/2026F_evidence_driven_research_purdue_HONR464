@@ -1,4 +1,4 @@
-# PROJECT MILESTONES — HONR 46400 Fall 2026 (v3: M1–M16)
+# PROJECT MILESTONES — HONR 46400 Fall 2026 (v4: M1–M17, D91)
 
 Four students, **individual projects by default** (one group of two may
 be approved by the instructor before shared work begins), one semester-long
@@ -6,15 +6,19 @@ chain: every milestone is a graded, submittable artifact with **kick off →
 develop → submit → revise** cadence (D30 retired weekly milestone presentations; the
 "Presented / reviewed" moments below are studio work-and-review formats).
 **Every milestone is due on a Sunday (D54)**: students work the milestone at
-its Friday studio and submit by **Sunday, 11:59 PM**. Three exceptions keep
-their weekday deadlines because the conference block depends on them — M11
-(due at class Wednesday Nov 4), M12 (Friday Nov 6, 2:30 PM, so peer criticism
-reaches authors before the lock), and M13 (Sunday Nov 8, terminal). M13 is
-**terminal** — no revision window. Since **D49** the semester runs **one Studio per week**: Monday and Wednesday
+its Friday studio and submit by **Sunday, 11:59 PM**. **D91 (2026-10-26) rebuilt
+the conference block on QM 47400's post-lock sequence**, so its deadlines follow
+the Expo rather than the Sunday rule: M11, the final poster and the print file
+(Sun Nov 8, **terminal**, no revision window), M12 presentation planning (Wed Nov
+11), M13 peer review (Thu Nov 12; the questions are asked at the Fri Nov 13
+practice presentations), M14 the LinkedIn invitation (Sun Nov 15), M15 the Expo
+presentation confirmation (Tue Nov 17), and M16 the conference reflection (the
+two asynchronous sessions after the Expo, due Mon Nov 23). Since **D49** the semester runs **one Studio per week**: Monday and Wednesday
 teach that Studio's lessons with their "It is your turn" work, and **Friday IS
 that Studio's milestone**. Studios 1–12 fall on Weeks 1–12, so course milestone
-**M(n) presents book Milestone (n+1)** straight through M16; the four
-date-driven weeks (13–16) revisit what the studios already built. **Week 16
+**M(n) presents book Milestone (n)** for n = 1..10 (D50), the conference block
+(M11–M16) revisits and practises Book Milestone 10, and **M17 presents Book
+Milestone 11** on Week 15. **Week 16
 teaches Studio 12 but carries no milestone (D54)**: its Friday, Dec 11, is the
 course-closing reflection session, collected as a light participation
 deliverable rather than a graded milestone. Each course
@@ -26,16 +30,18 @@ entry. Student-facing briefs + rubrics live one file per milestone in
 `_research_project/2026Fall/milestone_NN_*.md` (Brightspace replicates from
 there); machine anchors in `course_config.yaml milestones:`; validated by
 `scripts/validate_milestones.py`. The v1 M01–M23 system is preserved at git
-tag `v1-compass-build`; the retired M17 brief is archived under
-`_research_project/2026Fall/_retired_d54/`.
+tag `v1-compass-build`; the D54 M17 brief (release audit) is archived under
+`_research_project/2026Fall/_retired_d54/`, and the five D50/D90 conference-block
+briefs D91 replaced under `_research_project/2026Fall/_retired_d91/`.
 
 **Kickoff cadence.** Every milestone is kicked off from its Brightspace brief
 at the opening of a Friday studio's sprint block, developed across Mon/Wed
 lectures (project-transfer moments) and the studio sprint, red-teamed by peers
-+ an assigned GenAI Studio reviewer role where designated (M5, M8, M9, M13, M16),
++ an assigned GenAI Studio reviewer role where designated (M5, M8, M9, M11, M17),
 and **submitted by the Sunday after that studio, 11:59 PM** (D54). Kickoff
-exceptions: M1 (assigned in class on day 1), M16 (packages exchanged at the
-Week-13 studio; brief posted with the async module).
+exceptions: M1 (assigned in class on day 1) and the conference block M11–M16
+(D91), whose deadlines follow the Expo; M17's packages are exchanged in the
+Week-15 Wednesday class.
 
 Since **D74** the Mon/Wed development moments also include the **ten-minute lab
 meeting** that opens each lecture from Week 2, and since **D75** that meeting is
@@ -61,7 +67,7 @@ a future edition. **No milestone, due date, rubric or weight changed with it** �
 the chain below is exactly as D55, D66 and D74 left it.
 
 Meeting numbers `M2…M43` below are MEETINGS (calendar backbone); milestone IDs
-are `M1…M16`.
+are `M1…M17`.
 
 ## The chain
 
@@ -77,12 +83,13 @@ are `M1…M16`.
 | M8 | Robustness audit | M20–M22 | audit walkthrough + adjudication round (M22) | Sun Oct 18, 11:59 PM | 8 — Your robustness audit (v1) |
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Sun Oct 25, 11:59 PM | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Sun Nov 1, 11:59 PM | 10 — Your artifact, ready to publish or present (v1) |
-| M11 | Final poster | M29–M30 | the final poster revised from the M10 feedback on the template (M29); due AT CLASS (M30), graded with the poster rubric (D90) | Wed Nov 4, at class | 10 (v2; course-only instructions) |
-| M12 | Peer review submission | M30–M31 | silent active-project review circuit (M30) + revision studio (M31) | Fri Nov 6, 2:30 PM | 10 — peer-criticism practice |
-| M13 | Final poster lock | M28–M31 | pre-lock gate sweep + print-scale check (M31) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v3, the locked print edition) |
-| M14 | Go-public package: presentation plan and invitation | M32–M34 | pitch drafting (M32) + typed-panel questioning (M33) + rehearsal at the printed board (M34) | Sun Nov 15, 11:59 PM | 10 — spoken-editions practice |
-| M15 | Conference reflection | M35–M37 | dress rehearsal (M35); the Expo (Tue Nov 17) supplies the separate Final Project live-presentation score; M15 grades async capture (M36), adjudication (M37), and the written reflection | Sun Nov 29, 11:59 PM | 10 (v4, the publicly presented edition) |
-| M16 | Reproducible package and the peer cold run | M38–M40 | cold-run clinic + the in-class package exchange (M39) + the repair block (M40) | Sun Dec 6, 11:59 PM | 11 — Your reproducible package (v1) + 9 (v2) |
+| M11 | Final poster (the print file) | M29–M31 | production lab (M29) + ungraded reading round of the near-final posters (M30) + revision studio and print-scale check (M31); graded with the poster rubric (D90) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v2, the final poster, printed; course-only instructions) |
+| M12 | Presentation planning: audience, pitches, and questions | M32–M33 | pitch drafting (M32) + typed-panel questioning (M33) | Wed Nov 11, 11:59 PM | 10 — spoken-editions practice |
+| M13 | Peer review | M33 | feedback and questions for every other poster, from the shared folder (opens M33); questions asked at the practice presentations (M34) | Thu Nov 12, 11:59 PM | 10 — peer-criticism practice |
+| M14 | LinkedIn invitation | M34 | practice presentations at the printed board (M34) + the invitation kickoff | Sun Nov 15, 11:59 PM | 10 — the public invitation |
+| M15 | Expo presentation confirmation | M35 | dress rehearsal (M35); the Expo (Tue Nov 17) — photo in front of the poster; the live presentation is scored there | Tue Nov 17, 11:59 PM | 10 (v3, the publicly presented edition) |
+| M16 | Conference reflection: the audience and the plan for the research | M36–M37 | async survey (M36) + async plan (M37) | Mon Nov 23, 11:59 PM | 10 (v4, what the room returned) |
+| M17 | Reproducible package and the peer cold run | M38–M40 | solo cold run (M38) + the in-class package exchange (M39) + the repair block, two blocking gates and second clean run (M40) | Sun Dec 6, 11:59 PM | 11 — Your reproducible package (v1) |
 
 ## The mentor-meeting cycle (D69)
 
@@ -91,12 +98,12 @@ record** named on every student's Expo application. Calibrated one-to-one
 against QM 47400's INSTRUCTOR rounds; HONR 46400 has no TA, so that course's TA
 leg is dropped and only the instructor legs remain. Each round is requested in
 one milestone and confirmed in a later one, and both are collected inside those
-milestones (no new milestone ID — the chain is still M1–M16).
+milestones (no new milestone ID — the chain is M1–M17).
 
 | Round | Meeting window | Requested at | Confirmed at | QM 47400 counterparts |
 |---|---|---|---|---|
 | Round 01 | Mon Oct 5 – Sun Oct 11 | **M4** (Sun Sep 20) | **M7** (Tue Oct 13) | M00 (Sep 20) → M04 (Oct 11) |
-| Round 02 | Mon Nov 2 – Sat Nov 7 | **M8** (Sun Oct 18) | **M14** (Sun Nov 15) | M07 (Oct 18) → M13 (Nov 15) |
+| Round 02 | Mon Nov 2 – Sat Nov 7 | **M8** (Sun Oct 18) | **M12** (Wed Nov 11; D91) | M07 (Oct 18) → M13 (Nov 15) |
 
 Windows and the request/confirm assignment live in `course_config.yaml`
 `mentor_meetings:`. The four milestones carry the ✚ schedule mark and a
@@ -115,10 +122,10 @@ question (M2), evidence map (M3), Contract v0 (M4), Contract v1 with the
 declared pathway (M5), data + measurement documentation (M6), reproducible
 analysis notebook (M7), robustness + diagnostic record (M8), claim–evidence
 table + bounded research note (M9), venue contract + publication-ready
-artifact (M10), reproducibility package + locked poster (M13), conference
-reflection + defense revision (M15), replication record (M16), and research
-note v1 + repaired package (M16), which closes the dossier. The **AI Research
-Ledger** accumulates across all sixteen. D54 retired the release audit, the
+artifact (M10), the final poster (M11), the presentation plan (M12), the
+conference reflection and the plan for the research (M16), and the repaired
+reproducible package with its cold-run and gate records (M17), which closes the
+dossier. The **AI Research Ledger** accumulates across all seventeen. D54 retired the release audit, the
 final research chapter, and the AI-management portfolio: they are no longer
 dossier components and appear nowhere in student-facing material.
 
@@ -126,28 +133,25 @@ dossier components and appear nowhere in student-facing material.
 
 - The Expo presentation (Tue Nov 17) is graded only in Final Project's **Poster
   Presentation at the Purdue Undergraduate Research Conference** item (`70%`
-  the M11 final poster's poster-rubric score + `30%` live delivery).
-  M15 grades the reflection checkpoint and records proof of participation; there
-  is no separate milestone ID for the event itself.
-- M16's package exchange is anonymized: each student receives a peer's
+  the M11 final poster's poster-rubric score + `30%` live delivery, scored at the
+  Expo with the rubric in the M15 brief). M15 records proof of presentation (the
+  photo, graded on completion); the live score is not the M15 milestone score.
+- M17's package exchange is anonymized: each student receives a peer's
   reproducibility package with identifying headers stripped by the instructor.
-- Revision policy: all milestones except M13 are revisable within 7
-  days of feedback for up to half the lost points. M16 (Sun Dec 6) is the last
-  milestone, so its window closes at the end of the term. The policy is restated in
-  each revisable brief's **Revision:** line. It has never appeared on the
-  syllabus, so the briefs are its only student-facing statement.
-  **Open (2026-08-23):** M11, M12, and M14 carry no **Revision:** line, so for
-  those three the policy above is stated nowhere a student can read it. All
-  three sit inside the conference block, where a 7-day window would run past
-  the terminal Sun Nov 8 poster lock or the Tue Nov 17 Expo — so the omission
-  may be deliberate. Davi rules whether they are revisable; until he does, do
-  not assume either way.
+- Revision policy: all milestones are revisable within 7 days of feedback for up
+  to half the lost points EXCEPT M11 (terminal, the print file) and the
+  completion-graded M14 and M15 (D91). M17 (Sun Dec 6) is the last milestone, so
+  its window closes at the end of the term. The policy is restated in each
+  revisable brief's **Revision:** line; M12, M13 and M16 now carry one.
+- Carry-forward record (D80/D82): applies from M4 on except the conference block
+  M12–M16 (D91), whose one-to-three-day cadence makes the 48-hour rule unmeetable;
+  numbered requests issued in those weeks are answered at M17.
 - Hard external anchors: URC abstract draft in M6 (Sun Oct 4) and the final
   abstract + Expo application in M7 (Tue Oct 13), D84 (Expo deadline Wed Oct 14, 11:59 PM, via OURConnect; D85); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.
 - Fri Dec 11, the last class, is the course-closing **reflection session**
   (D54). It collects a light reflection deliverable scored under
   **participation**, not as a milestone, and it is not part of the M-mean.
-- How these sixteen scores become a grade — the five Final Project components,
+- How these seventeen scores become a grade — the five Final Project components,
   their shares, and how each works in either project mode:
   `_research_project/2026Fall/final_project_grading_and_project_modes.md`
   (student-facing) and `planning/ASSESSMENT_ARCHITECTURE.md` (design).
@@ -159,7 +163,7 @@ dossier components and appear nowhere in student-facing material.
   Project rises from 50% to 75%**. The weight went mostly here because it came
   off weekly collected work, and M1–M16 is the weekly deliverable chain that
   remains. Milestone Deliverables is still the equally
-  weighted mean of the M1–M16 milestone scores, no component was renamed, and no
+  weighted mean of the milestone scores (M1–M16 then, M1–M17 since D91), no component was renamed, and no
   scoring rule inside a component changed.
   Student-facing surfaces print **course** percentages of the final grade
   rather than project shares: Milestone Deliverables 33% · Peer Evaluation 12% ·

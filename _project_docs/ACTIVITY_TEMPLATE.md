@@ -476,7 +476,7 @@ cells (marker-stripped) or the session guide.
 
 ## Milestone studio notebooks (msNN) — reduced required set
 
-Each milestone M1–M16 ships a light Friday studio notebook
+Each milestone M1–M17 may ship a light Friday studio notebook
 `notebooks/student/msNN_<slug>_student.ipynb` (instructor version gitignored,
 same markers). Required cells, in order — nothing else is mandatory:
 

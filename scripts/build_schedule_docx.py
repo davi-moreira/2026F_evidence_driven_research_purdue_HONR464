@@ -66,13 +66,14 @@ MILESTONE_TITLE = {
     8: "Robustness audit",
     9: "Bounded research note and claim-evidence table",
     10: "Venue contract and the publication-ready artifact",
-    11: "Poster first draft",
-    12: "Peer review submission",
-    13: "Final poster lock (TERMINAL — no revision window)",
-    14: "Go-public package: presentation plan and invitation",
-    15: "Conference reflection",
-    16: "Reproducible package and the peer cold run (the final milestone)",
-}   # D54 retired M17; D55 moved every Friday deadline to the Sunday after it.
+    11: "Final poster, the print file (TERMINAL — no revision window)",
+    12: "Presentation planning: audience, pitches, and questions",
+    13: "Peer review",
+    14: "LinkedIn invitation",
+    15: "Expo presentation confirmation",
+    16: "Conference reflection: the audience and the plan for the research",
+    17: "Reproducible package and the peer cold run (the final milestone)",
+}   # D91 rebuilt the conference block (M11-M17); D55 moved every Friday deadline to the Sunday after it.
 
 
 # ── docx helpers (same techniques as QM474's generator) ─────────────────────
@@ -355,14 +356,13 @@ def main():
     style_run(p.add_run("Final Project Milestones"), 13, bold=True)
     p = tune(doc.add_paragraph(), 0, 6)
     style_run(p.add_run(
-        "The sixteen milestones are the Milestone Deliverables item of the "
+        "The seventeen milestones are the Milestone Deliverables item of the "
         "Final Project. A milestone is worked at its Friday studio and due "
-        "that Sunday at 11:59 PM. Three keep weekday deadlines: M11 is due at "
-        "class on a Wednesday, M12 at 2:30 PM on Friday Nov 6 so peer "
-        "criticism reaches authors before the lock, and M13 is the terminal "
-        "poster lock, pinned to Sun Nov 8, nine days before the conference and "
-        "shared with QM 47400's print run. M13 is terminal: no revision "
-        "window. The last Friday of the semester, Dec 11, is the "
+        "that Sunday at 11:59 PM, except in the conference block, whose "
+        "deadlines follow the Expo: M11, the final poster, is the print file, "
+        "due Sun Nov 8, nine days before the conference and shared with QM "
+        "47400's print run, and terminal: no revision window. M12 to M16 are "
+        "due at 11:59 PM on the dates below. The last Friday of the semester, Dec 11, is the "
         "course-closing reflection session, collected under participation "
         "rather than as a milestone."), 9, color=GREY)
 
@@ -387,8 +387,8 @@ def main():
 
     entries = [(f"M{n}", MILESTONE_TITLE[n], fmt_date(MILESTONE_DUE[n]))
                for n in sorted(MILESTONE_TITLE)]
-    # The Expo sits between M14 (Sun Nov 15) and M15 (Sun Nov 29) so the
-    # column of dates never runs backwards; M13 is the lock that feeds it.
+    # The Expo sits between M14 (Sun Nov 15) and M15 (Tue Nov 17, the photo
+    # from the Expo itself) so the column of dates never runs backwards.
     entries.insert(14, ("—", "Purdue Fall Undergraduate Research Expo "
                              "(required poster presentation)", "Tue Nov 17"))
     for idx, (num, name, due) in enumerate(entries):

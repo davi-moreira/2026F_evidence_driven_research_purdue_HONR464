@@ -8,11 +8,13 @@ course prose, exactly like the per-session readings.
 
 WHICH MILESTONES THE COURSE ACTUALLY RUNS is a separate question, and its answer
 is the `milestones:` table in course_config.yaml. A crosswalk row can outlive the
-milestone it was written for: D54 (2026-08-23) retired M17, because the last
-Friday of the semester is the course reflection session and there is no
-submission slot for it. Week 16 still TEACHES Studio 12's lessons on Monday and
-Wednesday, so the M17 crosswalk row keeps its `assignments:` and those three
-lessons keep their home anchor. Only the submission is gone.
+milestone it was written for: D54 (2026-08-23) retired the Studio 12 milestone,
+because the last Friday of the semester is the course reflection session and
+there is no submission slot for it. Week 16 still TEACHES Studio 12's lessons on
+Monday and Wednesday, so its crosswalk row keeps its `assignments:` with
+`milestone: null` and those three lessons keep their home anchor. (D91, 2026-10-26,
+rebuilt the conference block, so the chain is M1-M17 again and M17 now means the
+Studio 11 package milestone.)
 
 So this module reads BOTH files and returns only the live chain. A milestone
 dropped from course_config disappears from the handout PDFs and from the
@@ -52,7 +54,7 @@ SITE_REL = "book/studios"          # site-relative, for links on course pages
 
 
 def live_milestones() -> set[str]:
-    """"M01".."M16": the milestones the course actually runs.
+    """"M01".."M17": the milestones the course actually runs (D91).
 
     Read from course_config.yaml's `milestones:` table, which is where the
     course declares its own chain. Retiring a milestone there retires it

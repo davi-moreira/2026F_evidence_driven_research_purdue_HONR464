@@ -54,6 +54,13 @@
 # becomes `additions` and gains the schedule mark, on the narrowed rule's own
 # terms: the published abstract is an Expo requirement the book page lacks.
 #
+# AMENDED 2026-10-26 (instructor ruling, D91). The conference block is rebuilt on
+# QM 47400's post-lock sequence: M11 is the final poster AND the print file; M12
+# presentation planning, M13 peer review, M14 the LinkedIn invitation, M15 the Expo
+# presentation confirmation and M16 the conference reflection are course-only;
+# M17 presents Book Milestone 11. The D50/D90 entries for M12-M16 moved under
+# `retired:` with `retired_by: D91`, kept verbatim as the record.
+#
 # THIS FILE IS THE SINGLE SOURCE OF TRUTH for both distinctions.
 # scripts/build_handout_pdfs.py reads `classification` (the PDF section) and
 # scripts/update_schedule_badges.py reads `schedule_mark` (the schedule plus),
@@ -1224,8 +1231,9 @@ milestones:
 
       This milestone finishes your poster. You take the draft you submitted at M10,
       work through my feedback on it, and finish it on the course template, against
-      the poster rubric. Your classmates review it at M12, and M13 locks the print file
-      with only the repairs that review finds.
+      the poster rubric. **The file you submit is the file that goes to print**, on a
+      print run shared with QM 47400, and the poster you present at the Expo. There is
+      no revision window.
 
       **What you work from**, and only these three things:
 
@@ -1263,8 +1271,8 @@ milestones:
          "Preliminary results" in the footer.
       3. **Check it against the rubric** and update your self-check. A criterion you
          would still put below Proficient is where your last hours go.
-      4. **Hand it in at the start of the class in which the peer review runs**, and
-         bring a printed or screen-shareable copy: the review reads the board.
+      4. **Read the exported PDF once at print scale before you upload it.** What you
+         upload is what is printed.
 
       ### How it is graded
 
@@ -1338,6 +1346,358 @@ milestones:
   M12:
     schedule_mark: true
     classification: additions
+    instructions: course-only
+    reason: D91 (2026-10-26) adopts QM 47400's presentation-planning milestone. The spoken pitches are an
+      Expo requirement the book page does not carry, and the course fixes their form (an audience analysis,
+      three counted pitches at 75, 200 and 300 words, poster integration, and a question strategy) plus the
+      Round 02 mentor-meeting confirmation. The instructions are complete on their own.
+    schedule_note: audience, three timed pitches, question strategy
+    additions_markdown: |
+      ### Your presentation plan
+
+      Your poster is printed. From here the research is spoken: at the Expo you stand
+      next to the board and talk to people who did not come for you. This milestone is
+      the plan for that conversation. Your pitches get a live test before the Expo: in
+      class, you present your poster to the room as a practice run, and your classmates
+      ask you the questions they prepared in their peer review. The course schedule
+      names the day.
+
+      ### What goes in your file, in this order
+
+      1. **Your audience.** One paragraph on who will stop at your poster (students,
+         faculty from other fields, people who know your topic, judges, family and
+         friends), what they already know or believe about your question, and what they
+         would do with your answer. Then two or three key points that will resonate
+         with them.
+      2. **Three elevator pitches**, written as scripts, each with its word count shown:
+         - **30 seconds, at most 75 words**: your title, your question, and why it
+           matters, with your headline at its true size;
+         - **90 seconds, at most 200 words**: adds your design and method in brief, your
+           key result with its uncertainty, and why it matters;
+         - **2 minutes, at most 300 words**: the question, the design and method, the
+           result, your interpretation, the main limitation, your next step, and where
+           the finding could matter in the world.
+
+         The **boundary sentence**, the one line saying where your evidence stops,
+         appears at all three lengths, in the same words. Compression drops blocks,
+         never bounds. Read each pitch aloud with a timer.
+      3. **Poster integration.** For each pitch, the block of your poster your hand
+         points at, and when; then a short outline of how you move between sections.
+      4. **Question and discussion strategy.** How you will invite questions; three
+         questions you expect, each with a one-sentence answer and marked as a bound
+         request or an attack; at least three questions you will ask your audience; and
+         one prepared "my design cannot settle that", with the smaller true claim your
+         evidence does support.
+      5. **Your Round 02 mentor meeting, confirmed.** The date and time, who attended,
+         what the meeting changed, and what you carried from it into this plan. If the
+         meeting did not happen, say so, with the reason.
+      6. **Your AI Research Ledger rows** for this milestone, or "No AI used".
+
+      ### How it is graded
+
+      A 100-point rubric: audience analysis 15, the three pitches 25, bound discipline
+      under compression 25, poster integration 10, question strategy 15, and craft,
+      ledger and the meeting confirmation 10.
+    instructor_notes:
+    - 2026-10-26 (Davi, D91) — QM 47400's M11 adopted, with the boundary sentence kept from the retired M14 and the Round 02 confirmation moved here from it. The practice presentation is mentioned without its date, at Davi's instruction. No carry-forward record (conference block, D91).
+  M13:
+    schedule_mark: true
+    classification: additions
+    instructions: course-only
+    reason: D91 — the peer review of the boards is an Expo requirement the book page lacks; the course fixes it as
+      constructive, tangible feedback and questions for every other poster, read from the shared folder of print
+      files, with the questions asked at the in-class practice presentations.
+    schedule_note: feedback and questions for every other poster
+    additions_markdown: |
+      ### Your peer review
+
+      This is the milestone whose work is about someone else's research. I share a
+      folder with every final poster as a PDF; the link comes with this assignment. You
+      review every other poster and write, for each one, **constructive, tangible
+      feedback** its author can act on, and **questions you will ask its author**. You
+      ask those questions in person: in class, each author presents their poster to the
+      room as a practice run before the Expo. Bring your review to that session.
+
+      ### What goes in your file
+
+      One section for every other poster, opening with its title and author:
+
+      1. **At least three feedback items.** Each points to a specific place on the
+         poster, says what you noticed there, and offers a concrete change or next step.
+         At least one names something that works well, so the author knows to keep it,
+         and at least one concerns the evidence or the claim.
+      2. **At least three questions for the author**, each specific to that poster and
+         answerable at the board, at least one probing the evidence or the boundary of
+         the claim.
+
+      Close the file with your AI Research Ledger rows. This review is yours: never
+      upload a classmate's poster to an AI tool. You may use AI only to tighten the
+      wording of what you already wrote, with a ledger row.
+
+      ### How it is graded
+
+      Two separate scores. The **milestone score** records that the review is complete
+      and on time: every other poster covered, the minimums met, the ledger present.
+      The **Peer Review** score judges the quality of the feedback and the questions.
+      Neither score evaluates your own poster.
+    instructor_notes:
+    - 2026-10-26 (Davi, D91) — the peer review moves after the print file: feedback serves the presentation, the defense and the research after the Expo, not the poster. Davi shares the folder of PDFs with all students. The practice-session questions are the point of the questions section.
+    - Peer Review component (6%) is scored with the M13 Peer Review rubric in the brief; the M13 milestone score is a separate process score.
+  M14:
+    schedule_mark: true
+    classification: additions
+    instructions: course-only
+    reason: D91 — the invitation is an Expo requirement the book page lacks; QM 47400's M12 adopted (a LinkedIn post
+      with the program's exact title, time and location), graded on completion.
+    schedule_note: LinkedIn invitation to your presentation
+    additions_markdown: |
+      ### Your invitation
+
+      Publish a professional **LinkedIn post** inviting your network to your poster
+      presentation at the Purdue Fall Undergraduate Research Expo, and submit a
+      screenshot of the published post as your PDF.
+
+      Copy these **exactly as the official Expo program lists them**: your poster
+      title, your name (and every co-author's, in an approved group), the date and time
+      of your presentation, and the location. Write in a professional tone, make clear
+      you are presenting at the Expo as part of your research in HONR 46400, and invite
+      people to come. You may add a visual and tag me. If you describe your result,
+      describe it at its true size.
+
+      If you cannot post on LinkedIn, write to me before the deadline and we agree on
+      an alternative public invitation.
+
+      ### How it is graded
+
+      On completion: 100 when the post is published with every required element copied
+      exactly from the program; 50 when it is published but an element is missing or
+      does not match; 0 when no post was published.
+    instructor_notes:
+    - 2026-10-26 (Davi, D91) — completion grading, chosen by Davi. Every student posts, including group members.
+  M15:
+    schedule_mark: true
+    classification: additions
+    instructions: course-only
+    reason: D91 — presenting and evidencing that you presented are Expo requirements the book page lacks; QM 47400's
+      proof of presentation adopted (a photo in front of the poster), graded on completion, with the live
+      presentation scored at the Expo.
+    schedule_note: photo in front of your poster at the Expo
+    additions_markdown: |
+      ### Your presentation, confirmed
+
+      Presenting your poster at the Purdue Fall Undergraduate Research Expo is
+      required. Submit **a photo of you in front of your poster at the Expo**, saved as
+      your PDF. Take it at the Expo, early in your session, with the poster legible
+      enough to identify as yours.
+
+      At the Expo, be at your poster for your whole assigned session, present with the
+      pitches from your plan, answer from the evidence, and **write one line after each
+      visitor** with the gist of the question and who asked it. Those notes are the
+      evidence your conference reflection reads.
+
+      ### How it is graded
+
+      This milestone is graded on completion: 100 for the photo, 0 without it. Your
+      live presentation is scored separately, at the Expo, and supplies 30% of the
+      Poster Presentation component.
+    instructor_notes:
+    - 2026-10-26 (Davi, D91) — the live-presentation rubric moved here from the retired M15 reflection; the M15 milestone score is completion only.
+  M16:
+    schedule_mark: true
+    classification: additions
+    instructions: course-only
+    reason: D91 — the conference reflection is worked in the two class sessions after the Expo, with a survey and a
+      written plan to improve and complete the research; the book page carries neither. Davi asked that the brief
+      carry no dates.
+    schedule_note: the conference, your audience, and your plan
+    additions_markdown: |
+      ### Your conference reflection
+
+      You have presented your research in public. This milestone turns that afternoon
+      into a reflection on the conference and the audience you had, and a plan to
+      improve your research and to complete what remains. You do it in class, during
+      the two class sessions that follow the conference. Bring your Expo notes to both.
+
+      ### Part 1: the Conference Reflection Survey (first session)
+
+      Answer the survey (link on Brightspace) from your Expo notes: what you learned at
+      the conference beyond your own poster; how many people stopped and who they were;
+      the questions you were asked, which came up more than once, and whether each aimed
+      at your communication or your claims; the hardest question; and one thing you did
+      well and one you would do differently.
+
+      ### Part 2: your plan for the research (second session)
+
+      One to two pages, in your PDF:
+
+      1. **What your audience taught you**: a paragraph built from the questions you
+         were asked, naming the one that matters most for the research.
+      2. **The plan**: a table with one row per piece of remaining work (analyses,
+         checks, data, revisions, results not yet reported), each with why it matters,
+         what it needs, what it could change, and its order and a realistic target of
+         your own. Order the rows by what most affects your claim.
+      3. **Optional**: whether you would like to redo your poster and present an update
+         at an honors symposium by the end of the semester, if the budget to print a new
+         poster is available, and what would be new on it.
+
+      End with your AI Research Ledger rows.
+
+      ### How it is graded
+
+      A 100-point rubric: the survey 20, the reflection on the conference and the
+      audience 25, the plan 40, and craft and ledger 15. The optional updated-poster
+      section is not scored.
+    instructor_notes:
+    - 2026-10-26 (Davi, D91) — replaces the retired coded-tally reflection. The survey instrument is surveys/conference_reflection_survey.md; build it in Qualtrics from surveys/qualtrics_conference_reflection.txt before the first session after the Expo. The honors-symposium reprint depends on budget; nothing is promised.
+  M17:
+    schedule_mark: false
+    classification: pure
+    reason: Book Milestone 11 itself (assemble the package, run it cold, the external test, fix and freeze). The course
+      runs the external test as an in-class package exchange and adds the two blocking gates moved from the retired
+      M13 lock (D91); under the narrowed rule those live in the brief, not in the PDF.
+    schedule_note: null
+    instructor_notes:
+    - 2026-10-26 (Davi, D91) — M17 presents Book Milestone 11 only. The research-note revision (Book Milestone 9 v2) the old M16 carried left the chain; M16's plan carries the research forward. The cold-run report each student writes on a colleague's package is now required and attached to lastname_m17.pdf.
+    extra_artifacts:
+    - name: lastname_m17_package.zip
+      why: Your repaired reusable package (or a shared folder or repository link). It must run top to bottom in a clean session, so it travels as its own artifact.
+retired:
+  M17:
+    classification: retired
+    reason: 'RETIRED as a course milestone by D54 (2026-08-23): the last Friday of the semester is the
+      course reflection session, so there is no submission slot. Week 16 still teaches Studio 12''s lessons.
+      The authored section below is kept unused, in case the milestone returns in a later edition. ORIGINAL
+      CALL: Book Milestone 12 asks only for the release audit, dossier manifest, stopping rule, next-study
+      agenda, and the artifacts carried in from Lessons 38 to 40. The course additionally requires a live,
+      in-room Evidence Defense with a fixed three-movement format, scored cross-examination of classmates''
+      defenses, a final in-class dossier checklist run, a submitted runnable notebook, and a terminal
+      no-revision rule, none of which a student could infer from the book page.'
+    schedule_note: live Evidence Defense and cross-examination
+    additions_markdown: '### Defend your work out loud
+
+
+      Your **Evidence Defense** is performed live in class and graded in the room. It is never a file
+      you upload.
+
+
+      1. You defend once, in the slot you are assigned. Rounds run in the Wednesday defense blocks of
+      the last two weeks, and the final round runs in the last Friday studio.
+
+      2. A full slot gives you ten minutes to defend plus five minutes of cross-examination. A compressed
+      round keeps the same order and the same proportions, and the defense schedule gives your exact length.
+
+      3. Use three movements, in this order. **Claims** (about three minutes): your headline claim and
+      the exact edge it stops at. **Choices** (about four minutes): why this compass position, this data
+      strategy, this measurement, and the road you did not take. **Verification** (about three minutes):
+      how you checked, what survived, which sources you confirmed real, and how your release audit came
+      out.
+
+      4. Bring your full claim ledger with your three weakest rows already marked, plus your dossier draft
+      and your package, ready to open live if someone probes.
+
+      5. Where your ledger says a claim reaches too far, concede precisely and name the smaller true claim.
+      A well-timed concession is scored as strength.
+
+      6. Three moves are forbidden: inventing a new claim under pressure, taking a concession back by
+      insisting rather than by evidence, and blaming the AI tool.
+
+
+      If a defense falls apart, it converts to a supported walkthrough and you may elect a redo slot later
+      in the sequence. That is not a zero.
+
+
+      ### Cross-examine your classmates
+
+
+      On every day you are not defending, ask the defenders at least one question. Ground it in a ledger
+      row, a decision, or a verification step. Probe hard, stay respectful, and never make it personal.
+      Your questioning is scored, so silence costs you.
+
+
+      ### Close the dossier in the final studio
+
+
+      The last Friday studio runs a final dossier checklist against your draft. Work through it in the
+      room and close every open item, or write the reason it stays open, before you upload. Arrive with
+      the work complete enough to submit at the start of that session rather than at the end.
+
+
+      ### What your submission contains
+
+
+      1. One PDF carries the whole milestone: your final research chapter, then your release audit with
+      its decision, your dossier manifest, and your AI-management portfolio, each as a clearly marked
+      section.
+
+      2. Upload the runnable notebook behind the chapter as well. It must pass restart-and-run-all, and
+      every headline number in the chapter must rerun from it with no manual steps.
+
+      3. The portfolio section is always yours alone, written from your own full-semester ledger, even
+      if your project is shared.
+
+
+      ### If your project is an approved group
+
+
+      Share the chapter and the notebook, and name every member on both. Write your own portfolio and
+      give your own defense. Those two are scored per person, so members can finish with different scores.
+
+
+      ### This milestone is terminal
+
+
+      There is no revision window and no resubmission. The deadline governs the grade, so assemble everything
+      before you upload.
+
+
+      ### How it is judged
+
+
+      The Book Milestone rubric that follows scores the milestone artifact. Separately, your chapter,
+      your portfolio, and your live defense are each scored and then combined into the Instructor/TA Evaluation
+      part of your Final Project grade. Four failures cap their own rubric row at the lowest band, however
+      strong the rest is: a source that does not exist or does not say what you claim, a number or figure
+      with no path back to your data, a headline number that does not rerun, and a release claimed while
+      your run is stale or an audit row is blocking. Withholding honestly, with the repair named, never
+      triggers that last one. A missing AI Research Ledger leaves your portfolio ungraded until you supply
+      it.
+
+      '
+    extra_artifacts:
+    - name: lastname_m17_chapter.ipynb
+      why: The runnable notebook behind the chapter must pass restart-and-run-all and be executed by the
+        grader, so it cannot be folded into the PDF.
+    instructor_notes:
+    - The live Evidence Defense is performed and graded in the room and is never uploaded. The standard
+      submission header should not imply that every graded element of M17 arrives on Brightspace.
+    - 'Rubric difference in KIND, not only scale: the book page scores the milestone artifact on five
+      0/1/2 rows out of 10, while the course additionally runs a 100-point M17 process score plus three
+      100-point subrubrics (Final Research Artifact, AI-management portfolio, Evidence Defense) that feed
+      Instructor/TA Evaluation. The defense and the portfolio subrubrics assess things the book rubric
+      does not touch. Decide which of these tables should be printed inside the PDF; my section only names
+      the caps.'
+    - 'Stale cross-reference in the course brief: it says twice that ''You ran the release audit once
+      already, at M17, before the Expo'' (lines 111 and 174), which is self-referential and impossible,
+      since M17 is the terminal milestone. milestone_15_conference_reflection.md line 99 repeats it (''Your
+      release audit closed at M17, four days before the Expo''). These look like leftovers from the D50
+      renumber and should point at the earlier pre-Expo milestone. I did not carry the claim into the
+      student section.'
+    - Peer Evaluation is a separate Brightspace item collected at the end of the course (project/final_dossier/peer_evaluation_instrument.md),
+      not an M17 deliverable, so I deliberately left it out of the additions section. If you want the
+      terminal PDF to remind students to submit it, tell me and I will add one line.
+    - The brief's Book Anchor lists ch. 38, 39, 40 with companion Colab links, but the URLs and notebook
+      filenames still use the old ch35/ch36/ch37 numbering. Worth checking before the PDF is built.
+    - The brief allows the AI-management portfolio as a separate PDF or a marked section; I wrote it as
+      a marked section inside the single file, per the new one-file rule.
+    - The final dossier checklist itself lives in project/final_dossier/evidence_defense_protocol.md and
+      is run from a printed sheet in the last studio. My section tells the student it happens in class
+      rather than reproducing the checklist, so if you want the PDF to be fully self-contained, the checklist
+      box could be pasted in.
+    retired_by: D54
+  M12_d50_peer_review:
+    retired_by: D91
+    schedule_mark: true
+    classification: additions
     reason: The Book Milestone 10 page's practice builds and rehearses the student's OWN venue artifact,
       while course M12 requires an independent silent-round review survey of every OTHER active project
       plus an adjudicated response record on the sheets the student's own project receives. Work on other
@@ -1405,7 +1765,8 @@ milestones:
     - The book page carries a Studio 4 'not-authorized' blocking gate. It rides along in the book content
       and is unrelated to the peer round; no course action needed, but be aware the student sees it on
       this page.
-  M13:
+  M13_d50_final_poster_lock:
+    retired_by: D91
     schedule_mark: true
     classification: additions
     reason: 'Book Milestone 10 asks the researcher to pick any venue, adapt the artifact, map its content,
@@ -1487,7 +1848,8 @@ milestones:
       why: 'The reusable research package must actually run in a clean session: seeded notebook, data
         or access recipe, environment record, README, licence, and dated manifest. A runnable bundle cannot
         live inside a PDF.'
-  M14:
+  M14_d50_go_public_package:
+    retired_by: D91
     schedule_mark: true
     classification: additions
     reason: 'The Book Milestone page lets you pick any venue and build one artifact to a venue contract,
@@ -1580,7 +1942,8 @@ milestones:
     - The brief's "Three Traps" (estimated word count, the generous yes, the remembered room number) were
       not carried over as prose to keep the supplement short. Their substance is enforced in items 2,
       5, and 6.
-  M15:
+  M15_d50_conference_reflection:
+    retired_by: D91
     schedule_mark: true
     classification: additions
     reason: 'Book Milestone 10 asks you to build a venue contract, an artifact, a content map, and a private
@@ -1675,7 +2038,8 @@ milestones:
       rail), the ch. 29 ''It is your turn'' section (covered by ''What you bring''), the dossier update
       line (covered by the workbook), and the permission blocking gate (the book page carries it as a
       callout).'
-  M16:
+  M16_d50_package_and_cold_run:
+    retired_by: D91
     schedule_mark: false
     classification: pure
     reason: 'The submission folds two Book Milestones into one artifact (Book Milestone 11''s package
@@ -1827,136 +2191,3 @@ milestones:
       why: 'The package must be openable and runnable top to bottom in a fresh environment: notebook,
         data or access recipe, environment record, README, and licence. A PDF cannot be executed, so restart-and-run-all
         cannot be checked inside it.'
-retired:
-  M17:
-    classification: retired
-    reason: 'RETIRED as a course milestone by D54 (2026-08-23): the last Friday of the semester is the
-      course reflection session, so there is no submission slot. Week 16 still teaches Studio 12''s lessons.
-      The authored section below is kept unused, in case the milestone returns in a later edition. ORIGINAL
-      CALL: Book Milestone 12 asks only for the release audit, dossier manifest, stopping rule, next-study
-      agenda, and the artifacts carried in from Lessons 38 to 40. The course additionally requires a live,
-      in-room Evidence Defense with a fixed three-movement format, scored cross-examination of classmates''
-      defenses, a final in-class dossier checklist run, a submitted runnable notebook, and a terminal
-      no-revision rule, none of which a student could infer from the book page.'
-    schedule_note: live Evidence Defense and cross-examination
-    additions_markdown: '### Defend your work out loud
-
-
-      Your **Evidence Defense** is performed live in class and graded in the room. It is never a file
-      you upload.
-
-
-      1. You defend once, in the slot you are assigned. Rounds run in the Wednesday defense blocks of
-      the last two weeks, and the final round runs in the last Friday studio.
-
-      2. A full slot gives you ten minutes to defend plus five minutes of cross-examination. A compressed
-      round keeps the same order and the same proportions, and the defense schedule gives your exact length.
-
-      3. Use three movements, in this order. **Claims** (about three minutes): your headline claim and
-      the exact edge it stops at. **Choices** (about four minutes): why this compass position, this data
-      strategy, this measurement, and the road you did not take. **Verification** (about three minutes):
-      how you checked, what survived, which sources you confirmed real, and how your release audit came
-      out.
-
-      4. Bring your full claim ledger with your three weakest rows already marked, plus your dossier draft
-      and your package, ready to open live if someone probes.
-
-      5. Where your ledger says a claim reaches too far, concede precisely and name the smaller true claim.
-      A well-timed concession is scored as strength.
-
-      6. Three moves are forbidden: inventing a new claim under pressure, taking a concession back by
-      insisting rather than by evidence, and blaming the AI tool.
-
-
-      If a defense falls apart, it converts to a supported walkthrough and you may elect a redo slot later
-      in the sequence. That is not a zero.
-
-
-      ### Cross-examine your classmates
-
-
-      On every day you are not defending, ask the defenders at least one question. Ground it in a ledger
-      row, a decision, or a verification step. Probe hard, stay respectful, and never make it personal.
-      Your questioning is scored, so silence costs you.
-
-
-      ### Close the dossier in the final studio
-
-
-      The last Friday studio runs a final dossier checklist against your draft. Work through it in the
-      room and close every open item, or write the reason it stays open, before you upload. Arrive with
-      the work complete enough to submit at the start of that session rather than at the end.
-
-
-      ### What your submission contains
-
-
-      1. One PDF carries the whole milestone: your final research chapter, then your release audit with
-      its decision, your dossier manifest, and your AI-management portfolio, each as a clearly marked
-      section.
-
-      2. Upload the runnable notebook behind the chapter as well. It must pass restart-and-run-all, and
-      every headline number in the chapter must rerun from it with no manual steps.
-
-      3. The portfolio section is always yours alone, written from your own full-semester ledger, even
-      if your project is shared.
-
-
-      ### If your project is an approved group
-
-
-      Share the chapter and the notebook, and name every member on both. Write your own portfolio and
-      give your own defense. Those two are scored per person, so members can finish with different scores.
-
-
-      ### This milestone is terminal
-
-
-      There is no revision window and no resubmission. The deadline governs the grade, so assemble everything
-      before you upload.
-
-
-      ### How it is judged
-
-
-      The Book Milestone rubric that follows scores the milestone artifact. Separately, your chapter,
-      your portfolio, and your live defense are each scored and then combined into the Instructor/TA Evaluation
-      part of your Final Project grade. Four failures cap their own rubric row at the lowest band, however
-      strong the rest is: a source that does not exist or does not say what you claim, a number or figure
-      with no path back to your data, a headline number that does not rerun, and a release claimed while
-      your run is stale or an audit row is blocking. Withholding honestly, with the repair named, never
-      triggers that last one. A missing AI Research Ledger leaves your portfolio ungraded until you supply
-      it.
-
-      '
-    extra_artifacts:
-    - name: lastname_m17_chapter.ipynb
-      why: The runnable notebook behind the chapter must pass restart-and-run-all and be executed by the
-        grader, so it cannot be folded into the PDF.
-    instructor_notes:
-    - The live Evidence Defense is performed and graded in the room and is never uploaded. The standard
-      submission header should not imply that every graded element of M17 arrives on Brightspace.
-    - 'Rubric difference in KIND, not only scale: the book page scores the milestone artifact on five
-      0/1/2 rows out of 10, while the course additionally runs a 100-point M17 process score plus three
-      100-point subrubrics (Final Research Artifact, AI-management portfolio, Evidence Defense) that feed
-      Instructor/TA Evaluation. The defense and the portfolio subrubrics assess things the book rubric
-      does not touch. Decide which of these tables should be printed inside the PDF; my section only names
-      the caps.'
-    - 'Stale cross-reference in the course brief: it says twice that ''You ran the release audit once
-      already, at M17, before the Expo'' (lines 111 and 174), which is self-referential and impossible,
-      since M17 is the terminal milestone. milestone_15_conference_reflection.md line 99 repeats it (''Your
-      release audit closed at M17, four days before the Expo''). These look like leftovers from the D50
-      renumber and should point at the earlier pre-Expo milestone. I did not carry the claim into the
-      student section.'
-    - Peer Evaluation is a separate Brightspace item collected at the end of the course (project/final_dossier/peer_evaluation_instrument.md),
-      not an M17 deliverable, so I deliberately left it out of the additions section. If you want the
-      terminal PDF to remind students to submit it, tell me and I will add one line.
-    - The brief's Book Anchor lists ch. 38, 39, 40 with companion Colab links, but the URLs and notebook
-      filenames still use the old ch35/ch36/ch37 numbering. Worth checking before the PDF is built.
-    - The brief allows the AI-management portfolio as a separate PDF or a marked section; I wrote it as
-      a marked section inside the single file, per the new one-file rule.
-    - The final dossier checklist itself lives in project/final_dossier/evidence_defense_protocol.md and
-      is run from a printed sheet in the last studio. My section tells the student it happens in class
-      rather than reproducing the checklist, so if you want the PDF to be fully self-contained, the checklist
-      box could be pasted in.
-    retired_by: D54

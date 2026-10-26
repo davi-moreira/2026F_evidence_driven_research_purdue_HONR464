@@ -231,7 +231,7 @@ def rubric_markdown() -> str:
         "Score each criterion in one band. The rubric scores what your poster",
         "communicates, panel by panel; the grader checks that it is true (sources,",
         "computed results, reproduction, AI disclosure) against your claim-to-evidence",
-        "table, your package, your run records, and your ledger. Those checks decide whether the",
+        "table, your notebook, your run records, and your ledger. Those checks decide whether the",
         "board can be trusted; they add no package-craft points. The same rubric is",
         f"handed out as `project/poster/{RUBRIC_STEM}.pdf` (with the grading sheet",
         f"`{RUBRIC_STEM}.xlsx`) next to the poster template",
@@ -782,7 +782,7 @@ def build_template(qm474: Path, out: Path) -> None:
         [("One check:", {"bold": True}), (" a robustness, sensitivity, or diagnostic check, and what it changed.",
                                          {})],
         [("Verification:", {"bold": True}),
-         (" what was reproduced from your package, by whom, when; label a solo rerun "
+         (" what was rerun from your notebook, by whom, when; label a solo rerun "
           "“solo proxy; external cold run pending”.", {})],
     ], name="Checks text")
 
@@ -864,8 +864,8 @@ def build_template(qm474: Path, out: Path) -> None:
         [("Export:", {"bold": True}),
          (" slide 1 only, as a PDF: exactly one page, 34 × 22.5 in, nothing clipped.", {})],
         [("Files:", {"bold": True}),
-         (" M10: lastname_m10_poster.pptx + .pdf. M11: lastname_m11_poster.pdf, your final poster. "
-          "M13: lastname_m13_poster.pdf, the print file: your M11 poster with only the peer-review repairs.",
+         (" M10: lastname_m10_poster.pptx + .pdf. M11: lastname_m11_poster.pdf, your final poster "
+          "and the print file (D91): what you submit is what is printed.",
           {})],
     ], name="Guide: print spec", size=22)
     y = bar(g, gx[1], gw, 2.6, "RULES THE BOARD KEEPS")

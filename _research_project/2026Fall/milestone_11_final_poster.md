@@ -30,7 +30,7 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with the
 reproducible package and cold run in December. Every milestone
 follows the same cadence: **studio kickoff → develop across the week →
@@ -44,25 +44,27 @@ rubrics live one page per milestone, like this one.
 This milestone opens the **conference block**, the weeks between the last studio
 and the Expo. Here your poster reaches its final form: you take the draft you
 submitted at M10, work through my feedback on it, and finish it on the course
-template, against the poster rubric. What follows is review and print: your
-classmates review the final poster at M12, and M13 locks the print file, with
-only the repairs that review finds.
+template, against the poster rubric. **The file you submit here is the file that
+goes to print** and the poster you present at the Expo. After it, the work is
+spoken: your presentation plan (M12), your review of your classmates' posters
+(M13), your invitation (M14), and the Expo itself (M15).
 
 ---
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, November 4, at the start of class.** This is a hard at-class
-deadline, not a midnight one, because the structured peer review (M12) reads
-your final poster in that same session.
+Due: **Sunday, November 8, 11:59 PM (terminal — no revision window).** It is a
+print deadline: your file goes straight to the press, on a print run shared with
+QM 47400, so the poster you submit is the poster strangers read at the Expo on
+November 17.
 
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m11_poster.pdf`** | **Your final poster**: your M10 poster draft, revised in response to my M10 feedback and finished on the course template (`honr464_poster_template.pptx`, 34 × 22.5 in), following its guide page and the poster rubric. Every section in final form, the preliminary draft tag removed, exported from slide 1 only as one full-size page. Always its own file. Graded with the **poster rubric** below. |
 | 2 | **`lastname_m11.pdf`** | Your **response record**, in this order: the **Instructor Request Record** (Component 4) answering every `IR-M11-##` request from my M10 feedback; your **action plan's commitments** for this milestone (Component 5); your **rubric self-check**, updated from M10 (Component 3); and this milestone's **AI Research Ledger** rows (Component 6). |
 
-Bring a printed or screen-shareable copy to class as well: the peer review reads
-the board, not the file listing.
+Open the exported PDF before you upload it and read it once at print scale: what
+you upload is what is printed.
 
 **What this milestone does not ask for.** No venue contract, transformation memo,
 content map, or new defense rehearsal: those were M10's. This week is the poster.
@@ -92,8 +94,8 @@ someone standing up, who did not come for you, and who will leave if the first
 thing they see does not tell them why they should stay. Everything your research
 knows has to survive that compression without growing.
 
-This is the version you would print if no one found anything more. Two rules
-govern it, and both are checked:
+This is the version that goes to print, and nothing changes on it after the
+deadline. Two rules govern it, and both are checked:
 
 1. **Every number on the board traces to where it came from.** A number your
    project computed traces to the cell that produced it; a statistic you quote
@@ -232,7 +234,7 @@ scores the *Individual craft, ledger & closeout* row **0**, and the submission i
 | **Instructor Request Record** | Opens `lastname_m11.pdf`; every `IR-M11-##` request from the M10 feedback copied and marked **Done** with an exact location on the poster or **Not adopted** with a specific scientific reason and the choice made instead; if none were issued, the record says so |
 | **Action-plan commitments** | This milestone's row from your research action plan is delivered here, and any commitment you departed from is named in one line with its reason |
 | **AI Research Ledger** | One row per AI-assisted step, verification method named and non-vague |
-| **Timing** | Submitted at the start of Wednesday's class: the peer review depends on it |
+| **Timing** | Submitted by Sunday, November 8, 11:59 PM: the file goes straight to print, and there is no revision window |
 | **Filenames** | `lastname_m11_poster.pdf` (always its own file) and `lastname_m11.pdf` |
 | **Location** | Brightspace → Assignments → M11 |
 
@@ -248,27 +250,13 @@ ledger kept, and your carry-forward record. It is entered as M11 within
 
 | Criterion | Excellent | Proficient | Developing | Inadequate |
 |---|---|---|---|---|
-| **Final poster file, on time and on the template** (30) | Submitted at the start of class; built on the course template and following its guide page; every section in final form; one full-size page (27–30) | One guide-page lapse or one section still thin (21–26) | Several sections unfinished, or off the template's size or type minimums (12–20) | Not submitted in time for the review, or not built on the template (0–11) |
+| **Final poster file, on time and on the template** (30) | Submitted by the deadline; built on the course template and following its guide page; every section in final form; one full-size page (27–30) | One guide-page lapse or one section still thin (21–26) | Several sections unfinished, or off the template's size or type minimums (12–20) | Not submitted in time for the print run, or not built on the template (0–11) |
 | **The M10 feedback, worked on the board** (25) | Every comment visibly changed the poster or has a specific reason in the record; what the feedback said was working was kept (23–25) | One comment addressed only in the record, not on the board (18–22) | Several comments left unworked (10–17) | The feedback was not used (0–9) |
 | **Rubric self-check** (15) | One honest, specific line per criterion: sections, today's band, and what changed since M10 (14–15) | Present; one line generic (11–13) | Several criteria missing or generic (6–10) | No self-check (0–5) |
 | **Individual craft, ledger & closeout** (20) | Complete AI Research Ledger rows for this milestone, each verification method named; a dated, numbered poster version with its reason in the footer (18–20) | Ledger complete; one verification method vague (14–17) | Ledger thin (8–13) | Missing AI Research Ledger (scored 0, submission returned) (0–7) |
 | **Carry-forward: your action plan's steps** (10) | Every eligible step addressed in your record: done and located, or not adopted with your reason and the choice you made instead (10) | Most eligible steps addressed; the score is 10 × addressed ÷ eligible, rounded (5–9) | Fewer than half addressed; same formula (1–4) | No action-plan section in your record (0) |
 
 *Carry-forward row:* this row is scored for you individually, even in an approved group. The eligible steps are the ones your action plan sets for this milestone, in the latest version I sent you at least 48 hours before the deadline; a step sent later moves to a later milestone. Leave out any step that is also a numbered request (`IR-M11-##`): it is answered in your Instructor Request Record and counted once, through the adjustment below. If no steps are eligible, name the plan version you checked and write "No eligible action-plan steps for M11"; that earns the full 10. This row scores your response; the poster itself is scored by the poster rubric below.
-
-**Carry-forward adjustment (course decision D80; applies to the M11 milestone score only).**
-Let `U` be the number of numbered `IR-M11-##` requests from the M10 review
-left unaddressed in your Instructor Request Record. After the rubric, its hard
-caps, and any late penalty are applied:
-
-`recorded M11 score = max(0, score − min(20, 5 × U))`
-
-Five points per unaddressed request, capped at twenty. A completed and located
-change is addressed; so is a reasoned decision not to adopt a request, with the
-choice made instead. Where this milestone is revision-eligible, the deduction
-follows the standing revision policy. A request can reduce this score only if
-its numbered wording reached you at least 48 hours before the deadline; a later
-request is reissued for a later milestone.
 
 **Carry-forward adjustment (course decision D80; applies to the M11 process score only).**
 Let `U` be the number of numbered `IR-M11-##` requests from the M10 feedback
@@ -281,7 +269,20 @@ Five points per unaddressed request, capped at twenty. A completed and located
 change is addressed; so is a reasoned decision not to adopt a request, with the
 choice made instead. A request can reduce this score only if its numbered wording
 reached you at least 48 hours before the deadline; a later request is reissued
-for a later milestone. It does not change the poster-rubric score.
+for a later milestone. It does not change the poster-rubric score. M11 is
+terminal, so a carry-forward deduction here has no revision window.
+
+**Revision: none — this is a terminal artifact.** The file goes to print, so
+neither the poster nor this process score has a revision window.
+
+## Penalties
+
+- Late: −10 points per day on the M11 process score, up to 3 days; not accepted
+  after (documented emergencies handled individually per Purdue policy). A late
+  file also risks missing the shared print run, and a poster that misses it is
+  not printed for the Expo.
+- Missing AI Research Ledger entry: the *Individual craft, ledger & closeout* row
+  scores 0 and the submission is returned for completion before grading.
 
 ---
 
@@ -307,7 +308,7 @@ score. Do not enter it as the M11 process score.
 Score each criterion in one band. The rubric scores what your poster
 communicates, panel by panel; the grader checks that it is true (sources,
 computed results, reproduction, AI disclosure) against your claim-to-evidence
-table, your package, your run records, and your ledger. Those checks decide whether the
+table, your notebook, your run records, and your ledger. Those checks decide whether the
 board can be trusted; they add no package-craft points. The same rubric is
 handed out as `project/poster/Evidence_Driven_Research_Poster_Rubric.pdf` (with the grading sheet
 `Evidence_Driven_Research_Poster_Rubric.xlsx`) next to the poster template
@@ -359,6 +360,5 @@ Apply each cap once, to its named criterion: the score falls to the top of the B
 
 *Previous: [M10 — Venue Contract and the Publication-Ready Artifact](milestone_10_poster_draft_research_audit.md) —
 the poster draft and the feedback this final version answers ·
-Next: [M12 — Peer Review Submission](milestone_12_peer_review.md) — the
-readings you write on every other active project, and the independent readings
-your final poster receives.*
+Next: [M12 — Presentation Planning](milestone_12_presentation_planning.md) — the
+poster is printed; from here you prepare to speak it.*

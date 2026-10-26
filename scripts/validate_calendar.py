@@ -115,7 +115,7 @@ ASYNC_DAYS: dict[date, str] = _async_days()
 # External / non-MWF events that belong on the master schedule as rows even
 # though they are not ordinary class meetings.
 EVENTS: dict[date, str] = {
-    date(2026, 11, 8):  "FINAL POSTER LOCK, Sunday 11:59 PM — terminal (M13); shared print run with QM 47400",
+    date(2026, 11, 8):  "FINAL POSTER DUE, Sunday 11:59 PM — terminal, the print file (M11, D91); shared print run with QM 47400",
     date(2026, 11, 17): "Purdue Fall Undergraduate Research Expo — REQUIRED poster presentation (Tuesday, not MWF)",
 }
 

@@ -6,11 +6,12 @@ presents every time and every student has an individual speaking or review role;
 formats are deliberately varied so "presenting" never calcifies into one genre.
 Under the studio-Friday rhythm, most presentations happen inside the Friday work
 block (20–50 min); a few sit on Mon/Wed lecture days where hard dates force it
-(M13's gallery walk and oral defense, the Week 15–16 defence blocks), M6 and M16 run on the
-async board, and the URC Expo (Tue Nov 17) is a scheduled performance event and a
+(the Week 12 practice presentations, the Week 15 package exchange), M6 and M16 run
+asynchronously, and the URC Expo (Tue Nov 17) is a scheduled performance event and a
 Final Project **Poster Presentation at the Purdue Undergraduate Research
-Conference** score. M15 separately grades the
-written reflection checkpoint. Kickoff venues live in `PROJECT_MILESTONES.md`.
+Conference** score. Since D91 the conference block follows QM 47400's post-lock
+sequence (M11–M16); M15 confirms the Expo presentation and M16 is the written
+reflection. Kickoff venues live in `PROJECT_MILESTONES.md`.
 
 This map is a **planning companion** to `PROJECT_MILESTONES.md` (the chain table)
 and `course_config.yaml milestones:` (the machine-readable anchors that
@@ -19,7 +20,7 @@ treat `course_config.yaml` + `PROJECT_MILESTONES.md` as the source of truth and
 this file as the presentation-format overlay on top of them.
 
 Meeting numbers `M2…M43` are MEETINGS (calendar backbone); milestone IDs are
-`M1…M16`. Dates are the v2 backbone from `planning/MEETING_SCHEDULE.csv`.
+`M1…M17` (D91). Dates are the v2 backbone from `planning/MEETING_SCHEDULE.csv`.
 
 Legend: dev = in-class development meetings · pres = presentation/review moment ·
 due = submission (11:59 PM unless noted) · rev = revision path (standing policy in
@@ -38,22 +39,25 @@ for up to half the lost points).
 | M8 | **Protocol cross-review** — partner swaps declared-analysis protocols and pre-registers one predicted attack on the other's plan | M20–M21 | M22 (studio) | Sun Oct 18 | eligible |
 | M9 | **First-evidence walkthrough** — 60-second redesign pitch: weakness, fix, before/after diagnosands on the first computed estimate | M22–M24 | M25 (studio) | Sun Oct 25 | eligible |
 | M10 | **Poster-draft red-team** — the five audits (claim boundary, figure honesty, read path, uncertainty, accessibility); two peers + the required Poster Critic and Robustness & Sensitivity Reviewer roles; author triages hits | M25–M27 | M28 (studio) | Sun Nov 1 | eligible |
-| M13 | **Poster Criticism I gallery walk** (M29) + **Criticism II oral defense** (M30) — three lenses (interdisciplinary / methods / skeptic), defend-or-concede on the record; pre-lock production at the Friday studio, then terminal Sunday submission | M28–M30 | M29 + M30 (Mon/Wed) + M31 (studio) | **Sun Nov 8, 11:59 PM** | none (terminal) |
-| M14 | **Mock poster symposium** — the three pitch layers (30-sec hook, 90-sec walk, full pitch) under live fire; partner + AI reviewer flag every spoken upgrade | M32–M33 | M34 (studio) | Sun Nov 15 | eligible |
-| M15 | **URC Expo** (Tue Nov 17: present your poster + evaluate ≥3 peer posters; live quality is graded only in Final Project) + **reflection story round** (M36) — 90-sec surprising moment, then read the pattern off your coded tally | M35–M36 | Expo (Tue Nov 17) + M36 (studio) | Sun Nov 29 | M15 written package eligible; Final Project live score terminal |
-| M16 | **Anonymized reproduction exchange** (async) — you rebuild a stranger's headline number cold, red-team it, and post the residual to the board | M36–M37 | async board (module week) | **Sun Nov 29** | eligible |
-| M16 | **Table read** — all five research notes read by all, margin notes (sharpest sentence / weakest claim); reproducibility capsule stub shown | M37–M39 | M40 (studio) | Sun Dec 6 | eligible |
+| M11 | **Ungraded reading round** of the near-final posters (M30: silent, structured findings with block + repair) + revision studio and print-scale check (M31); the final poster is the print file (D91) | M29–M31 | M30 (Wed) + M31 (studio) | **Sun Nov 8 — TERMINAL** | none (terminal) |
+| M12 | **Pitches under typed adversarial questioning** (M33) — the three timed pitches with the boundary sentence at every length; Round 02 meeting confirmed | M32–M33 | M33 (Wed) | Wed Nov 11 | eligible |
+| M13 | **Written peer review** of every other poster from the shared folder — tangible feedback + questions, then the questions asked live at the **practice presentations** (M34) | M33 | M34 (studio) | Thu Nov 12 | eligible (process score) |
+| M14 | **LinkedIn invitation** — the public post, copied from the official program | M34 | public post | Sun Nov 15 | none (completion) |
+| M15 | **URC Expo** (Tue Nov 17: present your poster; the live presentation is scored there) — photo in front of the poster | M35 | Expo (Tue Nov 17) | Tue Nov 17 | none (completion) |
+| M16 | **Conference reflection** — the survey (M36, async) and the plan to improve and complete the research (M37, async) | M36–M37 | async | Mon Nov 23 | eligible |
+| M17 | **In-class package exchange** (M39) — you cold-run a colleague's package from their written instructions and hand them a threat-ranked report; repair block, two blocking gates and second clean run at the studio (M40) | M38–M40 | M39 (Wed) + M40 (studio) | Sun Dec 6 | eligible |
 | — | **Evidence Defense** (D54: in-class practice, no grade weight) — oral defense (claims, choices, verification) + cross-examination where every non-defender asks ≥1 ledger-grounded question; the Week 15–16 Wednesday blocks | M40–M42 | M42–M43 (Mon/Wed/Fri) | **Fri Dec 11** | none (terminal) |
 
 ## Presentation-format variety audit
 
 Formats used: pitch (30-sec / 90-sec / 2-min / 3-min / 60-sec technical), gallery
-walk (M3, M13), clarifying-question rounds, written two-line reviews, async
+walk (M3), clarifying-question rounds, written two-line reviews, async
 recorded statement + board replies (M6), clinic/consults, protocol cross-review,
-five-audit red-team (M10), oral defense with three lenses (M13), mock symposium
-(M14), **public conference (the URC Expo, M15)**, reflection story round (M15),
-anonymized reproduction exchange (M16, a different board genre from M6), and the
-table read (M16), which closes the chain.
+five-audit red-team (M10), the ungraded reading round (M11), pitches under typed
+questioning (M12), written peer review asked live at the practice presentations
+(M13), the public invitation (M14), **public conference (the URC Expo, M15)**, the
+reflection survey and plan (M16), and the in-class package exchange (M17), which
+closes the chain.
 **No format repeats in consecutive milestones**, satisfying the "vary the studio"
 guardrail in `COURSE_MASTER_PLAN.md`.
 
@@ -62,9 +66,9 @@ guardrail in `COURSE_MASTER_PLAN.md`.
 30-sec (M1) → 2-min (M2) → gallery walk (M3) → 3-min declared (M4) → measurement
 walkthrough (M5) → 90-sec recorded async (M6) → clinic/workshop (M7) →
 cross-review (M8) → 60-sec technical (M9) → structured five-audit red-team (M10) →
-gallery walk + adversarial three-lens oral defense (M13) → the three-layer pitch
-under fire (M14) → **public conference at the URC Expo (M15)** → async
-reproduction exchange (M16) → **table read (M16), the chain's close**.
+the reading round (M11) → the three-layer pitch under questioning (M12) → the
+practice presentation answering classmates' questions (M13) → **public conference
+at the URC Expo (M15)** → the in-class package exchange (M17), the chain's close.
 Stakes and polish rise monotonically; format length does not — compression is
-trained as its own skill, and the two terminal performances (the Nov 8 poster lock
-and the Dec 11 Evidence Defense) carry no revision window.
+trained as its own skill, and the terminal artifacts (the Nov 8 print file and the
+Expo itself) carry no revision window.

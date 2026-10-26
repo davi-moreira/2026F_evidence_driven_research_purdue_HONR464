@@ -58,8 +58,9 @@ milestone category and no sixth Final Project component.
 > reads 30 / 20 / 10 / 20 / 20, the table above is written in course percentages.
 > Nothing else moved: no component was renamed, and no scoring rule inside a
 > component changed.
-> Milestone Deliverables is still the equally weighted mean of your M1–M16
-> scores, the Poster Presentation is still 70% locked poster plus 30% live
+> Milestone Deliverables is still the equally weighted mean of your milestone
+> scores (M1–M17 since the conference block was rebuilt on October 26), the
+> Poster Presentation is still 70% poster plus 30% live
 > presentation, and Peer Evaluation is still 80 received-rating points plus 20
 > submission points.
 
@@ -67,20 +68,21 @@ milestone category and no sixth Final Project component.
 
 | Component | Individual project (default) | Approved group project |
 |---|---|---|
-| **Milestone Deliverables** | Your score is the arithmetic mean of your sixteen M1–M16 scores. | Each member's score is the arithmetic mean of that member's own sixteen M1–M16 scores; there is no pooled group mean. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
+| **Milestone Deliverables** | Your score is the arithmetic mean of your seventeen M1–M17 scores. | Each member's score is the arithmetic mean of that member's own seventeen M1–M17 scores; there is no pooled group mean. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
 | **Peer Evaluation** | Two instructor-assigned project peers who have observed your work in scheduled studios and checks rate you confidentially. You complete every evaluation the instructor assigns; assignments need not be reciprocal. There is no self-rating. | Every member confidentially rates every other teammate and may also be assigned to observe and rate an individual-project researcher. There is no self-rating. The score is per member, so teammates can receive different scores. |
-| **Peer Review** | You independently review every other active project or poster and submit your own structured criticism, scored with the **M12** Final Project Peer Review rubric. | Every member independently reviews every other active project or poster and submits their own criticism without conferring. This is not a teammate rating and is scored per student. |
-| **Poster Presentation at the Purdue Undergraduate Research Conference** | Your **final poster at M11**, graded with the poster rubric, supplies 70% of this component score, and your **M15** live presentation supplies 30%. | The shared **M11** final poster supplies the common 70% poster portion. Every member must present; each member's **M15** live presentation supplies their own 30% portion. |
-| **Instructor/TA Evaluation** | The instructor evaluates the **final poster submission you lock at M13** with the published rubric. | The shared locked poster is common evidence and receives a common score. |
+| **Peer Review** | You independently review every other active project or poster and submit your own feedback and questions for every other poster, scored with the **M13** Final Project Peer Review rubric. | Every member independently reviews every other active project or poster and submits their own criticism without conferring. This is not a teammate rating and is scored per student. |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | Your **final poster at M11**, graded with the poster rubric, supplies 70% of this component score, and your live presentation at the Expo, scored with the rubric in the **M15** brief, supplies 30%. | The shared **M11** final poster supplies the common 70% poster portion. Every member must present; each member's live presentation supplies their own 30% portion. |
+| **Instructor/TA Evaluation** | The instructor evaluates the **final poster you submit at M11**, the print file, with the published rubric. | The shared final poster is common evidence and receives a common score. |
 
 The **Milestone Deliverables** score is
 
 \[
-M = \frac{M1 + M2 + \cdots + M16}{16}.
+M = \frac{M1 + M2 + \cdots + M17}{17}.
 \]
 
 Each `Mn` is the milestone's recorded score after its own rubric, hard caps, late
-rule, and, from **M4** on, the **carry-forward adjustment** (D80): the artifact
+rule, and, from **M4** on (except the conference-block milestones **M12–M16**,
+whose requests are answered at **M17**), the **carry-forward adjustment** (D80): the artifact
 opens with an **Instructor Request Record** answering every numbered `IR-Mn-##`
 request from the previous review, and each unaddressed request deducts 5 points
 from that milestone's score, capped at 20. A request is addressed when it is
@@ -88,8 +90,9 @@ done and located, or not adopted for a specific scientific reason with the choic
 made instead. The adjustment never touches Peer Review, the poster-quality
 score, the live Expo presentation, or Instructor/TA Evaluation.
 
-All milestones use a 100-point rubric and therefore carry equal weight in this
-mean. An approved group submits one shared artifact naming every member. Shared
+All milestones are scored out of 100 and therefore carry equal weight in this
+mean; M14 (the LinkedIn invitation) and M15 (the Expo presentation confirmation)
+are scored on completion. An approved group submits one shared artifact naming every member. Shared
 rubric rows receive a common score; each member's AI Research Ledger and every
 other requirement marked individual are scored per member, so recorded
 milestone scores may differ only on those rows. Each member remains responsible
@@ -101,21 +104,21 @@ The **Poster Presentation** score combines two 0–100 subscores:
 P = 0.70 P_{\text{poster}} + 0.30 P_{\text{live}},
 \]
 
-where \(P_{\text{poster}}\) is the quality of the poster you lock at **M13**
-and \(P_{\text{live}}\) is your live presentation at the conference, recorded
-with **M15**. For an approved group, \(P_{\text{poster}}\) is common to the
-shared locked poster; every member must present, and each member receives their
+where \(P_{\text{poster}}\) is the poster-rubric score of your final poster at
+**M11** and \(P_{\text{live}}\) is your live presentation at the conference,
+scored at the Expo with the rubric in the **M15** brief. For an approved group,
+\(P_{\text{poster}}\) is common to the shared final poster; every member must present, and each member receives their
 own \(P_{\text{live}}\).
 
 The **Instructor/TA Evaluation** score is a single 0–100 instructor
-assessment of the **final poster submission** you lock at **M13**, judged as a
+assessment of the **final poster** you submit at **M11**, the print file, judged as a
 piece of research communication: whether the argument is traceable, the
 results reproducible, the uncertainty and limitations stated where the claim
 is made, the sources verified, and AI's contribution disclosed honestly. It is
 graded on the published rubric, and it is a different judgement from the
 **Poster Presentation** component, which scores your M11 final poster against the
 poster rubric and your live delivery at the conference. For an approved group, the
-shared locked poster receives a common score. If no TA is assigned to the
+shared final poster receives a common score. If no TA is assigned to the
 course, the instructor records this item.
 
 ## The two required mentor meetings
@@ -129,7 +132,7 @@ not optional office hours, and they are not a substitute for office hours.
 | Round | Meeting window | Requested at | Confirmed at | What the meeting works on |
 |---|---|---|---|---|
 | **Round 01** | **Mon Oct 5 to Sun Oct 11, 2026** | **M4** (due Sun Sep 20) | **M7** (due Tue Oct 13) | your question, the evidence behind it, and Research Contract v0 |
-| **Round 02** | **Mon Nov 2 to Sat Nov 7, 2026** | **M8** (due Sun Oct 18) | **M14** (due Sun Nov 15) | the claim your evidence carries, the poster, and the questions it will draw |
+| **Round 02** | **Mon Nov 2 to Sat Nov 7, 2026** | **M8** (due Sun Oct 18) | **M12** (due Wed Nov 11) | the claim your evidence carries, the poster, and the questions it will draw |
 
 Each round is **requested** in one milestone and **confirmed** in a later one.
 The request is an email sent from your Purdue address offering at least three
@@ -145,8 +148,8 @@ meeting**, and it need not be the same member at both rounds. Every member
 remains responsible for what the meeting decided.
 
 Send each request early. Round 02's window sits inside the busiest stretch of
-the conference block and closes the day before the terminal poster lock on
-**Sun Nov 8**, so a request that arrives late gets you no meeting at all.
+the conference block and closes the day before the final poster, the print
+file, is due on **Sun Nov 8**, so a request that arrives late gets you no meeting at all.
 
 ## Peer Evaluation is not Peer Review
 
@@ -155,10 +158,10 @@ people who observed your work. **Peer Review** is the quality of the structured
 criticism you give other projects. They are separate Final Project components,
 submitted separately, and neither replaces the other.
 
-**No score is counted twice.** M12, M13, and M15 are milestones, so their
-milestone rubrics feed Milestone Deliverables. Those same weeks also produce
-separate terminal rubrics — your peer review, your poster quality, your live
-presentation, and the instructor's assessment of the locked poster — and those
+**No score is counted twice.** M11, M13, and M15 are milestones, so their
+milestone scores feed Milestone Deliverables. Those same weeks also produce
+separate terminal rubrics — your poster quality, your peer review, your live
+presentation, and the instructor's assessment of the final poster — and those
 feed the other four components. The milestone rubric scores your process: whether the
 work arrived on time, in the right version, answering the feedback you were
 given. The terminal rubric scores the artifact itself. No single rubric score is

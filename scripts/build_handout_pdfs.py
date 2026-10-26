@@ -3,7 +3,7 @@
 
 Two families of student-facing instructions are handed to students as PDFs:
 
-  * the course milestones M1-M16     -> _research_project/2026Fall/*.pdf
+  * the course milestones M1-M17     -> _research_project/2026Fall/*.pdf
   * the Student Research Lead suite  -> project/srl/*.pdf
 
 Each PDF sits in the SAME FOLDER as the source it is developed from, named with
