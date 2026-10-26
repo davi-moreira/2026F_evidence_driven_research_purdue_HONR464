@@ -1,10 +1,10 @@
 # Final Production Checklist — M31 Friday Revision Studio
 
-*The last supervised pass before your poster is locked. Run in class M31; the
-terminal deadline is Sunday, November 8, 11:59 PM — there is no revision window
-after the lock.
-Governs [course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md).
-Quality bar: the M13 grading rubric (the single poster rubric).*
+*The last supervised pass before your final poster goes to print. Run in class
+M31; M11, the final poster and the print file, is due Sunday, November 8,
+11:59 PM — terminal, with no revision window.
+Governs [course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md).
+Quality bar: the poster rubric in that brief (the single poster rubric).*
 
 ## Purpose
 
@@ -21,7 +21,7 @@ traceability check and later receives an individual live-presentation score.
 
 ## Materials
 
-- Your triaged draft poster (all M30 hits applied).
+- Your near-final poster on the course template, with the findings from Wednesday's reading round (M30) worked in.
 - The URC poster spec sheet (dimensions, orientation, and format per **URC
   guidance on Brightspace** — confirm the current numbers there, do not guess).
 - Your pilot notebook, runnable, open beside the poster.
@@ -57,7 +57,7 @@ If a number does not trace, it does not ship. Recompute it or cut it.
 
 ## Submission hygiene
 
-- ☐ Filename per instructions; correct file, final version (not an autosave).
+- ☐ Filename per the M11 brief (`lastname_m11_poster.pdf`); correct file, final version (not an autosave).
 - ☐ Submitted to Brightspace **and** the URC channel as instructed.
 - ☐ Submission confirmation captured (screenshot or receipt).
 - ☐ AI-use disclosure block present on the dossier record for this artifact (tool, task, verification).
@@ -69,7 +69,7 @@ If a number does not trace, it does not ship. Recompute it or cut it.
 | 0–5 | Deadline briefing; checklist distributed. |
 | 5–35 | **Production sprint** — silent studio; instructor circulates once through every active project, dividing the consult window evenly across the three to five posters. |
 | 35–45 | **Traceability spot-check** — pairs verify one number each against the notebook. |
-| 45–50 | **Preflight and save** the print-ready candidate; submit M12; exit ticket (one claim I softened before the Sunday lock, and why the softer version is stronger). |
+| 45–50 | **Preflight and save** the print-ready candidate (M11 is submitted by Sunday, 11:59 PM); exit ticket (one claim I softened before the print deadline, and why the softer version is stronger). |
 
 ## Roles
 
@@ -86,7 +86,7 @@ and holds the backup printing plan ready.
 ## The print backup plan
 
 If printing or the portal fails: submit the **PDF to Brightspace** by Sunday,
-November 8, 11:59 PM — that timestamp meets the lock deadline. Physical printing is then resolved in the
+November 8, 11:59 PM — that timestamp meets the M11 print deadline. Physical printing is then resolved in the
 following week, before Nov 17. A print failure never becomes a missed deadline;
 the file is what is due Sunday, the paper is what is needed by the Expo.
 
@@ -98,4 +98,4 @@ the file is what is due Sunday, the paper is what is needed by the Expo.
 4. **Uncertainty lost in the final layout.** Re-confirm it survived the last design pass.
 5. **Submitting the wrong file.** Verify it's the final version, correctly named, before you close the laptop.
 
-*Previous: [redteam_review_protocol.md](redteam_review_protocol.md) · Rubric: [course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md)*
+*Previous: [redteam_review_protocol.md](redteam_review_protocol.md) · Rubric: [course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md)*

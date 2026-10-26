@@ -1,10 +1,11 @@
-# Reproducibility Capsule Template — M16
+# Reproducibility Capsule Template — M17
 
 *The frozen, self-contained bundle that lets anyone rebuild your findings after the
-course ends. You assemble it for the M16 research-note capsule and finalize it
-inside your M16 submission. A capsule is complete when a competent stranger, with only
-what is inside it, can reproduce your headline number and read every claim back to
-its evidence.*
+course ends. You assemble it as the reproducible package of
+[course milestone M17 — Reproducible Package and the Peer Cold Run](../../_research_project/2026Fall/milestone_17_package_and_cold_run.md)
+and finalize it inside your M17 submission. A capsule is complete when a
+competent stranger, with only what is inside it, can reproduce your headline
+number and read every claim back to its evidence.*
 
 ---
 
@@ -35,7 +36,11 @@ would need to ask you a question, it is not done yet.
 
 A capsule missing any of these is incomplete. The seed policy is not a separate
 file here; it lives inside the notebook's setup cell and is noted in the
-environment note (component 5).
+environment note (component 5). M17 also asks for two items that travel with
+these eight: the **decision log** (every by-hand choice, exclusion, and cut
+point, with its reason) and a **dated, frozen manifest** of what the package
+contains, with the claim–evidence table frozen alongside it. The M17 brief has
+the full list.
 
 ## The claim–evidence table (component 6)
 
@@ -48,14 +53,17 @@ evidence that earns it, so a reader never has to take your word for anything.
 | [the claim as stated] | [the number and where it comes from] | [named method] | [the overreach it forbids] | [yes / moved / n/a] |
 ```
 
-Every sentence in your research note and brief should trace to a row here. A claim
-with no row is a claim with no evidence; either cut it or earn it a row.
+Every number, figure, and citation on your poster, and every claim in your
+README, should trace to a row here. A claim with no row is a claim with no
+evidence; either cut it or earn it a row.
 
 ## The sign-off attestation
 
 A finalized capsule carries a signed line. It is the author's statement that the
 bundle is complete and honest, and it is what makes the capsule the version of
-record.
+record. It is your own pre-check: at M17 the two blocking gates (the author
+self-reproduction log and the release preflight) do this job formally, and
+neither one is independent verification.
 
 ```
 ────────────────────────────────────────────────────────────────
@@ -67,7 +75,7 @@ Author:  ____________________________________________________
 I attest that:
   [ ] the notebook passes restart-and-run-all from a cold kernel,
   [ ] every reported number traces to a cell and a data source,
-  [ ] every claim in my note traces to a claim–evidence row,
+  [ ] every claim on my poster and in my README traces to a claim–evidence row,
   [ ] the AI Research Ledger is complete and every output was verified,
   [ ] data sources are documented with their license and attribution,
   [ ] any residual non-determinism is stated honestly.
@@ -84,17 +92,21 @@ then disproves.
 
 ## What the capsule has to survive
 
-- **At M16**, you assemble the capsule around your research note and workshop it in
-  the table read. Some components may still be tightening.
-- **At M16**, the capsule is frozen, signed, and submitted. M16 closes the
-  chain, so the capsule you sign is the one
-  that stands.
+- **At M17, Monday**, you assemble the capsule and run it cold yourself, labeled
+  "solo proxy; external cold run pending." Some components may still be
+  tightening.
+- **At M17, Wednesday**, a colleague runs it in class from your written
+  instructions alone and writes you a cold-run report.
+- **At M17, Friday**, you repair it against that report, clear the two blocking
+  gates, and make the second clean run after your last change. The capsule is
+  then frozen and submitted (Sunday, December 6, 11:59 PM). M17 closes the
+  chain, so the capsule you submit is the one that stands.
 
 ## Quality bar
 
 - ☐ All eight components are present and internally consistent.
 - ☐ The notebook passes a cold restart-and-run-all and matches the README numbers.
-- ☐ Every claim in the note has a claim–evidence row.
+- ☐ Every number, figure, and citation on the poster has a claim–evidence row.
 - ☐ Both ledgers are finalized.
 - ☐ Data licenses and attributions are stated.
 - ☐ The sign-off is signed, with no box checked that is not honestly true.

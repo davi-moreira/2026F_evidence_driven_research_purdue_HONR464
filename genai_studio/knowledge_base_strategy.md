@@ -72,7 +72,7 @@ relevant sections into GenAI Studio Knowledge uploads.
   to the never-delegate boundary.
 
 ### 2. `milestone-briefs`
-- **Contains:** the M1–M16 student-facing briefs and their submission
+- **Contains:** the M1–M17 student-facing briefs and their submission
   requirements. Sourced from `_research_project/2026Fall/milestone_NN_*.md`.
 - **Attached to:** research_question_diagnostician, ai_research_team_orchestrator,
   and each touchpoint role for the milestone it serves.
@@ -108,9 +108,10 @@ relevant sections into GenAI Studio Knowledge uploads.
 - **Attached to:** poster_critic.
 
 ### 6. `reproducibility-standards`
-- **Contains:** the reproducibility-capsule and replication-package requirements,
-  the cold-reproduction and signed-attestation protocol, and the red-team report
-  format. Sourced from `project/reproducibility/`.
+- **Contains:** the reproducibility-capsule and reproducible-package requirements
+  (M17), the cold run and the in-class package exchange, the two blocking gates
+  (author self-reproduction log, release preflight), and the cold-run report.
+  Sourced from `project/reproducibility/` and the M17 brief.
 - **Attached to:** reproducibility_auditor, research_note_reviewer,
   robustness_sensitivity_reviewer.
 

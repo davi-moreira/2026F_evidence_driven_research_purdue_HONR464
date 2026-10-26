@@ -1,5 +1,16 @@
 # Conference Reflection Protocol — M36 (Fri Nov 20)
 
+> **Retired by D91 (2026-10-26) — kept as the record.** The coded question
+> tally, the in-class pair analysis, and the reflection "submitted that night"
+> are gone, along with the old M15 conference reflection they served. What
+> replaced them is
+> [course milestone M16 — Conference Reflection](../../_research_project/2026Fall/milestone_16_conference_reflection.md),
+> worked in the two asynchronous class sessions after the Expo: the Conference
+> Reflection Survey in the first, the written plan to improve and complete the
+> research in the second. Capturing questions at the Expo (one line per
+> visitor) now lives in the M15 brief. Nothing below is applied this edition;
+> the content is left intact.
+
 *Turn the questions strangers asked you at the Expo into coded data, and find the
 pattern. Governs the reflection-and-criticism package of
 [milestone_12 — Conference Reflection & Poster-Criticism Portfolio](../../_research_project/2026Fall/milestone_12_conference_reflection.md).

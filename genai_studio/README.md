@@ -100,21 +100,23 @@ Three uses, all inside the Ask → Verify → Document loop.
 
 ---
 
-## The five required milestone touchpoints
+## The five milestone touchpoints
 
-Most role use is optional support. At five milestones, consulting a specific
-role is **required**, and a named output section goes into your **AI Research
-Ledger** (`ai_resources/ai_research_ledger_template.md`). Milestone definitions
-are the v2 chain in `planning/PROJECT_MILESTONES.md` and
-`course_config.yaml milestones:`.
+Most role use is optional support. At five milestones a specific role is the
+named touchpoint, and a named output section goes into your **AI Research
+Ledger** (`ai_resources/ai_research_ledger_template.md`). Consulting it is
+**required** at four of them. At M11 the Poster Critic gives an optional last
+reading of the final poster; its required run is on the poster draft at M10
+(D90). Milestone definitions are the chain in `planning/PROJECT_MILESTONES.md`
+and `course_config.yaml milestones:`.
 
 | Milestone | Due | Required role(s) | What you submit to the role |
 |---|---|---|---|
 | **M5** — Pathway declaration and mandated contrast | Fri Sep 25 | Causal Identification Skeptic | Your route declaration: the identification argument your route claims, or your defense that your language stays descriptive |
 | **M8** — Clean-restart verified analysis | Fri Oct 16 | Prediction & Leakage Auditor | Your verified analysis, focusing on any out-of-sample / prediction claim |
 | **M9** — Robustness audit | Fri Oct 23 | Robustness & Sensitivity Reviewer | Your claim-and-evidence table with the pre-listed robustness checks you ran |
-| **M13** — Final poster lock | Sun Nov 8, 11:59 PM | Poster Critic | Your poster before the lock: claim boundary, traceable numbers, uncertainty |
-| **M16** — Replication and red-team report | Sun Nov 29 (async) | Reproducibility Auditor | The peer reproducibility package you are replicating |
+| **M11** — Final poster (the print file) | Sun Nov 8, 11:59 PM | Poster Critic (optional last reading) | Your final poster before it goes to print: what a visitor would conclude from the board alone |
+| **M17** — Reproducible package and the peer cold run | Sun Dec 6, 11:59 PM | Reproducibility Auditor | Your own package, before the in-class package exchange |
 
 Each of these five role files carries a **"Milestone scope"** statement naming
 the artifact submitted and the ledger section the output feeds. Requiring the
@@ -141,9 +143,9 @@ Student Use, and Instructor Use.
 | `roles/experimental_design_reviewer.md` | Assignment, blocking, randomization checks, experiment ethics | Week 5 route hub + experiment routes · M5 |
 | `roles/prediction_leakage_auditor.md` | Leakage, baseline, held-out honesty, metric choice **(M8 touchpoint)** | Weeks 7–8 · M7/M8 |
 | `roles/robustness_sensitivity_reviewer.md` | Specification robustness and sensitivity of a claim **(M9 touchpoint)** | Week 9 · M9 |
-| `roles/poster_critic.md` | Claim boundary, untraceable numbers, uncertainty, data-ink **(M13 touchpoint)** | Week 11 · M13 |
-| `roles/reproducibility_auditor.md` | Whether a package reproduces from scratch **(M16 touchpoint)** | Weeks 14–15 · M16/M16 |
-| `roles/research_note_reviewer.md` | Research-note structure, uncertainty/limitations, claim traceability | Weeks 10 & 15 · M10/M16 |
+| `roles/poster_critic.md` | Claim boundary, untraceable numbers, uncertainty, data-ink **(M10 required; M11 optional last reading)** | Weeks 10–11 · M10/M11 |
+| `roles/reproducibility_auditor.md` | Whether a package reproduces from scratch **(M17 touchpoint)** | Week 15 · M17 |
+| `roles/research_note_reviewer.md` | Research-note structure, uncertainty/limitations, claim traceability | Week 9 · M9 |
 | `roles/ai_research_team_orchestrator.md` | Which roles to consult next — a level-4 planning aid, not an agent | Week 16 |
 
 ---

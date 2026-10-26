@@ -8,8 +8,10 @@ and 16.*
 > carries no grade weight.** It used to supply 25% of Final Project's
 > **Instructor/TA Evaluation** item, alongside two subrubrics that lived in the
 > retired M17 brief. That item is now scored entirely from the instructor's
-> evaluation of the final poster submission locked at M13, so nothing on this
-> page is entered in the gradebook. The protocol is kept because the skill it
+> evaluation of the M11 final poster, the print file (D91, 2026-10-26), so
+> nothing on this page is entered in the gradebook. (D91 reuses the number M17
+> for the Studio 11 reproducible package; the retired brief meant here is D54's
+> release-and-final-chapter M17.) The protocol is kept because the skill it
 > drills — defending a claim, its exact boundary, and the verification you would
 > lead with, under questions from readers who have your ledger — is what the
 > Expo asks of you for real. Davi has not yet ruled whether the defense should
@@ -136,8 +138,8 @@ FINAL DOSSIER CHECKLIST                Name: __________  Date: __________
   ☐ Diagnosis + redesign history (feedback → MIDA, NOW vs NEXT)
   ☐ Pilot + sensitivity (the checks and what moved)
   ☐ Poster (the URC artifact, as submitted)
-  ☐ Conference record (coded audience data + reflection)
-  ☐ Reproducibility package WITH signed attestation (or honest residual log)
+  ☐ Conference record (Expo question notes, M16 survey answers + plan)
+  ☐ Reproducibility package (M17) with its cold-run records + both gate records
   ☐ Research brief (one page, ledger-traceable)
   ☐ Complete CLAIM LEDGER as the dossier's spine
   ☐ AI-use ledger finalized (tool · task · verification, throughout)

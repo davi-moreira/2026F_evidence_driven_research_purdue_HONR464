@@ -1,7 +1,9 @@
 # Role — Poster Critic
 
 *GenAI Studio custom model: **HONR464 — Poster Critic**. Capability level 3
-(RAG-supported assistant). **Required touchpoint: M13.** Supports Week 11 · the poster lock.*
+(RAG-supported assistant). **Touchpoint: M11, an optional last reading of the
+final poster; the required run is at M10, on the poster draft (D90).** Supports
+Weeks 10–11 · the poster draft and the final poster (the print file).*
 
 ## Purpose
 
@@ -24,16 +26,21 @@ the narrative flows from question to evidence to bounded claim.
 the evidence justifies (never-delegate); doing the visual design for you. It
 critiques the draft; you revise it.
 
-## Milestone scope (M13 — required)
+## Milestone scope (M10 — required; M11 — optional last reading)
 
-**M13 — Final poster lock (due Sun Nov 8, 11:59 PM — terminal).** You submit your
-**poster draft** (text plus a description or export of each figure) to this role.
-Its **"Untraceable-number flags"** and **"Claim-boundary review"** sections are the
-output you carry into your **AI Research Ledger** (as a critique task row), together
-with your revisions. M13 requires *both* this role and the Robustness & Sensitivity
-Reviewer: this role audits the *communication*, that role audits whether the
-finding *holds*. A flagged untraceable number is a hard-cap issue on the poster —
-resolve every one before M13.
+**M10 — Venue contract and the publication-ready artifact (required).** You submit
+your **poster draft** (text plus a description or export of each figure) to this
+role. Its **"Untraceable-number flags"** and **"Claim-boundary review"** sections
+are the output you carry into your **AI Research Ledger** (as a critique task
+row), and you adjudicate every flag by a check you can show, as the M10 brief
+sets out.
+
+**M11 — Final poster (due Sun Nov 8, 11:59 PM — terminal; the print file).** A
+last reading is optional. If you ask for one, ask what a visitor would conclude
+from the board alone, without being told your claim, and record in your ledger
+what you did with the reading. A flagged untraceable number is a hard-cap issue on
+the poster rubric: resolve every one before M11, because nothing changes on the
+board after it goes to print.
 
 ## System Prompt
 
@@ -67,7 +74,7 @@ Rules that never change:
   4. "Uncertainty and clarity:" whether uncertainty and limitations are visible and
      legible, and where data-ink or layout obscures the message.
   5. "What you must verify yourself:" what to confirm against the poster
-     requirements and the M13/M13 briefs before trusting this critique.
+     requirements and the M10/M11 briefs before trusting this critique.
 - You have a knowledge cutoff and can be confidently wrong; you can miss a real
   overclaim or flag a fine one. Flag your own uncertainty; present issues as
   questions, not verdicts.
@@ -77,7 +84,7 @@ Rules that never change:
 
 Attach `poster-requirements` (data-ink, traceability, claim-boundary, red-team
 protocol), `rubrics` (uncertainty and craft criteria), and `milestone-briefs`
-(M13, M13).
+(M10, M11).
 
 ## Expected Input
 
@@ -98,13 +105,13 @@ which claims are your headline claims.
 ## Verification Requirements
 
 - **Give every flagged number a visible path** to data or computation, or remove
-  it. An untraceable number is a hard-cap defect at M13.
+  it. An untraceable number is a hard-cap defect on the M11 poster rubric.
 - **Bring every headline claim inside its licensed boundary**, checked against your
   own compass classification and `planning/INQUIRY_MAP.md`.
-- **Confirm uncertainty and limitations are legible**, not buried, against the M13
-  brief and `project/poster/` standards.
-- **Log the critique and your revisions** in your AI Research Ledger — required M13
-  content.
+- **Confirm uncertainty and limitations are legible**, not buried, against the M11
+  brief's poster rubric and `project/poster/` standards.
+- **Log the critique and your revisions** in your AI Research Ledger — required M10
+  content, and a ledger row at M11 whenever you ask for the last reading.
 
 ## Limitations & Failure Modes
 
@@ -122,20 +129,23 @@ which claims are your headline claims.
 Hand back to yourself when: resolving a flag requires deciding what the evidence
 justifies (never-delegate); a boundary fix means re-stating your claim; or the
 missing traceability points to an analysis step you must redo before the poster
-locks.
+goes to print.
 
 ## Student Use
 
 1. **Workspace** → open the course group's **HONR464 — Poster Critic**.
 2. Paste your draft text and every figure's numbers and computation.
 3. Resolve every untraceable-number flag and bring claims in-bounds yourself.
-4. **Required for M13:** paste the
-   flags and boundary review into your ledger with your revisions. UI-only
-   satisfies this.
+4. **Required for M10:** paste the
+   flags and boundary review into your ledger with your adjudication and
+   revisions. At M11 the last reading is optional, and it takes a ledger row when
+   you run it. UI-only satisfies this.
 
 ## Instructor Use
 
-Before the lock the poster is still fixable; at 5 PM Friday it is final. The ledger's untraceable-number
-flags and the student's resolutions show whether every figure earned its place. An
+Before the M11 deadline (Sun Nov 8, 11:59 PM) the poster is still fixable; after
+it, the file is at the printer and final. The ledger's untraceable-number flags
+and the student's resolutions show whether every figure earned its place. An
 unresolved untraceable number, or a headline claim outside its boundary, is exactly
-what the Poster Criticism gallery (M29/M30 meetings) and the hard-cap rule target.
+what the Week 11 reading round (M30 meeting) and the poster rubric's hard caps
+target.

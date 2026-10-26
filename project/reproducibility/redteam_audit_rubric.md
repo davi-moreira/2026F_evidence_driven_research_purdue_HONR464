@@ -1,5 +1,14 @@
 # Replication & Red-Team Audit Rubric (100 points) — M16
 
+> **Retired by D91 (2026-10-26) — kept as the record.** No separately graded
+> replication and red-team report is collected this edition, so this rubric is
+> not applied. What replaced it is the cold-run report you write on a
+> colleague's package at the in-class package exchange of
+> [course milestone M17 — Reproducible Package and the Peer Cold Run](../../_research_project/2026Fall/milestone_17_package_and_cold_run.md),
+> scored inside the M17 rubric's *Cold runs and the exchange* row. Its hard cap
+> survives there in M17's own form: a run that did not happen can never be
+> reported as a reproduction. The content below is left intact.
+
 *The quality bar for the replication and red-team report. Five rows, four bands,
 scored on the honesty and rigor of your audit, never on whether the peer's project
 was good. Instantiates the shared rubric DNA in

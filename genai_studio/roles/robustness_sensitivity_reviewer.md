@@ -101,7 +101,7 @@ already run.
 - **Confirm your uncertainty reflects specification choices**, not just sampling
   noise, checked against `project/reproducibility/` standards.
 - **Log the tests, results, and revised claims** in your AI Research Ledger —
-  required M9 content, and later fuel for the M16 red-team.
+  required M9 content, and later evidence for your M17 package.
 
 ## Limitations & Failure Modes
 

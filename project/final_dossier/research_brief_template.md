@@ -1,5 +1,12 @@
 # Research Brief Template — M40–M41 (Dec 2 & Dec 4)
 
+> **Retired by D91 (2026-10-26) — kept as the record.** No research brief or
+> research note is collected after the Expo this edition. Week 15 is
+> [course milestone M17 — Reproducible Package and the Peer Cold Run](../../_research_project/2026Fall/milestone_17_package_and_cold_run.md):
+> Wednesday holds the in-class package exchange and Friday is the repair
+> studio, so the table read and the brief deadline below are not run. The
+> content is left intact.
+
 *The one-page brief a decision-maker reads in 90 seconds. Governs
 [milestone_21 — Research Brief](../../_research_project/2026Fall/milestone_21_research_brief.md).
 Drafted in class M40, workshopped M41 (table read); due Fri Dec 4.*

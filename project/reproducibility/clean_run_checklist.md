@@ -3,7 +3,7 @@
 *The final pass before you call a package reproducible. "It works on my machine" is
 an untested claim; a clean run is the test. Walk this checklist, then run it once
 more from a fresh kernel. If it does not pass for you, it will not pass for the
-red-teamer.*
+colleague who cold-runs it.*
 
 ---
 
@@ -12,8 +12,8 @@ red-teamer.*
 A clean run is a single, uninterrupted execution of your notebook from an empty
 kernel, top to bottom, that reproduces every number you report with no human
 touching anything in between. It is the difference between believing your package
-works and knowing it does. Everything in the M16 red-team and the M16 capsule
-rests on this passing.
+works and knowing it does. Everything in your M17 package, its cold runs, and
+its two blocking gates rests on this passing.
 
 Do it *before* you hand the package to anyone. The whole point of the exchange is
 that a stranger runs it cold; you do not want them discovering a break you could
@@ -91,6 +91,6 @@ you feel.
 
 *Part of the reproducibility package. See also:
 [README_template.md](README_template.md) · [seed_policy.md](seed_policy.md) ·
-[replication_report_template.md](replication_report_template.md) (what the
-red-teamer does with your clean run) ·
+[replication_report_template.md](replication_report_template.md) (retired by
+D91, kept as the record; M17's cold-run report replaced it) ·
 [reproducibility_capsule_template.md](reproducibility_capsule_template.md).*

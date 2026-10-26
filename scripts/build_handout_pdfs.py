@@ -322,9 +322,7 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
             "",
             submit_line,
             "",
-            POINTER,
-            "",
-        ]
+        ] + ([] if solo else [POINTER, ""])   # D91: course-only PDFs carry no Colab how-to
     if not solo:
         head += [
             "This milestone presents "

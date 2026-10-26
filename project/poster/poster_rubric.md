@@ -2,8 +2,10 @@
 
 The single, authoritative poster rubric is the **Final Project poster rubric** in
 [course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md).
-Since D90 (2026-10-26) it grades the **final poster submitted at M11**; M13 only
-locks the print file, with the repairs the M12 peer review found.
+Since D90 (2026-10-26) it grades the **final poster submitted at M11**, and since
+D91 (2026-10-26) that poster is also **the print file**: M11 is due Sunday,
+November 8, 11:59 PM, terminal, on the print run shared with QM 47400. No later
+milestone locks or repairs it; the M13 peer review reads the printed posters.
 
 Grade the M11 final poster against that rubric's eight criteria, one per group of
 template sections: question, context & contribution; target, design & warranted
@@ -27,7 +29,7 @@ the 75-point Final Project, or 12 points of the course grade, D79): `70%` comes
 from the poster rubric on the M11 final poster (8.4 course points) and `30%` from
 the M15 live Expo presentation rubric (3.6 course points). For an approved group
 project, the poster score is common, but every member must present and receives
-their own live-presentation score. The poster locked at M13 enters the evidence
-base for **Instructor/TA Evaluation**. M11's and M13's process tables supply their
-scores inside **Milestone Deliverables**; no poster-rubric score is copied into
-either process score.
+their own live-presentation score. **Instructor/TA Evaluation** is the
+instructor's evaluation of the same M11 final poster, the print file (D91).
+M11's process table supplies its score inside **Milestone Deliverables**; no
+poster-rubric score is copied into it.

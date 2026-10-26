@@ -1,5 +1,18 @@
 # Reproducibility Audit Protocol — M39–M40 (Nov 30 & Dec 2)
 
+> **Retired by D91 (2026-10-26) — kept as the record.** The two-round partner
+> exchange with a signed reproduction attestation is not run this edition. The
+> package week is now
+> [course milestone M17 — Reproducible Package and the Peer Cold Run](../../_research_project/2026Fall/milestone_17_package_and_cold_run.md),
+> due Sunday, December 6, 11:59 PM, and its brief carries the procedure: on
+> Monday you assemble the package and run it cold yourself ("solo proxy;
+> external cold run pending"); on Wednesday a colleague cold-runs it in class
+> from your written instructions alone and writes you a cold-run report; at the
+> Friday studio you repair it, clear the two blocking gates (the author
+> self-reproduction log and the release preflight), and make the second clean
+> run. The five package sins and the "watch silently" rule below carry over
+> unchanged; the attestation form does not. The content is left intact.
+
 *Assemble a package a stranger can rebuild your findings from, then have a
 classmate actually do it and sign. Governs
 [milestone_20 — Reproducibility Audit](../../_research_project/2026Fall/milestone_20_reproducibility_audit.md).

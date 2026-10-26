@@ -90,13 +90,17 @@ works.
 Two things share the word "milestone", and they are different instruments.
 The **book's Milestone chapters** (1–12) close each studio: the reader
 concludes one by producing the studio's versioned artifact, and the book's
-own rubric sits on that chapter. The **course milestones** below (M1–M16)
-are the weekly graded deliverables of the companion course. They are
+own rubric sits on that chapter. The **course milestones** below (M1–M17)
+are the graded deliverables of the companion course. They are
 aligned but not identical; when this page says "milestone" unqualified, it
 means the course's.
 
-The project runs through sixteen milestones, **M1–M16**, one per week, from a
-first curiosity map to a reproducible package a stranger can rerun. Each milestone brief
+The project runs through seventeen milestones, **M1–M17**, from a first
+curiosity map to a reproducible package a stranger can rerun. Weeks 11 to 14
+are the conference block: the final poster that goes to print, the
+presentation plan, a peer review of every other poster, the invitation, the
+conference presentation, and a reflection on the audience with a plan for the
+research. Each milestone brief
 names its **book anchor**: the chapters whose It is your turn sections that
 stretch of the project is built on. Those sections are handed in earlier, each
 on the day its own chapter's reading is due, and graded for completion. The
@@ -112,21 +116,17 @@ are the classroom counterparts of the book's companion notebooks — richer
 simulations, the lab-meeting opener, and session structure — and any of them
 opens in free Colab.
 
-The lab is also what the course collects each week, and the rule is completion.
-Students hand in the notebook they worked in class by 11:59 PM on the Sunday
-that ends the week, and the last week closes on the final class day instead:
-full credit on time, half credit within seven days, none after that. Sixteen
-submissions, the two lowest credits dropped, and the block carries 20% of the
-course grade. Nothing is scored on whether the answers came out right, and
-nothing said at the lab meeting is scored at all, so the hour itself stays a
-place where a student can be wrong out loud.
+The lab is the lesson, and it is not collected. Students open the notebook in
+class, work it, and keep it; nothing in it is handed in or graded, and nothing
+said at the lab meeting is scored at all, so the hour itself stays a place
+where a student can be wrong out loud.
 
-That block is one of three completion contracts, and together they set the
-shape of the grade: attendance 1%, participation 9%, the chapters' It is your
-turn sections 15%, the weekly lab notebooks 20%, and the final project 55%.
-Forty-five of those points go to showing up and doing the work. The research
-itself is judged in the remaining 55, across the milestone chain, the peer
-evaluations, the peer review, the poster, and the instructor's evaluation.
+Two completion contracts and the project set the shape of the grade:
+attendance 1%, participation 9%, the chapters' It is your turn sections 15%,
+and the final project 75%. Twenty-five of those points go to showing up and
+doing the work. The research itself is judged in the remaining 75, across the
+milestone chain, the peer evaluations, the peer review, the poster, and the
+instructor's evaluation.
 
 Every lab is linked, with what it does, in the lesson-to-lab adoption
 table below — that table is generated from the course crosswalk, so it
@@ -190,7 +190,7 @@ companion course, and says what that lab does.
 | Ch. 34 | [nb10](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb) — Studio 10: Adapt and defend — the venue contract and the artifact | In nb10 you build the layered pitch under the one rule that governs it: compression never expands the claim. |
 | Ch. 35 | [nb10](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb) — Studio 10: Adapt and defend — the venue contract and the artifact | In nb10 you rehearse the hardest fair questions with spoken uncertainty and the defend-or-concede call. |
 | Ch. 36 | [nb15](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_reproduce_and_package_student.ipynb) — Studio 11: Reproduce and package | In nb15 you cold-run your own work from a clean environment, reproduce the uncertainty as well as the point estimate, and label an author's own rerun honestly: a solo proxy, never independent verification. |
-| Ch. 37 | [nb15](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_reproduce_and_package_student.ipynb) — Studio 11: Reproduce and package | In nb15 you assemble the reusable package — README, data or an access recipe, code, environment record, licence — and it is those reproduced numbers that lock onto the poster. |
+| Ch. 37 | [nb15](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_reproduce_and_package_student.ipynb) — Studio 11: Reproduce and package | In nb15 you assemble the reusable package — README, data or an access recipe, code, environment record, licence — and every number on your printed poster must come back from it, run cold by you and by a colleague. |
 | Ch. 38 | [nb16](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_release_next_cycle_student.ipynb) — Studio 12: Release and direct the next cycle | In nb16 you wire worker and critic roles for the final push and learn why four agreeing agents can share one blind spot. |
 | Ch. 39 | [nb16](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_release_next_cycle_student.ipynb) — Studio 12: Release and direct the next cycle | In nb16 you resolve a live conflict between agents by escalating to the only reviewer who can settle it: a human rerunning the check. |
 | Ch. 40 | [nb16](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_release_next_cycle_student.ipynb) — Studio 12: Release and direct the next cycle | In nb16 you run the release audit on your own package, decide release or withhold pending a named repair, and write the next-study agenda as directions, never findings. |

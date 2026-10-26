@@ -1,9 +1,10 @@
 # Uncertainty & Limitations Protocol — M33 (Wed Nov 11)
 
 *The ULN move: how to say what your study cannot show and sound like a scientist
-doing it. Governs the spoken uncertainty-and-limitations statement in
-[milestone_11 — Presentation Package](../../_research_project/2026Fall/milestone_11_presentation_package.md).
-Drafted and drilled in class M33.*
+doing it. Governs the boundary sentence, the ULN moment of the 2-minute pitch,
+and the prepared "my design cannot settle that" in
+[course milestone M12 — Presentation Planning](../../_research_project/2026Fall/milestone_12_presentation_planning.md).
+Drafted and drilled in class M33; M12 is due that night, 11:59 PM.*
 
 ## Purpose
 
@@ -68,12 +69,12 @@ not confessing a crime.
 
 | Time | Activity |
 |---|---|
-| 0–5 | 1-minute pitch pulse (one volunteer, warm notes). |
+| 0–5 | 30-second pitch pulse (one volunteer, warm notes). |
 | 5–12 | Mini-lesson: the ULN move on three findings, including a null. |
-| 12–24 | **Writing studio:** draft your ULN paragraph (the spoken-statement core of M14). |
+| 12–24 | **Writing studio:** draft your ULN paragraph (the spoken core of your 2-minute pitch and of your M12 question strategy). |
 | 24–40 | **ULN rounds:** deliver to two successive partners; partners score on the 1–5 scale. |
 | 40–47 | Whole-group: the best ULN heard, re-delivered for the room. |
-| 47–50 | Exit ticket (your most important limitation in ULN form, ≤ 30 words); this ULN statement joins your M17 package, due Fri Nov 13. |
+| 47–50 | Exit ticket (your most important limitation in ULN form, ≤ 30 words); this ULN statement goes into your M12 presentation plan, due tonight, 11:59 PM. |
 
 ## Roles
 
@@ -94,4 +95,4 @@ posture with the stems on screen. Each presenter delivers twice and scores twice
 4. **Inflating to avoid the limitation.** Overclaiming to dodge the caveat is the opposite failure and a worse one.
 5. **A different limitation than the poster's.** The spoken bound must match the written one — pick the limitation that actually threatens your claim.
 
-*Paired with [hard_questions_protocol.md](hard_questions_protocol.md) — M34 builds the question bank; together they complete the M17 presentation package.*
+*Paired with [hard_questions_protocol.md](hard_questions_protocol.md) — together they build the question strategy in your M12 presentation plan, which meets its live test at the practice presentations.*

@@ -13,7 +13,7 @@ to you. Full system prompts live in `genai_studio/roles/`, not here.*
 **Every one of these thirteen roles is built as a GenAI Studio custom model** —
 the course's purpose-built reviewer bench, wired to the course knowledge base and
 shared to the course group. Five of them are **required graded touchpoints** (the
-M6, M8, M10, and M16 consults); each of those cards names its milestone. The other
+M6, M8, M10, and M17 consults); each of those cards names its milestone. The other
 eight roles have **both homes**: they live as GenAI Studio custom models *and* you
 can run them as **Gemini-prompted roles** in Colab by pasting the role's briefing
 at the top of a chat. The card tags each role's home(s). Every card ends with an
@@ -109,23 +109,23 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 
 ### Poster Critic *(GenAI Studio custom model — M10 touchpoint)*
 - **Purpose:** the 90-second stranger. Attacks the poster's headline, figure honesty, read path, and visible uncertainty.
-- **When to consult:** M10 draft review and before the final lock (M13).
+- **When to consult:** M10 draft review (required) and, optionally, a last reading of the final poster before it goes to print (M11).
 - **Give it:** your draft poster (or a faithful description) and its declared compass position.
 - **Returns:** overclaims, dishonest figures, broken read paths, and missing bounds, named specifically.
 - **Blind spots:** works from what you show it; a figure it cannot see, it cannot audit.
 - **Escalation line:** this role must hand back to you when you set the final headline claim and its boundary.
 
-### Reproducibility Auditor *(GenAI Studio custom model — M16 touchpoint)*
-- **Purpose:** checks whether your package (or a peer's) can be rebuilt by a stranger, and traces numbers from data to claim.
-- **When to consult:** M16 replication and red-team, and when assembling your capsule (M16).
+### Reproducibility Auditor *(GenAI Studio custom model — M17 touchpoint)*
+- **Purpose:** checks whether your package can be rebuilt by a stranger, and traces numbers from data to claim.
+- **When to consult:** M17, when assembling your package and before the in-class package exchange.
 - **Give it:** the package contents, run order, and the headline number to trace.
 - **Returns:** the five package sins if present (hard-coded paths, missing seeds, by-hand edits, undocumented exclusions, stale data) and broken lineage links.
 - **Blind spots:** cannot actually run the notebook; a clean-run claim still needs a real restart-and-run-all by a human.
-- **Escalation line:** this role must hand back to you when you sign an attestation. Only a human clean run justifies "it reproduces."
+- **Escalation line:** this role must hand back to you when you label a run or write your Gate 1 self-reproduction log. Only a human clean run justifies "it reproduces."
 
 ### Research-Note Reviewer *(both homes)*
-- **Purpose:** reviews your research note and brief for claims that outrun their ledger and caveats dropped under polish.
-- **When to consult:** M16, when drafting the note and brief.
+- **Purpose:** reviews your research note for claims that outrun their ledger and caveats dropped under polish.
+- **When to consult:** M9, when drafting the bounded research note.
 - **Give it:** your draft and your claim ledger.
 - **Returns:** sentences that upgrade a claim past its evidence, and places uncertainty fell out of the prose.
 - **Blind spots:** may smooth your writing into a stronger claim than the evidence supports; watch for the very upgrade you asked it to catch.

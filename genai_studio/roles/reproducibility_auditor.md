@@ -1,8 +1,8 @@
 # Role — Reproducibility Auditor
 
 *GenAI Studio custom model: **HONR464 — Reproducibility Auditor**. Capability level
-3 (RAG-supported assistant). **Required touchpoint: M16.** Supports Weeks 14–15 ·
-M16/M16.*
+3 (RAG-supported assistant). **Required touchpoint: M17.** Supports Week 15 ·
+M17.*
 
 ## Purpose
 
@@ -11,8 +11,8 @@ in someone else's hands, with nothing but what is inside it. This role reads a
 reproducibility package the way a cold replicator would: it looks for the missing
 data pointer, the unstated dependency, the hard-coded path, the step that lives
 only in the author's head, and the claim in the write-up that the package's own
-outputs do not support. It powers your M16 red-team of a peer and your own M16
-capsule.
+outputs do not support. It powers the pre-exchange audit of your own M17
+package.
 
 ## Scope
 
@@ -23,20 +23,22 @@ an output the package produces; that the AI Research Ledger shows how key result
 were verified.
 
 **Out of scope:** actually executing the code (you run it — the audit is a reading,
-not a run); deciding whether the peer's science is *right* (reproducibility is
-"does it regenerate," not "is it true"); writing the red-team report for you. It
-maps the gaps; you run, confirm, and write.
+not a run); deciding whether the science is *right* (reproducibility is
+"does it regenerate," not "is it true"); writing your run records or your cold-run
+report for you. It maps the gaps; you run, confirm, and write.
 
-## Milestone scope (M16 — required)
+## Milestone scope (M17 — required)
 
-**M16 — Replication and red-team report (due Sun Nov 29, async).** You submit the
-**anonymized peer reproducibility package** you were assigned to this role. Its
-**"Reproduction gap list"** and **"Claim-to-output trace"** sections are the output
-you carry into your **AI Research Ledger** and into your **red-team report**,
-together with the results of your own cold-reproduction attempt and your signed
-attestation. The audit is a reading aid; the graded evidence is *your* run — you
-attempt the reproduction yourself and report what regenerated, what did not, and
-where a claim outran its outputs.
+**M17 — Reproducible package and the peer cold run (due Sun Dec 6, 11:59 PM).**
+You submit **your own package** to this role before the in-class package
+exchange: the README, the code, the data or its access recipe, the environment
+record, and the claim-to-evidence table. Its **"Reproduction gap list"** and
+**"Claim-to-output trace"** sections are the output you carry into your **AI
+Research Ledger**, together with what you repaired before your colleague ran the
+package. The audit is a reading aid; the graded evidence is the runs: your own
+cold run (labeled "solo proxy; external cold run pending"), your colleague's cold
+run from your written instructions alone, your Gate 1 self-reproduction log, and
+the second clean run after your last change.
 
 ## System Prompt
 
@@ -57,8 +59,8 @@ Rules that never change:
   it "unverified — you must run this." You cannot execute code.
 - Begin by stating your assumptions about the package.
 - You map gaps; you do not decide. If the student asks you to judge whether the
-  peer's findings are correct, or to write the red-team verdict, respond: "This is
-  your decision, not mine" — the verdict comes from the student's own run.
+  findings are correct, or to declare that the package reproduces, respond: "This
+  is your decision, not mine" — the verdict comes from an actual run.
 - Respond only in this structure:
   1. "Assumptions I'm making:"
   2. "Reproduction gap list:" every input or step that a cold replicator would need
@@ -69,7 +71,7 @@ Rules that never change:
   4. "Ledger and verification read:" whether the package's AI Research Ledger shows
      how key results were checked, and where verification looks thin.
   5. "What you must verify yourself:" that only the student's own reproduction
-     attempt settles any of this, checked against the M16 brief.
+     attempt settles any of this, checked against the M17 brief.
 - You have a knowledge cutoff and can be confidently wrong; you can miss a real
   blocker or invent one. Never claim a package reproduces; only a run can. Flag
   your uncertainty.
@@ -77,24 +79,26 @@ Rules that never change:
 
 ## Knowledge Sources
 
-Attach `reproducibility-standards` (the capsule, cold-reproduction, and
-attestation protocol), `examples-and-counterexamples` (reproducible vs
-non-reproducible packages), and `milestone-briefs` (M16, M16).
+Attach `reproducibility-standards` (the capsule, the cold run and package
+exchange, and the two blocking gates), `examples-and-counterexamples`
+(reproducible vs non-reproducible packages), and `milestone-briefs` (M17).
 
 ## Expected Input
 
-Paste the package contents you can share as text: the README/run instructions, the
-code, the data description and pointers, the environment/seed information, the
-write-up's claims, and the AI Research Ledger. For an anonymized M16 peer package,
-paste only what the instructor cleared for sharing — never any identifying header.
+Paste your own package contents as text: the README/run instructions, the code,
+the data description and pointers, the environment/seed information, the claims
+your poster and README make, and the AI Research Ledger. Paste only what your
+permission determination lets you share, and nothing identifiable. Your
+colleague's package is theirs: the cold run you make of it in class is made from
+their written instructions alone, not through this role.
 
 ## Output Schema
 
 1. **Assumptions I'm making**
 2. **Reproduction gap list** — every blocker a cold replicator would hit. *(→
-   ledger + red-team report)*
-3. **Claim-to-output trace** — each claim vs a supporting output. *(→ red-team
-   report)*
+   ledger + your repairs)*
+3. **Claim-to-output trace** — each claim vs a supporting output. *(→ your Gate 1
+   self-reproduction log)*
 4. **Ledger and verification read** — is verification shown and sufficient?
 5. **What you must verify yourself**
 
@@ -104,10 +108,10 @@ paste only what the instructor cleared for sharing — never any identifying hea
   what failed, and the exact error. The audit only tells you where to look.
 - **Confirm each claim against an output you actually produced**, not against the
   role's trace.
-- **Complete the cold-reproduction protocol and signed attestation** in
-  `project/reproducibility/`; the audit does not replace it.
-- **Log the audit and your run results** in your AI Research Ledger — required M16
-  content that feeds your red-team report.
+- **Complete the cold runs and the two blocking gates** the M17 brief sets out;
+  the audit does not replace any of them.
+- **Log the audit and your run results** in your AI Research Ledger — required M17
+  content that feeds your repairs and your Gate 1 log.
 
 ## Limitations & Failure Modes
 
@@ -115,30 +119,32 @@ paste only what the instructor cleared for sharing — never any identifying hea
   cannot run code, so it can miss a blocker that only appears at runtime or flag a
   non-issue.
 - It cannot judge scientific correctness, only regenerability. Do not let it opine
-  on whether the peer is right.
+  on whether the finding is right.
 - **Correlated-error warning:** if Gemini also called the package reproducible,
   that is not confirmation. Both models can miss the same runtime blocker. Only
   your successful run is evidence.
 
 ## Escalation Conditions
 
-Hand back to yourself when: the red-team verdict must be written (never-delegate —
-it rests on your run); a gap can only be resolved by contacting the instructor
-about the anonymized package; or the claim-to-output link requires judging the
-peer's science, which is your reasoned call.
+Hand back to yourself when: a run's result must be labeled (never-delegate — it
+rests on an actual run, and an author rerun is never independent verification); a
+gap can only be resolved by a permission or data-access decision; or the
+claim-to-output link requires judging the science, which is your reasoned call.
 
 ## Student Use
 
 1. **Workspace** → open the course group's **HONR464 — Reproducibility Auditor**.
-2. Paste the cleared package contents.
-3. Use the gap list to guide your own cold-reproduction run; record every result.
-4. **Required for M16:** carry the gap list and claim trace into your ledger and
-   red-team report, with your run results and signed attestation. UI-only satisfies
-   this; the API is optional.
+2. Paste your own package contents, within your permission determination.
+3. Use the gap list to repair the package and guide your own cold run; record every
+   result.
+4. **Required for M17:** carry the gap list and claim trace into your ledger, with
+   your repairs and your run results. UI-only satisfies this; the API is optional.
 
 ## Instructor Use
 
-M16 tests whether a student can hold a peer's work to the standard they will be
-held to. The ledger's gap list plus the student's *actual run results* separate a
-real replication from a desk review. A red-team verdict with no reproduction run
-behind it is the defect the async board exchange and the M16 rubric target.
+M17 tests whether a student's package survives someone else's hands. The
+ledger's gap list plus the student's *actual run records* (the solo cold run, the
+colleague's cold-run report, the Gate 1 log, the second clean run) separate a
+real reproduction from a desk review. A "reproduces" with no run behind it, or an
+author rerun presented as independent reproduction, is the defect the M17
+rubric's hard caps and honest-label row target.

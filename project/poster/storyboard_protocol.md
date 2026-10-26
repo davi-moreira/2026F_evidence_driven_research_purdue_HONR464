@@ -1,12 +1,11 @@
 # Storyboard Protocol — M29 (Mon Nov 2)
 
 *The method for building your poster's storyboard before you build the poster.
-The read-path decision it produces underlies your poster adaptation at M13
-([course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md))
-and the poster you lock at
-[course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md).
-Re-derived and pressure-tested in the poster-criticism week (M29); the grid it
-produces feeds the M13 lock, due Sunday, November 8, 11:59 PM (terminal).*
+Your poster was drafted on the course template at M10; in the poster production
+lab (M29) you re-derive its storyboard from the board and pressure-test the read
+path. The grid it produces feeds your final poster,
+[course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md),
+which is also the print file, due Sunday, November 8, 11:59 PM (terminal).*
 
 ## Purpose
 
@@ -25,7 +24,7 @@ per student.
 ## Materials
 
 - The storyboard grid (one printed sheet per active project — the template below).
-- Your M10 research-note v0 evidence: every table, figure, and number your note and poster content brief carry.
+- Your M10 poster draft and my feedback on it, with the evidence behind every table, figure, and number it carries.
 - Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`),
   open to §4–5 (what your compass position can and cannot establish).
 - A pen for you; a second colored pen for whoever reads your read-path.
@@ -76,7 +75,7 @@ Uncertainty rule), not just a poster-day problem.
 | 12–30 | **Grid studio.** You fill your grid: headline, three ranked evidence blocks, uncertainty line, read-path arrows. |
 | 30–42 | **Storyboard pitches.** 90 seconds per active project — the researcher or group walks listeners down the read path, box by box. Every group member speaks. Listeners mark where they got lost. |
 | 42–48 | Revise your grid from the lost-point marks. |
-| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into the week's poster-criticism and lock work — M13 locks Sunday, November 8, 11:59 PM. |
+| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into Wednesday's reading round and Friday's revision studio — M11, the print file, is due Sunday, November 8, 11:59 PM. |
 
 ## Roles
 

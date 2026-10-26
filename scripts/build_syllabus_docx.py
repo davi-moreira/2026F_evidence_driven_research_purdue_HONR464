@@ -365,7 +365,7 @@ def fmt_date(iso: str) -> str:
 # milestone_developed cells carry a semicolon *inside* the parentheses, which
 # silently splits M13 away from its own deadline.
 # Deadlines that are NOT 11:59 PM on their own date, and the terminal one.
-CLOCK_NOTE: dict[int, str] = {}   # D91: every conference-block deadline is 11:59 PM
+CLOCK_NOTE = {12: "11:59 PM", 16: "11:59 PM"}   # D91: due on a class day, but at night, not at class
 TERMINAL = {11: "TERMINAL, no revision window, submitted for printing"}
 
 # D55 put almost every milestone on a Sunday, which is never a class meeting.

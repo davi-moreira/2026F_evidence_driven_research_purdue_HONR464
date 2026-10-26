@@ -6,7 +6,7 @@
 course.
 
 Peer Evaluation is one of the Final Project's five components. It is worth
-**20% of the Final Project, or 10% of the course grade**. It produces an
+**16% of the Final Project, or 12% of the course grade** (D79). It produces an
 individual score in both project modes.
 
 > **Peer Evaluation is not Peer Review.** Peer Evaluation is a confidential

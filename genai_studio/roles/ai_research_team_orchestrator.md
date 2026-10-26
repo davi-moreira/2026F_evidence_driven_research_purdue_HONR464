@@ -1,8 +1,8 @@
 # Role — AI Research Team Orchestrator
 
 *GenAI Studio custom model: **HONR464 — AI Research Team Orchestrator**. Capability
-**level 4** (sequential multi-role workflow — a planning aid). Supports Week 16 ·
-M17.*
+**level 4** (sequential multi-role workflow — a planning aid). Supports Week 16
+(Studio 12), which carries no milestone (D54).*
 
 ## ⚠️ Read this first: what this role is and is not
 
@@ -87,7 +87,8 @@ Rules that never change:
 ## Knowledge Sources
 
 Attach `course-policies` (the never-delegate list, the ledger, the six-level
-taxonomy) and `milestone-briefs` (M17, so its plans serve the capstone). It does
+taxonomy) and `milestone-briefs` (M17, the reproducible package that Week 16's
+closing review reads). It does
 **not** need each role's knowledge base; it plans across roles, it does not perform
 their reviews.
 
@@ -111,8 +112,9 @@ and any reviewer outputs you already collected. Say where you are in the project
   each output, and carrying results forward is yours.
 - **Honor the stopping rules.** Stop when a never-delegate decision surfaces, when
   a substantive conflict appears, or when more consultation stops adding signal.
-- **Log a ledger row for every step**, including this planning consultation. The
-  M17 AI-management portfolio is built from exactly this trace.
+- **Log a ledger row for every step**, including this planning consultation.
+  Week 16's closing review of your submitted M17 package is read from exactly this
+  trace.
 - **Confirm the plan serves the milestone brief you are working**, not the role's paraphrase of it.
 
 ## Limitations & Failure Modes
@@ -142,15 +144,16 @@ or you already have what you need.
 2. Paste your goal, artifact, and any reviewer outputs so far.
 3. Read the proposed sequence; **you** run each step, verifying before carrying
    forward, logging a ledger row each time.
-4. Stop when a stopping rule fires. For the **M17** capstone you may script the
-   sequence through the API (`colab_api_poc.md`), but the UI path is equally valid
-   and the human runs the sequence either way.
+4. Stop when a stopping rule fires. For the Week 16 closing review you may script
+   the sequence through the API (`colab_api_poc.md`), but the UI path is equally
+   valid and the human runs the sequence either way.
 
 ## Instructor Use
 
-M17's AI-management portfolio is graded on whether the student *supervised* an AI
-team, not whether they automated one. The ledger's step-by-step trace — plan,
-per-step verification, honored stopping rules, human decisions — shows supervision.
-A workflow where unverified outputs were chained, or where the student let the plan
-"decide," is exactly the failure the capstone and the final defense are built to
-expose.
+Week 16 carries no milestone (D54; D91 reuses the number M17 for the Studio 11
+package), so nothing here is graded. What the closing review shows is whether the
+student *supervised* an AI team, not whether they automated one. The ledger's
+step-by-step trace — plan, per-step verification, honored stopping rules, human
+decisions — shows supervision. A workflow where unverified outputs were chained,
+or where the student let the plan "decide," is exactly the failure Week 16's
+closing review is built to expose.

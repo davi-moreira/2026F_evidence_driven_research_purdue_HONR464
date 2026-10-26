@@ -1,9 +1,11 @@
 # Dress Rehearsal Protocol — M35 (Mon Nov 16)
 
 *The full URC simulation the day before the real thing. Prepares the Expo
-presentation, a graded component of
-[milestone_12 — Conference Reflection & Poster-Criticism Portfolio](../../_research_project/2026Fall/milestone_12_conference_reflection.md).
-Run in class M35; the readiness audit is signed in class. The Expo is TOMORROW,
+presentation and
+[course milestone M15 — Expo Presentation Confirmation](../../_research_project/2026Fall/milestone_15_expo_presentation.md):
+the live presentation is scored at the Expo with the rubric in that brief, and
+M15 itself is the photo of you in front of your poster, due that night. Run in
+class M35; the readiness audit is signed in class. The Expo is TOMORROW,
 Tue Nov 17.*
 
 ## Purpose
@@ -17,7 +19,7 @@ tonight.
 ## Materials
 
 - Your poster (printed, or full-screen if a print failed).
-- Both pitches (1-minute and 3-minute) and your question bank, cold.
+- Your three M12 pitches (30-second, 90-second, 2-minute) and your question bank, cold.
 - The visitor role card (below) — one per person.
 - The readiness audit sheet (below) — one per person, signed at the end.
 
@@ -26,7 +28,7 @@ tonight.
 Two 20-minute rounds. In each round, **2–3 posters are live** — those presenters
 stand and present; everyone else + Professor Moreira rotate as conference visitors.
 Across the two rounds every poster goes live and every person visits. Live
-minutes exercise all four skills: the 1-minute hook, the 3-minute walk, hard
+minutes exercise all four skills: the 30-second pitch, the 2-minute walk, hard
 questions from the bank and beyond, and the ULN moment.
 
 ## The visitor role card
@@ -50,10 +52,12 @@ every poster. The presenter needs to feel each type before tomorrow.
 ```
 READINESS AUDIT — M15 Expo readiness   Name: __________________   Date: Nov 16
 
-  ☐ Rehearsed the full walk TWICE, inside 3 minutes
-  ☐ Question bank DRILLED (survived a hot seat / today's visitors)
+  ☐ Rehearsed the full walk TWICE, inside 2 minutes
+  ☐ Question bank DRILLED (survived the practice presentation / today's visitors)
   ☐ LOGISTICS confirmed: location, call time, dress, travel
   ☐ MATERIALS ready: poster (printed or full-screen), handout if any, backup file
+  ☐ CAPTURE PLAN ready: one line per visitor's question (card or phone note)
+  ☐ PHOTO planned: who takes the M15 photo of you at your poster, early on
 
 The ONE thing I will do differently tomorrow because of today:
 _____________________________________________________________
@@ -71,7 +75,7 @@ a deadline of tonight. "I'll wing it tomorrow" is the claim this audit forbids.
 | 0–4 | Rehearsal norms: run it like it's real; notes after, not during. |
 | 4–24 | **Station round 1** (20 min): 2–3 posters live; the rest visit with the role card. |
 | 24–44 | **Station round 2** (20 min): the remaining posters live; rotate. |
-| 44–48 | **Readiness audit:** sign the sheet (rehearsed / drilled / logistics / materials + the one thing). |
+| 44–48 | **Readiness audit:** sign the sheet (rehearsed / drilled / logistics / materials / capture plan / photo + the one thing). |
 | 48–50 | Final word + tomorrow's call time. |
 
 ## Roles
@@ -94,4 +98,4 @@ both rounds and signs one audit.
 4. **Signing a false box.** An audit that lies is worse than an honest gap. Sign only what's true; the unchecked box is tonight's task.
 5. **Print assumed, not confirmed.** If the print isn't in hand, present full-screen today and trigger the emergency print run — the backup plan resolves it before Tuesday.
 
-*Previous: [hard_questions_protocol.md](hard_questions_protocol.md) · After the Expo: [conference_reflection_protocol.md](conference_reflection_protocol.md).*
+*Previous: [hard_questions_protocol.md](hard_questions_protocol.md) · After the Expo: [course milestone M16 — Conference Reflection](../../_research_project/2026Fall/milestone_16_conference_reflection.md), which reads the questions you capture tomorrow.*

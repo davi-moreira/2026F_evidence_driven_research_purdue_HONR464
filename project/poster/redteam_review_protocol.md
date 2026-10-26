@@ -1,10 +1,11 @@
 # Red-Team Review Protocol — M30 (Wed Nov 4)
 
-*The structured adversarial review of your draft poster, run in class M30.
-The four-plus-one audits it runs are the same audits graded on your final poster
-([course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md))
-and re-run as the gallery-walk audit record of your locked poster
-([course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md)).
+*The structured adversarial reading of your near-final poster, run in class
+M30. It is **ungraded and nothing is collected**: the point is that you get
+findings while the poster can still change, before
+[course milestone M11 — Final Poster](../../_research_project/2026Fall/milestone_11_final_poster.md),
+the print file, is due Sunday, November 8, 11:59 PM. The four-plus-one audits it
+runs read the same things the poster rubric grades on that final poster.
 Rule of the room: hard on the poster, warm on the person.*
 
 ## Purpose
@@ -18,7 +19,7 @@ confer while reviewing or while first adjudicating the feedback.
 
 ## Materials
 
-- Your full draft poster, on screen (built from your M29 storyboard grid).
+- Your near-final poster on the course template, on screen.
 - One blank audit slip for every other active project poster.
 - The nb11 honest-viz checklist (it rides again for the figure-honesty audit).
 - The active-project circuit (below) so everyone knows which posters to review.
@@ -90,7 +91,7 @@ shared poster.
 | 5–10 | Protocol walkthrough: the five audits and the slip. |
 | 10–34 | **Silent review circuit:** divide the window evenly across every other active poster; write before anyone speaks and do not confer. |
 | 34–46 | **Individual adjudication and revision triage:** rank the hits your project received, reject at least one with a reason, fix the top valid hit now, and write the plan for the rest. Group members complete the adjudication independently before coordinating a shared repair. |
-| 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); log the slips into your M13 lock record. |
+| 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); keep the slips for Friday's revision studio. |
 
 ## Roles
 
@@ -106,12 +107,13 @@ projects, enforces the no-conferring rule, and holds a sample poster with six
 planted flaws ready for the walkthrough. Every student produces one completed
 slip for every other active project.
 
-## What goes into your M13 lock record
+## What you keep (nothing is submitted)
 
-All audit slips you gave, the slips your project received, your individual
-adjudication and ranked triage plan, and the first fix already applied to the
-draft. These become the gallery-walk audit record you submit with the locked
-poster at M13 (Sunday, November 8, 11:59 PM).
+The slips your project received, your individual adjudication and ranked triage
+plan, and the first fix already applied to the poster. They are your work list
+for Friday's revision studio (M31) and for M11. Nothing from this session is
+submitted or scored: a finding you accept shows up on the board you submit at
+M11, and a finding you reject keeps its reason in your own notes.
 
 ## Common failure modes
 

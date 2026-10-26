@@ -1,5 +1,15 @@
 # Replication and Red-Team Report Template — M16
 
+> **Retired by D91 (2026-10-26) — kept as the record.** The anonymized
+> replication and red-team report, due the Sunday of the async module week, is
+> not collected this edition. What replaced it is the cold-run report you write
+> on a colleague's package at the in-class package exchange of
+> [course milestone M17 — Reproducible Package and the Peer Cold Run](../../_research_project/2026Fall/milestone_17_package_and_cold_run.md):
+> whether the headline number and its uncertainty came back, every question the
+> run raised, and every missing instruction, ranked by how much each threatens
+> the result. Sections 2, 3, and 9 below remain a useful checklist for that
+> report; the template is otherwise left intact and not applied.
+
 *The report you write after trying to rebuild a peer's findings from their package
 alone. You receive an anonymized package, run it cold, trace its numbers, probe
 its choices, and report honestly what you could and could not verify. Graded with

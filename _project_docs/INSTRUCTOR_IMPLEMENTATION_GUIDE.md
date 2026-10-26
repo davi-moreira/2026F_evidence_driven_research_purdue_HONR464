@@ -91,9 +91,11 @@ without explaining itself.
 
 Two meetings are asynchronous online (the calendar backbone is authoritative):
 
-- **Fri Nov 20 (meeting 36)** — post-Expo audience-data capture.
-- **Mon Nov 23 (meeting 37)** — the Thanksgiving replication + red-team module
-  (M16).
+- **Fri Nov 20 (meeting 36)** — M16 part 1: the Conference Reflection Survey,
+  answered from each student's Expo notes.
+- **Mon Nov 23 (meeting 37)** — M16 part 2: the written plan to improve and
+  complete the research; M16 is due that day (D91). The M16 brief itself carries
+  no dates, by Davi's instruction; the Brightspace assignment holds the deadline.
 
 Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
 5/40/5 frame; M6 is submitted there like any other milestone.
@@ -181,28 +183,37 @@ lines held in the injected `### 📣 My Report Plan` cell. The full ruling is
 
 ## 3. Milestone grading cadence
 
-Sixteen milestones (**M1–M16**), one graded artifact each, on a **studio
+Seventeen milestones (**M1–M17**), one graded artifact each, on a **studio
 kickoff → develop → work it at the Friday studio → submit Sunday → revise where
 eligible** cadence. D55 put every deadline on a Sunday at 11:59 PM except the
-three the conference block pins to weekdays and the two D66 moved off a holiday
-weekend. Due dates are fixed in `course_config.yaml milestones:`:
+four the conference block pins to weekdays (M12, M13, M15, M16; D91) and the two
+D66 moved off a holiday weekend. Due dates are fixed in
+`course_config.yaml milestones:`:
 
 | M1 Sun Aug 30 · **M2 Mon Sep 7 (Labor Day)** · M3 Sun Sep 13 · M4 Sun Sep 20 ·
 M5 Sun Sep 27 · M6 Sun Oct 4 · **M7 Tue Oct 13 (October Break)** ·
 M8 Sun Oct 18 · M9 Sun Oct 25 · M10 Sun Nov 1 ·
-**M11 Wed Nov 4 (at class)** · **M12 Fri Nov 6, 2:30 PM** ·
-**M13 Sun Nov 8, 11:59 PM (terminal)** · M14 Sun Nov 15 ·
-M15 Sun Nov 29 (async) · M16 Sun Dec 6 (the final milestone) |
+**M11 Sun Nov 8, 11:59 PM (the final poster = the print file; terminal)** ·
+**M12 Wed Nov 11** · **M13 Thu Nov 12** · M14 Sun Nov 15 ·
+**M15 Tue Nov 17 (Expo day)** · **M16 Mon Nov 23 (async)** ·
+M17 Sun Dec 6 (the final milestone) |
 
-There is no M17: D54 retired it. The last Friday, Dec 11, is the course-closing
-reflection session, collected under participation.
+D91 (2026-10-26) rebuilt the conference block and made the chain M1–M17 again:
+the number M17 now means the Studio 11 reproducible package, not the
+release-and-final-chapter milestone D54 retired. Week 16 still carries no
+milestone, and the last Friday, Dec 11, is the course-closing reflection session,
+collected under participation.
 
 - **Return feedback within 3 days** of each milestone.
 - **Revision window: 7 days** from feedback, for up to half the lost points, on
-  every milestone **except the terminal one** (M13). The live Expo
+  every milestone **except the terminal one** (M11, the print file) and M14 (an
+  invitation is useful only before the Expo). The Peer Review score from M13's
+  rubric is final once the practice presentations have run. The live Expo
   presentation is separately terminal inside Final Project's Poster
   Presentation at the Purdue Undergraduate Research Conference item. For those
   terminal scores, the deadline governs.
+- **The carry-forward record (D80/D82)** applies from M4 on **except M12–M16**;
+  numbered requests issued in those weeks are answered at M17.
 - Every submission must append an **AI Research Ledger** entry (8 fields) and
   update the cumulative **Research Project Dossier**. A missing ledger entry
   scores the affected student's individual Craft/ledger row specified in the
@@ -311,17 +322,19 @@ who observe studios, milestone checks, reproduction work, and defenses; their
 submission set is the peer or peers they are assigned to observe, normally two.
 A group member is rated by every teammate and rates every teammate, and may also
 be assigned to observe an individual researcher. The two sets need not be
-reciprocal. Do not mix Peer Evaluation with M12 Peer Review. Use
+reciprocal. Do not mix Peer Evaluation with M13 Peer Review. Use
 `project/final_dossier/peer_evaluation_instrument.md` for the confidential form,
 rating conversion, missing-rating rule, and moderation record.
 
 **Gradebook operation.** Milestone Deliverables is the equal-weight mean of the
-sixteen M1–M16 scores. An approved group submits one shared artifact naming
+seventeen M1–M17 scores (M14 and M15 are scored on completion). An approved group
+submits one shared artifact naming
 every member. Enter shared rubric-row scores in common and score requirements
 marked individual per student; a milestone score may differ only on those
 individual rows. Every student still completes Peer Review and presents live. A
 group shares the M11 poster-rubric score and the instructor's evaluation of the
-locked poster; live delivery and Peer Evaluation remain individual.
+M11 final poster (the print file); live delivery and Peer Evaluation remain
+individual.
 
 ---
 
@@ -332,7 +345,7 @@ Milestone briefs and rubrics are authored **one file per milestone** in
 **copy-paste-ready into Brightspace** (one Brightspace page per milestone). Each
 Friday, present the week's brief from Brightspace at the studio kickoff.
 
-The active **M1–M16** briefs are in place. Machine anchors and due dates are
+The active **M1–M17** briefs are in place. Machine anchors and due dates are
 validated by `scripts/validate_milestones.py`.
 
 ---
@@ -340,15 +353,16 @@ validated by `scripts/validate_milestones.py`.
 ## 5. GenAI Studio setup — DO THIS BEFORE THE SEMESTER
 
 Purdue GenAI Studio (<https://genai.rcac.purdue.edu>) is the course's reviewer
-bench. Students **must** consult an assigned reviewer role at five milestones:
+bench. Each of five milestones names a reviewer role; consulting it is required
+at four of them, and at M11 it is an optional last reading (D90):
 
 | Milestone | Required reviewer role |
 |---|---|
 | M5  | Causal Identification Skeptic (route declaration) |
 | M8  | Prediction & Leakage Auditor |
 | M9  | Robustness & Sensitivity Reviewer |
-| M13 | Poster Critic (before the lock) |
-| M16 | Reproducibility Auditor |
+| M11 | Poster Critic (optional last reading of the final poster; the required run is at M10, on the draft) |
+| M17 | Reproducibility Auditor (the student's own package, before the in-class exchange) |
 
 Before the first class:
 
@@ -381,40 +395,56 @@ miss the print deadline and there is no poster to present.
    Expo's own deadline is **Wed Oct 14, 11:59 PM** in OURConnect. Then approve each
    submission in OURConnect (you are primary mentor); updates close Mon Nov 2 and
    primary-mentor approval closes Wed Nov 4, 11:59 PM.
-2. **Poster lock + print submission — Sun Nov 8, 11:59 PM (M13, terminal).** The
-   poster is locked and submitted for printing. No changes after this time.
-   Confirm the print vendor turnaround well before this date.
+2. **Final poster = print file — Sun Nov 8, 11:59 PM (M11, terminal; D91).** The
+   M11 final poster is the file that goes to print, on the run shared with
+   QM 47400. No changes after this time. Confirm the print vendor turnaround well
+   before this date.
 3. **URC Expo — Tue Nov 17.** Required. Live presentation quality supplies 30%
    of Final Project's Poster Presentation at the Purdue Undergraduate Research
    Conference item; the poster rubric on the M11 final poster (D90)
-   supplies the other 70%. M15 grades the written reflection, not live quality. Each student
-   presents their poster and **evaluates at least three other conference
-   posters** on the course criticism instrument. **No class Wed Nov 18.** Only a documented
+   supplies the other 70%. M15 itself is completion only: a photo of the student
+   in front of the poster, due 11:59 PM that day; the live presentation is scored
+   at the Expo with the rubric in the M15 brief. Each student presents for the
+   whole assigned session and writes one line per visitor's question, the raw
+   material for M16. **No class Wed Nov 18.** Only a documented
    emergency qualifies for a make-up, handled individually per Honors College
    norms.
 
-Weeks 11–13 (`nb11`–`nb13`) rehearse the presentation: poster criticism, pitch
-delivery under uncertainty, and fielding hard questions
-(`project/conference/` holds the presentation, hard-questions,
-uncertainty-limitations, dress-rehearsal, and reflection protocols).
+Weeks 11–13 (`nb11`–`nb13`) finish the poster and rehearse the presentation: an
+ungraded silent reading round of the near-final posters (Wed Nov 4; nothing is
+collected), the Friday revision studio, the M12 pitches and question strategy,
+the M13 peer review, the **practice presentations** at the Week-12 Friday studio
+(Fri Nov 13: each student presents the printed poster with the M12 pitches, and
+classmates ask the questions from their M13 reviews), and the Week-13 dress
+rehearsal. `project/conference/` holds the presentation, hard-questions,
+uncertainty-limitations, and dress-rehearsal protocols; its coded-tally
+reflection protocol was retired by D91 and is kept as the record.
 
 ---
 
-## 7. The M16 peer cold run
+## 7. The M17 peer cold run
 
-The peer cold run takes place in class during Week 15 and feeds M16. Run the
-exchange as follows:
+The peer cold run takes place in class during Week 15 and feeds M17 (D91 moved
+the package, the cold run, and the two blocking gates here from the retired M13
+lock). Run the week as follows:
 
-1. Each student brings a **reproducibility package** (clean-run Colab notebook +
-   data or access recipe + environment record + README, SEED = 464).
+1. On Monday each student assembles a **reproducibility package** (clean-run
+   Colab notebook + data or access recipe + environment record + README +
+   licence and permissions note + decision log + dated frozen manifest,
+   SEED = 464) and runs it cold themselves, labeled "solo proxy; external cold
+   run pending."
 2. On the Week-15 Wednesday, colleagues exchange packages and run each other's
    capsule from the written instructions alone while the author remains silent.
-3. Each runner records whether the headline result and its uncertainty reproduce,
-   every question the instructions forced them to ask, and every mismatch.
-4. Friday is the repair and submission block for M16. M16 is one of the sixteen
-   scores in Final Project's Milestone Deliverables item and supplies evidence
-   for the final artifact, portfolio, and defense evaluated in Instructor/TA
-   Evaluation; there is no separate replication category.
+3. Each runner writes a cold-run report: whether the headline result and its
+   uncertainty reproduce, every question the instructions forced them to ask, and
+   every missing instruction, ranked by threat.
+4. Friday is the repair block: repairs against the report, the two **blocking
+   gates** (Gate 1, the author self-reproduction log of every poster number and
+   bound; Gate 2, the release preflight), and the second clean run. M17 is due
+   Sun Dec 6, 11:59 PM, and is one of the seventeen scores in Final Project's
+   Milestone Deliverables item; there is no separate replication category. A
+   submission missing either gate record, or with a row still marked blocking,
+   is returned rather than graded.
 
 ---
 
@@ -423,20 +453,20 @@ exchange as follows:
 - **Evidence Defenses — the Week 15–16 Wednesday defense blocks.** Each student
   delivers an oral **Evidence Defense** of the whole project and their AI
   collaboration. Under D54 this is **in-class practice with no grade weight**:
-  Instructor/TA Evaluation is now the instructor's evaluation of the M13 final
-  poster submission. Davi has not yet ruled whether the defense should stay
+  Instructor/TA Evaluation is now the instructor's evaluation of the M11 final
+  poster, the print file (D91). Davi has not yet ruled whether the defense should stay
   ungraded, be folded into a component, or be retired. D74 sharpened the
   question: with the SRL score gone, the only graded live performance left in
-  the course is the M15 Expo presentation, worth 30% of a 10-point component,
-  which is **3 course points**.
+  the course is the Expo presentation scored with the M15 brief's live rubric,
+  worth 30% of a 12-point component since D79, which is **3.6 course points**.
 - **Fri Dec 11 — the course-closing reflection session.** No milestone is
   collected. The reflection is written in the room and submitted by 11:59 PM,
   scored under **Participation** as one credit; Studio 12's feedback survey
   closes the same night.
 - **End-of-term wrap:**
-  1. Grade M16 and the course reflection (the reflection is a Participation
+  1. Grade M17 and the course reflection (the reflection is a Participation
      credit, due Fri Dec 11), and enter the Instructor/TA Evaluation score from
-     the locked M13 poster. No lecture notebook is collected (D79).
+     the M11 final poster (the print file). No lecture notebook is collected (D79).
   2. **Archive the course:** confirm the site is rendered and pushed
      (`quarto render` → commit `docs/` → push), the instructor material is synced
      to the private repo (`scripts/sync_instructor_repo.sh`), and the v2 build

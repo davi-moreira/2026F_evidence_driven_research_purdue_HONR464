@@ -1,5 +1,15 @@
 # Post-Conference Redesign Protocol — M37 (Fri Nov 20)
 
+> **Retired by D91 (2026-10-26) — kept as the record.** The in-class redesign
+> studio, the coded tally it read, and the redesign plan "submitted that night"
+> are not run this edition. What replaced them is part 2 of
+> [course milestone M16 — Conference Reflection](../../_research_project/2026Fall/milestone_16_conference_reflection.md):
+> the written plan to improve and complete the research, worked in the second
+> asynchronous class session after the Expo. The feedback → MIDA mapping and
+> the NOW-vs-NEXT test below remain a useful way to fill that plan's *Why it
+> matters* and *What it could change* columns; nothing else here is applied, and
+> the content is left intact.
+
 *Map what the audience taught you onto your design, and declare the honest
 redesign. Governs
 [milestone_18 — Feedback-to-Redesign Plan](../../_research_project/2026Fall/milestone_18_feedback_redesign_plan.md).
