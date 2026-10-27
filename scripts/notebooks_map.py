@@ -30,7 +30,7 @@ NOTEBOOKS = {
     8:  ("nb08_prediction", "Studio 8: Stress-test and adjudicate"),
     9:  ("nb09_experimental_causal", "Studio 9: Write, bound, and disclose"),
     10: ("nb10_attack_the_analysis", "Studio 10: Adapt and defend — the venue contract and the artifact"),
-    11: ("nb11_poster_production_review", "Poster production and peer review"),
+    11: ("nb11_poster_production_review", "Poster production lab"),
     12: ("nb12_presentation_preparation", "Presentation preparation: the pitch, the hard questions, the invitation"),
     13: ("nb13_conference", "The public test: dress rehearsal and the Expo"),
     14: ("nb14_replication_redteam", "Async module: reflection on what the public test returned"),
