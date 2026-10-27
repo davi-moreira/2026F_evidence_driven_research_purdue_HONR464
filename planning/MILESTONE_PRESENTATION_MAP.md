@@ -39,7 +39,7 @@ for up to half the lost points).
 | M8 | **Protocol cross-review** — partner swaps declared-analysis protocols and pre-registers one predicted attack on the other's plan | M20–M21 | M22 (studio) | Sun Oct 18 | eligible |
 | M9 | **First-evidence walkthrough** — 60-second redesign pitch: weakness, fix, before/after diagnosands on the first computed estimate | M22–M24 | M25 (studio) | Sun Oct 25 | eligible |
 | M10 | **Poster-draft red-team** — the five audits (claim boundary, figure honesty, read path, uncertainty, accessibility); two peers + the required Poster Critic and Robustness & Sensitivity Reviewer roles; author triages hits | M25–M27 | M28 (studio) | Sun Nov 1 | eligible |
-| M11 | **Ungraded reading round** of the near-final posters (M30: silent, structured findings with block + repair) + revision studio and print-scale check (M31); the final poster is the print file (D91) | M29–M31 | M30 (Wed) + M31 (studio) | **Sun Nov 8 — TERMINAL** | none (terminal) |
+| M11 | **Poster production labs** (M29–M31, and M27–M28 for the M10 draft): one-on-one instructor consultations at the boards + the print-scale check (M31); the final poster is the print file (D91, amended 2026-10-27) | M29–M31 | M30 (Wed) + M31 (studio) | **Sun Nov 8 — TERMINAL** | none (terminal) |
 | M12 | **Pitches under typed adversarial questioning** (M33) — the three timed pitches with the boundary sentence at every length; Round 02 meeting confirmed | M32–M33 | M33 (Wed) | Wed Nov 11 | eligible |
 | M13 | **Written peer review** of every other poster from the shared folder — tangible feedback + questions, then the questions asked live at the **practice presentations** (M34) | M33 | M34 (studio) | Thu Nov 12 | eligible (process score) |
 | M14 | **LinkedIn invitation** — the public post, copied from the official program | M34 | public post | Sun Nov 15 | none (completion) |
@@ -53,7 +53,7 @@ for up to half the lost points).
 Formats used: pitch (30-sec / 90-sec / 2-min / 3-min / 60-sec technical), gallery
 walk (M3), clarifying-question rounds, written two-line reviews, async
 recorded statement + board replies (M6), clinic/consults, protocol cross-review,
-five-audit red-team (M10), the ungraded reading round (M11), pitches under typed
+five-audit red-team (M10), the poster production labs (M11), pitches under typed
 questioning (M12), written peer review asked live at the practice presentations
 (M13), the public invitation (M14), **public conference (the URC Expo, M15)**, the
 reflection survey and plan (M16), and the in-class package exchange (M17), which
@@ -66,7 +66,7 @@ guardrail in `COURSE_MASTER_PLAN.md`.
 30-sec (M1) → 2-min (M2) → gallery walk (M3) → 3-min declared (M4) → measurement
 walkthrough (M5) → 90-sec recorded async (M6) → clinic/workshop (M7) →
 cross-review (M8) → 60-sec technical (M9) → structured five-audit red-team (M10) →
-the reading round (M11) → the three-layer pitch under questioning (M12) → the
+the poster production labs (M11) → the three-layer pitch under questioning (M12) → the
 practice presentation answering classmates' questions (M13) → **public conference
 at the URC Expo (M15)** → the in-class package exchange (M17), the chain's close.
 Stakes and polish rise monotonically; format length does not — compression is

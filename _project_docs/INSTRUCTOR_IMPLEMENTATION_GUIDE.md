@@ -410,9 +410,9 @@ miss the print deadline and there is no poster to present.
    emergency qualifies for a make-up, handled individually per Honors College
    norms.
 
-Weeks 11–13 (`nb11`–`nb13`) finish the poster and rehearse the presentation: an
-ungraded silent reading round of the near-final posters (Wed Nov 4; nothing is
-collected), the Friday revision studio, the M12 pitches and question strategy,
+Weeks 11–13 (`nb11`–`nb13`) finish the poster and rehearse the presentation: poster
+production labs every session from Wed Oct 28 to Fri Nov 6 (D91 amended; nothing
+is collected in class), the M12 pitches and question strategy,
 the M13 peer review, the **practice presentations** at the Week-12 Friday studio
 (Fri Nov 13: each student presents the printed poster with the M12 pitches, and
 classmates ask the questions from their M13 reviews), and the Week-13 dress

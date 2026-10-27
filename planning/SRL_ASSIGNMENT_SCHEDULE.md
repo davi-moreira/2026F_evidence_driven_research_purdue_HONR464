@@ -95,9 +95,9 @@ the instructor.
 | **13** | 23 | Mon Oct 19 | nb09 · Sun Oct 25, 2026 | 9 | Studio 9: Write, bound, and disclose | Write and bound I: from a printed result to the claim your evidence can carry — the claim-license matrix and the claim-evidence table | Monday · guided investigation |
 | **14** | 24 | Wed Oct 21 | nb09 · Sun Oct 25, 2026 | 9 | Studio 9: Write, bound, and disclose | Write and bound II: the disclosure your ledger writes, the note spine, and the scored audit of a note that leans on a source nobody retrieved | Wednesday · applied AI laboratory |
 | **15** | 26 | Mon Oct 26 | nb10 · Sun Nov 1, 2026 | 10 | Studio 10: Prepare to publish or present | Adapt and audit I: the venue contract, the artifact that satisfies it, and the audit that catches a figure changing the finding | Monday · guided investigation |
-| **16** | 27 | Wed Oct 28 | nb10 · Sun Nov 1, 2026 | 10 | Studio 10: Prepare to publish or present | Adapt and defend II: compress without inflating, then make the defend-or-concede call | Wednesday · applied AI laboratory |
+| **16** | 27 | Wed Oct 28 | nb10 · Sun Nov 1, 2026 | 10 | Studio 10: Prepare to publish or present | Poster production lab: your M10 poster draft on the course template | Wednesday · applied AI laboratory |
 | **17** | 29 | Mon Nov 2 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | Poster production lab: the compass positions, and the number that has to trace | Monday · guided investigation |
-| **18** | 30 | Wed Nov 4 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | The near-final poster on the wall: an ungraded reading round across every active project | Wednesday · applied AI laboratory |
+| **18** | 30 | Wed Nov 4 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | Poster production lab: work my M10 feedback into the board, and read your own poster for the wrong inference | Wednesday · applied AI laboratory |
 | **19** | 32 | Mon Nov 9 | nb12 · Sun Nov 15, 2026 | 12 | Conference block: presentation preparation | Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch | Monday · guided investigation |
 | **20** | 33 | Wed Nov 11 | nb12 · Sun Nov 15, 2026 | 12 | Conference block: presentation preparation | Questions you can predict, and the answer that concedes the smaller true claim | Wednesday · applied AI laboratory |
 | **21** | 35 | Mon Nov 16 | nb13 · Sun Nov 22, 2026 | 13 | Conference block: the public test (dress rehearsal and the Expo) | Dress rehearsal: the questions you can predict, and the numbers that moved since the print file | Monday · guided investigation |
@@ -172,17 +172,17 @@ Kept in full, and re-owned. This section is the one part of the page D75 did not
 
 > Colleague puzzle opening the scored audit: one honest note sentence beside one panel drawn from exactly those numbers — bars floored at 4.26, no intervals, red against green, headline "Responsive government BUILDS police trust". Two written commitments: same claim or a changed finding, and does a red-green colour-blind reviewer or a screen-reader user receive the claim at all?
 
-**Slot 16** · Wed Oct 28 · Adapt and defend II: compress without inflating, then make the defend-or-concede call
+**Slot 16** · Wed Oct 28 · Poster production lab: your M10 poster draft on the course template
 
-> Challenge: a 30-second version a tool produced from Monday's honest headline — "People trust the police more when the government responds to them." Name in writing exactly which words moved the claim, then vote on the single worst offender; that word is the lecture's target.
+> Challenge: open the course template's guide page and name, in writing, the one requirement your draft fails right now (a type size, a panel still showing EXAMPLE text, a figure with no alt text, a number with no traced cell). That requirement is the first thing you fix in the lab.
 
 **Slot 17** · Mon Nov 2 · Poster production lab: the compass positions, and the number that has to trace
 
 > Puzzle: two posters carry the same finding. One puts the headline claim in the reading position a visitor reaches first and its interval one line below; the other puts the claim in the top-left banner and the interval in a footnote at the bottom right. Commit in writing which one a hurried visitor will misquote, and name the structural fact that decides it — not the prettier one, the one whose layout makes the wrong reading harder.
 
-**Slot 18** · Wed Nov 4 · The near-final poster on the wall: an ungraded reading round across every active project
+**Slot 18** · Wed Nov 4 · Poster production lab: work my M10 feedback into the board, and read your own poster for the wrong inference
 
-> Retrieval and challenge: a spoken drill from memory on the eye-span rule — one thing a claim printed away from its uncertainty may honestly be said to communicate, and one thing it may not. Then the instructor opens the reading round by stating the one rule that governs the hour: every finding names the block it lives in and the change that would fix it, or it is a preference and does not go on the sheet — and nothing on the sheet is graded.
+> Challenge: write down, before any tool opens, the one sentence a hurried visitor will most likely take away from your board. Then compare it, at the end of the lab, with what the Poster Critic says the board alone concludes.
 
 **Slot 19** · Mon Nov 9 · Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch
 

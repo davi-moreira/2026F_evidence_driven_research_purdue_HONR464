@@ -21,7 +21,7 @@ traceability check and later receives an individual live-presentation score.
 
 ## Materials
 
-- Your near-final poster on the course template, with the findings from Wednesday's reading round (M30) worked in.
+- Your near-final poster on the course template, with my M10 feedback worked in during the poster production labs.
 - The URC poster spec sheet (dimensions, orientation, and format per **URC
   guidance on Brightspace** — confirm the current numbers there, do not guess).
 - Your pilot notebook, runnable, open beside the poster.

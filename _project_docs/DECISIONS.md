@@ -5592,8 +5592,8 @@ Defaults taken in implementation (recorded for review):
 - **One file per milestone** (`lastname_mNN.pdf`), the course's PDF rule, so the
   Round 02 confirmation is a section of `lastname_m12.pdf` rather than a second
   file.
-- **Wed Nov 4 keeps an ungraded in-class reading round** of the near-final posters
-  (nothing collected), so authors still get findings before the print file.
+- ~~Wed Nov 4 keeps an ungraded in-class reading round~~ — **withdrawn the next
+  day; see "D91 amended" below.**
 - **M13 forbids uploading a classmate's poster to an AI tool** (unpublished work
   carrying a name); AI may only tighten wording the student wrote.
 - **M12, M13 (process score) and M16 are revision-eligible**; M11 is terminal;
@@ -5641,3 +5641,20 @@ students by Wed Nov 11 for M13. (4) Post
 `_announcements/2026-10-26_conference_block_new_milestones.md`. (5) The
 honors-symposium reprint in M16 depends on budget; nothing is promised to
 students.
+
+**D91 amended (Davi, 2026-10-27) — every session from Oct 28 to Nov 6 is a poster
+production lab.** Davi rejected the ungraded Wed Nov 4 reading round. All five
+sessions from Wed Oct 28 to Fri Nov 6 (M27–M31) are dedicated to poster
+development, as "Poster production lab": Wed Oct 28 and Fri Oct 30 build the M10
+poster draft (M10 due Sun Nov 1); Mon Nov 2, Wed Nov 4 and Fri Nov 6 turn it, from
+the M10 feedback, into the M11 final poster (the print file, due Sun Nov 8). The
+Wednesday blocks keep the 50-minute frame and run as lab work plus one-on-one
+instructor consultations at the boards. The book readings and their IYT due dates
+for Oct 28 (research pitches, difficult questions) are unchanged; students read
+them on their own, and the pitches are practised in Week 12 (M12). Structured peer
+criticism now happens once, after the print file, at M13.
+`project/poster/redteam_review_protocol.md` is bannered as not run this edition.
+Changed: `scripts/schedule_data/part3.py` (M27–M31), nb10 and nb11 Lecture 2,
+`PROJECT_MILESTONES.md`, `MILESTONE_PRESENTATION_MAP.md`, the implementation guide,
+the poster production checklist, storyboard protocol and Poster Critic role, the
+schedule page and both Word documents.

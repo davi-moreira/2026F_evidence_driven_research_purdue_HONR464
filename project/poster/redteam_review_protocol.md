@@ -1,5 +1,11 @@
 # Red-Team Review Protocol — M30 (Wed Nov 4)
 
+> **Not run this edition (D91 amended, 2026-10-27) — kept as the record.** Every session
+> from Wed Oct 28 to Fri Nov 6 is a poster production lab, so there is no in-class
+> reading round of the near-final posters. Structured peer criticism now happens once,
+> after the print file, in [course milestone M13 — Peer Review](../../_research_project/2026Fall/milestone_13_peer_review.md).
+> The content below is left intact.
+
 *The structured adversarial reading of your near-final poster, run in class
 M30. It is **ungraded and nothing is collected**: the point is that you get
 findings while the poster can still change, before

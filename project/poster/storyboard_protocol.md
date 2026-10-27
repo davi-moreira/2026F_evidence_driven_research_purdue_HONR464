@@ -75,7 +75,7 @@ Uncertainty rule), not just a poster-day problem.
 | 12–30 | **Grid studio.** You fill your grid: headline, three ranked evidence blocks, uncertainty line, read-path arrows. |
 | 30–42 | **Storyboard pitches.** 90 seconds per active project — the researcher or group walks listeners down the read path, box by box. Every group member speaks. Listeners mark where they got lost. |
 | 42–48 | Revise your grid from the lost-point marks. |
-| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into Wednesday's reading round and Friday's revision studio — M11, the print file, is due Sunday, November 8, 11:59 PM. |
+| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into Wednesday's and Friday's poster production labs — M11, the print file, is due Sunday, November 8, 11:59 PM. |
 
 ## Roles
 

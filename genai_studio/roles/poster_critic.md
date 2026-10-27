@@ -147,5 +147,5 @@ Before the M11 deadline (Sun Nov 8, 11:59 PM) the poster is still fixable; after
 it, the file is at the printer and final. The ledger's untraceable-number flags
 and the student's resolutions show whether every figure earned its place. An
 unresolved untraceable number, or a headline claim outside its boundary, is exactly
-what the Week 11 reading round (M30 meeting) and the poster rubric's hard caps
+what the Week 11 poster production labs and the poster rubric's hard caps
 target.

@@ -83,7 +83,7 @@ are `M1…M17`.
 | M8 | Robustness audit | M20–M22 | audit walkthrough + adjudication round (M22) | Sun Oct 18, 11:59 PM | 8 — Your robustness audit (v1) |
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Sun Oct 25, 11:59 PM | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Sun Nov 1, 11:59 PM | 10 — Your artifact, ready to publish or present (v1) |
-| M11 | Final poster (the print file) | M29–M31 | production lab (M29) + ungraded reading round of the near-final posters (M30) + revision studio and print-scale check (M31); graded with the poster rubric (D90) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v2, the final poster, printed; course-only instructions) |
+| M11 | Final poster (the print file) | M29–M31 | poster production labs (M29, M30) + the print-scale check in the Friday lab (M31; D91 amended: every session Oct 28 – Nov 6 is a poster production lab); graded with the poster rubric (D90) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v2, the final poster, printed; course-only instructions) |
 | M12 | Presentation planning: audience, pitches, and questions | M32–M33 | pitch drafting (M32) + typed-panel questioning (M33) | Wed Nov 11, 11:59 PM | 10 — spoken-editions practice |
 | M13 | Peer review | M33 | feedback and questions for every other poster, from the shared folder (opens M33); questions asked at the practice presentations (M34) | Thu Nov 12, 11:59 PM | 10 — peer-criticism practice |
 | M14 | LinkedIn invitation | M34 | practice presentations at the printed board (M34) + the invitation kickoff | Sun Nov 15, 11:59 PM | 10 — the public invitation |
