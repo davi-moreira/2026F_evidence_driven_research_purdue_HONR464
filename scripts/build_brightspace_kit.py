@@ -804,11 +804,17 @@ def gradebook_spec(config: dict) -> str:
         "source items, M1 through M17, each with the due date below; the "
         "component score is their equal-weight mean.",
         "- **Final Project → Peer Evaluation** — one confidential per-student "
-        "item; use every teammate for approved groups and two assigned project "
-        "peers for individual researchers. No self-rating. If evaluator "
-        "non-submission leaves no valid received rating after follow-up, use "
-        "the neutral 80-point received-rating portion; do not add a substitute "
-        "evaluator after observation ends.",
+        "score, built in Brightspace as two items under manually assigned "
+        "weights so the platform applies the conversion above: "
+        "'Peer Evaluation Submission: Final Project' (weight 20, out of 1, "
+        "linked to the submission assignment; enter the submission fraction) "
+        "and 'Final Project Peer Evaluation Result - Manual Grading' (weight "
+        "80, out of 100; enter received_rating_score). Use every teammate for "
+        "approved groups and two assigned project peers for individual "
+        "researchers. No self-rating. If evaluator non-submission leaves no "
+        "valid received rating after follow-up, enter 100 in the Result item "
+        "(the neutral 80-point received-rating portion); do not add a "
+        "substitute evaluator after observation ends.",
         "- **Final Project → Peer Review** — one individually scored item from "
         "the M13 Final Project Peer Review rubric (D91).",
         "- **Final Project → Poster Presentation at the Purdue Undergraduate "
