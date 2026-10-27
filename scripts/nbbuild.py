@@ -101,8 +101,9 @@ LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
 # for the first ten minutes. The 📣 My Report Plan cell that D74 injected here
 # is therefore RETIRED, not deleted: REPORT_PLAN below is kept verbatim for a
 # future edition that reinstates the role, and INJECT_REPORT_PLAN gates it off.
-# The notebook itself is still collected WEEKLY from every student and graded on
-# completion (D74), and that contract no longer names any lab-meeting cell.
+# D79 (2026-09-04) retired D74's weekly Lecture Notebooks contract: the notebook
+# is still worked in class but is never collected or graded, and each source's
+# lab-meeting cell now says so in one line.
 BRIEF_MARK = re.compile(r"(?m)^\s*###[^\n]*Lab Meeting")
 
 #: D75: False retires the per-lecture report-plan cell. Set True to bring the
