@@ -35,7 +35,7 @@
 # M12 presentation planning (Wed Nov 11); M13 peer review (Thu Nov 12; questions
 # asked at the Fri Nov 13 practice presentations); M14 LinkedIn invitation (Sun
 # Nov 15); M15 Expo presentation confirmation (Tue Nov 17); M16 conference
-# reflection (the two class sessions after the Expo); M17 Book Milestone 11. The
+# reflection (the two asynchronous sessions after the Expo); M17 Book Milestone 11. The
 # chain is M1-M17 again (D54 had closed it at M16).
 # v5 (2026-08-22, D50): THE CONFERENCE BLOCK — Studios 1-10 on Weeks 1-10,
 # Weeks 11-14 are the conference block (poster production, peer review, the
@@ -101,7 +101,7 @@ calendar:
     practice_presentations: "2026-11-13"  # Friday class: every student presents the printed poster as a
                                           # practice run; classmates ask the questions from their M13 review (D91).
                                           # The M12 and M13 briefs mention it WITHOUT this date.
-    reflection_due: "2026-11-23"    # M16 conference reflection, worked in the two class sessions after the
+    reflection_due: "2026-11-23"    # M16 conference reflection, worked in the two asynchronous sessions after the
                                     # Expo (Fri Nov 20 survey, Mon Nov 23 plan); the brief carries no dates (D91)
     final_reflection: "2026-12-11"  # Friday, last class — the course-closing reflection
                                     # deliverable (D54); graded under participation, not a milestone
@@ -313,7 +313,7 @@ milestones:
   M13: {title: "Peer review",                                      due: "2026-11-12", kind: "studio",   note: "Thursday 11:59 PM; constructive, tangible feedback and questions for every other poster; the questions are asked at the Friday practice presentations"}
   M14: {title: "LinkedIn invitation",                              due: "2026-11-15", kind: "studio",   note: "Sunday 11:59 PM; completion"}
   M15: {title: "Expo presentation confirmation",                   due: "2026-11-17", kind: "event",    note: "Tuesday 11:59 PM; photo in front of the poster; completion. The live presentation is scored at the Expo"}
-  M16: {title: "Conference reflection: the audience and the plan for the research", due: "2026-11-23", kind: "async", note: "worked in the two class sessions after the Expo (survey, then the plan); the brief carries no dates"}
+  M16: {title: "Conference reflection: the audience and the plan for the research", due: "2026-11-23", kind: "async", note: "worked in the two asynchronous sessions after the Expo (survey, then the plan); the brief carries no dates"}
   # Week 15: the post-conference studio presents book Milestone 11. Week 16
   # teaches Studio 12 but carries NO milestone (D54): its Friday is the
   # ungraded-as-milestone final reflection, scored under participation.

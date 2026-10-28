@@ -11,7 +11,7 @@ One credit, exactly like every other participation item; the rule is in
 M17, the reproducible package, due Sun Dec 6 (D91); Week 16 carries no milestone
 (D54), and the last Friday collects this reflection under participation instead.
 It is also not the M16 conference reflection, which is a milestone with its own
-brief, worked in the two class sessions after the Expo (D91). Keep the two apart
+brief, worked in the two asynchronous sessions after the Expo (D91). Keep the two apart
 in the gradebook and in how they are described to students.
 
 **Why the last day.** The final session is the course-closing reflection

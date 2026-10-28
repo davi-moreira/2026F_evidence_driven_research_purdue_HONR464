@@ -32,20 +32,21 @@ rubrics live one page per milestone, like this one.
 You have presented your research in public. This milestone turns that afternoon
 into something you can use: a reflection on the conference and the audience you
 actually had, and a **plan to improve your research and to complete the
-activities, analyses, and results that remain**. You do it **in class, during the
-two class sessions that follow the conference**: in the first you answer the
-conference reflection survey, and in the second you write your plan.
+activities, analyses, and results that remain**. You do it **in the two
+asynchronous sessions that follow the conference**, online and in place of class:
+in the first you answer the conference reflection survey, and in the second you
+write your plan.
 
 ---
 
 ## What to Submit
 
-Due: **at the end of the second class session after the conference** (the exact
-deadline is on the Brightspace assignment).
+Due: **on the day of the second asynchronous session after the conference** (the
+exact deadline is on the Brightspace assignment).
 
 | # | Where | What |
 |---|---|---|
-| 1 | **The Conference Reflection Survey** (link on Brightspace) | Your answers about the conference and your audience (Part 1). Answered during the first class session after the conference. |
+| 1 | **The Conference Reflection Survey** (link on Brightspace) | Your answers about the conference and your audience (Part 1). Answered during the first asynchronous session after the conference. |
 | 2 | **`lastname_m16.pdf`** on Brightspace → Assignments → M16 | Your **plan for the research** (Part 2), written during the second session, with this milestone's AI Research Ledger rows at the end. |
 
 Bring the notes you wrote at the Expo, the questions you were asked, to both
@@ -73,8 +74,8 @@ you write here says what that work is, in what order, and what each piece needs.
 
 ## Part 1 — The Conference Reflection Survey (first session)
 
-Answer the survey during the first class session after the conference, from your
-Expo notes. It asks about:
+Answer the survey during the first asynchronous session after the conference, from
+your Expo notes. It asks about:
 
 1. **The conference.** What you saw and learned at the Expo beyond your own
    poster, including at least one thing another presenter did that you would
