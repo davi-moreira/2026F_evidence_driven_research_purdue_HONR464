@@ -9,9 +9,11 @@ develop → submit → revise** cadence (D30 retired weekly milestone presentati
 its Friday studio and submit by **Sunday, 11:59 PM**. **D91 (2026-10-26) rebuilt
 the conference block on QM 47400's post-lock sequence**, so its deadlines follow
 the Expo rather than the Sunday rule: M11, the final poster and the print file
-(Sun Nov 8, **terminal**, no revision window), M12 presentation planning (Wed Nov
-11), M13 peer review (Thu Nov 12; the questions are asked at the Fri Nov 13
-practice presentations), M14 the LinkedIn invitation (Sun Nov 15), M15 the Expo
+(Sun Nov 8, **terminal**, no revision window), M12 presentation planning, M13
+peer review and M14 the LinkedIn invitation (all three Sun Nov 15 since **D92**,
+2026-11-09: Fri Nov 13 is studio work time on the three, and the M13 questions
+are asked at the Mon Nov 16 practice presentations, which replaced the dress
+rehearsal; D91 had M12 Wed Nov 11 and M13 Thu Nov 12), M15 the Expo
 presentation confirmation (Tue Nov 17), and M16 the conference reflection (the
 two asynchronous sessions after the Expo, due Mon Nov 23). Since **D49** the semester runs **one Studio per week**: Monday and Wednesday
 teach that Studio's lessons with their "It is your turn" work, and **Friday IS
@@ -84,10 +86,10 @@ are `M1…M17`.
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Sun Oct 25, 11:59 PM | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Sun Nov 1, 11:59 PM | 10 — Your artifact, ready to publish or present (v1) |
 | M11 | Final poster (the print file) | M29–M31 | poster production labs (M29, M30) + the print-scale check in the Friday lab (M31; D91 amended: every session Oct 28 – Nov 6 is a poster production lab); graded with the poster rubric (D90) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v2, the final poster, printed; course-only instructions) |
-| M12 | Presentation planning: audience, pitches, and questions | M32–M33 | pitch drafting (M32) + typed-panel questioning (M33) | Wed Nov 11, 11:59 PM | 10 — spoken-editions practice |
-| M13 | Peer review | M33 | feedback and questions for every other poster, from the shared folder (opens M33); questions asked at the practice presentations (M34) | Thu Nov 12, 11:59 PM | 10 — peer-criticism practice |
-| M14 | LinkedIn invitation | M34 | practice presentations at the printed board (M34) + the invitation kickoff | Sun Nov 15, 11:59 PM | 10 — the public invitation |
-| M15 | Expo presentation confirmation | M35 | dress rehearsal (M35); the Expo (Tue Nov 17) — photo in front of the poster; the live presentation is scored there | Tue Nov 17, 11:59 PM | 10 (v3, the publicly presented edition) |
+| M12 | Presentation planning: audience, pitches, and questions | M32–M34 | pitch drafting (M32) + typed-panel questioning (M33) + studio work time (M34; D92); delivered at the practice presentations (M35) | Sun Nov 15, 11:59 PM (D92) | 10 — spoken-editions practice |
+| M13 | Peer review | M33–M34 | feedback and questions for every other poster, from the shared folder (opens M33) + studio work time (M34; D92); questions asked at the practice presentations (M35) | Sun Nov 15, 11:59 PM (D92) | 10 — peer-criticism practice |
+| M14 | LinkedIn invitation | M34 | the invitation kickoff + studio work time on M12–M14 (M34; D92) | Sun Nov 15, 11:59 PM | 10 — the public invitation |
+| M15 | Expo presentation confirmation | M35 | practice presentations at the printed board + the capture plan (M35; D92 replaced the dress rehearsal); the Expo (Tue Nov 17) — photo in front of the poster; the live presentation is scored there | Tue Nov 17, 11:59 PM | 10 (v3, the publicly presented edition) |
 | M16 | Conference reflection: the audience and the plan for the research | M36–M37 | async survey (M36) + async plan (M37) | Mon Nov 23, 11:59 PM | 10 (v4, what the room returned) |
 | M17 | Reproducible package and the peer cold run | M38–M40 | solo cold run (M38) + the in-class package exchange (M39) + the repair block, two blocking gates and second clean run (M40) | Sun Dec 6, 11:59 PM | 11 — Your reproducible package (v1) |
 
@@ -103,7 +105,7 @@ milestones (no new milestone ID — the chain is M1–M17).
 | Round | Meeting window | Requested at | Confirmed at | QM 47400 counterparts |
 |---|---|---|---|---|
 | Round 01 | Mon Oct 5 – Sun Oct 11 | **M4** (Sun Sep 20) | **M7** (Tue Oct 13) | M00 (Sep 20) → M04 (Oct 11) |
-| Round 02 | Mon Nov 2 – Sat Nov 7 | **M8** (Sun Oct 18) | **M12** (Wed Nov 11; D91) | M07 (Oct 18) → M13 (Nov 15) |
+| Round 02 | Mon Nov 2 – Sat Nov 7 | **M8** (Sun Oct 18) | **M12** (Sun Nov 15; D92) | M07 (Oct 18) → M13 (Nov 15) |
 
 Windows and the request/confirm assignment live in `course_config.yaml`
 `mentor_meetings:`. The four milestones carry the ✚ schedule mark and a

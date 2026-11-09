@@ -60,7 +60,7 @@ posters**, publication costs. Questions to Sarah Vaughn, Program Administrator f
 Research, `svaughn@purdue.edu`. The access mechanism and any spend deadline are
 **not stated** and have been asked.
 
-This course prints posters for the **Fri Nov 13** rehearsal (`schedule.qmd`, day 34),
+This course prints posters for the **Mon Nov 16** practice presentations (`schedule.qmd`, day 35; D92 — was Fri Nov 13),
 so the mechanism has to be settled well before the first week of November.
 
 ## Presentation venue — OPEN QUESTION

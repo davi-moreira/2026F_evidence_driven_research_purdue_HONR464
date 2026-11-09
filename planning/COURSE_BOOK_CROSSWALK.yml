@@ -284,7 +284,7 @@ rows:
   - milestone: M12
     nb: nb12
     # Week 12 - CONFERENCE BLOCK. The poster is printed, so the week is spoken
-    # delivery. M12 (Wed Nov 11) is QM 47400's presentation-planning milestone:
+    # delivery. M12 (Sun Nov 15, D92) is QM 47400's presentation-planning milestone:
     # the audience analysis, three timed pitches, poster integration, and the
     # question strategy, plus the boundary sentence at every length. Pitching is
     # Studio 10 PRACTISED, not a new version of the artifact.
@@ -299,9 +299,9 @@ rows:
 
   - milestone: M13
     nb: nb12
-    # Week 12, second submission (Thu Nov 12). Constructive, tangible feedback and
-    # questions on every other poster, from the shared folder of print files. The
-    # questions are asked at the Friday practice presentations. Studio 10
+    # Week 12, second submission (Sun Nov 15, D92). Constructive, tangible feedback
+    # and questions on every other poster, from the shared folder of print files.
+    # The questions are asked at the Monday Nov 16 practice presentations (D92). Studio 10
     # criticism PRACTISED on someone else's artifact.
     assignments:
       - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
@@ -325,7 +325,7 @@ rows:
 
   - milestone: M15
     nb: nb13
-    # Week 13 - CONFERENCE BLOCK. The public test: Monday's dress rehearsal and
+    # Week 13 - CONFERENCE BLOCK. The public test: Monday's practice presentations (D92) and
     # the Expo on Tuesday, November 17 (required). M15 confirms the presentation
     # with a photo in front of the poster (Tue Nov 17, completion); the live
     # presentation is scored at the Expo into the Poster Presentation component.

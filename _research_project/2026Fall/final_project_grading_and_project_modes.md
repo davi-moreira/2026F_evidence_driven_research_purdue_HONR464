@@ -132,7 +132,7 @@ not optional office hours, and they are not a substitute for office hours.
 | Round | Meeting window | Requested at | Confirmed at | What the meeting works on |
 |---|---|---|---|---|
 | **Round 01** | **Mon Oct 5 to Sun Oct 11, 2026** | **M4** (due Sun Sep 20) | **M7** (due Tue Oct 13) | your question, the evidence behind it, and Research Contract v0 |
-| **Round 02** | **Mon Nov 2 to Sat Nov 7, 2026** | **M8** (due Sun Oct 18) | **M12** (due Wed Nov 11) | the claim your evidence carries, the poster, and the questions it will draw |
+| **Round 02** | **Mon Nov 2 to Sat Nov 7, 2026** | **M8** (due Sun Oct 18) | **M12** (due Sun Nov 15; D92) | the claim your evidence carries, the poster, and the questions it will draw |
 
 Each round is **requested** in one milestone and **confirmed** in a later one.
 The request is an email sent from your Purdue address offering at least three

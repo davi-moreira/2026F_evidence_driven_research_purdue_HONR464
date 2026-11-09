@@ -1,10 +1,11 @@
-# Hard Questions Protocol — M33–M34 (Wed Nov 11 & Fri Nov 13)
+# Hard Questions Protocol — M33 & M35 (Wed Nov 11 & Mon Nov 16)
 
 *Build your question bank, then survive a hot seat on it. The bank is the
 question strategy in
 [course milestone M12 — Presentation Planning](../../_research_project/2026Fall/milestone_12_presentation_planning.md),
-built for Wednesday's deadline (M12 is due Wed Nov 11, 11:59 PM). The hot seat is
-the Friday studio's practice presentation (M34): you present your printed poster
+built in Wednesday's class and finished in Friday's studio (M12 is due Sun Nov
+15, 11:59 PM; D92). The hot seat is Monday's practice presentation (M35, D92):
+you present your printed poster
 to the room with your M12 pitches, and your classmates ask the questions they
 prepared in their
 [course milestone M13 — Peer Review](../../_research_project/2026Fall/milestone_13_peer_review.md).
@@ -15,7 +16,7 @@ Sun Nov 15, 11:59 PM.*
 
 The hardest fair question a stranger asks on Nov 17 should be one you already
 wrote down and answered in November. This protocol builds your five-question bank
-(one per recurring type) for Wednesday and drills it under fire on Friday, so that on Expo day you are
+(one per recurring type) for your M12 plan and drills it under fire on Monday, Nov 16, so that on Expo day you are
 never surprised into bluffing — the one move that can destroy a presenter's
 credibility entirely.
 
@@ -85,18 +86,19 @@ the credible one.
 
 ## Procedure
 
-**Before Wednesday's deadline (M33).** Build the bank: the five types with a
+**Wednesday class and Friday studio (M33–M34).** Build the bank: the five types with a
 real example each, your five questions (one per type) with answer sketches and
 their bound-request or attack tags, and the honest-don't-know formula. It goes
-into your M12 plan, due Wed Nov 11, 11:59 PM.
+into your M12 plan, due Sun Nov 15, 11:59 PM (D92).
 
-**Friday studio: the practice presentations (M34, 50 minutes)**
+**Monday lecture: the practice presentations (M35, 50 minutes; D92 moved them here from the Week-12 Friday studio)**
 
 | Time | Activity |
 |---|---|
-| 0–5 | Research stand-up; presentation order posted. |
-| 5–45 | **Practice presentations:** each presenter gives the 2-minute pitch at the printed poster, then takes the hot seat (classmates' M13 questions + the surprise deck); instructor models one save. In the last minutes, M14 kickoff: the LinkedIn invitation, copied exactly from the official Expo program. |
-| 45–50 | Bank revision from what the hot seat exposed; ledger line; exit ticket (the question I most fear + my first sentence in reply). M14 is due Sun Nov 15, 11:59 PM. |
+| 0–10 | Lab meeting (open round); presentation order posted. |
+| 10–31 | **Practice presentations:** each presenter gives the 30-second and the 2-minute pitch at the printed poster, then takes the hot seat (classmates' M13 questions + the surprise deck), about five minutes each; instructor models one save. |
+| 31–43 | Mark which questions the M12 plan predicted; route each to claims, communication, or noise; bank revision from what the hot seat exposed. |
+| 43–50 | Capture line for the Expo; ledger line; exit ticket (the question I had not predicted + my answer tomorrow). |
 
 ## Roles
 
@@ -128,4 +130,4 @@ After the practice presentation (for the Expo; nothing is resubmitted):
 4. **Blaming the AI tool.** "The AI gave me that" is not a defense — you verified, or you didn't. Own the process.
 5. **Essay answers.** The Expo floor rewards two crisp sentences, not a lecture. Drill for brevity.
 
-*Paired with [uncertainty_limitations_protocol.md](uncertainty_limitations_protocol.md) — together they build the question strategy in your M12 presentation plan. Next: [dress_rehearsal_protocol.md](dress_rehearsal_protocol.md).*
+*Paired with [uncertainty_limitations_protocol.md](uncertainty_limitations_protocol.md) — together they build the question strategy in your M12 presentation plan. Next: the Expo, with the capture line set at the practice presentations (the dress-rehearsal protocol is retired, D92).*

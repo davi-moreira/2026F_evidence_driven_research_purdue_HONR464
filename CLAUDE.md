@@ -315,12 +315,14 @@ Studios 1–10, so **course milestone M(n) presents Book Milestone (n) one-to-on
 for n = 1..10**. Weeks 11–14 are the CONFERENCE BLOCK and anchor no new lesson.
 Since **D91** they follow QM 47400's post-lock sequence: **M11 the final poster
 AND the print file (Sun Nov 8, 11:59 PM, terminal)**; **M12** presentation
-planning (Wed Nov 11: audience analysis, 30 s / 90 s / 2 min pitches at ≤75 / ≤200
+planning (audience analysis, 30 s / 90 s / 2 min pitches at ≤75 / ≤200
 / ≤300 words, poster integration, question strategy, Round 02 mentor-meeting
-confirmation); **M13** peer review (Thu Nov 12: constructive, tangible feedback +
-questions for every other poster, from a shared folder; the questions are asked
-at the **Fri Nov 13 in-class practice presentations**, which M12 mentions WITHOUT
-a date); **M14** the LinkedIn invitation (Sun Nov 15, completion); **M15** the Expo
+confirmation); **M13** peer review (constructive, tangible feedback + questions for every
+other poster, from a shared folder; the questions are asked at the **Mon Nov 16
+in-class practice presentations**, which M12 mentions WITHOUT a date); **M14** the
+LinkedIn invitation (completion). **D92 (2026-11-09): M12, M13 and M14 are all due
+Sun Nov 15**; Fri Nov 13 is studio work time on the three, and the Mon Nov 16 dress
+rehearsal is dropped (retired in place; its material sits below nb13's ⏸); **M15** the Expo
 presentation confirmation (Tue Nov 17: photo in front of the poster, completion;
 the live presentation is scored at the Expo); **M16** the conference reflection
 (the two ASYNCHRONOUS sessions after the Expo: survey Fri Nov 20, plan to improve
@@ -337,7 +339,7 @@ write M0. The D50/D90 briefs D91 replaced live in
 **D55 — every milestone is due the Sunday after its Friday studio, 11:59 PM.**
 The studio is still where the work happens; the deadline is the end of that
 weekend. The conference block (D91) follows the Expo instead: M11 Sun Nov 8
-(terminal), M12 Wed Nov 11, M13 Thu Nov 12, M14 Sun Nov 15, M15 Tue Nov 17, M16
+(terminal), M12, M13 and M14 Sun Nov 15 (D92), M15 Tue Nov 17, M16
 Mon Nov 23, all 11:59 PM. **D66 adds two holiday exceptions: M2 is Mon Sep 7
 (Labor Day) and M7 is Tue Oct 13 (October Break).**
 `course_config.yaml milestones:` is the source of truth for every due date.
@@ -902,7 +904,8 @@ material.
 
 ---
 
-**Version:** 7.9 — D91, the conference block rebuilt on QM 47400's post-lock sequence (2026-10-26, DECISIONS.md D91): M11 final poster = the print file (Sun Nov 8, terminal); M12 presentation planning (Wed Nov 11) with the Round 02 confirmation; M13 peer review (Thu Nov 12; questions asked at the Fri Nov 13 practice presentations); M14 LinkedIn invitation (Sun Nov 15, completion); M15 Expo presentation confirmation (Tue Nov 17, photo, completion; live score at the Expo); M16 conference reflection (survey + plan, the two async sessions, due Mon Nov 23, no dates in the brief); M17 = Book Milestone 11 (Sun Dec 6) with the old lock's package, cold run and gates. Chain M1–M17; carry-forward record exempts M12–M16; weights unchanged. ⚠ For Davi: Brightspace M11–M17, the Qualtrics survey, the poster folder for M13, and the announcement.
+**Version:** 8.0 — D92, the dress rehearsal dropped (2026-11-09, DECISIONS.md D92): practice presentations at the printed poster move to Mon Nov 16 (nb13, Monday frame); Fri Nov 13 is a studio work session on M12, M13 and M14; M12 and M13 move to Sun Nov 15 with M14; the dress-rehearsal material is retired in place (protocol bannered, nb13 optional depth).
+(7.9 — D91, the conference block rebuilt on QM 47400's post-lock sequence (2026-10-26, DECISIONS.md D91): M11 final poster = the print file (Sun Nov 8, terminal); M12 presentation planning (Wed Nov 11) with the Round 02 confirmation; M13 peer review (Thu Nov 12; questions asked at the Fri Nov 13 practice presentations); M14 LinkedIn invitation (Sun Nov 15, completion); M15 Expo presentation confirmation (Tue Nov 17, photo, completion; live score at the Expo); M16 conference reflection (survey + plan, the two async sessions, due Mon Nov 23, no dates in the brief); M17 = Book Milestone 11 (Sun Dec 6) with the old lock's package, cold run and gates. Chain M1–M17; carry-forward record exempts M12–M16; weights unchanged. ⚠ For Davi: Brightspace M11–M17, the Qualtrics survey, the poster folder for M13, and the announcement.)
 (7.8 — D83, Further Research Routes (2026-09-25, DECISIONS.md D83): six book-only chapters 41–46 (natural experiments, survey experiments, audit studies, text as data, qualitative inquiry, evidence synthesis) after Studio 12; Tier-B sections in ten existing chapters (IYT untouched except ch12 step 4's pointer); appendix C field guide (IV, synthetic control, staggered DiD, ethnography, QCA, networks, Bayesian); book scope widened to empirical research with precise, checkable answers; live course byte-identical (numbering, IYT 35, decks, schedules, briefs). ⚠ Owed: full Codex re-review of the content (r1–r4) after the Codex quota resets 2026-09-30 (briefs ready in `_adm/codex_collab/2026-09-25_edrai-further-routes/codex/`); the pre-existing ch21 misconception pin was re-pinned after review (the edit was a benign cross-reference swap).
 (7.7 — D82, the carry-forward record opens every milestone from M4 (2026-09-25, DECISIONS.md D82): generated **Start here** block at the top of every milestone PDF and brief from M4 (says THAT the numbered requests and the action plan's steps come first, never WHAT they ask); ✚ on M4–M16; new rubric row *Carry-forward: your action plan's steps (10)* with the other rows rescaled proportionally to 90, plus a *What this rubric scores* book-check map; book table relabelled *The book's own checks* in course PDFs; workbooks 4–12 open with a review-response table; Brightspace milestone HTML now generated from the briefs; M1–M3 rubrics untouched. ⚠ For Davi: repost M5–M16 instructions/PDFs on Brightspace and send `_announcements/2026-09-25_carry_forward_record.md`.
 (7.6 — D81, the permission blocking gate is retired and the determination becomes

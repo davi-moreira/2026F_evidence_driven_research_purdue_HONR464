@@ -180,8 +180,9 @@ Two adopted QM474 sentences were verified against `planning/MEETING_SCHEDULE.csv
 before being kept, not assumed: the class immediately after the Expo is genuinely
 cancelled (HONR meets Mon Nov 16, skips Wed Nov 18, resumes asynchronously Fri
 Nov 20), and the printed posters are genuinely distributed in a dedicated
-preparation class (meeting 34, Fri 2026-11-13, "the printed poster arrives:
-rehearse on the real thing"). One adopted sentence is a forward promise: "A
+preparation class (meeting 35, Mon 2026-11-16, the practice presentations at the
+printed poster; D92 moved them from meeting 34, Fri 2026-11-13, which became
+studio work time on M12–M14). One adopted sentence is a forward promise: "A
 poster template and assessment rubric will be shared" — **both now exist
 (D87, 2026-10-21)**: the template `project/poster/honr464_poster_template.pptx`
 (34 × 22.5 in, adapted from QM 47400's) and the poster rubric
@@ -652,8 +653,9 @@ revision window** — the deadline governs: **M11** final poster, the print file
 (Sun Nov 8, 11:59 PM), and the live **Expo presentation** (Tue Nov 17, confirmed
 at M15). The completion-graded M14 and M15 have no revision window either. Every
 other milestone is worked at its Friday studio and due the Sunday after, 11:59 PM
-(D55), except the conference block, whose deadlines follow the Expo (D91): M12
-Wed Nov 11, M13 Thu Nov 12, M14 Sun Nov 15, M15 Tue Nov 17, M16 Mon Nov 23.
+(D55), except the conference block, whose deadlines follow the Expo (D91): M12,
+M13 and M14 all Sun Nov 15 (D92; D91 had M12 Wed Nov 11 and M13 Thu Nov 12), M15
+Tue Nov 17, M16 Mon Nov 23.
 
 **Revision and lateness do not reach the completion contracts.** Participation,
 IYT Practice and Lecture Notebooks have no revision window and no per-day

@@ -37,6 +37,10 @@
 # Nov 15); M15 Expo presentation confirmation (Tue Nov 17); M16 conference
 # reflection (the two asynchronous sessions after the Expo); M17 Book Milestone 11. The
 # chain is M1-M17 again (D54 had closed it at M16).
+# v6.1 (2026-11-09, D92): the Mon Nov 16 dress rehearsal is dropped (retired in
+# place); the practice presentations move from Fri Nov 13 to Mon Nov 16; Fri
+# Nov 13 becomes a studio work session on M12, M13 and M14; M12 and M13 move to
+# Sun Nov 15, 11:59 PM, the same deadline as M14.
 # v5 (2026-08-22, D50): THE CONFERENCE BLOCK — Studios 1-10 on Weeks 1-10,
 # Weeks 11-14 are the conference block (poster production, peer review, the
 # lock, presentation prep, the Expo, async reflection), and Studios 11-12 run
@@ -98,8 +102,8 @@ calendar:
     urc_expo: "2026-11-17"          # Tuesday — REQUIRED poster presentation
     poster_deadline: "2026-11-08"   # M11 final poster = the print file, Sun 11:59 PM (terminal; D91);
                                     # shared print run with QM 47400, which locks the same night
-    practice_presentations: "2026-11-13"  # Friday class: every student presents the printed poster as a
-                                          # practice run; classmates ask the questions from their M13 review (D91).
+    practice_presentations: "2026-11-16"  # Monday class (D92; D91 had Fri Nov 13): every student presents the printed
+                                          # poster as a practice run; classmates ask the questions from their M13 review.
                                           # The M12 and M13 briefs mention it WITHOUT this date.
     reflection_due: "2026-11-23"    # M16 conference reflection, worked in the two asynchronous sessions after the
                                     # Expo (Fri Nov 20 survey, Mon Nov 23 plan); the brief carries no dates (D91)
@@ -287,7 +291,7 @@ weeks:
   # print file, due Sunday Nov 8.
   - {week: 11, notebook: "nb11", lectures: 2, topic: "The final poster (the print file is due Sun Nov 8)", milestone: "M11"}
   - {week: 12, notebook: "nb12", lectures: 2, topic: "Presentation preparation: pitches, peer review, the practice presentation, the invitation", milestone: "M12", also_due: ["M13", "M14"]}
-  - {week: 13, notebook: "nb13", lectures: 1, topic: "The public test: dress rehearsal and the Expo (Tue Nov 17)", milestone: "M15"}
+  - {week: 13, notebook: "nb13", lectures: 1, topic: "The public test: practice presentations and the Expo (Tue Nov 17)", milestone: "M15"}
   - {week: 14, notebook: "nb14", lectures: 0, topic: "Async reflection: the conference, the audience, and the plan for the research", milestone: "M16"}   # async module; M16 spans Fri Nov 20 (Week 13) and Mon Nov 23
   # Weeks 15-16: the post-conference studios, standard MW-lessons/Friday-milestone frame.
   - {week: 15, notebook: "nb15", lectures: 2, topic: "Studio 11 — Reproduce and package", milestone: "M17"}
@@ -309,8 +313,8 @@ milestones:
   # post-lock sequence: pitches, peer review, invitation, proof of presentation,
   # then the reflection) and carry no carry-forward record.
   M11: {title: "Final poster",                                     due: "2026-11-08", kind: "terminal", note: "Sunday 11:59 PM; the print file, graded with the poster rubric; shared print run with QM 47400 (D91)"}
-  M12: {title: "Presentation planning: audience, pitches, and questions", due: "2026-11-11", kind: "studio", note: "Wednesday 11:59 PM; QM 47400's M11 plus the boundary sentence; carries the Round 02 mentor-meeting confirmation"}
-  M13: {title: "Peer review",                                      due: "2026-11-12", kind: "studio",   note: "Thursday 11:59 PM; constructive, tangible feedback and questions for every other poster; the questions are asked at the Friday practice presentations"}
+  M12: {title: "Presentation planning: audience, pitches, and questions", due: "2026-11-15", kind: "studio", note: "Sunday 11:59 PM (D92; D91 had Wed Nov 11); QM 47400's M11 plus the boundary sentence; carries the Round 02 mentor-meeting confirmation"}
+  M13: {title: "Peer review",                                      due: "2026-11-15", kind: "studio",   note: "Sunday 11:59 PM (D92; D91 had Thu Nov 12); constructive, tangible feedback and questions for every other poster; the questions are asked at the Monday practice presentations"}
   M14: {title: "LinkedIn invitation",                              due: "2026-11-15", kind: "studio",   note: "Sunday 11:59 PM; completion"}
   M15: {title: "Expo presentation confirmation",                   due: "2026-11-17", kind: "event",    note: "Tuesday 11:59 PM; photo in front of the poster; completion. The live presentation is scored at the Expo"}
   M16: {title: "Conference reflection: the audience and the plan for the research", due: "2026-11-23", kind: "async", note: "worked in the two asynchronous sessions after the Expo (survey, then the plan); the brief carries no dates"}
@@ -343,7 +347,7 @@ mentor_meetings:
     R2:
       window: {from: "2026-11-02", to: "2026-11-07"}
       requested_at: "M8"      # due 2026-10-18, the same day as QM 47400's M07
-      confirmed_at: "M12"     # due 2026-11-11 (D91); QM 47400 confirms at its M13, 2026-11-15
+      confirmed_at: "M12"     # due 2026-11-15 (D92; D91 had 2026-11-11); QM 47400 confirms at its M13, 2026-11-15
       focus: "the claim the evidence carries, the poster, and the questions it will draw"
 
 # The cumulative Research Project Dossier (every milestone updates it).

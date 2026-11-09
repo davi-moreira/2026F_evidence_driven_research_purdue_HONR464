@@ -45,7 +45,7 @@ this plan to that session; the course schedule names the day.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, November 11, 11:59 PM.**
+Due: **Sunday, November 15, 11:59 PM.**
 
 | # | File | Description |
 |---|---|---|

@@ -53,7 +53,7 @@ score is never entered twice, and neither score evaluates your own poster.
 
 ## What to Submit
 
-Due: **Thursday, November 12, 11:59 PM.**
+Due: **Sunday, November 15, 11:59 PM.**
 
 | # | Submission | Description |
 |---|---|---|

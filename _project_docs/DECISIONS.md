@@ -5658,3 +5658,41 @@ Changed: `scripts/schedule_data/part3.py` (M27–M31), nb10 and nb11 Lecture 2,
 `PROJECT_MILESTONES.md`, `MILESTONE_PRESENTATION_MAP.md`, the implementation guide,
 the poster production checklist, storyboard protocol and Poster Critic role, the
 schedule page and both Word documents.
+
+## D92 — The dress rehearsal is dropped: practice presentations move to Mon Nov 16, Fri Nov 13 becomes studio work time, and M12/M13 move to Sun Nov 15 (2026-11-09)
+
+**Ruling (Davi, 2026-11-09).** The Mon Nov 16 dress rehearsal (meeting 35, nb13) is
+dropped. The **practice presentations at the printed poster** move from Fri Nov 13
+(meeting 34) to **Mon Nov 16 (meeting 35)**: each student presents the printed board
+with the M12 pitches while classmates ask the questions from their M13 peer reviews,
+then routes the questions asked (claims / communication / noise) and sets the capture
+line for the Expo. **Fri Nov 13 becomes a studio work session on M12, M13 and M14**
+(standard 5 / 40 / 5 frame). So that Friday is a real chance to work on all three,
+**M12 (was Wed Nov 11) and M13 (was Thu Nov 12) move to Sun Nov 15, 11:59 PM**, the
+same deadline as M14 (Davi chose this over keeping the dates).
+
+**Consequences.**
+- `course_config.yaml`: M12/M13 `due: 2026-11-15`; `events.practice_presentations:
+  2026-11-16`; Week 13 topic "practice presentations and the Expo".
+- `scripts/validate_milestones.py`: anchors M12/M13 → Nov 15; the unique-due-date rule
+  now exempts the trio M12/M13/M14 (`SHARED_DUE`).
+- `scripts/schedule_data/part4.py`: meetings 34 and 35 rewritten, 32 and 33 re-dated;
+  Monday Nov 16 keeps the Monday 10 / 21 / 12 / 7 frame (lab meeting stays).
+- nb13 retitled "Public Test: Practice Presentations and the Expo"; its required path
+  is the practice presentations. **DELETE NOTHING (the sixth time):** the dress-rehearsal
+  material (dress rotation, stale-run recheck on the locked lapop board, the three
+  dispositions, the colleague rehearsal record) moves below the ⏸ as optional depth;
+  `project/conference/dress_rehearsal_protocol.md` is kept behind a retirement banner.
+- M12 and M13 briefs: only their Due lines change (the bodies already said "in class"
+  without a date). Both PDFs regenerated.
+- Schedule, material page, Brightspace kit, gradebook spec, protocols, planning docs and
+  both Word documents regenerated or patched.
+
+**Outside the repository (Brightspace, 2026-11-09).** Done: the M12 assignment's due
+and end dates moved to Sun Nov 15, 11:59 PM (the calendar follows); the two scheduled
+"Important Dates" announcements were corrected (Nov 9, which also gained a one-line
+schedule-change notice, and Nov 16), and both stay scheduled for 10:00 AM; the Nov 30
+and Dec 7 ones carried nothing affected. M13's assignment, date included, is owned by
+the parallel M13-form session. **Owed by Davi:** replace the course file
+`milestone_12_presentation_planning.pdf` with the regenerated PDF (only its Due line
+changed); the browser could not upload a local file.

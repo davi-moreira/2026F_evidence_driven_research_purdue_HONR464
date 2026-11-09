@@ -1,5 +1,12 @@
 # Dress Rehearsal Protocol — M35 (Mon Nov 16)
 
+> ⛔ **Retired for this edition, kept for a future one (D92, 2026-11-09).** The
+> Mon Nov 16 dress rehearsal was dropped. That meeting now runs the **practice
+> presentations at the printed poster** (moved from Fri Nov 13, which became
+> studio work time on M12, M13 and M14). The visitor role card and the capture
+> plan below carry over to the practice presentations; nothing else here is run
+> or collected. See `project/conference/hard_questions_protocol.md`.
+
 *The full URC simulation the day before the real thing. Prepares the Expo
 presentation and
 [course milestone M15 — Expo Presentation Confirmation](../../_research_project/2026Fall/milestone_15_expo_presentation.md):

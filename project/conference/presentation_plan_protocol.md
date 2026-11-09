@@ -4,7 +4,7 @@
 Governs the pitch layers of
 [course milestone M12 — Presentation Planning](../../_research_project/2026Fall/milestone_12_presentation_planning.md).
 Scripted in class M32; the scripts and the poster-walk map join your M12
-presentation plan, due Wednesday, November 11, 11:59 PM, and get their live
+presentation plan, due Sunday, November 15, 11:59 PM (D92), and get their live
 test when you present your printed poster to the room as a practice run.*
 
 ## Purpose
@@ -90,8 +90,8 @@ outrun it live.
 
 Homework: draft the 90-second and 2-minute pitches. All three scripts and the
 poster-walk map join the rest of your M12 presentation plan (the audience
-analysis and Wednesday's question strategy), due Wednesday, November 11,
-11:59 PM.
+analysis and Wednesday's question strategy), due Sunday, November 15,
+11:59 PM (D92); Friday's studio is work time on it.
 
 ## Roles
 

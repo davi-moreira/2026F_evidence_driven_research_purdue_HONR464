@@ -194,7 +194,7 @@ D66 moved off a holiday weekend. Due dates are fixed in
 M5 Sun Sep 27 · M6 Sun Oct 4 · **M7 Tue Oct 13 (October Break)** ·
 M8 Sun Oct 18 · M9 Sun Oct 25 · M10 Sun Nov 1 ·
 **M11 Sun Nov 8, 11:59 PM (the final poster = the print file; terminal)** ·
-**M12 Wed Nov 11** · **M13 Thu Nov 12** · M14 Sun Nov 15 ·
+**M12, M13, M14 Sun Nov 15 (D92)** ·
 **M15 Tue Nov 17 (Expo day)** · **M16 Mon Nov 23 (async)** ·
 M17 Sun Dec 6 (the final milestone) |
 
@@ -413,11 +413,13 @@ miss the print deadline and there is no poster to present.
 Weeks 11–13 (`nb11`–`nb13`) finish the poster and rehearse the presentation: poster
 production labs every session from Wed Oct 28 to Fri Nov 6 (D91 amended; nothing
 is collected in class), the M12 pitches and question strategy,
-the M13 peer review, the **practice presentations** at the Week-12 Friday studio
-(Fri Nov 13: each student presents the printed poster with the M12 pitches, and
-classmates ask the questions from their M13 reviews), and the Week-13 dress
-rehearsal. `project/conference/` holds the presentation, hard-questions,
-uncertainty-limitations, and dress-rehearsal protocols; its coded-tally
+the M13 peer review, studio work time on M12–M14 at the Week-12 Friday studio
+(Fri Nov 13), and the **practice presentations** on the Week-13 Monday (Mon Nov
+16, D92: each student presents the printed poster with the M12 pitches, and
+classmates ask the questions from their M13 reviews; they replaced the dress
+rehearsal). `project/conference/` holds the presentation, hard-questions, and
+uncertainty-limitations protocols, and the dress-rehearsal protocol retired in
+place by D92; its coded-tally
 reflection protocol was retired by D91 and is kept as the record.
 
 ---

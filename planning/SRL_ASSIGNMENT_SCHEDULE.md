@@ -100,7 +100,7 @@ the instructor.
 | **18** | 30 | Wed Nov 4 | nb11 · Sun Nov 8, 2026 | 11 | Conference block: poster production and peer review | Poster production lab: work my M10 feedback into the board, and read your own poster for the wrong inference | Wednesday · applied AI laboratory |
 | **19** | 32 | Mon Nov 9 | nb12 · Sun Nov 15, 2026 | 12 | Conference block: presentation preparation | Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch | Monday · guided investigation |
 | **20** | 33 | Wed Nov 11 | nb12 · Sun Nov 15, 2026 | 12 | Conference block: presentation preparation | Questions you can predict, and the answer that concedes the smaller true claim | Wednesday · applied AI laboratory |
-| **21** | 35 | Mon Nov 16 | nb13 · Sun Nov 22, 2026 | 13 | Conference block: the public test (dress rehearsal and the Expo) | Dress rehearsal: the questions you can predict, and the numbers that moved since the print file | Monday · guided investigation |
+| **21** | 35 | Mon Nov 16 | nb13 · Sun Nov 22, 2026 | 13 | Conference block: the public test (practice presentations and the Expo) | Practice presentations at the printed poster: your M12 pitches, your classmates' M13 questions, and the capture line for tomorrow | Monday · guided investigation |
 | **22** | 38 | Mon Nov 30 | nb15 · Sun Dec 6, 2026 | 15 | Studio 11: Reproduce and package | The cold run: does your number come back without you in the room? | Monday · guided investigation |
 | **23** | 39 | Wed Dec 2 | nb15 · Sun Dec 6, 2026 | 15 | Studio 11: Reproduce and package | Package it for a stranger — then hand it to one: the capsule, its five sins, and the live cold run | Wednesday · applied AI laboratory |
 | **24** | 41 | Mon Dec 7 | nb16 · Fri Dec 11, 2026 | 16 | Studio 12: Special topic: agentic AI, release, and the next cycle | Direct the closing review: wire the reviewer roles, then price their agreement | Monday · guided investigation |
@@ -192,9 +192,9 @@ Kept in full, and re-owned. This section is the one part of the page D75 did not
 
 > Retrieval and challenge: a spoken drill from memory on the compression rule — one thing a shorter pitch may drop, one thing it may not. Then the instructor opens the delivery round by naming the one rule of the hour: every questioner arrives with a question grounded in something visible on the board or in a ledger row, and no question is answered with a concession that is not true.
 
-**Slot 21** · Mon Nov 16 · Dress rehearsal: the questions you can predict, and the numbers that moved since the print file
+**Slot 21** · Mon Nov 16 · Practice presentations at the printed poster: your M12 pitches, your classmates' M13 questions, and the capture line for tomorrow
 
-> Puzzle: the poster went to print at the M11 deadline. Name the one thing that can still be wrong on that board, and the only repair still available between now and the moment a stranger reads it. The room should arrive at this: the print file froze the board, not your notebook — and when a printed number no longer reproduces, the only remaining repair is a spoken one.
+> Puzzle: your board is printed, and tomorrow strangers read it. Before anyone presents, write down the one question you are least ready for, then listen for whether a classmate asks it. The room should arrive at this: a prepared questioner finds what rehearsing alone cannot, and every question is evidence about the board or about the claim.
 
 **Slot 22** · Mon Nov 30 · The cold run: does your number come back without you in the room?
 

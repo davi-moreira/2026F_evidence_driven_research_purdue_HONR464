@@ -92,8 +92,8 @@ Sunday after, 11:59 PM.
 | 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M9 · Sun Oct 25 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
 | 10 | S10 Adapt and defend (`nb10`) | 2 | M10 · Sun Nov 1 | What does my venue require, and what artifact satisfies it without inflating the claim? |
 | 11 | Conference block: the final poster (`nb11`) | 2 | M11 · Sun Nov 8, 11:59 PM (terminal, the print file; D91) | Is the poster traceable to my evidence, and does it say no more than the evidence allows? |
-| 12 | Conference block: presentation preparation, peer review, practice presentations (`nb12`) | 2 | M12 · Wed Nov 11; M13 · Thu Nov 12; M14 · Sun Nov 15 | Can I say this work in thirty seconds, ninety, and two minutes — and take the hard question? |
-| 13 | The public test: dress rehearsal + the Expo (`nb13`) | 1 | M15 · Tue Nov 17 (Expo photo) | What does a room of strangers ask that I had not prepared for? |
+| 12 | Conference block: presentation preparation, peer review, studio work time (`nb12`) | 2 | M12, M13, M14 · all Sun Nov 15 (D92) | Can I say this work in thirty seconds, ninety, and two minutes — and take the hard question? |
+| 13 | The public test: practice presentations + the Expo (`nb13`; D92) | 1 | M15 · Tue Nov 17 (Expo photo) | What does a room of strangers ask that I had not prepared for? |
 | 14 | Async reflection: the conference, the audience, and the plan (`nb14`) | 0 | M16 · Mon Nov 23 (async; survey Fri Nov 20 + plan Mon Nov 23) | What did the audience teach me, and what work remains to make the claim stronger? |
 | 15 | S11 Reproduce and package (`nb15`) | 2 | M17 · Sun Dec 6 (the final milestone) | Does my work reproduce from a clean package in a stranger's hands? |
 | 16 | S12 Release and direct the next cycle (`nb16`) | 2 | — (Fri Dec 11 is the course-closing reflection, under participation) | Do I release or withhold pending a named repair, and what should the next study ask? |

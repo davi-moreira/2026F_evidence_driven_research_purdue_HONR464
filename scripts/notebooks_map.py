@@ -32,7 +32,7 @@ NOTEBOOKS = {
     10: ("nb10_attack_the_analysis", "Studio 10: Adapt and defend — the venue contract and the artifact"),
     11: ("nb11_poster_production_review", "Poster production lab"),
     12: ("nb12_presentation_preparation", "Presentation preparation: the pitch, the hard questions, the invitation"),
-    13: ("nb13_conference", "The public test: dress rehearsal and the Expo"),
+    13: ("nb13_conference", "The public test: practice presentations and the Expo"),
     14: ("nb14_replication_redteam", "Async module: reflection on what the public test returned"),
     15: ("nb15_reproduce_and_package", "Studio 11: Reproduce and package"),
     16: ("nb16_release_next_cycle", "Studio 12: Release and direct the next cycle"),

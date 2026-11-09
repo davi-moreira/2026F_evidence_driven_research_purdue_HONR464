@@ -10,10 +10,11 @@ planning/MEETING_SCHEDULE.csv and the calendar backbone:
   * every milestone ID appears in >= 1 meeting's milestone_developed column
   * the fixed anchors hold (D91): M6 draft abstract Oct 4, M7 conference
     application Oct 13, M11 final poster = the print file Nov 8 (Sunday,
-    terminal), M12 presentation planning Nov 11, M13 peer review Nov 12, M14
-    LinkedIn invitation Nov 15, M15 Expo presentation confirmation Nov 17, M16
+    terminal), M12 presentation planning, M13 peer review and M14 LinkedIn
+    invitation all Nov 15 (D92), M15 Expo presentation confirmation Nov 17, M16
     conference reflection Nov 23, M17 package + cold run Dec 6
-  * no two milestones share a due date
+  * no two milestones share a due date, except the D92 trio M12/M13/M14
+    (all due Sun Nov 15)
 
 Usage: python3 scripts/validate_milestones.py
 """
@@ -99,8 +100,8 @@ def main() -> None:
         6:  [date(2026, 10, 4)],    # URC draft abstract (Sunday, D54)
         7:  [date(2026, 10, 13)],   # URC conference application (D66: Tue, after October Break)
         11: [date(2026, 11, 8)],    # final poster = the print file (terminal, Sunday; D91)
-        12: [date(2026, 11, 11)],   # presentation planning (Wednesday 11:59 PM)
-        13: [date(2026, 11, 12)],   # peer review (Thursday) — questions asked Fri Nov 13
+        12: [date(2026, 11, 15)],   # presentation planning (Sunday; D92, was Wed Nov 11)
+        13: [date(2026, 11, 15)],   # peer review (Sunday; D92, was Thu Nov 12) — questions asked Mon Nov 16
         14: [date(2026, 11, 15)],   # LinkedIn invitation (Sunday)
         15: [date(2026, 11, 17)],   # Expo presentation confirmation (Tuesday, the Expo)
         16: [date(2026, 11, 23)],   # conference reflection (the second async session)
@@ -113,10 +114,11 @@ def main() -> None:
         errs.append("M15 must reference the URC Expo (Tue Nov 17) as a graded component")
 
     # --- unique due dates --------------------------------------------------
+    SHARED_DUE = {12, 13, 14}   # D92: the three week-12 milestones close together
     flat = [(mid, d) for mid, ds in due_dates.items() for d in ds]
     seen: dict[date, int] = {}
     for mid, d in flat:
-        if d in seen and seen[d] != mid:
+        if d in seen and seen[d] != mid and {seen[d], mid} - SHARED_DUE:
             errs.append(f"M{seen[d]} and M{mid} share due date {d}")
         seen[d] = mid
 
@@ -137,7 +139,7 @@ def main() -> None:
         sys.exit(1)
     print("✓ milestone system consistent — 17 milestones (M1–M17), "
           "dev→present→submit ordering holds, anchors fixed "
-          "(Oct 4, Oct 13, Nov 8, Nov 11, Nov 12, Nov 15, Nov 17, Nov 23, Dec 6)")
+          "(Oct 4, Oct 13, Nov 8, Nov 15 ×3, Nov 17, Nov 23, Dec 6)")
 
 
 if __name__ == "__main__":
