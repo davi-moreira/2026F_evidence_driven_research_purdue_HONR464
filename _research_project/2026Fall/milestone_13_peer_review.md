@@ -31,16 +31,17 @@ checked it. Milestone weights live in
 rubrics live one page per milestone, like this one.
 
 This is the milestone whose artifact is about **someone else's research**. You
-read every other poster in the course and write two things for each one:
-**constructive, tangible feedback** its author can act on, and **questions you
-will ask its author**. The posters are already printed, so your feedback is not a
-list of edits to the print file. It helps the author present the work, defend it,
-and improve the research after the Expo.
+read every other poster in the course and review each one in the **M13 Poster
+Peer Review form**: you **rate** the poster on a scale of 1 to 5, write
+**constructive, tangible feedback** its author can act on, and write the
+**questions you will ask its author**. The posters are already printed, so your
+feedback is not a list of edits to the print file. It helps the author present
+the work, defend it, and improve the research after the Expo.
 
 **You will ask your questions in person.** In class, each author presents their
 poster to the room as a practice run before the Expo, and you ask the questions
-you prepared here. Bring this review to that session, so the practice feels like
-the real thing: a reader who has studied the board and wants to understand it.
+you prepared here. Bring them to that session, so the practice feels like the
+real thing: a reader who has studied the board and wants to understand it.
 
 This is individual work, even if your own project is a group project. The **M13
 milestone score** is one of the seventeen scores averaged inside **Milestone
@@ -50,29 +51,35 @@ score is never entered twice, and neither score evaluates your own poster.
 
 ---
 
-## What to Submit on Brightspace
+## What to Submit
 
 Due: **Thursday, November 12, 11:59 PM.**
 
-| # | File | Description |
+| # | Submission | Description |
 |---|---|---|
-| 1 | **`lastname_m13.pdf`** | One section for **every other poster** in the course, each opening with the poster's title and author, then your constructive feedback (Component 2) and your questions for the author (Component 3). Close the file with this milestone's AI Research Ledger rows (Component 4). |
+| 1 | **The M13 Poster Peer Review form**, once for **every other poster** | One form response per poster other than your own. Each response names the poster, rates it (Component 2), and carries your constructive feedback (Component 3), your questions for the author (Component 4), and your AI Research Ledger rows for that review (Component 5). |
+
+**The link to the form is in the M13 assignment description on Brightspace**,
+beside the link to the shared folder of posters. There is no file to upload: the
+form responses are your submission, and their timestamps are what the deadline
+reads.
 
 ---
 
 ## How It Works
 
-1. **Open the shared folder.** I share a folder with every final poster as a PDF.
-   The link comes on Brightspace with this assignment. Read each poster other than
-   your own.
+1. **Open the shared folder.** I share a folder with every final poster as a PDF;
+   its link is in the M13 assignment description on Brightspace. Read each poster
+   other than your own.
 2. **Read each poster as a visitor would, then as a reviewer.** First give it the
    ninety-second read a stranger gives a board at the Expo, and note what you
    concluded. Then read it slowly: the question, the design, the result with its
    uncertainty, the claim, and the limitations.
-3. **Write your feedback and your questions** for that poster, following the
-   standards below.
-4. **Bring the file to the practice session** and ask your questions when the
-   author presents.
+3. **Open the form and submit one response for that poster**, following the
+   standards below. Then start a new response for the next poster.
+4. **Save your questions.** The form shows a summary of your answers when you
+   submit. Save or copy it, bring your questions to the practice session, and ask
+   them when the author presents.
 
 ---
 
