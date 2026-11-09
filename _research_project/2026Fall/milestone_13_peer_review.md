@@ -109,13 +109,28 @@ the author a chance to practise the defense they will need on November 17.
 ### 1. Cover every other poster
 
 Review **every other poster** in the course, with none skipped. Give each one its
-own section, opening with the poster's title and its author. If you notice a
-problem you also have on your own poster, that is useful to you, and it changes
+own form response, opening with your name and the poster's author. If you notice
+a problem you also have on your own poster, that is useful to you, and it changes
 nothing about what you write here.
 
-### 2. Constructive, tangible feedback
+### 2. Rate the poster
 
-For each poster, give **at least three feedback items**. Each item:
+The form asks for an **overall rating** of the poster's clarity, novelty, and
+impact, then a rating of fifteen questions, each on a scale of **1 (needs
+significant improvement) to 5 (excellent)**: the title, the background, the
+question and whom it speaks to, its significance, the data and methods, the fit
+of the design, the flow, the figures, the readability, the results, the
+uncertainty beside the main result, the interpretation, the conclusion, the
+limitations and next steps, and how well the poster invites discussion. Judge what
+the poster shows, not your own project. Your ratings are feedback for the author;
+they are not part of the author's grade, so rate honestly and let your written
+feedback explain the low ones.
+
+### 3. Constructive, tangible feedback
+
+For each poster, give **at least three feedback items**. The form has a box for
+each of the first two (what works; the evidence or the claim) and a third box for
+your other suggestions. Each item:
 
 - **points to a specific place on the poster** (a panel, a figure, a number, a
   sentence);
@@ -129,10 +144,11 @@ claim**: whether the result supports the headline as worded, whether the
 uncertainty sits next to the claim, or what the design can and cannot establish.
 Write only feedback the author can use; leave out general impressions.
 
-### 3. Questions for the author
+### 4. Questions for the author
 
 For each poster, write **at least three questions** you will ask its author at
-the practice session:
+the practice session, one per question box in the form, and mark which of them
+probe the evidence or the boundary of the claim:
 
 - each question is **specific to that poster**, so it could not be asked of any
   other;
@@ -140,7 +156,7 @@ the practice session:
 - at least one **probes the evidence or the boundary of the claim**, the kind of
   question a careful visitor will ask at the Expo.
 
-### 4. AI Research Ledger rows
+### 5. AI Research Ledger rows
 
 **This review is yours.** Do not upload a classmate's poster to an AI tool: it is
 their unpublished work, and it carries their name. You may use AI only to tighten
@@ -148,7 +164,8 @@ the wording of feedback and questions you already wrote, and each such use gets 
 row in your **AI Research Ledger** (the eight fixed fields: task delegated · tool
 used · prompt · output summary · decision · verification method · remaining
 concern · responsible researcher), naming how you checked that the meaning did
-not change. "No AI used" is a legitimate entry when it is true.
+not change. Write the rows in the last box of each form response. "No AI used" is
+a legitimate entry when it is true.
 
 ---
 
@@ -156,15 +173,16 @@ not change. "No AI used" is a legitimate entry when it is true.
 
 | Element | Standard |
 |---|---|
-| **Coverage** | Every other poster reviewed in its own section; none skipped |
+| **Coverage** | One form response for every other poster; none skipped |
+| **Ratings** | The overall rating and all fifteen questions rated in every response |
 | **Feedback** | At least three items per poster; each points to a place, says what you noticed, and offers a concrete change or next step |
 | **What works** | At least one item per poster names something to keep, specifically |
 | **Evidence and claim** | At least one item per poster concerns the evidence or the claim |
 | **Questions** | At least three per poster, specific, answerable at the board, at least one probing the evidence or the boundary |
 | **Tone** | Constructive throughout: the target is the work, never the person |
-| **Your own words** | No classmate's poster uploaded to an AI tool; any AI-assisted wording logged in the ledger |
-| **Filename** | `lastname_m13.pdf` |
-| **Location** | Brightspace → Assignments → M13 |
+| **Your own words** | No classmate's poster uploaded to an AI tool; any AI-assisted wording logged in the ledger, in the form |
+| **Submission** | The M13 Poster Peer Review form; no file to upload |
+| **Location** | The form link in the M13 assignment description (Brightspace → Assignments → M13) |
 
 ---
 
@@ -176,10 +194,10 @@ the questions is scored once, by the Peer Review rubric below.
 
 | Criterion | Points |
 |---|---:|
-| Submitted by the deadline as one readable PDF | 20 |
-| Every other poster covered, each in its own section | 30 |
-| Every section meets the minimums: three feedback items (one on what works, one on the evidence or claim) and three questions | 35 |
-| AI Research Ledger rows present, or "No AI used" recorded | 15 |
+| Submitted by the deadline through the form | 20 |
+| Every other poster covered, one response each, with every rating given | 30 |
+| Every response meets the minimums: three feedback items (one on what works, one on the evidence or claim) and three questions | 35 |
+| AI Research Ledger rows present in every response, or "No AI used" recorded | 15 |
 | **Total** | **100** |
 
 ## Peer Review rubric (100 points)

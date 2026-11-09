@@ -315,6 +315,16 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
             submit_line,
             "",
         ] + ([] if solo else [POINTER, ""])
+    elif add.get("submit_markdown"):
+        # A milestone submitted through a form rather than a file (M13's peer
+        # review, 2026-11-09) says so in its own words. The form link is never
+        # printed: it lives in the Brightspace assignment description only.
+        head = [
+            "## What to submit",
+            "",
+            add["submit_markdown"].strip(),
+            "",
+        ] + ([] if solo else [POINTER, ""])
     else:
         head = [
             "## What to submit",

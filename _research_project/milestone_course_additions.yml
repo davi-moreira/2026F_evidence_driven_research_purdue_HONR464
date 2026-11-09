@@ -1414,41 +1414,53 @@ milestones:
       constructive, tangible feedback and questions for every other poster, read from the shared folder of print
       files, with the questions asked at the in-class practice presentations.
     schedule_note: feedback and questions for every other poster
+    submit_markdown: |
+      You submit this milestone through the **M13 Poster Peer Review form**, once for
+      every poster other than your own. There is no file to upload. The links to the
+      form and to the shared folder of posters are in the M13 assignment description on
+      Brightspace, which also carries the deadline.
     additions_markdown: |
       ### Your peer review
 
       This is the milestone whose work is about someone else's research. I share a
-      folder with every final poster as a PDF; the link comes with this assignment. You
-      review every other poster and write, for each one, **constructive, tangible
-      feedback** its author can act on, and **questions you will ask its author**. You
-      ask those questions in person: in class, each author presents their poster to the
-      room as a practice run before the Expo. Bring your review to that session.
+      folder with every final poster as a PDF. You review every other poster in the
+      **M13 Poster Peer Review form**, one response per poster: you rate it, write
+      **constructive, tangible feedback** its author can act on, and write the
+      **questions you will ask its author**. You ask those questions in person: in
+      class, each author presents their poster to the room as a practice run before
+      the Expo. The form shows a summary of your answers when you submit; save it and
+      bring your questions to that session.
 
-      ### What goes in your file
+      ### What goes in each form response
 
-      One section for every other poster, opening with its title and author:
-
-      1. **At least three feedback items.** Each points to a specific place on the
+      1. **Your name and the poster's author.** Your own poster is not offered.
+      2. **Your ratings**, from 1 (needs significant improvement) to 5 (excellent): an
+         overall rating of the poster's clarity, novelty, and impact, and fifteen
+         questions from the title to how well the poster invites discussion. Judge what
+         the poster shows, not your own project. The ratings are feedback for the
+         author and are not part of the author's grade.
+      3. **At least three feedback items.** Each points to a specific place on the
          poster, says what you noticed there, and offers a concrete change or next step.
-         At least one names something that works well, so the author knows to keep it,
-         and at least one concerns the evidence or the claim.
-      2. **At least three questions for the author**, each specific to that poster and
+         The form asks first for something that works well, so the author knows to keep
+         it, then for an item on the evidence or the claim, then for your other
+         suggestions.
+      4. **At least three questions for the author**, each specific to that poster and
          answerable at the board, at least one probing the evidence or the boundary of
-         the claim.
-
-      Close the file with your AI Research Ledger rows. This review is yours: never
-      upload a classmate's poster to an AI tool. You may use AI only to tighten the
-      wording of what you already wrote, with a ledger row.
+         the claim. You mark which ones do.
+      5. **Your AI Research Ledger rows** for that review, or "No AI used". This review
+         is yours: never upload a classmate's poster to an AI tool. You may use AI only
+         to tighten the wording of what you already wrote, with a ledger row.
 
       ### How it is graded
 
       Two separate scores. The **milestone score** records that the review is complete
-      and on time: every other poster covered, the minimums met, the ledger present.
-      The **Peer Review** score judges the quality of the feedback and the questions.
-      Neither score evaluates your own poster.
+      and on time: one response for every other poster, every rating given, the
+      minimums met, the ledger present. The **Peer Review** score judges the quality of
+      the feedback and the questions. Neither score evaluates your own poster.
     instructor_notes:
     - 2026-10-26 (Davi, D91) — the peer review moves after the print file: feedback serves the presentation, the defense and the research after the Expo, not the poster. Davi shares the folder of PDFs with all students. The practice-session questions are the point of the questions section.
     - Peer Review component (6%) is scored with the M13 Peer Review rubric in the brief; the M13 milestone score is a separate process score.
+    - 2026-11-09 (Davi) — the review moves into a Qualtrics form adapted from the QM 47400 (MGMT 474) Microsoft Forms poster peer review, one response per poster, with the 1-5 ratings added; no PDF is collected. The form link lives ONLY in the Brightspace assignment description, never in the brief or the PDF. Instrument: surveys/poster_peer_review_survey.md.
   M14:
     schedule_mark: true
     classification: additions

@@ -4,16 +4,17 @@ Week 12 (nb12) — the second week of the D50 **conference block**, rebuilt by
 D91 (2026-10-26). The poster went to print at M11, so the week is spoken
 delivery: Monday builds the audience analysis and the three timed pitches
 (30 s ≤75 words, 90 s ≤200 words, 2 min ≤300 words) for the presentation plan
-(M12); Wednesday delivers them under typed adversarial questioning, M12 is due
-that night, and M13 opens with a shared folder of every final poster PDF; the
-M13 peer review (feedback and questions for every other poster) is due
-Thursday. Friday is the PRACTICE PRESENTATIONS studio: each student presents the
-printed poster with their M12 pitches while classmates ask the questions from
-their M13 reviews, and M14 (the LinkedIn invitation, copied exactly from the
-official Expo program) kicks off, due Sunday.
+(M12); Wednesday delivers them under typed adversarial questioning, and M13
+opens with a shared folder of every final poster PDF. Friday (D92) is a STUDIO
+WORK SESSION on all three week-12 milestones: M12 (the presentation plan), M13
+(the peer review, feedback and questions for every other poster) and M14 (the
+LinkedIn invitation, copied exactly from the official Expo program). D92 moved
+M12 and M13 to the same Sunday as M14, so all three are due Sun Nov 15.
 
-Week 13 (nb13) — the public test: Monday's dress rehearsal (M15 preparation and
-the capture plan, one line per visitor's question), the Expo on **Tuesday,
+Week 13 (nb13) — the public test: Monday's PRACTICE PRESENTATIONS at the printed
+posters (D92; they replaced the dress rehearsal, which is retired in place):
+each student presents with their M12 pitches while classmates ask the questions
+from their M13 reviews, and the capture line for the Expo is set; the Expo on **Tuesday,
 November 17** (required; the M15 photo in front of the poster is due that night,
 and the live presentation is scored at the Expo), no class Wednesday, and Friday
 is **asynchronous**: M16 part 1, the Conference Reflection Survey. Week 14
@@ -38,8 +39,9 @@ peer-defence blocks of Weeks 15 and 16, so the standard frame is never broken to
 make room for them.
 
 Course milestone ids under D91: M11 the final poster, the print file (Sun Nov 8,
-11:59 PM, terminal); M12 presentation planning (Wed Nov 11); M13 peer review
-(Thu Nov 12); M14 the LinkedIn invitation (Sun Nov 15); M15 the Expo
+11:59 PM, terminal); M12 presentation planning, M13 peer review and M14 the
+LinkedIn invitation (all Sun Nov 15, D92; D91 had M12 Wed Nov 11 and M13 Thu
+Nov 12); M15 the Expo
 presentation confirmation (Tue Nov 17); M16 the conference reflection and the
 plan for the research (Mon Nov 23); M17 the reproducible package and the peer
 cold run, Book Milestone 11 (Sun Dec 6) — the last milestone. Week 16 carries
@@ -89,15 +91,15 @@ MEETINGS_P4 = [
         "hands_on_activity": "Write the audience-analysis paragraph, draft and count the thirty-second version against its ceiling, and have a partner hold the claim-evidence table while you deliver it aloud and flag every spoken upgrade.",
         "practice": "📝 nb12 practice: take a two-minute pitch and cut it to seventy-five words twice — once by dropping blocks and once by weakening bounds — and name what the second cut cost.",
         "discussion_prompt": "Which sentence of yours gets stronger every time you shorten it, and what is it actually reaching for?",
-        "project_connection": "M12 opens: the audience-analysis paragraph and the first of the three timed pitches you draft today are the first two components of your presentation plan, due Wednesday at 11:59 PM.",
+        "project_connection": "M12 opens: the audience-analysis paragraph and the first of the three timed pitches you draft today are the first two components of your presentation plan, due Sunday, November 15, at 11:59 PM.",
         "milestone_developed": "M12 — Presentation planning: audience, pitches, and questions, Book Milestone 10 spoken-editions practice (dev; audience analysis + the thirty-second version)",
         "milestone_work_time": "15 min (audience analysis + the counted thirty-second draft)",
         "milestone_presentation_review": "partner delivery with a live upgrade check",
         "student_prep": "M11, your final poster, submitted as the print file; 'Research Pitches' re-read; your claim-evidence table printed, because the partner check needs it on the table.",
         "student_artifact": "The audience-analysis paragraph + the thirty-second pitch at or under 75 counted words + the flagged-upgrade list from the partner round + the ledger row",
         "exit_ticket": "Claim Ticket #32: \"The sentence I keep at every length is [x], and the word I caught myself upgrading is [y].\"",
-        "homework_next_milestone": "Draft the ninety-second and two-minute versions against their ceilings, and count the words rather than estimating them; write the Round 02 mentor-meeting confirmation into the plan. Wednesday delivers the pitches under questioning, and M12 is due that night at 11:59 PM.",
-        "instructor_prep": "Print the timed-pitch templates and the word-count sheets; stage the two-lengths case; have a visible countdown clock; keep the two-lengths puzzle to run yourself from minute 10 and collect the split, and have two or three opening questions ready for the lab meeting's open round; M12 brief staged on Brightspace with the Wednesday 11:59 PM deadline.",
+        "homework_next_milestone": "Draft the ninety-second and two-minute versions against their ceilings, and count the words rather than estimating them; write the Round 02 mentor-meeting confirmation into the plan. Wednesday delivers the pitches under questioning, Friday's studio is work time on M12, M13 and M14, and all three are due Sunday, November 15, at 11:59 PM.",
+        "instructor_prep": "Print the timed-pitch templates and the word-count sheets; stage the two-lengths case; have a visible countdown clock; keep the two-lengths puzzle to run yourself from minute 10 and collect the split, and have two or three opening questions ready for the lab meeting's open round; M12 brief staged on Brightspace with the Sunday, November 15, 11:59 PM deadline (D92).",
         "risks_contingency": "A final poster missed Sunday's print file → that student still runs the full pitch week on the file as it stands, because the presentation plan is graded at M12 and the print deadline at M11. The room treats word ceilings as arbitrary → the formalization settles it: the ceiling is a stand-in for the clock, and the clock is set by the visitor, not by you.",
     },
     # ------------------------------------------------------------------ M33
@@ -123,16 +125,16 @@ MEETINGS_P4 = [
         "hands_on_activity": "Deliver the ninety-second version to a typed panel, take three minutes of questions, produce one honest \"cannot settle\" with its smaller true claim, and build your question-and-discussion strategy from what the room actually asked.",
         "practice": "📝 nb12 practice: for four sample questions, mark each as a bound request or an attack and write the one-sentence answer, including the concession where the honest answer is that the design cannot settle it.",
         "discussion_prompt": "Which question did you most want to answer with a yes, and what would you have given away by giving it?",
-        "project_connection": "M12's core: the question-and-discussion strategy — the questions you expect and the ones you will ask the visitor — is written from what this room actually asked you, and the plan is due tonight. M13 opens at the close of class: the folder of every final poster.",
-        "milestone_developed": "M12 — Presentation planning: audience, pitches, and questions, Book Milestone 10 spoken-editions practice (worked; DUE tonight, Wednesday, November 11, 11:59 PM); M13 — Peer review, Book Milestone 10 peer-criticism practice (opens: the shared folder of every final poster PDF; DUE Thursday, November 12, 11:59 PM)",
+        "project_connection": "M12's core: the question-and-discussion strategy — the questions you expect and the ones you will ask the visitor — is written from what this room actually asked you, and the plan is due Sunday. M13 opens at the close of class: the folder of every final poster.",
+        "milestone_developed": "M12 — Presentation planning: audience, pitches, and questions, Book Milestone 10 spoken-editions practice (worked; DUE Sunday, November 15, 11:59 PM); M13 — Peer review, Book Milestone 10 peer-criticism practice (opens: the shared folder of every final poster PDF; DUE Sunday, November 15, 11:59 PM)",
         "milestone_work_time": "23 min (the delivery rotation + the question strategy drafted from it)",
         "milestone_presentation_review": "typed-panel delivery + prepared second answers on the hardest question",
         "student_prep": "All three timed versions drafted and counted; your Round 02 mentor-meeting confirmation written; the hard-questions protocol read; your claim-evidence table on the table for every round.",
         "student_artifact": "The three counted pitches + the question-and-discussion strategy with three predicted and three audience-directed questions + the ledger row",
         "exit_ticket": "Claim Ticket #33: \"The question my board most invites is [x]; my honest answer stops at [y]; and the concession I must not make is [z].\"",
-        "homework_next_milestone": "Submit M12 tonight by 11:59 PM: the audience analysis, the three counted pitches, the poster-integration outline, the question strategy, and the Round 02 mentor-meeting confirmation. Then open the shared folder and write your M13 peer review for every other poster — at least three tangible feedback items each (one on what works, one on the evidence or the claim) and at least three questions you will ask its author — due Thursday at 11:59 PM. Friday you present at the printed board and ask those questions in person.",
-        "instructor_prep": "Print the five visitor role cards and the question-strategy sheets; set the three-minute questioning clock; hold the concession key for the accuracy lock; run the compression drill yourself and open the rotation, and have two or three opening questions ready for the lab meeting's open round; share the folder of final poster PDFs with the M13 brief at the close of class; confirm the print vendor's Friday return.",
-        "risks_contingency": "The rotation runs long → cut the second prepared answer to two presenters and protect the 38–42 accuracy lock, which is where untrue concessions get caught. A panel questions the person instead of the board → the one rule is restated and the round restarts; a question that is not grounded in the board is not a question, it is an opinion. The folder goes out late → the M13 window shrinks, so it is shared before anyone leaves the room.",
+        "homework_next_milestone": "Finish the M12 plan: the audience analysis, the three counted pitches, the poster-integration outline, the question strategy, and the Round 02 mentor-meeting confirmation. Open the shared folder and start reviewing every other poster in the M13 Poster Peer Review form (linked in the M13 assignment description), one response per poster — the 1–5 ratings, at least three tangible feedback items (one on what works, one on the evidence or the claim) and at least three questions you will ask its author. Friday's studio is work time on M12, M13 and M14; all three are due Sunday, November 15, at 11:59 PM. Monday, November 16, you present at the printed board and ask your M13 questions in person.",
+        "instructor_prep": "Print the five visitor role cards and the question-strategy sheets; set the three-minute questioning clock; hold the concession key for the accuracy lock; run the compression drill yourself and open the rotation, and have two or three opening questions ready for the lab meeting's open round; share the folder of final poster PDFs with the M13 brief at the close of class; confirm the print vendor's return before Monday's practice presentations.",
+        "risks_contingency": "The rotation runs long → cut the second prepared answer to two presenters and protect the 38–42 accuracy lock, which is where untrue concessions get caught. A panel questions the person instead of the board → the one rule is restated and the round restarts; a question that is not grounded in the board is not a question, it is an opinion. The folder goes out late → the M13 window shrinks, so it is shared before anyone leaves the room; Friday's studio still gives everyone class time on the reviews.",
     },
     # ------------------------------------------------------------------ M34
     {
@@ -161,11 +163,11 @@ MEETINGS_P4 = [
         "milestone_developed": "M12 — Presentation planning: audience, pitches, and questions, Book Milestone 10 spoken-editions practice (submitted Wednesday; delivered today at the practice presentations); M13 — Peer review, Book Milestone 10 peer-criticism practice (submitted Thursday; its questions asked in person today); M14 — LinkedIn invitation, Book Milestone 10 public-invitation practice (kickoff + worked; DUE Sunday, November 15, 11:59 PM)",
         "milestone_work_time": "40 min (practice presentations at the printed board + the print-scale check + the invitation post)",
         "milestone_presentation_review": "practice presentations at the printed board, questioned from the M13 peer reviews",
-        "student_prep": "M12 and M13 submitted; your pitches rehearsed aloud at least once; your M13 review open, with the questions you will ask each author; the official Expo program entry located before class.",
+        "student_prep": "M12 and M13 submitted; your pitches rehearsed aloud at least once; your saved M13 form summaries open, with the questions you will ask each author; the official Expo program entry located before class.",
         "student_artifact": "Your practice presentation + the questions you were asked, with the ones your plan predicted marked + the print-scale workaround list + the drafted invitation post + the ledger row for any AI-assisted wording",
         "exit_ticket": "Claim Ticket #34: \"The question I had not predicted was [x]; standing at the printed board, the thing I could not read from two metres is [y], and my delivery workaround is [z].\"",
         "homework_next_milestone": "Publish your LinkedIn invitation and submit the screenshot (M14) by Sunday, November 15, at 11:59 PM. Rehearse. Monday is the dress rehearsal, and Tuesday, November 17, is the Expo — required. Bring the printed board Monday.",
-        "instructor_prep": "Collect the printed posters from the vendor and bring them to class; set the presentation order and the per-author clock; confirm every M13 review arrived Thursday night; set out the standing-distance markers for the print-scale check; have the official program entries printed per student; M14 brief staged on Brightspace.",
+        "instructor_prep": "Collect the printed posters from the vendor and bring them to class; set the presentation order and the per-author clock; confirm in Qualtrics that every M13 form response arrived Thursday night; set out the standing-distance markers for the print-scale check; have the official program entries printed per student; M14 brief staged on Brightspace.",
         "risks_contingency": "The prints are not back by Friday → the practice presentations run on the largest available proof or on the PDF projected at full width, the standing-distance check moves to Monday, and the vendor is chased the same afternoon. A student wants to edit the printed board → they cannot; the finding is written as a delivery workaround, which is exactly what a terminal artefact teaches. An M13 review is missing → that student still asks questions at the practice, and the review stays due under the late rule.",
     },
     # ------------------------------------------------------------------ M35
