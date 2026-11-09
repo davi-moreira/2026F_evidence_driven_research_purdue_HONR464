@@ -66,7 +66,7 @@ In addition, the post must:
 
 You may add a visual (a photo of you, a detail of your poster's main figure, or a
 project graphic), a sentence or two on what your project found, and hashtags. You
-may tag me: <https://www.linkedin.com/in/davimoreira/>. If you describe your
+may tag me: [https://www.linkedin.com/in/davimoreira/](https://www.linkedin.com/in/davimoreira/){style="color: #0000ff;"}. If you describe your
 result, describe it at its true size: the post is one more place where a claim
 can quietly grow.
 
@@ -102,7 +102,7 @@ its main limitation or uncertainty as well.
 
 Before publishing, check the program details and replace every placeholder.
 You may add a visual and, if you would like, tag me:
-<https://www.linkedin.com/in/davimoreira/>. Publish the post, then capture the
+[https://www.linkedin.com/in/davimoreira/](https://www.linkedin.com/in/davimoreira/){style="color: #0000ff;"}. Publish the post, then capture the
 whole published post for your submission.
 
 If you cannot post on LinkedIn, write to me **before the deadline** and we agree

@@ -466,7 +466,11 @@ def render(title: str, body: str, out_pdf: Path, footer: str) -> None:
         "---\n\n"
     )
     with tempfile.TemporaryDirectory() as td:
-        (Path(td) / "header.typ").write_text(TYPST_HEADER.format(footer=footer))
+        header = TYPST_HEADER.format(footer=footer)
+        if out_pdf.stem == "milestone_14_linkedin_invitation":
+            header += ('#show link.where(dest: "https://www.linkedin.com/in/davimoreira/"): '
+                       'set text(fill: rgb("#0000ff"))\n')
+        (Path(td) / "header.typ").write_text(header)
         qmd = Path(td) / "handout.qmd"
         qmd.write_text(front + body)
         r = subprocess.run([QUARTO, "render", str(qmd), "--to", "typst"],
