@@ -174,6 +174,8 @@ is **returned** for completion before it is graded.
 
 ## Grading Rubric (100 points)
 
+The same rubric is attached to this assignment as `Evidence_Driven_Research_M12_Rubric.pdf`, one row per criterion with the points each band carries. Each criterion is scored in one band; the grade falls inside that band's range.
+
 | Criterion | Excellent | Proficient | Developing | Inadequate |
 |---|---|---|---|---|
 | **Audience analysis** (15) | Names the audience you will actually meet, what they already believe, and what they will do with your answer; the key points are specific to that audience and visibly shape the pitches (14–15) | Clear audience, one key point generic (11–13) | Audience described in general terms only ("the public") (6–10) | No audience analysis (0–5) |

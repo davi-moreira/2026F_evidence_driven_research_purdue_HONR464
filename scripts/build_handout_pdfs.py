@@ -111,6 +111,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 import milestone_carry_forward as carry_forward  # noqa: E402
 import poster_sections  # noqa: E402
+import milestone_rubric  # noqa: E402
 from milestone_map import additions, course_only, milestone_map  # noqa: E402
 from submission_pdf_howto import POINTER, markdown as howto_markdown  # noqa: E402
 
@@ -353,6 +354,11 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
             sys.exit(f"✗ {key}: additions_markdown must carry {poster_sections.TOKEN} "
                      f"exactly once (found {n_tok})")
         md = md.replace(poster_sections.TOKEN, poster_sections.note_sections_markdown())
+        # The rubric band by band, read from the brief's own table, so the
+        # handout shows every criterion's bands and points the way the poster
+        # rubric does without a second copy of the text (milestone_rubric.py).
+        if milestone_rubric.TOKEN in md:
+            md = md.replace(milestone_rubric.TOKEN, milestone_rubric.handout_markdown(key))
         if re.search(r"\{\{[^{}]*\}\}", md):
             sys.exit(f"✗ {key}: unresolved template token in additions_markdown")
         body.append(md + "\n")
@@ -418,9 +424,11 @@ def srl_body(body: str) -> str:
 #: Typst preamble goes through `include-in-header`: a `#set page(...)` reached
 #: mid-document starts a NEW page in typst, which costs a blank first page.
 #: Hyphenation is off because the wide rubric tables otherwise break words
-#: across three lines.
+#: across three lines, and table cells are set ragged-right because justified
+#: text in a narrow cell opens wide gaps between words.
 TYPST_HEADER = """#set text(hyphenate: false)
 #show table: set text(size: 8.6pt)
+#show table.cell: set par(justify: false)
 #show heading.where(level: 2): set block(above: 1.4em, below: 0.6em)
 #set page(footer: context [
   #set text(7.6pt, fill: luma(120))
